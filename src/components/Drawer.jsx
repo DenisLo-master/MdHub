@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from '../assets/logo.png'
 import { RxDotFilled } from 'react-icons/rx'
 import { MdClose } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 const Drawer = ({ showDrawer, close }) => {
   return (
@@ -9,15 +10,25 @@ const Drawer = ({ showDrawer, close }) => {
       <div onClick={() => close()} className="cursor-pointer text-xl absolute top-3 right-3">
         <MdClose />
       </div>
-      <img className='cursor-pointer w-24' src={Logo} alt="MD Hub" />
+      <Link to="/">
+        <img className='cursor-pointer w-24' src={Logo} alt="MD Hub" />
+      </Link>
       <ul className="font-main text-2xl">
+        <Link to="/for-you">
         <li className="relative cursor-pointer hover:opacity-90">
           <RxDotFilled className="absolute text-primary -left-5 top-[6px]" />
           <span>for you</span>
         </li>
-        <li className="cursor-pointer hover:opacity-90">for family</li>
-        <li className="cursor-pointer hover:opacity-90">for corporate</li>
-        <li className="cursor-pointer hover:opacity-90">for services</li>
+        </Link>
+        <Link to="for-family">
+          <li className="cursor-pointer hover:opacity-90">for family</li>
+        </Link>
+        <Link to="for-corporate">
+          <li className="cursor-pointer hover:opacity-90">for corporate</li>
+        </Link>
+        <Link to="/services">
+          <li className="cursor-pointer hover:opacity-90">for services</li>
+        </Link>
       </ul>
       <div className="font-body flex flex-col gap-y-2">
         <button className="rounded-full px-8 py-1 border border-primary font-body text-primary bg-transparent hover:bg-primary hover:text-white transition-all ease-in-out duration-150">
