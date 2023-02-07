@@ -31,9 +31,11 @@ const Drawer = ({ showDrawer, close }) => {
         </Link>
       </ul>
       <div className="font-body flex flex-col gap-y-2">
-        <button className="rounded-full px-8 py-1 border border-primary font-body text-primary bg-transparent hover:bg-primary hover:text-white transition-all ease-in-out duration-150">
-          Login
-        </button>
+        <Link to="/login">
+          <button className="rounded-full px-9 py-1 border border-primary text-primary bg-transparent hover:bg-primary hover:text-white transition-all ease-in-out duration-300">
+            Login
+          </button>
+        </Link>
         <Link to="/register">
           <button className="rounded-full px-9 py-1 border border-primary text-white bg-primary hover:bg-transparent hover:text-primary transition-all ease-in-out duration-300">
             Sign Up
