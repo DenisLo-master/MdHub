@@ -12,6 +12,7 @@ import Dashboard from './Dashboard/Dashboard'
 import Pricing from './Pricing/Pricing'
 import CorporateOverview from './CorporateOverview/CorporateOverview'
 import ForBabies from './ForBabies/ForBabies'
+import Signup from './Signup/Signup'
 
 export {
   Home,
@@ -27,5 +28,6 @@ export {
   Dashboard,
   Pricing,
   CorporateOverview,
-  ForBabies
+  ForBabies,
+  Signup
 }
