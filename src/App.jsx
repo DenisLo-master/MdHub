@@ -17,7 +17,8 @@ import {
   Dashboard,
   Pricing,
   CorporateOverview,
-  ForBabies
+  ForBabies,
+  Signup
 } from './pages'
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/for-corporate" element={<CorporateOverview />} />
             <Route path="/for-family" element={<ForBabies />} />
+            <Route path="/register" element={<Signup />}/>
           </Routes>
         </main>
       <Footer/>
