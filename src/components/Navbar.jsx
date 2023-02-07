@@ -59,8 +59,8 @@ const Navbar = () => {
             </button>
             <Link to="/register">
               <button className="rounded-full px-9 py-1 border border-primary text-white bg-primary hover:bg-transparent hover:text-primary transition-all ease-in-out duration-300">
-              Sign Up
-            </button>
+                Sign Up
+              </button>
             </Link>
           </div>
         </article>
