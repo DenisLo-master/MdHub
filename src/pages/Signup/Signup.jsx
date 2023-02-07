@@ -48,7 +48,7 @@ const Signup = () => {
         <div className="bg-primary rounded-tl-[35px] rounded-bl-[35px] p-10 font-main space-y-4 h-[500px] shadow-cardService">
           <h1 className="text-4xl">Register</h1>
         </div>
-        <div className="py-16 px-12 bg-[#f9f9f9] shadow-cardService rounded-[35px] text-gray-800 font-body">
+        <div className="py-16 border px-12 bg-[#f9f9f9] shadow-cardService rounded-[35px] text-gray-800 font-body">
           <h3 className="pb-4">Required Field *</h3>
           <form onSubmit={handleSignup} className="space-y-4 w-[500px] text-gray-800">
             <div className="w-full relative">
