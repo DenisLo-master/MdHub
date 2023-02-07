@@ -1,8 +1,14 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { MDHubWheelTransparent, ChevronLeft, ChevronRight } from '../../assets'
 import { calenderData } from '../../constants'
+import { useNavigate } from 'react-router-dom'
 
 const Dashboard = () => {
+  const navigate = useNavigate()
+  useEffect(() => {
+    const token = localStorage.getItem("jwtToken")
+    if(!token) navigate("/login")
+  }, [])
   return (
     <section className="font-main text-gray-800">
       <header className="py-16 bg-[#f9f9f9]">
