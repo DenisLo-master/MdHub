@@ -23,12 +23,14 @@ const Login = () => {
         },
         body: JSON.stringify(form)
       })
-
+ 
       setForm({
         email: '',
         password: ''
       })
-      await response.json()
+
+      const data = await response.json()
+      localStorage.setItem("jwtToken", data.accessToken)
       navigate('/dashboard')
     } 
     catch (error) {
