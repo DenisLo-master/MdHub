@@ -57,9 +57,11 @@ const Navbar = () => {
             <button className="rounded-full px-9 py-1 border border-primary text-primary bg-transparent hover:bg-primary hover:text-white transition-all ease-in-out duration-300">
               Login
             </button>
-            <button className="rounded-full px-9 py-1 border border-primary text-white bg-primary hover:bg-transparent hover:text-primary transition-all ease-in-out duration-300">
+            <Link to="/register">
+              <button className="rounded-full px-9 py-1 border border-primary text-white bg-primary hover:bg-transparent hover:text-primary transition-all ease-in-out duration-300">
               Sign Up
             </button>
+            </Link>
           </div>
         </article>
         <article onClick={() => setShowDrawer(!showDrawer)} className="absolute cursor-pointer flex flex-col justify-center space-y-1 top-0 right-0 bg-primary text-white py-6 px-4 md:py-8 md:px-6">
