@@ -39,10 +39,10 @@ const Login = () => {
   return (
     <section className="py-20 flex justify-center text-white">
       <article className="flex items-center">
-        <div className="bg-primary rounded-tl-[35px] rounded-bl-[35px] p-10 font-main space-y-4 h-[500px] shadow-cardService">
+        <div className="bg-primary rounded-tl-[35px] rounded-bl-[35px] p-10 font-main space-y-4 h-[300px] shadow-cardService">
           <h1 className="text-4xl">Login</h1>
         </div>
-        <div className="py-16 px-12 bg-[#f9f9f9] shadow-cardService rounded-[35px] text-gray-800 font-body">
+        <div className="py-16 px-12 border bg-[#f9f9f9] shadow-cardService rounded-[35px] text-gray-800 font-body">
           <h3 className="pb-4">Required Field *</h3>
           <form onSubmit={handleLogin} className="space-y-4 w-[500px] text-gray-800">
             <div className="w-full relative">
