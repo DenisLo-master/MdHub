@@ -13,6 +13,7 @@ import Pricing from './Pricing/Pricing'
 import CorporateOverview from './CorporateOverview/CorporateOverview'
 import ForBabies from './ForBabies/ForBabies'
 import Signup from './Signup/Signup'
+import Login from './Login/Login'
 
 export {
   Home,
@@ -29,5 +30,6 @@ export {
   Pricing,
   CorporateOverview,
   ForBabies,
-  Signup
+  Signup,
+  Login
 }
