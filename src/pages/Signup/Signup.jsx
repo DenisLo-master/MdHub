@@ -43,7 +43,7 @@ const Signup = () => {
   }
 
   return (
-    <section className="flex flex-col items-center py-20 font-main">
+    <section className="w-full max-w-[40rem] flex flex-col items-center mx-auto py-20 font-main">
       <div className="space-y-4 flex flex-col items-center py-8">
         <h2 className="text-4xl text-center pb-4">Choose Account Type</h2>
         <div className="flex justify-center gap-x-6 text-primary">
