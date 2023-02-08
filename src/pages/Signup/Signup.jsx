@@ -1,20 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import FormField from '../../components/FormField'
 
 const Signup = () => {
+  const signupFormRef = useRef(null)
   const navigate = useNavigate()
-  const [form, setForm] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    phone: ''
-  })
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value })
-  }
 
   const handleSignup = async (e) => {
     e.preventDefault()
@@ -65,7 +54,7 @@ const Signup = () => {
         </p>
       </article>
       <article className="w-full">
-        <form onSubmit={handleSignup} className="w-full">
+        <form ref={signupFormRef} onSubmit={handleSignup} className="w-full">
           <div className="py-16 border space-y-4 px-8 shadow-cardService rounded-[35px] text-primary">
             <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
               <input
