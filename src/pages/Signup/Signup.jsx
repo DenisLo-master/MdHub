@@ -1,32 +1,36 @@
 import React, { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { registerationStore } from "../../store"
 
 const Signup = () => {
   const signupFormRef = useRef(null)
   const navigate = useNavigate()
-  const [formStep, setFormStep] = useState(0)
+  const formStep = registerationStore(state => state.formStep)
+  const increaseFormStep = registerationStore(state => state.increaseFormStep)
+  const decreaseFormStep = registerationStore(state => state.decreaseFormStep)
+  const registerationFormData = registerationStore(state => state.registerationFormData)
+  const handleRegisterationFormDataChange = registerationStore(state => state.handleRegisterationFormDataChange)
+  const clearRegisterationFormData = registerationStore(state => state.clearRegisterationFormData)
+
+
 
   const handleSignup = async (e) => {
     e.preventDefault()
     try {
-      const userFormData = new FormData(e.target)
-      const userData = Object.fromEntries(userFormData)
-      /* const response = await fetch('http://localhost:8080/api/v1/auth/register', {
+      const response = await fetch('http://localhost:8080/api/v1/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(userData)
-      }) */
-      console.log(userData)
-      signupFormRef.current.reset()
+      })
+      clearRegisterationFormData()
       await response.json()
       navigate('/dashboard')
     } catch (error) {
       console.log(error)
     } 
   }
-
   return (
     <section className="w-full max-w-[42rem] flex flex-col items-center mx-auto py-8 md:py-20 font-main">
       <article className="w-full space-y-4 flex flex-col items-center">
@@ -60,6 +64,8 @@ const Signup = () => {
                     name="firstName"
                     type="text"
                     placeholder="First Name*"
+                    value={registerationFormData.firstName}
+                    onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
                     required
                   />
                   <input
@@ -67,6 +73,8 @@ const Signup = () => {
                     name="lastName"
                     type="text"
                     placeholder="Last Name*"
+                    value={registerationFormData.lastName}
+                    onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
                     required
                   />
                 </div>
@@ -76,6 +84,8 @@ const Signup = () => {
                     name="email"
                     type="email"
                     placeholder="Email*"
+                    value={registerationFormData.email}
+                    onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
                     required
                   />
                   <input
@@ -83,6 +93,8 @@ const Signup = () => {
                     name="phone"
                     type="tel"
                     placeholder="Phone*"
+                    value={registerationFormData.phone}
+                    onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
                     required
                   />
                 </div>
@@ -92,6 +104,8 @@ const Signup = () => {
                     name="password"
                     type="password"
                     placeholder="Password*"
+                    value={registerationFormData.password}
+                    onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
                     required
                   />
                 </div>
@@ -104,6 +118,8 @@ const Signup = () => {
                     name="address"
                     type="text"
                     placeholder="Address*"
+                    value={registerationFormData.address}
+                    onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
                     required
                   />
                   <input
@@ -111,6 +127,8 @@ const Signup = () => {
                     name="city"
                     type="text"
                     placeholder="City*"
+                    value={registerationFormData.city}
+                    onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
                     required
                   />
                 </div>
@@ -120,6 +138,8 @@ const Signup = () => {
                     name="province"
                     type="text"
                     placeholder="Province*"
+                    value={registerationFormData.province}
+                    onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
                     required
                   />
                   <input
@@ -127,6 +147,8 @@ const Signup = () => {
                     name="postalCode"
                     type="text"
                     placeholder="Postal Code*"
+                    value={registerationFormData.postalCode}
+                    onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
                     required
                   />
                 </div>
@@ -147,7 +169,7 @@ const Signup = () => {
             {
               formStep === 0 ? (
                 <button
-                  onClick={() => setFormStep(formStep + 1)}
+                  onClick={() => increaseFormStep()}
                   className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
                   type="button"
                 >
@@ -156,7 +178,7 @@ const Signup = () => {
               ) : (
                 <div className="flex gap-x-4">
                   <button
-                    onClick={() => setFormStep(formStep - 1)}
+                      onClick={() => decreaseFormStep()}
                     className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
                     type="button"
                   >
