@@ -25,7 +25,7 @@ const Navbar = () => {
             <img className="cursor-pointer w-28" src={Logo} alt="MD Hub" />
           </Link>
         </article>
-        <article className="hidden md:flex justify-between text-xl font-medium flex-1 font-main">
+        <article className="hidden lg:flex justify-between text-xl font-medium flex-1 font-main">
           <ul className="flex flex-1 justify-center items-center space-x-14">
             <li className="relative cursor-pointer hover:opacity-90 group">
             {
@@ -86,7 +86,7 @@ const Navbar = () => {
             )
           }
         </article>
-        <article onClick={() => setShowDrawer(!showDrawer)} className="absolute cursor-pointer flex flex-col justify-center space-y-1 top-0 right-0 bg-primary text-white py-6 px-4 md:py-8 md:px-6">
+        <article onClick={() => setShowDrawer(!showDrawer)} className="absolute cursor-pointer flex flex-col justify-center space-y-1 top-0 right-0 bg-primary text-white py-6 px-4 md:py-[1.7rem] lg:py-8 md:px-6">
           <span className="w-6 h-[2px] bg-white"></span>
           <span className="w-4 h-[2px] bg-white"></span>
         </article>
