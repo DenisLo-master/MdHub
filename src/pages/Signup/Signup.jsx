@@ -7,28 +7,10 @@ const Signup = () => {
 
   const handleSignup = async (e) => {
     e.preventDefault()
-    try {
-      const response = await fetch('http://localhost:8080/api/v1/auth/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(form)
-      })
-
-      setForm({
-        firstName: '',
-        lastName: '',
-        email: '',
-        password: '',
-        phone: ''
-      })
-      await response.json()
-      navigate('/dashboard')
-    } 
-    catch (error) {
-      console.log(error) 
-    }
+    const userFormData = new FormData(e.target)
+    const userData = Object.fromEntries(userFormData)
+    signupFormRef.current.reset()
+    console.log(userData)
   }
 
   return (
