@@ -67,7 +67,7 @@ const Signup = () => {
       <article className="w-full">
         <form onSubmit={handleSignup} className="w-full">
           <div className="py-16 border space-y-4 px-8 shadow-cardService rounded-[35px] text-primary">
-            <div className="w-full flex gap-x-6">
+            <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
               <input
                 className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
                 type="text"
@@ -81,7 +81,7 @@ const Signup = () => {
                 required
               />
             </div>
-            <div className="w-full flex gap-x-6">
+            <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
               <input
                 className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
                 type="email"
