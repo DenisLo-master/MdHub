@@ -70,12 +70,14 @@ const Signup = () => {
             <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
               <input
                 className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
+                name="firstName"
                 type="text"
                 placeholder="First Name*"
                 required
               />
               <input
                 className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
+                name="lastName"
                 type="text"
                 placeholder="Last Name*"
                 required
@@ -84,12 +86,14 @@ const Signup = () => {
             <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
               <input
                 className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
+                name="email"
                 type="email"
                 placeholder="Email*"
                 required
               />
               <input
                 className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
+                name="phone"
                 type="tel"
                 placeholder="Phone*"
                 required
@@ -98,6 +102,7 @@ const Signup = () => {
             <div className="w-full flex">
               <input
                 className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
+                name="password"
                 type="password"
                 placeholder="Password*"
                 required
