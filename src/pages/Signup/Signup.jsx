@@ -58,7 +58,7 @@ const Signup = () => {
           </button>
         </div>
       </article>
-      <article className="w-full flex gap-x-6">
+      <article className="w-full self-start max-w-xs pt-8 pb-4 mb-4 border-b-[3px] border-b-primary flex items-baseline gap-x-6">
         <h2 className="text-5xl ">Step 1</h2>
         <p className="font-body text-xl font-light">
           Enter member details
