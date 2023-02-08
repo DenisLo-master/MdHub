@@ -58,8 +58,7 @@ const Signup = () => {
           </button>
         </div>
       </div>
-      <div>
-        <article>
+      <article>
         <div className="py-16 border px-12 bg-[#f9f9f9] shadow-cardService rounded-[35px] text-gray-800 font-body">
           <h3 className="pb-4">Required Field *</h3>
           <form onSubmit={handleSignup} className="space-y-4 w-[500px] text-gray-800">
@@ -121,7 +120,6 @@ const Signup = () => {
           </form>
         </div>
       </article>
-      </div>
     </section>
 
   )
