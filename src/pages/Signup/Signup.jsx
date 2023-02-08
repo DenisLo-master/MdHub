@@ -43,7 +43,22 @@ const Signup = () => {
   }
 
   return (
-    <section className="py-20 flex justify-center text-white">
+    <section className="py-20 font-main">
+      <div className="space-y-4 flex flex-col items-center py-8">
+        <h2 className="text-4xl text-center pb-4">Choose Account Type</h2>
+        <div className="flex justify-center gap-x-6 text-primary">
+          <button type="submit" className={`w-48 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`}>
+            Individual
+          </button>
+          <button type="submit" className={`w-48 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`}>
+            Family
+          </button>
+          <button type="submit" className={`w-48 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`}>
+            Corporate
+          </button>
+        </div>
+      </div>
+      <div className="flex justify-center text-white">
       <article className="flex items-center">
         <div className="bg-primary rounded-tl-[35px] rounded-bl-[35px] p-10 font-main space-y-4 h-[500px] shadow-cardService">
           <h1 className="text-4xl">Register</h1>
@@ -109,7 +124,9 @@ const Signup = () => {
           </form>
         </div>
       </article>
+      </div>
     </section>
+
   )
 }
 
