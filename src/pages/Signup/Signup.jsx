@@ -43,8 +43,8 @@ const Signup = () => {
   }
 
   return (
-    <section className="w-full max-w-[42rem] flex flex-col items-center mx-auto py-20 font-main">
-      <article className="w-full space-y-4 flex flex-col items-center py-8">
+    <section className="w-full max-w-[42rem] flex flex-col items-center mx-auto py-8 md:py-20 font-main">
+      <article className="w-full space-y-4 flex flex-col items-center">
         <h2 className="text-4xl text-center pb-4">Choose Account Type</h2>
         <div className="w-full flex justify-around md:justify-between text-primary flex-wrap gap-y-4">
           <button type="submit" className={`w-40 md:48 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`}>
