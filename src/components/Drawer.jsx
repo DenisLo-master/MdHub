@@ -15,7 +15,7 @@ const Drawer = ({ showDrawer, close }) => {
     navigate("/")
   }
   return (
-    <nav className={`fixed md:hidden flex flex-col border items-center top-16 z-30 bg-white transition-all ease-in duration-100 shadow-xl rounded-lg py-6 px-10 gap-y-3 ${showDrawer ? 'right-0' : '-right-full'}`}>
+    <nav className={`fixed lg:hidden flex flex-col border items-center top-16 z-30 bg-white transition-all ease-in duration-100 shadow-xl rounded-lg py-6 px-10 gap-y-3 ${showDrawer ? 'right-0' : '-right-full'}`}>
       <div onClick={() => close()} className="cursor-pointer text-xl absolute top-3 right-3">
         <MdClose />
       </div>
