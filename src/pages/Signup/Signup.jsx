@@ -46,14 +46,14 @@ const Signup = () => {
     <section className="w-full max-w-[42rem] flex flex-col items-center mx-auto py-20 font-main">
       <article className="w-full space-y-4 flex flex-col items-center py-8">
         <h2 className="text-4xl text-center pb-4">Choose Account Type</h2>
-        <div className="w-full flex justify-between text-primary">
-          <button type="submit" className={`w-48 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`}>
+        <div className="w-full flex justify-between text-primary flex-wrap gap-y-4">
+          <button type="submit" className={`w-40 md:48 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`}>
             Individual
           </button>
-          <button type="submit" className={`w-48 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`}>
+          <button type="submit" className={`w-40 md:48 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`}>
             Family
           </button>
-          <button type="submit" className={`w-48 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`}>
+          <button type="submit" className={`w-40 md:48 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`}>
             Corporate
           </button>
         </div>
@@ -65,27 +65,54 @@ const Signup = () => {
         </p>
       </article>
       <article className="w-full">
-        <div className="py-16 border px-12 bg-[#f9f9f9] shadow-cardService rounded-[35px] text-primary">
-          <form onSubmit={handleSignup} className="space-y-4 w-[500px]">
-            <div className="w-full flex space-x-6">
+        <form onSubmit={handleSignup} className="w-full">
+          <div className="py-16 border space-y-4 px-8 shadow-cardService rounded-[35px] text-primary">
+            <div className="w-full flex gap-x-6">
               <input
                 className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
                 type="text"
                 placeholder="First Name*"
+                required
               />
               <input
                 className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
                 type="text"
                 placeholder="Last Name*"
+                required
               />
             </div>
-            <div className='w-full pt-3'>
-              <button type="submit" className={`rounded-full font-main text-xl group hover:ring-1 hover:ring-primary px-12 py-3 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-                Register
-              </button>
+            <div className="w-full flex gap-x-6">
+              <input
+                className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
+                type="email"
+                placeholder="Email*"
+                required
+              />
+              <input
+                className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
+                type="tel"
+                placeholder="Phone*"
+                required
+              />
             </div>
-          </form>
-        </div>
+            <div className="w-full flex">
+              <input
+                className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
+                type="password"
+                placeholder="Password*"
+                required
+              />
+            </div>
+          </div>
+          <div className="w-full flex justify-end pt-6">
+            <button
+              className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
+              type="button"
+            >
+              Continue
+            </button>
+          </div>
+        </form>
       </article>
     </section>
 
