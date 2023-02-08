@@ -43,7 +43,7 @@ const Signup = () => {
   }
 
   return (
-    <section className="py-20 font-main">
+    <section className="flex flex-col items-center py-20 font-main">
       <div className="space-y-4 flex flex-col items-center py-8">
         <h2 className="text-4xl text-center pb-4">Choose Account Type</h2>
         <div className="flex justify-center gap-x-6 text-primary">
@@ -58,7 +58,7 @@ const Signup = () => {
           </button>
         </div>
       </div>
-      <div className="flex justify-center text-white">
+      <div className="flex">
       <article className="flex items-center">
         <div className="bg-primary rounded-tl-[35px] rounded-bl-[35px] p-10 font-main space-y-4 h-[500px] shadow-cardService">
           <h1 className="text-4xl">Register</h1>
