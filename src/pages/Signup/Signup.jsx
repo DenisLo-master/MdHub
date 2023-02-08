@@ -43,7 +43,7 @@ const Signup = () => {
   }
 
   return (
-    <section className="w-full max-w-[40rem] flex flex-col items-center mx-auto py-20 font-main">
+    <section className="w-full max-w-[42rem] flex flex-col items-center mx-auto py-20 font-main">
       <article className="w-full space-y-4 flex flex-col items-center py-8">
         <h2 className="text-4xl text-center pb-4">Choose Account Type</h2>
         <div className="w-full flex justify-between text-primary">
@@ -65,58 +65,19 @@ const Signup = () => {
         </p>
       </article>
       <article className="w-full">
-        <div className="py-16 border px-12 bg-[#f9f9f9] shadow-cardService rounded-[35px] text-gray-800 font-body">
-          <h3 className="pb-4">Required Field *</h3>
-          <form onSubmit={handleSignup} className="space-y-4 w-[500px] text-gray-800">
-            <div className="w-full relative">
-              <p className="absolute left-0 -top-3">*</p>
-              <FormField
+        <div className="py-16 border px-12 bg-[#f9f9f9] shadow-cardService rounded-[35px] text-primary">
+          <form onSubmit={handleSignup} className="space-y-4 w-[500px]">
+            <div className="w-full flex space-x-6">
+              <input
+                className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
                 type="text"
-                name="firstName"
-                placeholder="First Name"
-                handleChange={handleChange}
-                value={form.firstName}
+                placeholder="First Name*"
               />
-            </div>
-            <div className="w-full relative">
-              <p className="absolute left-0 -top-3">*</p>
-              <FormField
+              <input
+                className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
                 type="text"
-                name="lastName"
-                placeholder="Last Name"
-                handleChange={handleChange}
-                value={form.lastName}
+                placeholder="Last Name*"
               />
-            </div>
-            <div className="w-full relative">
-              <p className="absolute left-0 -top-3">*</p>
-              <FormField
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  handleChange={handleChange}
-                  value={form.email}
-                />  
-            </div>
-            <div className="w-full relative">
-              <p className="absolute left-0 -top-3">*</p>
-              <FormField
-                type="password"
-                name="password"
-                placeholder="Password"
-                handleChange={handleChange}
-                value={form.password}
-              /> 
-            </div>
-            <div className="w-full relative">
-              <p className="absolute left-0 -top-3">*</p>
-              <FormField
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone"
-                  handleChange={handleChange}
-                  value={form.phone}
-                /> 
             </div>
             <div className='w-full pt-3'>
               <button type="submit" className={`rounded-full font-main text-xl group hover:ring-1 hover:ring-primary px-12 py-3 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
