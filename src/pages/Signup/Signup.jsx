@@ -1,20 +1,19 @@
 import React, { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { BsPlusCircle } from 'react-icons/bs'
-import {
-  formStep,
-  increaseFormStep,
-  decreaseFormStep,
-  registerationFormData,
-  handleRegisterationFormDataChange,
-  clearRegisterationFormData,
-  selectedAccountType,
-  changeSelectedAccountType
-} from '../../store'
+import { registerationStore } from '../../store/registerationStore'
+import { SignupStepOne, SignupStepTwo } from '../../sections'
 
 const Signup = () => {
   const signupFormRef = useRef(null)
   const navigate = useNavigate()
+  const formStep = registerationStore(state => state.formStep)
+  const increaseFormStep = registerationStore(state => state.increaseFormStep)
+  const decreaseFormStep = registerationStore(state => state.decreaseFormStep)
+  const registerationFormData = registerationStore(state => state.registerationFormData)
+  const handleRegisterationFormDataChange = registerationStore(state => state.handleRegisterationFormDataChange)
+  const clearRegisterationFormData = registerationStore(state => state.clearRegisterationFormData)
+  const selectedAccountType = registerationStore(state => state.selectedAccountType)
+  const changeSelectedAccountType = registerationStore(state => state.changeSelectedAccountType)
 
   const handleSignup = async (e) => {
     e.preventDefault()
@@ -70,114 +69,7 @@ const Signup = () => {
       <article className="w-full">
         <form ref={signupFormRef} onSubmit={handleSignup} className="w-full">
           {formStep === 0 ?
-            (
-              <div className="py-16 border space-y-4 px-8 shadow-cardService rounded-[35px] text-primary">
-                <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
-                  <input
-                    className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-                    name="firstName"
-                    type="text"
-                    placeholder="First Name*"
-                    value={registerationFormData.firstName}
-                    onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
-                    required
-                  />
-                  <input
-                    className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-                    name="lastName"
-                    type="text"
-                    placeholder="Last Name*"
-                    value={registerationFormData.lastName}
-                    onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
-                    required
-                  />
-                </div>
-                <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
-                  <input
-                    className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-                    name="email"
-                    type="email"
-                    placeholder="Email*"
-                    value={registerationFormData.email}
-                    onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
-                    required
-                  />
-                  <input
-                    className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-                    name="phone"
-                    type="tel"
-                    placeholder="Phone*"
-                    value={registerationFormData.phone}
-                    onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
-                    required
-                  />
-                </div>
-                <div className="w-full flex">
-                  <input
-                    className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-                    name="password"
-                    type="password"
-                    placeholder="Password*"
-                    value={registerationFormData.password}
-                    onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
-                    required
-                  />
-                </div>
-              </div>
-            ) : (
-              <div className="py-16 border space-y-4 px-8 shadow-cardService rounded-[35px] text-primary">
-                <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
-                  <input
-                    className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-                    name="address"
-                    type="text"
-                    placeholder="Address*"
-                    value={registerationFormData.address}
-                    onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
-                    required
-                  />
-                  <input
-                    className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-                    name="city"
-                    type="text"
-                    placeholder="City*"
-                    value={registerationFormData.city}
-                    onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
-                    required
-                  />
-                </div>
-                <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
-                  <input
-                    className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-                    name="province"
-                    type="text"
-                    placeholder="Province*"
-                    value={registerationFormData.province}
-                    onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
-                    required
-                  />
-                  <input
-                    className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-                    name="postalCode"
-                    type="text"
-                    placeholder="Postal Code*"
-                    value={registerationFormData.postalCode}
-                    onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
-                    required
-                  />
-                </div>
-                <div className="w-full flex">
-                  <input
-                    className="flex-1 text-center rounded-full text-xl bg-primary text-white focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-                    name="country"
-                    type="text"
-                    value="Canada"
-                    placeholder="Password*"
-                    required
-                  />
-                </div>
-              </div>
-            )
+            <SignupStepOne /> : <SignupStepTwo />
           }
           <div className="w-full flex justify-end pt-6">
             {
