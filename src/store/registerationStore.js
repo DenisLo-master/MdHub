@@ -2,6 +2,8 @@ import { create } from 'zustand'
 
 export const registerationStore = create((set) => ({
   formStep: 0,
+  selectedAccountType: 'individual',
+  changeSelectedAccountType: (accountType) => set((state) => ({ selectedAccountType: accountType })),
   increaseFormStep: () => set((state) => ({ formStep: state.formStep + 1 })),
   decreaseFormStep: () => set((state) => ({ formStep: state.formStep - 1 })),
   registerationFormData: {
