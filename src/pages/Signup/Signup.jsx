@@ -30,6 +30,7 @@ const Signup = () => {
       console.log(error)
     } 
   }
+
   return (
     <section className="w-full max-w-[42rem] flex flex-col items-center mx-auto py-8 md:py-20 font-main">
       <article className="w-full space-y-4 flex flex-col items-center">
