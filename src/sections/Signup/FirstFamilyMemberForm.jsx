@@ -4,7 +4,7 @@ import { registerationStore } from '../../store/registerationStore'
 
 const FirstFamilyMemberForm = ({ showNext }) => {
   const firstFamilyMemberFormData = registerationStore(state => state.firstFamilyMemberFormData)
-  const selectedAccountType = registerationStore(state => state.selectedAccountType)
+  const setShowSecondFamilyMemberForm = registerationStore(state => state.setShowSecondFamilyMemberForm)
   const handleFirstFamilyMemberFormDataChange = registerationStore(state => state.handleFirstFamilyMemberFormDataChange)
 
   return (
@@ -61,7 +61,7 @@ const FirstFamilyMemberForm = ({ showNext }) => {
           required
         />
       </div>
-      <div onClick={() => showNext()} className="absolute bottom-4 left-8 flex gap-x-2 text-primary font-body items-center text-3xl cursor-pointer">
+      <div onClick={() => setShowSecondFamilyMemberForm(true)} className="absolute bottom-4 left-8 flex gap-x-2 text-primary font-body items-center text-3xl cursor-pointer">
         <BsPlusCircle />
         <p className='text-xl'>add family member</p>
       </div>
