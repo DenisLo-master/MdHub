@@ -4,7 +4,6 @@ import { registerationStore } from '../../store/registerationStore'
 
 const FourthFamilyMemberForm = () => {
   const fourthFamilyMemberFormData = registerationStore(state => state.fourthFamilyMemberFormData)
-  const selectedAccountType = registerationStore(state => state.selectedAccountType)
   const handleFourthFamilyMemberFormDataChange = registerationStore(state => state.handleFourthFamilyMemberFormDataChange)
   return (
     <div className="py-16 border space-y-4 px-8 shadow-cardService rounded-[35px] text-primary relative">
