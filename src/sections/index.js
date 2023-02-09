@@ -9,6 +9,8 @@ import ServicesHeaderSection from "./Services/ServicesHeaderSection";
 import ForYouHeaderSection from './ForYou/ForYouHeaderSection'
 import SignupStepOne from "./Signup/SignupStepOne";
 import SignupStepTwo from "./Signup/SignupStepTwo";
+import FirstFamilyMemberForm from "./Signup/FirstFamilyMemberForm";
+import SecondFamilyMemberForm from "./Signup/SecondFamilyMemberForm";
 
 export {
   HomeHeroSection,
@@ -21,5 +23,7 @@ export {
   ServicesHeaderSection,
   ForYouHeaderSection,
   SignupStepOne,
-  SignupStepTwo
+  SignupStepTwo,
+  FirstFamilyMemberForm,
+  SecondFamilyMemberForm
 }
