@@ -7,6 +7,7 @@ import HomeMembershipCostCtaSection from "./Home/HomeMembershipCostCtaSection";
 import HomeMembershipBenefitsSection from "./Home/HomeMembershipBenefitsSection";
 import ServicesHeaderSection from "./Services/ServicesHeaderSection";
 import ForYouHeaderSection from './ForYou/ForYouHeaderSection'
+import SignupStepOne from "./Signup/SignupStepOne";
 
 export {
   HomeHeroSection,
@@ -17,5 +18,6 @@ export {
   HomeMembershipCostCtaSection,
   HomeMembershipBenefitsSection,
   ServicesHeaderSection,
-  ForYouHeaderSection
+  ForYouHeaderSection,
+  SignupStepOne
 }
