@@ -9,7 +9,7 @@ const Signup = () => {
   const formStep = registerationStore(state => state.formStep)
   const increaseFormStep = registerationStore(state => state.increaseFormStep)
   const decreaseFormStep = registerationStore(state => state.decreaseFormStep)
-  const clearRegisterationFormData = registerationStore(state => state.clearRegisterationFormData)
+  const clearForms = registerationStore(state => state.clearForms)
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
   const changeSelectedAccountType = registerationStore(state => state.changeSelectedAccountType)
 
@@ -23,7 +23,7 @@ const Signup = () => {
         },
         body: JSON.stringify(userData)
       })
-      clearRegisterationFormData()
+      clearForms()
       await response.json()
       navigate('/dashboard')
     } catch (error) {
