@@ -1,7 +1,10 @@
 import React from 'react'
-import { handleRegisterationFormDataChange, registerationFormData } from '../../store'
+import { registerationStore } from '../../store/registerationStore'
+import { BsPlusCircle } from 'react-icons/bs'
 
 const SignupStepOne = () => {
+  const registerationFormData = registerationStore(state => state.registerationFormData)
+  const handleRegisterationFormDataChange = registerationStore(state => state.handleRegisterationFormDataChange)
   return (
     <div className="py-16 border space-y-4 px-8 shadow-cardService rounded-[35px] text-primary">
       <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
