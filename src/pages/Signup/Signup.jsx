@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { registerationStore } from '../../store/registerationStore'
-import { SignupStepOne, SignupStepTwo } from '../../sections'
+import { SignupStepOne, SignupStepTwo, SignupStepThree } from '../../sections'
 
 const Signup = () => {
   const signupFormRef = useRef(null)
@@ -12,6 +12,8 @@ const Signup = () => {
   const clearForms = registerationStore(state => state.clearForms)
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
   const changeSelectedAccountType = registerationStore(state => state.changeSelectedAccountType)
+  const paymentMode = registerationStore(state => state.paymentMode)
+  const setPaymentMode = registerationStore(state => state.setPaymentMode)
 
   const handleSignup = async (e) => {
     e.preventDefault()
@@ -59,16 +61,41 @@ const Signup = () => {
           </button>
         </div>
       </article>
-      <article className="w-full self-start max-w-xs pt-8 pb-4 mb-4 border-b-[3px] border-b-primary flex items-baseline gap-x-6">
-        <h2 className="text-5xl ">{formStep === 0 ? "Step 1" : "Step 2"}</h2>
-        <p className="font-body text-xl font-light">
-          {formStep === 0 ? "Enter member details" : "Billing Address"}
-        </p>
+      <article className="w-full self-start pt-8 pb-4 mb-4 ">
+        <div className="w-full flex justify-between items-center">
+          <article className="border-b-primary flex items-baseline gap-x-6 border-b-[3px] max-w-xs">
+            <h2 className="text-5xl ">{formStep === 0 ? "Step 1" : formStep === 1 ? "Step 2" : "Step 3"}</h2>
+            <div className="font-body text-xl font-light">
+              {formStep === 0 ?
+                <div className="text-right">
+                  <p>Enter member details</p>
+                  <p className="text-sm">{selectedAccountType === "family" ? "Upto 4 Family Members" : selectedAccountType === "corporate" && "Upto 10 Employees"}</p>
+                </div> : formStep === 1 ? "Billing Address" : "Payment"}
+            </div>
+          </article>
+          {
+            formStep === 2 && (
+              <div className="flex gap-x-4">
+                <button
+                  onClick={() => setPaymentMode("yearly")}
+                  className={`${paymentMode === 'yearly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
+                  <h2 className="text-xl">Yearly</h2>
+                  <h4 className="text-xs">Best Value</h4>
+                </button>
+                <button
+                  onClick={() => setPaymentMode("monthly")}
+                  className={`${paymentMode === 'monthly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
+                  <h2 className="text-xl">Monthly</h2>
+                </button>
+              </div>
+            )
+          }
+        </div>
       </article>
       <article className="w-full">
         <form ref={signupFormRef} onSubmit={handleSignup} className="w-full">
           {formStep === 0 ?
-            <SignupStepOne /> : <SignupStepTwo />
+            <SignupStepOne /> : formStep === 1 ? <SignupStepTwo /> : <SignupStepThree />
           }
           <div className="w-full flex justify-end pt-6">
             {
@@ -80,23 +107,40 @@ const Signup = () => {
                 >
                   Continue
                 </button>
-              ) : (
+              ) : formStep === 1 ? (
                 <div className="flex gap-x-4">
                   <button
-                      onClick={() => decreaseFormStep()}
+                    onClick={() => decreaseFormStep()}
                     className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
                     type="button"
                   >
                     Prev
                   </button>
                   <button
+                    onClick={() => increaseFormStep()}
                     className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
-                    type="submit"
+                    type="button"
                   >
-                    Submit
+                    Continue
                   </button>
                 </div>
-
+              ) : (
+                    <div className="flex gap-x-4">
+                      <button
+                        onClick={() => decreaseFormStep()}
+                        className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
+                        type="button"
+                      >
+                        Prev
+                      </button>
+                      <button
+                        onClick={() => increaseFormStep()}
+                        className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
+                        type="Submit"
+                      >
+                        Submit
+                      </button>
+                    </div>
               )
             }
           </div>
