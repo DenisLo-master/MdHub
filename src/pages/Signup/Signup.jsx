@@ -2,20 +2,20 @@ import React, { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { registerationStore } from "../../store"
 import { BsPlusCircle } from 'react-icons/bs'
+import {
+  formStep,
+  increaseFormStep,
+  decreaseFormStep,
+  registerationFormData,
+  handleRegisterationFormDataChange,
+  clearRegisterationFormData,
+  selectedAccountType,
+  changeSelectedAccountType
+} from '../../store'
 
 const Signup = () => {
   const signupFormRef = useRef(null)
   const navigate = useNavigate()
-  const formStep = registerationStore(state => state.formStep)
-  const increaseFormStep = registerationStore(state => state.increaseFormStep)
-  const decreaseFormStep = registerationStore(state => state.decreaseFormStep)
-  const registerationFormData = registerationStore(state => state.registerationFormData)
-  const handleRegisterationFormDataChange = registerationStore(state => state.handleRegisterationFormDataChange)
-  const clearRegisterationFormData = registerationStore(state => state.clearRegisterationFormData)
-  const selectedAccountType = registerationStore(state => state.selectedAccountType)
-  const changeSelectedAccountType = registerationStore(state => state.changeSelectedAccountType)
-
-
 
   const handleSignup = async (e) => {
     e.preventDefault()
