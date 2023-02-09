@@ -18,8 +18,40 @@ export const registerationStore = create((set) => ({
     postalCode: '',
     country: 'Canada'
   },
+  firstFamilyMemberFormData: {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    password: '',
+  },
+  secondFamilyMemberFormData: {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    password: '',
+  },
+  thirdFamilyMemberFormData: {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    password: '',
+  },
+  fourthFamilyMemberFormData: {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    password: '',
+  },
   handleRegisterationFormDataChange: (name, value) => set((state) => ({ registerationFormData: { ...state.registerationFormData, [name]: value } })),
-  clearRegisterationFormData: () => set({
+  handleFirstFamilyMemberFormDataChange: (name, value) => set((state) => ({ firstFamilyMemberFormData: { ...state.firstFamilyMemberFormData, [name]: value } })),
+  handleSecondFamilyMemberFormDataChange: (name, value) => set((state) => ({ secondFamilyMemberFormData: { ...state.secondFamilyMemberFormData, [name]: value } })),
+  handleThirdFamilyMemberFormDataChange: (name, value) => set((state) => ({ thirdFamilyMemberFormData: { ...state.thirdFamilyMemberFormData, [name]: value } })),
+  handleFourthFamilyMemberFormDataChange: (name, value) => set((state) => ({ fourthFamilyMemberFormData: { ...state.fourthFamilyMemberFormData, [name]: value } })),
+  clearForms: () => set({
     formStep: 0,
     registerationFormData: {
       firstName: '',
@@ -32,6 +64,34 @@ export const registerationStore = create((set) => ({
       province: '',
       postalCode: '',
       country: 'Canada'
+    },
+    firstFamilyMemberFormData: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      password: '',
+    },
+    secondFamilyMemberFormData: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      password: '',
+    },
+    thirdFamilyMemberFormData: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      password: '',
+    },
+    fourthFamilyMemberFormData: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      password: '',
     }
   })
 }))
