@@ -11,6 +11,7 @@ import SignupStepOne from "./Signup/SignupStepOne";
 import SignupStepTwo from "./Signup/SignupStepTwo";
 import FirstFamilyMemberForm from "./Signup/FirstFamilyMemberForm";
 import SecondFamilyMemberForm from "./Signup/SecondFamilyMemberForm";
+import ThirdFamilyMemberForm from "./Signup/ThirdFamilyMemberForm";
 
 export {
   HomeHeroSection,
@@ -25,5 +26,6 @@ export {
   SignupStepOne,
   SignupStepTwo,
   FirstFamilyMemberForm,
-  SecondFamilyMemberForm
+  SecondFamilyMemberForm,
+  ThirdFamilyMemberForm,
 }
