@@ -4,18 +4,16 @@ import { BsPlusCircle } from 'react-icons/bs'
 import { FirstFamilyMemberForm, FourthFamilyMemberForm, SecondFamilyMemberForm, ThirdFamilyMemberForm } from '../../sections'
 
 const SignupStepOne = () => {
-  const [showFirstFamilyMemberForm, setShowFirstFamilyMemberForm] = useState(false)
-  const [showSecondFamilyMemberForm, setShowSecondFamilyMemberForm] = useState(false)
-  const [showThirdFamilyMemberForm, setShowThirdFamilyMemberForm] = useState(false)
-  const [showFourthFamilyMemberForm, setShowFourthFamilyMemberForm] = useState(false)
   const registerationFormData = registerationStore(state => state.registerationFormData)
   const handleRegisterationFormDataChange = registerationStore(state => state.handleRegisterationFormDataChange)
-
-  const thirdFamilyMemberFormData = registerationStore(state => state.thirdFamilyMemberFormData)
-  const handleThirdFamilyMemberFormDataChange = registerationStore(state => state.handleThirdFamilyMemberFormDataChange)
-  const fourthFamilyMemberFormData = registerationStore(state => state.fourthFamilyMemberFormData)
-  const handleFourthFamilyMemberFormDataChange = registerationStore(state => state.handleFourthFamilyMemberFormDataChange)
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
+  const showFirstFamilyMemberForm = registerationStore(state => state.showFirstFamilyMemberForm)
+  const setShowFirstFamilyMemberForm = registerationStore(state => state.setShowFirstFamilyMemberForm)
+  const showSecondFamilyMemberForm = registerationStore(state => state.showSecondFamilyMemberForm)
+  const showThirdFamilyMemberForm = registerationStore(state => state.showThirdFamilyMemberForm)
+  const showFourthFamilyMemberForm = registerationStore(state => state.showFourthFamilyMemberForm)
+
+
 
 
   return (
@@ -80,16 +78,16 @@ const SignupStepOne = () => {
         )}
       </div>
       {
-        showFirstFamilyMemberForm && <FirstFamilyMemberForm showNext={() => setShowSecondFamilyMemberForm(true)} />
+        selectedAccountType === "family" && showFirstFamilyMemberForm && <FirstFamilyMemberForm />
       }
       {
-        showSecondFamilyMemberForm && <SecondFamilyMemberForm showNext={() => setShowThirdFamilyMemberForm(true)} />
+        selectedAccountType === "family" && showSecondFamilyMemberForm && <SecondFamilyMemberForm />
       }
       {
-        showThirdFamilyMemberForm && <ThirdFamilyMemberForm showNext={() => setShowFourthFamilyMemberForm(true)} />
+        selectedAccountType === "family" && showThirdFamilyMemberForm && <ThirdFamilyMemberForm />
       }
       {
-        showFourthFamilyMemberForm && <FourthFamilyMemberForm />
+        selectedAccountType === "family" && showFourthFamilyMemberForm && <FourthFamilyMemberForm />
       }
     </section>
   )
