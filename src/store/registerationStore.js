@@ -3,9 +3,11 @@ import { create } from 'zustand'
 export const registerationStore = create((set) => ({
   formStep: 0,
   selectedAccountType: 'individual',
+  paymentMode: "yearly",
   changeSelectedAccountType: (accountType) => set((state) => ({ selectedAccountType: accountType })),
   increaseFormStep: () => set((state) => ({ formStep: state.formStep + 1 })),
   decreaseFormStep: () => set((state) => ({ formStep: state.formStep - 1 })),
+  setPaymentMode: (value) => set((state) => ({ paymentMode: value })),
   registerationFormData: {
     firstName: '',
     lastName: '',
@@ -16,7 +18,10 @@ export const registerationStore = create((set) => ({
     city: '',
     province: '',
     postalCode: '',
-    country: 'Canada'
+    country: 'Canada',
+    creditCardNumber: '',
+    creditCardExpiry: '',
+    creditCardCvc: ''
   },
   firstFamilyMemberFormData: {
     firstName: '',
@@ -71,7 +76,10 @@ export const registerationStore = create((set) => ({
       city: '',
       province: '',
       postalCode: '',
-      country: 'Canada'
+      country: 'Canada',
+      creditCardNumber: '',
+      creditCardExpiry: '',
+      creditCardCvc: ''
     },
     firstFamilyMemberFormData: {
       firstName: '',
@@ -100,6 +108,6 @@ export const registerationStore = create((set) => ({
       email: '',
       phone: '',
       password: '',
-    }
+    },
   })
 }))
