@@ -8,6 +8,7 @@ import HomeMembershipBenefitsSection from "./Home/HomeMembershipBenefitsSection"
 import ServicesHeaderSection from "./Services/ServicesHeaderSection";
 import ForYouHeaderSection from './ForYou/ForYouHeaderSection'
 import SignupStepOne from "./Signup/SignupStepOne";
+import SignupStepTwo from "./Signup/SignupStepTwo";
 
 export {
   HomeHeroSection,
@@ -19,5 +20,6 @@ export {
   HomeMembershipBenefitsSection,
   ServicesHeaderSection,
   ForYouHeaderSection,
-  SignupStepOne
+  SignupStepOne,
+  SignupStepTwo
 }
