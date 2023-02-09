@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { registerationStore } from "../../store"
+import { BsPlusCircle } from 'react-icons/bs'
 
 const Signup = () => {
   const signupFormRef = useRef(null)
