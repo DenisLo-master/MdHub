@@ -2,9 +2,9 @@ import React from 'react'
 import { BsPlusCircle } from 'react-icons/bs'
 import { registerationStore } from '../../store/registerationStore'
 
-const ThirdFamilyMemberForm = ({ showNext }) => {
+const ThirdFamilyMemberForm = () => {
   const thirdFamilyMemberFormData = registerationStore(state => state.thirdFamilyMemberFormData)
-  const selectedAccountType = registerationStore(state => state.selectedAccountType)
+  const setShowFourthFamilyMemberForm = registerationStore(state => state.setShowFourthFamilyMemberForm)
   const handleThirdFamilyMemberFormDataChange = registerationStore(state => state.handleThirdFamilyMemberFormDataChange)
 
   return (
@@ -61,7 +61,7 @@ const ThirdFamilyMemberForm = ({ showNext }) => {
           required
         />
       </div>
-      <div onClick={() => showNext()} className="absolute bottom-4 left-8 flex gap-x-2 text-primary font-body items-center text-3xl cursor-pointer">
+      <div onClick={() => setShowFourthFamilyMemberForm(true)} className="absolute bottom-4 left-8 flex gap-x-2 text-primary font-body items-center text-3xl cursor-pointer">
         <BsPlusCircle />
         <p className='text-xl'>add family member</p>
       </div>
