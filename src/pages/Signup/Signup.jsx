@@ -11,6 +11,8 @@ const Signup = () => {
   const registerationFormData = registerationStore(state => state.registerationFormData)
   const handleRegisterationFormDataChange = registerationStore(state => state.handleRegisterationFormDataChange)
   const clearRegisterationFormData = registerationStore(state => state.clearRegisterationFormData)
+  const selectedAccountType = registerationStore(state => state.selectedAccountType)
+  const changeSelectedAccountType = registerationStore(state => state.changeSelectedAccountType)
 
 
 
@@ -36,13 +38,25 @@ const Signup = () => {
       <article className="w-full space-y-4 flex flex-col items-center">
         <h2 className="text-4xl text-center pb-4">Choose Account Type</h2>
         <div className="w-full flex justify-around md:justify-between text-primary flex-wrap gap-y-4">
-          <button type="submit" className={`w-40 md:48 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`}>
+          <button
+            onClick={() => changeSelectedAccountType("individual")}
+            type="button"
+            className={`w-40 md:48  rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "individual" && "bg-primary text-white"}`}
+          >
             Individual
           </button>
-          <button type="submit" className={`w-40 md:48 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`}>
+          <button
+            onClick={() => changeSelectedAccountType("family")}
+            type="button"
+            className={`w-40 md:48 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "family" && "bg-primary text-white"}`}
+          >
             Family
           </button>
-          <button type="submit" className={`w-40 md:48 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`}>
+          <button
+            onClick={() => changeSelectedAccountType("corporate")}
+            type="button"
+            className={`w-40 md:48 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "corporate" && "bg-primary text-white"}`}
+          >
             Corporate
           </button>
         </div>
