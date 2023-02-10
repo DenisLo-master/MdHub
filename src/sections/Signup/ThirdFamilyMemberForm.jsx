@@ -1,14 +1,17 @@
 import React from 'react'
 import { BsPlusCircle } from 'react-icons/bs'
 import { registerationStore } from '../../store/registerationStore'
+import { MdClose } from 'react-icons/md'
 
 const ThirdFamilyMemberForm = () => {
   const thirdFamilyMemberFormData = registerationStore(state => state.thirdFamilyMemberFormData)
+  const setShowThirdFamilyMemberForm = registerationStore(state => state.setShowThirdFamilyMemberForm)
   const setShowFourthFamilyMemberForm = registerationStore(state => state.setShowFourthFamilyMemberForm)
   const handleThirdFamilyMemberFormDataChange = registerationStore(state => state.handleThirdFamilyMemberFormDataChange)
 
   return (
     <div className="py-16 border space-y-4 px-8 shadow-cardService rounded-[35px] text-primary relative">
+      <MdClose onClick={() => setShowThirdFamilyMemberForm(false)} className="absolute top-6 right-6 text-3xl cursor-pointer" />
       <h2 className="text-lg font-semibold">Add Family Member</h2>
       <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
         <input
