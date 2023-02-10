@@ -45,12 +45,13 @@ const Signup = () => {
     const signupFormBody = {
       accountType: selectedAccountType,
       primaryUserData: registerationFormData,
-      childUsersData: [
-        firstFamilyMemberFormData.firstName && { ...firstFamilyMemberFormData },
-        secondFamilyMemberFormData.firstName && { ...secondFamilyMemberFormData },
-        thirdFamilyMemberFormData.firstName && { ...thirdFamilyMemberFormData },
-        fourthFamilyMemberFormData.firstName && { ...fourthFamilyMemberFormData },
-      ],
+      isChildUser: false,
+      childUsersData: selectedAccountType === "family" ? [
+        firstFamilyMemberFormData.firstName.length && { ...firstFamilyMemberFormData },
+        secondFamilyMemberFormData.firstName.length && { ...secondFamilyMemberFormData },
+        thirdFamilyMemberFormData.firstName.length && { ...thirdFamilyMemberFormData },
+        fourthFamilyMemberFormData.firstName.length && { ...fourthFamilyMemberFormData },
+      ] : [],
       totalAmount: getBill()
     }
     try {
@@ -61,12 +62,13 @@ const Signup = () => {
         },
         body: JSON.stringify(signupFormBody)
       })
+      const data = await response.json()
       clearForms()
       await response.json()
-      navigate('/dashboard')
+      navigate('/login')
 
     } catch (error) {
-      console.log(error)
+      console.log(error.message)
     } 
   }
 
