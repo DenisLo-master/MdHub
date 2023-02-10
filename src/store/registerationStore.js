@@ -23,13 +23,6 @@ export const registerationStore = create((set) => ({
     creditCardExpiry: '',
     creditCardCvc: ''
   },
-  firstFamilyMemberFormData: {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    password: '',
-  },
   showFirstFamilyMemberForm: false,
   setShowFirstFamilyMemberForm: (value) => set({ showFirstFamilyMemberForm: value }),
   showSecondFamilyMemberForm: false,
@@ -38,6 +31,13 @@ export const registerationStore = create((set) => ({
   setShowThirdFamilyMemberForm: (value) => set({ showThirdFamilyMemberForm: value }),
   showFourthFamilyMemberForm: false,
   setShowFourthFamilyMemberForm: (value) => set({ showFourthFamilyMemberForm: value }),
+  firstFamilyMemberFormData: {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    password: '',
+  },
   secondFamilyMemberFormData: {
     firstName: '',
     lastName: '',
