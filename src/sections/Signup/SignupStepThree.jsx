@@ -4,6 +4,8 @@ import { registerationStore } from '../../store/registerationStore'
 const SignupStepThree = () => {
   const registerationFormData = registerationStore(state => state.registerationFormData)
   const handleRegisterationFormDataChange = registerationStore(state => state.handleRegisterationFormDataChange)
+  const paymentMode = registerationStore(state => state.paymentMode)
+  const selectedAccountType = registerationStore(state => state.selectedAccountType)
   return (
     <section>
       <div className='flex justify-between'>
@@ -14,9 +16,31 @@ const SignupStepThree = () => {
         <article className="space-y-4 text-right">
           <h2 className="text-2xl">Subtotal</h2>
           <div className="font-body">
-            <h3>$359.88</h3>
-            <h3>Tax: $47.78</h3>
-            <h2 className="text-3xl">Total: <strong>$406.66</strong></h2>
+            {
+              selectedAccountType === "individual" ?
+                (
+                  paymentMode === "monthly" ?
+                    <div>
+                      <h3>${34.99 * 3}</h3>
+                      <h3>Tax: $47.78</h3>
+                      <h2 className="text-3xl">Total: <strong>${Math.floor(34.99 * 3 + 47.78)}</strong></h2>
+                    </div> :
+                    <div>
+                      <h3>${29.99 * 12}</h3>
+                      <h3>Tax: $47.78</h3>
+                      <h2 className="text-3xl">Total: <strong>${Math.floor(29.99 * 12 + 47.78)}</strong></h2>
+                    </div>
+                ) :
+                selectedAccountType === "family" ?
+                  (
+                    paymentMode === "monthly" ?
+                      <h3>${44.99 * 3}</h3> :
+                      <h3>${44.99 * 12}</h3>
+                  ) :
+                  (
+                    <h3>${19.99 * 120}</h3>
+                  )
+            }
           </div>
         </article>
       </div>
