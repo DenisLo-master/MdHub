@@ -15,8 +15,6 @@ const Signup = () => {
   const paymentMode = registerationStore(state => state.paymentMode)
   const setPaymentMode = registerationStore(state => state.setPaymentMode)
   const registerationFormData = registerationStore(state => state.registerationFormData)
-  const totalChargedAmount = registerationStore(state => state.totalChargedAmount)
-  const setTotalChargedAmount = registerationStore(state => state.setTotalChargedAmount)
   const firstFamilyMemberFormData = registerationStore(state => state.firstFamilyMemberFormData)
   const secondFamilyMemberFormData = registerationStore(state => state.secondFamilyMemberFormData)
   const thirdFamilyMemberFormData = registerationStore(state => state.thirdFamilyMemberFormData)
