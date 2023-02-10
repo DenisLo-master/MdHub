@@ -66,6 +66,10 @@ export const registerationStore = create((set) => ({
   handleFourthFamilyMemberFormDataChange: (name, value) => set((state) => ({ fourthFamilyMemberFormData: { ...state.fourthFamilyMemberFormData, [name]: value } })),
   clearForms: () => set({
     formStep: 0,
+    showFirstFamilyMemberForm: false,
+    showSecondFamilyMemberForm: false,
+    showThirdFamilyMemberForm: false,
+    showFourthFamilyMemberForm: false,
     registerationFormData: {
       firstName: '',
       lastName: '',
