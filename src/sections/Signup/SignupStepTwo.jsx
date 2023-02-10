@@ -47,14 +47,16 @@ const SignupStepTwo = () => {
         />
       </div>
       <div className="w-full flex">
-        <input
+        <button
+          type="button"
           className="flex-1 text-center rounded-full text-xl bg-primary text-white focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
           name="country"
-          type="text"
           value="Canada"
           placeholder="Password*"
           required
-        />
+        >
+          Canada
+        </button>
       </div>
     </div>
   )
