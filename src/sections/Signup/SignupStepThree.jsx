@@ -6,6 +6,7 @@ const SignupStepThree = () => {
   const handleRegisterationFormDataChange = registerationStore(state => state.handleRegisterationFormDataChange)
   const paymentMode = registerationStore(state => state.paymentMode)
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
+  const totalChargedAmount = registerationStore(state => state.totalChargedAmount)
   return (
     <section>
       <div className='flex justify-between'>
