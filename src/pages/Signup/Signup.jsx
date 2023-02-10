@@ -14,21 +14,59 @@ const Signup = () => {
   const changeSelectedAccountType = registerationStore(state => state.changeSelectedAccountType)
   const paymentMode = registerationStore(state => state.paymentMode)
   const setPaymentMode = registerationStore(state => state.setPaymentMode)
+  const registerationFormData = registerationStore(state => state.registerationFormData)
+  const totalChargedAmount = registerationStore(state => state.totalChargedAmount)
+  const setTotalChargedAmount = registerationStore(state => state.setTotalChargedAmount)
+  const firstFamilyMemberFormData = registerationStore(state => state.firstFamilyMemberFormData)
+  const secondFamilyMemberFormData = registerationStore(state => state.secondFamilyMemberFormData)
+  const thirdFamilyMemberFormData = registerationStore(state => state.thirdFamilyMemberFormData)
+  const fourthFamilyMemberFormData = registerationStore(state => state.fourthFamilyMemberFormData)
+
+  const getBill = () => {
+    if (selectedAccountType === "individual") {
+      if (paymentMode === "yearly") {
+        return 407
+      }
+      return 152
+    }
+    if (selectedAccountType === "family") {
+      if (paymentMode === "yearly") {
+        return 587
+      }
+      return 212
+    }
+    if (selectedAccountType === "corporate") {
+      return 2446
+    }
+
+
+  }
 
   const handleSignup = async (e) => {
     e.preventDefault()
-    console.log("Submit")
+    const signupFormBody = {
+      accountType: selectedAccountType,
+      primaryUserData: registerationFormData,
+      childUsersData: [
+        firstFamilyMemberFormData.firstName && { ...firstFamilyMemberFormData },
+        secondFamilyMemberFormData.firstName && { ...secondFamilyMemberFormData },
+        thirdFamilyMemberFormData.firstName && { ...thirdFamilyMemberFormData },
+        fourthFamilyMemberFormData.firstName && { ...fourthFamilyMemberFormData },
+      ],
+      totalAmount: getBill()
+    }
     try {
       const response = await fetch('http://localhost:8080/api/v1/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(userData)
+        body: JSON.stringify(signupFormBody)
       })
       clearForms()
       await response.json()
       navigate('/dashboard')
+
     } catch (error) {
       console.log(error)
     } 
@@ -144,7 +182,6 @@ const Signup = () => {
                         Prev
                       </button>
                       <button
-                        onClick={() => increaseFormStep()}
                         className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
                         type="Submit"
                       >
