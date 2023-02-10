@@ -64,7 +64,6 @@ const Signup = () => {
       })
       const data = await response.json()
       clearForms()
-      await response.json()
       navigate('/login')
 
     } catch (error) {
