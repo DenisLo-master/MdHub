@@ -11,7 +11,13 @@ const SignupStepThree = () => {
       <div className='flex justify-between'>
         <article className="space-y-4">
           <h2 className="text-2xl">Your Order</h2>
-          <h3 className="font-body">1 x Individual Plan</h3>
+          <h3 className="font-body">
+            {
+              selectedAccountType === "individual" ? "1 x Individual Plan" :
+                selectedAccountType === "family" ? "1 x Family Plan" :
+                  "1 x Corporate Plan"
+            }
+          </h3>
         </article>
         <article className="space-y-4 text-right">
           <h2 className="text-2xl">Subtotal</h2>
@@ -34,11 +40,24 @@ const SignupStepThree = () => {
                 selectedAccountType === "family" ?
                   (
                     paymentMode === "monthly" ?
-                      <h3>${44.99 * 3}</h3> :
-                      <h3>${44.99 * 12}</h3>
+                      <div>
+                        <h3>${54.99 * 3}</h3>
+                        <h3>Tax: $47.78</h3>
+                        <h2 className="text-3xl">Total: <strong>${Math.floor(54.99 * 3 + 47.78)}</strong></h2>
+                      </div> :
+                      <div>
+                        <h3>${44.99 * 12}</h3>
+                        <h3>Tax: $47.78</h3>
+                        <h2 className="text-3xl">Total: <strong>${Math.floor(44.99 * 12 + 47.78)}</strong></h2>
+                      </div>
                   ) :
                   (
-                    <h3>${19.99 * 120}</h3>
+                    <div>
+                      <h3>${Math.floor(19.99 * 120)}</h3>
+                      <h3>Tax: $47.78</h3>
+                      <h2 className="text-3xl">Total: <strong>${Math.floor(19.99 * 120 + 47.78)}</strong></h2>
+                    </div>
+
                   )
             }
           </div>
