@@ -19,6 +19,7 @@ export const registerationStore = create((set) => ({
     accountType: '',
     childAccounts: [],
   },
+  setUserInfo: (userInfoData) => set((state) => ({ userInfo: userInfoData })),
   changeSelectedAccountType: (accountType) => set((state) => ({ selectedAccountType: accountType })),
   increaseFormStep: () => set((state) => ({ formStep: state.formStep + 1 })),
   decreaseFormStep: () => set((state) => ({ formStep: state.formStep - 1 })),
