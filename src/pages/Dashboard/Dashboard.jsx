@@ -12,11 +12,10 @@ const Dashboard = () => {
 
   useEffect(() => {
     const token = localStorage.getItem("jwtToken")
-    const tokenInfo = jwt(token)
-    if(!token) navigate("/login")
-
+    const tokenInfo = token ? jwt(token) : {}
+    if (!token) navigate("/login")
     const fetchUser = async () => {
-      const response = await fetch(`http://localhost:8080/api/v1/users/${tokenInfo.id}`, {
+      const response = await fetch(`http://localhost:8080/api/v1/users/${tokenInfo?.id}`, {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${token}`
@@ -25,7 +24,7 @@ const Dashboard = () => {
       const data = await response.json()
       setUserInfo(data)
     }
-    fetchUser()
+    token && fetchUser()
   }, [])
 
   return (
@@ -106,16 +105,16 @@ const Dashboard = () => {
                   {userInfo?.firstName}
                 </article>
                 <article className="bg-white rounded-[48px] shadow-cardService px-8 py-3 border-[0.25px]">
-                  Smith
+                  {userInfo?.lastName}
                 </article>
                 <article className="bg-white rounded-[48px] shadow-cardService px-8 py-3 border-[0.25px]">
-                  johnsmith@gmail.com
+                  {userInfo?.email}
                 </article>
                 <article className="bg-white rounded-[48px] shadow-cardService px-8 py-3 border-[0.25px]">
-                  416-000-0000
+                  {userInfo?.phone}
                 </article>
                 <article className="bg-white rounded-[48px] shadow-cardService px-8 py-3 border-[0.25px]">
-                  10 Queen St W, Toronto, ON M5H 3X4
+                  {`${userInfo.address}, ${userInfo?.city}, ${userInfo.province}`}
                 </article>
               </div>
             </article>
@@ -126,10 +125,24 @@ const Dashboard = () => {
                 <article className="space-y-10">
                   <div>
                     <p className="text-sm">Your current subscription plan</p>
-                    <h2 className="font-bold text-2xl tracking-widest">Individual Yearly</h2>
+                    <h2 className="font-bold text-2xl tracking-widest">{`${userInfo?.accountType} ${userInfo?.paymentMode}`}</h2>
                   </div>
                   <div>
-                    <h2 className="font-bold text-4xl">$29.99/month</h2>
+                    <h2 className="font-bold text-4xl">$
+                      {
+                        userInfo?.accountType === "individual" &&
+                          userInfo?.paymentMode === "monthly" ? "34.99" : "29.99"
+                      }
+                      {
+                        userInfo?.accountType === "family" &&
+                          userInfo?.paymentMode === "monthly" ? "54.99" : "44.99"
+                      }
+                      {
+                        userInfo?.accountType === "corporate" &&
+                        "19.99"
+                      }
+                      /month
+                    </h2>
                     <p className="text-sm">Unlimited usage</p>
                   </div>
                 </article>
