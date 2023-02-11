@@ -17,18 +17,7 @@ export const registerationStore = create((set) => ({
     postalCode: "",
     paymentMode: "",
     accountType: '',
-    childAccounts: [
-      {
-        _id: "",
-        firstName: "",
-        lastName: "",
-        email: "",
-        password: "",
-        phone: "",
-        isChildUser: true,
-        parentAccountId: "",
-      }
-    ],
+    childAccounts: [],
   },
   changeSelectedAccountType: (accountType) => set((state) => ({ selectedAccountType: accountType })),
   increaseFormStep: () => set((state) => ({ formStep: state.formStep + 1 })),
