@@ -1,7 +1,7 @@
-import React, { useState, useRef } from 'react'
+import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { registerationStore } from '../../store/registerationStore'
-import { SignupStepOne, SignupStepTwo, SignupStepThree } from '../../sections'
+import { SignupStepOne, SignupStepTwo, SignupStepThree, SignupAccountsTypeNav } from '../../sections'
 
 const Signup = () => {
   const signupFormRef = useRef(null)
@@ -11,7 +11,6 @@ const Signup = () => {
   const decreaseFormStep = registerationStore(state => state.decreaseFormStep)
   const clearForms = registerationStore(state => state.clearForms)
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
-  const changeSelectedAccountType = registerationStore(state => state.changeSelectedAccountType)
   const paymentMode = registerationStore(state => state.paymentMode)
   const setPaymentMode = registerationStore(state => state.setPaymentMode)
   const registerationFormData = registerationStore(state => state.registerationFormData)
@@ -75,29 +74,7 @@ const Signup = () => {
     <section className="w-full max-w-[42rem] flex flex-col items-center mx-auto py-8 md:py-20 font-main">
       <article className="w-full space-y-4 flex flex-col items-center">
         <h2 className="text-4xl text-center pb-4">Choose Account Type</h2>
-        <div className="w-full flex justify-around md:justify-between text-primary flex-wrap gap-y-4">
-          <button
-            onClick={() => changeSelectedAccountType("individual")}
-            type="button"
-            className={`w-40 md:48  rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "individual" && "bg-primary text-white"}`}
-          >
-            Individual
-          </button>
-          <button
-            onClick={() => changeSelectedAccountType("family")}
-            type="button"
-            className={`w-40 md:48 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "family" && "bg-primary text-white"}`}
-          >
-            Family
-          </button>
-          <button
-            onClick={() => changeSelectedAccountType("corporate")}
-            type="button"
-            className={`w-40 md:48 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "corporate" && "bg-primary text-white"}`}
-          >
-            Corporate
-          </button>
-        </div>
+        <SignupAccountsTypeNav />
       </article>
       <article className="w-full self-start pt-8 pb-4 mb-4 ">
         <div className="w-full flex justify-between items-center">
@@ -155,23 +132,23 @@ const Signup = () => {
                   Continue
                 </button>
               ) : formStep === 1 ? (
-                <div className="flex gap-x-4">
-                  <button
-                    onClick={() => decreaseFormStep()}
-                    className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
-                    type="button"
-                  >
-                    Prev
-                  </button>
-                  <button
-                    onClick={() => increaseFormStep()}
-                    className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
-                    type="button"
-                  >
-                    Continue
-                  </button>
-                </div>
-              ) : (
+                  <div className="flex gap-x-4">
+                    <button
+                      onClick={() => decreaseFormStep()}
+                      className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
+                      type="button"
+                    >
+                      Prev
+                    </button>
+                    <button
+                      onClick={() => increaseFormStep()}
+                      className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
+                      type="button"
+                    >
+                      Continue
+                    </button>
+                  </div>
+                ) : (
                     <div className="flex gap-x-4">
                       <button
                         onClick={() => decreaseFormStep()}
@@ -187,7 +164,7 @@ const Signup = () => {
                         Submit
                       </button>
                     </div>
-              )
+                  )
             }
           </div>
         </form>
