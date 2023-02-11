@@ -76,46 +76,6 @@ const Signup = () => {
         <h2 className="text-4xl text-center pb-4">Choose Account Type</h2>
         <SignupAccountsTypeNav />
       </article>
-      <article className="w-full self-start pt-8 pb-4 mb-4 ">
-        <div className="w-full flex justify-between items-center">
-          <article className="border-b-primary flex items-baseline gap-x-6 border-b-[3px] max-w-xs">
-            <h2 className="text-5xl ">{formStep === 0 ? "Step 1" : formStep === 1 ? "Step 2" : "Step 3"}</h2>
-            <div className="font-body text-xl font-light">
-              {
-                formStep === 0 ?
-                  <div className="text-right">
-                    <p>Enter member details</p>
-                    <p className="text-sm">
-                      {
-                        selectedAccountType === "family" ? "Upto 4 Family Members" : selectedAccountType === "corporate" && "Upto 10 Employees"
-                      }
-                    </p>
-                  </div> : formStep === 1 ? "Billing Address" : "Payment"
-              }
-            </div>
-          </article>
-          {
-            formStep === 2 && (
-              <div className="flex gap-x-4">
-                <button
-                  onClick={() => setPaymentMode("yearly")}
-                  className={`${paymentMode === 'yearly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
-                  <h2 className="text-xl">Yearly</h2>
-                  <h4 className="text-xs">Best Value</h4>
-                </button>
-                {
-                  selectedAccountType !== "corporate" && 
-                  <button
-                    onClick={() => setPaymentMode("monthly")}
-                    className={`${paymentMode === 'monthly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
-                    <h2 className="text-xl">Monthly</h2>
-                  </button>
-                }
-              </div>
-            )
-          }
-        </div>
-      </article>
       <article className="w-full">
         <form ref={signupFormRef} onSubmit={handleSignup} className="w-full">
           {formStep === 0 ?
