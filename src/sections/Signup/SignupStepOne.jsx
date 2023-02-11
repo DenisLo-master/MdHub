@@ -12,7 +12,6 @@ const SignupStepOne = () => {
   const showSecondFamilyMemberForm = registerationStore(state => state.showSecondFamilyMemberForm)
   const showThirdFamilyMemberForm = registerationStore(state => state.showThirdFamilyMemberForm)
   const showFourthFamilyMemberForm = registerationStore(state => state.showFourthFamilyMemberForm)
-  const formStep = registerationStore(state => state.formStep)
 
   return (
     <section className='space-y-6'>
