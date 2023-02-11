@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { registerationStore } from '../../store/registerationStore'
 import { SignupStepOne, SignupStepTwo, SignupStepThree, SignupAccountsTypeNav } from '../../sections'
@@ -70,6 +70,11 @@ const Signup = () => {
       console.log(error.message)
     } 
   }
+
+  useEffect(() => {
+    const token = localStorage.getItem("jwtToken")
+    if (token) navigate("/dashboard")
+  }, [])
 
   return (
     <section className="w-full max-w-[42rem] flex flex-col items-center mx-auto py-8 md:py-20 font-main">
