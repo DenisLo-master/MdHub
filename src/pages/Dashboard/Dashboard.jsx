@@ -2,12 +2,30 @@ import React, { useEffect } from 'react'
 import { MDHubWheelTransparent, ChevronLeft, ChevronRight } from '../../assets'
 import { calenderData } from '../../constants'
 import { useNavigate } from 'react-router-dom'
+import { registerationStore } from '../../store/registerationStore'
+import jwt from 'jwt-decode'
 
 const Dashboard = () => {
   const navigate = useNavigate()
+  const userInfo = registerationStore(state => state.userInfo)
+  const setUserInfo = registerationStore(state => state.setUserInfo)
+
   useEffect(() => {
     const token = localStorage.getItem("jwtToken")
+    const tokenInfo = jwt(token)
     if(!token) navigate("/login")
+
+    const fetchUser = async () => {
+      const response = await fetch(`http://localhost:8080/api/v1/users/${tokenInfo.id}`, {
+        method: "GET",
+        headers: {
+          "Authorization": `Bearer ${token}`
+        }
+      })
+      const data = await response.json()
+      setUserInfo(data)
+    }
+    fetchUser()
   }, [])
 
   return (
@@ -85,7 +103,7 @@ const Dashboard = () => {
               <h2 className="text-4xl font-main font-normal">Your Information</h2>
               <div className="p-10 bg-[#fbfbfb] rounded-[35px] shadow-cardService space-y-6  border-[0.25px]">
                 <article className="bg-white rounded-[48px] shadow-cardService px-8 py-3 border-[0.25px]">
-                  John
+                  {userInfo?.firstName}
                 </article>
                 <article className="bg-white rounded-[48px] shadow-cardService px-8 py-3 border-[0.25px]">
                   Smith
