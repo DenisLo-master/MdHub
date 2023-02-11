@@ -1,9 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { registerationStore } from '../../store/registerationStore'
 
 const Login = () => {
   const navigate = useNavigate()
   const loginFormRef = useRef(null)
+  const setUserInfo = registerationStore(state => state.setUserInfo)
+  const userInfo = registerationStore(state => state.userInfo)
 
   const handleLogin = async (e) => {
     e.preventDefault()
@@ -20,13 +23,13 @@ const Login = () => {
       loginFormRef.current.reset()
       const data = await response.json()
       localStorage.setItem("jwtToken", data.accessToken)
+      setUserInfo(data)
       navigate('/dashboard')
     }
     catch (error) {
       console.log(error)
     }
   }
-
   return (
     <section className="w-full max-w-[42rem] flex flex-col items-center mx-auto py-8 md:py-20 font-main">
       <h2 className="text-4xl text-center pb-4">Login</h2>
