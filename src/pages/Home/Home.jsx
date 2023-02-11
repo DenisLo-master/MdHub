@@ -10,6 +10,10 @@ import {
 } from '../../sections'
 
 const Home = () => {
+  useEffect(() => {
+    const token = localStorage.getItem("jwtToken")
+    if (token) navigate("/dashboard")
+  }, [])
   return (
     <div className="bg-white">
       <HomeHeroSection />
