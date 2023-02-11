@@ -1,6 +1,5 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import FormField from '../../components/FormField'
 
 const Login = () => {
   const navigate = useNavigate()
