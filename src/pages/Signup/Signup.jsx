@@ -12,7 +12,6 @@ const Signup = () => {
   const clearForms = registerationStore(state => state.clearForms)
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
   const paymentMode = registerationStore(state => state.paymentMode)
-  const setPaymentMode = registerationStore(state => state.setPaymentMode)
   const registerationFormData = registerationStore(state => state.registerationFormData)
   const firstFamilyMemberFormData = registerationStore(state => state.firstFamilyMemberFormData)
   const secondFamilyMemberFormData = registerationStore(state => state.secondFamilyMemberFormData)
@@ -35,15 +34,17 @@ const Signup = () => {
     if (selectedAccountType === "corporate") {
       return 2446
     }
-
-
   }
 
   const handleSignup = async (e) => {
     e.preventDefault()
     const signupFormBody = {
       accountType: selectedAccountType,
-      primaryUserData: registerationFormData,
+      primaryUserData: {
+        ...registerationFormData,
+        paymentMode,
+        accountType: selectedAccountType
+      },
       isChildUser: false,
       childUsersData: selectedAccountType === "family" ? [
         firstFamilyMemberFormData.firstName.length && { ...firstFamilyMemberFormData },
@@ -54,7 +55,8 @@ const Signup = () => {
       totalAmount: getBill()
     }
     try {
-      const response = await fetch('https://mdhub-backend.onrender.com/api/v1/auth/register', {
+      // https://mdhub-backend.onrender.com
+      const response = await fetch('http://localhost:8080/api/v1/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
