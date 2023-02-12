@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react'
-import { MDHubWheelTransparent, ChevronLeft, ChevronRight } from '../../assets'
-import { calenderData } from '../../constants'
 import { useNavigate } from 'react-router-dom'
 import { registerationStore } from '../../store/registerationStore'
 import jwt from 'jwt-decode'
+import { Outlet } from 'react-router-dom'
+import { DashboardUserInfo } from '../../sections'
 
 const Dashboard = () => {
   const navigate = useNavigate()
-  const userInfo = registerationStore(state => state.userInfo)
   const setUserInfo = registerationStore(state => state.setUserInfo)
 
   useEffect(() => {
@@ -29,25 +28,13 @@ const Dashboard = () => {
 
   return (
     <section className="font-main text-gray-800">
-      <header className="py-16 bg-[#f9f9f9]">
-        <h1 className="text-4xl text-center pb-10">Your MdHub Dashboard</h1>
-        <section className="flex justify-center items-center gap-x-10">
-          <img className="max-w-[490px] -ml-24" src={MDHubWheelTransparent} alt="MD Hub" />
-          <article className="space-y-3">
-            <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-8 py-3 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-              Book New Appointment
-            </button>
-            <div className="flex items-center gap-x-2 font-body text-base pl-6">
-              <article className="bg-primary rounded-full w-4 h-4" />
-              <p>2 upcoming appointments</p>
-            </div>
-          </article>
-        </section>
-      </header>
-
-      <section className="py-20">
+      <Outlet />
+      <section className="max-w-7xl mx-auto">
+        <DashboardUserInfo />
+      </section>
+      {/* <section className="py-20">
         <div className="max-w-7xl mx-auto">
-          <section className="pb-20">
+          {<section className="pb-20">
             <h2 className="text-[2rem]">Current Appointments</h2>
             <div className="flex gap-x-2 font-body text-lg">
               <p>Switch to view past appointments</p>
@@ -95,65 +82,10 @@ const Dashboard = () => {
               <span className="text-gray-800 text-3xl">Dec</span>
               <ChevronRight />
             </article>
-          </section>
+          </section>}
 
-          <section className="flex gap-x-16 font-body font-light pb-10">
-            <article className="flex-1 space-y-4">
-              <h2 className="text-4xl font-main font-normal">Your Information</h2>
-              <div className="p-10 bg-[#fbfbfb] rounded-[35px] shadow-cardService space-y-6  border-[0.25px]">
-                <article className="bg-white rounded-[48px] shadow-cardService px-8 py-3 border-[0.25px]">
-                  {userInfo?.firstName}
-                </article>
-                <article className="bg-white rounded-[48px] shadow-cardService px-8 py-3 border-[0.25px]">
-                  {userInfo?.lastName}
-                </article>
-                <article className="bg-white rounded-[48px] shadow-cardService px-8 py-3 border-[0.25px]">
-                  {userInfo?.email}
-                </article>
-                <article className="bg-white rounded-[48px] shadow-cardService px-8 py-3 border-[0.25px]">
-                  {userInfo?.phone}
-                </article>
-                <article className="bg-white rounded-[48px] shadow-cardService px-8 py-3 border-[0.25px]">
-                  {`${userInfo.address}, ${userInfo?.city}, ${userInfo.province}`}
-                </article>
-              </div>
-            </article>
-
-            <article className="flex-1 space-y-4">
-              <h2 className="text-4xl font-main font-normal">Your Subscription</h2>
-              <div className="p-10 bg-[#fbfbfb] flex flex-col justify-between rounded-[35px] shadow-cardService space-y-6 border-[0.25px] h-[428px]">
-                <article className="space-y-10">
-                  <div>
-                    <p className="text-sm">Your current subscription plan</p>
-                    <h2 className="font-bold text-2xl tracking-widest">{`${userInfo?.accountType} ${userInfo?.paymentMode}`}</h2>
-                  </div>
-                  <div>
-                    <h2 className="font-bold text-4xl">$
-                      {
-                        userInfo?.accountType === "individual" ?
-                          userInfo?.paymentMode === "monthly" ? "34.99" : "29.99"
-                          :
-                          userInfo?.accountType === "family" ?
-                            userInfo?.paymentMode === "monthly" ? "54.99" : "44.99"
-                            :
-                            userInfo?.accountType === "corporate" &&
-                            "19.99"
-                      }
-                      /month
-                    </h2>
-                    <p className="text-sm">Unlimited usage</p>
-                  </div>
-                </article>
-                <article>
-                  <button className={`rounded-full font-main text-lg group hover:ring-1 hover:ring-primary px-12 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-                    Manage
-                  </button>
-                </article>
-              </div>
-            </article>
-          </section>
         </div>
-      </section>
+      </section> */}
 
     </section>
   )
