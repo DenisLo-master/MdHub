@@ -14,6 +14,8 @@ import CorporateOverview from './CorporateOverview/CorporateOverview'
 import ForBabies from './ForBabies/ForBabies'
 import Signup from './Signup/Signup'
 import Login from './Login/Login'
+import BookAppointment from './Dashboard/BookAppointment'
+import DashboardHome from './Dashboard/DashboardHome'
 
 export {
   Home,
@@ -31,5 +33,7 @@ export {
   CorporateOverview,
   ForBabies,
   Signup,
-  Login
+  Login,
+  BookAppointment,
+  DashboardHome
 }
