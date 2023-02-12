@@ -6,7 +6,7 @@ const ServicesCard = ({ title, children, bgPrimary, wideCaption }) => {
       {
         children
       }
-      <p className={`w-full ${wideCaption ? 'max-w-[130px]' : 'max-w-[70px]'} text-lg text-center leading-5 ${bgPrimary ? "text-white" : "text-gray-800"}`}>{title}</p>
+      <p className={`w-full ${wideCaption ? 'max-w-[140px]' : 'max-w-[70px]'} text-lg text-center leading-5 ${bgPrimary ? "text-white" : "text-gray-800"}`}>{title}</p>
     </article>
   )
 }
