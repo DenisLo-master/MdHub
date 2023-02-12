@@ -36,7 +36,7 @@ const ServicesNursingAndHomecare = () => {
         <section className="flex justify-center flex-wrap gap-8 text-center">
           {
             nursingAndHomecareServices.map((item, index) => (
-              <article className={`shadow-cardService w-[127px] h-[120px] rounded-2xl text-xs text-center flex justify-center items-center border-[0.25px] border-[#cfc5c5] font-main ${index === 0 ? "bg-primary text-white" : 'bg-white text-gray-800'}`}>
+              <article key={index} className={`shadow-cardService w-[127px] h-[120px] rounded-2xl text-xs text-center flex justify-center items-center border-[0.25px] border-[#cfc5c5] font-main ${index === 0 ? "bg-primary text-white" : 'bg-white text-gray-800'}`}>
                 <h2 className="max-w-[100px]">{item}</h2>
               </article>
             ))
