@@ -19,7 +19,9 @@ import {
   CorporateOverview,
   ForBabies,
   Signup,
-  Login
+  Login,
+  DashboardHome,
+  BookAppointment
 } from './pages'
 
 function App() {
@@ -41,7 +43,10 @@ function App() {
             <Route path="/for-you" element={<ForYou />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard />}>
+              <Route index element={<DashboardHome />} />
+              <Route path="book-appointment" element={<BookAppointment />} />
+            </Route>
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/for-corporate" element={<CorporateOverview />} />
             <Route path="/for-family" element={<ForBabies />} />
