@@ -130,16 +130,14 @@ const Dashboard = () => {
                   <div>
                     <h2 className="font-bold text-4xl">$
                       {
-                        userInfo?.accountType === "individual" &&
+                        userInfo?.accountType === "individual" ?
                           userInfo?.paymentMode === "monthly" ? "34.99" : "29.99"
-                      }
-                      {
-                        userInfo?.accountType === "family" &&
-                          userInfo?.paymentMode === "monthly" ? "54.99" : "44.99"
-                      }
-                      {
-                        userInfo?.accountType === "corporate" &&
-                        "19.99"
+                          :
+                          userInfo?.accountType === "family" ?
+                            userInfo?.paymentMode === "monthly" ? "54.99" : "44.99"
+                            :
+                            userInfo?.accountType === "corporate" &&
+                            "19.99"
                       }
                       /month
                     </h2>
