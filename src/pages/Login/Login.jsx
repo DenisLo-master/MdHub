@@ -20,10 +20,12 @@ const Login = () => {
         body: JSON.stringify(loginFormData)
       })
       loginFormRef.current.reset()
-      const data = await response.json()
-      localStorage.setItem("jwtToken", data.accessToken)
-      setUserInfo(data)
-      navigate('/dashboard')
+      if (response.ok) {
+        const data = await response.json()
+        localStorage.setItem("jwtToken", data.accessToken)
+        setUserInfo(data)
+        navigate('/dashboard')
+      }
     }
     catch (error) {
       console.log(error)
