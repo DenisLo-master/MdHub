@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import { DoctorIcon, NursingIcon, PharmacyIcon, TestingIcon } from '../../assets'
 import Modal from '../../components/Modal'
 import ServicesCard from '../../components/ServicesCard'
-import "react-datepicker/dist/react-datepicker.css";
 import { nursingAndHomecareServices } from "../../constants";
 import { BiCaretDown } from "react-icons/bi"
 import { registerationStore } from "../../store/registerationStore";
