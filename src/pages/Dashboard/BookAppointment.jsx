@@ -67,12 +67,12 @@ const BookAppointment = () => {
       <Modal key="Lab Testing Modal" title="Lab Testing" showModal={showModal} setShowModal={setShowModal}>
         <section className="py-12 bg-[#F9F9F9]">
           <div className="flex justify-center gap-x-12 pb-6 text-xl">
-            <article className="w-full text-center bg-primary text-white max-w-[300px] py-3 rounded-3xl">
+            <a href="https://www.testmobile.ca/collections/mobile" target="_blank" className="w-full text-center bg-primary text-white max-w-[300px] py-3 rounded-3xl">
               Mobile Service
-            </article>
-            <article className="w-full text-center bg-primary text-white max-w-[300px] py-3 rounded-3xl">
+            </a>
+            <a href="https://www.testmobile.ca/collections/virtual-testing" target="_blank" className="w-full text-center bg-primary text-white max-w-[300px] py-3 rounded-3xl">
               Virtual Service
-            </article>
+            </a>
           </div>
           <p className="text-center text-gray-800 text-lg font-light font-body max-w-[910px] mx-auto">
             MDHUB Members Benefit from 25% discount on all virus testing services as well as free upgraded rush service.
