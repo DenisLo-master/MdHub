@@ -52,10 +52,17 @@ const Slider = () => {
         </div>
       </div>
       <div className="w-full max-w-[500px] mx-auto relative">
-        <button disabled={currentSlide > 2} onClick={() => setCurrentSlide(currentSlide + 1)} className="absolute -top-60 -right-40">
+        <button
+          disabled={currentSlide > 2}
+          onClick={() => setCurrentSlide(currentSlide + 1)}
+          className={`absolute -top-60 -right-40 ${currentSlide > 2 && "opacity-60"}`}>
           <ArrowIcon className="text-primary w-14 h-14" />
         </button>
-        <button disabled={currentSlide < 1} onClick={() => setCurrentSlide(currentSlide - 1)} className="absolute -top-60 -left-44">
+        <button
+          className={`absolute -top-60 -left-44 ${currentSlide < 1 && "opacity-60"}`}
+          disabled={currentSlide < 1}
+          onClick={() => setCurrentSlide(currentSlide - 1)}
+        >
           <ArrowIcon className="text-primary transform rotate-180 w-14 h-14" />
         </button>
       </div>
