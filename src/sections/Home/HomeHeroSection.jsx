@@ -21,7 +21,7 @@ const HomeHeroSection = () => {
             <Button wide>
               <span>See A Doctor</span> <FiArrowUpRight className="md:text-lg transition-colors ease-out duration-150 group-hover:text-primary" />
             </Button>
-            <Button>
+            <Button wide>
               <span>Sign Up</span> <FiArrowUpRight className="md:text-lg transition-colors ease-out duration-150 group-hover:text-primary" />
             </Button>
           </div>
