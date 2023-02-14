@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { 
   Home, 
   Services, 
@@ -25,6 +27,9 @@ import {
 } from './pages'
 
 function App() {
+  useEffect(() => {
+    AOS.init()
+  }, [])
 
   return (
     <div className="overflow-x-hidden text-gray-800">
