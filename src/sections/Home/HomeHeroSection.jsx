@@ -11,7 +11,9 @@ const HomeHeroSection = () => {
           &copy; 2023 MDHub Inc
         </aside>
         <article className="flex-1 px-4 md:pl-20">
-          <h2 className="font-main text-center md:text-left text-4xl md:text-8xl max-w-[700px]">Your health care,  <span className="md:pl-6">in your hands.</span></h2>
+          <h2 className="w-full max-w-[750px] font-main text-center md:text-left text-4xl md:text-6xl">
+            Accessible, quality healthcare at your fingertips.
+          </h2>
           <p className="font-body text-center md:text-left font-extralight text-gray-900 md:text-xl py-4 md:py-8 max-w-[630px]">
             From meeting a doctor to ordering a perscription get the 360 healthcare you need all in one place.
           </p>
@@ -24,7 +26,7 @@ const HomeHeroSection = () => {
             </Button>
           </div>
         </article>
-        <article className="flex-1 flex justify-center">
+        <article className="w-full max-w-[630px] flex justify-center">
           <img className="w-full max-w-[550px]" src={Hero} alt="Hero" />
         </article>
       </section>
