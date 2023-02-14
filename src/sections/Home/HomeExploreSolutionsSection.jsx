@@ -1,17 +1,15 @@
 import React from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
 import {
-  MedicalBenefitsInfograph,
   NeverWaitForDoctorAgainImage,
-  MedicalBenefitsBg
 } from '../../assets'
+import RotatingEllipse from '../../components/RotatingEllipse'
 
 const HomeExploreSolutionsSection = () => {
   return (
     <section className="flex flex-col md:flex-row pb-20 overflow-y-hidden">
-      <article className="flex-1 relative overflow-y-hidden">
-        <img data-aos="fade-up" className="w-full -ml-10 md:ml-0 relative z-10 max-w-[650px]" src={MedicalBenefitsInfograph} alt="medical benefits inforgraph" />
-        <FiArrowUpRight className="text-2xl absolute bottom-0 left-full md:left-20" />
+      <article className="flex-1 relative overflow-y-hidden rotating-ellipse-section flex justify-center">
+        <RotatingEllipse />
       </article>
       <article className="flex-1 relative font-main bg-gray-100">
         <div>
