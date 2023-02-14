@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
-  HomeBrandsSection,
   HomeExploreSolutionsSection,
   HomeHeadspaceSection,
   HomeHeroSection,
   HomeHowItWorksSection,
   HomeMembershipBenefitsSection,
-  HomeMembershipCostCtaSection
+  HomeMembershipCostCtaSection,
+  HomeUserSatisfactionSection
 } from '../../sections'
 
 const Home = () => {
@@ -24,7 +24,7 @@ const Home = () => {
       <HomeHeadspaceSection />
       <HomeHowItWorksSection />
       <HomeMembershipCostCtaSection />
-      <HomeBrandsSection />
+      <HomeUserSatisfactionSection />
     </div>
   )
 }
