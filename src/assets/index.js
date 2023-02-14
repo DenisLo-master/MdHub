@@ -129,7 +129,7 @@ export {
   ForBabies05,
   ForBabies06,
   ForBabies07,
-  ArrowRight
+  ArrowRight,
 }
 
 
