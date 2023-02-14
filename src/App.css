@@ -20,6 +20,3 @@ input:focus+.toggle-switch {
 input:checked+.toggle-switch .toggle-circle {
   transform: translateX(100%);
 }
-.bg-how-it-works {
-  background: url("./assets/how-it-works-steps-bg.png") no-repeat center center/cover;
-}
