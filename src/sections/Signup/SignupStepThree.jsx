@@ -84,7 +84,8 @@ const SignupStepThree = () => {
             {
               selectedAccountType === "individual" ? "1 x Individual Plan" :
                 selectedAccountType === "family" ? "1 x Family Plan" :
-                  "1 x Corporate Plan"
+                  selectedAccountType === "family" ? "1 x Corporate Plan" :
+                    "1 x On Demand Plan"
             }
           </h3>
         </article>
@@ -119,7 +120,7 @@ const SignupStepThree = () => {
                         <h3>Tax: $47.78</h3>
                         <h2 className="text-3xl">Total: <strong>${Math.floor(44.99 * 12 + 47.78)}</strong></h2>
                       </div>
-                  ) :
+                  ) : selectedAccountType === "corporate" ?
                   (
                     <div>
                       <h3>${Math.floor(19.99 * 120)}</h3>
@@ -127,7 +128,14 @@ const SignupStepThree = () => {
                       <h2 className="text-3xl">Total: <strong>${Math.floor(19.99 * 120 + 47.78)}</strong></h2>
                     </div>
 
-                  )
+                    ) :
+                    (
+                      <div>
+                        <h3>$99</h3>
+                        <h3>Tax: $47.78</h3>
+                        <h2 className="text-3xl">Total: <strong>${Math.floor(99 + 47.78)}</strong></h2>
+                      </div>
+                    )
             }
           </div>
         </article>
