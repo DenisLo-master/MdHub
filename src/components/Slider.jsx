@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
 import { ArrowIcon } from '../assets'
-import {
-  HowItWorks01,
-  HowItWorks02,
-  HowItWorks03,
-  HowItWorks04
-} from '../assets'
+import { howItWorksData } from '../constants'
+
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -35,39 +31,24 @@ const Slider = () => {
       </div>
       <div className="w-full max-w-3xl mx-auto overflow-hidden rounded-[35px]">
         <div className={`w-full flex transform transition-transform duration-300 ease-in-out text-2xl tracking-normal ${currentSlide === 0 ? "translate-x-0" : currentSlide === 1 ? "-translate-x-[375px] md:-translate-x-[768px]" : currentSlide === 2 ? "-translate-x-[750px] md:-translate-x-[1536px]" : "-translate-x-[1125px] md:-translate-x-[2304px]"} text-gray-800 font-body`}>
-          <article className="min-w-[375px] md:min-w-[768px] flex flex-wrap justify-around items-center px-6 md:px-8">
-            <div>
-              <h2 className="font-body font-semibold max-w-[140px] text-5xl border-b border-gray-800 pb-2">
-                Step 1
-              </h2>
-              <p className="text-light pt-4">
-                Describe your symptoms.
-              </p>
-            </div>
-            <img src={HowItWorks01} alt="Describe your symptoms" />
-          </article>
-          <article className="min-w-[375px] md:min-w-[768px] flex flex-wrap justify-around items-center px-6 md:px-8">
-            <div>
-              <h2 className="font-body font-semibold max-w-[140px] text-5xl border-b border-gray-800 pb-2">
-                Step 2
-              </h2>
-              <p className="text-light pt-4">
-                Chat with a medical professional.
-              </p>
-            </div>
-            <img src={HowItWorks02} alt="Chat with a medical professional" />
-          </article>
-          <article className="min-w-[375px] md:min-w-[768px] flex flex-wrap justify-around items-center px-6 md:px-8">
-            <div>
-              <h2 className="font-body font-semibold max-w-[140px] text-5xl border-b border-gray-800 pb-2">
-                Step 3
-              </h2>
-              <p className="text-light pt-4">
-                Get a diagnosis, prescription, and if required, a lab requisition.
-              </p>
-            </div>
-            <img src={HowItWorks03} alt="Get a diagnosis, prescription, and if required, a lab requisition" />
-          </article>
+          {
+            howItWorksData.map(item => (
+              <article
+                key={item.id}
+                className="min-w-[375px] md:min-w-[768px] flex flex-wrap justify-around items-center px-6 md:px-8"
+              >
+                <div>
+                  <h2 className="font-body font-semibold max-w-[140px] text-5xl border-b border-gray-800 pb-2">
+                    {item.title}
+                  </h2>
+                  <p className="text-light pt-4 max-w-[350px]">
+                    {item.description}
+                  </p>
+                </div>
+                <img src={item.image} alt={item.description} />
+              </article>
+            ))
+          }
         </div>
       </div>
       <div className="w-full max-w-[500px] mx-auto relative">
