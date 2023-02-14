@@ -38,7 +38,7 @@ const Slider = () => {
                 className="min-w-[375px] md:min-w-[768px] flex flex-wrap justify-around items-center px-6 md:px-8"
               >
                 <div>
-                  <h2 className="font-body font-semibold max-w-[140px] text-5xl border-b border-gray-800 pb-2">
+                  <h2 className="font-body font-semibold max-w-[140px] text-5xl border-b border-[#3F3F3F] pb-2">
                     {item.title}
                   </h2>
                   <p className="text-light pt-4 max-w-[350px]">
