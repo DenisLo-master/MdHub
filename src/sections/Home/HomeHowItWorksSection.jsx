@@ -3,7 +3,7 @@ import Slider from '../../components/Slider'
 
 const HomeHowItWorksSection = () => {
   return (
-    <section className="bg-how-it-works">
+    <section>
       <article className="w-full max-w-[90rem] mx-auto pt-10 pb-20">
         <h2 className="text-4xl font-main text-center">How It Works</h2>
         <p className="max-w-[480px] mx-auto text-center pt-3">
