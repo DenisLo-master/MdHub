@@ -11,14 +11,6 @@ const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   return (
     <div className="w-full max-w-3xl mx-auto">
-      <div className="w-full max-w-[500px] mx-auto relative">
-        <button disabled={currentSlide > 2} onClick={() => setCurrentSlide(currentSlide + 1)} className="absolute top-20 -right-20">
-          <ArrowIcon className="text-primary" />
-        </button>
-        <button disabled={currentSlide < 1} onClick={() => setCurrentSlide(currentSlide - 1)} className="absolute top-20 -left-20">
-          <ArrowIcon className="text-primary transform rotate-180" />
-        </button>
-      </div>
       <div className="py-3 px-4 my-10 font-main text-lg flex justify-between space-x-4 w-full rounded-full bg-[#F1F1F1]">
         <button
           onClick={() => setCurrentSlide(0)}
@@ -68,6 +60,14 @@ const Slider = () => {
             <p className="font-light">Utilize our services to get treatment, online pharmacy, mobile nurse, or lab testing</p>
           </div>
         </div>
+      </div>
+      <div className="w-full max-w-[500px] mx-auto relative">
+        <button disabled={currentSlide > 2} onClick={() => setCurrentSlide(currentSlide + 1)} className="absolute -top-60 -right-40">
+          <ArrowIcon className="text-primary w-14 h-14" />
+        </button>
+        <button disabled={currentSlide < 1} onClick={() => setCurrentSlide(currentSlide - 1)} className="absolute -top-60 -left-44">
+          <ArrowIcon className="text-primary transform rotate-180 w-14 h-14" />
+        </button>
       </div>
     </div>
   )
