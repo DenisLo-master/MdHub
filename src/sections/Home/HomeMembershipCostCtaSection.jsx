@@ -1,17 +1,11 @@
 import React from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
-import {
-  HeartLeft,
-  HeartRight
-} from '../../assets'
 
 const HomeMembershipCostCtaSection = () => {
   return (
-    <section className="bg-primary relative z-10 overflow-hidden text-white font-main p-12 lg:p-24">
-      <img className="w-16 md:w-36 opacity-30 absolute -top-16 left-0" src={HeartLeft} alt="Heart" />
-      <img className="w-32 md:w-80 opacity-30 absolute top-2 right-0" src={HeartRight} alt="Heart" />
-      <div className="relative z-10 flex flex-col md:flex-row md:space-x-20 gap-y-6">
-        <h2 className="text-3xl text-center md:text-left md:text-5xl font-medium max-w-[800px]">
+    <section className="bg-primary relative z-10 overflow-hidden text-white font-main p-12 lg:p-32">
+      <div className="relative z-10 justify-center flex flex-col md:flex-row md:space-x-20 gap-y-6">
+        <h2 className="text-3xl text-center md:text-left md:text-5xl font-medium max-w-[600px]">
           All of this, for as little as $29.99 a month. 
         </h2>
         <div className="flex flex-col items-center justify-center space-y-6">
