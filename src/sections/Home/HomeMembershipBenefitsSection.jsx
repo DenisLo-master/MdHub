@@ -41,7 +41,11 @@ const HomeMembershipBenefitsSection = () => {
       </article>
       <article className="flex-1 space-y-8 gap-y-6 pt-6 md:pt-0">
         <ul className="space-y-3">
-          <li className="bg-primary rounded flex items-center gap-x-8 py-2 px-8">
+          <li
+            data-aos="fade-left"
+            data-aos-delay="200"
+            className="bg-primary rounded flex items-center gap-x-8 py-2 px-8"
+          >
             <Membership01 className="w-12 h-12" />
             <div className="text-white space-y-2">
               <h2 className="font-main text-2xl">
@@ -52,7 +56,11 @@ const HomeMembershipBenefitsSection = () => {
               </p>
             </div>
           </li>
-          <li className="bg-primary rounded flex items-center gap-x-8 py-2 px-8">
+          <li
+            data-aos="fade-left"
+            data-aos-delay="200"
+            className="bg-primary rounded flex items-center gap-x-8 py-2 px-8"
+          >
             <Membership02 className="w-12 h-12" />
             <div className="text-white space-y-2">
               <h2 className="font-main text-2xl">
@@ -63,7 +71,11 @@ const HomeMembershipBenefitsSection = () => {
               </p>
             </div>
           </li>
-          <li className="bg-primary rounded flex items-center gap-x-8 py-2 px-8">
+          <li
+            data-aos="fade-left"
+            data-aos-delay="200"
+            className="bg-primary rounded flex items-center gap-x-8 py-2 px-8"
+          >
             <Membership03 className="w-12 h-12" />
             <div className="text-white space-y-2">
               <h2 className="font-main text-2xl">
@@ -75,7 +87,11 @@ const HomeMembershipBenefitsSection = () => {
             </div>
           </li>
 
-          <li className="bg-primary rounded flex items-center gap-x-8 py-2 px-8">
+          <li
+            data-aos="fade-left"
+            data-aos-delay="200"
+            className="bg-primary rounded flex items-center gap-x-8 py-2 px-8"
+          >
             <Membership04 className="w-12 h-12" />
             <div className="text-white space-y-2">
               <h2 className="font-main text-2xl">
@@ -86,7 +102,11 @@ const HomeMembershipBenefitsSection = () => {
               </p>
             </div>
           </li>
-          <li className="bg-primary rounded flex items-center gap-x-8 py-2 px-8">
+          <li
+            data-aos="fade-left"
+            data-aos-delay="200"
+            className="bg-primary rounded flex items-center gap-x-8 py-2 px-8"
+          >
             <Membership05 className="w-12 h-12" />
             <div className="text-white space-y-2">
               <h2 className="font-main text-2xl">
@@ -97,7 +117,11 @@ const HomeMembershipBenefitsSection = () => {
               </p>
             </div>
           </li>
-          <li className="bg-primary rounded flex items-center gap-x-8 py-2 px-8">
+          <li
+            data-aos="fade-left"
+            data-aos-delay="200"
+            className="bg-primary rounded flex items-center gap-x-8 py-2 px-8"
+          >
             <Membership06 className="w-12 h-12" />
             <div className="text-white space-y-2">
               <h2 className="font-main text-2xl">
@@ -108,7 +132,6 @@ const HomeMembershipBenefitsSection = () => {
               </p>
             </div>
           </li>
-
         </ul>
       </article>
     </section>
