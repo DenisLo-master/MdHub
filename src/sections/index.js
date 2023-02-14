@@ -16,6 +16,7 @@ import ThirdFamilyMemberForm from "./Signup/ThirdFamilyMemberForm";
 import FourthFamilyMemberForm from "./Signup/FourthFamilyMemberForm";
 import SignupAccountsTypeNav from "./Signup/SignupAccountsTypeNav";
 import DashboardUserInfo from "./Dashboard/DashboardUserInfo";
+import HomeUserSatisfactionSection from "./Home/HomeUserSatisfactionSection";
 
 
 export {
@@ -36,5 +37,6 @@ export {
   FourthFamilyMemberForm,
   SignupStepThree,
   SignupAccountsTypeNav,
-  DashboardUserInfo
+  DashboardUserInfo,
+  HomeUserSatisfactionSection
 }
