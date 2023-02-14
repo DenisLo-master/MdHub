@@ -8,6 +8,7 @@ import {
   Membership06,
   OkIcon
 } from '../../assets'
+import { membershipBenefits } from '../../constants'
 import { FiArrowUpRight } from 'react-icons/fi'
 import Button from '../../components/Button'
 
@@ -19,37 +20,20 @@ const HomeMembershipBenefitsSection = () => {
         <h3 className='w-full font-body text-[22px] pb-8'>
           Lorem ipsum dolor sit amet consectetur. At volutpat at vel integer. Lorem ipsum dolor sit.
         </h3>
-        <ul className="space-y-3 max-w-[530px] md:text-xl px-4 md:px-0 pb-10">
-          <li className="flex items-center space-x-2 text-gray-700">
-            <OkIcon className="text-primary w-8 h-8" />
-            <p>Free unlimited access to doctors 24/7</p>
-          </li>
-          <li className="flex items-center space-x-2 text-gray-700">
-            <OkIcon className="text-primary w-8 h-8" />
-            <p>Free online pharmacy an delivery</p>
-          </li>
-          <li className="flex items-center space-x-2 text-gray-700">
-            <OkIcon className="text-primary w-8 h-8" />
-            <p>Free Headspace membership</p>
-          </li>
-          <li className="flex items-center space-x-2 text-gray-700">
-            <OkIcon className="text-primary w-8 h-8" />
-            <p>Access to private labs with a 25% discount</p>
-          </li>
-          <li className="flex items-center space-x-2 text-gray-700">
-            <OkIcon className="text-primary w-8 h-8" />
-            <p>Mobile nursing and Homecare with a 25% discount</p>
-          </li>
-          <li className="flex items-center space-x-2 text-gray-700">
-            <OkIcon className="text-primary w-8 h-8" />
-            <p>Virus testing with 25% discount + free rush service</p>
-          </li>
-          <li className="flex items-center space-x-2 text-gray-700">
-            <div>
-              <OkIcon className="text-primary w-8 h-8" />
-            </div>
-            <p>Access to specialists and mental health professionals with a 15% discount</p>
-          </li>
+        <ul className="space-y-4 max-w-[530px] md:text-xl px-4 md:px-0 pb-10">
+          {
+            membershipBenefits.map(({ id, title }) => (
+              <li
+                key={id}
+                className="flex items-center space-x-2 text-gray-700"
+              >
+                <div>
+                  <OkIcon className="text-primary w-8 h-8" />
+                </div>
+                <p>{title}</p>
+              </li>
+            ))
+          }
         </ul>
         <Button>
           <span className="font-main text-xl">Learn More</span> <FiArrowUpRight className="md:text-lg transition-colors ease-out duration-150 group-hover:text-primary" />
