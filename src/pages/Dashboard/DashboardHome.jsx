@@ -1,13 +1,14 @@
 import React from 'react'
 import { MDHubWheelTransparent } from '../../assets'
 import { Link } from 'react-router-dom'
+import RotatingEllipse from '../../components/RotatingEllipse'
 
 const DashboardHome = () => {
   return (
     <header className="py-16 bg-[#f9f9f9]">
       <h1 className="text-4xl text-center pb-10">Your MdHub Dashboard</h1>
-      <section className="flex justify-center items-center gap-x-10">
-        <img className="max-w-[490px] -ml-24" src={MDHubWheelTransparent} alt="MD Hub" />
+      <section className="flex justify-center items-center gap-x-10 rotating-ellipse-section">
+        <RotatingEllipse />
         <article className="space-y-3">
           <Link to="/dashboard/book-appointment">
             <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-8 py-3 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
