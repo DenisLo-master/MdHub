@@ -46,6 +46,7 @@ const Signup = () => {
         accountType: selectedAccountType
       },
       isChildUser: false,
+      recurringPayment: selectedAccountType === "on demand" ? true : false,
       childUsersData: selectedAccountType === "family" ? [
         firstFamilyMemberFormData.firstName.length && { ...firstFamilyMemberFormData },
         secondFamilyMemberFormData.firstName.length && { ...secondFamilyMemberFormData },
