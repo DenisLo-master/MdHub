@@ -11,7 +11,6 @@ const HomeExploreSolutionsSection = () => {
     <section className="flex flex-col md:flex-row pb-20 overflow-y-hidden">
       <article className="flex-1 relative overflow-y-hidden">
         <img data-aos="fade-up" className="w-full -ml-10 md:ml-0 relative z-10 max-w-[650px]" src={MedicalBenefitsInfograph} alt="medical benefits inforgraph" />
-        <img className="absolute -top-28 2xl:-top-[9.6rem] left-0 " src={MedicalBenefitsBg} alt="Medical Benefits Background" />
         <FiArrowUpRight className="text-2xl absolute bottom-0 left-full md:left-20" />
       </article>
       <article className="flex-1 relative font-main bg-gray-100">
