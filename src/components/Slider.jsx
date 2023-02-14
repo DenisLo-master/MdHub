@@ -1,5 +1,11 @@
 import React, { useState } from 'react'
 import { ArrowIcon } from '../assets'
+import {
+  HowItWorks01,
+  HowItWorks02,
+  HowItWorks03,
+  HowItWorks04
+} from '../assets'
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -36,11 +42,18 @@ const Slider = () => {
         </button>
       </div>
       <div className="w-full max-w-3xl mx-auto overflow-hidden rounded-[35px]">
-        <div className={`w-full flex transform transition-transform duration-300 ease-in-out text-2xl tracking-normal ${currentSlide === 0 ? "translate-x-0" : currentSlide === 1 ? "-translate-x-[375px] md:-translate-x-[768px]" : currentSlide === 2 ? "-translate-x-[750px] md:-translate-x-[1536px]" : "-translate-x-[1125px] md:-translate-x-[2304px]"} text-white font-body`}>
-          <div className="min-w-[375px] md:min-w-[768px] p-6 md:p-8">
-            <h2 className="font-semibold pb-2">Step 1</h2>
-            <p className="font-light">Describe your symptoms</p>
-          </div>
+        <div className={`w-full flex transform transition-transform duration-300 ease-in-out text-2xl tracking-normal ${currentSlide === 0 ? "translate-x-0" : currentSlide === 1 ? "-translate-x-[375px] md:-translate-x-[768px]" : currentSlide === 2 ? "-translate-x-[750px] md:-translate-x-[1536px]" : "-translate-x-[1125px] md:-translate-x-[2304px]"} text-gray-800 font-body`}>
+          <article className="min-w-[375px] md:min-w-[768px] flex flex-wrap justify-around items-center px-6 md:px-8">
+            <div>
+              <h2 className="font-body font-semibold max-w-[140px] text-5xl border-b border-gray-800 pb-2">
+                Step 1
+              </h2>
+              <p className="text-light pt-4">
+                Describe your symptoms.
+              </p>
+            </div>
+            <img src={HowItWorks01} alt="Describe your symptoms" />
+          </article>
           <div className="min-w-[375px] md:min-w-[768px] bg-primary p-6 md:p-8">
             <h2 className="font-semibold pb-2">Step 2</h2>
             <p className="font-light">Chat with a medical professional</p>
