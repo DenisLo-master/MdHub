@@ -31,7 +31,7 @@ const HomeHeroSection = () => {
         </article>
       </section>
       <h2 className="text-primary text-center font-main text-5xl md:text-7xl py-10">
-        Get care today for <span className="text-gray-800">birth control.</span>
+        Get care today for <span className="text-gray-800">reproductive health.</span>
       </h2>
     </div>
   )
