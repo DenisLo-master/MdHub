@@ -7,7 +7,7 @@ const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   return (
     <div className="w-full max-w-3xl mx-auto">
-      <div className="py-3 px-4 my-10 font-main text-lg flex justify-between space-x-4 w-full rounded-full bg-[#F1F1F1]">
+      <div className="py-3 px-4 my-10 font-main text-lg flex justify-between space-x-4 w-full rounded-full bg-[#F1F1F1] shadow-sliderNav">
         <button
           onClick={() => setCurrentSlide(0)}
           className={`transition-colors ease-in duration-200 px-8 py-2 rounded-full ${currentSlide === 0 ? "bg-primary text-white" : "bg-[#F1F1F1] text-gray-800"}`}>
