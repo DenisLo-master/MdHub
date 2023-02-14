@@ -6,12 +6,12 @@ const SignupAccountsTypeNav = () => {
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
   const formStep = registerationStore(state => state.formStep)
   return (
-    <div className={`w-full flex justify-around md:justify-between text-primary flex-wrap gap-y-4`}>
+    <div className={`w-full flex justify-around text-primary flex-wrap gap-y-4`}>
       <button
         onClick={() => changeSelectedAccountType("individual")}
         type="button"
         disabled={formStep > 0}
-        className={`w-40 md:48  rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "individual" && "bg-primary text-white"} $`}
+        className={`w-40 md:w-60  rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "individual" && "bg-primary text-white"} $`}
       >
         Individual
       </button>
@@ -19,7 +19,7 @@ const SignupAccountsTypeNav = () => {
         disabled={formStep > 0}
         onClick={() => changeSelectedAccountType("family")}
         type="button"
-        className={`w-40 md:48 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "family" && "bg-primary text-white"}`}
+        className={`w-40 md:w-60 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "family" && "bg-primary text-white"}`}
       >
         Family
       </button>
@@ -27,9 +27,17 @@ const SignupAccountsTypeNav = () => {
         disabled={formStep > 0}
         onClick={() => changeSelectedAccountType("corporate")}
         type="button"
-        className={`w-40 md:48 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "corporate" && "bg-primary text-white"}`}
+        className={`w-40 md:w-60 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "corporate" && "bg-primary text-white"}`}
       >
         Corporate
+      </button>
+      <button
+        disabled={formStep > 0}
+        onClick={() => changeSelectedAccountType("on demand")}
+        type="button"
+        className={`w-40 md:w-60 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "on demand" && "bg-primary text-white"}`}
+      >
+        On Demand
       </button>
     </div>
   )
