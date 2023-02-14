@@ -70,3 +70,34 @@ export const howItWorksData = [
     image: HowItWorks04
   }
 ]
+
+export const membershipBenefits = [
+  {
+    id: 1,
+    title: "Unlimited access to doctors 24/7."
+  },
+  {
+    id: 2,
+    title: "Access to online pharmacy and delivery. "
+  },
+  {
+    id: 3,
+    title: "Get access to nurses and homecare, and a 25% discount."
+  },
+  {
+    id: 4,
+    title: "Virus testing, and a 25% discount plus free rush service."
+  },
+  {
+    id: 5,
+    title: "Headspace app membership."
+  },
+  {
+    id: 6,
+    title: "Get access to private labs, and a 25% discount."
+  },
+  {
+    id: 7,
+    title: "Access to specialists and mental health professionals, and a 15% discount."
+  },
+]
