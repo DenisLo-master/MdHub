@@ -20,3 +20,13 @@ input:focus+.toggle-switch {
 input:checked+.toggle-switch .toggle-circle {
   transform: translateX(100%);
 }
+
+.rotating-ellipse-section svg {
+  filter: drop-shadow(-50px 85px 32px rgb(0 0 0 / 0.4));
+}
+
+
+.ic_bg {
+  filter: drop-shadow(0px 0px 5px rgb(0 0 0 / 0.754));
+
+}
