@@ -46,10 +46,17 @@ const Slider = () => {
             </div>
             <img src={HowItWorks01} alt="Describe your symptoms" />
           </article>
-          <div className="min-w-[375px] md:min-w-[768px] bg-primary p-6 md:p-8">
-            <h2 className="font-semibold pb-2">Step 2</h2>
-            <p className="font-light">Chat with a medical professional</p>
-          </div>
+          <article className="min-w-[375px] md:min-w-[768px] flex flex-wrap justify-around items-center px-6 md:px-8">
+            <div>
+              <h2 className="font-body font-semibold max-w-[140px] text-5xl border-b border-gray-800 pb-2">
+                Step 2
+              </h2>
+              <p className="text-light pt-4">
+                Chat with a medical professional.
+              </p>
+            </div>
+            <img src={HowItWorks02} alt="Chat with a medical professional" />
+          </article>
           <div className="min-w-[375px] md:min-w-[768px] bg-primary p-6 md:p-8">
             <h2 className="font-semibold pb-2">Step 3</h2>
             <p className="font-light">Get a diagnosis, prescription, and
