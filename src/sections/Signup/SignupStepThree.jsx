@@ -8,6 +8,37 @@ const SignupStepThree = () => {
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
   const setPaymentMode = registerationStore(state => state.setPaymentMode)
   const formStep = registerationStore(state => state.formStep)
+  const individualMonthlyFee = registerationStore(state => state.individualMonthlyFee)
+  const individualYearlyFee = registerationStore(state => state.individualYearlyFee)
+  const familyMonthlyFee = registerationStore(state => state.familyMonthlyFee)
+  const familyYearlyFee = registerationStore(state => state.familyYearlyFee)
+
+  /* const handlePaymentModeChange = () => {
+    if (selectedAccountType === "individual") {
+      if (paymentMode === "monthly") {
+        setTotalAmount(individualMonthlyFee * 3)
+      } else {
+        setTotalAmount(individualYearlyFee * 12)
+      }
+    }
+    if (selectedAccountType === "family") {
+      if (paymentMode === "monthly") {
+        setTotalAmount(familyMonthlyFee * 3 * numberOfSelectedFamilyMembers)
+      } else {
+        setTotalAmount(familyYearlyFee * 12 * numberOfSelectedFamilyMembers)
+      }
+    } else {
+      if (numberOfSelectedEmployees > 10 && numberOfSelectedEmployees <= 50) {
+        setTotalAmount(19.99 * 12 * numberOfSelectedEmployees)
+      }
+      if (numberOfSelectedEmployees > 50 && numberOfSelectedEmployees <= 100) {
+        setTotalAmount(17.99 * 12 * numberOfSelectedEmployees)
+      }
+      if (numberOfSelectedEmployees > 100) {
+        setTotalAmount(14.99 * 12 * numberOfSelectedEmployees)
+      }
+    }
+  } */
   return (
     <section className="space-y-6">
       <article className="w-full self-start pt-8 pb-4 mb-4 ">
@@ -32,7 +63,7 @@ const SignupStepThree = () => {
                     <h4 className="text-xs">Best Value</h4>
                   </button>
                   {
-                    selectedAccountType !== "corporate" &&
+                    selectedAccountType === "family" || selectedAccountType === "individual" &&
                     <button
                       onClick={() => setPaymentMode("monthly")}
                       className={`${paymentMode === 'monthly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
