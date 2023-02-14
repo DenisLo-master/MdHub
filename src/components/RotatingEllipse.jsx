@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from 'react'
-import { RevolvingEllipse } from '../assets'
 import gsap, { Linear } from 'gsap'
 
 const RotatingEllipse = () => {
