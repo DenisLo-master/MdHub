@@ -10,7 +10,7 @@ const HomeHeroSection = () => {
         <aside className="hidden lg:block absolute -left-[70px] 2xl:-left-[150px] top-[430px] text-black opacity-20 transform -rotate-90">
           &copy; 2023 MDHub Inc
         </aside>
-        <article className="flex-1 px-4 md:pl-20">
+        <article data-aos="fade-up" className="flex-1 px-4 md:pl-20">
           <h2 className="w-full max-w-[750px] font-main text-center md:text-left text-4xl md:text-6xl">
             Accessible, quality healthcare at your fingertips.
           </h2>
@@ -26,11 +26,11 @@ const HomeHeroSection = () => {
             </Button>
           </div>
         </article>
-        <article className="w-full max-w-[630px] flex justify-center">
+        <article data-aos="fade-up" className="w-full max-w-[630px] flex justify-center">
           <img className="w-full max-w-[550px]" src={Hero} alt="Hero" />
         </article>
       </section>
-      <h2 className="text-primary text-center font-main text-5xl md:text-7xl py-10">
+      <h2 data-aos="fade-up" className="text-primary text-center font-main text-5xl md:text-7xl py-10">
         Get care today for <span className="text-gray-800">reproductive health.</span>
       </h2>
     </div>
