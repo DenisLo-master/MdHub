@@ -25,6 +25,7 @@ import {
   DashboardHome,
   BookAppointment
 } from './pages'
+import { Toaster } from "react-hot-toast"
 
 function App() {
   useEffect(() => {
@@ -35,6 +36,7 @@ function App() {
     <div className="overflow-x-hidden text-gray-800">
       <BrowserRouter>
       <Navbar/>
+        <Toaster />
         <main className="sm:p-0 px-4 py-8 w-full bg-[#f9fafe] min-h-[calc(100vh-73px)]">
           <Routes>
             <Route path="/" element={<Home />} />
