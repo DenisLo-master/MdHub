@@ -4,8 +4,6 @@ import { ChildAccountForms, ParentAccountForm } from '../../sections'
 
 const SignupStepOne = () => {
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
-  // const filledChildForms = childForms.filter(form => Object.values(form).every(value => value !== ''))
-
   return (
     <section className='space-y-6'>
       <article className="w-full self-start pt-8 pb-4 mb-4 ">
@@ -25,7 +23,8 @@ const SignupStepOne = () => {
         </div>
       </article>
       <ParentAccountForm />
-      <ChildAccountForms />
+      {selectedAccountType === "family" && <ChildAccountForms />}
+      {selectedAccountType === "corporate" && <ChildAccountForms />}
     </section>
   )
 }
