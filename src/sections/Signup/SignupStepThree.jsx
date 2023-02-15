@@ -55,7 +55,8 @@ const SignupStepThree = () => {
           <article>
             {
               formStep === 2 && (
-                <div className="flex gap-x-4">
+                <div className={`flex items-center gap-x-4`}>
+                  {paymentMode === "yearly" && <p className="text-primary text-3xl">Save 25%</p>}
                   <button
                     onClick={() => setPaymentMode("yearly")}
                     className={`${paymentMode === 'yearly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
@@ -63,7 +64,15 @@ const SignupStepThree = () => {
                     <h4 className="text-xs">Best Value</h4>
                   </button>
                   {
-                    selectedAccountType === "family" || selectedAccountType === "individual" &&
+                    selectedAccountType === "family" &&
+                    <button
+                      onClick={() => setPaymentMode("monthly")}
+                      className={`${paymentMode === 'monthly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
+                      <h2 className="text-xl">Monthly</h2>
+                    </button>
+                  }
+                  {
+                    selectedAccountType === "corporate" &&
                     <button
                       onClick={() => setPaymentMode("monthly")}
                       className={`${paymentMode === 'monthly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
@@ -83,7 +92,7 @@ const SignupStepThree = () => {
           <h3 className="font-body">
             {
               selectedAccountType === "individual" ? "1 x Individual Plan" :
-                selectedAccountType === "family" ? "1 x Family Plan" :
+                selectedAccountType === "family" ? paymentMode === "yearly" ? "12 x Family Plan" : "1 x Family Plan" :
                   selectedAccountType === "family" ? "1 x Corporate Plan" :
                     "1 x On Demand Plan"
             }
@@ -111,7 +120,10 @@ const SignupStepThree = () => {
                   (
                     paymentMode === "monthly" ?
                       <div>
-                        <h3>${54.99 * 3}</h3>
+                        <div className="flex gap-x-4">
+                          <p>3 months initial signup</p>
+                          <h3>${54.99 * 3}</h3>
+                        </div>
                         <h3>Tax: $47.78</h3>
                         <h2 className="text-3xl">Total: <strong>${Math.floor(54.99 * 3 + 47.78)}</strong></h2>
                       </div> :
