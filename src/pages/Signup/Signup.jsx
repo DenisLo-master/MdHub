@@ -7,16 +7,14 @@ const Signup = () => {
   const signupFormRef = useRef(null)
   const navigate = useNavigate()
   const formStep = registerationStore(state => state.formStep)
+  const childForms = registerationStore(state => state.childForms)
   const increaseFormStep = registerationStore(state => state.increaseFormStep)
   const decreaseFormStep = registerationStore(state => state.decreaseFormStep)
   const clearForms = registerationStore(state => state.clearForms)
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
   const paymentMode = registerationStore(state => state.paymentMode)
   const registerationFormData = registerationStore(state => state.registerationFormData)
-  const firstFamilyMemberFormData = registerationStore(state => state.firstFamilyMemberFormData)
-  const secondFamilyMemberFormData = registerationStore(state => state.secondFamilyMemberFormData)
-  const thirdFamilyMemberFormData = registerationStore(state => state.thirdFamilyMemberFormData)
-  const fourthFamilyMemberFormData = registerationStore(state => state.fourthFamilyMemberFormData)
+
 
   const getBill = () => {
     if (selectedAccountType === "individual") {
@@ -47,12 +45,7 @@ const Signup = () => {
       },
       isChildUser: false,
       recurringPayment: selectedAccountType === "on demand" ? true : false,
-      childUsersData: selectedAccountType === "family" ? [
-        firstFamilyMemberFormData.firstName.length && { ...firstFamilyMemberFormData },
-        secondFamilyMemberFormData.firstName.length && { ...secondFamilyMemberFormData },
-        thirdFamilyMemberFormData.firstName.length && { ...thirdFamilyMemberFormData },
-        fourthFamilyMemberFormData.firstName.length && { ...fourthFamilyMemberFormData },
-      ] : [],
+      childUsersData: childForms,
       totalAmount: getBill()
     }
     try {
@@ -66,6 +59,9 @@ const Signup = () => {
       const data = await response.json()
       clearForms()
       navigate('/login')
+      toast.success("Successfully created your account", {
+        id: "Register"
+      })
 
     } catch (error) {
       console.log(error.message)
