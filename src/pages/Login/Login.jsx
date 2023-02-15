@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { registerationStore } from '../../store/registerationStore'
+import toast from 'react-hot-toast'
 
 const Login = () => {
   const navigate = useNavigate()
@@ -25,6 +26,11 @@ const Login = () => {
         localStorage.setItem("jwtToken", data.accessToken)
         setUserInfo(data)
         navigate('/dashboard')
+      }
+      if (response.status === 401) {
+        toast.error("Incorrect Credentials", {
+          id: "Login"
+        })
       }
     }
     catch (error) {
