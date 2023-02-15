@@ -34,12 +34,16 @@ const RotatingEllipse = () => {
     };
 
     var svg = svgRef.current
-
     svg.addEventListener("mouseenter", handleMouseEnter);
-
     svg.addEventListener("mouseleave", handleMouseLeave);
 
-  }, []);
+    return () => {
+      svg.removeEventListener('mouseenter', handleMouseEnter);
+      svg.removeEventListener('mouseleave', handleMouseLeave);
+      tweens.forEach(tween => tween.kill());
+    };
+
+  }, [tweens]);
 
 
   return (
