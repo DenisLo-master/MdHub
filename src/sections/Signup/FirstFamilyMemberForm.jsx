@@ -3,7 +3,7 @@ import { BsPlusCircle } from 'react-icons/bs'
 import { registerationStore } from '../../store/registerationStore'
 import { MdClose } from 'react-icons/md'
 
-const FirstFamilyMemberForm = ({ showNext }) => {
+const FirstFamilyMemberForm = () => {
   const firstFamilyMemberFormData = registerationStore(state => state.firstFamilyMemberFormData)
   const setShowFirstFamilyMemberForm = registerationStore(state => state.setShowFirstFamilyMemberForm)
   const setShowSecondFamilyMemberForm = registerationStore(state => state.setShowSecondFamilyMemberForm)
