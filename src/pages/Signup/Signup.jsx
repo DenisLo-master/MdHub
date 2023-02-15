@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { registerationStore } from '../../store/registerationStore'
 import { SignupStepOne, SignupStepTwo, SignupStepThree, SignupAccountsTypeNav } from '../../sections'
+import { toast } from 'react-hot-toast'
 
 const Signup = () => {
   const signupFormRef = useRef(null)
@@ -34,6 +35,8 @@ const Signup = () => {
     }
   }
 
+  const filledChildForms = childForms.filter(form => Object.values(form).every(value => value !== '')).length
+
   const handleSignup = async (e) => {
     e.preventDefault()
     const signupFormBody = {
@@ -49,20 +52,23 @@ const Signup = () => {
       totalAmount: getBill()
     }
     try {
-      const response = await fetch('https://mdhub-backend.onrender.com/api/v1/auth/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(signupFormBody)
-      })
-      const data = await response.json()
-      clearForms()
-      navigate('/login')
-      toast.success("Successfully created your account", {
-        id: "Register"
-      })
-
+      if (childForms.length === filledChildForms.length) {
+        const response = await fetch('https://mdhub-backend.onrender.com/api/v1/auth/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(signupFormBody)
+        })
+        const data = await response.json()
+        clearForms()
+        navigate('/login')
+        toast.success("Successfully created your account", {
+          id: "Register"
+        })
+      } else {
+        toast.error("Please fill all the forms", { id: "FormError" })
+      }
     } catch (error) {
       console.log(error.message)
     } 
