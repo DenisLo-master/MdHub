@@ -14,6 +14,8 @@ import FirstFamilyMemberForm from "./Signup/FirstFamilyMemberForm";
 import SecondFamilyMemberForm from "./Signup/SecondFamilyMemberForm";
 import ThirdFamilyMemberForm from "./Signup/ThirdFamilyMemberForm";
 import FourthFamilyMemberForm from "./Signup/FourthFamilyMemberForm";
+import ChildAccountForms from "./Signup/ChildAccountForms";
+import ParentAccountForm from "./Signup/ParentAccountForm";
 import SignupAccountsTypeNav from "./Signup/SignupAccountsTypeNav";
 import DashboardUserInfo from "./Dashboard/DashboardUserInfo";
 import HomeUserSatisfactionSection from "./Home/HomeUserSatisfactionSection";
@@ -38,5 +40,7 @@ export {
   SignupStepThree,
   SignupAccountsTypeNav,
   DashboardUserInfo,
-  HomeUserSatisfactionSection
+  HomeUserSatisfactionSection,
+  ChildAccountForms,
+  ParentAccountForm
 }
