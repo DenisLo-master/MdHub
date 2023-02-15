@@ -8,6 +8,31 @@ export const registerationStore = create((set) => ({
   individualMonthlyFee: '34.99',
   familyMonthlyFee: "54.99",
   familyYearlyFee: "44.99",
+  childForms: [],
+  showLabTestingModal: false,
+  setShowLabTestingModal: (show) => set((state) => ({ showLabTestingModal: show })),
+  showNursingModal: false,
+  setShowNursingModal: (show) => set((state) => ({ showNursingModal: show })),
+  addChildAccount: () => set((state) => ({
+    childForms: [...state.childForms, {
+      firstName: '', lastName: '', email: '', password: '', phone: ''
+    }]
+  })),
+  handleChildAccountInputChange: (event, index) => set((state) => {
+    const { name, value } = event.target
+    const newChildForms = [...state.childForms]
+    newChildForms[index] = { ...newChildForms[index], [name]: value };
+    return {
+      childForms: newChildForms
+    }
+  }),
+  handleRemoveChildForms: (event, index) => set((state) => {
+    const newChildForms = [...state.childForms]
+    newChildForms.splice(index, 1)
+    return {
+      childForms: newChildForms
+    }
+  }),
   userInfo: {
     _id: "",
     firstName: "",
@@ -21,6 +46,7 @@ export const registerationStore = create((set) => ({
     postalCode: "",
     paymentMode: "",
     accountType: '',
+    loginCode: '',
     childAccounts: [],
   },
   setUserInfo: (userInfoData) => set((state) => ({ userInfo: userInfoData })),
@@ -43,7 +69,9 @@ export const registerationStore = create((set) => ({
     creditCardExpiry: '',
     creditCardCvc: ''
   },
-  handleRegisterationFormDataChange: (name, value) => set((state) => ({ registerationFormData: { ...state.registerationFormData, [name]: value } })),
+  handleRegisterationFormDataChange: (name, value) => set((state) => ({
+    registerationFormData: { ...state.registerationFormData, [name]: value }
+  })),
   clearForms: () => set({
     formStep: 0,
     registerationFormData: {
