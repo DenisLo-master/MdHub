@@ -5,10 +5,16 @@ const SignupAccountsTypeNav = () => {
   const changeSelectedAccountType = registerationStore(state => state.changeSelectedAccountType)
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
   const formStep = registerationStore(state => state.formStep)
+  const clearForms = registerationStore(state => state.clearForms)
+
+  const handleAccountChange = (account) => {
+    clearForms()
+    changeSelectedAccountType(account)
+  }
   return (
     <div className={`w-full flex justify-around text-primary flex-wrap gap-y-4`}>
       <button
-        onClick={() => changeSelectedAccountType("individual")}
+        onClick={() => handleAccountChange("individual")}
         type="button"
         disabled={formStep > 0}
         className={`w-40 md:w-60  rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "individual" && "bg-primary text-white"} $`}
@@ -17,7 +23,7 @@ const SignupAccountsTypeNav = () => {
       </button>
       <button
         disabled={formStep > 0}
-        onClick={() => changeSelectedAccountType("family")}
+        onClick={() => handleAccountChange("family")}
         type="button"
         className={`w-40 md:w-60 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "family" && "bg-primary text-white"}`}
       >
@@ -25,7 +31,7 @@ const SignupAccountsTypeNav = () => {
       </button>
       <button
         disabled={formStep > 0}
-        onClick={() => changeSelectedAccountType("corporate")}
+        onClick={() => handleAccountChange("corporate")}
         type="button"
         className={`w-40 md:w-60 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "corporate" && "bg-primary text-white"}`}
       >
@@ -33,7 +39,7 @@ const SignupAccountsTypeNav = () => {
       </button>
       <button
         disabled={formStep > 0}
-        onClick={() => changeSelectedAccountType("on demand")}
+        onClick={() => handleAccountChange("on demand")}
         type="button"
         className={`w-40 md:w-60 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "on demand" && "bg-primary text-white"}`}
       >
