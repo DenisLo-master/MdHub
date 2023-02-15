@@ -74,6 +74,7 @@ export const registerationStore = create((set) => ({
   })),
   clearForms: () => set({
     formStep: 0,
+    childForms: [],
     registerationFormData: {
       firstName: '',
       lastName: '',
