@@ -72,11 +72,21 @@ const SignupStepThree = () => {
                     )
                   }
                   {
-                    selectedAccountType !== "corporate" && 
+                    (
+                      selectedAccountType === "individual" ||
+                      selectedAccountType === "family"
+                    ) && 
                     <button
                       onClick={() => setPaymentMode("monthly")}
                       className={`${paymentMode === 'monthly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
                       <h2 className="text-xl">Monthly</h2>
+                    </button>
+                  }
+                  {
+                    selectedAccountType === "on demand" &&
+                    <button
+                      className={`bg-primary text-white border-2 border-primary flex flex-col items-center justify-center rounded-2xl w-32 h-16`}>
+                      <h2 className="text-xl">On Demand</h2>
                     </button>
                   }
                 </div>
