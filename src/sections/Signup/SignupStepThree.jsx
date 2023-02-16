@@ -56,23 +56,23 @@ const SignupStepThree = () => {
             {
               formStep === 2 && (
                 <div className={`flex items-center gap-x-4`}>
-                  {paymentMode === "yearly" && <p className="text-primary text-3xl">Save 25%</p>}
-                  <button
-                    onClick={() => setPaymentMode("yearly")}
-                    className={`${paymentMode === 'yearly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
-                    <h2 className="text-xl">Yearly</h2>
-                    <h4 className="text-xs">Best Value</h4>
-                  </button>
+                  {paymentMode === "yearly" && selectedAccountType === "family" && <p className="text-primary text-3xl">Save 25%</p>}
                   {
-                    selectedAccountType === "family" &&
-                    <button
-                      onClick={() => setPaymentMode("monthly")}
-                      className={`${paymentMode === 'monthly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
-                      <h2 className="text-xl">Monthly</h2>
-                    </button>
+                    (
+                      selectedAccountType === "individual" ||
+                      selectedAccountType === "family" ||
+                      selectedAccountType === "corporate"
+                    ) && (
+                      <button
+                        onClick={() => setPaymentMode("yearly")}
+                        className={`${paymentMode === 'yearly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
+                        <h2 className="text-xl">Yearly</h2>
+                        <h4 className="text-xs">Best Value</h4>
+                      </button>
+                    )
                   }
                   {
-                    selectedAccountType === "corporate" &&
+                    selectedAccountType !== "corporate" && 
                     <button
                       onClick={() => setPaymentMode("monthly")}
                       className={`${paymentMode === 'monthly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
