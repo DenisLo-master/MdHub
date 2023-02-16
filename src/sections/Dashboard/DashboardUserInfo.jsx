@@ -5,7 +5,7 @@ const DashboardUserInfo = () => {
   const userInfo = registerationStore(state => state.userInfo)
 
   return (
-    <section className="flex gap-x-16 font-body font-light pb-10">
+    <section className="flex flex-col md:flex-row gap-y-4 text-center md:text-left gap-x-16 font-body font-light pb-10">
       <article className="flex-1 space-y-4">
         <h2 className="text-4xl font-main font-normal">Your Information</h2>
         <div className="p-10 bg-[#fbfbfb] rounded-[35px] shadow-cardService space-y-6  border-[0.25px]">
