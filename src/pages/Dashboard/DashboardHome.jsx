@@ -18,14 +18,14 @@ const DashboardHome = () => {
   return (
     <header className="py-16 bg-[#f9f9f9]">
       <h1 className="text-4xl text-center pb-10">Your MdHub Dashboard</h1>
-      <section className="flex justify-center gap-x-10 rotating-ellipse-section">
+      <section className="flex flex-col md:flex-row justify-center gap-x-10 rotating-ellipse-section">
         <RotatingEllipse />
-        <article className="space-y-3">
+        <article className=" pt-24 md:pt-0 space-y-3">
           <h2 className='text-4xl'>Get Care Now</h2>
           <p className="font-body max-w-[330px]">
             Select a service for the wheel or form below to book a new appointment today!
           </p>
-          <div className="flex gap-x-6">
+          <div className="flex gap-y-4 items-center md:items-start flex-col-reverse md:flex-row md:gap-x-6">
             <div className="flex flex-col gap-y-3 text-primary">
               <button className={`max-w-[230px] rounded-full text-lg group hover:ring-1 hover:ring-primary px-4 py-2 border   border-primary bg-transparent`}>
                 <a href="https://www.mdhub.ca/virtual-doctors/" target="_blank">
