@@ -16,6 +16,7 @@ import Signup from './Signup/Signup'
 import Login from './Login/Login'
 import BookAppointment from './Dashboard/BookAppointment'
 import DashboardHome from './Dashboard/DashboardHome'
+import UpdateUserInfo from './Dashboard/UpdateUserInfo'
 
 export {
   Home,
@@ -35,5 +36,6 @@ export {
   Signup,
   Login,
   BookAppointment,
-  DashboardHome
+  DashboardHome,
+  UpdateUserInfo
 }
