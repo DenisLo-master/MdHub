@@ -18,6 +18,8 @@ import ChildAccountForms from "./Signup/ChildAccountForms";
 import ParentAccountForm from "./Signup/ParentAccountForm";
 import SignupAccountsTypeNav from "./Signup/SignupAccountsTypeNav";
 import DashboardUserInfo from "./Dashboard/DashboardUserInfo";
+import NursingModal from "./Dashboard/NursingModal";
+import LabTestingModal from "./Dashboard/LabTestingModal";
 import HomeUserSatisfactionSection from "./Home/HomeUserSatisfactionSection";
 
 
@@ -42,5 +44,7 @@ export {
   DashboardUserInfo,
   HomeUserSatisfactionSection,
   ChildAccountForms,
-  ParentAccountForm
+  ParentAccountForm,
+  NursingModal,
+  LabTestingModal
 }
