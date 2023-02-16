@@ -1,10 +1,11 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { registerationStore } from '../../store/registerationStore'
 import { SignupStepOne, SignupStepTwo, SignupStepThree, SignupAccountsTypeNav } from '../../sections'
 import { toast } from 'react-hot-toast'
 
 const Signup = () => {
+  const [isLoading, setIsLoading] = useState(false)
   const signupFormRef = useRef(null)
   const navigate = useNavigate()
   const formStep = registerationStore(state => state.formStep)
@@ -39,6 +40,7 @@ const Signup = () => {
 
   const handleSignup = async (e) => {
     e.preventDefault()
+    setIsLoading(true)
     const signupFormBody = {
       accountType: selectedAccountType,
       primaryUserData: {
@@ -62,6 +64,7 @@ const Signup = () => {
         })
         const data = await response.json()
         clearForms()
+        setIsLoading(false)
         navigate('/login')
         toast.success("Successfully created your account", {
           id: "Register"
@@ -71,8 +74,12 @@ const Signup = () => {
       }
     } catch (error) {
       console.log(error.message)
-    } 
+    } finally {
+      setIsLoading(false)
+    }
   }
+
+  console.log(registerationFormData)
 
   useEffect(() => {
     const token = localStorage.getItem("jwtToken")
@@ -126,11 +133,9 @@ const Signup = () => {
                       >
                         Prev
                       </button>
-                      <button
-                        className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
-                        type="Submit"
-                      >
-                        Submit
+                      <button type="submit" className={`rounded-full w-72 font-main text-xl group hover:ring-1 hover:ring-primary  py-3 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+                        <span>Complete Registration</span>
+                        {isLoading && <SVGLoaderCircles className="text-primary w-4 h-4" />}
                       </button>
                     </div>
                   )
