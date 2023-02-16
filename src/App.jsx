@@ -23,7 +23,8 @@ import {
   Signup,
   Login,
   DashboardHome,
-  BookAppointment
+  BookAppointment,
+  UpdateUserInfo
 } from './pages'
 import { Toaster } from "react-hot-toast"
 
@@ -53,6 +54,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />}>
               <Route index element={<DashboardHome />} />
               <Route path="book-appointment" element={<BookAppointment />} />
+              <Route path="update-user" element={<UpdateUserInfo />} />
             </Route>
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/for-corporate" element={<CorporateOverview />} />
