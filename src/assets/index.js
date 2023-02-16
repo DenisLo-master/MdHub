@@ -16,6 +16,7 @@ import { ReactComponent as Membership03 } from './membership-03.svg'
 import { ReactComponent as Membership04 } from './membership-04.svg'
 import { ReactComponent as Membership05 } from './membership-05.svg'
 import { ReactComponent as Membership06 } from './membership-06.svg'
+import { ReactComponent as SVGLoaderCircles } from './svg-loader-circles.svg'
 import VirusTestingAndVaccination from './virus-testing-and-vaccination.png'
 import Bombardier from './bombardier.png'
 import Aloan from './aloan.png'
@@ -130,6 +131,7 @@ export {
   ForBabies06,
   ForBabies07,
   ArrowRight,
+  SVGLoaderCircles
 }
 
 
