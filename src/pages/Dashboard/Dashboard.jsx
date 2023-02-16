@@ -7,6 +7,7 @@ import { DashboardUserInfo } from '../../sections'
 
 const Dashboard = () => {
   const navigate = useNavigate()
+  const userInfo = registerationStore(state => state.userInfo)
   const setUserInfo = registerationStore(state => state.setUserInfo)
 
   useEffect(() => {
@@ -14,17 +15,21 @@ const Dashboard = () => {
     const tokenInfo = token ? jwt(token) : {}
     if (!token) navigate("/login")
     const fetchUser = async () => {
-      const response = await fetch(`https://mdhub-backend.onrender.com/api/v1/users/${tokenInfo?.id}`, {
-        method: "GET",
-        headers: {
-          "Authorization": `Bearer ${token}`
-        }
-      })
-      const data = await response.json()
-      setUserInfo(data)
+      try {
+        const response = await fetch(`https://mdhub-backend.onrender.com/api/v1/users/${tokenInfo?.id}`, {
+          method: "GET",
+          headers: {
+            "Authorization": `Bearer ${token}`
+          }
+        })
+        const data = await response.json()
+        setUserInfo(data)
+      } catch (error) {
+        console.log(error)
+      }
     }
     token && fetchUser()
-  }, [])
+  }, [userInfo])
 
   return (
     <section className="font-main text-gray-800">
