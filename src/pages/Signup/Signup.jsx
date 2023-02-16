@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { registerationStore } from '../../store/registerationStore'
 import { SignupStepOne, SignupStepTwo, SignupStepThree, SignupAccountsTypeNav } from '../../sections'
 import { toast } from 'react-hot-toast'
+import { SVGLoaderCircles } from '../../assets'
 
 const Signup = () => {
   const [isLoading, setIsLoading] = useState(false)
@@ -36,10 +37,13 @@ const Signup = () => {
     }
   }
 
-  const filledChildForms = childForms.filter(form => Object.values(form).every(value => value !== '')).length
-
   const handleSignup = async (e) => {
     e.preventDefault()
+    const filledChildForms = childForms.filter(form => Object.values(form).every(value => value !== ''));
+    if (filledChildForms.length < childForms.length) {
+      toast.error("Please fill all the values", { id: "fill values" })
+      return;
+    }
     setIsLoading(true)
     const signupFormBody = {
       accountType: selectedAccountType,
@@ -53,8 +57,7 @@ const Signup = () => {
       childUsersData: childForms,
       totalAmount: getBill()
     }
-    try {
-      if (childForms.length === filledChildForms.length) {
+    try {      
         const response = await fetch('https://mdhub-backend.onrender.com/api/v1/auth/register', {
           method: 'POST',
           headers: {
@@ -69,18 +72,13 @@ const Signup = () => {
         toast.success("Successfully created your account", {
           id: "Register"
         })
-      } else {
-        toast.error("Please fill all the forms", { id: "FormError" })
-      }
+
     } catch (error) {
       console.log(error.message)
     } finally {
       setIsLoading(false)
     }
   }
-
-  console.log(registerationFormData)
-
   useEffect(() => {
     const token = localStorage.getItem("jwtToken")
     if (token) navigate("/dashboard")
