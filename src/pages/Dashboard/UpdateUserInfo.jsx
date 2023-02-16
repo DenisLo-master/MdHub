@@ -1,17 +1,47 @@
 import React, { useState, useEffect } from 'react'
 import { registerationStore } from '../../store/registerationStore'
+import { toast } from "react-hot-toast"
+import { SVGLoaderCircles } from '../../assets'
+import { useNavigate } from 'react-router-dom'
+import jwtDecode from 'jwt-decode'
 
 const UpdateUserInfo = () => {
+  const [isLoading, setIsLoading] = useState(false)
+  const navigate = useNavigate()
   const userInfo = registerationStore(state => state.userInfo)
   const [userInfoFormData, setUserInfoFormData] = useState({ ...userInfo, password: "" })
   const handleChange = (e) => {
     e.preventDefault()
     setUserInfoFormData({ ...userInfoFormData, [e.target.name]: e.target.value })
   }
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    const token = localStorage.getItem("jwtToken")
+    const tokenInfo = token ? jwtDecode(token) : {}
     e.preventDefault()
-    console.log(userInfoFormData)
+    setIsLoading(true)
+    try {
+      const response = await fetch(`http://localhost:8080/api/v1/users/${tokenInfo?.id}`, {
+        method: "PUT",
+        headers: {
+          'Content-Type': 'application/json',
+          "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify(userInfoFormData)
+      })
+      await response.json()
+      if (response.ok) {
+        setIsLoading(false)
+        toast.success("Your info has been successfully updated", { id: "successfulinfoupdate" })
+        navigate("/dashboard")
+      }
+      setIsLoading(false)
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setIsLoading(false)
+    }
   }
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -77,14 +107,10 @@ const UpdateUserInfo = () => {
               required
             />
           </div>
-          <div className="w-full flex">
-            <input
-              type="submit"
-              value="Submit"
-              className={`rounded-full font-main text-lg group hover:ring-1 hover:ring-primary px-12 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}
-            />
-          </div>
-
+          <button type="submit" className={`rounded-full w-44 font-main text-xl group hover:ring-1 hover:ring-primary  py-3 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+            <span>Update</span>
+            {isLoading && <SVGLoaderCircles className="text-primary w-4 h-4" />}
+          </button>
         </form>
       </div>
     </section>
