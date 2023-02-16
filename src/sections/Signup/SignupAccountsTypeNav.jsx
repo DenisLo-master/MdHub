@@ -50,7 +50,7 @@ const SignupAccountsTypeNav = () => {
         type="button"
         className={`w-40 md:w-60 rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "on demand" && "bg-primary text-white"}`}
       >
-        Demand
+        On Demand
       </button>
     </div>
   )
