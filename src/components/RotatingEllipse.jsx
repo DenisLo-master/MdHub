@@ -51,7 +51,8 @@ const RotatingEllipse = () => {
   }, []);
 
   return (
-    <svg ref={svgRef} id="main" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="511.68" height="511.68" viewBox="0 0 511.68 511.68">
+    <div className="w-full max-w-xl">
+      <svg ref={svgRef} id="main" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" className="w-full max-w-[511.68px] md:h-[511.68px]" viewBox="0 0 511.68 511.68">
       <defs>
         <style>
           {`
@@ -493,12 +494,9 @@ const RotatingEllipse = () => {
       <g id="Center_text" data-name="Center text">
         <text className="cls-31" transform="translate(247.14 236.87)">Essential<tspan x="3.79" y="32.73">Medical</tspan><tspan x="0.22" y="65.45">Services</tspan></text>
         <text className="cls-32" transform="translate(162.58 303.45)">5</text>
-      </g>
-
-
-
-
+        </g>
     </svg>
+    </div>
   )
 }
 
