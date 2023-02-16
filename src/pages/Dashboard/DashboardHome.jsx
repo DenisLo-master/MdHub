@@ -61,8 +61,9 @@ const DashboardHome = () => {
           </div>
         </article>
       </section>
-      <NursingModal key="Nursing Modal" />
+      <NursingModal />
       <LabTestingModal />
+
     </header>
   )
 }
