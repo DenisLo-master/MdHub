@@ -50,7 +50,7 @@ const NursingModal = () => {
               <select name="service" className="flex-1 appearance-none px-4 py-2 border rounded-lg outline-none focus:ring ring-primary">
                 {
                   nursingAndHomecareServices.map((item, index) => (
-                    <option value={item}>{item}</option>
+                    <option key={item} value={item}>{item}</option>
                   ))
                 }
               </select>
