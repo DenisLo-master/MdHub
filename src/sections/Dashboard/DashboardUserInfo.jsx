@@ -1,9 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { registerationStore } from '../../store/registerationStore'
 
 const DashboardUserInfo = () => {
   const userInfo = registerationStore(state => state.userInfo)
-
   return (
     <section className="flex flex-col md:flex-row gap-y-4 text-center md:text-left gap-x-16 font-body font-light pb-10">
       <article className="flex-1 space-y-4">
@@ -53,9 +53,11 @@ const DashboardUserInfo = () => {
             </div>
           </article>
           <article>
-            <button className={`rounded-full font-main text-lg group hover:ring-1 hover:ring-primary px-12 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-              Manage
-            </button>
+            <Link to="/dashboard/update-user">
+              <button type="button" className={`rounded-full font-main text-lg group hover:ring-1 hover:ring-primary px-12 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+                Manage
+              </button>
+            </Link>
           </article>
         </div>
       </article>
