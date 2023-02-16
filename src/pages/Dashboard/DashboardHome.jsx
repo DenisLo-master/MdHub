@@ -129,9 +129,9 @@ const DashboardHome = () => {
       <Modal key="Lab Testing Modal" title="Medical Laboratory" showModal={showLabTestingModal} setShowModal={setShowLabTestingModal}>
         <div className="flex justify-around">
           <button className="w-full text-center bg-primary text-white max-w-[330px] py-3 rounded-3xl">
-            <a className="flex justify-center items-center text-xl gap-x-3 " href="https://mdhub.vercel.app/services/medical-laboratory">
+            <Link to="/services/medical-laboratory" className="flex justify-center items-center text-xl gap-x-3">
               <TiTickOutline /><span>I have requisition</span>
-            </a>
+            </Link>
           </button>
           <button className="w-full  text-center bg-primary text-white max-w-[330px] py-3 rounded-3xl">
             <a className="flex justify-center items-center text-xl gap-x-3" href="https://www.mdhub.ca/virtual-doctors/" target="_blank">
