@@ -1,15 +1,18 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { registerationStore } from '../../store/registerationStore'
 import toast from 'react-hot-toast'
+import { SVGLoaderCircles } from '../../assets'
 
 const Login = () => {
   const navigate = useNavigate()
   const loginFormRef = useRef(null)
+  const [isLoading, setIsLoading] = useState(false)
   const setUserInfo = registerationStore(state => state.setUserInfo)
 
   const handleLogin = async (e) => {
     e.preventDefault()
+    setIsLoading(true)
     const form = new FormData(e.target)
     const loginFormData = Object.fromEntries(form)
     try {
@@ -25,6 +28,7 @@ const Login = () => {
         const data = await response.json()
         localStorage.setItem("jwtToken", data.accessToken)
         setUserInfo(data)
+        setIsLoading(false)
         navigate('/dashboard')
       }
       if (response.status === 401) {
@@ -35,6 +39,8 @@ const Login = () => {
     }
     catch (error) {
       console.log(error)
+    } finally {
+      setIsLoading(false)
     }
   }
 
@@ -65,9 +71,10 @@ const Login = () => {
               required
             />
           </div>
-            <div className='w-full pt-3'>
-              <button type="submit" className={`rounded-full font-main text-xl group hover:ring-1 hover:ring-primary px-12 py-3 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-                Login
+          <div className='relative w-full pt-3'>
+            <button type="submit" className={`rounded-full w-40 font-main text-xl group hover:ring-1 hover:ring-primary  py-3 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+              <span>Login</span>
+              {isLoading && <SVGLoaderCircles className="text-primary w-4 h-4" />}
               </button>
             </div>
           </form>
