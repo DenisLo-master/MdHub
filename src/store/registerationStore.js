@@ -1,5 +1,58 @@
 import { create } from 'zustand'
 
+const clearFormsObject = {
+  formStep: 0,
+  childForms: [],
+  registerationFormData: {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    password: '',
+    address: '',
+    city: '',
+    province: '',
+    postalCode: '',
+    country: 'Canada',
+    creditCardNumber: '',
+    creditCardExpiry: '',
+    creditCardCvc: ''
+  },
+}
+
+const initialRegistrationFormData = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  phone: '',
+  password: '',
+  address: '',
+  city: '',
+  province: '',
+  postalCode: '',
+  country: 'Canada',
+  creditCardNumber: '',
+  creditCardExpiry: '',
+  creditCardCvc: ''
+}
+
+const initialUserInfoData = {
+  _id: "",
+  firstName: "",
+  lastName: "",
+  email: "",
+  phone: "",
+  isChildUser: "",
+  address: "",
+  city: "",
+  province: "",
+  postalCode: "",
+  paymentMode: "",
+  accountType: '',
+  loginCode: '',
+  childAccounts: [],
+}
+
 export const registerationStore = create((set) => ({
   formStep: 0,
   selectedAccountType: 'individual',
@@ -33,62 +86,15 @@ export const registerationStore = create((set) => ({
       childForms: newChildForms
     }
   }),
-  userInfo: {
-    _id: "",
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    isChildUser: "",
-    address: "",
-    city: "",
-    province: "",
-    postalCode: "",
-    paymentMode: "",
-    accountType: '',
-    loginCode: '',
-    childAccounts: [],
-  },
+  userInfo: initialUserInfoData,
   setUserInfo: (userInfoData) => set((state) => ({ userInfo: userInfoData })),
   changeSelectedAccountType: (accountType) => set((state) => ({ selectedAccountType: accountType })),
   increaseFormStep: () => set((state) => ({ formStep: state.formStep + 1 })),
   decreaseFormStep: () => set((state) => ({ formStep: state.formStep - 1 })),
   setPaymentMode: (value) => set((state) => ({ paymentMode: value })),
-  registerationFormData: {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    password: '',
-    address: '',
-    city: '',
-    province: '',
-    postalCode: '',
-    country: 'Canada',
-    creditCardNumber: '',
-    creditCardExpiry: '',
-    creditCardCvc: ''
-  },
+  registerationFormData: initialRegistrationFormData,
   handleRegisterationFormDataChange: (name, value) => set((state) => ({
     registerationFormData: { ...state.registerationFormData, [name]: value }
   })),
-  clearForms: () => set({
-    formStep: 0,
-    childForms: [],
-    registerationFormData: {
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      password: '',
-      address: '',
-      city: '',
-      province: '',
-      postalCode: '',
-      country: 'Canada',
-      creditCardNumber: '',
-      creditCardExpiry: '',
-      creditCardCvc: ''
-    },
-  })
+  clearForms: () => set(clearFormsObject)
 }))
