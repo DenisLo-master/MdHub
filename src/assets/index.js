@@ -69,6 +69,7 @@ import ForBabies04 from './for-babies-04.png'
 import ForBabies05 from './for-babies-05.png'
 import ForBabies06 from './for-babies-06.png'
 import ForBabies07 from './for-babies-07.png'
+import MentalHealthBanner from './mentl-health-banner.png'
 
 
 
@@ -143,7 +144,8 @@ export {
   VirtualDoctorIcon,
   StethoscopeIcon,
   NursingHomecareIcon,
-  OnlinePharmacyIcon
+  OnlinePharmacyIcon,
+  MentalHealthBanner
 }
 
 
