@@ -2,7 +2,7 @@ import React from 'react'
 
 const ServicesCard = ({ title, children, bgPrimary }) => {
   return (
-    <article className={`flex justify-center gap-x-2 items-center ${bgPrimary ? 'bg-primary shadow-cardService' : 'bg-white'}  w-[180px] py-3 rounded-full `}>
+    <article className={`flex justify-center gap-x-2 items-center ${bgPrimary ? 'bg-primary shadow-cardService' : 'bg-transparent'}  w-[180px] py-3 rounded-full `}>
       {
         children
       }
