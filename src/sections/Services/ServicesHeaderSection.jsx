@@ -6,7 +6,8 @@ import {
   VirtualDoctorIcon,
   StethoscopeIcon,
   NursingHomecareIcon,
-  MentalHealthIcon
+  MentalHealthIcon,
+  StethoscopeIconWhite
 } from '../../assets'
 
 
@@ -17,7 +18,7 @@ const ServicesHeaderSection = () => {
       <h2 className="font-main py-10 text-4xl text-center">Services</h2>
       <div className="w-full max-w-[1050px] mx-auto rounded-full shadow-xl flex justify-center items-center py-3 gap-x-6 text-[#3F3F3F] font-main">
         <Link to="/services">
-          <ServicesCard title={"virus testing"} bgPrimary={location.pathname === "/services"}>
+          <ServicesCard title={"mental health"} bgPrimary={location.pathname === "/services"}>
             <MentalHealthIcon className={`${location.pathname === "/services" ? "text-white" : "text-primary"}`} />
           </ServicesCard>
         </Link>
@@ -41,9 +42,11 @@ const ServicesHeaderSection = () => {
 
         <Link to="/services/medical-laboratory">
           <ServicesCard title={"diagnostics"} bgPrimary={location.pathname === "/services/medical-laboratory"}>
-            <StethoscopeIcon
-              className={`${location.pathname === "/services/medical-laboratory" ? "text-white" : "text-primary"}`}
-            />
+            {
+              location.pathname === "/services/medical-laboratory" ?
+                <StethoscopeIconWhite /> : <StethoscopeIcon />
+            }
+
         </ServicesCard>
         </Link>
 
