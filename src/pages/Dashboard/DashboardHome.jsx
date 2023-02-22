@@ -32,6 +32,11 @@ const DashboardHome = () => {
                   Virtual Doctor
                 </a>
               </button>
+              <button className={`max-w-[230px] rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
+                <a href="https://www.medzy.ca/?lang=en&gclid=CjwKCAjwg5uZBhATEiwAhhRLHiFNqYb2OAmyskipJG5oXwV_AqAFhiSCw0b2_se5P9l47kNIwULOyRoC03AQAvD_BwE" target="_blank">
+                  Online Pharmacy
+                </a>
+              </button>
               <button onClick={() => setShowLabTestingModal(true)} className={`max-w-[230px] rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
                 Medical Laboratory
               </button>
@@ -40,11 +45,6 @@ const DashboardHome = () => {
               </button>
               <button className={`max-w-[230px] rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border   border-primary bg-transparent`}>
                 Virus Testing
-              </button>
-              <button className={`max-w-[230px] rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
-                <a href="https://www.medzy.ca/?lang=en&gclid=CjwKCAjwg5uZBhATEiwAhhRLHiFNqYb2OAmyskipJG5oXwV_AqAFhiSCw0b2_se5P9l47kNIwULOyRoC03AQAvD_BwE" target="_blank">
-                  Online Pharmacy
-                </a>
               </button>
             </div>
             {
