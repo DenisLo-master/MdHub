@@ -1,12 +1,12 @@
 import React from 'react'
 
-const ServicesCard = ({ title, children, bgPrimary, wideCaption }) => {
+const ServicesCard = ({ title, children, bgPrimary }) => {
   return (
-    <article className={`flex flex-col justify-center items-center ${bgPrimary ? 'bg-primary' : 'bg-white'}  w-[160px] py-6 gap-y-3 shadow-cardService`}>
+    <article className={`flex justify-center gap-x-2 items-center ${bgPrimary ? 'bg-primary shadow-cardService' : 'bg-white'}  w-[180px] py-3 rounded-full `}>
       {
         children
       }
-      <p className={`w-full ${wideCaption ? 'max-w-[140px]' : 'max-w-[70px]'} text-lg text-center leading-5 ${bgPrimary ? "text-white" : "text-gray-800"}`}>{title}</p>
+      <p className={`text-lg leading-5 ${bgPrimary ? "text-white" : "text-gray-800"}`}>{title}</p>
     </article>
   )
 }
