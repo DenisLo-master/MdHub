@@ -21,6 +21,7 @@ import { ReactComponent as SVGLoaderCircles } from './svg-loader-circles.svg'
 import { ReactComponent as MentalHealthIcon } from './mental-health-icon.svg'
 import { ReactComponent as VirtualDoctorIcon } from './virtual-doctor-icon.svg'
 import { ReactComponent as StethoscopeIcon } from './stethoscope-icon.svg'
+import { ReactComponent as StethoscopeIconWhite } from './stethoscope-icon-white.svg'
 import { ReactComponent as NursingHomecareIcon } from './nursing-homecare-icon.svg'
 import { ReactComponent as OnlinePharmacyIcon } from './online-pharmacy-icon.svg'
 import VirusTestingAndVaccination from './virus-testing-and-vaccination.png'
@@ -70,10 +71,21 @@ import ForBabies05 from './for-babies-05.png'
 import ForBabies06 from './for-babies-06.png'
 import ForBabies07 from './for-babies-07.png'
 import MentalHealthBanner from './mentl-health-banner.png'
+import MentalHealthImg from './mental-health-img.png'
+import MeditationImage from './meditation-image.png'
+import HearBrainImage from './heart-brain-image.png'
+import ListIconImage from './list-icon-image.png'
+import CalenderIcon from './calender-icon.png'
 
 
 
 export {
+  StethoscopeIconWhite,
+  CalenderIcon,
+  ListIconImage,
+  HearBrainImage,
+  MeditationImage,
+  MentalHealthImg,
   TestingIcon,
   DoctorIcon,
   MedicineIcon,
