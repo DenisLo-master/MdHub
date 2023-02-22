@@ -16,6 +16,7 @@ import { ReactComponent as Membership03 } from './membership-03.svg'
 import { ReactComponent as Membership04 } from './membership-04.svg'
 import { ReactComponent as Membership05 } from './membership-05.svg'
 import { ReactComponent as Membership06 } from './membership-06.svg'
+import { ReactComponent as Membership07 } from './membership-07.svg'
 import { ReactComponent as SVGLoaderCircles } from './svg-loader-circles.svg'
 import VirusTestingAndVaccination from './virus-testing-and-vaccination.png'
 import Bombardier from './bombardier.png'
@@ -85,6 +86,7 @@ export {
   Membership04,
   Membership05,
   Membership06,
+  Membership07,
   HeartLeft,
   HeartRight,
   MentalHealth,
