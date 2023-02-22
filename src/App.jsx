@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 import { 
   Home, 
   Services, 
-  ServicesVirusTesting, 
+  ServicesMentalHealth, 
   ServicesVirtualDoctor, 
   ServicesMedicalLaboratory,
   ServicesNursingAndHomecare,
@@ -42,7 +42,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="services" element={<Services />}>
-              <Route index element={<ServicesVirusTesting />} />
+              <Route index element={<ServicesMentalHealth />} />
               <Route path="virtual-doctor" element={<ServicesVirtualDoctor />} />
               <Route path="medical-laboratory" element={<ServicesMedicalLaboratory />} />
               <Route path="nursing-homecare" element={<ServicesNursingAndHomecare />} />
