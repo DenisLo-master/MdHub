@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Membership01,
   Membership02,
@@ -6,134 +6,100 @@ import {
   Membership04,
   Membership05,
   Membership06,
-  OkIcon
+  Membership07,
 } from '../../assets'
-import { membershipBenefits } from '../../constants'
 import { FiArrowUpRight } from 'react-icons/fi'
 import Button from '../../components/Button'
 
 const HomeMembershipBenefitsSection = () => {
+  const [selectedBenefitId, setSelectedBenefitId] = useState(1)
   return (
-    <section className="w-full max-w-[90rem] mx-auto pb-20 flex flex-col md:flex-row">
-      <article className="px-4 md:pl-20 w-full max-w-[700px]">
-        <h2 className="w-full font-main text-center md:text-left text-4xl md:text-5xl pb-6">Membership Benefits</h2>
-        <h3 className='w-full font-body text-[22px] pb-8'>
-          Lorem ipsum dolor sit amet consectetur. At volutpat at vel integer. Lorem ipsum dolor sit.
-        </h3>
-        <ul className="space-y-4 max-w-[530px] md:text-xl px-4 md:px-0 pb-10">
-          {
-            membershipBenefits.map(({ id, title }) => (
-              <li
-                key={id}
-                className="flex items-center space-x-2 text-gray-700"
-              >
-                <div>
-                  <OkIcon className="text-primary w-8 h-8" />
-                </div>
-                <p>{title}</p>
-              </li>
-            ))
-          }
-        </ul>
-        <Button>
-          <span className="font-main text-xl">Learn More</span> <FiArrowUpRight className="md:text-lg transition-colors ease-out duration-150 group-hover:text-primary" />
-        </Button>
+    <section className="relative w-full md:min-h-[650px] font-main bg-[#F3F3F3] pb-20 flex flex-col md:flex-row">
+      <article className="px-4 md:pl-20 w-full md:w-[calc(100vw-360px)]">
+        <div className="space-y-2 md:pt-20 md:pl-32">
+          <h2 className="w-full max-w-[200px] font-main text-center md:text-left text-4xl md:text-5xl">
+            Membership Benefits
+          </h2>
+          <h3 className='w-full font-body text-base pb-8'>
+            Your health, all in one place.
+          </h3>
+        </div>
+        <div className="flex justify-end pr-14">
+          <div
+            className="w-full max-w-[620px] md:p-8 flex gap-x-5 border border-primary  bg-primary text-white rounded"
+          >
+            <div>
+              <Membership01 />
+            </div>
+            <div className="space-y-6 max-w-[400px]">
+              <h2 className="text-xl leading-7 font-bold">Unlimited access to doctors 24/7</h2>
+              <p className="font-body text-lg">
+                Our team of Canadian certified doctors and healthcare specialists are available for you and your family 24/7 from anywhere in the world.
+              </p>
+            </div>
+          </div>
+        </div>
       </article>
-      <article className="flex-1 space-y-8 gap-y-6 pt-6 md:pt-0">
-        <ul className="space-y-3">
+      <aside className="absolute top-10 right-0">
+        <ul>
           <li
-            data-aos="fade-left"
-            data-aos-delay="200"
-            className="bg-primary rounded flex items-center gap-x-8 py-2 px-8"
+            className="w-full max-w-[360px] py-4 px-8 flex items-center gap-x-5 border border-primary border-b-0  bg-primary text-white"
           >
-            <Membership01 className="w-12 h-12" />
-            <div className="text-white space-y-2">
-              <h2 className="font-main text-2xl">
-                24/7 unlimited access to medical professionals
-              </h2>
-              <p className="leading-5 font-body text-base max-w-[370px]">
-                Our team of certified doctors are available for you and your family when you need them.
-              </p>
+            <div>
+              <Membership01 />
             </div>
+            <h2 className="text-xl leading-7">Unlimited access to doctors 24/7</h2>
           </li>
           <li
-            data-aos="fade-left"
-            data-aos-delay="200"
-            className="bg-primary rounded flex items-center gap-x-8 py-2 px-8"
+            className="w-full max-w-[360px] py-4 px-8 flex items-center gap-x-5 border border-primary border-b-0 bg-white text-primary"
           >
-            <Membership02 className="w-12 h-12" />
-            <div className="text-white space-y-2">
-              <h2 className="font-main text-2xl">
-                Online Pharmacy
-              </h2>
-              <p className="leading-5 font-body text-base max-w-[450px]">
-                Get same-day prescription fulfillment for common treatments for birth control, erectile dysfunction, acne, and more.
-              </p>
+            <div>
+              <Membership02 />
             </div>
+            <h2 className="text-xl leading-7">Mental Healthcare</h2>
           </li>
           <li
-            data-aos="fade-left"
-            data-aos-delay="200"
-            className="bg-primary rounded flex items-center gap-x-8 py-2 px-8"
+            className="w-full max-w-[360px] py-4 px-8 flex items-center gap-x-5 border border-primary border-b-0 bg-white text-primary"
           >
-            <Membership03 className="w-12 h-12" />
-            <div className="text-white space-y-2">
-              <h2 className="font-main text-2xl">
-                Access to specialists
-              </h2>
-              <p className="leading-5 font-body text-base max-w-[450px]">
-                If you require testing or to see a nurse in-person, our mobile nursing team can treat you at your home or office.
-              </p>
+            <div>
+              <Membership03 />
             </div>
-          </li>
-
-          <li
-            data-aos="fade-left"
-            data-aos-delay="200"
-            className="bg-primary rounded flex items-center gap-x-8 py-2 px-8"
-          >
-            <Membership04 className="w-12 h-12" />
-            <div className="text-white space-y-2">
-              <h2 className="font-main text-2xl">
-                Nursing services on-the-go
-              </h2>
-              <p className="leading-5 font-body text-base max-w-[370px]">
-                Access our specialists and receive care at discounted rates.
-              </p>
-            </div>
+            <h2 className="text-xl leading-7">Online Pharmacy</h2>
           </li>
           <li
-            data-aos="fade-left"
-            data-aos-delay="200"
-            className="bg-primary rounded flex items-center gap-x-8 py-2 px-8"
+            className="w-full max-w-[360px] py-4 px-8 flex items-center gap-x-5 border border-primary border-b-0 bg-white text-primary"
           >
-            <Membership05 className="w-12 h-12" />
-            <div className="text-white space-y-2">
-              <h2 className="font-main text-2xl">
-                Your health, all in one place
-              </h2>
-              <p className="leading-5 font-body text-base max-w-[430px]">
-                MDHUB uses leading technology to power our holistic platform, built to address all of your health needs.
-              </p>
+            <div>
+              <Membership04 />
             </div>
+            <h2 className="text-xl leading-7">Nursing and home care services</h2>
           </li>
           <li
-            data-aos="fade-left"
-            data-aos-delay="200"
-            className="bg-primary rounded flex items-center gap-x-8 py-2 px-8"
+            className="w-full max-w-[360px] py-4 px-8 flex items-center gap-x-5 border border-primary border-b-0 bg-white text-primary"
           >
-            <Membership06 className="w-12 h-12" />
-            <div className="text-white space-y-2">
-              <h2 className="font-main text-2xl">
-                Bilingual and accessible
-              </h2>
-              <p className="leading-5 font-body text-base max-w-[430px]">
-                Connect to a bilingual healthcare professional via phone, video call, or text.
-              </p>
+            <div>
+              <Membership05 />
             </div>
+            <h2 className="text-xl leading-7">Lab work and diagnostics</h2>
+          </li>
+          <li
+            className="w-full max-w-[360px] py-4 px-8 flex items-center gap-x-5 border border-primary border-b-0 bg-white text-primary"
+          >
+            <div>
+              <Membership06 />
+            </div>
+            <h2 className="text-xl leading-7">Access to specialists</h2>
+          </li>
+          <li
+            className="w-full max-w-[360px] py-4 px-8 flex items-center gap-x-5 border border-primary bg-white text-primary"
+          >
+            <div>
+              <Membership07 />
+            </div>
+            <h2 className="text-xl leading-7">Headspace app</h2>
           </li>
         </ul>
-      </article>
+      </aside>
     </section>
   )
 }
