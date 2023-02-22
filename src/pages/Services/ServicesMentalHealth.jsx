@@ -1,46 +1,26 @@
 import React from 'react'
-import { ServiceOfYourNeed } from '../../assets'
+import { MentalHealthBanner } from '../../assets'
 
 
 const ServicesMentalHealth = () => {
   return (
     <section className="font-main">
-
-      <h2 className="text-4xl font-main text-gray-800 text-center pb-14">Select The Testing Service Of Your Needs</h2>
-      <section className="flex justify-center gap-x-12 ">
-        <img className="max-w-[500px]" src={ServiceOfYourNeed} alt="Service Of Your Need" />
-        <article className="text-center space-y-3">
-          <div className="rounded-3xl w-[330px] h-[105px] shadow-cardService flex items-center justify-center bg-primary text-white text-2xl">
-            Drive Thru
-          </div>
-          <div className="rounded-3xl w-[330px] h-[105px] shadow-cardService flex items-center justify-center text-gray-800 bg-white text-2xl">
-            Mobile
-          </div>
-          <div className="rounded-3xl w-[330px] h-[105px] shadow-cardService flex items-center justify-center text-gray-800 bg-white text-2xl">
-            Virtual
-          </div>
-          <div className="rounded-3xl w-[330px] h-[105px] shadow-cardService flex items-center justify-center text-gray-800 bg-white text-2xl">
-            Fast Results
-          </div>
-          <div className="rounded-3xl w-[330px] h-[105px] shadow-cardService flex items-center justify-center text-gray-800 bg-white text-2xl">
-            Accepted <br /> Everywhere
-          </div>
-        </article>
-      </section>
-      <section className="py-12 bg-[#F9F9F9]">
-        <div className="flex justify-center gap-x-12 pb-6 text-xl">
-          <article className="w-full text-center bg-primary text-white max-w-[370px] py-3 rounded-3xl">
-            Mobile Service
+      <header className="bg-[#F6BA21] text-white w-full h-[530px] py-10">
+        <div className="max-w-[86rem] mx-auto flex justify-between">
+          <article className="space-y-5">
+            <h2 className="text-8xl max-w-[250px]">
+              mental health
+            </h2>
+            <p className="font-body text-lg max-w-lg py-3">
+              In today’s faced-paced, modern and ultra-connected world, your mental health is more important than ever. With MDHUB, you can easily get mental health support when you need it most.
+            </p>
+            <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border border-white">
+              Sign Up Today
+            </button>
           </article>
-          <article className="w-full text-center bg-primary text-white max-w-[370px] py-3 rounded-3xl">
-            Virtual Service
-          </article>
+          <img src={MentalHealthBanner} alt="mental health" />
         </div>
-        <p className="text-center text-gray-800 text-lg font-light font-body max-w-[910px] mx-auto">
-          MDHUB Members Benefit from 25% discount on all virus testing services as well as free upgraded rush service.
-          All our Covid-19 testing is performed by our partners
-        </p>
-      </section>
+      </header>
     </section>
   )
 }
