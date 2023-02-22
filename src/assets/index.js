@@ -18,6 +18,11 @@ import { ReactComponent as Membership05 } from './membership-05.svg'
 import { ReactComponent as Membership06 } from './membership-06.svg'
 import { ReactComponent as Membership07 } from './membership-07.svg'
 import { ReactComponent as SVGLoaderCircles } from './svg-loader-circles.svg'
+import { ReactComponent as MentalHealthIcon } from './mental-health-icon.svg'
+import { ReactComponent as VirtualDoctorIcon } from './virtual-doctor-icon.svg'
+import { ReactComponent as StethoscopeIcon } from './stethoscope-icon.svg'
+import { ReactComponent as NursingHomecareIcon } from './nursing-homecare-icon.svg'
+import { ReactComponent as OnlinePharmacyIcon } from './online-pharmacy-icon.svg'
 import VirusTestingAndVaccination from './virus-testing-and-vaccination.png'
 import Bombardier from './bombardier.png'
 import Aloan from './aloan.png'
@@ -133,7 +138,12 @@ export {
   ForBabies06,
   ForBabies07,
   ArrowRight,
-  SVGLoaderCircles
+  SVGLoaderCircles,
+  MentalHealthIcon,
+  VirtualDoctorIcon,
+  StethoscopeIcon,
+  NursingHomecareIcon,
+  OnlinePharmacyIcon
 }
 
 
