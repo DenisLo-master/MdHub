@@ -9,6 +9,10 @@ import {
   MedicalTreatment05,
   MedicalTreatment06,
   MedicalTreatment07,
+  OnlinePharmacyHowItWorks01,
+  OnlinePharmacyHowItWorks02,
+  OnlinePharmacyHowItWorks03,
+  OnlinePharmacyHowItWorks04,
 }
   from '../assets'
 
@@ -157,6 +161,29 @@ export const virtualDoctorHowItWorksData = [
     title: "Get a diagnosis or prescription",
     description: "Our virtual doctors can diagnose and provide prescriptions, and prescription delivery is available at no extra cost.",
     image: HowItWorksMobile03
+  },
+]
+
+export const onlinePharmacyHowItWorksData = [
+  {
+    id: 1,
+    text: "Sign up and complete your health profile in 5 minutes.",
+    image: OnlinePharmacyHowItWorks01
+  },
+  {
+    id: 2,
+    text: "We’ll transfer your prescriptions from your old pharmacy.",
+    image: OnlinePharmacyHowItWorks02
+  },
+  {
+    id: 3,
+    text: "We deliver prescriptions right to your door.",
+    image: OnlinePharmacyHowItWorks03
+  },
+  {
+    id: 4,
+    text: "That’s it! You get your prescriptions without having to leave your house.",
+    image: OnlinePharmacyHowItWorks04
   },
 
 ]
