@@ -21,9 +21,11 @@ import DashboardUserInfo from "./Dashboard/DashboardUserInfo";
 import NursingModal from "./Dashboard/NursingModal";
 import LabTestingModal from "./Dashboard/LabTestingModal";
 import HomeUserSatisfactionSection from "./Home/HomeUserSatisfactionSection";
+import RegistrationCheckoutForm from "./Signup/RegistrationCheckoutForm.jsx"
 
 
 export {
+  RegistrationCheckoutForm,
   HomeHeroSection,
   HomeExploreSolutionsSection,
   HomeHeadspaceSection,
