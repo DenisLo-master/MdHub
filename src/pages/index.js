@@ -2,7 +2,7 @@ import Home from "./Home/Home";
 import Services from "./Services/Services";
 import ServicesVirtualDoctor from "./Services/ServicesVirtualDoctor";
 import ServicesMentalHealth from "./Services/ServicesMentalHealth";
-import ServicesMedicalLaboratory from "./Services/ServicesMedicalLaboratory";
+import ServicesDiagnostics from "./Services/ServicesDiagnostics";
 import ServicesNursingAndHomecare from "./Services/ServicesNursingAndHomecare";
 import ServicesOnlinePharmacy from "./Services/ServicesOnlinePharmacy";
 import ForYou from './ForYou/ForYou'
@@ -23,7 +23,7 @@ export {
   Services,
   ServicesVirtualDoctor,
   ServicesMentalHealth,
-  ServicesMedicalLaboratory,
+  ServicesDiagnostics,
   ServicesNursingAndHomecare,
   ServicesOnlinePharmacy,
   ForYou,
