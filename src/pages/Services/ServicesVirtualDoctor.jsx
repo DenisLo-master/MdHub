@@ -1,7 +1,6 @@
 import React from 'react'
 import {
   VirtualDoctorBanner,
-  HowItWorksMobile01
 } from '../../assets'
 
 import { medicalTreatmentData, virtualDoctorHowItWorksData } from '../../constants'
