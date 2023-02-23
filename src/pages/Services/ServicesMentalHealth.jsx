@@ -12,16 +12,16 @@ import {
 const ServicesMentalHealth = () => {
   return (
     <section className="font-main">
-      <header className="bg-[#F6BA21] text-white w-full h-[530px] py-10">
+      <header className="bg-[#F6BA21] text-white w-full h-[560px] py-10">
         <div className="max-w-[86rem] mx-auto flex justify-between">
           <article className="space-y-5">
-            <h2 className="text-8xl max-w-[250px]">
+            <h2 className="text-[88px] leading-[90px] max-w-[250px]">
               mental health
             </h2>
             <p className="font-body text-lg max-w-lg py-3">
               In today’s faced-paced, modern and ultra-connected world, your mental health is more important than ever. With MDHUB, you can easily get mental health support when you need it most.
             </p>
-            <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border border-white">
+            <button className="rounded-full w-[240px] text-lg flex justify-center py-2 border border-white">
               Sign Up Today
             </button>
           </article>
@@ -39,15 +39,15 @@ const ServicesMentalHealth = () => {
         <div className="w-full max-w-4xl mx-auto flex item-center justify-between text-center">
           <article className="space-y-6 flex flex-col items-center">
             <img src={MentalHealthImg} alt="mental health" />
-            <p>Mental health physicians.</p>
+            <p className="font-body">Mental health physicians.</p>
           </article>
           <article className="space-y-6 pt-6 flex flex-col items-center">
             <img src={HearBrainImage} alt="heart and brain" />
-            <p className="md:pt-2">Mental health therapists.</p>
+            <p className="md:pt-2 font-body">Mental health therapists.</p>
           </article>
           <article className="space-y-6 flex flex-col items-center md:-mt-3">
             <img src={MeditationImage} alt="meditation" />
-            <p className="max-w-[140px]">Headspace wellness & meditation app.</p>
+            <p className="max-w-[180px] font-body">Headspace wellness & meditation app.</p>
           </article>
         </div>
       </section>
