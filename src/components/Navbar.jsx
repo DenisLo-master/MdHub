@@ -53,11 +53,11 @@ const Navbar = () => {
             </li>
             <li className="relative cursor-pointer hover:opacity-90 group">
               {
-                location.pathname === '/pricing' &&
+                location.pathname === '/rates' &&
                 <RxDotFilled className="absolute text-primary -left-5 top-[6px]" />
               }
               <RxDotFilled className="hidden group-hover:block absolute text-primary -left-5 top-[6px]" />
-              <Link to="/pricing">pricing</Link>
+              <Link to="/pricing">rates</Link>
             </li>
             <li className="relative group">
             {
