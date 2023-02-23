@@ -1,13 +1,19 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { registerationStore } from '../../store/registerationStore'
-import { SignupStepOne, SignupStepTwo, SignupStepThree, SignupAccountsTypeNav } from '../../sections'
-import { toast } from 'react-hot-toast'
-import { SVGLoaderCircles } from '../../assets'
+import {
+  SignupAccountsTypeNav,
+  RegistrationCheckoutForm
+}
+  from '../../sections'
+
+import { loadStripe } from "@stripe/stripe-js"
+import { Elements } from '@stripe/react-stripe-js';
+const key = import.meta.env.VITE_STRIPE
+const stripePromise = loadStripe(key);
 
 const Signup = () => {
   const [isLoading, setIsLoading] = useState(false)
-  const signupFormRef = useRef(null)
   const navigate = useNavigate()
   const formStep = registerationStore(state => state.formStep)
   const childForms = registerationStore(state => state.childForms)
@@ -18,67 +24,6 @@ const Signup = () => {
   const paymentMode = registerationStore(state => state.paymentMode)
   const registerationFormData = registerationStore(state => state.registerationFormData)
 
-
-  const getBill = () => {
-    if (selectedAccountType === "individual") {
-      if (paymentMode === "yearly") {
-        return 407
-      }
-      return 152
-    }
-    if (selectedAccountType === "family") {
-      if (paymentMode === "yearly") {
-        return 587
-      }
-      return 212
-    }
-    if (selectedAccountType === "corporate") {
-      return 2446
-    }
-  }
-
-  const handleSignup = async (e) => {
-    e.preventDefault()
-    const filledChildForms = childForms.filter(form => Object.values(form).every(value => value !== ''));
-    if (filledChildForms.length < childForms.length) {
-      toast.error("Please fill all the values", { id: "fill values" })
-      return;
-    }
-    setIsLoading(true)
-    const signupFormBody = {
-      accountType: selectedAccountType,
-      primaryUserData: {
-        ...registerationFormData,
-        paymentMode,
-        accountType: selectedAccountType
-      },
-      isChildUser: false,
-      recurringPayment: selectedAccountType === "on demand" ? true : false,
-      childUsersData: childForms,
-      totalAmount: getBill()
-    }
-    try {      
-        const response = await fetch('https://mdhub-backend.onrender.com/api/v1/auth/register', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(signupFormBody)
-        })
-        const data = await response.json()
-        clearForms()
-        setIsLoading(false)
-        navigate('/login')
-        toast.success("Successfully created your account", {
-          id: "Register"
-        })
-
-    } catch (error) {
-      console.log(error.message)
-    } finally {
-      setIsLoading(false)
-    }
-  }
   useEffect(() => {
     const token = localStorage.getItem("jwtToken")
     if (token) navigate("/dashboard")
@@ -91,58 +36,11 @@ const Signup = () => {
         <SignupAccountsTypeNav />
       </article>
       <article className="w-full">
-        <form ref={signupFormRef} onSubmit={handleSignup} className="w-full">
-          {formStep === 0 ?
-            <SignupStepOne /> : formStep === 1 ? <SignupStepTwo /> : <SignupStepThree />
-          }
-          <div className="w-full flex justify-end pt-6">
-            {
-              formStep === 0 ? (
-                <button
-                  onClick={() => increaseFormStep()}
-                  className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
-                  type="button"
-                >
-                  Continue
-                </button>
-              ) : formStep === 1 ? (
-                  <div className="flex gap-x-4">
-                    <button
-                      onClick={() => decreaseFormStep()}
-                      className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
-                      type="button"
-                    >
-                      Prev
-                    </button>
-                    <button
-                      onClick={() => increaseFormStep()}
-                      className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
-                      type="button"
-                    >
-                      Continue
-                    </button>
-                  </div>
-                ) : (
-                    <div className="flex gap-x-4">
-                      <button
-                        onClick={() => decreaseFormStep()}
-                        className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
-                        type="button"
-                      >
-                        Prev
-                      </button>
-                      <button type="submit" className={`rounded-full w-72 font-main text-xl group hover:ring-1 hover:ring-primary  py-3 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-                        <span>Complete Registration</span>
-                        {isLoading && <SVGLoaderCircles className="text-primary w-4 h-4" />}
-                      </button>
-                    </div>
-                  )
-            }
-          </div>
-        </form>
+        <Elements stripe={stripePromise}>
+          <RegistrationCheckoutForm />
+        </Elements>
       </article>
     </section>
-
   )
 }
 
