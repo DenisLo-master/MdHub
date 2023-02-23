@@ -16,7 +16,7 @@ const ServicesHeaderSection = () => {
   return (
     <section className="bg-[#F9F9F9] mb-10">
       <h2 className="font-main py-10 text-4xl text-center">Services</h2>
-      <div className="w-full max-w-[1050px] mx-auto rounded-full shadow-xl flex justify-center items-center py-3 gap-x-6 text-[#3F3F3F] font-main">
+      <div className="w-full max-w-[1100px] mx-auto rounded-full shadow-xl flex justify-center items-center py-3 gap-x-6 text-[#3F3F3F] font-main">
         <Link to="/services">
           <ServicesCard title={"mental health"} bgPrimary={location.pathname === "/services"}>
             <MentalHealthIcon className={`${location.pathname === "/services" ? "text-white" : "text-primary"}`} />
@@ -40,13 +40,12 @@ const ServicesHeaderSection = () => {
           </ServicesCard>
         </Link>
 
-        <Link to="/services/medical-laboratory">
-          <ServicesCard title={"diagnostics"} bgPrimary={location.pathname === "/services/medical-laboratory"}>
+        <Link to="/services/diagnostics">
+          <ServicesCard title={"diagnostics"} bgPrimary={location.pathname === "/services/diagnostics"}>
             {
-              location.pathname === "/services/medical-laboratory" ?
+              location.pathname === "/services/diagnostics" ?
                 <StethoscopeIconWhite /> : <StethoscopeIcon />
             }
-
         </ServicesCard>
         </Link>
 
