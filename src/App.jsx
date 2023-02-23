@@ -56,7 +56,7 @@ function App() {
               <Route path="book-appointment" element={<BookAppointment />} />
               <Route path="update-user" element={<UpdateUserInfo />} />
             </Route>
-            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/rates" element={<Pricing />} />
             <Route path="/for-corporate" element={<CorporateOverview />} />
             <Route path="/for-family" element={<ForBabies />} />
             <Route path="/register" element={<Signup />}/>
