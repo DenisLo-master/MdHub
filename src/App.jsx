@@ -10,7 +10,7 @@ import {
   Services, 
   ServicesMentalHealth, 
   ServicesVirtualDoctor, 
-  ServicesMedicalLaboratory,
+  ServicesDiagnostics,
   ServicesNursingAndHomecare,
   ServicesOnlinePharmacy,
   ForYou,
@@ -44,7 +44,7 @@ function App() {
             <Route path="services" element={<Services />}>
               <Route index element={<ServicesMentalHealth />} />
               <Route path="virtual-doctor" element={<ServicesVirtualDoctor />} />
-              <Route path="medical-laboratory" element={<ServicesMedicalLaboratory />} />
+              <Route path="diagnostics" element={<ServicesDiagnostics />} />
               <Route path="nursing-homecare" element={<ServicesNursingAndHomecare />} />
               <Route path="online-pharmacy" element={<ServicesOnlinePharmacy />} />
             </Route>
