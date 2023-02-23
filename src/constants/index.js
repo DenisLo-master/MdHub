@@ -9,6 +9,8 @@ import {
   MedicalTreatment05,
   MedicalTreatment06,
   MedicalTreatment07,
+  NursingAndHomecareHowItWorks01,
+  NursingAndHomecareHowItWorks02,
   OnlinePharmacyHowItWorks01,
   OnlinePharmacyHowItWorks02,
   OnlinePharmacyHowItWorks03,
@@ -185,5 +187,44 @@ export const onlinePharmacyHowItWorksData = [
     text: "That’s it! You get your prescriptions without having to leave your house.",
     image: OnlinePharmacyHowItWorks04
   },
-
 ]
+
+export const diagnosisHowItWorksData = [
+  {
+    id: 1,
+    text: "Patients require a lab requisition. If you don’t have one – no problem! See a doctor now.",
+  },
+  {
+    id: 2,
+    text: "Schedule a time and place for your testing and complete your payment online. Or you can visit a testing centre at no extra cost",
+    note: "*Please note: member pricing is $99 for this service."
+  },
+  {
+    id: 3,
+    text: "Upload your requisition, and our medical staff will call you within 24 hours to confirm your booking.",
+  },
+  {
+    id: 4,
+    text: "Once testing is complete, our labs will submit your results to your virtual doctor with MDHUB. Access your dashboard.",
+  },
+]
+
+export const nursingAndHomecareHowItWorksData = [
+  {
+    id: 1,
+    text: "Describe or select your service.",
+    image: NursingAndHomecareHowItWorks01
+  },
+  {
+    id: 2,
+    text: "Select a time and location.",
+    note: "*Please note: member pricing for nursing is $99 per visit. Member pricing for homecare is $59 per visit.",
+    image: NursingAndHomecareHowItWorks02
+  },
+  {
+    id: 3,
+    text: "Complete payment",
+    image: OnlinePharmacyHowItWorks03
+  }
+]
+
