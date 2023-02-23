@@ -70,16 +70,35 @@ import ForBabies04 from './for-babies-04.png'
 import ForBabies05 from './for-babies-05.png'
 import ForBabies06 from './for-babies-06.png'
 import ForBabies07 from './for-babies-07.png'
-import MentalHealthBanner from './mentl-health-banner.png'
+import MentalHealthBanner from './mental-health-banner.png'
+import VirtualDoctorBanner from './virtual-doctor-banner.png'
 import MentalHealthImg from './mental-health-img.png'
 import MeditationImage from './meditation-image.png'
 import HearBrainImage from './heart-brain-image.png'
 import ListIconImage from './list-icon-image.png'
 import CalenderIcon from './calender-icon.png'
-
-
+import MedicalTreatment01 from './medical-treatment-01.png'
+import MedicalTreatment02 from './medical-treatment-02.png'
+import MedicalTreatment03 from './medical-treatment-03.png'
+import MedicalTreatment04 from './medical-treatment-04.png'
+import MedicalTreatment05 from './medical-treatment-05.png'
+import MedicalTreatment06 from './medical-treatment-06.png'
+import MedicalTreatment07 from './medical-treatment-07.png'
+import HowItWorksMobile01 from './how-it-works-mobile-01.png'
+import HowItWorksMobile02 from './how-it-works-mobile-02.png'
+import HowItWorksMobile03 from './how-it-works-mobile-03.png'
 
 export {
+  HowItWorksMobile01,
+  HowItWorksMobile02,
+  HowItWorksMobile03,
+  MedicalTreatment01,
+  MedicalTreatment02,
+  MedicalTreatment03,
+  MedicalTreatment04,
+  MedicalTreatment05,
+  MedicalTreatment06,
+  MedicalTreatment07,
   StethoscopeIconWhite,
   CalenderIcon,
   ListIconImage,
@@ -157,7 +176,8 @@ export {
   StethoscopeIcon,
   NursingHomecareIcon,
   OnlinePharmacyIcon,
-  MentalHealthBanner
+  MentalHealthBanner,
+  VirtualDoctorBanner
 }
 
 
