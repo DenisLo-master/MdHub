@@ -22,7 +22,7 @@ const Drawer = ({ showDrawer, close }) => {
       <Link to="/">
         <img className='cursor-pointer w-24' src={Logo} alt="MD Hub" />
       </Link>
-      <ul className="font-main text-2xl">
+      <ul className="font-main text-2xl list-none">
         <Link to="/for-you">
         <li className="relative cursor-pointer hover:opacity-90">
           <RxDotFilled className="absolute text-primary -left-5 top-[6px]" />
@@ -37,6 +37,9 @@ const Drawer = ({ showDrawer, close }) => {
         </Link>
         <Link to="/services">
           <li className="cursor-pointer hover:opacity-90">for services</li>
+        </Link>
+        <Link to="/pricing">
+          <li className="cursor-pointer hover:opacity-90">pricing</li>
         </Link>
       </ul>
       {
