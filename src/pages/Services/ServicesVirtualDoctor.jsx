@@ -6,7 +6,6 @@ import {
 
 import { medicalTreatmentData, virtualDoctorHowItWorksData } from '../../constants'
 
-
 const ServicesVirtualDoctor = () => {
   return (
     <section className="font-main py-10">
