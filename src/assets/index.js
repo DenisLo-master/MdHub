@@ -73,6 +73,8 @@ import ForBabies07 from './for-babies-07.png'
 import MentalHealthBanner from './mental-health-banner.png'
 import VirtualDoctorBanner from './virtual-doctor-banner.png'
 import OnlinePharmacyBanner from './online-pharmacy-banner.png'
+import DiagnosticsBanner from './diagnostics-banner.png'
+import NursingAndHomecareBanner from './nursing-and-homecare-banner.png'
 import MentalHealthImg from './mental-health-img.png'
 import MeditationImage from './meditation-image.png'
 import HearBrainImage from './heart-brain-image.png'
@@ -92,8 +94,15 @@ import OnlinePharmacyHowItWorks01 from './online-pharmacy-how-it-works-01.png'
 import OnlinePharmacyHowItWorks02 from './online-pharmacy-how-it-works-02.png'
 import OnlinePharmacyHowItWorks03 from './online-pharmacy-how-it-works-03.png'
 import OnlinePharmacyHowItWorks04 from './online-pharmacy-how-it-works-04.png'
+import NursingAndHomecareHowItWorks01 from './nursing-and-homecare-how-it-works-01.png'
+import NursingAndHomecareHowItWorks02 from './nursing-and-homecare-how-it-works-02.png'
+import NursingAndHomecareHowItWorks03 from './nursing-and-homecare-how-it-works-03.png'
+
 
 export {
+  NursingAndHomecareHowItWorks01,
+  NursingAndHomecareHowItWorks02,
+  NursingAndHomecareHowItWorks03,
   OnlinePharmacyHowItWorks01,
   OnlinePharmacyHowItWorks02,
   OnlinePharmacyHowItWorks03,
@@ -187,7 +196,9 @@ export {
   OnlinePharmacyIcon,
   MentalHealthBanner,
   VirtualDoctorBanner,
-  OnlinePharmacyBanner
+  OnlinePharmacyBanner,
+  NursingAndHomecareBanner,
+  DiagnosticsBanner
 }
 
 
