@@ -27,8 +27,8 @@ input:checked+.toggle-switch .toggle-circle {
 
 .ic_bg {
   filter: drop-shadow(0px 0px 5px rgb(0 0 0 / 0.754));
-
 }
+
 .diagnostics-bg {
   background: url("./assets/diagnostics-banner.png") no-repeat center center/cover;
 }
