@@ -24,12 +24,16 @@ import OnlinePharmacyModal from "./Dashboard/OnlinePharmacyModal";
 import UserPaymentForm from "./Dashboard/UserPaymentForm";
 import NursingAppointmentForm from "./Dashboard/NursingAppointmentForm";
 import NursingAppointmentStepOne from "./Dashboard/NursingAppointmentStepOne";
+import NursingAppointmentStepTwo from "./Dashboard/NursingAppointmentStepTwo";
+import NursingAppointmentStepThree from "./Dashboard/NursingAppointmentStepThree";
 import HomeUserSatisfactionSection from "./Home/HomeUserSatisfactionSection";
 import RegistrationCheckoutForm from "./Signup/RegistrationCheckoutForm.jsx"
 
 
 export {
   NursingAppointmentStepOne,
+  NursingAppointmentStepTwo,
+  NursingAppointmentStepThree,
   NursingAppointmentForm,
   UserPaymentForm,
   RegistrationCheckoutForm,

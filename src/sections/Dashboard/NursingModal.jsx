@@ -16,7 +16,6 @@ const NursingModal = () => {
   return (
     <Modal key="Nursing Modal" title="Nursing & Healthcare" showModal={showNursingModal} setShowModal={setShowNursingModal}>
       <section section className="bg-[#F9F9F9] p-6" >
-        <p className="text-xl">Fill in the details to get the service of your need.</p>
         <div className="flex gap-x-4 w-full">
           <Elements stripe={stripePromise}>
             <NursingAppointmentForm />
