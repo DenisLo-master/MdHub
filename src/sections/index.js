@@ -20,11 +20,16 @@ import SignupAccountsTypeNav from "./Signup/SignupAccountsTypeNav";
 import DashboardUserInfo from "./Dashboard/DashboardUserInfo";
 import NursingModal from "./Dashboard/NursingModal";
 import LabTestingModal from "./Dashboard/LabTestingModal";
+import OnlinePharmacyModal from "./Dashboard/OnlinePharmacyModal";
+import UserPaymentForm from "./Dashboard/UserPaymentForm";
+import NursingAppointmentForm from "./Dashboard/NursingAppointmentForm";
 import HomeUserSatisfactionSection from "./Home/HomeUserSatisfactionSection";
 import RegistrationCheckoutForm from "./Signup/RegistrationCheckoutForm.jsx"
 
 
 export {
+  NursingAppointmentForm,
+  UserPaymentForm,
   RegistrationCheckoutForm,
   HomeHeroSection,
   HomeExploreSolutionsSection,
@@ -48,5 +53,6 @@ export {
   ChildAccountForms,
   ParentAccountForm,
   NursingModal,
-  LabTestingModal
+  LabTestingModal,
+  OnlinePharmacyModal
 }
