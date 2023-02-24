@@ -118,7 +118,7 @@ const RegistrationCheckoutForm = () => {
           !isFirstStep &&
           <button
               type="button" 
-              className={`rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary py-3 border  border-primary bg-transparent`}
+              className={`rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary py-3 border  border-primary bg-primary text-white`}
               onClick={back}
             >
               Back
@@ -126,7 +126,7 @@ const RegistrationCheckoutForm = () => {
         }
         <button 
           type="submit"
-          className={`rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary  py-3 border flex justify-center items-center space-x-2  border-primary bg-transparent`}
+          className={`rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary  py-3 border flex justify-center items-center space-x-2  border-primary bg-primary text-white`}
         >
           {
             isLastStep ?
