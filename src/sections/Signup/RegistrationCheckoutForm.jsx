@@ -5,12 +5,12 @@ import {
   SignupStepTwo,
   SignupStepThree
 } from '../../sections'
+import { useMultiStepForm } from '../../hooks/useMultiStepForm'
 import { registerationStore } from '../../store/registerationStore'
 import { toast } from 'react-hot-toast'
 import { SVGLoaderCircles } from '../../assets'
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
-const secret = import.meta.env.VITE_STRIPE_SECRET
-console.log(secret)
+const secret = import.meta.env.VITE_STRIPE
 
 const RegistrationCheckoutForm = () => {
   const [isLoading, setIsLoading] = useState(false)
@@ -18,14 +18,17 @@ const RegistrationCheckoutForm = () => {
   const elements = useElements();
   const signupFormRef = useRef(null)
   const navigate = useNavigate()
-  const formStep = registerationStore(state => state.formStep)
   const childForms = registerationStore(state => state.childForms)
-  const increaseFormStep = registerationStore(state => state.increaseFormStep)
-  const decreaseFormStep = registerationStore(state => state.decreaseFormStep)
   const clearForms = registerationStore(state => state.clearForms)
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
   const paymentMode = registerationStore(state => state.paymentMode)
   const registerationFormData = registerationStore(state => state.registerationFormData)
+
+  const { steps, currentStepIndex, step, isFirstStep, isLastStep, next, back } = useMultiStepForm([
+    <SignupStepOne />,
+    <SignupStepTwo />,
+    <SignupStepThree />
+  ])
 
   const getBill = () => {
     if (selectedAccountType === "individual") {
@@ -47,6 +50,7 @@ const RegistrationCheckoutForm = () => {
 
   const handleSignup = async (e) => {
     e.preventDefault()
+    if (!isLastStep) next()
     if (!stripe || !elements) {
       return;
     }
@@ -106,55 +110,32 @@ const RegistrationCheckoutForm = () => {
       setIsLoading(false)
     }
   }
-
   return (
     <form ref={signupFormRef} onSubmit={handleSignup} className="w-full">
-      {formStep === 0 ?
-        <SignupStepOne /> : formStep === 1 ? <SignupStepTwo /> : <SignupStepThree />
-      }
-      <div className="w-full flex justify-end pt-6">
+      {step}
+      <div className="w-full flex justify-end gap-x-4 pt-6">
         {
-          formStep === 0 ? (
-            <button
-              onClick={() => increaseFormStep()}
-              className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
-              type="button"
+          !isFirstStep &&
+          <button
+              type="button" 
+              className={`rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary py-3 border  border-primary bg-transparent`}
+              onClick={back}
             >
-              Continue
+              Back
             </button>
-          ) : formStep === 1 ? (
-            <div className="flex gap-x-4">
-              <button
-                onClick={() => decreaseFormStep()}
-                className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
-                type="button"
-              >
-                Prev
-              </button>
-              <button
-                onClick={() => increaseFormStep()}
-                className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
-                type="button"
-              >
-                Continue
-              </button>
-            </div>
-          ) : (
-            <div className="flex gap-x-4">
-              <button
-                onClick={() => decreaseFormStep()}
-                className="w-40 bg-primary text-white rounded-full text-xl hover:ring-1 hover:ring-primary px-16 py-2 border flex justify-center items-center border-primary bg-transparent`"
-                type="button"
-              >
-                Prev
-              </button>
-              <button type="submit" className={`rounded-full w-72 font-main text-xl group hover:ring-1 hover:ring-primary  py-3 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-                <span>Complete Registration</span>
-                {isLoading && <SVGLoaderCircles className="text-primary w-4 h-4" />}
-              </button>
-            </div>
-          )
         }
+        <button 
+          type="submit"
+          className={`rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary  py-3 border flex justify-center items-center space-x-2  border-primary bg-transparent`}
+        >
+          {
+            isLastStep ?
+              isLoading ?
+                <SVGLoaderCircles className="text-primary w-4 h-4" /> :
+                <span>Finish</span> :
+              <span>Next</span>
+          }
+        </button>
       </div>
     </form>
   )
