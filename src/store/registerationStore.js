@@ -64,6 +64,8 @@ export const registerationStore = create((set) => ({
   childForms: [],
   showLabTestingModal: false,
   setShowLabTestingModal: (show) => set((state) => ({ showLabTestingModal: show })),
+  showOnlinePharmacyModal: false,
+  setShowOnlinePharmacyModal: (show) => set((state) => ({ showOnlinePharmacyModal: show })),
   showNursingModal: false,
   setShowNursingModal: (show) => set((state) => ({ showNursingModal: show })),
   addChildAccount: () => set((state) => ({
