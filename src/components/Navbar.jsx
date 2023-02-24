@@ -51,6 +51,14 @@ const Navbar = () => {
               <RxDotFilled className="hidden group-hover:block absolute text-primary -left-5 top-[6px]" />
               <Link to="/for-corporate">for corporate</Link>
             </li>
+            <li className="relative group">
+              {
+                location.pathname.split('/')[1] === 'services' &&
+                <RxDotFilled className="absolute text-primary -left-5 top-[6px]" />
+              }
+              <RxDotFilled className="hidden group-hover:block absolute text-primary -left-5 top-[6px]" />
+              <Link to="/services">services</Link>
+            </li>
             <li className="relative cursor-pointer hover:opacity-90 group">
               {
                 location.pathname === '/rates' &&
@@ -59,14 +67,6 @@ const Navbar = () => {
               <RxDotFilled className="hidden group-hover:block absolute text-primary -left-5 top-[6px]" />
               <Link to="/pricing">rates</Link>
             </li>
-            <li className="relative group">
-            {
-              location.pathname.split('/')[1] === 'services' && 
-              <RxDotFilled className="absolute text-primary -left-5 top-[6px]" />
-            }
-              <RxDotFilled className="hidden group-hover:block absolute text-primary -left-5 top-[6px]" />
-            <Link to="/services">services</Link>
-          </li>
           </ul>
           {
             token ? (
