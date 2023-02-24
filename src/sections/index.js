@@ -23,11 +23,13 @@ import LabTestingModal from "./Dashboard/LabTestingModal";
 import OnlinePharmacyModal from "./Dashboard/OnlinePharmacyModal";
 import UserPaymentForm from "./Dashboard/UserPaymentForm";
 import NursingAppointmentForm from "./Dashboard/NursingAppointmentForm";
+import NursingAppointmentStepOne from "./Dashboard/NursingAppointmentStepOne";
 import HomeUserSatisfactionSection from "./Home/HomeUserSatisfactionSection";
 import RegistrationCheckoutForm from "./Signup/RegistrationCheckoutForm.jsx"
 
 
 export {
+  NursingAppointmentStepOne,
   NursingAppointmentForm,
   UserPaymentForm,
   RegistrationCheckoutForm,
