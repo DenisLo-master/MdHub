@@ -70,11 +70,17 @@ const Navbar = () => {
           </ul>
           {
             token ? (
-              <div className="lg:pr-24">
+              <div className="lg:pr-24 flex gap-x-4 items-center">
+                <Link to="/dashboard">
+                  <button
+                    className="rounded-full px-9 py-1 border border-primary text-white bg-primary hover:bg-transparent hover:text-primary transition-all ease-in-out duration-300">
+                    Dashboard
+                  </button>
+                </Link>
                 <button
-                onClick={handleSignout}
+                  onClick={handleSignout}
                   className="rounded-full px-9 py-1 border border-primary text-white bg-primary hover:bg-transparent hover:text-primary transition-all ease-in-out duration-300">
-                  Signout                 
+                  Signout
                 </button>
               </div>
             ):
