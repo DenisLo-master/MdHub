@@ -1,4 +1,9 @@
 import {
+  ForYouNav01,
+  ForYouNav02,
+  ForYouNav03,
+  ForYouNav04,
+  ForYouNav05,
   HowItWorksMobile01,
   HowItWorksMobile02,
   HowItWorksMobile03,
@@ -26,22 +31,27 @@ export const nursingAndHomecareServices = [
 export const forYouNavDetails = [
   {
     id: 1,
+    image: ForYouNav01,
     title: "Medical Laboratory"
   },
   {
     id: 2,
+    image: ForYouNav02,
     title: "Virus Testing"
   },
   {
     id: 3,
+    image: ForYouNav03,
     title: "Online Pharmacist & Delivery"
   },
   {
     id: 4,
+    image: ForYouNav04,
     title: "Virtual Doctor"
   },
   {
     id: 5,
+    image: ForYouNav05,
     title: "Nursing & Homecare"
   },
 ]
