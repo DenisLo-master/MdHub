@@ -65,7 +65,7 @@ const Navbar = () => {
                 <RxDotFilled className="absolute text-primary -left-5 top-[6px]" />
               }
               <RxDotFilled className="hidden group-hover:block absolute text-primary -left-5 top-[6px]" />
-              <Link to="/pricing">rates</Link>
+              <Link to="/rates">rates</Link>
             </li>
           </ul>
           {
