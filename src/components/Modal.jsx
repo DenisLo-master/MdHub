@@ -4,8 +4,8 @@ import { MdClose } from 'react-icons/md'
 const Modal = ({ showModal, setShowModal, children, title }) => {
   return (
     <div>
-      {showModal ? (
-        <>
+      {showModal && (
+        <div>
           <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
@@ -42,8 +42,8 @@ const Modal = ({ showModal, setShowModal, children, title }) => {
             </div>
           </div>
           <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
-        </>
-      ) : null}
+        </div>
+      )}
     </div>
   );
 }
