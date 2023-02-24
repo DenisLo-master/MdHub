@@ -44,10 +44,13 @@ const CorporateOverview = () => {
             </p>
             <div className="flex justify-center gap-x-12">
               <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-                5-10 Employees
+                10-50 Employees
               </button>
               <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-                10+ Employees
+                51-100 Employees
+              </button>
+              <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+                101+ Employees
               </button>
             </div>
           </div>

@@ -61,7 +61,7 @@ const Pricing = () => {
 
         <div className="text-center text-xl font-body flex flex-col items-center pt-10 pb-16">
           <p>One time access to virtual doctor or nurse. </p>
-          <h2 className="font-semibold pt-2 pb-5">$54.99/month*</h2>
+          <h2 className="font-semibold pt-2 pb-5">$99.99/month*</h2>
           <button className={`font-main rounded-full text-lg group hover:ring-1 hover:ring-primary px-[2.2rem] py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
             Get Started
           </button>
