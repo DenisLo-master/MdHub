@@ -4,9 +4,9 @@ import {
   CorporateOverview02,
   CorporateOverview03,
   CorporateOverview04,
-  Membership04,
-  Membership05,
-  Membership06
+  CorporateBenefits01,
+  CorporateBenefits02,
+  CorporateBenefits03
 } from '../../assets'
 
 const CorporateOverview = () => {
@@ -57,7 +57,7 @@ const CorporateOverview = () => {
           <h2 className="text-4xl">Lorem ipsum dolor sit.</h2>
           <div className="flex justify-between">
             <article className="flex flex-col items-center justify-center space-y-1">
-              <img className="w-24" src={Membership04} alt="Medical Care" />
+              <img className="w-24" src={CorporateBenefits01} alt="Medical Care" />
               <div className="space-y-2">
                 <h2 className="text-xl">Lorem ipsum dolor sit.</h2>
                 <p className="font-body font-thin text-sm w-full max-w-[360px] leading-[1.4rem]">
@@ -69,7 +69,7 @@ const CorporateOverview = () => {
               </div>
             </article>
             <article className="flex flex-col items-center justify-center space-y-1">
-              <img className="w-24" src={Membership05} alt="Medical Care" />
+              <img className="w-24" src={CorporateBenefits02} alt="Medical Care" />
               <div className="space-y-2">
                 <h2 className="text-xl">Lorem ipsum dolor sit.</h2>
                 <p className="font-body font-thin text-sm w-full max-w-[360px] leading-[1.4rem]">
@@ -81,7 +81,7 @@ const CorporateOverview = () => {
               </div>
             </article>
             <article className="flex flex-col items-center justify-center space-y-1">
-              <img className="w-24" src={Membership06} alt="Medical Care" />
+              <img className="w-24" src={CorporateBenefits03} alt="Medical Care" />
               <div className="space-y-2">
                 <h2 className="text-xl">Lorem ipsum dolor sit.</h2>
                 <p className="font-body font-thin text-sm w-full max-w-[360px] leading-[1.4rem]">
