@@ -97,9 +97,15 @@ import OnlinePharmacyHowItWorks04 from './online-pharmacy-how-it-works-04.png'
 import NursingAndHomecareHowItWorks01 from './nursing-and-homecare-how-it-works-01.png'
 import NursingAndHomecareHowItWorks02 from './nursing-and-homecare-how-it-works-02.png'
 import NursingAndHomecareHowItWorks03 from './nursing-and-homecare-how-it-works-03.png'
+import CorporateBenefits01 from './corporate-benefits-01.png'
+import CorporateBenefits02 from './corporate-benefits-02.png'
+import CorporateBenefits03 from './corporate-benefits-03.png'
 
 
 export {
+  CorporateBenefits01,
+  CorporateBenefits02,
+  CorporateBenefits03,
   NursingAndHomecareHowItWorks01,
   NursingAndHomecareHowItWorks02,
   NursingAndHomecareHowItWorks03,
