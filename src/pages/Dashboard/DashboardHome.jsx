@@ -3,11 +3,12 @@ import RotatingEllipse from '../../components/RotatingEllipse'
 import { registerationStore } from '../../store/registerationStore'
 import { TiClipboard } from 'react-icons/ti'
 import toast from 'react-hot-toast'
-import { NursingModal, LabTestingModal } from '../../sections'
+import { NursingModal, LabTestingModal, OnlinePharmacyModal } from '../../sections'
 
 const DashboardHome = () => {
   const setShowLabTestingModal = registerationStore(state => state.setShowLabTestingModal)
   const setShowNursingModal = registerationStore(state => state.setShowNursingModal)
+  const setShowOnlinePharmacyModal = registerationStore(state => state.setShowOnlinePharmacyModal)
   const userInfo = registerationStore(state => state.userInfo)
 
   const handleCopy = () => {
@@ -28,19 +29,17 @@ const DashboardHome = () => {
           <div className="flex gap-y-4 items-center md:items-start flex-col-reverse md:flex-row md:gap-x-6">
             <div className="flex flex-col gap-y-3 text-primary">
               <button className={`max-w-[230px] rounded-full text-lg group hover:ring-1 hover:ring-primary px-4 py-2 border   border-primary bg-transparent`}>
-                <a href="https://www.mdhub.ca/virtual-doctors/" target="_blank">
+                <a href="https://www.getmaple.ca/mdhub" target="_blank">
                   Virtual Doctor
                 </a>
               </button>
-              <button className={`max-w-[230px] rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border   border-primary bg-transparent`}>
-                <a href="https://www.mdhub.ca/virtual-doctors/" target="_blank">
+              <button className={`max-w-[230px] rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
+                <a href="https://www.getmaple.ca/mdhub" target="_blank">
                   Mental Health
                 </a>
               </button>
-              <button className={`max-w-[230px] rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
-                <a href="https://www.medzy.ca/?lang=en&gclid=CjwKCAjwg5uZBhATEiwAhhRLHiFNqYb2OAmyskipJG5oXwV_AqAFhiSCw0b2_se5P9l47kNIwULOyRoC03AQAvD_BwE" target="_blank">
-                  Online Pharmacy
-                </a>
+              <button onClick={() => setShowOnlinePharmacyModal(true)} className={`max-w-[230px] rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
+                Online Pharmacy
               </button>
               <button onClick={() => setShowLabTestingModal(true)} className={`max-w-[230px] rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
                 Diagnostics
@@ -75,7 +74,7 @@ const DashboardHome = () => {
       </section>
       <NursingModal />
       <LabTestingModal />
-
+      <OnlinePharmacyModal />
     </header>
   )
 }
