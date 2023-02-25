@@ -1,12 +1,9 @@
 import React, { useState } from 'react'
-import { BiCaretDown } from 'react-icons/bi';
+import { BiCaretDown } from 'react-icons/bi'
+import DatePicker from 'react-date-picker'
+import 'react-date-picker/dist/entry.nostyle'
 
-const NursingAppointmentStepTwo = () => {
-  const [time, setTime] = useState("")
-  const handleTimeChange = (event) => {
-    setTime(event.target.value);
-  }
-
+const NursingAppointmentStepTwo = ({ time, selectedDate, updateFields, address }) => {
   const generateOptions = () => {
     const options = [];
 
@@ -27,16 +24,15 @@ const NursingAppointmentStepTwo = () => {
   };
   return (
     <div className="space-y-5">
-      <p className="text-xl pb-4">Please select date and time.</p>
+      <p className="text-xl pb-2">Please select date and time.</p>
       <div className="w-full flex">
-        <input
-          required
-          className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
-          type="date"
-          name="date"
-          placeholder="Select Date"
+        <DatePicker
+          className="flex-1 bg-transparent appearance-none px-4 py-2 border rounded-lg outline-none focus:ring ring-primary"
+          value={selectedDate}
+          onChange={(date) => updateFields({ selectedDate: date })}
+          format="dd-MM-y"
+          placeholderText="Select a date"
         />
-
       </div>
       <div className="w-full flex relative">
         <BiCaretDown className="text-2xl absolute right-3 pointer-events-none top-2" />
@@ -44,13 +40,22 @@ const NursingAppointmentStepTwo = () => {
           required
           className="flex-1 bg-transparent appearance-none px-4 py-2 border rounded-lg outline-none focus:ring ring-primary"
           placeholder="select time"
-          id="time"
-          name="time"
-          value={time} onChange={handleTimeChange}
+          value={time}
+          onChange={(e) => updateFields({ time: e.target.value })}
         >
           <option value="">Select Time</option>
           {generateOptions()}
         </select>
+      </div>
+      <div className="w-full flex">
+        <input
+          value={address}
+          onChange={(e) => updateFields({ address: e.target.value })}
+          className="flex-1 bg-transparent appearance-none px-4 py-2 border rounded-lg outline-none focus:ring ring-primary"
+          required
+          placeholder="Address"
+          type="text"
+        />
       </div>
     </div>
   )

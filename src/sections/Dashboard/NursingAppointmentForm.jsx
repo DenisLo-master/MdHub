@@ -6,17 +6,32 @@ import { useMultiStepForm } from '../../hooks/useMultiStepForm'
 import { NursingAppointmentStepOne, NursingAppointmentStepTwo, NursingAppointmentStepThree } from "../../sections"
 import { SVGLoaderCircles } from '../../assets'
 
+const INITIAL_DATA = {
+  serviceName: "",
+  time: "",
+  address: "",
+  selectedDate: new Date(),
+}
+
 
 const NursingAppointmentForm = () => {
+  const [nursingFormData, setNursingFormData] = useState(INITIAL_DATA)
   const [isLoading, setIsLoading] = useState(false)
   const nursingFormRef = useRef(null)
   const setShowNursingModal = registerationStore(state => state.setShowNursingModal)
+  const userInfo = registerationStore(state => state.userInfo)
   const stripe = useStripe();
   const elements = useElements();
 
+  const updateFields = (fields) => {
+    setNursingFormData(prev => {
+      return { ...prev, ...fields }
+    })
+  }
+
   const { steps, currentStepIndex, step, isFirstStep, isLastStep, next, back } = useMultiStepForm([
-    <NursingAppointmentStepOne />,
-    <NursingAppointmentStepTwo />,
+    <NursingAppointmentStepOne {...nursingFormData} updateFields={updateFields} />,
+    <NursingAppointmentStepTwo {...nursingFormData} updateFields={updateFields} />,
     <NursingAppointmentStepThree />
   ])
 
@@ -27,15 +42,13 @@ const NursingAppointmentForm = () => {
       return;
     }
     setIsLoading(true)
-    const form = new FormData(e.target)
-    const appointmentFormData = Object.fromEntries(form)
     try {
       const { error, paymentMethod } = await stripe.createPaymentMethod({
         type: 'card',
         card: elements.getElement(CardElement),
       });
       if (!error) {
-        const response = await fetch('https://mdhub-backend.onrender.com//api/v1/appointments', {
+        const response = await fetch('http://localhost:8080/api/v1/appointments', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -43,14 +56,17 @@ const NursingAppointmentForm = () => {
           body: JSON.stringify({
             amount: 14900,
             paymentMethod: paymentMethod.id,
-            time,
-            ...appointmentFormData
+            customerId: userInfo?.stripeCustomerId,
+            userId: userInfo?._id,
+            ...nursingFormData
           })
         })
         await response.json()
-        setIsLoading(false)
-        nursingFormRef.current.reset()
-        toast.success("Thanks for booking! Our Staff will contact you within 24hr to confirm all details of your booking. Additional charges may be required according to the service, time and distance of travel necessary", { id: "Appointment Success" })
+        if (response.ok) {
+          setIsLoading(false)
+          nursingFormRef.current.reset()
+          toast.success("Thanks for booking! Our Staff will contact you within 24hr to confirm all details of your booking. Additional charges may be required according to the service, time and distance of travel necessary", { id: "Appointment Success" })
+        }
       }
       setShowNursingModal(false)
     } catch (error) {
@@ -75,12 +91,12 @@ const NursingAppointmentForm = () => {
         }
         <button
           type="submit"
-          className={`rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary  py-3 border flex justify-center items-center space-x-2  border-primary bg-primary text-white`}
+          className="rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary  py-3 border flex justify-center items-center space-x-2  border-primary bg-primary text-white"
         >
           {
             isLastStep ?
               isLoading ?
-                <SVGLoaderCircles className="text-primary w-4 h-4" /> :
+                <SVGLoaderCircles className="text-white w-4 h-4" /> :
                 <span>Finish</span> :
               <span>Next</span>
           }
