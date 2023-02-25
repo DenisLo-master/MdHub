@@ -14,7 +14,12 @@ const NursingModal = () => {
   const setShowNursingModal = registerationStore(state => state.setShowNursingModal)
 
   return (
-    <Modal key="Nursing Modal" title="Nursing & Healthcare" showModal={showNursingModal} setShowModal={setShowNursingModal}>
+    <Modal
+      key="nursing and homecare services"
+      title="nursing and homecare services"
+      showModal={showNursingModal}
+      setShowModal={setShowNursingModal}
+    >
       <section section className="bg-[#F9F9F9] p-6" >
         <div className="flex gap-x-4 w-full">
           <Elements stripe={stripePromise}>
