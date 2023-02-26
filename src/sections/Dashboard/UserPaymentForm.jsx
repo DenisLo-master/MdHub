@@ -51,7 +51,12 @@ const UserPaymentForm = () => {
       <CardElement
         className="rounded-full px-4 py-3 ring-1 focus:ring-primary"
       />
-      <button type="submit">Update</button>
+      <button
+        className="mt-5 rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary  py-3 border flex justify-center items-center space-x-2  border-primary bg-primary text-white"
+        type="submit"
+      >
+        Update
+      </button>
     </form>
   )
 }
