@@ -2,6 +2,7 @@ import React from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
 import Button from '../../components/Button'
 import { Hero } from '../../assets'
+import { Link } from 'react-router-dom'
 
 const HomeHeroSection = () => {
   return (
@@ -18,12 +19,16 @@ const HomeHeroSection = () => {
             From meeting a doctor to ordering a perscription get the 360 healthcare you need all in one place.
           </p>
           <div className='flex justify-center md:justify-start space-x-2 md:space-x-6 font-main text-gray-700'>
-            <Button wide>
-              <span>See A Doctor</span> <FiArrowUpRight className="md:text-lg transition-colors ease-out duration-150 group-hover:text-primary" />
-            </Button>
-            <Button wide>
-              <span>Sign Up</span> <FiArrowUpRight className="md:text-lg transition-colors ease-out duration-150 group-hover:text-primary" />
-            </Button>
+            <Link to="services">
+              <Button wide>
+                <span>See A Doctor</span> <FiArrowUpRight className="md:text-lg transition-colors ease-out duration-150 group-hover:text-primary" />
+              </Button>
+            </Link>
+            <Link to="/register">
+              <Button wide>
+                <span>Sign Up</span> <FiArrowUpRight className="md:text-lg transition-colors ease-out duration-150 group-hover:text-primary" />
+              </Button>
+            </Link>
           </div>
         </article>
         <article data-aos="fade-up" className="w-full max-w-[630px] flex justify-center">
