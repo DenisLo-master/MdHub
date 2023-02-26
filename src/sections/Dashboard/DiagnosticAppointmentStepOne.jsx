@@ -1,8 +1,10 @@
 import React from 'react'
 import { toast } from 'react-hot-toast'
 import { TiClipboard, TiTickOutline, TiTimesOutline } from 'react-icons/ti'
+import { registerationStore } from '../../store/registerationStore'
 
 const DiagnosticAppointmentStepOne = () => {
+  const userInfo = registerationStore(state => state.userInfo)
   const handleCopy = () => {
     navigator.clipboard.writeText(userInfo.loginCode)
     toast.success("Copied to Clipboard", { id: "clipboard" })
@@ -12,7 +14,7 @@ const DiagnosticAppointmentStepOne = () => {
       <article className="w-full max-w-[330px] text-dark text-center space-y-4">
         <button
           type="submit"
-          className="w-full text-center bg-primary text-white py-3 rounded-3xl"
+          className="w-full flex justify-center items-center gap-x-3 text-center bg-primary text-white py-3 rounded-3xl"
         >
           <TiTickOutline />
           <span>
