@@ -10,7 +10,7 @@ const INITIAL_DATA = {
   serviceName: "",
   time: "",
   address: "",
-  selectedDate: new Date(),
+  selectedDate: "",
 }
 
 
@@ -65,7 +65,7 @@ const NursingAppointmentForm = () => {
         if (response.ok) {
           setIsLoading(false)
           nursingFormRef.current.reset()
-          toast.success("Thanks for booking! Our Staff will contact you within 24hr to confirm all details of your booking. Additional charges may be required according to the service, time and distance of travel necessary", { id: "Appointment Success" })
+          toast.success("Thanks for booking! Our Staff will contact you within 24hr to confirm all details of your booking. Additional charges may be required according to the service, time and distance of travel necessary", { id: "Appointment Success", duration: '6000' })
         }
       }
       setShowNursingModal(false)
