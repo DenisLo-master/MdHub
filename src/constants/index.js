@@ -4,6 +4,10 @@ import {
   ForYouNav03,
   ForYouNav04,
   ForYouNav05,
+  HowItWorks01,
+  HowItWorks02,
+  HowItWorks03,
+  HowItWorks04,
   HowItWorksMobile01,
   HowItWorksMobile02,
   HowItWorksMobile03,
@@ -60,21 +64,25 @@ export const howItWorksData = [
   {
     id: 1,
     title: "Step 1",
+    image: HowItWorks01,
     description: "Describe your symptoms.",
   },
   {
     id: 2,
     title: "Step 2",
+    image: HowItWorks02,
     description: "Chat with a medical professional.",
   },
   {
     id: 3,
     title: "Step 3",
+    image: HowItWorks03,
     description: "Get a diagnosis, prescription, and if required, a lab requisition.",
   },
   {
     id: 4,
     title: "Step 4",
+    image: HowItWorks04,
     description: "Utilize our services to get treatment, online pharmacy, mobile nurse, or lab testing.",
   }
 ]
