@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { OkIcon } from '../../assets'
+import { Link } from 'react-router-dom'
 
 const Pricing = () => {
   const [selectedPackage, setSelectedPackage] = useState("yearly")
@@ -36,9 +37,11 @@ const Pricing = () => {
                 {selectedPackage === "monthly" ? "*3 months minimum" : "Unlimited usage"}
               </p>
             </div>
-            <button className={`rounded-full text-lg group hover:ring-1 hover:ring-primary px-[2.2rem] py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-              Get Started
-            </button>
+            <Link to="/register">
+              <button className={`rounded-full text-lg group hover:ring-1 hover:ring-primary px-[2.2rem] py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+                Get Started
+              </button>
+            </Link>
           </article>
           <article className="w-full max-w-[500px] px-8 pt-8 pb-16 border-[0.25px] rounded-3xl shadow-cardService">
             <h2 className="text-4xl">
@@ -53,18 +56,22 @@ const Pricing = () => {
                 {selectedPackage === "monthly" ? "*3 months minimum" : "Unlimited usage"}
               </p>
             </div>
-            <button className={`rounded-full text-lg group hover:ring-1 hover:ring-primary px-[2.2rem] py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-              Get Started
-            </button>
+            <Link to="/register">
+              <button className={`rounded-full text-lg group hover:ring-1 hover:ring-primary px-[2.2rem] py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+                Get Started
+              </button>
+            </Link>
           </article>
         </div>
 
         <div className="text-center text-xl font-body flex flex-col items-center pt-10 pb-16">
           <p>One time access to virtual doctor or nurse. </p>
           <h2 className="font-semibold pt-2 pb-5">$99.99/month*</h2>
-          <button className={`font-main rounded-full text-lg group hover:ring-1 hover:ring-primary px-[2.2rem] py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-            Get Started
-          </button>
+          <Link to="/register">
+            <button className={`font-main rounded-full text-lg group hover:ring-1 hover:ring-primary px-[2.2rem] py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+              Get Started
+            </button>
+          </Link>
         </div>
 
         <section className="space-y-16">
@@ -73,9 +80,11 @@ const Pricing = () => {
             <p className="font-body text-lg py-5">
               Contact our corporate sales team for attractive benefits that keep your company running smoothly.
             </p>
-            <button className={`font-main rounded-full text-lg group hover:ring-1 hover:ring-primary px-[2.2rem] py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-              Contact Now
-            </button>
+            <Link to="/contact">
+              <button className={`font-main rounded-full text-lg group hover:ring-1 hover:ring-primary px-[2.2rem] py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+                Contact Now
+              </button>
+            </Link>
           </div>
 
           <div className="w-full max-w-[1100px] mx-auto py-8 px-12 border-[0.25px] rounded-3xl shadow-cardService space-y-7 text-xl">
