@@ -3,6 +3,7 @@ import Logo from '../assets/logo-white.png'
 import Facebook from '../assets/facebook.png'
 import Linkedin from '../assets/linkedin.png'
 import Twitter from '../assets/twitter.png'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -23,13 +24,41 @@ const Footer = () => {
         <article className="space-y-6">
           <h2 className="font-main text-2xl">Useful Links</h2>
           <ul className="font-body text-sm">
-            <li>Services</li>
-            <li>Contact</li>
-            <li>About Us</li>
-            <li>Memberships</li>
-            <li>Virtual Doctor</li>
-            <li>Online Pharmacy</li>
-            <li>Nursing & Homecare</li>
+            <li>
+              <Link to="/services">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact">
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link to="/about">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/rates">
+                Memberships
+              </Link>
+            </li>
+            <li>
+              <Link to="/services/virtual-doctor">
+                Virtual Doctor
+              </Link>
+            </li>
+            <li>
+              <Link to="/services/online-pharmacy">
+                Online Pharmacy
+              </Link>
+            </li>
+            <li>
+              <Link to="/services/nursing-homecare">
+                Nursing & Homecare
+              </Link>
+            </li>
           </ul>
         </article>
 
