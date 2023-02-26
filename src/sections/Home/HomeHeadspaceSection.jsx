@@ -1,5 +1,6 @@
 import React from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 import { MentalHealth } from '../../assets'
 import Button from '../../components/Button'
 
@@ -45,9 +46,11 @@ const HomeHeadspaceSection = () => {
             </ul>
           </div>
           <div className="px-8">
-            <Button>
-              <span className="font-main text-xl">Check out the Headspace app</span> <FiArrowUpRight className="md:text-lg transition-colors ease-out duration-150 group-hover:text-primary" />
-            </Button>
+            <Link to="services">
+              <Button>
+                <span className="font-main text-xl">Check out the Headspace app</span> <FiArrowUpRight className="md:text-lg transition-colors ease-out duration-150 group-hover:text-primary" />
+              </Button>
+            </Link>
           </div>
         </section>
       </article>
