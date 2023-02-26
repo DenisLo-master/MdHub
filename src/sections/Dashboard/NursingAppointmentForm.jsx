@@ -48,7 +48,7 @@ const NursingAppointmentForm = () => {
         card: elements.getElement(CardElement),
       });
       if (!error) {
-        const response = await fetch('http://localhost:8080/api/v1/appointments', {
+        const response = await fetch('https://mdhub-backend.onrender.com/api/v1/appointments', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
