@@ -1,5 +1,6 @@
 import React from 'react'
 import { diagnosisHowItWorksData } from '../../constants'
+import { Link } from 'react-router-dom'
 
 const ServicesDiagnostics = () => {
   return (
@@ -18,9 +19,11 @@ const ServicesDiagnostics = () => {
                 Our certified partner labs can quickly process over 300 different screenings and assays in order to provide a comprehensive health assessment.
               </p>
             </div>
-            <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border border-white">
-              Sign Up Today
-            </button>
+            <Link to="register">
+              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border border-white">
+                Sign Up Today
+              </button>
+            </Link>
           </article>
         </div>
       </header>
@@ -61,9 +64,11 @@ const ServicesDiagnostics = () => {
             ))
           }
           <div className="md:pl-24">
-            <button className="rounded-full w-[240px] text-lg flex justify-center py-2 border border-primary">
-              Sign Up Today
-            </button>
+            <Link to="/register">
+              <button className="rounded-full w-[240px] text-lg flex justify-center py-2 border border-primary">
+                Sign Up Today
+              </button>
+            </Link>
           </div>
         </div>
       </section>
