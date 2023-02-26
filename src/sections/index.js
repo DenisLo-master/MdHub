@@ -28,6 +28,7 @@ import NursingAppointmentStepTwo from "./Dashboard/NursingAppointmentStepTwo";
 import NursingAppointmentStepThree from "./Dashboard/NursingAppointmentStepThree";
 import DiagnosticAppointmentStepOne from "./Dashboard/DiagnosticAppointmentStepOne";
 import DiagnosticAppointmentStepTwo from "./Dashboard/DiagnosticAppointmentStepTwo";
+import DiagnosticAppointmentStepThree from "./Dashboard/DiagnosticAppointmentStepThree";
 import DiagnosticsAppointmentForm from "./Dashboard/DiagnosticsAppointmentForm";
 import HomeUserSatisfactionSection from "./Home/HomeUserSatisfactionSection";
 import RegistrationCheckoutForm from "./Signup/RegistrationCheckoutForm.jsx"
@@ -35,6 +36,7 @@ import RegistrationCheckoutForm from "./Signup/RegistrationCheckoutForm.jsx"
 
 
 export {
+  DiagnosticAppointmentStepThree,
   DiagnosticsAppointmentForm,
   DiagnosticAppointmentStepOne,
   DiagnosticAppointmentStepTwo,
