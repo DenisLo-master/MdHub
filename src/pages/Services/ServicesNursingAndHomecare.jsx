@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { NursingAndHomecareBanner } from '../../assets'
 import { nursingAndHomecareServices, nursingAndHomecareHowItWorksData } from '../../constants'
 
@@ -19,9 +20,11 @@ const ServicesNursingAndHomecare = () => {
                 Whether it's medical services or homecare, we can help you with most of your needs.
               </p>
             </div>
-            <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border border-white">
-              Sign Up Today
-            </button>
+            <Link to="/register">
+              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border border-white">
+                Sign Up Today
+              </button>
+            </Link>
           </article>
           <img className="absolute right-0 top-0 h-full" src={NursingAndHomecareBanner} alt="Nursing and Homecare" />
         </div>
