@@ -1,6 +1,7 @@
 import React from 'react'
 import { OnlinePharmacyBanner } from '../../assets'
 import { onlinePharmacyHowItWorksData } from '../../constants'
+import { Link } from 'react-router-dom'
 
 const ServicesOnlinePharmacy = () => {
   return (
@@ -27,9 +28,11 @@ const ServicesOnlinePharmacy = () => {
                 <li>24/7 emergency service</li>
               </ul>
             </div>
-            <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border border-white">
-              Sign Up Today
-            </button>
+            <Link to="/register">
+              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border border-white">
+                Sign Up Today
+              </button>
+            </Link>
           </article>
           <img className="absolute right-0 top-16" src={OnlinePharmacyBanner} alt="virtual doctor" />
         </div>
@@ -63,9 +66,11 @@ const ServicesOnlinePharmacy = () => {
               )))
             }
             <div className="md:pl-28">
-              <button className="rounded-full w-[240px] text-lg flex justify-center py-2 border border-primary">
-                Sign Up Today
-              </button>
+              <Link to="/register">
+                <button className="rounded-full w-[240px] text-lg flex justify-center py-2 border border-primary">
+                  Sign Up Today
+                </button>
+              </Link>
             </div>
           </section>
         </div>
@@ -95,9 +100,11 @@ const ServicesOnlinePharmacy = () => {
             <p className="text-3xl w-full font-body font-thin max-w-[450px]">
               Get top-tier service at a great price. When you use our online pharmacy, you only pay the amount that isn't covered by your insurance.
             </p>
-            <button className="rounded-full w-[240px] text-lg flex justify-center py-2 border border-primary">
-              Sign Up Today
-            </button>
+            <Link to="register">
+              <button className="rounded-full w-[240px] text-lg flex justify-center py-2 border border-primary">
+                Sign Up Today
+              </button>
+            </Link>
           </article>
         </section>
       </section>
