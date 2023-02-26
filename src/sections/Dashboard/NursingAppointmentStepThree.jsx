@@ -1,5 +1,5 @@
-import { CardElement } from '@stripe/react-stripe-js'
 import React from 'react'
+import { CardElement } from '@stripe/react-stripe-js'
 
 const NursingAppointmentStepThree = () => {
   return (
