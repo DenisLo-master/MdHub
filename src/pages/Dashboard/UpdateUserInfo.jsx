@@ -80,11 +80,13 @@ const UpdateUserInfo = () => {
           <h2 className="text-4xl">Edit Info</h2>
           <h2 className="text-sm">{userInfo.isChildUser ? "Child Account" : "Account Admin"}</h2>
         </div>
-        <div className="flex items-center gap-x-4">
+        <div className="flex items-center gap-x-4 pb-3">
           <h2>
             {`Card Info: **** **** **** ${paymentInfo}`}
           </h2>
-          <button onClick={() => setShowPaymentElement(true)}>
+          <button
+            onClick={() => setShowPaymentElement(true)}
+          >
             <BsPencilSquare />
           </button>
         </div>
