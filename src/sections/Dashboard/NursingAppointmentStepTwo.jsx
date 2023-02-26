@@ -25,33 +25,25 @@ const NursingAppointmentStepTwo = ({ time, selectedDate, updateFields, address }
   return (
     <div className="space-y-5">
       <p className="text-xl pb-2">Please select date and time.</p>
-      <div className="w-full flex">
-        <DatePicker
-          className="flex-1 bg-transparent appearance-none px-4 py-2 border rounded-lg outline-none focus:ring ring-primary"
+      <div className="flex space-x-8">
+        <input 
           value={selectedDate}
-          onChange={(date) => updateFields({ selectedDate: date })}
-          format="dd-MM-y"
-          placeholderText="Select a date"
+          onChange={({ target }) => updateFields({ selectedDate: target.value })}
+          className="px-4 py-2 flex-1 border rounded-lg bg-[#f9f9f9] outline-none focus:ring ring-primary" type="text"
+          placeholder="Preferred Date (DD-MM-YYY)" 
         />
-      </div>
-      <div className="w-full flex relative">
-        <BiCaretDown className="text-2xl absolute right-3 pointer-events-none top-2" />
-        <select
-          required
-          className="flex-1 bg-transparent appearance-none px-4 py-2 border rounded-lg outline-none focus:ring ring-primary"
-          placeholder="select time"
+        <input 
           value={time}
-          onChange={(e) => updateFields({ time: e.target.value })}
-        >
-          <option value="">Select Time</option>
-          {generateOptions()}
-        </select>
+          onChange={({ target }) => updateFields({ time: target.value })}
+          className="px-4 py-2 flex-1 border rounded-lg bg-[#f9f9f9] outline-none focus:ring ring-primary" type="text"
+          placeholder="Preferred Time"
+        />
       </div>
       <div className="w-full flex">
         <input
           value={address}
           onChange={(e) => updateFields({ address: e.target.value })}
-          className="flex-1 bg-transparent appearance-none px-4 py-2 border rounded-lg outline-none focus:ring ring-primary"
+          className="px-4 py-2 flex-1 border rounded-lg bg-[#f9f9f9] outline-none focus:ring ring-primary"
           required
           placeholder="Address"
           type="text"
