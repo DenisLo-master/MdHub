@@ -11,6 +11,7 @@ import {
   OkIcon,
   ArrowRight
 } from '../../assets'
+import { Link } from 'react-router-dom'
 
 const ForBabies = () => {
   return (
@@ -27,9 +28,11 @@ const ForBabies = () => {
             <p className="max-w-[480px] font-body font-light py-6">
               Lorem ipsum dolor sit amet consectetur. Rhoncus sed imperdiet mauris facilisi at imperdiet hendrerit enim. Sed fames pharetra sagittis pellentesque ullamcorper amet dolor pellentesque. Amet enim dictum ut et eu nulla vitae cras varius. Consectetur aliquet cras sit aliquam a faucibus at. Tortor nunc amet vel ipsum congue. Amet in tristique vitae ultrices mi tempus egestas vitae ac. Eget euismod vel etiam elementum laoreet etiam amet viverra. Blandit scelerisque elementum euismod nullam massa ullamcorper tellus donec amet. Pretium tincidunt hendrerit morbi id pellentesque ac facilisis. Ut nec nulla dignissim convallis sit sit donec. Et nullam sed porttitor ac.
             </p>
-            <button className={`rounded-full mx-auto md:mx-0 text-lg group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent shadow-cardService`}>
-              Sign Up Your Child Today
-            </button>
+            <Link to="/register">
+              <button className={`rounded-full mx-auto md:mx-0 text-lg group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent shadow-cardService`}>
+                Sign Up Your Child Today
+              </button>
+            </Link>
           </div>
         </article>
 
@@ -55,9 +58,11 @@ const ForBabies = () => {
           <p className="font-body py-4 max-w-[680px]">
             Lorem ipsum dolor sit amet consectetur. Dictum nunc proin nibh mauris suspendisse adipiscing risus adipiscing. Semper at interdum pellentesque adipiscing. Amet donec morbi egestas diam nam. Proin senectus ut proin id sed nec.
           </p>
-          <button className={`mx-auto md:mx-0 rounded-full text-lg group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent shadow-cardService`}>
-            Sign Up Your Child Today
-          </button>
+          <Link to="/register">
+            <button className={`mx-auto md:mx-0 rounded-full text-lg group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent shadow-cardService`}>
+              Sign Up Your Child Today
+            </button>
+          </Link>
         </article>
 
         <article className="relative w-full py-8 px-12 border-[0.25px] rounded-3xl shadow-cardService space-y-7 text-lg">
@@ -136,9 +141,11 @@ const ForBabies = () => {
               </li>
             </ul>
           </div>
-          <button className={`rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 md:px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent shadow-cardService`}>
-            View Membership Plans
-          </button>
+          <Link className="block" to="/rates">
+            <button className={`rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 md:px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent shadow-cardService`}>
+              View Membership Plans
+            </button>
+          </Link>
         </article>
 
         <article className="pb-10">
