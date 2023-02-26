@@ -1,5 +1,6 @@
 import React from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 import {
   NeverWaitForDoctorAgainImage,
 } from '../../assets'
@@ -32,12 +33,13 @@ const HomeExploreSolutionsSection = () => {
           >
             Spend more time with the people you love and less time in waiting rooms with MDHub.
           </p>
-          <h2
+          <Link
+            to="/services"
             className="font-main flex items-center space-x-2"
           >
             <span>Explore our 360 solutions.</span>
             <FiArrowUpRight />
-          </h2>
+          </Link>
         </div>
       </article>
     </section>
