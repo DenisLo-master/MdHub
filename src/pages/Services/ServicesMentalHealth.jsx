@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {
   HearBrainImage,
   MeditationImage,
@@ -21,9 +22,11 @@ const ServicesMentalHealth = () => {
             <p className="font-body text-lg max-w-lg py-3">
               In today’s faced-paced, modern and ultra-connected world, your mental health is more important than ever. With MDHUB, you can easily get mental health support when you need it most.
             </p>
-            <button className="rounded-full w-[240px] text-lg flex justify-center py-2 border border-white">
-              Sign Up Today
-            </button>
+            <Link to="/register">
+              <button className="rounded-full w-[240px] text-lg flex justify-center py-2 border border-white">
+                Sign Up Today
+              </button>
+            </Link>
           </article>
           <img src={MentalHealthBanner} alt="mental health" />
         </div>
@@ -60,9 +63,11 @@ const ServicesMentalHealth = () => {
               <div>
                 <h2 className="text-3xl">See a mental health physician</h2>
                 <p className="pt-10 pb-14 max-w-[650px]">Log into your MDHUB account and select “Mental Health Physician” from the menu of specialists. Next, choose a date and time that works for you. Quickly speak with a mental health physician for an initial assessment or follow-up. 30-minute initial appointments are $315, and 30-minute follow-up appointments are $230.</p>
-                <button className="rounded-full text-center w-44 py-1 border border-primary">
-                  Sign Up Today
-                </button>
+                <Link to="/register">
+                  <button className="rounded-full text-center w-44 py-1 border border-primary">
+                    Sign Up Today
+                  </button>
+                </Link>
               </div>
               <img src={ListIconImage} alt="List Icon" />
             </article>
