@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {
   VirtualDoctorBanner,
 } from '../../assets'
@@ -22,9 +23,11 @@ const ServicesVirtualDoctor = () => {
                 Connect with a virtual doctor in minutes, 24/7. Or, book an appointment with a specialist – no referral needed.
               </p>
             </div>
-            <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border border-white">
-              Sign Up Today
-            </button>
+            <Link to="/register">
+              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border border-white">
+                Sign Up Today
+              </button>
+            </Link>
           </article>
           <img className="absolute right-0 top-0 h-full" src={VirtualDoctorBanner} alt="virtual doctor" />
         </div>
@@ -87,9 +90,11 @@ const ServicesVirtualDoctor = () => {
             <div className="bg-primary h-[260px] flex justify-center items-center text-white mb-5">
               <h2 className="text-3xl max-w-[100px] text-center">Sign Up Today</h2>
             </div>
-            <button className="w-full border text-2xl border-dark h-36 flex justify-center items-center">
-              See A Doctor
-            </button>
+            <Link to="/register">
+              <button className="w-full border text-2xl border-dark h-36 flex justify-center items-center">
+                See A Doctor
+              </button>
+            </Link>
           </article>
         </div>
       </section>
@@ -120,9 +125,11 @@ const ServicesVirtualDoctor = () => {
             }
           </section>
           <div className="md:pl-28">
-            <button className="rounded-full text-center w-44 py-1 border border-primary">
-              Sign Up Today
-            </button>
+            <Link to="/register">
+              <button className="rounded-full text-center w-44 py-1 border border-primary">
+                Sign Up Today
+              </button>
+            </Link>
           </div>
         </div>
       </section>
