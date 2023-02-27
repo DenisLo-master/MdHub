@@ -1,4 +1,5 @@
 import React from 'react'
+import { TiPencil } from 'react-icons/ti'
 import { Link } from 'react-router-dom'
 import { registerationStore } from '../../store/registerationStore'
 
@@ -6,7 +7,16 @@ const DashboardUserInfo = () => {
   const userInfo = registerationStore(state => state.userInfo)
   return (
     <section className="flex flex-col md:flex-row gap-y-4 text-center md:text-left gap-x-16 font-body font-light pb-10">
-      <article className="flex-1 space-y-4">
+
+      <article className="flex-1 space-y-4 relative">
+        <div className="absolute right-4 top-8">
+          <Link to="/dashboard/update-user">
+            <button className="flex items-center gap-x-2">
+              <TiPencil className="text-3xl" />
+              <h3>Edit Profile</h3>
+            </button>
+          </Link>
+        </div>
         <h2 className="text-4xl font-main font-normal">Your Information</h2>
         <div className="p-10 bg-[#fbfbfb] rounded-[35px] shadow-cardService space-y-6  border-[0.25px]">
           <article className="bg-white rounded-[48px] shadow-cardService px-8 py-3 border-[0.25px]">
