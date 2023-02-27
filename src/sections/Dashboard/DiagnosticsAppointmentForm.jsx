@@ -13,6 +13,8 @@ const INITIAL_DATA = {
   city: "",
   province: "Quebec",
   selectedDate: new Date(),
+  file: "",
+  postalCode: ""
 }
 
 
