@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import RotatingEllipse from '../../components/RotatingEllipse'
 import { registerationStore } from '../../store/registerationStore'
-import { TiClipboard, TiPencil } from 'react-icons/ti'
+import { TiClipboard } from 'react-icons/ti'
 import toast from 'react-hot-toast'
 import { NursingModal, LabTestingModal, OnlinePharmacyModal } from '../../sections'
 import { Link } from 'react-router-dom'
@@ -25,12 +25,6 @@ const DashboardHome = () => {
         <article className=" pt-24 md:pt-0 space-y-3">
           <div className="flex justify-between items-center">
             <h2 className='text-4xl'>Get Care Now</h2>
-            <Link to="/dashboard/update-user">
-              <button className="flex items-center gap-x-2">
-                <TiPencil className="text-3xl" />
-                <h3>Edit Profile</h3>
-              </button>
-            </Link>
           </div>
           <p className="font-body max-w-[330px]">
             Select a service for the wheel or form below to book a new appointment today!
