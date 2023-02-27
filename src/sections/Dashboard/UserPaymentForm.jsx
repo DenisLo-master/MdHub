@@ -21,7 +21,7 @@ const UserPaymentForm = () => {
         card: elements.getElement(CardElement),
       });
       if (!error) {
-        const response = await fetch(`https://mdhub-backend.onrender.com/api/v1/users/${userInfo._id}`, {
+        const response = await fetch(`https://mdhub-server.onrender.com/api/v1/users/${userInfo._id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

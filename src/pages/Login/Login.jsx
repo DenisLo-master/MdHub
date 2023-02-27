@@ -16,7 +16,7 @@ const Login = () => {
     const form = new FormData(e.target)
     const loginFormData = Object.fromEntries(form)
     try {
-      const response = await fetch('https://mdhub-backend.onrender.com/api/v1/auth/login', {
+      const response = await fetch('https://mdhub-server.onrender.com/api/v1/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
