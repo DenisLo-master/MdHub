@@ -10,7 +10,9 @@ const INITIAL_DATA = {
   serviceName: "",
   time: "",
   address: "",
-  selectedDate: "",
+  city: "",
+  province: "Quebec",
+  selectedDate: new Date(),
 }
 
 
