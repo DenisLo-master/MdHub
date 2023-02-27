@@ -11,6 +11,7 @@ const INITIAL_DATA = {
   time: "",
   address: "",
   city: "",
+  postalCode: "",
   province: "Quebec",
   selectedDate: new Date(),
 }
