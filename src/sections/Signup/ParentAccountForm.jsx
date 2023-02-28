@@ -7,6 +7,7 @@ const ParentAccountForm = () => {
   const addChildAccount = registerationStore(state => state.addChildAccount)
   const handleRegisterationFormDataChange = registerationStore(state => state.handleRegisterationFormDataChange)
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
+  const childForms = registerationStore(state => state.childForms)
   return (
     <div className="py-16 border space-y-4 px-8 shadow-cardService rounded-[35px] text-primary relative">
       <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
@@ -62,10 +63,10 @@ const ParentAccountForm = () => {
       </div>
       {selectedAccountType === "family" && (
         <>
-          <div onClick={addChildAccount} className="absolute bottom-4 left-8 flex gap-x-2 text-gray-600 font-body items-center text-3xl cursor-pointer">
+          <button disabled={childForms.length > 1} onClick={addChildAccount} className="absolute bottom-4 left-8 flex gap-x-2 text-gray-600 font-body items-center text-3xl cursor-pointer">
             <BsPlusCircle />
             <p className='text-xl'>add family member</p>
-          </div>
+          </button>
           <div className="absolute bottom-4 right-8 text-gray-600 font-body">
             <p className='text-xl'>Account Admin</p>
           </div>
@@ -73,10 +74,10 @@ const ParentAccountForm = () => {
       )}
       {selectedAccountType === "corporate" && (
         <>
-          <div onClick={addChildAccount} className="absolute bottom-4 left-8 flex gap-x-2 text-gray-600 font-body items-center text-3xl cursor-pointer">
+          <button disabled={childForms.length > 8} onClick={addChildAccount} className="absolute bottom-4 left-8 flex gap-x-2 text-gray-600 font-body items-center text-3xl cursor-pointer">
             <BsPlusCircle />
             <p className='text-xl'>add employee</p>
-          </div>
+          </button>
           <div className="absolute bottom-4 right-8 text-gray-600 font-body">
             <p className='text-xl'>Account Admin</p>
           </div>
