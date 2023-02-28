@@ -70,7 +70,7 @@ export const registerationStore = create((set) => ({
   setShowNursingModal: (show) => set((state) => ({ showNursingModal: show })),
   addChildAccount: () => set((state) => ({
     childForms: [...state.childForms, {
-      firstName: '', lastName: '', email: '', password: '', phone: ''
+      firstName: '', lastName: '', email: '', password: '', phone: '', male: '', dateOfBirth: new Date(), gender: "male"
     }]
   })),
   handleChildAccountInputChange: (event, index) => set((state) => {
