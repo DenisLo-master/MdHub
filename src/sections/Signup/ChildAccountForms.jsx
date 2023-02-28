@@ -4,7 +4,13 @@ import { BsPlusCircle } from 'react-icons/bs'
 import { MdClose } from 'react-icons/md'
 import { registerationStore } from '../../store/registerationStore'
 import dayjs from "dayjs"
-import isBetween from 'dayjs/plugin/isBetween'
+import Select from 'react-select'
+
+const genderOptions = [
+  { value: 'male', label: 'Male' },
+  { value: 'female', label: 'Female' },
+  { value: 'preferNotToSay', label: 'Prefer not to say' }
+];
 
 const ChildAccountForms = () => {
   const [isOlderThanFourteen, setIsOlderThanFourteen] = useState(true)
@@ -13,6 +19,12 @@ const ChildAccountForms = () => {
   const childForms = registerationStore(state => state.childForms)
   const addChildAccount = registerationStore(state => state.addChildAccount)
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
+  const [selectedGender, setSelectedGender] = useState(null)
+
+  const handleGenderChange = (selectedOption, index) => {
+    handleChildAccountInputChange({ target: { name: "gender", value: selectedOption.value } }, index)
+    setSelectedGender(selectedOption)
+  }
 
   const handleDateChange = (date, index) => {
     // Get current date
@@ -35,6 +47,7 @@ const ChildAccountForms = () => {
     }
     handleChildAccountInputChange({ target: { name: "dateOfBirth", value: date } }, index)
   }
+
   return (
     <div>
       {
@@ -98,55 +111,24 @@ const ChildAccountForms = () => {
             </div>
             <div className="text-xl flex items-center w-full gap-x-6">
               <div className="flex-1">
-                <p className="pb-2">Gender</p>
-                <div className="w-full flex flex-wrap justify-around gap-x-4">
-                  <article className="flex gap-x-2 items-center">
-                    <input
-                      checked={childForms[index].gender === "male"}
-                      id="male"
-                      className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-                      name="gender"
-                      type="radio"
-                      value={"male"}
-                      onChange={(event) => handleChildAccountInputChange(event, index)}
-                      required
-                    />
-                    <label htmlFor="male">Male</label>
-                  </article>
-                  <article className="flex items-center gap-x-2">
-                    <input
-                      checked={childForms[index].gender === "female"}
-                      id="female"
-                      className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-                      name="gender"
-                      type="radio"
-                      value={"female"}
-                      onChange={(event) => handleChildAccountInputChange(event, index)}
-                      required
-                    />
-                    <label htmlFor='female'>Female</label>
-                  </article>
-                  <article className="flex items-center gap-x-2">
-                    <input
-                      id="preferNotToSay"
-                      className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-                      name="gender"
-                      type="radio"
-                      value={"prefer not to say"}
-                      onChange={(event) => handleChildAccountInputChange(event, index)}
-                      required
-                    />
-                    <label htmlFor='preferNotToSay'>Prefer Not To Say</label>
-                  </article>
+                <div className="w-full flex flex-wrap justify-around gap-x-4 rounded-full">
+                  <Select
+                    className="flex-1 rounded-full"
+                    value={selectedGender}
+                    onChange={(selectedOption) => handleGenderChange(selectedOption, index)}
+                    options={genderOptions}
+                    placeholder="Gender"
+                  />
                 </div>
               </div>
               <div className="flex-1 flex">
                 <DatePicker
-                  className="flex-1 py-2 rounded-full bg-white appearance-none px-4 border outline-none focus:ring ring-dark"
+                  placeholderText='Please select a date'
                   value={childForms[index].dateOfBirth}
+                  className="flex-1 py-2 rounded-full bg-white appearance-none px-4 border outline-none focus:ring ring-dark"
                   onChange={(date) => handleDateChange(date, index)}
                   format="dd-MM-y"
-                  placeholderText="Select a date"
+
                 />
               </div>
             </div>
