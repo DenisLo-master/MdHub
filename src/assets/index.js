@@ -101,9 +101,11 @@ import CorporateBenefits01 from './corporate-benefits-01.png'
 import CorporateBenefits02 from './corporate-benefits-02.png'
 import CorporateBenefits03 from './corporate-benefits-03.png'
 import HeroGif from './herogif.gif'
+import HeroBg from './hero-bg.jpg'
 
 
 export {
+  HeroBg,
   HeroGif,
   CorporateBenefits01,
   CorporateBenefits02,
