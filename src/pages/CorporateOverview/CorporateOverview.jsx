@@ -72,7 +72,7 @@ const CorporateOverview = () => {
           <h2 className="text-4xl">The ultimate benefits solution that your teams will actually use and love.</h2>
           <div className="flex justify-between">
             <article className="flex flex-col items-center justify-center space-y-1">
-              <img className="w-24" src={CorporateBenefits01} alt="Medical Care" />
+              <img className="w-24 h-32 object-cover" src={CorporateBenefits01} alt="Medical Care" />
               <div className="space-y-2">
                 <h2 className="text-xl">Whole-person care anytime, anywhere</h2>
                 <p className="font-body font-thin text-sm w-full max-w-[360px] leading-[1.4rem]">
@@ -81,7 +81,7 @@ const CorporateOverview = () => {
               </div>
             </article>
             <article className="flex flex-col items-center justify-center space-y-1">
-              <img className="w-24" src={CorporateBenefits02} alt="Medical Care" />
+              <img className="w-24 h-32 object-cover" src={CorporateBenefits02} alt="Medical Care" />
               <div className="space-y-2">
                 <h2 className="text-xl">Family & pediatric care</h2>
                 <p className="font-body font-thin text-sm w-full max-w-[380px] leading-[1.4rem]">
@@ -90,7 +90,7 @@ const CorporateOverview = () => {
               </div>
             </article>
             <article className="flex flex-col items-center justify-center space-y-1">
-              <img className="w-24" src={CorporateBenefits03} alt="Medical Care" />
+              <img className="w-24 h-32 object-cover" src={CorporateBenefits03} alt="Medical Care" />
               <div className="space-y-2">
                 <h2 className="text-xl">Increased ROI & employee satisfaction</h2>
                 <p className="font-body font-thin text-sm w-full max-w-[380px] leading-[1.4rem]">
