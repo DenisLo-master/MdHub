@@ -17,6 +17,7 @@ import Login from './Login/Login'
 import BookAppointment from './Dashboard/BookAppointment'
 import DashboardHome from './Dashboard/DashboardHome'
 import UpdateUserInfo from './Dashboard/UpdateUserInfo'
+import UpdateBillingInfo from './Dashboard/UpdateBillingInfo'
 
 export {
   Home,
@@ -37,5 +38,6 @@ export {
   Login,
   BookAppointment,
   DashboardHome,
-  UpdateUserInfo
+  UpdateUserInfo,
+  UpdateBillingInfo,
 }
