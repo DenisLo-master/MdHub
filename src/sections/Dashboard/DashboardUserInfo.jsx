@@ -63,7 +63,7 @@ const DashboardUserInfo = () => {
             </div>
           </article>
           <article>
-            <Link to="/dashboard/update-user">
+            <Link to="/dashboard/update-billing">
               <button type="button" className={`rounded-full font-main text-lg group hover:ring-1 hover:ring-primary px-12 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
                 Manage
               </button>
