@@ -6,6 +6,7 @@ const SignupStepThree = () => {
   const paymentMode = registerationStore(state => state.paymentMode)
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
   const setPaymentMode = registerationStore(state => state.setPaymentMode)
+  const childForms = registerationStore(state => state.childForms)
 
   return (
     <section className="space-y-6">
@@ -64,9 +65,18 @@ const SignupStepThree = () => {
           <h2 className="text-2xl">Your Order</h2>
           <h3 className="font-body">
             {
-              selectedAccountType === "individual" ? "1 x Individual Plan" :
-                selectedAccountType === "family" ? paymentMode === "yearly" ? "12 x Family Plan" : "1 x Family Plan" :
-                  selectedAccountType === "family" ? "1 x Corporate Plan" :
+              selectedAccountType === "individual" ?
+                "1 x Individual Plan"
+                :
+                selectedAccountType === "family" ?
+                  paymentMode === "yearly" ?
+                    `1 x Yearly Family Plan for ${childForms.length + 1} members`
+                    :
+                    `1 x Yearly Monthly Plan for ${childForms.length + 1} members`
+                  :
+                  selectedAccountType === "corporate" ?
+                    `1 x Yearly Corporate Plan for ${childForms.length + 1} member${childForms.length > 0 ? "s" : ""}`
+                    :
                     "1 x On Demand Plan"
             }
           </h3>
@@ -108,7 +118,7 @@ const SignupStepThree = () => {
                   ) : selectedAccountType === "corporate" ?
                   (
                     <div>
-                      <h3>${Math.floor(19.99 * 120)}</h3>
+                        <h3>${Math.floor(19.99 * (childForms.length + 1) * 12)}</h3>
                       <h3>Tax: $47.78</h3>
                       <h2 className="text-3xl">Total: <strong>${Math.floor(19.99 * 120 + 47.78)}</strong></h2>
                     </div>
