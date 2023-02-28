@@ -16,7 +16,7 @@ const Login = () => {
     const form = new FormData(e.target)
     const loginFormData = Object.fromEntries(form)
     try {
-      const response = await fetch('https://mdhub-server.onrender.com/api/v1/auth/login', {
+      const response = await fetch(`https://mdhub-server.onrender.com/api/v1/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -71,6 +71,7 @@ const Login = () => {
               required
             />
           </div>
+          <p className="cursor-pointer pl-5">Forgot Password?</p>
           <div className='relative w-full pt-3'>
             <button type="submit" className={`rounded-full w-40 font-main text-xl group hover:ring-1 hover:ring-primary  py-3 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
               <span>Login</span>

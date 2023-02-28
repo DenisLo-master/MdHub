@@ -16,7 +16,7 @@ const Dashboard = () => {
     if (!token) navigate("/login")
     const fetchUser = async () => {
       try {
-        const response = await fetch(`https://mdhub-server.onrender.com/api/v1/users/${tokenInfo?.id}`, {
+        const response = await fetch(`https://mdhub-server.onrender.com/api/v1/users/${tokenInfo.id}`, {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`
@@ -29,7 +29,7 @@ const Dashboard = () => {
       }
     }
     token && fetchUser()
-  }, [userInfo])
+  }, [])
 
   return (
     <section className="font-main text-gray-800">

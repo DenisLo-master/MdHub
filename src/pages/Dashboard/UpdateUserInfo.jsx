@@ -16,7 +16,7 @@ const UpdateUserInfo = () => {
   const [isLoading, setIsLoading] = useState(false)
   const navigate = useNavigate()
   const userInfo = registerationStore(state => state.userInfo)
-  const [userInfoFormData, setUserInfoFormData] = useState({ ...userInfo, password: "" })
+  const [userInfoFormData, setUserInfoFormData] = useState({})
   const [paymentInfo, setPaymentInfo] = useState("")
   const [showPaymentElement, setShowPaymentElement] = useState(false)
 
@@ -24,7 +24,6 @@ const UpdateUserInfo = () => {
   const tokenInfo = token ? jwtDecode(token) : {}
 
   const handleChange = (e) => {
-    e.preventDefault()
     setUserInfoFormData({ ...userInfoFormData, [e.target.name]: e.target.value })
   }
   const handleSubmit = async (e) => {
@@ -63,14 +62,17 @@ const UpdateUserInfo = () => {
             "Authorization": `Bearer ${token}`
           }
         })
-        const { paymentInfo } = await response.json()
+        const data = await response.json()
+        console.log(data)
+        const { paymentInfo, userInfo } = data
         setPaymentInfo(paymentInfo)
+        setUserInfoFormData({ email: userInfo.email, phone: userInfo.phone, address: userInfo.address, password: userInfo.password })
+
       } catch (error) {
         console.log(error)
       }
     }
     getUser()
-    window.scrollTo(0, 0)
   }, [])
 
   return (
@@ -82,7 +84,10 @@ const UpdateUserInfo = () => {
         </div>
         <div className="flex items-center gap-x-4 pb-3">
           <h2>
-            {`Card Info: **** **** **** ${paymentInfo}`}
+            {paymentInfo ?
+              `Card Info: **** **** **** ${paymentInfo}` :
+              "Click here to add your payment method"
+            }
           </h2>
           <button
             onClick={() => setShowPaymentElement(true)}
@@ -97,6 +102,50 @@ const UpdateUserInfo = () => {
             </Elements>
           )
         }
+        <form onSubmit={handleSubmit} className="space-y-5">
+          <div className="flex">
+            <input
+              name="email"
+              value={userInfoFormData.email}
+              onChange={handleChange}
+              className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border" placeholder="Email"
+              type="email"
+            />
+          </div>
+          <div className="flex">
+            <input
+              name="password"
+              value={userInfoFormData.password}
+              onChange={handleChange}
+              className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border" placeholder="Enter New Password"
+              type="password"
+            />
+          </div>
+          <div className="flex">
+            <input
+              name="phone"
+              value={userInfoFormData.phone}
+              onChange={handleChange}
+              className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border" placeholder="phone"
+              type="text"
+            />
+          </div>
+          <div className="flex">
+            <input
+              name="address"
+              value={userInfoFormData.address}
+              onChange={handleChange}
+              className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border" placeholder="address"
+              type="text"
+            />
+          </div>
+          <button
+            className={`rounded-full group hover:ring-1 hover:ring-primary  py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-8`}
+            type="submit"
+          >
+            {isLoading ? <SVGLoaderCircles /> : "Submit"}
+          </button>
+        </form>
       </div>
     </section>
   )
