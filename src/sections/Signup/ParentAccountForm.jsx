@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BsPlusCircle } from 'react-icons/bs'
 import { registerationStore } from '../../store/registerationStore'
+import DatePicker from 'react-date-picker'
+import Select from 'react-select'
+
+
+const genderOptions = [
+  { value: 'male', label: 'Male' },
+  { value: 'female', label: 'Female' },
+  { value: 'preferNotToSay', label: 'Prefer not to say' }
+];
 
 const ParentAccountForm = () => {
   const registerationFormData = registerationStore(state => state.registerationFormData)
@@ -8,6 +17,12 @@ const ParentAccountForm = () => {
   const handleRegisterationFormDataChange = registerationStore(state => state.handleRegisterationFormDataChange)
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
   const childForms = registerationStore(state => state.childForms)
+  const [selectedGender, setSelectedGender] = useState(null)
+
+  const handleGenderChange = (selectedOption) => {
+    handleRegisterationFormDataChange("gender", selectedOption.value)
+    setSelectedGender(selectedOption)
+  }
   return (
     <div className="py-16 border space-y-4 px-8 shadow-cardService rounded-[35px] text-primary relative">
       <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
@@ -60,6 +75,30 @@ const ParentAccountForm = () => {
           onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
           required
         />
+      </div>
+      <div className="text-xl flex items-center w-full gap-x-6">
+        <div className="flex-1">
+          <div className="w-full flex flex-wrap justify-around gap-x-4 rounded-full">
+            <Select
+              className="flex-1 rounded-full"
+              value={selectedGender}
+              onChange={(selectedOption) => handleGenderChange(selectedOption, index)}
+              options={genderOptions}
+              placeholder="Gender"
+            />
+          </div>
+        </div>
+
+        <div className="flex-1 flex">
+          <DatePicker
+            placeholderText='Please select a date'
+            value={registerationFormData.dateOfBirth}
+            className="flex-1 py-2 rounded-full bg-white appearance-none px-4 border outline-none focus:ring ring-dark"
+            onChange={(date) => handleDateChange(date, index)}
+            format="dd-MM-y"
+
+          />
+        </div>
       </div>
       {selectedAccountType === "family" && (
         <>
