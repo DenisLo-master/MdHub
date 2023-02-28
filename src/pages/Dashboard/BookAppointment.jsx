@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { DoctorIcon, NursingIcon, PharmacyIcon, TestingIcon } from '../../assets'
 import Modal from '../../components/Modal'
 import ServicesCard from '../../components/ServicesCard'
-import { nursingAndHomecareServices } from "../../constants";
+import { nursingServices } from "../../constants";
 import { BiCaretDown } from "react-icons/bi"
 import { registerationStore } from "../../store/registerationStore";
 
@@ -97,7 +97,7 @@ const BookAppointment = () => {
                 <BiCaretDown className="text-2xl absolute right-3 pointer-events-none top-2" />
                 <select name="service" className="flex-1 appearance-none px-4 py-2 border rounded-lg outline-none focus:ring ring-primary">
                   {
-                    nursingAndHomecareServices.map((item, index) => (
+                    nursingServices.map((item, index) => (
                       <option value={item}>{item}</option>
                     ))
                   }
