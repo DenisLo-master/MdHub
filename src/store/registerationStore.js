@@ -31,9 +31,7 @@ const initialRegistrationFormData = {
   province: '',
   postalCode: '',
   country: 'Canada',
-  creditCardNumber: '',
-  creditCardExpiry: '',
-  creditCardCvc: ''
+  dateOfBirth: new Date(), gender: "male"
 }
 
 const initialUserInfoData = {
@@ -74,7 +72,7 @@ export const registerationStore = create((set) => ({
   setShowNursingModal: (show) => set((state) => ({ showNursingModal: show })),
   addChildAccount: () => set((state) => ({
     childForms: [...state.childForms, {
-      firstName: '', lastName: '', email: '', password: '', phone: '', male: '', dateOfBirth: new Date(), gender: "male"
+      firstName: '', lastName: '', email: '', password: '', phone: '', dateOfBirth: new Date(), gender: "male"
     }]
   })),
   handleChildAccountInputChange: (event, index) => set((state) => {
