@@ -56,7 +56,7 @@ const initialUserInfoData = {
 export const registerationStore = create((set) => ({
   formStep: 0,
   selectedAccountType: 'individual',
-  paymentMode: "yearly",
+  paymentMode: "monthly",
   individualYearlyFee: '24.99',
   individualMonthlyFee: '34.99',
   familyMonthlyFee: "54.99",
