@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { NursingAndHomecareBanner } from '../../assets'
-import { nursingAndHomecareServices, nursingAndHomecareHowItWorksData } from '../../constants'
+import { nursingServices, nursingAndHomecareHowItWorksData } from '../../constants'
 
 const ServicesNursingAndHomecare = () => {
   return (
@@ -39,7 +39,7 @@ const ServicesNursingAndHomecare = () => {
           </h2>
           <section className="w-full max-w-5xl space-y-6 mx-auto">
             {
-              nursingAndHomecareHowItWorksData.map((step => (
+              nursingServices.map((step => (
                 <article key={step.id} className="flex justify-between items-center">
                   <div className="flex items-center gap-x-8">
                     <article>
