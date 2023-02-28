@@ -12,6 +12,47 @@ import {
   ArrowRight
 } from '../../assets'
 import { Link } from 'react-router-dom'
+import FAQ from '../../components/FAQ'
+
+const forBabiesData = [
+  {
+    id: 1,
+    title: "24/7 care",
+    image: ForBabies01,
+    text: "Chat with compassionate providers 24/7 over video and schedule doctor appointments easily online at any time. No (or at least, a lot less) sleep lost here."
+  },
+  {
+    id: 2,
+    title: "Pediatric specialists",
+    image: ForBabies02,
+    text: "Specialized doctors like pediatric doctors can be hard to find in Canada. Get the personalized care your child needs and get help from specialists fast."
+  },
+  {
+    id: 3,
+    title: "Convenient Locations",
+    image: ForBabies03,
+    text: "If your child requires an in-person meeting, you’ll be matched with kid-approved locations in your area. So you don’t have to rush around town to make an appointment on time."
+  },
+  {
+    id: 4,
+    title: "Healthcare in your hands",
+    image: ForBabies04,
+    text: "You know your children better than anyone. Our membership allows you to be an advocate for your children and family’s health while setting a great example."
+  },
+  {
+    id: 5,
+    title: "Cohesive one-stop care",
+    image: ForBabies05,
+    text: "With one or multiple children, it can be hard to keep track of their files and history. Using our platform, you, and your child’s doctors, will have everything they need all in one place."
+  },
+  {
+    id: 6,
+    title: "Your health arsenal",
+    image: ForBabies06,
+    text: "Whatever your family is dealing with, your MDHUB family plan can help you through it with our online pharmacy, prescription delivery, access to specialists, and convenient lab access."
+  },
+
+]
 
 const ForBabies = () => {
   return (
@@ -26,7 +67,7 @@ const ForBabies = () => {
               For babies, children, and teens.
             </h2>
             <p className="max-w-[480px] font-body font-light py-6">
-              Lorem ipsum dolor sit amet consectetur. Rhoncus sed imperdiet mauris facilisi at imperdiet hendrerit enim. Sed fames pharetra sagittis pellentesque ullamcorper amet dolor pellentesque. Amet enim dictum ut et eu nulla vitae cras varius. Consectetur aliquet cras sit aliquam a faucibus at. Tortor nunc amet vel ipsum congue. Amet in tristique vitae ultrices mi tempus egestas vitae ac. Eget euismod vel etiam elementum laoreet etiam amet viverra. Blandit scelerisque elementum euismod nullam massa ullamcorper tellus donec amet. Pretium tincidunt hendrerit morbi id pellentesque ac facilisis. Ut nec nulla dignissim convallis sit sit donec. Et nullam sed porttitor ac.
+              The current healthcare system in Canada isn’t kind to parents and caregivers. Countless hours spent in waiting rooms, weeks on waiting lists to see specialists, and entire work days missed are unfortunately all too common. That’s why MDHUB is here to help with reimagined healthcare for families, like 24/7 access to pediatric doctors to give you peace of mind. 
             </p>
             <Link to="/register">
               <button className={`rounded-full mx-auto md:mx-0 text-lg group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent shadow-cardService`}>
@@ -38,15 +79,15 @@ const ForBabies = () => {
 
         <article className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8">
           {
-            [ForBabies01, ForBabies02, ForBabies03, ForBabies04, ForBabies05, ForBabies06].map((imageSrc, index) => (
+            forBabiesData.map((item) => (
               <article
-                key={index}
+                key={item.id}
                 className="p-6 flex flex-col items-center border-[0.25px] shadow-cardService rounded-3xl"
               >
-                <img src={imageSrc} alt="Benefits for Babies" className="w-24 h-24 object-contain" />
-                <h2 className="font-semibold py-3">Lorem ipsum dolor sit.</h2>
+                <img src={item.image} alt={item.title} className="w-24 h-24 object-contain" />
+                <h2 className="font-semibold py-3">{item.title}</h2>
                 <p className="text-center leading-6">
-                  Lorem ipsum dolor sit amet consectetur. Rhoncus sed imperdiet mauris facilisi at imperdiet hendrerit enim. Sed fames pharetra sagittis pellentesque ullamcorper amet dolor pellentesque. Amet enim dictum ut et eu nulla vitae cras varius. Consectetur aliquet cras sit aliquam a faucibus at. Tortor nunc amet vel ipsum.
+                  {item.text}
                 </p>
               </article>
             ))
@@ -56,7 +97,7 @@ const ForBabies = () => {
         <article>
           <h2 className="text-4xl">Membership Benefits</h2>
           <p className="font-body py-4 max-w-[680px]">
-            Lorem ipsum dolor sit amet consectetur. Dictum nunc proin nibh mauris suspendisse adipiscing risus adipiscing. Semper at interdum pellentesque adipiscing. Amet donec morbi egestas diam nam. Proin senectus ut proin id sed nec.
+            Raising a family is rewarding but can be challenging at times – and that’s why we’re always by your side. Take care of those you love most with a family plan. Family memberships start at $44.99 when you sign up for 12 months with MDHUB.
           </p>
           <Link to="/register">
             <button className={`mx-auto md:mx-0 rounded-full text-lg group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent shadow-cardService`}>
@@ -72,19 +113,23 @@ const ForBabies = () => {
             <ul className="space-y-6">
               <li className="flex space-x-2 items-center">
                 <OkIcon className="text-primary" />
-                <span>Well-child visits</span>
+                <span>Routine checkups</span>
               </li>
               <li className="flex space-x-2 items-center">
                 <OkIcon className="text-primary" />
-                <span>Routine vaccinations</span>
+                <span>Nutrition</span>
               </li>
               <li className="flex space-x-2 items-center">
                 <OkIcon className="text-primary" />
-                <span>Colds and flus</span>
+                <span>Colds and flu</span>
               </li>
               <li className="flex space-x-2 items-center">
                 <OkIcon className="text-primary" />
                 <span>Ear aches</span>
+              </li>
+              <li className="flex space-x-2 items-center">
+                <OkIcon className="text-primary" />
+                <span>Sinus infections</span>
               </li>
               <li className="flex space-x-2 items-center">
                 <OkIcon className="text-primary" />
@@ -98,46 +143,48 @@ const ForBabies = () => {
                 <OkIcon className="text-primary" />
                 <span>Rashes and skin issues</span>
               </li>
-              <li className="flex space-x-2 items-center">
-                <OkIcon className="text-primary" />
-                <span>Minor injuries</span>
-              </li>
             </ul>
 
             <ul className="space-y-6">
               <li className="flex space-x-2 items-center">
                 <OkIcon className="text-primary" />
-                <span>Mental and behavioral health</span>
+                <span>Fever and illnesses</span>
               </li>
               <li className="flex space-x-2 items-center">
                 <OkIcon className="text-primary" />
+                <span>Newborn care</span>
+              </li>
+              <li className="flex space-x-2 items-center">
+                <OkIcon className="text-primary" />
+                <span>Infant care</span>
+              </li>
+              <li className="flex space-x-2 items-center">
+                <OkIcon className="text-primary" />
+                <span>Minor injuries</span>
+              </li>
+              <li className="flex space-x-2 items-center">
+                <div>
+                  <OkIcon className="text-primary" />
+                </div>
+                <span>Behaviour issues and mental health</span>
+              </li>
+              <li className="flex space-x-2 items-center">
+                <div>
+                  <OkIcon className="text-primary" />
+                </div>
                 <span>Concussions</span>
               </li>
               <li className="flex space-x-2 items-center">
-                <OkIcon className="text-primary" />
-                <span>Growth and nutrition</span>
-              </li>
-              <li className="flex space-x-2 items-center">
-                <OkIcon className="text-primary" />
-                <span>COVID-19 care and testing</span>
+                <div>
+                  <OkIcon className="text-primary" />
+                </div>
+                <span>COVID-19 testing </span>
               </li>
               <li className="flex space-x-2 items-center">
                 <div>
                   <OkIcon className="text-primary" />
                 </div>
-                <span>Parenting support and questions</span>
-              </li>
-              <li className="flex space-x-2 items-center">
-                <div>
-                  <OkIcon className="text-primary" />
-                </div>
-                <span>Newborn care including lactation and bottle feeding support</span>
-              </li>
-              <li className="flex space-x-2 items-center">
-                <div>
-                  <OkIcon className="text-primary" />
-                </div>
-                <span>Infant care including guidance around sleep and potty training</span>
+                <span>Routine vaccinations</span>
               </li>
             </ul>
           </div>
@@ -151,38 +198,49 @@ const ForBabies = () => {
         <article className="pb-10">
           <h2 className="text-4xl pb-8">FAQs</h2>
           <ul className="font-body space-y-3">
-            <li className="flex justify-between items-center border-b border-gray-700 pb-3">
-              <p>Questions 1</p>
-              <ArrowRight className="text-primary" />
-            </li>
-            <li className="flex justify-between border-b border-gray-700 pb-3">
-              <p>Questions 2</p>
-              <ArrowRight className="text-primary" />
-            </li>
-            <li className="flex justify-between border-b border-gray-700 pb-3">
-              <p>Questions 3</p>
-              <ArrowRight className="text-primary" />
-            </li>
-            <li className="flex justify-between border-b border-gray-700 pb-3">
-              <p>Questions 4</p>
-              <ArrowRight className="text-primary" />
-            </li>
-            <li className="flex justify-between border-b border-gray-700 pb-3">
-              <p>Questions 5</p>
-              <ArrowRight className="text-primary" />
-            </li>
-            <li className="flex justify-between border-b border-gray-700 pb-3">
-              <p>Questions 6</p>
-              <ArrowRight className="text-primary" />
-            </li>
-            <li className="flex justify-between border-b border-gray-700 pb-3">
-              <p>Questions 7</p>
-              <ArrowRight className="text-primary" />
-            </li>
-            <li className="flex justify-between border-b border-gray-700 pb-3">
-              <p>Questions 8</p>
-              <ArrowRight className="text-primary" />
-            </li>
+            <FAQ
+              key="faq1"
+              question="What can I expect from my MDHUB family membership?"
+            >
+              <p className="pb-3">
+                MDHUB’s family plan provides additional care and support for the babies, children, and teens in your care. Get access to virtual doctors 24/7, as well as pediatric doctors and specialists, so you never have to frantically Google symptoms in the middle of the night or wait hours to see a doctor again.
+              </p>
+              <p>
+                Plus, you can get prescriptions filled using our online pharmacy and have them delivered directly to you, and access our medical labs. MDHUB’s family membership helps your kids stay healthy, which saves you time and provides peace of mind.
+              </p>
+            </FAQ>
+            <FAQ
+              key="faq2"
+              question="What support do you offer families and new parents?"
+            >
+              <p>
+                MDHUB offers support for families and parents because we know first-hand how much of an adjustment becoming a parent is. Our doctors and nurse practitioners can support new parents with lactating and bottle-feeding and can help with behavioural and mental health issues in children and teens.
+              </p>
+            </FAQ>
+            <FAQ
+              key="faq3"
+              question="What can a family membership help with?"
+            >
+              <p>
+                Our virtual doctors and nurse practitioners can treat many conditions online that are common in babies, children, and teens. Conditions include colds, the flu, sinus infections, eye infections, skin issues, and gastronomical issues. They can provide prescriptions or doctor’s notes as needed.
+              </p>
+            </FAQ>
+            <FAQ
+              key="faq4"
+              question="What can’t a family membership help with?"
+            >
+              <p>
+                A family membership can’t help with medical emergencies, physical examinations, stitches or major wound care, X-rays and orthopedic casts. For medical emergencies, always call 911.
+              </p>
+            </FAQ>
+            <FAQ
+              key="faq5"
+              question="Is my family's data secure?"
+            >
+              <p>
+                Yes, we take confidentiality extremely seriously. Your information is completely private and is protected by our leading security infrastructure and data protection policies. You are always in control of your personal health information.
+              </p>
+            </FAQ>
           </ul>
         </article>
       </div>
