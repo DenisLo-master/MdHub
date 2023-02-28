@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import {
   CorporateOverview01,
@@ -9,8 +9,10 @@ import {
   CorporateBenefits02,
   CorporateBenefits03
 } from '../../assets'
+import { registerationStore } from '../../store/registerationStore'
 
 const CorporateOverview = () => {
+  const changeSelectedAccountType = registerationStore(state => state.changeSelectedAccountType)
   return (
     <section className="font-main pt-16 pb-20 bg-white">
       <div className="max-w-7xl mx-auto space-y-20">
@@ -44,15 +46,24 @@ const CorporateOverview = () => {
               We offer holistic corporate plans to suit any size of business.
             </p>
             <div className="flex justify-center gap-x-12">
-              <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-                10-50 Employees
-              </button>
-              <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-                51-100 Employees
-              </button>
-              <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-                101+ Employees
-              </button>
+              <Link
+                to="/register"
+                onClick={() => changeSelectedAccountType("corporate")}
+              >
+                <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+                  5-10 Employees
+                </button>
+              </Link>
+              <a href="mailto:info@mdhub.com?subject=Corporate%20Inquiry%20-%2010%2B%20Employees">
+                <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+                  10-50 Employees
+                </button>
+              </a>
+              <a href="mailto:info@mdhub.com?subject=Corporate%20Inquiry%20-%2010%2B%20Employees">
+                <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+                  51+ Employees
+                </button>
+              </a>
             </div>
           </div>
         </article>
@@ -67,11 +78,6 @@ const CorporateOverview = () => {
                 <p className="font-body font-thin text-sm w-full max-w-[360px] leading-[1.4rem]">
                   Support every person on your team with access to quality healthcare available 24/7, like virtual appointments and prescription delivery.
                 </p>
-                <Link className="block" to="/services">
-                  <button className={`mx-auto rounded-full text-lg group hover:ring-1 hover:ring-primary px-8 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-                    Learn More
-                  </button>
-                </Link>
               </div>
             </article>
             <article className="flex flex-col items-center justify-center space-y-1">
@@ -81,11 +87,6 @@ const CorporateOverview = () => {
                 <p className="font-body font-thin text-sm w-full max-w-[380px] leading-[1.4rem]">
                   With MDHUB corporate plans, your employee’s family and children can receive healthcare, too. Designed specifically for busy families, your employees’ families can get care fast. 
                 </p>
-                <Link className="block" to="/services">
-                  <button className={`mx-auto rounded-full text-lg group hover:ring-1 hover:ring-primary px-8 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-                    Learn More
-                  </button>
-                </Link>
               </div>
             </article>
             <article className="flex flex-col items-center justify-center space-y-1">
@@ -95,11 +96,6 @@ const CorporateOverview = () => {
                 <p className="font-body font-thin text-sm w-full max-w-[380px] leading-[1.4rem]">
                   Your corporate membership is tax-deductible, but it also means less out-of-pocket expenses for your people. Plus, you can feel good knowing they're well taken care of.
                 </p>
-                <Link className="block" to="/services">
-                  <button className={`mx-auto rounded-full text-lg group hover:ring-1 hover:ring-primary px-8 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-                    Learn More
-                  </button>
-                </Link>
               </div>
             </article>
           </div>
