@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../assets/logo.png'
 import { RxDotFilled } from 'react-icons/rx'
@@ -15,6 +15,10 @@ const Navbar = () => {
     localStorage.removeItem("jwtToken")
     navigate("/")
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location])
 
   return (
     <nav className="md:border-b border-primary pb-[2px] md:pb-[6px] shadow">
