@@ -1,26 +1,52 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Select from 'react-select'
 import { BiCaretDown } from 'react-icons/bi'
-import { nursingAndHomecareServices } from '../../constants'
+import { nursingServices, homecareServices } from '../../constants'
+import { registerationStore } from '../../store/registerationStore'
 
-const NursingAppointmentStepOne = ({ serviceName, updateFields }) => {
+const nursingServicesData = nursingServices.map(item => (
+  { value: item, label: item }
+))
+
+const homecareServicesData = homecareServices.map(item => (
+  { value: item, label: item }
+))
+
+const NursingAppointmentStepOne = () => {
+  const selectedNursingOptions = registerationStore(state => state.selectedNursingOptions)
+  const setSelectedNursingOptions = registerationStore(state => state.setSelectedNursingOptions)
+  const selectedHomecareOptions = registerationStore(state => state.selectedHomecareOptions)
+  const setSelectedHomecareOptions = registerationStore(state => state.setSelectedHomecareOptions)
+
+
+  const handleNursingServicesChange = (selectedList) => {
+    setSelectedNursingOptions(selectedList);
+  };
+
+  const handleHomecareServicesChange = (selectedList) => {
+    setSelectedHomecareOptions(selectedList);
+  };
+
   return (
     <div>
-      <p className="text-xl pb-4">Fill in the details to get the service of your need.</p>
-      <div className="w-full flex relative">
-        <BiCaretDown className="text-2xl absolute right-3 pointer-events-none top-2" />
-        <select
-          required
-          value={serviceName}
-          onChange={(e) => updateFields({ serviceName: e.target.value })}
-          className="flex-1 bg-transparent appearance-none px-4 py-2 border rounded-lg outline-none focus:ring ring-primary"
-        >
-          <option value="">Select a Service</option>
-          {
-            nursingAndHomecareServices.map((item, index) => (
-              <option key={item} value={item}>{item}</option>
-            ))
-          }
-        </select>
+      <div>
+        <p className="text-xl pb-4">Please select the services of your need.</p>
+        <div className="space-y-3">
+          <Select
+            options={nursingServicesData}
+            value={selectedNursingOptions}
+            onChange={handleNursingServicesChange}
+            isMulti
+            placeholder="Select Nursing Services"
+          />
+          <Select
+            options={homecareServicesData}
+            value={selectedHomecareOptions}
+            onChange={handleHomecareServicesChange}
+            isMulti
+            placeholder="Select Homecare Services"
+          />
+        </div>
       </div>
     </div>
   )
