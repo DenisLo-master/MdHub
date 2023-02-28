@@ -39,7 +39,7 @@ const ServicesNursingAndHomecare = () => {
           </h2>
           <section className="w-full max-w-5xl space-y-6 mx-auto">
             {
-              nursingServices.map((step => (
+              nursingAndHomecareHowItWorksData.map((step => (
                 <article key={step.id} className="flex justify-between items-center">
                   <div className="flex items-center gap-x-8">
                     <article>
@@ -74,7 +74,7 @@ const ServicesNursingAndHomecare = () => {
           </h2>
           <section className="flex justify-center flex-wrap gap-8 text-center">
             {
-              nursingAndHomecareServices.map((item, index) => (
+              nursingServices.map((item, index) => (
                 <article key={index} className={`shadow-cardService w-[127px] h-[120px] text-xs text-center flex justify-center items-center border-[0.25px] border-[#cfc5c5] font-main ${index === 0 ? "bg-primary text-white" : 'bg-white text-gray-800'}`}>
                   <h2 className="max-w-[100px]">{item}</h2>
                 </article>
