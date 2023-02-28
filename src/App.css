@@ -35,3 +35,7 @@ input:checked+.toggle-switch .toggle-circle {
 .react-date-picker__wrapper {
   border: none !important;
 }
+.css-13cymwt-control,
+.css-t3ipsp-control {
+  border-radius: 30px !important;
+}
