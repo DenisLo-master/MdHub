@@ -1,7 +1,20 @@
 import React from 'react'
 import { CardElement } from '@stripe/react-stripe-js'
+import { registerationStore } from '../../store/registerationStore'
 
 const NursingAppointmentStepThree = () => {
+  const selectedHomecareOptions = registerationStore(state => state.selectedHomecareOptions)
+  const selectedNursingOptions = registerationStore(state => state.selectedNursingOptions)
+
+  const getAmount = () => {
+    if (selectedHomecareOptions.length && selectedNursingOptions.length) {
+      return (99 + 59.99)
+    } else if (!selectedHomecareOptions.length && selectedNursingOptions.length) {
+      return 99
+    } else {
+      return 59.99
+    }
+  }
   return (
     <div>
       <div className="flex justify-between pb-5">
@@ -14,9 +27,9 @@ const NursingAppointmentStepThree = () => {
         <article className="space-y-4 text-right">
           <h2 className="text-2xl">Subtotal</h2>
           <div className="font-body">
-            <h3>$99</h3>
+            <h3>${getAmount()}</h3>
             <h3>Tax: $47.78</h3>
-            <h2 className="text-3xl">Total: <strong>${Math.floor(99 + 47.78)}</strong></h2>
+            <h2 className="text-3xl">Total: <strong>${Math.floor(getAmount() + 47.78)}</strong></h2>
           </div>
         </article>
       </div>
