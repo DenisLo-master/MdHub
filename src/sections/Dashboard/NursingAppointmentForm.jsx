@@ -19,6 +19,10 @@ const INITIAL_DATA = {
 
 const NursingAppointmentForm = () => {
   const [nursingFormData, setNursingFormData] = useState(INITIAL_DATA)
+  const selectedNursingOptions = registerationStore(state => state.selectedNursingOptions)
+  const selectedHomecareOptions = registerationStore(state => state.selectedHomecareOptions)
+  const setSelectedNursingOptions = registerationStore(state => state.setSelectedNursingOptions)
+  const setSelectedHomecareOptions = registerationStore(state => state.setSelectedHomecareOptions)
   const [isLoading, setIsLoading] = useState(false)
   const nursingFormRef = useRef(null)
   const setShowNursingModal = registerationStore(state => state.setShowNursingModal)
@@ -32,6 +36,16 @@ const NursingAppointmentForm = () => {
     })
   }
 
+  const getAmount = () => {
+    if (selectedHomecareOptions.length && selectedNursingOptions.length) {
+      return (99 + 59.99) * 100
+    } else if (!selectedHomecareOptions.length && selectedNursingOptions.length) {
+      return 9900
+    } else {
+      return 59.99 * 100
+    }
+  }
+
   const { steps, currentStepIndex, step, isFirstStep, isLastStep, next, back } = useMultiStepForm([
     <NursingAppointmentStepOne {...nursingFormData} updateFields={updateFields} />,
     <NursingAppointmentStepTwo {...nursingFormData} updateFields={updateFields} />,
@@ -40,6 +54,10 @@ const NursingAppointmentForm = () => {
 
   const handleNursingFormSubmit = async (e) => {
     e.preventDefault()
+    if (!selectedHomecareOptions.length && !selectedNursingOptions.length) {
+      toast.error("You must select a service", { id: "Select service mandatory" })
+      return
+    }
     if (!isLastStep) next()
     if (!stripe || !elements) {
       return;
@@ -51,24 +69,28 @@ const NursingAppointmentForm = () => {
         card: elements.getElement(CardElement),
       });
       if (!error) {
-        const response = await fetch('https://mdhub-server.onrender.com/api/v1/appointments', {
+        const response = await fetch('http://localhost:8080/api/v1/appointments', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            amount: 14900,
+            amount: getAmount(),
             paymentMethod: paymentMethod.id,
             customerId: userInfo?.stripeCustomerId,
             userId: userInfo?._id,
-            ...nursingFormData
+            ...nursingFormData,
+            homecareServices: selectedHomecareOptions.map(item => item.value),
+            nursingServices: selectedNursingOptions.map(item => item.value)
           })
         })
         await response.json()
         if (response.ok) {
           setIsLoading(false)
           nursingFormRef.current.reset()
-          toast.success("Thanks for booking! Our Staff will contact you within 24hr to confirm all details of your booking. Additional charges may be required according to the service, time and distance of travel necessary", { id: "Appointment Success", duration: '6000' })
+          setSelectedNursingOptions([])
+          setSelectedHomecareOptions([])
+          toast.success("Thanks for booking! Our Staff will contact you within 24hr to confirm all details of your booking. Additional charges may be required according to the service, time and distance of travel necessary", { id: "Appointment Success", duration: 5000 })
         }
       }
       setShowNursingModal(false)
