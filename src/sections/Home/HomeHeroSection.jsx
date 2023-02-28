@@ -1,7 +1,7 @@
 import React from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
 import Button from '../../components/Button'
-import { Hero } from '../../assets'
+import { HeroGif } from '../../assets'
 import { Link } from 'react-router-dom'
 
 const HomeHeroSection = () => {
@@ -32,7 +32,7 @@ const HomeHeroSection = () => {
           </div>
         </article>
         <article data-aos="fade-up" className="w-full max-w-[630px] flex justify-center">
-          <img className="w-full max-w-[550px]" src={Hero} alt="Hero" />
+          <img className="w-full max-w-[550px]" src={HeroGif} alt="Hero" />
         </article>
       </section>
       <h2 data-aos="fade-up" className="text-primary text-center font-main text-5xl md:text-7xl py-10">

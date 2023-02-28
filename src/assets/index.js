@@ -100,9 +100,11 @@ import NursingAndHomecareHowItWorks03 from './nursing-and-homecare-how-it-works-
 import CorporateBenefits01 from './corporate-benefits-01.png'
 import CorporateBenefits02 from './corporate-benefits-02.png'
 import CorporateBenefits03 from './corporate-benefits-03.png'
+import HeroGif from './herogif.gif'
 
 
 export {
+  HeroGif,
   CorporateBenefits01,
   CorporateBenefits02,
   CorporateBenefits03,
