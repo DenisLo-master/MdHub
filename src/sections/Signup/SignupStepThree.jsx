@@ -3,16 +3,9 @@ import React from 'react'
 import { registerationStore } from '../../store/registerationStore'
 
 const SignupStepThree = () => {
-  const registerationFormData = registerationStore(state => state.registerationFormData)
-  const handleRegisterationFormDataChange = registerationStore(state => state.handleRegisterationFormDataChange)
   const paymentMode = registerationStore(state => state.paymentMode)
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
   const setPaymentMode = registerationStore(state => state.setPaymentMode)
-  const formStep = registerationStore(state => state.formStep)
-  const individualMonthlyFee = registerationStore(state => state.individualMonthlyFee)
-  const individualYearlyFee = registerationStore(state => state.individualYearlyFee)
-  const familyMonthlyFee = registerationStore(state => state.familyMonthlyFee)
-  const familyYearlyFee = registerationStore(state => state.familyYearlyFee)
 
   return (
     <section className="space-y-6">
@@ -29,10 +22,9 @@ const SignupStepThree = () => {
 
           <article>
             <div className={`flex items-center gap-x-4`}>
-              {paymentMode === "yearly" && selectedAccountType === "family" && <p className="text-primary text-3xl">Save 25%</p>}
+              {paymentMode === "yearly" && <p className="text-primary text-3xl">Save 25%</p>}
               {
                 (
-                  selectedAccountType === "individual" ||
                   selectedAccountType === "family" ||
                   selectedAccountType === "corporate"
                 ) && (
