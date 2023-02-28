@@ -74,7 +74,7 @@ const Footer = () => {
         </article>
         </div>
       <div className="bg-[#5d95b6] text-white font-body md:text-lg py-4 px-8 2xl:px-12 flex flex-col md:flex-row justify-between items-center gap-y-2">
-          <p>&copy; 2023 MDHub Inc</p>
+        <p>&copy; 2023 MDHUB Inc</p>
           <div className="flex items-center space-x-6">
           <img className="w-8" src={Facebook} alt="Facebook" />
           <img className="w-8" src={Linkedin} alt="Linkedin" />

@@ -7,7 +7,7 @@ const Pricing = () => {
   return (
     <section className="font-main">
       <header className="bg-[#F9F9F9] pt-20 pb-10 text-center space-y-6">
-        <h2 className="text-4xl">MdHub Membership Plans</h2>
+        <h2 className="text-4xl">MDHUB Membership Plans</h2>
         <div className="flex items-center justify-center gap-x-6 text-3xl">
           <article
             onClick={() => setSelectedPackage("monthly")}
