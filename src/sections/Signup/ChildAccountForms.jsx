@@ -142,7 +142,7 @@ const ChildAccountForms = () => {
               </div>
               <div className="flex-1 flex">
                 <DatePicker
-                  className="flex-1 py-2 bg-[#f9f9f9] appearance-none px-4 border rounded-lg outline-none focus:ring ring-dark"
+                  className="flex-1 py-2 rounded-full bg-white appearance-none px-4 border outline-none focus:ring ring-dark"
                   value={childForms[index].dateOfBirth}
                   onChange={(date) => handleDateChange(date, index)}
                   format="dd-MM-y"
@@ -152,7 +152,7 @@ const ChildAccountForms = () => {
             </div>
             {
               selectedAccountType === "family" ? (
-                <button type="button" disabled={childForms.length > 2} onClick={addChildAccount} className="absolute bottom-4 left-8 flex text-gray-600 gap-x-2 font-body items-center text-3xl cursor-pointer">
+                <button type="button" disabled={childForms.length > 1} onClick={addChildAccount} className="absolute bottom-4 left-8 flex text-gray-600 gap-x-2 font-body items-center text-3xl cursor-pointer">
                   <BsPlusCircle />
                   <p className='text-xl'>add family member</p>
                 </button>
