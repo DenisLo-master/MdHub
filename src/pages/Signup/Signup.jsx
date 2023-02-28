@@ -13,16 +13,7 @@ const key = import.meta.env.VITE_STRIPE
 const stripePromise = loadStripe(key);
 
 const Signup = () => {
-  const [isLoading, setIsLoading] = useState(false)
   const navigate = useNavigate()
-  const formStep = registerationStore(state => state.formStep)
-  const childForms = registerationStore(state => state.childForms)
-  const increaseFormStep = registerationStore(state => state.increaseFormStep)
-  const decreaseFormStep = registerationStore(state => state.decreaseFormStep)
-  const clearForms = registerationStore(state => state.clearForms)
-  const selectedAccountType = registerationStore(state => state.selectedAccountType)
-  const paymentMode = registerationStore(state => state.paymentMode)
-  const registerationFormData = registerationStore(state => state.registerationFormData)
 
   useEffect(() => {
     const token = localStorage.getItem("jwtToken")
