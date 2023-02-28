@@ -5,6 +5,7 @@ import { TiClipboard } from 'react-icons/ti'
 import toast from 'react-hot-toast'
 import { NursingModal, LabTestingModal, OnlinePharmacyModal } from '../../sections'
 import { Link } from 'react-router-dom'
+import { AiFillInfoCircle } from 'react-icons/ai'
 
 const DashboardHome = () => {
   const setShowLabTestingModal = registerationStore(state => state.setShowLabTestingModal)
@@ -31,25 +32,54 @@ const DashboardHome = () => {
           </p>
           <div className="flex gap-y-4 items-center md:items-start flex-col-reverse md:flex-row md:gap-x-6">
             <div className="flex flex-col gap-y-3 text-primary">
-              <button className={`max-w-[230px] rounded-full text-lg group hover:ring-1 hover:ring-primary px-4 py-2 border   border-primary bg-transparent`}>
-                <a href="https://www.getmaple.ca/mdhub" target="_blank">
-                  Virtual Doctor
-                </a>
-              </button>
-              <button className={`max-w-[230px] rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
-                <a href="https://www.getmaple.ca/mdhub" target="_blank">
-                  Mental Health
-                </a>
-              </button>
-              <button onClick={() => setShowOnlinePharmacyModal(true)} className={`max-w-[230px] rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
-                Online Pharmacy
-              </button>
-              <button onClick={() => setShowLabTestingModal(true)} className={`max-w-[230px] rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
-                Diagnostics
-              </button>
-              <button onClick={() => setShowNursingModal(true)} className={`max-w-[230px] rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
-                Nursing & Homecare
-              </button>
+              <article className="flex items-center gap-x-1">
+                <Link to="/services/virtual-doctor">
+                  <AiFillInfoCircle className="text-2xl" />
+                </Link>
+                <button className={`flex-1 rounded-full text-lg group hover:ring-1 hover:ring-primary px-4 py-2 border  border-primary bg-transparent`}>
+                  <a href="https://www.getmaple.ca/mdhub" target="_blank">
+                    Virtual Doctor
+                  </a>
+                </button>
+              </article>
+
+              <article className="flex items-center gap-x-1">
+                <Link to="/services">
+                  <AiFillInfoCircle className="text-2xl" />
+                </Link>
+                <button className={`flex-1 rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
+                  <a href="https://www.getmaple.ca/mdhub" target="_blank">
+                    Mental Health
+                  </a>
+                </button>
+              </article>
+
+              <article className="flex items-center gap-x-1">
+                <Link to="/services/online-pharmacy">
+                  <AiFillInfoCircle className="text-2xl" />
+                </Link>
+                <button onClick={() => setShowOnlinePharmacyModal(true)} className={`flex-1 rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
+                  Online Pharmacy
+                </button>
+              </article>
+
+              <article className="flex items-center gap-x-1">
+                <Link to="/services/diagnostics">
+                  <AiFillInfoCircle className="text-2xl" />
+                </Link>
+                <button onClick={() => setShowLabTestingModal(true)} className={`flex-1 rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
+                  Diagnostics
+                </button>
+              </article>
+
+              <article className="flex items-center gap-x-1">
+                <Link to="/services/nursing-homecare">
+                  <AiFillInfoCircle className="text-2xl" />
+                </Link>
+                <button onClick={() => setShowNursingModal(true)} className={`max-w-[230px] rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
+                  Nursing & Homecare
+                </button>
+              </article>
 
             </div>
             {
