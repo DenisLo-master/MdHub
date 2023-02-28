@@ -23,7 +23,7 @@ const Dashboard = () => {
           }
         })
         const data = await response.json()
-        setUserInfo(data)
+        setUserInfo(data.userInfo)
       } catch (error) {
         console.log(error)
       }
