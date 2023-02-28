@@ -31,7 +31,7 @@ const HomeExploreSolutionsSection = () => {
           <p
             className=" text-gray-700 w-full text-center md:text-left tracking-wide max-w-[440px] pb-24"
           >
-            Spend more time with the people you love and less time in waiting rooms with MDHub.
+            Spend more time with the people you love and less time in waiting rooms with MDHUBs.
           </p>
           <Link
             to="/services"
