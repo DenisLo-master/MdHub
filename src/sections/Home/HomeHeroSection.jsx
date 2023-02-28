@@ -32,7 +32,7 @@ const HomeHeroSection = () => {
           </div>
         </article>
         <article data-aos="fade-up" className="w-full max-w-[630px] flex justify-center relative">
-          <img className="relative z-10 w-full max-w-[400px]" src={HeroGif} alt="Hero" />
+          <img className="relative z-10 w-full max-w-[430px]" src={HeroGif} alt="Hero" />
           <img alt="Hero Bg" src={HeroBg} className="absolute max-w-[550px] top-0 right-16 z-0" />
         </article>
       </section>
