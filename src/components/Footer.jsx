@@ -16,8 +16,16 @@ const Footer = () => {
           <h2 className="font-main text-2xl">Contact Info</h2>
           <ul className="font-body text-sm">
             <li>Montreal, QC</li>
-            <li>+1 416 222 3333</li>
-            <li>info@mdhub.com</li>
+            <li>
+              <a href="tel:+14162223333">
+                +1 416 222 3333
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@mdhub.com">
+                info@mdhub.com
+              </a>
+            </li>
           </ul>
         </article>
 
