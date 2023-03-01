@@ -1,5 +1,5 @@
 import React from 'react'
-import { OnlinePharmacyBanner } from '../../assets'
+import { OnlinePharmacyBanner, LogoWhite } from '../../assets'
 import { onlinePharmacyHowItWorksData } from '../../constants'
 import { Link } from 'react-router-dom'
 
@@ -75,7 +75,7 @@ const ServicesOnlinePharmacy = () => {
           </section>
         </div>
         <section className="flex justify-center gap-x-8 py-12">
-          <article className="w-full font-body max-w-sm rounded bg-primary text-white p-6 md:p-8 space-y-5">
+          <article className="w-full font-body max-w-sm rounded bg-gradient-primary text-white p-6 md:p-8 space-y-5">
             <h3 className="text-lg font-semibold">Invoice</h3>
             <ul className="space-y-3">
               <li className="flex justify-between items-center text-light border-b border-b-white pb-2">
@@ -94,13 +94,16 @@ const ServicesOnlinePharmacy = () => {
                 <p>Medications</p>
                 <p className="text-xs">Please contact your insurance provider</p>
               </li>
+              <li>
+                <img src={LogoWhite} alt="MDHUB" />
+              </li>
             </ul>
           </article>
           <article className="p-6 md:p-8 space-y-4">
-            <p className="text-3xl w-full font-body font-thin max-w-[450px]">
+            <p className="text-3xl  w-full font-body font-thin max-w-[450px]">
               Get top-tier service at a great price. When you use our online pharmacy, you only pay the amount that isn't covered by your insurance.
             </p>
-            <Link to="register">
+            <Link className="block" to="register">
               <button className="rounded-full w-[240px] text-lg flex justify-center py-2 border border-primary">
                 Sign Up Today
               </button>
