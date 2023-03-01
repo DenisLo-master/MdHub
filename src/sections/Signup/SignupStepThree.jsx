@@ -25,7 +25,7 @@ const SignupStepThree = () => {
             <div className={`flex items-center gap-x-4`}>
               {paymentMode === "yearly" && <p className="text-primary text-3xl">Save 25%</p>}
               {
-                (
+                (selectedAccountType === "individual" ||
                   selectedAccountType === "family" ||
                   selectedAccountType === "corporate"
                 ) && (
