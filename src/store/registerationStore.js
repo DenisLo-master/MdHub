@@ -31,7 +31,8 @@ const initialRegistrationFormData = {
   province: '',
   postalCode: '',
   country: 'Canada',
-  dateOfBirth: new Date(), gender: "male"
+  dateOfBirth: new Date(),
+  gender: "male"
 }
 
 const initialUserInfoData = {
@@ -54,7 +55,7 @@ const initialUserInfoData = {
 export const registerationStore = create((set) => ({
   formStep: 0,
   selectedAccountType: 'individual',
-  paymentMode: "monthly",
+  paymentMode: "yearly",
   individualYearlyFee: '24.99',
   individualMonthlyFee: '34.99',
   familyMonthlyFee: "54.99",
@@ -72,7 +73,7 @@ export const registerationStore = create((set) => ({
   setShowNursingModal: (show) => set((state) => ({ showNursingModal: show })),
   addChildAccount: () => set((state) => ({
     childForms: [...state.childForms, {
-      firstName: '', lastName: '', email: '', password: '', phone: '', dateOfBirth: new Date(), gender: "male"
+      firstName: '', lastName: '', email: '', password: '', phone: '', dateOfBirth: null, gender: "male"
     }]
   })),
   handleChildAccountInputChange: (event, index) => set((state) => {
