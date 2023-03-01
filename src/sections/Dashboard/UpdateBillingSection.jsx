@@ -15,7 +15,7 @@ const UpdateBillingSection = () => {
 
   useEffect(() => {
     async function fetchMembershipInfo() {
-      const response = await fetch("http://localhost:8080/get-billing-info/", {
+      const response = await fetch("https://mdhub-server.onrender.com/get-billing-info/", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

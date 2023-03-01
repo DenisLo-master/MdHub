@@ -41,7 +41,7 @@ const LabRequisitionForm = ({ hideForm }) => {
     formData.append("preferredTime", data.preferredTime)
 
     try {
-      const response = await fetch("http://localhost:8080/sendmail", {
+      const response = await fetch("https://mdhub-server.onrender.com/sendmail", {
         method: 'POST',
         body: formData
       })
