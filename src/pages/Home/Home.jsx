@@ -21,7 +21,6 @@ const Home = () => {
       <HomeHeroSection />
       <HomeExploreSolutionsSection />
       <HomeMembershipBenefitsSection />
-      <HomeHeadspaceSection />
       <HomeHowItWorksSection />
       <HomeMembershipCostCtaSection />
       <HomeUserSatisfactionSection />
