@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import {
   Membership01,
   Membership02,
@@ -7,99 +8,84 @@ import {
   Membership05,
   Membership06,
   Membership07,
+  OkIconPrimary
 } from '../../assets'
-import { FiArrowUpRight } from 'react-icons/fi'
-import Button from '../../components/Button'
+
 
 const HomeMembershipBenefitsSection = () => {
   const [selectedBenefitId, setSelectedBenefitId] = useState(1)
   return (
-    <section className="relative w-full md:min-h-[650px] font-main bg-[#F3F3F3] pb-20 flex flex-col md:flex-row">
-      <article className="px-4 md:pl-20 w-full md:w-[calc(100vw-360px)]">
-        <div className="space-y-2 md:pt-20 md:pl-32">
-          <h2 className="w-full max-w-[200px] font-main text-center md:text-left text-4xl md:text-5xl">
-            Membership Benefits
-          </h2>
-          <h3 className='w-full font-body text-base pb-8'>
-            Your health, all in one place.
-          </h3>
-        </div>
-        <div className="flex justify-end pr-14">
-          <div
-            className="w-full max-w-[620px] md:p-8 flex gap-x-5 border border-primary  bg-primary text-white rounded"
-          >
-            <div>
-              <Membership01 />
-            </div>
-            <div className="space-y-6 max-w-[400px]">
-              <h2 className="text-xl leading-7 font-bold">Unlimited access to doctors 24/7</h2>
-              <p className="font-body text-lg">
-                Our team of Canadian certified doctors and healthcare specialists are available for you and your family 24/7 from anywhere in the world.
-              </p>
-            </div>
+    <section className="relative w-full font-main bg-[#F3F3F3] py-20">
+      <div className="w-full max-w-6xl mx-auto">
+        <article className="px-4 md:px-0 w-full">
+          <div className="space-y-2">
+            <h2 className="w-full font-main text-center md:text-left text-4xl md:text-5xl">
+              Membership Benefits
+            </h2>
+            <h3 className='w-full font-body text-base pb-8'>
+              Your health, all in one place.
+            </h3>
           </div>
-        </div>
-      </article>
-      <aside className="absolute top-10 right-0">
-        <ul>
-          <li
-            className="w-full max-w-[360px] py-4 px-8 flex items-center gap-x-5 border border-primary border-b-0  bg-primary text-white"
-          >
+        </article>
+        <ul className="font-body space-y-7 pb-8">
+          <li className='flex items-center gap-x-3'>
             <div>
-              <Membership01 />
+              <OkIconPrimary className="w-7 h-7" />
             </div>
-            <h2 className="text-xl leading-7">Unlimited access to doctors 24/7</h2>
+            <p>Free unlimited access to doctors 24/7</p>
           </li>
-          <li
-            className="w-full max-w-[360px] py-4 px-8 flex items-center gap-x-5 border border-primary border-b-0 bg-white text-primary"
-          >
+
+          <li className='flex items-center gap-x-3'>
             <div>
-              <Membership02 />
+              <OkIconPrimary className="w-7 h-7" />
             </div>
-            <h2 className="text-xl leading-7">Mental Healthcare</h2>
+            <p>Free online pharmacy and delivery</p>
           </li>
-          <li
-            className="w-full max-w-[360px] py-4 px-8 flex items-center gap-x-5 border border-primary border-b-0 bg-white text-primary"
-          >
+
+          <li className='flex items-center gap-x-3'>
             <div>
-              <Membership03 />
+              <OkIconPrimary className="w-7 h-7" />
             </div>
-            <h2 className="text-xl leading-7">Online Pharmacy</h2>
+            <p>Free Headspace membership</p>
           </li>
-          <li
-            className="w-full max-w-[360px] py-4 px-8 flex items-center gap-x-5 border border-primary border-b-0 bg-white text-primary"
-          >
+
+          <li className='flex items-center gap-x-3'>
             <div>
-              <Membership04 />
+              <OkIconPrimary className="w-7 h-7" />
             </div>
-            <h2 className="text-xl leading-7">Nursing and home care services</h2>
+            <p>Access to provate labs with a 25% discount</p>
           </li>
-          <li
-            className="w-full max-w-[360px] py-4 px-8 flex items-center gap-x-5 border border-primary border-b-0 bg-white text-primary"
-          >
+
+          <li className='flex items-center gap-x-3'>
             <div>
-              <Membership05 />
+              <OkIconPrimary className="w-7 h-7" />
             </div>
-            <h2 className="text-xl leading-7">Lab work and diagnostics</h2>
+            <p>Mobile nursing and homecare with a 25% discount</p>
           </li>
-          <li
-            className="w-full max-w-[360px] py-4 px-8 flex items-center gap-x-5 border border-primary border-b-0 bg-white text-primary"
-          >
+
+          <li className='flex items-center gap-x-3'>
             <div>
-              <Membership06 />
+              <OkIconPrimary className="w-7 h-7" />
             </div>
-            <h2 className="text-xl leading-7">Access to specialists</h2>
+            <p>Virus testing with a 25% discount + free rush service</p>
           </li>
-          <li
-            className="w-full max-w-[360px] py-4 px-8 flex items-center gap-x-5 border border-primary bg-white text-primary"
-          >
+
+          <li className='flex items-center gap-x-3'>
             <div>
-              <Membership07 />
+              <OkIconPrimary className="w-7 h-7" />
             </div>
-            <h2 className="text-xl leading-7">Headspace app</h2>
+            <p>Access to specialists and mental health professionals with a 15% discount</p>
           </li>
         </ul>
-      </aside>
+        <Link to="/rates">
+          <button
+            type="button"
+            className={`rounded-full w-48 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
+          >
+            Learn More
+          </button>
+        </Link>
+      </div>
     </section>
   )
 }
