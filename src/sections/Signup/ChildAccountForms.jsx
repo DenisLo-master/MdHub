@@ -99,7 +99,7 @@ const ChildAccountForms = () => {
             </div>
             <div className="w-full flex">
               <input
-                disabled={!isOlderThanFourteen}
+                disabled={!isOlderThanFourteen || !childForms[index].dateOfBirth}
                 className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
                 name="password"
                 type="password"
