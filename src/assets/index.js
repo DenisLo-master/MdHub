@@ -5,6 +5,7 @@ import { ReactComponent as NursingIcon } from './nursing-icon.svg'
 import { ReactComponent as PharmacyIcon } from './pharmacy-icon.svg'
 import { ReactComponent as ArrowIcon } from './arrow-vector.svg'
 import { ReactComponent as OkIcon } from './ok-icon.svg'
+import { ReactComponent as OkIconPrimary } from './ok-icon-primary.svg'
 import { ReactComponent as PhoneIcon } from './phone-icon.svg'
 import { ReactComponent as LocationIcon } from './location-icon.svg'
 import { ReactComponent as ChevronLeft } from './chevron-left.svg'
@@ -39,6 +40,10 @@ import HowItWorks01 from './how-it-works-01.png'
 import HowItWorks02 from './how-it-works-02.png'
 import HowItWorks03 from './how-it-works-03.png'
 import HowItWorks04 from './how-it-works-04.png'
+import HomeHowItWorks01 from './home-how-it-works-01.png'
+import HomeHowItWorks02 from './home-how-it-works-02.png'
+import HomeHowItWorks03 from './home-how-it-works-03.png'
+import HomeHowItWorks04 from './home-how-it-works-04.png'
 import HowItWorksStepsBg from './how-it-works-steps-bg.png'
 import MedicalBenefitsInfograph from './essential-medical-infograph.png'
 import NeverWaitForDoctorAgainImage from './never-wait-for-doctor.png'
@@ -102,9 +107,17 @@ import CorporateBenefits02 from './corporate-benefits-02.png'
 import CorporateBenefits03 from './corporate-benefits-03.png'
 import HeroGif from './herogif.gif'
 import HeroBg from './hero-bg.jpg'
+import PartnerCompany01 from './partner-company-01.png'
+import PartnerCompany02 from './partner-company-02.png'
+import PartnerCompany03 from './partner-company-03.png'
+import PartnerCompany04 from './partner-company-04.png'
 
 
 export {
+  PartnerCompany01,
+  PartnerCompany02,
+  PartnerCompany03,
+  PartnerCompany04,
   HeroBg,
   HeroGif,
   CorporateBenefits01,
@@ -145,6 +158,7 @@ export {
   AirCanada,
   Fasken,
   OkIcon,
+  OkIconPrimary,
   Membership01,
   Membership02,
   Membership03,
@@ -208,7 +222,11 @@ export {
   VirtualDoctorBanner,
   OnlinePharmacyBanner,
   NursingAndHomecareBanner,
-  DiagnosticsBanner
+  DiagnosticsBanner,
+  HomeHowItWorks01,
+  HomeHowItWorks02,
+  HomeHowItWorks03,
+  HomeHowItWorks04,
 }
 
 
