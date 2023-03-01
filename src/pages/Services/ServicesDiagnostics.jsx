@@ -36,25 +36,20 @@ const ServicesDiagnostics = () => {
         <h2 className="text-4xl pb-4 text-center">
           How It Works
         </h2>
-        <div className="max-w-5xl mx-auto space-y-5">
+        <div className="max-w-5xl mx-auto space-y-7">
           {
             diagnosisHowItWorksData.map(step => (
               <article key={step.id} className="flex justify-between items-center">
                 <div className="flex items-center gap-x-8">
                   <article>
-                    <div className="w-20 h-20 text-3xl font-body font-semibold bg-primary text-white rounded-full flex justify-center items-center">
+                    <div className="w-20 h-20 text-3xl font-body font-semibold bg-gradient-primary text-white rounded-full flex justify-center items-center">
                       {step.id}
                     </div>
                   </article>
                   <article className="w-full max-w-[640px] space-y-5">
                     <div>
                       <p className="font-body text-lg leading-5">
-                        {step.text} {
-                          step.id === 2 && <strong className="font-semibold">(see locations here)</strong>
-                        }
-                        {
-                          step.id === 4 && <strong className="font-semibold">here</strong>
-                        }
+                        {step.text} 
                       </p>
                     </div>
                     {step.note && <small className="font-body">{step.note}</small>}

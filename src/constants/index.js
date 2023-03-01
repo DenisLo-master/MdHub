@@ -231,20 +231,20 @@ export const onlinePharmacyHowItWorksData = [
 export const diagnosisHowItWorksData = [
   {
     id: 1,
-    text: "Patients require a lab requisition. If you don’t have one – no problem! See a doctor now.",
+    text: "Diagnostics may require a lab requisition if so simply uploaded, or obtain one from our doctors, for testing services which don't require a requisition simply select your service of choice.",
   },
   {
     id: 2,
-    text: "Schedule a time and place for your testing and complete your payment online. Or you can visit a testing centre at no extra cost",
+    text: "Once you select your test or upload your requisition our team will contact you to confirm your testing.",
     note: "*Please note: member pricing is $99 for this service."
   },
   {
     id: 3,
-    text: "Upload your requisition, and our medical staff will call you within 24 hours to confirm your booking.",
+    text: "Our team will contact you to confirm your booking within 24 hours.",
   },
   {
     id: 4,
-    text: "Once testing is complete, our labs will submit your results to your virtual doctor with MDHUB. Access your dashboard.",
+    text: "After the completion of testing, our labs will submit the results to your doctor. Users can then access these results through the virtual doctor dashboard.",
   },
 ]
 
