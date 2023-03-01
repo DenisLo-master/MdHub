@@ -19,7 +19,7 @@ const ServicesMentalHealth = () => {
               mental health
             </h2>
             <p className="font-body text-lg max-w-lg py-3">
-              In today’s faced-paced, modern and ultra-connected world, your mental health is more important than ever. With MDHUB, you can easily get mental health support when you need it most.
+              In today’s fast-paced, modern and ultra-connected world, your mental health is more important than ever. With MDHUB, you can easily get mental health support when you need it most.
             </p>
             <Link to="/register">
               <button className="rounded-full w-[240px] text-lg flex justify-center py-2 border border-white">
