@@ -19,6 +19,10 @@ const ParentAccountForm = () => {
   const childForms = registerationStore(state => state.childForms)
   const [selectedGender, setSelectedGender] = useState(null)
 
+  const handleDateChange = (date) => {
+    handleRegisterationFormDataChange("dateOfBirth", date)
+  }
+
   const handleGenderChange = (selectedOption) => {
     handleRegisterationFormDataChange("gender", selectedOption.value)
     setSelectedGender(selectedOption)
@@ -94,7 +98,7 @@ const ParentAccountForm = () => {
             placeholderText='Please select a date'
             value={registerationFormData.dateOfBirth}
             className="flex-1 py-2 rounded-full bg-white appearance-none px-4 border outline-none focus:ring ring-dark"
-            onChange={(date) => handleDateChange(date, index)}
+            onChange={(date) => handleDateChange(date)}
             format="dd-MM-y"
 
           />
