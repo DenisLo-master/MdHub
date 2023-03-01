@@ -34,7 +34,7 @@ const DashboardHome = () => {
             <div className="flex flex-col gap-y-3 text-primary">
               <article className="flex items-center gap-x-1">
                 <Link to="/services/virtual-doctor">
-                  <AiFillInfoCircle className="text-2xl" />
+                  <AiFillInfoCircle className="text-2xl text-[#cfcece]" />
                 </Link>
                 <button className={`flex-1 rounded-full text-lg group hover:ring-1 hover:ring-primary px-4 py-2 border  border-primary bg-transparent`}>
                   <a href="https://www.getmaple.ca/mdhub" target="_blank">
@@ -45,7 +45,7 @@ const DashboardHome = () => {
 
               <article className="flex items-center gap-x-1">
                 <Link to="/services">
-                  <AiFillInfoCircle className="text-2xl" />
+                  <AiFillInfoCircle className="text-2xl text-[#cfcece]" />
                 </Link>
                 <button className={`flex-1 rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
                   <a href="https://www.getmaple.ca/mdhub" target="_blank">
@@ -56,7 +56,7 @@ const DashboardHome = () => {
 
               <article className="flex items-center gap-x-1">
                 <Link to="/services/online-pharmacy">
-                  <AiFillInfoCircle className="text-2xl" />
+                  <AiFillInfoCircle className="text-2xl text-[#cfcece]" />
                 </Link>
                 <button onClick={() => setShowOnlinePharmacyModal(true)} className={`flex-1 rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
                   Online Pharmacy
@@ -65,7 +65,7 @@ const DashboardHome = () => {
 
               <article className="flex items-center gap-x-1">
                 <Link to="/services/diagnostics">
-                  <AiFillInfoCircle className="text-2xl" />
+                  <AiFillInfoCircle className="text-2xl text-[#cfcece]" />
                 </Link>
                 <button onClick={() => setShowLabTestingModal(true)} className={`flex-1 rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
                   Diagnostics
@@ -74,7 +74,7 @@ const DashboardHome = () => {
 
               <article className="flex items-center gap-x-1">
                 <Link to="/services/nursing-homecare">
-                  <AiFillInfoCircle className="text-2xl" />
+                  <AiFillInfoCircle className="text-2xl text-[#cfcece]" />
                 </Link>
                 <button onClick={() => setShowNursingModal(true)} className={`max-w-[230px] rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
                   Nursing & Homecare
