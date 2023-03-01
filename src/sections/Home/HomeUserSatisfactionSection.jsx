@@ -1,4 +1,5 @@
 import React from 'react'
+import { PartnerCompany01, PartnerCompany02, PartnerCompany03, PartnerCompany04 } from '../../assets'
 
 const HomeUserSatisfactionSection = () => {
   return (
@@ -17,6 +18,15 @@ const HomeUserSatisfactionSection = () => {
           <article className="w-[9px] h-[9px] rounded-full bg-[#D9D9D9]" />
           <article className="w-[9px] h-[9px] rounded-full bg-[#D9D9D9]" />
         </div>
+      </div>
+      <div className="w-full max-w-4xl mx-auto text-center py-10 font-body text-base space-y-5">
+        <p>Some companies we’ve partnered with:</p>
+        <section className="flex items-center justify-between">
+          <img src={PartnerCompany01} alt="Air Canada" />
+          <img src={PartnerCompany02} alt="Sotherbys" />
+          <img src={PartnerCompany03} alt="Air BNB" />
+          <img src={PartnerCompany04} alt="Four Seasons" />
+        </section>
       </div>
     </section>
   )
