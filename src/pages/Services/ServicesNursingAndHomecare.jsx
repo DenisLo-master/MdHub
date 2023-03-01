@@ -12,7 +12,7 @@ const ServicesNursingAndHomecare = () => {
             <h2 className="text-[88px]">
               nursing & homecare
             </h2>
-            <div className="space-y-5 font-body text-lg max-w-lg">
+            <div className="space-y-3 leading-6 font-body text-xl max-w-lg">
               <p>
                 Our professional nurses come directly to you. Plus, our team of homecare agents are there when you need them, offering compassionate care for seniors, people requiring post-operative care, and people with disabilities.
               </p>
@@ -20,7 +20,7 @@ const ServicesNursingAndHomecare = () => {
                 Whether it's medical services or homecare, we can help you with most of your needs.
               </p>
             </div>
-            <Link to="/register">
+            <Link className="block" to="/register">
               <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border border-white">
                 Sign Up Today
               </button>
@@ -43,19 +43,19 @@ const ServicesNursingAndHomecare = () => {
                 <article key={step.id} className="flex justify-between items-center">
                   <div className="flex items-center gap-x-8">
                     <article>
-                      <div className="w-20 h-20 text-3xl font-body font-semibold bg-primary text-white rounded-full flex justify-center items-center">
+                      <div className="w-20 h-20 text-3xl font-body font-semibold bg-gradient-primary text-white rounded-full flex justify-center items-center">
                         {step.id}
                       </div>
                     </article>
                     <article className="w-full max-w-[590px] space-y-5">
-                      <p className="font-body text-lg">
+                      <p className="font-body text-xl">
                         {step.text}
                       </p>
                       {
                         step.note && (
-                          <small>
+                          <p className="text-[13px]">
                             {step.note}
-                          </small>
+                          </p>
                         )
                       }
                     </article>

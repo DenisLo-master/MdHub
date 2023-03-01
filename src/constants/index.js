@@ -28,6 +28,8 @@ import {
   OnlinePharmacyHowItWorks02,
   OnlinePharmacyHowItWorks03,
   OnlinePharmacyHowItWorks04,
+  NursingAndHomecareHowItWorks03,
+  NursingAndHomecareHowItWorks04,
 }
   from '../assets'
 
@@ -256,14 +258,19 @@ export const nursingAndHomecareHowItWorksData = [
   },
   {
     id: 2,
-    text: "Select a time and location.",
-    note: "*Please note: member pricing for nursing is $99 per visit. Member pricing for homecare is $59 per visit.",
+    text: "Select a time and location, and if requisition is required please upload it here.",
+    note: "**Please note: member pricing for nursing starts $99 per visit. Member pricing for homecare starts $59 per visit.",
     image: NursingAndHomecareHowItWorks02
   },
   {
     id: 3,
     text: "Complete payment",
-    image: OnlinePharmacyHowItWorks03
+    image: NursingAndHomecareHowItWorks03
+  },
+  {
+    id: 4,
+    text: "Our team will contact you to confirm your booking.",
+    image: NursingAndHomecareHowItWorks04
   }
 ]
 
