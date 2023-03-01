@@ -43,8 +43,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="services" element={<Services />}>
-              <Route index element={<ServicesMentalHealth />} />
-              <Route path="virtual-doctor" element={<ServicesVirtualDoctor />} />
+              <Route index element={<ServicesVirtualDoctor />} />
+              <Route path="mental-health" element={<ServicesMentalHealth />} />
               <Route path="diagnostics" element={<ServicesDiagnostics />} />
               <Route path="nursing-homecare" element={<ServicesNursingAndHomecare />} />
               <Route path="online-pharmacy" element={<ServicesOnlinePharmacy />} />

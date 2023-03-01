@@ -17,15 +17,16 @@ const ServicesHeaderSection = () => {
     <section className="bg-[#F9F9F9] mb-10">
       <h2 className="font-main py-10 text-4xl text-center">Services</h2>
       <div className="w-full max-w-[1100px] mx-auto rounded-full shadow-xl flex justify-center items-center py-3 gap-x-6 text-[#3F3F3F] font-main">
+
         <Link to="/services">
-          <ServicesCard title={"mental health"} bgPrimary={location.pathname === "/services"}>
-            <MentalHealthIcon className={`${location.pathname === "/services" ? "text-white" : "text-primary"}`} />
+          <ServicesCard title={"virtual doctor"} bgPrimary={location.pathname === "/services"}>
+            <VirtualDoctorIcon className={`${location.pathname === "/services" ? "text-white" : "text-primary"}`} />
           </ServicesCard>
         </Link>
 
-        <Link to="/services/virtual-doctor">
-          <ServicesCard title={"virtual doctor"} bgPrimary={location.pathname === "/services/virtual-doctor"}>
-            <VirtualDoctorIcon className={`${location.pathname === "/services/virtual-doctor" ? "text-white" : "text-primary"}`} />
+        <Link to="/services/mental-health">
+          <ServicesCard title={"mental health"} bgPrimary={location.pathname === "/services/mental-health"}>
+            <MentalHealthIcon className={`${location.pathname === "/services/mental-health" ? "text-white" : "text-primary"}`} />
           </ServicesCard>
         </Link>
 
