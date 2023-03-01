@@ -14,7 +14,7 @@ const Footer = () => {
         </header>
         <article className="space-y-6">
           <h2 className="font-main text-2xl">Contact Info</h2>
-          <ul className="font-body text-sm">
+          <ul className="font-body text-base">
             <li>Montreal, QC</li>
             <li>
               <a href="tel:+14162223333">
@@ -31,7 +31,7 @@ const Footer = () => {
 
         <article className="space-y-6">
           <h2 className="font-main text-2xl">Useful Links</h2>
-          <ul className="font-body text-sm">
+          <ul className="font-body text-base">
             <li>
               <Link to="/services">
                 Services
@@ -72,7 +72,7 @@ const Footer = () => {
 
         <article className="space-y-6">
           <h2 className="font-main text-2xl">Subscribe</h2>
-          <div className="font-body text-sm space-y-2">
+          <div className="font-body text-base space-y-2">
             <p className="max-w-[230px]">Subscribe to our newsletter for latest news and updates</p>
             <form className="flex space-x-1 text-xs">
               <input className="px-2 rounded bg-transparent text-white border outline-none border-white placeholder:text-white" placeholder="E-mail" />
