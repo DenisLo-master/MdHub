@@ -64,7 +64,6 @@ const LabRequisitionForm = ({ hideForm }) => {
       <div className="w-full py-10 space-y-2">
         <div className="flex space-x-8">
           <input
-            required
             value={data.firstName}
             onChange={handleChange}
             className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
@@ -73,7 +72,6 @@ const LabRequisitionForm = ({ hideForm }) => {
             placeholder="First Name"
           />
           <input
-            required
             value={data.phoneNumber}
             onChange={handleChange}
             className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
@@ -85,7 +83,6 @@ const LabRequisitionForm = ({ hideForm }) => {
 
         <div className="flex space-x-8">
           <input
-            required
             value={data.lastName}
             onChange={handleChange}
             className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
@@ -94,7 +91,6 @@ const LabRequisitionForm = ({ hideForm }) => {
             placeholder="Last Name"
           />
           <input
-            required
             value={data.emailAddress}
             onChange={handleChange}
             className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
@@ -106,7 +102,6 @@ const LabRequisitionForm = ({ hideForm }) => {
 
         <div className="flex space-x-8">
           <input
-            required
             value={data.preferredDate}
             onChange={handleChange}
             className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
@@ -115,7 +110,6 @@ const LabRequisitionForm = ({ hideForm }) => {
             placeholder="Preferred Date (DD/MM/YYY)"
           />
           <input
-            required
             value={data.preferredTime}
             onChange={handleChange}
             className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
@@ -129,7 +123,7 @@ const LabRequisitionForm = ({ hideForm }) => {
           <label className="mr-4 font-medium text-gray-700">Do you already have private insurance provider?</label>
           <div className="inline-flex items-center">
             <input
-              required
+              checked={selectedOption === "yes"}
               type="radio"
               id="yes"
               name="private_insurance"
@@ -146,7 +140,7 @@ const LabRequisitionForm = ({ hideForm }) => {
           </div>
           <div className="inline-flex items-center">
             <input
-              required
+              checked={selectedOption === "no"}
               type="radio"
               id="no"
               name="private_insurance"
@@ -169,7 +163,6 @@ const LabRequisitionForm = ({ hideForm }) => {
               Upload Requisition File
             </label>
             <input
-              required
               name="file"
               className='hidden'
               id="uploadForm"
