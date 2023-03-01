@@ -5,6 +5,7 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 import { useMultiStepForm } from '../../hooks/useMultiStepForm'
 import { DiagnosticAppointmentStepOne, DiagnosticAppointmentStepThree, DiagnosticAppointmentStepTwo } from "../../sections"
 import { SVGLoaderCircles } from '../../assets'
+import LabRequisitionForm from '../../components/LabRequisitionForm'
 
 const INITIAL_DATA = {
   serviceName: "Diagnostics",
@@ -35,6 +36,7 @@ const DiagnosticsAppointmentForm = () => {
 
   const { steps, currentStepIndex, step, isFirstStep, isLastStep, next, back } = useMultiStepForm([
     <DiagnosticAppointmentStepOne />,
+    <LabRequisitionForm />,
     <DiagnosticAppointmentStepTwo {...diagnosticsFormData} updateFields={updateFields} />,
     <DiagnosticAppointmentStepThree />,
   ])
