@@ -35,6 +35,13 @@ input:checked+.toggle-switch .toggle-circle {
 .move-left {
   background-position: -100px 0px;
 }
+.bg-gradient-primary {
+  background: linear-gradient(90deg, #48ABC8 0%, #A2D2E1 100%)
+}
+
+.bg-gradient-primary-dark {
+  background: linear-gradient(90deg, #48ABC8 0%, #A2D2E1 100%);
+}
 .react-date-picker__wrapper {
   border: none !important;
 }
