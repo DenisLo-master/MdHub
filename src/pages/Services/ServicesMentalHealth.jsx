@@ -41,11 +41,11 @@ const ServicesMentalHealth = () => {
         <div className="w-full max-w-4xl mx-auto flex item-center justify-between text-center">
           <article className="space-y-6 flex flex-col items-center">
             <img src={MentalHealthImg} alt="mental health" />
-            <p className="font-body">Mental health physicians.</p>
+            <p className="font-body">Mental health frontline</p>
           </article>
           <article className="space-y-6 pt-6 flex flex-col items-center">
             <img src={HearBrainImage} alt="heart and brain" />
-            <p className="md:pt-2 font-body">Mental health therapists.</p>
+            <p className="md:pt-2 font-body">Mental health specialists</p>
           </article>
           <article className="space-y-6 flex flex-col items-center md:-mt-3">
             <img src={MeditationImage} alt="meditation" />
