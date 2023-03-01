@@ -6,6 +6,7 @@ import { ReactComponent as PharmacyIcon } from './pharmacy-icon.svg'
 import { ReactComponent as ArrowIcon } from './arrow-vector.svg'
 import { ReactComponent as OkIcon } from './ok-icon.svg'
 import { ReactComponent as OkIconPrimary } from './ok-icon-primary.svg'
+import { ReactComponent as OkIconWhite } from './ok-icon-white.svg'
 import { ReactComponent as PhoneIcon } from './phone-icon.svg'
 import { ReactComponent as LocationIcon } from './location-icon.svg'
 import { ReactComponent as ChevronLeft } from './chevron-left.svg'
@@ -25,6 +26,7 @@ import { ReactComponent as StethoscopeIcon } from './stethoscope-icon.svg'
 import { ReactComponent as StethoscopeIconWhite } from './stethoscope-icon-white.svg'
 import { ReactComponent as NursingHomecareIcon } from './nursing-homecare-icon.svg'
 import { ReactComponent as OnlinePharmacyIcon } from './online-pharmacy-icon.svg'
+import { ReactComponent as ArrowGradient } from './arrow-gradient.svg'
 import VirusTestingAndVaccination from './virus-testing-and-vaccination.png'
 import Bombardier from './bombardier.png'
 import Aloan from './aloan.png'
@@ -112,9 +114,21 @@ import PartnerCompany02 from './partner-company-02.png'
 import PartnerCompany03 from './partner-company-03.png'
 import PartnerCompany04 from './partner-company-04.png'
 import Benefit from './benefit.png'
+import HeadspaceLogo from './headspace-logo.png'
+import MedicalTreatmentAcne from './medical-treatment-acne.png'
+import MedicalTreatmentBC from './medical-treatment-birth-control.png'
+import MedicalTreatmentUTI from './medical-treatment-uti.png'
+import MedicalTreatmentED from './medical-treatment-erectile-dysfunction.png'
 
 
 export {
+  OkIconWhite,
+  ArrowGradient,
+  MedicalTreatmentAcne,
+  MedicalTreatmentBC,
+  MedicalTreatmentED,
+  MedicalTreatmentUTI,
+  HeadspaceLogo,
   Benefit,
   PartnerCompany01,
   PartnerCompany02,
