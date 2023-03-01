@@ -8,6 +8,10 @@ import {
   HowItWorks02,
   HowItWorks03,
   HowItWorks04,
+  HomeHowItWorks01,
+  HomeHowItWorks02,
+  HomeHowItWorks03,
+  HomeHowItWorks04,
   HowItWorksMobile01,
   HowItWorksMobile02,
   HowItWorksMobile03,
@@ -86,26 +90,26 @@ export const howItWorksData = [
   {
     id: 1,
     title: "Step 1",
-    image: HowItWorks01,
-    description: "Describe your symptoms.",
+    image: HomeHowItWorks01,
+    description: "Open the app or browser and click the “Get care” button. Describe your symptoms, and one of our healthcare providers will review your request in minutes.",
   },
   {
     id: 2,
     title: "Step 2",
-    image: HowItWorks02,
-    description: "Chat with a medical professional.",
+    image: HomeHowItWorks02,
+    description: "Typically, you’ll be connected with a healthcare provider over text, but they may request a video or audio chat if necessary.",
   },
   {
     id: 3,
     title: "Step 3",
-    image: HowItWorks03,
-    description: "Get a diagnosis, prescription, and if required, a lab requisition.",
+    image: HomeHowItWorks03,
+    description: "Our doctors will take the proper for each patient. They can diagnose, provide prescriptions and or lab requisitions when needed. Patients may also requests doctors not and or request a referral to specialists.",
   },
   {
     id: 4,
     title: "Step 4",
-    image: HowItWorks04,
-    description: "Utilize our services to get treatment, online pharmacy, mobile nurse, or lab testing.",
+    image: HomeHowItWorks04,
+    description: "Pharmacy, nursing, lab diagnostics, and mental health.",
   }
 ]
 
