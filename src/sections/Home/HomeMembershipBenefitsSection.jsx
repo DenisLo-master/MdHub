@@ -1,13 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
-  Membership01,
-  Membership02,
-  Membership03,
-  Membership04,
-  Membership05,
-  Membership06,
-  Membership07,
   OkIconPrimary,
   Benefit
 } from '../../assets'
