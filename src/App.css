@@ -32,6 +32,9 @@ input:checked+.toggle-switch .toggle-circle {
 .diagnostics-bg {
   background: url("./assets/diagnostics-banner.png") no-repeat center center/cover;
 }
+.move-left {
+  background-position: -100px 0px;
+}
 .react-date-picker__wrapper {
   border: none !important;
 }
