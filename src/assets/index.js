@@ -111,9 +111,11 @@ import PartnerCompany01 from './partner-company-01.png'
 import PartnerCompany02 from './partner-company-02.png'
 import PartnerCompany03 from './partner-company-03.png'
 import PartnerCompany04 from './partner-company-04.png'
+import Benefit from './benefit.png'
 
 
 export {
+  Benefit,
   PartnerCompany01,
   PartnerCompany02,
   PartnerCompany03,
