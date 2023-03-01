@@ -51,12 +51,14 @@ const HomeExploreSolutionsSection = () => {
               <p>
                 In today’s faced-paced, modern and ultra-connected world, your mental health is more important than ever. With MDHUB, you can easily get mental health support when you need it most.
               </p>
+              <Link to="/services">
               <button
                 type="button"
                 className={`rounded-full w-48 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
               >
                 Learn More
               </button>
+              </Link>
             </div>
           </div>
 
@@ -76,12 +78,14 @@ const HomeExploreSolutionsSection = () => {
                   Connect with a virtual doctor in minutes, 24/7. Or, book an appointment with a specialist – no referral needed.
                 </p>
               </div>
+              <Link to="/services/virtual-doctor">
               <button
                 type="button"
                 className={`rounded-full w-48 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
               >
                 Learn More
               </button>
+              </Link>
             </div>
           </div>
 
@@ -101,12 +105,14 @@ const HomeExploreSolutionsSection = () => {
                   </strong>
                 </p>
               </div>
+              <Link to="/services/online-pharmacy">
               <button
                 type="button"
                 className={`rounded-full w-48 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
               >
                 Learn More
               </button>
+              </Link>
             </div>
           </div>
 
@@ -123,12 +129,14 @@ const HomeExploreSolutionsSection = () => {
                   Our certified partner labs can quickly process over 300 different screenings and assays in order to provide a comprehensive health assessment.
                 </p>
               </div>
+              <Link to="/services/diagnostics">
               <button
                 type="button"
                 className={`rounded-full w-48 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
               >
                 Learn More
               </button>
+              </Link>
             </div>
           </div>
 
@@ -143,12 +151,14 @@ const HomeExploreSolutionsSection = () => {
                   Our professional nurses will come directly to you, and our team of homecare givers will be there for you when you need them. They offer compassionate care for seniors, individuals requiring post-operative care, and people with disabilities. Whether you need medical services or homecare, we can assist you with most of your needs.
                 </p>
               </div>
+              <Link to="/services/nursing-homecare">
               <button
                 type="button"
                 className={`rounded-full w-48 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
               >
                 Learn More
               </button>
+              </Link>
             </div>
           </div>
         </section>
