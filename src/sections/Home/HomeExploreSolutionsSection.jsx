@@ -16,8 +16,8 @@ const HomeExploreSolutionsSection = () => {
       <article className="flex-1 relative overflow-y-hidden h-[650px] rotating-ellipse-section flex justify-center">
         <RotatingEllipse />
       </article>
-      <article className="w-full max-w-[600px] relative font-main bg-gray-100 overflow-x-hidden">
-        <div className="absolute top-[280px] z-10 right-72 flex gap-x-1">
+      <article className="w-full max-w-[700px] relative font-main bg-gray-100 overflow-x-hidden">
+        <div className="absolute top-[280px] z-10 right-[330px] flex gap-x-1">
           <article
             onClick={() => setCurrentSlide(0)}
             className={` rounded-full w-2 h-2 ${currentSlide === 0 ? "bg-white" : "bg-gray-300"}`}
@@ -40,9 +40,9 @@ const HomeExploreSolutionsSection = () => {
           />
         </div>
         <section
-          className={`w-full flex transform transition-transform duration-300 ease-in-out ${currentSlide === 0 && "-translate-x-0"} ${currentSlide === 1 && "-translate-x-[600px]"} ${currentSlide === 2 && "-translate-x-[1200px]"} ${currentSlide === 3 && "-translate-x-[1800px]"} ${currentSlide === 4 && "-translate-x-[2400px]"}`}
+          className={`w-full flex transform transition-transform duration-300 ease-in-out ${currentSlide === 0 && "-translate-x-0"} ${currentSlide === 1 && "-translate-x-[700px]"} ${currentSlide === 2 && "-translate-x-[1400px]"} ${currentSlide === 3 && "-translate-x-[2100px]"} ${currentSlide === 4 && "-translate-x-[2800px]"}`}
         >
-          <div className={`min-w-[600px]`}>
+          <div className={`min-w-[700px]`}>
             <div className="bg-[#F6BA21] px-10 h-[304px] flex items-center gap-x-6 overflow-hidden">
               <h2 className="text-white text-[80px] leading-[70px]">mental<br /> health</h2>
               <img className="w-full max-w-[310px]" src={MentalHealthBanner} alt="Mental Health Banner" />
@@ -64,7 +64,7 @@ const HomeExploreSolutionsSection = () => {
 
 
 
-          <div className='min-w-[600px]'>
+          <div className='min-w-[700px]'>
             <div className="relative bg-[#A293FF] h-[304px] p-10 pb-20 pr-0 overflow-hidden flex items-end">
               <h2 className="text-white text-[80px] leading-[70px]">virtual<br /> doctor</h2>
               <img className="absolute top-0 right-0 w-full max-w-[270px]" src={VirtualDoctorBanner} alt="Virtual Doctor Banner" />
@@ -89,7 +89,7 @@ const HomeExploreSolutionsSection = () => {
             </div>
           </div>
 
-          <div className='min-w-[600px]'>
+          <div className='min-w-[700px]'>
             <div className="relative bg-[#90C387] h-[304px] p-10 pb-20 pr-0 overflow-hidden flex items-end">
               <h2 className="text-white text-[80px] leading-[70px]">online <br /> pharamcy</h2>
               <img className="absolute top-10 right-0 w-full max-w-[270px]" src={OnlinePharmacyBanner} alt="Online Pharmacy Banner" />
@@ -116,7 +116,7 @@ const HomeExploreSolutionsSection = () => {
             </div>
           </div>
 
-          <div className='min-w-[600px]'>
+          <div className='min-w-[700px]'>
             <div className="relative bg-[#90C387] h-[304px] diagnostics-bg move-left p-10 pb-20 pr-0 overflow-hidden flex items-end">
               <h2 className="text-white text-[80px] leading-[70px]">diagnostics</h2>
             </div>
@@ -140,7 +140,7 @@ const HomeExploreSolutionsSection = () => {
             </div>
           </div>
 
-          <div className='min-w-[600px]'>
+          <div className='min-w-[700px]'>
             <div className="relative bg-[#F78839] h-[304px] p-10 pb-20 pr-0 overflow-hidden flex items-end">
               <h2 className="text-white text-[80px] leading-[70px]">nursing & <br /> homecare</h2>
               <img className="absolute top-40 right-0 w-full max-w-[190px]" src={NursingAndHomecareBanner} alt="Nursing and Homecare Banner" />
