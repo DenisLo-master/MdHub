@@ -16,7 +16,7 @@ const LabTestingModal = () => {
   return (
     <Modal
       key="Diagnostics"
-      title="Diagnostics"
+      title="Book a nurse below"
       showModal={showLabTestingModal}
       setShowModal={setShowLabTestingModal}
     >
