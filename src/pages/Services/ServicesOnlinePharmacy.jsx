@@ -28,8 +28,8 @@ const ServicesOnlinePharmacy = () => {
                 <li>24/7 emergency service</li>
               </ul>
             </div>
-            <Link to="/register">
-              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border border-white">
+            <Link className="block" to="/register">
+              <button className="rounded-full w-[240px] mt-10 text-lg flex justify-center py-3 border border-white">
                 Sign Up Today
               </button>
             </Link>
