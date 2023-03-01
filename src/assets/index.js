@@ -119,9 +119,11 @@ import MedicalTreatmentAcne from './medical-treatment-acne.png'
 import MedicalTreatmentBC from './medical-treatment-birth-control.png'
 import MedicalTreatmentUTI from './medical-treatment-uti.png'
 import MedicalTreatmentED from './medical-treatment-erectile-dysfunction.png'
+import LogoWhite from './logo-white.png'
 
 
 export {
+  LogoWhite,
   OkIconWhite,
   ArrowGradient,
   MedicalTreatmentAcne,
