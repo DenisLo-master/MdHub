@@ -8,6 +8,52 @@ const SignupStepThree = () => {
   const setPaymentMode = registerationStore(state => state.setPaymentMode)
   const childForms = registerationStore(state => state.childForms)
 
+  const calculatePricing = (accountType) => {
+    const individualMonthlyPrice = 34.99 * 3
+    const individualYearlyPrice = 29.99 * 12
+    const familyMonthlyPrice = 54.99 * 3
+    const familyYearlyPrice = 44.99 * 12
+    const corporatePrice = 19.99 * 12
+    const onDemandPrice = 99
+    const taxFactor = 0.09975
+    return accountType === "individualMonthly" ?
+      {
+        tax: individualMonthlyPrice * taxFactor,
+        totalAmount: individualMonthlyPrice,
+        totalAmountPlusTax: individualMonthlyPrice + individualMonthlyPrice * taxFactor
+      } :
+      accountType === "individualYearly" ?
+        {
+          tax: individualYearlyPrice * taxFactor,
+          totalAmount: individualYearlyPrice,
+          totalAmountPlusTax: individualYearlyPrice + individualYearlyPrice * taxFactor
+        } :
+        accountType === "familyMonthly" ?
+          {
+            tax: familyMonthlyPrice * taxFactor,
+            totalAmount: familyMonthlyPrice,
+            totalAmountPlusTax: familyMonthlyPrice + familyMonthlyPrice * taxFactor
+          } :
+          accountType === "familyYearly" ?
+            {
+              tax: familyYearlyPrice * taxFactor,
+              totalAmount: familyYearlyPrice,
+              totalAmountPlusTax: familyYearlyPrice + familyYearlyPrice * taxFactor
+            } :
+            accountType === "corporate" ?
+              {
+                tax: corporatePrice * taxFactor,
+                totalAmount: corporatePrice,
+                totalAmountPlusTax: corporatePrice + corporatePrice * taxFactor
+              } :
+              {
+                tax: onDemandPrice * taxFactor,
+                totalAmount: onDemandPrice,
+                totalAmountPlusTax: onDemandPrice + onDemandPrice * taxFactor
+              }
+  }
+
+
   return (
     <section className="space-y-6">
       <article className="w-full self-start pt-8 pb-4 mb-4 ">
@@ -93,15 +139,25 @@ const SignupStepThree = () => {
                     <div>
                       <div className="flex gap-x-4">
                         <p>3 months initial signup</p>
-                        <h3>${34.99 * 3}</h3>
+                        <h3>${calculatePricing("individualMonthly").totalAmount.toFixed(2)}</h3>
                       </div>
-                      <h3>Tax: $47.78</h3>
-                      <h2 className="text-3xl">Total: <strong>${Math.floor(34.99 * 3 + 47.78)}</strong></h2>
+                      <h3>${calculatePricing("individualMonthly").tax.toFixed(2)}</h3>
+                      <h2 className="text-3xl">
+                        Total:
+                        <strong>
+                          ${calculatePricing("individualMonthly").totalAmountPlusTax.toFixed(2)}
+                        </strong>
+                      </h2>
                     </div> :
                     <div>
-                      <h3>${29.99 * 12}</h3>
-                      <h3>Tax: $47.78</h3>
-                      <h2 className="text-3xl">Total: <strong>${Math.floor(29.99 * 12 + 47.78)}</strong></h2>
+                      <h3>${calculatePricing("individualYearly").totalAmount.toFixed(2)}</h3>
+                      <h3>${calculatePricing("individualYearly").tax.toFixed(2)}</h3>
+                      <h2 className="text-3xl">
+                        Total:
+                        <strong>
+                          ${calculatePricing("individualYearly").totalAmountPlusTax.toFixed(2)}
+                        </strong>
+                      </h2>
                     </div>
                 ) :
                 selectedAccountType === "family" ?
@@ -110,30 +166,45 @@ const SignupStepThree = () => {
                       <div>
                         <div className="flex gap-x-4">
                           <p>3 months initial signup</p>
-                          <h3>${54.99 * 3}</h3>
+                          <h3>${calculatePricing("familyMonthly").totalAmount}</h3>
                         </div>
-                        <h3>Tax: $47.78</h3>
-                        <h2 className="text-3xl">Total: <strong>${Math.floor(54.99 * 3 + 47.78)}</strong></h2>
+                        <h3>${calculatePricing("familyMonthly").tax.toFixed(2)}</h3>
+                        <h2 className="text-3xl">Total: <strong>${calculatePricing("familyMonthly").totalAmountPlusTax.toFixed(2)}</strong></h2>
                       </div> :
                       <div>
-                        <h3>${44.99 * 12}</h3>
-                        <h3>Tax: $47.78</h3>
-                        <h2 className="text-3xl">Total: <strong>${Math.floor(44.99 * 12 + 47.78)}</strong></h2>
+                        <h3>${calculatePricing("familyYearly").totalAmount.toFixed(2)}</h3>
+                        <h3>${calculatePricing("familyYearly").tax.toFixed(2)}</h3>
+                        <h2 className="text-3xl">
+                          Total:
+                          <strong>
+                            ${calculatePricing("familyYearly").totalAmountPlusTax.toFixed(2)}
+                          </strong>
+                        </h2>
                       </div>
                   ) : selectedAccountType === "corporate" ?
                   (
                     <div>
-                        <h3>${Math.floor(19.99 * (childForms.length + 1) * 12)}</h3>
-                      <h3>Tax: $47.78</h3>
-                      <h2 className="text-3xl">Total: <strong>${Math.floor(19.99 * 120 + 47.78)}</strong></h2>
+                        <h3>${calculatePricing("corporate").totalAmount.toFixed(2)}</h3>
+                        <h3>${calculatePricing("corporate").tax.toFixed(2)}</h3>
+                        <h2 className="text-3xl">
+                          Total:
+                          <strong>
+                            {calculatePricing("corporate").totalAmountPlusTax.toFixed(2)}
+                          </strong>
+                        </h2>
                     </div>
 
                     ) :
                     (
                       <div>
-                        <h3>$99</h3>
-                        <h3>Tax: $47.78</h3>
-                        <h2 className="text-3xl">Total: <strong>${Math.floor(99 + 47.78)}</strong></h2>
+                        <h3>${calculatePricing("on demand").totalAmount.toFixed(2)}</h3>
+                        <h3>${calculatePricing("on demand").tax.toFixed(2)}</h3>
+                        <h2 className="text-3xl">
+                          Total:
+                          <strong>
+                            ${calculatePricing("on demand").totalAmountPlusTax.toFixed(2)}
+                          </strong>
+                        </h2>
                       </div>
                     )
             }
