@@ -120,7 +120,7 @@ const LabRequisitionForm = ({ hideForm }) => {
         </div>
 
         <div className="flex items-center pt-2">
-          <label className="mr-4 font-medium text-gray-700">Do you already have private insurance provider?</label>
+          <label className="mr-4 font-medium text-gray-700">do you currently have private insurance</label>
           <div className="inline-flex items-center">
             <input
               checked={selectedOption === "yes"}
