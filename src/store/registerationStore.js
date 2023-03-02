@@ -53,6 +53,10 @@ const initialUserInfoData = {
 }
 
 export const registerationStore = create((set) => ({
+  country: '',
+  region: '',
+  setCountry: (country) => set({ country: country }),
+  setRegion: (region) => set({ region: region }),
   formStep: 0,
   selectedAccountType: 'individual',
   paymentMode: "yearly",
