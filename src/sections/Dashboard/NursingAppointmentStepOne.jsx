@@ -19,6 +19,7 @@ const NursingAppointmentStepOne = () => {
   const setSelectedNursingOptions = registerationStore(state => state.setSelectedNursingOptions)
   const selectedHomecareOptions = registerationStore(state => state.selectedHomecareOptions)
   const setSelectedHomecareOptions = registerationStore(state => state.setSelectedHomecareOptions)
+  const [additionalService, setAdditionalService] = useState("")
 
 
   const handleNursingServicesChange = (selectedList) => {
@@ -61,6 +62,14 @@ const NursingAppointmentStepOne = () => {
           <label htmlFor="labReq">
             OPTIONAL: Upload Requisition if needed
           </label>
+        </div>
+        <div className="py-4">
+          <textarea
+            className="w-full rounded-lg h-44 p-4 outline-none focus:ring-1 ring-primary bg-[#f1f1f1]"
+            placeholder="Can’t find the service you are looking for? Please describe the service in the field."
+            value={additionalService}
+            onChange={({ target }) => setAdditionalService(target.value)}
+          />
         </div>
       </div>
       {
