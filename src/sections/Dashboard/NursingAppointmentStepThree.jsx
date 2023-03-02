@@ -8,11 +8,11 @@ const NursingAppointmentStepThree = () => {
 
   const getAmount = () => {
     if (selectedHomecareOptions.length && selectedNursingOptions.length) {
-      return (99 + 59.99)
-    } else if (!selectedHomecareOptions.length && selectedNursingOptions.length) {
-      return 99
-    } else {
+      return (99)
+    } else if (selectedHomecareOptions.length && !selectedNursingOptions.length) {
       return 59.99
+    } else {
+      return 99
     }
   }
   return (
