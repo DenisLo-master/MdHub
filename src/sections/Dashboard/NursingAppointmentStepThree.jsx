@@ -21,7 +21,7 @@ const NursingAppointmentStepThree = () => {
         <article className="space-y-4">
           <h2 className="text-2xl">Your Order</h2>
           <h3 className="font-body">
-            1 hour minimum nursing fee: $99
+            1 hour minimum nursing fee: ${getAmount()}
           </h3>
         </article>
         <article className="space-y-4 text-right">
