@@ -47,7 +47,7 @@ const ServicesOnlinePharmacy = () => {
           <div className="w-[400px] overflow-hidden">
             {
               WORDS.map(word => (
-                <span className="md:text-6xl left-[720px] 2xl:left-[800px]">
+                <span className="md:text-6xl left-[720px] 2xl:left-[800px] min-[1700px]:left-[875px]">
                   {word}
                 </span>
               ))
