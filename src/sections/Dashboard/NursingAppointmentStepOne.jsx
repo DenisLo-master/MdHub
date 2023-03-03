@@ -5,6 +5,21 @@ import { nursingServices, homecareServices } from '../../constants'
 import { registerationStore } from '../../store/registerationStore'
 import LabRequisitionForm from '../../components/LabRequisitionForm'
 
+const options = [
+  {
+    label: 'Nursing Services',
+    options: nursingServices.map(item => (
+      { value: item, label: item }
+    ))
+  },
+  {
+    label: 'Homecare Services',
+    options: homecareServices.map(item => (
+      { value: item, label: item }
+    ))
+  }
+]
+
 const nursingServicesData = nursingServices.map(item => (
   { value: item, label: item }
 ))
@@ -15,20 +30,35 @@ const homecareServicesData = homecareServices.map(item => (
 
 const NursingAppointmentStepOne = () => {
   const [reqNeeded, setReqNeeded] = useState(false)
-  const selectedNursingOptions = registerationStore(state => state.selectedNursingOptions)
-  const setSelectedNursingOptions = registerationStore(state => state.setSelectedNursingOptions)
-  const selectedHomecareOptions = registerationStore(state => state.selectedHomecareOptions)
-  const setSelectedHomecareOptions = registerationStore(state => state.setSelectedHomecareOptions)
+  const setNursingAppointmentBill = registerationStore(state => state.setNursingAppointmentBill)
+  const selectedNursingHomecareOptions = registerationStore(state => state.selectedNursingHomecareOptions)
+  const setSelectedNursingHomecareOptions = registerationStore(state => state.setSelectedNursingHomecareOptions)
   const [additionalService, setAdditionalService] = useState("")
 
+  const handleSelect = (selectedOption) => {
+    setSelectedNursingHomecareOptions(selectedOption);
 
-  const handleNursingServicesChange = (selectedList) => {
-    setSelectedNursingOptions(selectedList);
-  };
+    const nursingSelected = selectedOption.some(option =>
+      options[0].options.some(o => o.value === option.value)
+    );
 
-  const handleHomecareServicesChange = (selectedList) => {
-    setSelectedHomecareOptions(selectedList);
-  };
+    const homecareSelected = selectedOption.some(option =>
+      options[1].options.some(o => o.value === option.value)
+    );
+
+
+    if (nursingSelected && homecareSelected) {
+      setNursingAppointmentBill(99);
+    } else if (nursingSelected) {
+      setNursingAppointmentBill(99);
+    } else if (homecareSelected) {
+      setNursingAppointmentBill(59.99);
+    } else {
+      setNursingAppointmentBill(null);
+    }
+  }
+
+  console.log(selectedNursingHomecareOptions)
 
   return (
     <div>
@@ -36,18 +66,11 @@ const NursingAppointmentStepOne = () => {
         <p className="text-xl pb-4">Please select the services of your need.</p>
         <div className="space-y-3">
           <Select
-            options={nursingServicesData}
-            value={selectedNursingOptions}
-            onChange={handleNursingServicesChange}
+            value={selectedNursingHomecareOptions}
+            onChange={handleSelect}
+            options={options}
             isMulti
-            placeholder="Select Nursing Services"
-          />
-          <Select
-            options={homecareServicesData}
-            value={selectedHomecareOptions}
-            onChange={handleHomecareServicesChange}
-            isMulti
-            placeholder="Select Homecare Services"
+            placeholder="Select services"
           />
         </div>
         <div className="py-4">
