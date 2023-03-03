@@ -4,6 +4,39 @@ import Button from '../../components/Button'
 import { HeroGif, HeroBg } from '../../assets'
 import { Link } from 'react-router-dom'
 
+const WORDS = [
+  "diagnosis",
+  "prescriptions & renewals",
+  "doctors notes",
+  "referrals to specialists",
+  "mental health",
+  "general health advise",
+  "lab requisitions",
+  "anxiety",
+  "mood changes",
+  "depression",
+  // "seasonal depression",
+  // "insomnia",
+  // "stress",
+  // "birth control",
+  // "erectile dysfunction",
+  // "plan b",
+  // "antibiotics",
+  // "pain control and management",
+  // "mental health medication",
+  // "virus",
+  // "urine",
+  // "blood",
+  // "covid",
+  // "mobile vaccination",
+  // "wound care and treatment",
+  // "palliative care",
+  // "post surgery care",
+  // "IV medication",
+  // "injection infusions",
+  // "vital signs monitoring"
+]
+
 const HomeHeroSection = () => {
   return (
     <div className="md:py-20 bg-white">
@@ -36,9 +69,20 @@ const HomeHeroSection = () => {
           <img alt="Hero Bg" src={HeroBg} className="absolute max-w-[550px] top-0 right-16 z-0" />
         </article>
       </section>
-      <h2 data-aos="fade-up" className="text-primary text-center font-main text-5xl md:text-7xl py-10">
-        Get care today for <span className="text-gray-800">reproductive health.</span>
-      </h2>
+      <div className="relative homepage text-center flex justify-center flip-words">
+        <h2 className="text-primary text-center text-5xl md:text-6xl relative right-[245px]">
+          Get care today for
+        </h2>
+        <div>
+          {
+            WORDS.map(word => (
+              <span className="md:text-6xl left-[780px] 2xl:left-[850px]">
+                {word}
+              </span>
+            ))
+          }
+        </div>
+      </div>
     </div>
   )
 }
