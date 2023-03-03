@@ -47,13 +47,13 @@ const ServicesVirtualDoctor = () => {
 
       <section className="bg-white py-14">
         <div className="relative virtual-health text-center flex justify-center flip-words">
-          <h2 className="text-primary text-center text-5xl md:text-6xl relative right-[150px]">
+          <h2 className="text-primary text-center text-5xl md:text-6xl relative right-[150px] 2xl:right-[200px]">
             Get care today for
           </h2>
           <div>
             {
               WORDS.map(word => (
-                <span className="md:text-6xl">
+                <span className="md:text-6xl left-[850px] 2xl:left-[870px]">
                   {word}
                 </span>
               ))
