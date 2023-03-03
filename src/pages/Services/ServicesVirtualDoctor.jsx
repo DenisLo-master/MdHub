@@ -16,6 +16,8 @@ import {
 
 import { virtualDoctorHowItWorksData } from '../../constants'
 
+const WORDS = ["diagnosis", "prescriptions & renewals", "doctors notes", "referrals to specialists", "mental health", "general health advise", "lab requisitions"]
+
 const ServicesVirtualDoctor = () => {
   return (
     <section className="font-main py-10">
@@ -44,9 +46,20 @@ const ServicesVirtualDoctor = () => {
       </header>
 
       <section className="bg-white py-14">
-        <h2 className="text-primary text-center text-5xl md:text-7xl">
-          Get care today for <span className="text-gray-800">birth control pills.</span>
-        </h2>
+        <div className="relative virtual-health text-center flex justify-center flip-words">
+          <h2 className="text-primary text-center text-5xl md:text-6xl relative right-[150px]">
+            Get care today for
+          </h2>
+          <div>
+            {
+              WORDS.map(word => (
+                <span className="md:text-6xl">
+                  {word}
+                </span>
+              ))
+            }
+          </div>
+        </div>
         <h3 className="text-center text-4xl md:text-5xl py-20">
           Don't just take it from us
         </h3>
