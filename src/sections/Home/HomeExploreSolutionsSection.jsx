@@ -7,6 +7,7 @@ import {
   OnlinePharmacyBanner,
   NursingAndHomecareBanner
 } from '../../assets'
+import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-icons/bs'
 import RotatingEllipse from '../../components/RotatingEllipse'
 
 const HomeExploreSolutionsSection = () => {
@@ -38,6 +39,22 @@ const HomeExploreSolutionsSection = () => {
             className={`bg-white rounded-full w-2 h-2 ${currentSlide === 4 ? "bg-white" : "bg-gray-300"}`}
             onClick={() => setCurrentSlide(4)}
           />
+        </div>
+        <div className="absolute z-10 left-4 top-36 2xl:top-44">
+          <button
+            disabled={currentSlide < 1}
+            onClick={() => setCurrentSlide(currentSlide + 1)}
+          >
+            <BsFillArrowLeftCircleFill className="text-gray-600 text-3xl" />
+          </button>
+        </div>
+        <div className="absolute z-10 right-4 top-36 2xl:top-44">
+          <button
+            disabled={currentSlide > 3}
+            onClick={() => setCurrentSlide(currentSlide + 1)}
+          >
+            <BsFillArrowRightCircleFill className="text-gray-600 text-3xl" />
+          </button>
         </div>
         <section
           className={`w-full flex transform transition-transform duration-300 ease-in-out ${currentSlide === 0 && "-translate-x-0"} ${currentSlide === 1 && "-translate-x-[700px] 2xl:-translate-x-[800px]"} ${currentSlide === 2 && "-translate-x-[1400px] 2xl:-translate-x-[1600px]"} ${currentSlide === 3 && "-translate-x-[2100px] 2xl:-translate-x-[2400px]"} ${currentSlide === 4 && "-translate-x-[2800px] 2xl:-translate-x-[3200px]"}`}
