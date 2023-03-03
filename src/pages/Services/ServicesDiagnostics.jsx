@@ -37,7 +37,7 @@ const ServicesDiagnostics = () => {
           <div>
             {
               WORDS.map(word => (
-                <span className="md:text-6xl left-[850px] 2xl:left-[918px]">
+                <span className="md:text-6xl left-[850px] 2xl:left-[918px] min-[1700px]:left-[987px]">
                   {word}
                 </span>
               ))
