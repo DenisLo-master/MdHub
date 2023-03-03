@@ -30,7 +30,7 @@ const initialRegistrationFormData = {
   postalCode: '',
   country: '',
   region: '',
-  dateOfBirth: new Date(),
+  dateOfBirth: "",
   gender: "male"
 }
 

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { BsPlusCircle } from 'react-icons/bs'
 import { registerationStore } from '../../store/registerationStore'
-import DatePicker from 'react-date-picker'
 import Select from 'react-select'
 
 
@@ -19,14 +18,11 @@ const ParentAccountForm = () => {
   const childForms = registerationStore(state => state.childForms)
   const [selectedGender, setSelectedGender] = useState(null)
 
+
   const handleDateChange = (date) => {
     handleRegisterationFormDataChange("dateOfBirth", date)
   }
 
-  const handleGenderChange = (selectedOption) => {
-    handleRegisterationFormDataChange("gender", selectedOption.value)
-    setSelectedGender(selectedOption)
-  }
   return (
     <div className="py-16 border space-y-4 px-8 shadow-cardService rounded-[35px] text-primary relative">
       <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
@@ -94,13 +90,12 @@ const ParentAccountForm = () => {
         </div>
 
         <div className="flex-1 flex">
-          <DatePicker
-            placeholderText='Please select a date'
-            value={registerationFormData.dateOfBirth}
-            className="flex-1 py-2 rounded-full bg-white appearance-none px-4 border outline-none focus:ring ring-dark"
-            onChange={(date) => handleDateChange(date)}
-            format="dd-MM-y"
-
+          <input
+            className="flex-1 rounded-full text-lg focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
+            type="text"
+            value={registerationFormData.dateOfBirth} 
+            onChange={({ target }) => handleDateChange(target.value)}
+            placeholder="Date of Birth (mm/dd/yyy)"
           />
         </div>
       </div>
