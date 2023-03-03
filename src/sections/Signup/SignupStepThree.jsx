@@ -7,6 +7,12 @@ const SignupStepThree = () => {
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
   const setPaymentMode = registerationStore(state => state.setPaymentMode)
   const childForms = registerationStore(state => state.childForms)
+  const individualMonthlyFee = registerationStore(state => state.individualMonthlyFee)
+  const individualYearlyFee = registerationStore(state => state.individualYearlyFee)
+  const familyYearlyFee = registerationStore(state => state.familyYearlyFee)
+  const familyMonthlyFee = registerationStore(state => state.familyMonthlyFee)
+  const onDemandFee = registerationStore(state => state.onDemandFee)
+  const corporateFee = registerationStore(state => state.corporateFee)
 
   const calculatePricing = (accountType) => {
     const individualMonthlyPrice = 34.99 * 3
@@ -137,23 +143,25 @@ const SignupStepThree = () => {
                 (
                   paymentMode === "monthly" ?
                     <div>
+                      <h3>${individualMonthlyFee}</h3>
                       <div className="flex gap-x-4">
                         <p>3 months initial signup</p>
                         <h3>${calculatePricing("individualMonthly").totalAmount.toFixed(2)}</h3>
                       </div>
                       <h3>${calculatePricing("individualMonthly").tax.toFixed(2)}</h3>
                       <h2 className="text-3xl">
-                        Total:
+                        <span className="pr-2">Total:</span>
                         <strong>
                           ${calculatePricing("individualMonthly").totalAmountPlusTax.toFixed(2)}
                         </strong>
                       </h2>
                     </div> :
                     <div>
+                      <h3>${individualYearlyFee}</h3>
                       <h3>${calculatePricing("individualYearly").totalAmount.toFixed(2)}</h3>
                       <h3>${calculatePricing("individualYearly").tax.toFixed(2)}</h3>
                       <h2 className="text-3xl">
-                        Total:
+                        <span className="pr-2">Total:</span>
                         <strong>
                           ${calculatePricing("individualYearly").totalAmountPlusTax.toFixed(2)}
                         </strong>
@@ -164,18 +172,25 @@ const SignupStepThree = () => {
                   (
                     paymentMode === "monthly" ?
                       <div>
+                        <h3>${familyMonthlyFee}</h3>
                         <div className="flex gap-x-4">
                           <p>3 months initial signup</p>
                           <h3>${calculatePricing("familyMonthly").totalAmount}</h3>
                         </div>
                         <h3>${calculatePricing("familyMonthly").tax.toFixed(2)}</h3>
-                        <h2 className="text-3xl">Total: <strong>${calculatePricing("familyMonthly").totalAmountPlusTax.toFixed(2)}</strong></h2>
+                        <h2 className="text-3xl">
+                          <span className="pr-2">Total:</span>
+                          <strong>
+                            ${calculatePricing("familyMonthly").totalAmountPlusTax.toFixed(2)}
+                          </strong>
+                        </h2>
                       </div> :
                       <div>
+                        <h3>${familyYearlyFee}</h3>
                         <h3>${calculatePricing("familyYearly").totalAmount.toFixed(2)}</h3>
                         <h3>${calculatePricing("familyYearly").tax.toFixed(2)}</h3>
                         <h2 className="text-3xl">
-                          Total:
+                          <span className="pr-2">Total:</span>
                           <strong>
                             ${calculatePricing("familyYearly").totalAmountPlusTax.toFixed(2)}
                           </strong>
@@ -184,10 +199,11 @@ const SignupStepThree = () => {
                   ) : selectedAccountType === "corporate" ?
                   (
                     <div>
+                        <h3>${corporateFee}</h3>
                         <h3>${calculatePricing("corporate").totalAmount.toFixed(2)}</h3>
                         <h3>${calculatePricing("corporate").tax.toFixed(2)}</h3>
                         <h2 className="text-3xl">
-                          Total:
+                          <span className="pr-2">Total:</span>
                           <strong>
                             {calculatePricing("corporate").totalAmountPlusTax.toFixed(2)}
                           </strong>
@@ -197,10 +213,11 @@ const SignupStepThree = () => {
                     ) :
                     (
                       <div>
+                        <h3>${onDemandFee}</h3>
                         <h3>${calculatePricing("on demand").totalAmount.toFixed(2)}</h3>
                         <h3>${calculatePricing("on demand").tax.toFixed(2)}</h3>
                         <h2 className="text-3xl">
-                          Total:
+                          <span className="pr-2">Total:</span>
                           <strong>
                             ${calculatePricing("on demand").totalAmountPlusTax.toFixed(2)}
                           </strong>

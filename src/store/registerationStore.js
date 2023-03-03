@@ -61,6 +61,8 @@ export const registerationStore = create((set) => ({
   individualMonthlyFee: '34.99',
   familyMonthlyFee: "54.99",
   familyYearlyFee: "44.99",
+  onDemandFee: "99",
+  corporateFee: "19.99",
   selectedNursingOptions: [],
   selectedHomecareOptions: [],
   setSelectedNursingOptions: (list) => set({ selectedNursingOptions: list }),
