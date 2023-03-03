@@ -23,11 +23,6 @@ const Slider = () => {
           className={`transition-colors ease-in duration-200 px-8 py-2 rounded-full ${currentSlide === 2 ? "bg-primary text-white" : "bg-[#F1F1F1] text-gray-800"}`}>
           Step 3
         </button>
-        <button
-          onClick={() => setCurrentSlide(3)}
-          className={`transition-colors ease-in duration-200 px-8 py-2 rounded-full ${currentSlide === 3 ? "bg-primary text-white" : "bg-[#F1F1F1] text-gray-800"}`}>
-          Step 4
-        </button>
       </div>
       <div className="w-full max-w-3xl mx-auto overflow-hidden rounded-[35px]">
         <div className={`w-full flex transform transition-transform duration-300 ease-in-out text-2xl tracking-normal ${currentSlide === 0 ? "translate-x-0" : currentSlide === 1 ? "-translate-x-[375px] md:-translate-x-[768px]" : currentSlide === 2 ? "-translate-x-[750px] md:-translate-x-[1536px]" : "-translate-x-[1125px] md:-translate-x-[2304px]"} text-gray-800 font-body`}>
@@ -41,7 +36,7 @@ const Slider = () => {
                   <h2 className="font-main font-light max-w-[140px] text-5xl border-b border-[#3F3F3F] pb-2">
                     {item.title}
                   </h2>
-                  <p className="text-light text-base pt-4 max-w-[300px]">
+                  <p className="text-light text-base pt-4 max-w-[280px]">
                     {item.description}
                   </p>
                 </div>
