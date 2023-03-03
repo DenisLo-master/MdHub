@@ -5,10 +5,6 @@ import { BiCaretDown } from 'react-icons/bi'
 
 const SignupStepTwo = () => {
   const registerationFormData = registerationStore(state => state.registerationFormData)
-  const country = registerationStore(state => state.country)
-  const setCountry = registerationStore(state => state.setCountry)
-  const region = registerationStore(state => state.region)
-  const setRegion = registerationStore(state => state.setRegion)
   const handleRegisterationFormDataChange = registerationStore(state => state.handleRegisterationFormDataChange)
 
   return (
@@ -27,6 +23,26 @@ const SignupStepTwo = () => {
       </article>
       <div className="py-16 border space-y-4 px-8 shadow-cardService rounded-[35px] text-primary">
         <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
+          <div className="flex-1 relative">
+            <CountryDropdown
+              defaultOptionLabel="Select Country"
+              classes='outline-none w-full bg-white  appearance-none rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border'
+              value={registerationFormData.country}
+              onChange={(val) => handleRegisterationFormDataChange("country", val)} />
+            <BiCaretDown className="absolute text-2xl right-4 top-[10px]" />
+          </div>
+          <div className="flex-1 relative">
+            <RegionDropdown
+              defaultOptionLabel="Select Province/State"
+              blankOptionLabel="Select Province/State"
+              classes='outline-none w-full bg-white appearance-none rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border'
+              country={registerationFormData.country}
+              value={registerationFormData.region}
+              onChange={(val) => handleRegisterationFormDataChange("region", val)} />
+            <BiCaretDown className="absolute text-2xl right-4 top-[10px]" />
+          </div>
+        </div>
+        <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
           <input
             className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
             name="address"
@@ -36,23 +52,14 @@ const SignupStepTwo = () => {
             onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
             required
           />
+        </div>
+        <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
           <input
             className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
             name="city"
             type="text"
             placeholder="City*"
             value={registerationFormData.city}
-            onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
-            required
-          />
-        </div>
-        <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
-          <input
-            className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-            name="province"
-            type="text"
-            placeholder="Province*"
-            value={registerationFormData.province}
             onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
             required
           />
@@ -65,38 +72,6 @@ const SignupStepTwo = () => {
             onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
             required
           />
-        </div>
-        <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
-          <div className="flex-1 relative">
-            <CountryDropdown
-              defaultOptionLabel="Select Country"
-              classes='outline-none w-full bg-white  appearance-none rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border'
-              value={country}
-              onChange={(val) => setCountry(val)} />
-            <BiCaretDown className="absolute text-2xl right-4 top-[10px]" />
-          </div>
-          <div className="flex-1 relative">
-            <RegionDropdown
-              defaultOptionLabel="Select Province/State"
-              blankOptionLabel="Select Province/State"
-              classes='outline-none w-full bg-white appearance-none rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border'
-              country={country}
-              value={region}
-              onChange={(val) => setRegion(val)} />
-            <BiCaretDown className="absolute text-2xl right-4 top-[10px]" />
-          </div>
-        </div>
-        <div className="w-full flex">
-          <button
-            type="button"
-            className="flex-1 text-center rounded-full text-xl bg-primary text-white focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-            name="country"
-            value="Canada"
-            placeholder="Password*"
-            required
-          >
-            Canada
-          </button>
         </div>
       </div>
     </section>
