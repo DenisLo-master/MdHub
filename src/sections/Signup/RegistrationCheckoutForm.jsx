@@ -101,7 +101,7 @@ const RegistrationCheckoutForm = () => {
         })
         await response.json()
         if (response.ok) {
-          toast.success("Successfully created your account", {
+          toast.success("Thanks for joining MDHUB, please login below to access your dashboard", {
             id: "Register"
           })
           navigate('/login')
