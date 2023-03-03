@@ -12,8 +12,8 @@ import RotatingEllipse from '../../components/RotatingEllipse'
 const HomeExploreSolutionsSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   return (
-    <section className="flex flex-col md:flex-row pb-20 overflow-y-hidden">
-      <article className="flex-1 relative overflow-y-hidden h-[650px] rotating-ellipse-section flex justify-center">
+    <section className="flex flex-col md:flex-row md:items-start pb-20">
+      <article className="flex-1 relative rotating-ellipse-section flex justify-center">
         <RotatingEllipse />
       </article>
       <article className="w-full max-w-[700px] 2xl:max-w-[800px] relative font-main bg-gray-100 overflow-x-hidden">
@@ -47,7 +47,7 @@ const HomeExploreSolutionsSection = () => {
               <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">mental<br /> health</h2>
               <img className="w-full max-w-[310px]" src={MentalHealthBanner} alt="Mental Health Banner" />
             </div>
-            <div className="p-6 h-[320px] w-full max-w-[471px] 2xl:max-w-[530px] font-body flex flex-col justify-between">
+            <div className="p-6 pb-8 w-full h-[300px] max-w-[471px] 2xl:max-w-[530px] font-body flex flex-col justify-between">
               <p className="text-lg 2xl:text-xl">
                 In today’s faced-paced, modern and ultra-connected world, your mental health is more important than ever. With MDHUB, you can easily get mental health support when you need it most.
               </p>
@@ -69,7 +69,7 @@ const HomeExploreSolutionsSection = () => {
               <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">virtual<br /> doctor</h2>
               <img className="absolute top-0 right-0 w-full max-w-[270px] 2xl:max-w-[320px]" src={VirtualDoctorBanner} alt="Virtual Doctor Banner" />
             </div>
-            <div className="p-6 font-body h-[320px] w-full max-w-[471px] 2xl:max-w-[530px] flex flex-col justify-between">
+            <div className="p-6 font-body w-full max-w-[471px] 2xl:max-w-[530px] flex flex-col justify-between">
               <div className="w-full space-y-3 text-lg 2xl:text-xl">
                 <p>
                   Treatment and diagnosis for 70% of medical issues can be done virtually.
@@ -94,7 +94,7 @@ const HomeExploreSolutionsSection = () => {
               <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">online <br /> pharamcy</h2>
               <img className="absolute top-10 2xl:top-20 right-0 w-full max-w-[270px] 2xl:max-w-[320px]" src={OnlinePharmacyBanner} alt="Online Pharmacy Banner" />
             </div>
-            <div className="p-6 h-[320px] w-full max-w-[471px] 2xl:max-w-[530px] flex flex-col justify-between">
+            <div className="p-6 pb-8 w-full max-w-[471px] 2xl:max-w-[530px] flex flex-col justify-between">
               <div className="space-y-3 text-lg 2xl:text-xl font-body">
                 <p>
                   Stop wasting time chasing down refills or waiting in line. Easily access our online pharmacy to get prescriptions filled or renewed and delivered right to your door.
@@ -120,7 +120,7 @@ const HomeExploreSolutionsSection = () => {
             <div className="relative bg-[#90C387] h-[304px] 2xl:h-[370px] diagnostics-bg p-10 pb-20 pr-0 overflow-hidden flex items-end">
               <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">diagnostics</h2>
             </div>
-            <div className="p-6 h-[320px] w-full max-w-[471px] 2xl:max-w-[530px] flex flex-col justify-between">
+            <div className="p-6 pb-8 w-full max-w-[471px] 2xl:max-w-[530px] flex flex-col justify-between">
               <div className="space-y-3 text-lg 2xl:text-xl font-body">
                 <p>
                   Safe, fast and professional testing on your schedule in the comfort and privacy of your own home or office. Avoid the wait at hospitals and clinics.
@@ -145,7 +145,7 @@ const HomeExploreSolutionsSection = () => {
               <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">nursing & <br /> homecare</h2>
               <img className="absolute top-40 right-0 w-full max-w-[190px] 2xl:max-w-[260px]" src={NursingAndHomecareBanner} alt="Nursing and Homecare Banner" />
             </div>
-            <div className="p-6 h-[320px] w-full max-w-[471px] 2xl:max-w-[530px] flex flex-col justify-between">
+            <div className="p-6 pb-8 w-full max-w-[471px] 2xl:max-w-[530px] flex flex-col justify-between">
               <div className="space-y-3 text-lg 2xl:text-xl font-body">
                 <p>
                   Our professional nurses will come directly to you, and our team of homecare givers will be there for you when you need them. They offer compassionate care for seniors, individuals requiring post-operative care, and people with disabilities. Whether you need medical services or homecare, we can assist you with most of your needs.
