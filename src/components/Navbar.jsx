@@ -74,7 +74,7 @@ const Navbar = () => {
           </ul>
           {
             token ? (
-              <div className="lg:pr-24 flex gap-x-4 items-center">
+              <div className="flex gap-x-4 items-center px-8">
                 <Link to="/dashboard">
                   <button
                     className="rounded-full px-9 py-1 border border-primary text-white bg-primary hover:bg-transparent hover:text-primary transition-all ease-in-out duration-300">
@@ -89,7 +89,7 @@ const Navbar = () => {
               </div>
             ):
             (
-              <div className="lg:pr-24 text-light text-base space-x-4 font-main font-light">
+                <div className="text-light text-base space-x-4 font-main font-light">
                 <Link to="/login">
                   <button className="rounded-full px-9 py-1 border border-primary text-primary bg-transparent hover:bg-primary hover:text-white transition-all ease-in-out duration-300">
                     Login
@@ -104,7 +104,7 @@ const Navbar = () => {
             )
           }
         </article>
-        <article onClick={() => setShowDrawer(!showDrawer)} className="absolute cursor-pointer flex flex-col justify-center space-y-1 top-0 right-0 bg-primary text-white py-6 px-4 md:py-[1.7rem] lg:py-8 md:px-6">
+        <article onClick={() => setShowDrawer(!showDrawer)} className="md:hidden absolute cursor-pointer flex flex-col justify-center space-y-1 top-0 right-0 bg-primary text-white py-6 px-4 md:py-[1.7rem] lg:py-8 md:px-6">
           <span className="w-6 h-[2px] bg-white"></span>
           <span className="w-4 h-[2px] bg-white"></span>
         </article>
