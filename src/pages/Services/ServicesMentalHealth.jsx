@@ -9,7 +9,7 @@ import {
 } from '../../assets'
 
 
-const WORDS = ['Anxiety', 'Mood Changes', 'Depression', 'Seasonal Depression', "insomnia", "stress"];
+const WORDS = ['anxiety', 'mood changes', 'depression', 'seasonal depression', "insomnia", "stress"];
 
 const ServicesMentalHealth = () => {
   return (
@@ -41,7 +41,7 @@ const ServicesMentalHealth = () => {
           <div>
             {
               WORDS.map(word => (
-                <span className="md:text-6xl">
+                <span className="md:text-6xl left-[850px] 2xl:left-[920px]">
                   {word}
                 </span>
               ))
