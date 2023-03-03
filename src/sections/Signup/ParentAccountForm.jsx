@@ -70,6 +70,8 @@ const ParentAccountForm = () => {
           className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
           name="password"
           type="password"
+          pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}$"
+          title="Your password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number."
           placeholder="Password*"
           value={registerationFormData.password}
           onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
@@ -93,6 +95,8 @@ const ParentAccountForm = () => {
           <input
             className="flex-1 rounded-full text-lg focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
             type="text"
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}$"
+            title="Please enter the date in the following format: mm/dd/yyyy"
             value={registerationFormData.dateOfBirth} 
             onChange={({ target }) => handleDateChange(target.value)}
             placeholder="Date of Birth (mm/dd/yyy)"
