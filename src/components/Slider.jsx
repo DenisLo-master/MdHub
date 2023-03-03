@@ -40,7 +40,7 @@ const Slider = () => {
                     {item.description}
                   </p>
                 </div>
-                <img src={item.image} alt={item.description} />
+                <img className={`${item.id === 1 ? "max-w-[250px]" : "max-w-[380px]"}`} src={item.image} alt={item.description} />
               </article>
             ))
           }
