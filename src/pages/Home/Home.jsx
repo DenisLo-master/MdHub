@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React from 'react'
 import {
   HomeExploreSolutionsSection,
   HomeHeadspaceSection,
@@ -11,11 +10,6 @@ import {
 } from '../../sections'
 
 const Home = () => {
-  const navigate = useNavigate()
-  useEffect(() => {
-    const token = localStorage.getItem("jwtToken")
-    if (token) navigate("/dashboard")
-  }, [])
   return (
     <div className="bg-white">
       <HomeHeroSection />
