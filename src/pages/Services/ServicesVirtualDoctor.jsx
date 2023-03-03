@@ -53,7 +53,7 @@ const ServicesVirtualDoctor = () => {
           <div>
             {
               WORDS.map(word => (
-                <span className="md:text-6xl left-[850px] 2xl:left-[870px]">
+                <span className="md:text-6xl left-[850px] 2xl:left-[870px] min-[1700px]:left-[937px]">
                   {word}
                 </span>
               ))
