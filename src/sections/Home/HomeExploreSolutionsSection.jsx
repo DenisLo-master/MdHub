@@ -43,9 +43,9 @@ const HomeExploreSolutionsSection = () => {
         <div className="absolute z-10 left-4 top-36 2xl:top-44">
           <button
             disabled={currentSlide < 1}
-            onClick={() => setCurrentSlide(currentSlide + 1)}
+            onClick={() => setCurrentSlide(currentSlide - 1)}
           >
-            <BsFillArrowLeftCircleFill className="text-gray-600 text-3xl" />
+            <BsFillArrowLeftCircleFill className="text-white text-3xl" />
           </button>
         </div>
         <div className="absolute z-10 right-4 top-36 2xl:top-44">
@@ -53,7 +53,7 @@ const HomeExploreSolutionsSection = () => {
             disabled={currentSlide > 3}
             onClick={() => setCurrentSlide(currentSlide + 1)}
           >
-            <BsFillArrowRightCircleFill className="text-gray-600 text-3xl" />
+            <BsFillArrowRightCircleFill className="text-white text-3xl" />
           </button>
         </div>
         <section

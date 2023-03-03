@@ -76,7 +76,7 @@ const HomeHeroSection = () => {
         <div>
           {
             WORDS.map(word => (
-              <span className="md:text-6xl left-[780px] 2xl:left-[850px]">
+              <span className="md:text-6xl left-[780px] 2xl:left-[850px] 3xl:left-[1000px]">
                 {word}
               </span>
             ))
