@@ -9,6 +9,8 @@ import {
 } from '../../assets'
 
 
+const WORDS = ['Anxiety', 'Mood Changes', 'Depression', 'Seasonal Depression', "insomnia", "stress"];
+
 const ServicesMentalHealth = () => {
   return (
     <section className="font-main bg-white">
@@ -32,9 +34,20 @@ const ServicesMentalHealth = () => {
       </header>
 
       <section className="bg-white py-14">
-        <h2 className="text-primary text-center text-5xl md:text-7xl">
-          Get care today for <span className="text-gray-800">anxiety.</span>
-        </h2>
+        <div className="relative mental-health text-center flex justify-center flip-words">
+          <h2 className="text-primary text-center text-5xl md:text-6xl relative right-[150px]">
+            Get care today for
+          </h2>
+          <div>
+            {
+              WORDS.map(word => (
+                <span className="md:text-6xl">
+                  {word}
+                </span>
+              ))
+            }
+          </div>
+        </div>
         <h3 className="text-center text-4xl md:text-5xl py-20">
           MDHUB members can benefit from:
         </h3>
