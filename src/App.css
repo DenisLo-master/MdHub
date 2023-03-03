@@ -47,3 +47,196 @@ input:checked+.toggle-switch .toggle-circle {
 .css-t3ipsp-control {
   border-radius: 30px !important;
 }
+.words {
+  /* position: absolute; */
+  top: 50%;
+  /* transform: translateY(-50%); */
+  /* margin-left: 30px; */
+  font-size: 48px;
+}
+
+
+.mental-health.flip-words span {
+  white-space: nowrap;
+  width: auto;
+  opacity: 0;
+  transform: translateY(-74px);
+  position: absolute;
+  top: 0;
+  left: 850px;
+  animation: animate 18s linear infinite;
+}
+
+.mental-health.flip-words span:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.mental-health.flip-words span:nth-child(3) {
+  animation-delay: 6s;
+}
+
+.mental-health.flip-words span:nth-child(4) {
+  animation-delay: 9s;
+}
+
+.mental-health.flip-words span:nth-child(5) {
+  animation-delay: 12s;
+}
+
+.mental-health.flip-words span:nth-child(6) {
+  animation-delay: 15s;
+}
+
+.online-pharmacy.flip-words span {
+  white-space: nowrap;
+  width: auto;
+  opacity: 0;
+  transform: translateY(-72px);
+  position: absolute;
+  top: 0;
+  left: 700px;
+  animation: animate 18s linear infinite;
+}
+
+.online-pharmacy.flip-words span:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.online-pharmacy.flip-words span:nth-child(3) {
+  animation-delay: 6s;
+}
+
+.online-pharmacy.flip-words span:nth-child(4) {
+  animation-delay: 9s;
+}
+
+.online-pharmacy.flip-words span:nth-child(5) {
+  animation-delay: 12s;
+}
+
+.online-pharmacy.flip-words span:nth-child(6) {
+  animation-delay: 15s;
+}
+
+
+.virtual-health.flip-words span {
+  white-space: nowrap;
+  width: auto;
+  opacity: 0;
+  transform: translateY(-30px);
+  position: absolute;
+  top: 0;
+  left: 850px;
+  animation: animate 21s linear infinite;
+}
+
+.virtual-health.flip-words span:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.virtual-health.flip-words span:nth-child(3) {
+  animation-delay: 6s;
+}
+
+.virtual-health.flip-words span:nth-child(4) {
+  animation-delay: 9s;
+}
+
+.virtual-health.flip-words span:nth-child(5) {
+  animation-delay: 12s;
+}
+
+.virtual-health.flip-words span:nth-child(6) {
+  animation-delay: 15s;
+}
+
+.virtual-health.flip-words span:nth-child(7) {
+  animation-delay: 18s;
+}
+
+
+.diagnostics.flip-words span {
+  white-space: nowrap;
+  width: auto;
+  opacity: 0;
+  transform: translateY(-72px);
+  position: absolute;
+  top: 0;
+  left: 850px;
+  animation: animate 11s linear infinite;
+}
+
+.diagnostics.flip-words span:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.diagnostics.flip-words span:nth-child(3) {
+  animation-delay: 6s;
+}
+
+.diagnostics.flip-words span:nth-child(4) {
+  animation-delay: 9s;
+}
+
+.nursing-homecare.flip-words span {
+  white-space: nowrap;
+  width: auto;
+  opacity: 0;
+  transform: translateY(-30px);
+  position: absolute;
+  top: 0;
+  left: 800px;
+  animation: animate 21s linear infinite;
+}
+
+.nursing-homecare.flip-words span:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.nursing-homecare.flip-words span:nth-child(3) {
+  animation-delay: 6s;
+}
+
+.nursing-homecare.flip-words span:nth-child(4) {
+  animation-delay: 9s;
+}
+
+.nursing-homecare.flip-words span:nth-child(5) {
+  animation-delay: 12s;
+}
+
+.nursing-homecare.flip-words span:nth-child(6) {
+  animation-delay: 15s;
+}
+
+.nursing-homecare.flip-words span:nth-child(7) {
+  animation-delay: 18s;
+}
+
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  2% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  12% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
