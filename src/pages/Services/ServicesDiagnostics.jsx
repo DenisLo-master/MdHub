@@ -2,6 +2,8 @@ import React from 'react'
 import { diagnosisHowItWorksData } from '../../constants'
 import { Link } from 'react-router-dom'
 
+const WORDS = ['virus', 'urine', 'blood', 'covid']
+
 const ServicesDiagnostics = () => {
   return (
     <section className="font-main text-dark ">
@@ -28,9 +30,20 @@ const ServicesDiagnostics = () => {
         </div>
       </header>
       <section className="bg-white py-14">
-        <h2 className="text-primary text-center text-5xl md:text-7xl pb-10">
-          Get care today for <span className="text-gray-800">blood testing.</span>
-        </h2>
+        <div className="relative diagnostics text-center flex justify-center flip-words">
+          <h2 className="text-primary text-center text-5xl md:text-6xl relative right-[150px]">
+            Get care today for
+          </h2>
+          <div>
+            {
+              WORDS.map(word => (
+                <span className="md:text-6xl">
+                  {word}
+                </span>
+              ))
+            }
+          </div>
+        </div>
       </section>
       <section className="bg-[#F9F9F9] py-10 pb-24">
         <h2 className="text-4xl pb-4 text-center">
