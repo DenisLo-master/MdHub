@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { NursingAndHomecareBanner } from '../../assets'
 import { nursingServices, nursingAndHomecareHowItWorksData } from '../../constants'
 
+const WORDS = ['mobile vaccination', 'wound care and treatment', 'palliative care', 'post surgery care', "IV medication", "injection infusions", "vital signs monitoring"];
+
 const ServicesNursingAndHomecare = () => {
   return (
     <section className="py-20 font-main">
@@ -30,9 +32,20 @@ const ServicesNursingAndHomecare = () => {
         </div>
       </header>
       <section className="bg-white pt-14">
-        <h2 className="text-primary text-center text-5xl md:text-7xl pb-10">
-          Get care today for <span className="text-gray-800">palliative care.</span>
-        </h2>
+        <div className="relative nursing-homecare text-center flex justify-center flip-words">
+          <h2 className="text-primary text-center text-5xl md:text-6xl relative right-[190px] pb-14">
+            Get care today for
+          </h2>
+          <div>
+            {
+              WORDS.map(word => (
+                <span className="md:text-6xl">
+                  {word}
+                </span>
+              ))
+            }
+          </div>
+        </div>
         <section className="bg-[#F9F9F9] py-10">
           <h2 className="text-4xl pb-4 text-center">
             How It Works
