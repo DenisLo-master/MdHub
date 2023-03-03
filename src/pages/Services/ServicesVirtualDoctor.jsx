@@ -121,37 +121,25 @@ const ServicesVirtualDoctor = () => {
             </article>
 
             <article className="relative p-4 bg-white text-center text-dark rounded-md">
-              <p>Dermatology</p>
-              <ArrowGradient className="absolute top-[1.45rem] right-6" />
+              <p>Dermatology</p>              
             </article>
 
             <article className="relative p-4 bg-white text-center text-dark rounded-md">
-              <p>Mental Health Therapy</p>
-              <ArrowGradient className="absolute top-[1.45rem] right-6" />
+              <p>Mental Health Therapy</p>              
             </article>
 
             <article className="relative p-4 bg-white text-center text-dark rounded-md">
-              <p>Endocrinology</p>
-              <ArrowGradient className="absolute top-[1.45rem] right-6" />
+              <p>Endocrinology</p>              
             </article>
 
             <article className="relative p-4 bg-white text-center text-dark rounded-md">
-              <p>Naturopathy</p>
-              <ArrowGradient className="absolute top-[1.45rem] right-6" />
+              <p>Naturopathy</p>              
             </article>
 
-            <article>
+            <article className="col-span-2">
               <Link TO="/register">
                 <button className="rounded-full w-full text-lg flex justify-center py-3 text-primary bg-white border border-white hover:bg-primary hover:text-white transition-colors duration-300 ease-out">
                   Sign Up Today
-                </button>
-              </Link>
-            </article>
-
-            <article>
-              <Link to="/services/virtual-doctor">
-                <button className="rounded-full w-full text-lg flex justify-center py-3 text-white bg-transparent border border-white hover:bg-white hover:text-primary transition-colors duration-300 ease-out">
-                  See A Doctor
                 </button>
               </Link>
             </article>
@@ -217,11 +205,11 @@ const ServicesVirtualDoctor = () => {
                 Open the app or browser and click the “Get care” button. Describe your symptoms, and one of our healthcare providers will review your request in minutes.
               </p>
               <div className="pt-[4.5rem]">
-                <img src={HomeHowItWorks01} alt="How It Works" />
+                <img className="max-w-[180px]" src={HomeHowItWorks01} alt="How It Works" />
               </div>
             </article>
 
-            <article className="max-w-[230px]">
+            <article className="max-w-[270px]">
               <div className="bg-gradient-primary text-white rounded-full w-20 h-20 flex justify-center items-center font-body text-3xl">
                 2
               </div>
@@ -230,7 +218,7 @@ const ServicesVirtualDoctor = () => {
                 Typically, you’ll be connected with a healthcare provider over text, but they may request a video or audio chat if necessary.
               </p>
               <div className="pt-24">
-                <img src={HomeHowItWorks02} alt="How It Works" />
+                <img className="max-w-[270px]" src={HomeHowItWorks02} alt="How It Works" />
               </div>
             </article>
 
@@ -243,7 +231,7 @@ const ServicesVirtualDoctor = () => {
                 Our doctors will take the proper for each patient. They can diagnose, provide prescriptions and or lab requisitions when needed. Patients may also requests doctors not and or request a referral to specialists.
               </p>
               <div className="pt-6">
-                <img src={HomeHowItWorks03} alt="How It Works" />
+                <img className="max-w-[270px]" src={HomeHowItWorks03} alt="How It Works" />
               </div>
             </article>
 
@@ -255,8 +243,8 @@ const ServicesVirtualDoctor = () => {
               <p className="max-w-[215px] font-body">
                 Pharmacy, nursing, lab diagnostics, and mental health.
               </p>
-              <div className="pt-32">
-                <img src={HomeHowItWorks04} alt="How It Works" />
+              <div className="pt-44">
+                <img className="max-w-[150px]" src={HomeHowItWorks04} alt="How It Works" />
               </div>
             </article>
           </section>
