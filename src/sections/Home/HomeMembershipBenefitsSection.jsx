@@ -9,7 +9,7 @@ import {
 const HomeMembershipBenefitsSection = () => {
   const [selectedBenefitId, setSelectedBenefitId] = useState(1)
   return (
-    <section className="relative w-full font-main bg-[#F3F3F3] py-20">
+    <section className="relative w-full font-main bg-white py-20">
       <div className="w-full max-w-6xl mx-auto flex justify-between">
         <div>
           <article className="px-4 md:px-0 w-full">
