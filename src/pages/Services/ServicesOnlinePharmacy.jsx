@@ -41,13 +41,13 @@ const ServicesOnlinePharmacy = () => {
       </header>
       <section className="bg-white py-14">
         <div className="relative online-pharmacy text-center flex justify-center flip-words">
-          <h2 className="text-primary text-center text-5xl md:text-6xl relative right-[100px] pb-14">
+          <h2 className="text-primary text-center text-5xl md:text-6xl relative right-[70px] pb-14">
             Get care today for
           </h2>
           <div className="w-[400px] overflow-hidden">
             {
               WORDS.map(word => (
-                <span className="md:text-6xl">
+                <span className="md:text-6xl left-[720px] 2xl:left-[800px]">
                   {word}
                 </span>
               ))
