@@ -48,6 +48,18 @@ const RegistrationCheckoutForm = () => {
     }
   }
 
+  const isDateValid = (date) => {
+    // Check if the input matches the date format mm/dd/yyyy
+    const regex = /^(0[1-9]|1[0-2])\/(0[1-9]|[1-2][0-9]|3[0-1])\/\d{4}$/;
+    const isValidDate = regex.test(date);
+
+    if (isValidDate) {
+      return true
+    } else {
+      return false
+    }
+  }
+
   const handleSignup = async (e) => {
     e.preventDefault()
     if (selectedAccountType === "family" && childForms.length < 2) {
@@ -56,6 +68,11 @@ const RegistrationCheckoutForm = () => {
     }
     if (selectedAccountType === "corporate" && childForms.length < 5) {
       toast.error("Please add minimum five employees before proceeding", { id: "corporate members add" })
+      return
+    }
+
+    if (!isDateValid(registerationFormData.dateOfBirth)) {
+      toast.error("Please enter the date in the following format: mm/dd/yyyy", { id: "wrong date registration" })
       return
     }
 

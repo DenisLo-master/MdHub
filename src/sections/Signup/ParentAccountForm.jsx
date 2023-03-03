@@ -94,9 +94,7 @@ const ParentAccountForm = () => {
         <div className="flex-1 flex">
           <input
             className="flex-1 rounded-full text-lg focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-            type="text"
-            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}$"
-            title="Please enter the date in the following format: mm/dd/yyyy"
+            type="text"            
             value={registerationFormData.dateOfBirth} 
             onChange={({ target }) => handleDateChange(target.value)}
             placeholder="Date of Birth (mm/dd/yyy)"
