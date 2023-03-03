@@ -32,9 +32,6 @@ input:checked+.toggle-switch .toggle-circle {
 .diagnostics-bg {
   background: url("./assets/diagnostics-banner.png") no-repeat center center/cover;
 }
-.move-left {
-  background-position: -50px 0px;
-}
 
 .bg-gradient-primary {
   background: linear-gradient(90deg, #48ABC8 0%, #A2D2E1 100%)
