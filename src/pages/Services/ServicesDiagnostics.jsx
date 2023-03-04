@@ -30,18 +30,20 @@ const ServicesDiagnostics = () => {
         </div>
       </header>
       <section className="bg-white py-14">
-        <div className="relative diagnostics text-center flex justify-center flip-words">
-          <h2 className="text-primary text-center text-5xl md:text-6xl relative right-[150px]">
+        <div className="relative virtual-health text-center flex justify-center flip-words">
+          <h2 className="text-primary text-center text-5xl md:text-6xl">
             Get care today for
           </h2>
-          <div>
-            {
-              WORDS.map(word => (
-                <span className="md:text-6xl left-[850px] 2xl:left-[918px] min-[1700px]:left-[987px]">
-                  {word}
-                </span>
-              ))
-            }
+          <div className="w-full absolute left-0 top-16">
+            <div className="w-full h-16 overflow-y-hidden flex justify-center">
+              {
+                WORDS.map(word => (
+                  <span className="md:text-6xl">
+                    {word}
+                  </span>
+                ))
+              }
+            </div>
           </div>
         </div>
       </section>
