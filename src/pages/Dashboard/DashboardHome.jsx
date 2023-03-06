@@ -19,7 +19,7 @@ const DashboardHome = () => {
   }
 
   return (
-    <header className="py-16 bg-[#f9f9f9]">
+    <header className="py-16 bg-white">
       <h1 className="text-4xl text-center pb-10">Your MDHUB Dashboard</h1>
       <section className="flex flex-col md:flex-row justify-center gap-x-10 rotating-ellipse-section">
         <RotatingEllipse />
