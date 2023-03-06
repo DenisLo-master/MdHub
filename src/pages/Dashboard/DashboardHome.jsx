@@ -33,7 +33,7 @@ const DashboardHome = () => {
           <div className="flex gap-y-4 items-center md:items-start flex-col-reverse md:flex-row md:gap-x-6">
             <div className="flex flex-col gap-y-3 text-primary">
               <article className="flex items-center gap-x-1">
-                <Link to="/services/virtual-doctor">
+                <Link to="/services">
                   <AiFillInfoCircle className="text-2xl text-[#cfcece]" />
                 </Link>
                 <button className={`flex-1 rounded-full text-lg group hover:ring-1 hover:ring-primary px-4 py-2 border  border-primary bg-transparent`}>
@@ -44,7 +44,7 @@ const DashboardHome = () => {
               </article>
 
               <article className="flex items-center gap-x-1">
-                <Link to="/services">
+                <Link to="/services/mental-health">
                   <AiFillInfoCircle className="text-2xl text-[#cfcece]" />
                 </Link>
                 <button className={`flex-1 rounded-full text-lg group hover:ring-1 hover:ring-primary px-6 py-2 border border-primary bg-transparent`}>
