@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import DatePicker from 'react-date-picker'
 import { BsPlusCircle } from 'react-icons/bs'
 import { MdClose } from 'react-icons/md'
 import { registerationStore } from '../../store/registerationStore'
@@ -122,13 +121,12 @@ const ChildAccountForms = () => {
                 </div>
               </div>
               <div className="flex-1 flex">
-                <DatePicker
-                  placeholderText='Please select a date'
+                <input
+                  className="flex-1 rounded-full text-base focus:ring-1 focus:ring-primary outline-none px-6 py-3 border"
+                  type="text"
                   value={childForms[index].dateOfBirth}
-                  className="flex-1 py-2 rounded-full bg-white appearance-none px-4 border outline-none focus:ring ring-dark"
-                  onChange={(date) => handleDateChange(date, index)}
-                  format="dd-MM-y"
-
+                  onChange={({ target }) => handleDateChange(target.value, index)}
+                  placeholder="Date of Birth (mm/dd/yyy)"
                 />
               </div>
             </div>
