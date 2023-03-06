@@ -82,11 +82,11 @@ const HomeHeroSection = () => {
           <img alt="Hero Bg" src={HeroBg} className="absolute max-w-[550px] top-0 right-16 z-0" />
         </article>
       </section>
-      <div className="relative homepage text-center flex justify-center flip-words">
+      <div className="relative homepage text-center flex justify-center flip-words font-main">
         <h2 className="text-primary text-center text-5xl md:text-6xl">
           Get care today for
         </h2>
-        <div className="w-full absolute left-0 top-20">
+        <div className="w-full absolute left-0 top-[70px]">
           <div className="w-full h-16 overflow-y-hidden flex justify-center">
             {
               selectedValues.map((word, index) => (
