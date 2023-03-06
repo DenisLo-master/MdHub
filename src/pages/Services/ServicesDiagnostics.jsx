@@ -47,7 +47,7 @@ const ServicesDiagnostics = () => {
           </div>
         </div>
       </section>
-      <section className="bg-[#F9F9F9] py-10 pb-24">
+      <section className="bg-white py-10 pb-24">
         <h2 className="text-4xl pb-4 text-center">
           How It Works
         </h2>
@@ -61,7 +61,7 @@ const ServicesDiagnostics = () => {
                       {step.id}
                     </div>
                   </article>
-                  <article className="w-full max-w-[640px] space-y-5">
+                  <article className="w-full max-w-[870px] space-y-5">
                     <div>
                       <p className="font-body text-lg leading-5">
                         {step.text} 
