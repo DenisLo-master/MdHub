@@ -20,7 +20,7 @@ const NursingModal = () => {
       showModal={showNursingModal}
       setShowModal={setShowNursingModal}
     >
-      <section section className="bg-[#F9F9F9] p-6" >
+      <section section className="p-6" >
         <div className="flex gap-x-4 w-full">
           <Elements stripe={stripePromise}>
             <NursingAppointmentForm />
