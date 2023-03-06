@@ -8,7 +8,7 @@ const WORDS = ["birth control", "erectile dysfunction", "plan b", "antibiotics",
 const ServicesOnlinePharmacy = () => {
   return (
     <section className="font-main">
-      <header className="bg-[#90C387] text-white w-full py-10 pb-20 relative">
+      <header className="bg-onlinePharmacy text-white w-full py-10 pb-20 relative">
         <div className="max-w-[83rem] mx-auto">
           <article className="space-y-5">
             <h2 className="text-[88px] max-w-[380px] leading-[80px] pb-5">

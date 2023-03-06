@@ -14,6 +14,10 @@ module.exports = {
         primary: '#48ABC8',
         dark: "#3F3F3F",
         virtualDoctor: "#A293FF",
+        mentalHealth: "#F6BA21",
+        onlinePharmacy: "#90C387",
+        diagnostics: "#F6A9CB",
+        nursingHomecare: "#F78839"
       },
       boxShadow: {
         white: "-1px 1px 10px 1px rgba(255,255,255,0.90)",
