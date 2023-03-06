@@ -83,8 +83,8 @@ const HomeMembershipBenefitsSection = () => {
             </Link>
           </article>
         </div>
-        <div className="flex-1">
-          <img className="w-full" src={Benefit} alt="Benefit" />
+        <div>
+          <img className="max-w-4xl 3xl:max-w-[86rem] 3xl:object-cover 3xl:max-h-[700px]" src={Benefit} alt="Benefit" />
         </div>
       </div>
     </section>
