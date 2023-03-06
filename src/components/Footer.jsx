@@ -4,6 +4,7 @@ import Facebook from '../assets/facebook.png'
 import Linkedin from '../assets/linkedin.png'
 import Twitter from '../assets/twitter.png'
 import { Link } from 'react-router-dom'
+import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa"
 
 const Footer = () => {
   return (
@@ -84,9 +85,15 @@ const Footer = () => {
       <div className="bg-[#5d95b6] text-white font-body md:text-lg py-4 px-8 2xl:px-12 flex flex-col md:flex-row justify-between items-center gap-y-2">
         <p>&copy; 2023 MDHUB Inc</p>
           <div className="flex items-center space-x-6">
-          <img className="w-8" src={Facebook} alt="Facebook" />
-          <img className="w-8" src={Linkedin} alt="Linkedin" />
-          <img className="w-8" src={Twitter} alt="Twitter" />
+          <div className="w-8 h-8 rounded-full flex justify-center items-center border border-white">
+            <FaFacebookF className="text-white" />
+          </div>
+          <div className="w-8 h-8 rounded-full flex justify-center items-center border border-white">
+            <FaLinkedin className="text-white" />
+          </div>
+          <div className="w-8 h-8 rounded-full flex justify-center items-center border border-white">
+            <FaInstagram className="text-white" />
+          </div>
           </div>
         </div>
     </footer>
