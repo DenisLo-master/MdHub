@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
 import Button from '../../components/Button'
 import { HeroGif, HeroBg } from '../../assets'
@@ -15,29 +15,42 @@ const WORDS = [
   "anxiety",
   "mood changes",
   "depression",
-  // "seasonal depression",
-  // "insomnia",
-  // "stress",
-  // "birth control",
-  // "erectile dysfunction",
-  // "plan b",
-  // "antibiotics",
-  // "pain control and management",
-  // "mental health medication",
-  // "virus",
-  // "urine",
-  // "blood",
-  // "covid",
-  // "mobile vaccination",
-  // "wound care and treatment",
-  // "palliative care",
-  // "post surgery care",
-  // "IV medication",
-  // "injection infusions",
-  // "vital signs monitoring"
+  "seasonal depression",
+  "insomnia",
+  "stress",
+  "birth control",
+  "erectile dysfunction",
+  "plan b",
+  "antibiotics",
+  "pain control and management",
+  "mental health medication",
+  "virus",
+  "urine",
+  "blood",
+  "covid",
+  "mobile vaccination",
+  "wound care and treatment",
+  "palliative care",
+  "post surgery care",
+  "IV medication",
+  "injection infusions",
+  "vital signs monitoring"
 ]
 
 const HomeHeroSection = () => {
+  const [selectedValues, setSelectedValues] = useState([])
+
+  useEffect(() => {
+    setSelectedValues(() => {
+      const randomValues = []; // Initialize an array to store selected values
+      while (randomValues.length < 10) { // Select 10 random values
+        const randomIndex = Math.floor(Math.random() * WORDS.length);
+        randomValues.push(WORDS[randomIndex]);
+      }
+      return randomValues
+    })
+  }, [])
+
   return (
     <div className="md:py-20 bg-white">
       <section className="max-w-[90rem] mx-auto flex flex-col-reverse gap-y-6 md:flex-row items-center relative">
@@ -73,11 +86,11 @@ const HomeHeroSection = () => {
         <h2 className="text-primary text-center text-5xl md:text-6xl">
           Get care today for
         </h2>
-        <div className="w-full absolute left-0 top-16">
+        <div className="w-full absolute left-0 top-20">
           <div className="w-full h-16 overflow-y-hidden flex justify-center">
             {
-              WORDS.map(word => (
-                <span className="md:text-6xl">
+              selectedValues.map((word, index) => (
+                <span key={`${index}${word}`} className="md:text-6xl">
                   {word}
                 </span>
               ))
