@@ -21,7 +21,7 @@ const WORDS = ["diagnosis", "prescriptions & renewals", "doctors notes", "referr
 const ServicesVirtualDoctor = () => {
   return (
     <section className="font-main py-10">
-      <header className="bg-[#A293FF] text-white w-full h-[530px] py-10 relative">
+      <header className="bg-virtualDoctor text-white w-full h-[530px] py-10 relative">
         <div className="max-w-[83rem] mx-auto">
           <article className="space-y-5">
             <h2 className="text-[88px]">

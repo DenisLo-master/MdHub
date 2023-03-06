@@ -12,7 +12,8 @@ module.exports = {
       },
       colors: {
         primary: '#48ABC8',
-        dark: "#3F3F3F"
+        dark: "#3F3F3F",
+        virtualDoctor: "#A293FF",
       },
       boxShadow: {
         white: "-1px 1px 10px 1px rgba(255,255,255,0.90)",
