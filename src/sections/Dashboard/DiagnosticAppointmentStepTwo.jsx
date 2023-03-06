@@ -25,7 +25,7 @@ const DiagnosticAppointmentStepTwo = ({ time, address, selectedDate, updateField
     <div className='space-y-3'>
       <div className="w-full flex">
         <DatePicker
-          className="flex-1 bg-transparent bg-[#f9f9f9] appearance-none px-4 py-2 border rounded-lg outline-none focus:ring ring-primary"
+          className="flex-1 bg-transparent appearance-none px-4 py-2 border rounded-lg outline-none focus:ring ring-primary"
           value={selectedDate}
           onChange={(date) => updateFields({ selectedDate: date })}
           format="dd-MM-y"
@@ -36,7 +36,7 @@ const DiagnosticAppointmentStepTwo = ({ time, address, selectedDate, updateField
         <BiCaretDown className="text-2xl absolute right-3 pointer-events-none top-2" />
         <select
           required
-          className="flex-1 bg-transparent bg-[#f9f9f9] appearance-none px-4 py-2 border rounded-lg outline-none focus:ring ring-primary"
+          className="flex-1 bg-transparent appearance-none px-4 py-2 border rounded-lg outline-none focus:ring ring-primary"
           placeholder="select time"
           value={time}
           onChange={(e) => updateFields({ time: e.target.value })}
@@ -50,7 +50,7 @@ const DiagnosticAppointmentStepTwo = ({ time, address, selectedDate, updateField
         <input
           value={province}
           onChange={() => updateFields({ province: "Quebec" })}
-          className="px-4 py-2 flex-1 border rounded-lg bg-[#f9f9f9] outline-none focus:ring ring-primary"
+          className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
           required
           placeholder="City"
           type="text"
@@ -58,7 +58,7 @@ const DiagnosticAppointmentStepTwo = ({ time, address, selectedDate, updateField
         <input
           value={city}
           onChange={(e) => updateFields({ city: e.target.value })}
-          className="px-4 py-2 flex-1 border rounded-lg bg-[#f9f9f9] outline-none focus:ring ring-primary"
+          className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
           required
           placeholder="City"
           type="text"
@@ -66,7 +66,7 @@ const DiagnosticAppointmentStepTwo = ({ time, address, selectedDate, updateField
         <input
           value={postalCode}
           onChange={(e) => updateFields({ postalCode: e.target.value })}
-          className="px-4 py-2 flex-1 border rounded-lg bg-[#f9f9f9] outline-none focus:ring ring-primary"
+          className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
           required
           placeholder="Postal Code"
           type="text"
@@ -76,7 +76,7 @@ const DiagnosticAppointmentStepTwo = ({ time, address, selectedDate, updateField
         <input
           value={address}
           onChange={(e) => updateFields({ address: e.target.value })}
-          className="px-4 py-2 flex-1 border rounded-lg bg-[#f9f9f9] outline-none focus:ring ring-primary"
+          className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
           required
           placeholder="Address"
           type="text"
