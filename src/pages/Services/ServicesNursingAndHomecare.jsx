@@ -58,7 +58,7 @@ const ServicesNursingAndHomecare = () => {
                 <article key={step.id} className="flex justify-between items-center">
                   <div className="flex items-center gap-x-8">
                     <article>
-                      <div className="w-20 h-20 text-3xl font-body font-semibold bg-gradient-primary text-white rounded-full flex justify-center items-center">
+                      <div className="w-14 h-14 text-3xl font-body font-semibold bg-gradient-primary text-white rounded-full flex justify-center items-center">
                         {step.id}
                       </div>
                     </article>
