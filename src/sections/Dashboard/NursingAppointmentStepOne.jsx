@@ -58,8 +58,6 @@ const NursingAppointmentStepOne = () => {
     }
   }
 
-  console.log(selectedNursingHomecareOptions)
-
   return (
     <div>
       <div>
