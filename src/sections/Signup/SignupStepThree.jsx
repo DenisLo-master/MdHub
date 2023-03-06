@@ -82,6 +82,7 @@ const SignupStepThree = () => {
                   selectedAccountType === "corporate"
                 ) && (
                   <button
+                    type="button"
                     onClick={() => setPaymentMode("yearly")}
                     className={`${paymentMode === 'yearly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
                     <h2 className="text-xl">Yearly</h2>
@@ -95,6 +96,7 @@ const SignupStepThree = () => {
                   selectedAccountType === "family"
                 ) &&
                 <button
+                    type="button"
                   onClick={() => setPaymentMode("monthly")}
                   className={`${paymentMode === 'monthly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
                   <h2 className="text-xl">Monthly</h2>
@@ -229,8 +231,7 @@ const SignupStepThree = () => {
         </article>
       </div>
       <CardElement
-        id="card-element"
-        className="rounded-full px-4 py-3 ring-1 focus:ring-primary"
+        className="registration-card-element rounded-full px-4 py-3 ring-1 focus:ring-primary"
       />
     </section>
   )
