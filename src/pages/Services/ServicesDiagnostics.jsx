@@ -10,15 +10,16 @@ const ServicesDiagnostics = () => {
       <header className="bg-diagnostics diagnostics-bg text-white w-full py-20 relative">
         <div className="max-w-[83rem] mx-auto">
           <article className="space-y-5">
-            <h2 className="text-[88px] max-w-[380px] leading-[80px] pb-5">
-              diagnostics
+            <h2 className="text-[88px] max-w-[450px] leading-[80px] pb-5">
+              lab testing & diagnostics
             </h2>
-            <div className="space-y-5 font-body text-lg max-w-lg pb-8">
+            <div className="space-y-5 font-body text-lg max-w-lg pb-8 leading-5">
               <p>
-                Safe, fast and professional testing on your schedule in the comfort and privacy of your own home or office. Avoid the wait at hospitals and clinics
+                Avoid the wait at hospitals and clinics with safe, fast, and professional lab testing from the comfort of your home or office.
               </p>
+              <strong className="block">Get results fast</strong>
               <p>
-                Our certified partner labs can quickly process over 300 different screenings and assays in order to provide a comprehensive health assessment.
+                Our certified partner labs can process over 300 different screenings to provide you with a comprehensive health assessment – and get you answers fast. 
               </p>
             </div>
             <Link to="register">
