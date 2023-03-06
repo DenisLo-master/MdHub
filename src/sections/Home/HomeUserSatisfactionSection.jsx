@@ -25,7 +25,7 @@ const HomeUserSatisfactionSection = () => {
       </h2>
       <div className="max-w-sm mx-auto flex flex-col justify-center text-center">
         <article className="max-w-[384px] relative overflow-x-hidden py-10 pb-14">
-          <div className="absolute z-10 top-64 left-40">
+          <div className="absolute z-10 top-56 left-40">
             <div className="flex justify-center gap-x-2 pt-3">
               <article
                 onClick={() => setCurrentSlide(0)}
@@ -38,10 +38,6 @@ const HomeUserSatisfactionSection = () => {
               <article
                 onClick={() => setCurrentSlide(2)}
                 className={`w-[9px] h-[9px] rounded-full cursor-pointer ${currentSlide === 2 ? "bg-primary" : "bg-[#d9d9d9]"}`}
-              />
-              <article
-                onClick={() => setCurrentSlide(3)}
-                className={`w-[9px] h-[9px] rounded-full cursor-pointer ${currentSlide === 3 ? "bg-primary" : "bg-[#d9d9d9]"}`}
               />
             </div>
           </div>
@@ -66,12 +62,7 @@ const HomeUserSatisfactionSection = () => {
                 of employers expect virtual care to lower healthcare costs
               </p>
             </div>
-            <div className="min-w-[384px]">
-              <h3 className="text-primary text-8xl">94%</h3>
-              <p className="font-body font-light text-2xl">
-                of patients prefer virtual care due to "convenienve, speed of care, and ease experienced when accessing health information."
-              </p>
-            </div>
+
           </section>
         </article>
       </div>
