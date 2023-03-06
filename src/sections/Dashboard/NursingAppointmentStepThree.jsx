@@ -3,10 +3,7 @@ import { CardElement } from '@stripe/react-stripe-js'
 import { registerationStore } from '../../store/registerationStore'
 
 const NursingAppointmentStepThree = () => {
-  const selectedHomecareOptions = registerationStore(state => state.selectedHomecareOptions)
-  const selectedNursingOptions = registerationStore(state => state.selectedNursingOptions)
   const nursingAppointmentBill = registerationStore(state => state.nursingAppointmentBill)
-
   return (
     <div>
       <div className="flex justify-between pb-5">
