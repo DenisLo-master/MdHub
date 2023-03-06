@@ -34,21 +34,23 @@ const ServicesMentalHealth = () => {
       </header>
 
       <section className="bg-white py-14">
-        <div className="relative mental-health text-center flex justify-center flip-words">
-          <h2 className="text-primary text-center text-5xl md:text-6xl relative right-[150px]">
+        <div className="relative virtual-health text-center flex justify-center flip-words">
+          <h2 className="text-primary text-center text-5xl md:text-6xl">
             Get care today for
           </h2>
-          <div>
-            {
-              WORDS.map(word => (
-                <span className="md:text-6xl left-[850px] 2xl:left-[920px] min-[1700px]:left-[988px]">
-                  {word}
-                </span>
-              ))
-            }
+          <div className="w-full absolute left-0 top-16">
+            <div className="w-full h-16 overflow-y-hidden flex justify-center">
+              {
+                WORDS.map(word => (
+                  <span className="md:text-6xl">
+                    {word}
+                  </span>
+                ))
+              }
+            </div>
           </div>
         </div>
-        <h3 className="text-center text-4xl md:text-5xl py-20">
+        <h3 className="text-center text-4xl md:text-5xl pt-32 py-20">
           MDHUB members can benefit from:
         </h3>
         <div className="w-full max-w-4xl mx-auto flex item-center justify-between text-center">
