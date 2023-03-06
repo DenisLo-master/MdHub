@@ -13,7 +13,7 @@ import RotatingEllipse from '../../components/RotatingEllipse'
 const HomeExploreSolutionsSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   return (
-    <section className="flex flex-col md:flex-row md:items-start pb-20">
+    <section className="flex flex-col md:flex-row md:items-start pt-32 pb-20">
       <article className="flex-1 relative rotating-ellipse-section flex justify-center">
         <RotatingEllipse />
       </article>

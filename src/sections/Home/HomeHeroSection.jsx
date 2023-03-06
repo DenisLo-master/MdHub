@@ -70,17 +70,19 @@ const HomeHeroSection = () => {
         </article>
       </section>
       <div className="relative homepage text-center flex justify-center flip-words">
-        <h2 className="text-primary text-center text-5xl md:text-6xl relative right-[245px]">
+        <h2 className="text-primary text-center text-5xl md:text-6xl">
           Get care today for
         </h2>
-        <div>
-          {
-            WORDS.map(word => (
-              <span className="md:text-6xl left-[780px] 2xl:left-[850px] min-[1700px]:left-[920px]">
-                {word}
-              </span>
-            ))
-          }
+        <div className="w-full absolute left-0 top-16">
+          <div className="w-full h-16 overflow-y-hidden flex justify-center">
+            {
+              WORDS.map(word => (
+                <span className="md:text-6xl">
+                  {word}
+                </span>
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>

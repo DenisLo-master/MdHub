@@ -45,22 +45,24 @@ const ServicesVirtualDoctor = () => {
         </div>
       </header>
 
-      <section className="bg-white py-14">
+      <section className="relative bg-white py-14">
         <div className="relative virtual-health text-center flex justify-center flip-words">
-          <h2 className="text-primary text-center text-5xl md:text-6xl relative right-[150px] 2xl:right-[200px]">
+          <h2 className="text-primary text-center text-5xl md:text-6xl">
             Get care today for
           </h2>
-          <div>
-            {
-              WORDS.map(word => (
-                <span className="md:text-6xl left-[850px] 2xl:left-[870px] min-[1700px]:left-[937px]">
-                  {word}
-                </span>
-              ))
-            }
+          <div className="w-full absolute left-0 top-16">
+            <div className="w-full h-16 overflow-y-hidden flex justify-center">
+              {
+                WORDS.map(word => (
+                  <span className="md:text-6xl">
+                    {word}
+                  </span>
+                ))
+              }
+            </div>
           </div>
         </div>
-        <h3 className="text-center text-4xl md:text-5xl py-20">
+        <h3 className="text-center text-4xl md:text-5xl pt-32 py-20">
           Don't just take it from us
         </h3>
         <div className="w-full max-w-6xl mx-auto flex item-center justify-between text-center">

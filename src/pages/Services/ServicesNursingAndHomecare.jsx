@@ -32,21 +32,23 @@ const ServicesNursingAndHomecare = () => {
         </div>
       </header>
       <section className="bg-white pt-14">
-        <div className="relative nursing-homecare text-center flex justify-center flip-words">
-          <h2 className="text-primary text-center text-5xl md:text-6xl relative right-[190px] pb-14">
+        <div className="relative virtual-health text-center flex justify-center flip-words">
+          <h2 className="text-primary text-center text-5xl md:text-6xl">
             Get care today for
           </h2>
-          <div>
-            {
-              WORDS.map(word => (
-                <span className="md:text-6xl left-[808px] 2xl:left-[878px] min-[1700px]:left-[950px]">
-                  {word}
-                </span>
-              ))
-            }
+          <div className="w-full absolute left-0 top-16">
+            <div className="w-full h-16 overflow-y-hidden flex justify-center">
+              {
+                WORDS.map(word => (
+                  <span className="md:text-6xl">
+                    {word}
+                  </span>
+                ))
+              }
+            </div>
           </div>
         </div>
-        <section className="bg-[#F9F9F9] py-10">
+        <section className="bg-[#F9F9F9] pt-32 py-10">
           <h2 className="text-4xl pb-4 text-center">
             How It Works
           </h2>

@@ -40,21 +40,23 @@ const ServicesOnlinePharmacy = () => {
         </div>
       </header>
       <section className="bg-white py-14">
-        <div className="relative online-pharmacy text-center flex justify-center flip-words">
-          <h2 className="text-primary text-center text-5xl md:text-6xl relative right-[70px] pb-14">
+        <div className="relative virtual-health text-center flex justify-center flip-words">
+          <h2 className="text-primary text-center text-5xl md:text-6xl">
             Get care today for
           </h2>
-          <div className="w-[400px] overflow-hidden">
-            {
-              WORDS.map(word => (
-                <span className="md:text-6xl left-[720px] 2xl:left-[800px] min-[1700px]:left-[875px]">
-                  {word}
-                </span>
-              ))
-            }
+          <div className="w-full absolute left-0 top-16">
+            <div className="w-full h-16 overflow-y-hidden flex justify-center">
+              {
+                WORDS.map(word => (
+                  <span className="md:text-6xl">
+                    {word}
+                  </span>
+                ))
+              }
+            </div>
           </div>
         </div>
-        <div className="bg-[#F9F9F9] py-10">
+        <div className="bg-[#F9F9F9] pt-32 py-10">
           <h2 className="text-4xl pb-4 text-center">
             How It Works
           </h2>
