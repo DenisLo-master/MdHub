@@ -106,12 +106,6 @@ export const howItWorksData = [
     title: "Step 3",
     image: HomeHowItWorks03,
     description: "Our doctors will take the proper for each patient. They can diagnose, provide prescriptions and or lab requisitions when needed. Patients may also requests doctors not and or request a referral to specialists.",
-  },
-  {
-    id: 4,
-    title: "Step 4",
-    image: HomeHowItWorks04,
-    description: "Pharmacy, nursing, lab diagnostics, and mental health.",
   }
 ]
 
