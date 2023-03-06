@@ -51,8 +51,8 @@ const NursingAppointmentStepTwo = ({ time, selectedDate, updateFields, address, 
       <div className="w-full flex gap-x-3">
         <input
           value={province}
-          onChange={(w) => updateFields({ province: e.target.value })}
-          className="px-4 py-2 flex-1 border rounded-lg bg-[#f9f9f9] outline-none focus:ring ring-primary"
+          onChange={(e) => updateFields({ province: e.target.value })}
+          className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
           required
           placeholder="Province"
           type="text"
@@ -60,7 +60,7 @@ const NursingAppointmentStepTwo = ({ time, selectedDate, updateFields, address, 
         <input
           value={city}
           onChange={(e) => updateFields({ city: e.target.value })}
-          className="px-4 py-2 flex-1 border rounded-lg bg-[#f9f9f9] outline-none focus:ring ring-primary"
+          className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
           required
           placeholder="City"
           type="text"
@@ -68,7 +68,7 @@ const NursingAppointmentStepTwo = ({ time, selectedDate, updateFields, address, 
         <input
           value={postalCode}
           onChange={(e) => updateFields({ postalCode: e.target.value })}
-          className="px-4 py-2 flex-1 border rounded-lg bg-[#f9f9f9] outline-none focus:ring ring-primary"
+          className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
           required
           placeholder="Postal Code"
           type="text"
@@ -78,7 +78,7 @@ const NursingAppointmentStepTwo = ({ time, selectedDate, updateFields, address, 
         <input
           value={address}
           onChange={(e) => updateFields({ address: e.target.value })}
-          className="px-4 py-2 flex-1 border rounded-lg bg-[#f9f9f9] outline-none focus:ring ring-primary"
+          className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
           required
           placeholder="Address"
           type="text"
