@@ -199,7 +199,7 @@ const ServicesVirtualDoctor = () => {
         <div className="w-full max-w-[76rem] mx-auto">
           <section className="flex justify-between">
             <article className="max-w-[270px]">
-              <div className="bg-gradient-primary text-white rounded-full w-20 h-20 flex justify-center items-center font-body text-3xl">
+              <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 1
               </div>
               <h2 className="text-2xl pr-4 py-3">Describe your symptoms using our app </h2>
@@ -212,7 +212,7 @@ const ServicesVirtualDoctor = () => {
             </article>
 
             <article className="max-w-[270px]">
-              <div className="bg-gradient-primary text-white rounded-full w-20 h-20 flex justify-center items-center font-body text-3xl">
+              <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 2
               </div>
               <h2 className="text-2xl pr-4 py-3">Chat with a doctor</h2>
@@ -225,7 +225,7 @@ const ServicesVirtualDoctor = () => {
             </article>
 
             <article className="max-w-[270px]">
-              <div className="bg-gradient-primary text-white rounded-full w-20 h-20 flex justify-center items-center font-body text-3xl">
+              <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 3
               </div>
               <h2 className="text-2xl text-dark pr-4 pt-3 leading-5 pb-1">Get a diagnosis or prescription, and or lab requisition or doctors note</h2>
@@ -238,7 +238,7 @@ const ServicesVirtualDoctor = () => {
             </article>
 
             <article className="max-w-[270px]">
-              <div className="bg-gradient-primary text-white rounded-full w-20 h-20 flex justify-center items-center font-body text-3xl">
+              <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 4
               </div>
               <h2 className="text-2xl pr-4 pt-3 pb-1 leading-5">Return to MDHUB DASHBOARD to access any of your additional membership benefits:</h2>
