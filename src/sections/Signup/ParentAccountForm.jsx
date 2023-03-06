@@ -83,8 +83,8 @@ const ParentAccountForm = () => {
           <div className="w-full flex flex-wrap justify-around gap-x-4 rounded-full">
             <Select
               className="flex-1 rounded-full"
-              value={selectedGender}
-              onChange={(selectedOption) => handleGenderChange(selectedOption)}
+              value={registerationFormData.gender}
+              onChange={(selectedOption) => handleRegisterationFormDataChange("gender", selectedOption)}
               options={genderOptions}
               placeholder="Gender"
             />
