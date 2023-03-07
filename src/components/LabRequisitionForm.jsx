@@ -169,13 +169,6 @@ const LabRequisitionForm = ({ hideForm }) => {
               type="file"
               onChange={handleFileInputChange}
             />
-            <button
-              onClick={submitForm}
-              type="button"
-              className={`rounded-full group hover:ring-1 hover:ring-primary  py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
-            >
-              Submit Form
-            </button>
           </div>
         </div>
       </div>
