@@ -90,7 +90,7 @@ const ForYou = () => {
 
       <section className="relative font-main bg-cover bg-no-repeat bg-center">
         <img className="absolute w-full h-[400px]" src={ForYouBottom} alt="For You" />
-        <div className="relative z-10 w-full max-w-[1160px] text-3xl mx-auto h-[390px] flex items-center text-white">
+        <div className="relative z-10 w-full max-w-[1160px] text-3xl mx-auto h-[400px] object-cover flex items-center text-white">
           <div className="space-y-6">
             <h2 className="max-w-[450px] pb-">
               “Just registered for a membership, chose a doctor & made a same-day appointment at faster than I buy my morning coffee.”
