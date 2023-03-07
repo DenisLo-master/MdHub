@@ -88,7 +88,7 @@ const ForYou = () => {
         </article>
       </section>
 
-      <section className="bg-forYouBottom font-main bg-cover bg-no-repeat bg-center">
+      <section className="for-you-bottom-bg font-main bg-cover bg-no-repeat bg-center">
         <div className="w-full max-w-[1160px] text-3xl mx-auto h-[390px] flex items-center text-white">
           <div className="space-y-6">
             <h2 className="max-w-[450px] pb-">
