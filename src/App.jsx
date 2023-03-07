@@ -60,7 +60,7 @@ function App() {
             </Route>
             <Route path="/rates" element={<Pricing />} />
             <Route path="/for-corporate" element={<CorporateOverview />} />
-            <Route path="/for-family" element={<ForBabies />} />
+            <Route path="/for-family" element={<ForYou />} />
             <Route path="/register" element={<Signup />}/>
             <Route path="/login" element={<Login />}/>
           </Routes>
