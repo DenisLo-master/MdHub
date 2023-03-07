@@ -30,7 +30,8 @@ module.exports = {
         cardService: "0px 6px 4px rgba(72, 171, 200, 0.4)",
         input: "0px 6px 4px rgba(72, 171, 200, 0.4)",
         glow: "0 0 10px 8px rgba(72, 171, 224, 0.5),0 0 10px 6px rgba(235, 236, 202, 0.4),0 0 10px 5px rgba(235, 236, 202, 0.6),0 0 10px 8px rgba(235, 236, 202, 0.3)",
-        sliderNav: "0px 4px 4px rgba(0, 0, 0, 0.15)"
+        sliderNav: "0px 4px 4px rgba(0, 0, 0, 0.15)",
+        corporateCard: "0px 6px 4px rgba(72, 171, 200, 0.4)"
       },
       screens: {
         '3xl': '1800px',
