@@ -20,7 +20,9 @@ module.exports = {
         nursingHomecare: "#F78839"
       },
       backgroundImage: {
-        forYouHero: "url('./src/assets/for-you-header-bg.png')"
+        forYouHero: "url('./src/assets/for-you-header-bg.png')",
+        forYouBottom: "url('./src/assets/for-you-bottom.png')",
+        linearGradientPrimary: "linear-gradient(360deg, #48ABC8 0%, #8BD5EA 100%)"
       },
       boxShadow: {
         white: "-1px 1px 10px 1px rgba(255,255,255,0.90)",
