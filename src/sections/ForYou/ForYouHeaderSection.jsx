@@ -1,11 +1,11 @@
 import React from 'react'
-import { forYouNavDetails } from '../../constants'
-import ForYouNavCard from '../../components/ForYouNavCard'
+import { ForYouHeaderBg } from '../../assets'
 
 const ForYouHeaderSection = () => {
   return (
-    <section className="for-you-hero-bg font-main bg-cover bg-no-repeat bg-center">
-      <div className="w-full max-w-7xl mx-auto h-[390px] flex items-center">
+    <section className="relative font-main bg-cover bg-no-repeat bg-center">
+      <img className="absolute w-full h-[400px]" src={ForYouHeaderBg} alt="For You" />
+      <div className="relative z-10 w-full max-w-7xl mx-auto h-[390px] flex items-center">
         <h2 className="text-[88px] max-w-[450px] leading-[80px] pb-5 text-white">
           healthcare, without the headaches
         </h2>

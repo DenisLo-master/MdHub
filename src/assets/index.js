@@ -122,9 +122,11 @@ import MedicalTreatmentUTI from './medical-treatment-uti.png'
 import MedicalTreatmentED from './medical-treatment-erectile-dysfunction.png'
 import LogoWhite from './logo-white.png'
 import ForYouHeaderBg from './for-you-header-bg.png'
+import ForYouBottom from './for-you-bottom.png'
 import ForYouFamilyPlan from './for-you-family-plan.png'
 
 export {
+  ForYouBottom,
   ForYouFamilyPlan,
   ForYouHeaderBg,
   LogoWhite,
