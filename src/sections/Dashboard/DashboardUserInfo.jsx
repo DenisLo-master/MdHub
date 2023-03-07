@@ -6,7 +6,7 @@ import { registerationStore } from '../../store/registerationStore'
 const DashboardUserInfo = () => {
   const userInfo = registerationStore(state => state.userInfo)
   return (
-    <section className="flex flex-col md:flex-row gap-y-4 text-center md:text-left gap-x-16 font-body font-light pb-10">
+    <section className="flex flex-col md:flex-row gap-y-4 text-center md:text-left gap-x-16 font-body font-light py-10">
 
       <article className="flex-1 space-y-4 relative">
         <div className="absolute right-4 top-8">
@@ -18,7 +18,7 @@ const DashboardUserInfo = () => {
           </Link>
         </div>
         <h2 className="text-4xl font-main font-normal">Your Information</h2>
-        <div className="p-10 bg-[#fbfbfb] rounded-[35px] shadow-cardService space-y-6  border-[0.25px]">
+        <div className="p-10 rounded-[35px] shadow-cardService space-y-6  border-[0.25px]">
           <article className="bg-white rounded-[48px] shadow-cardService px-8 py-3 border-[0.25px]">
             {userInfo?.firstName}
           </article>
@@ -39,7 +39,7 @@ const DashboardUserInfo = () => {
 
       <article className="flex-1 space-y-4">
         <h2 className="text-4xl font-main font-normal">Your Subscription</h2>
-        <div className="p-10 bg-[#fbfbfb] flex flex-col justify-between rounded-[35px] shadow-cardService space-y-6 border-[0.25px] h-[428px]">
+        <div className="p-10 flex flex-col justify-between rounded-[35px] shadow-cardService space-y-6 border-[0.25px] h-[428px]">
           <article className="space-y-10">
             <div>
               <p className="text-sm">Your current subscription plan</p>
