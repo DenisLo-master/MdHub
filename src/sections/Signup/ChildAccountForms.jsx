@@ -46,7 +46,6 @@ const ChildAccountForms = () => {
     }
     handleChildAccountInputChange({ target: { name: "dateOfBirth", value: date } }, index)
   }
-  console.log(childForms)
   return (
     <div>
       {
