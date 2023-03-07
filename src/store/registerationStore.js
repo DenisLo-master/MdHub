@@ -15,6 +15,7 @@ const clearFormsObject = {
     country: '',
     region: '',
     gender: '',
+    dateOfBirth: "",
   },
 }
 
