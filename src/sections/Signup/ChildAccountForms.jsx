@@ -4,6 +4,7 @@ import { MdClose } from 'react-icons/md'
 import { registerationStore } from '../../store/registerationStore'
 import dayjs from "dayjs"
 import Select from 'react-select'
+import { BiChevronDown } from 'react-icons/bi'
 
 const genderOptions = [
   { value: 'male', label: 'Male' },
@@ -22,7 +23,6 @@ const ChildAccountForms = () => {
 
   const handleGenderChange = (selectedOption, index) => {
     handleChildAccountInputChange({ target: { name: "gender", value: selectedOption.value } }, index)
-    setSelectedGender(selectedOption)
   }
 
   const handleDateChange = (date, index) => {
@@ -46,7 +46,7 @@ const ChildAccountForms = () => {
     }
     handleChildAccountInputChange({ target: { name: "dateOfBirth", value: date } }, index)
   }
-
+  console.log(childForms)
   return (
     <div>
       {
@@ -110,19 +110,30 @@ const ChildAccountForms = () => {
             </div>
             <div className="text-xl flex items-center w-full gap-x-6">
               <div className="flex-1">
-                <div className="w-full flex flex-wrap justify-around gap-x-4 rounded-full">
-                  <Select
+                <div className="w-full flex flex-wrap justify-around gap-x-4 rounded-full relative">
+                  <BiChevronDown className="absolute text-2xl top-3 right-4" />
+                  {/* <Select
                     className="flex-1 rounded-full"
                     value={selectedGender}
                     onChange={(selectedOption) => handleGenderChange(selectedOption, index)}
                     options={genderOptions}
                     placeholder="Gender"
-                  />
+                  /> */}
+                  <select
+                    value={childForms[index].gender}
+                    onChange={(event) => handleChildAccountInputChange(event, index)}
+                    name="gender"
+                    className="flex-1 appearance-none bg-white rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
+                  >
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="preferNotToSay">Prefer Not to say</option>
+                  </select>
                 </div>
               </div>
               <div className="flex-1 flex">
                 <input
-                  className="flex-1 rounded-full text-base focus:ring-1 focus:ring-primary outline-none px-6 py-3 border"
+                  className="flex-1 rounded-full text-lg focus:ring-1 focus:ring-primary outline-none px-6 py-2 border"
                   type="text"
                   value={childForms[index].dateOfBirth}
                   onChange={({ target }) => handleDateChange(target.value, index)}

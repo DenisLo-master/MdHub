@@ -48,6 +48,7 @@ const RegistrationCheckoutForm = () => {
     }
   }
 
+
   const isDateValid = (date) => {
     // Check if the input matches the date format mm/dd/yyyy
     const regex = /^(0[1-9]|1[0-2])\/(0[1-9]|[1-2][0-9]|3[0-1])\/\d{4}$/;
