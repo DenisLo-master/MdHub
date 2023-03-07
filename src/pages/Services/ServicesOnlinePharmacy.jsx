@@ -118,7 +118,7 @@ const ServicesOnlinePharmacy = () => {
             <p className="text-3xl  w-full font-body font-thin max-w-[450px]">
               Get top-tier service at a great price. When you use our online pharmacy, you only pay the amount that isn't covered by your insurance.
             </p>
-            <Link className="block" to="register">
+            <Link className="block" to="/register">
               <button className="rounded-full w-[240px] text-lg flex justify-center py-2 border border-primary">
                 Sign Up Today
               </button>
