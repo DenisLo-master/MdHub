@@ -9,7 +9,7 @@ import {
 } from '../../assets'
 
 
-const WORDS = ['anxiety', 'mood changes', 'depression', 'seasonal depression', "insomnia", "stress"];
+const WORDS = ['anxiety', 'mood changes', 'depression', 'seasonal depression', "insomnia", "stress"]
 
 const ServicesMentalHealth = () => {
   return (
