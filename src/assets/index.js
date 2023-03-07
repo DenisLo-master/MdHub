@@ -124,8 +124,26 @@ import LogoWhite from './logo-white.png'
 import ForYouHeaderBg from './for-you-header-bg.png'
 import ForYouBottom from './for-you-bottom.png'
 import ForYouFamilyPlan from './for-you-family-plan.png'
+import ForCorporateHeader from './for-corporate-header.png'
+import ForCorporateGrid01 from './for-you-grid-01.png'
+import ForCorporateGrid02 from './for-you-grid-02.png'
+import ForCorporateGrid03 from './for-you-grid-03.png'
+import ForCorporateGrid04 from './for-you-grid-04.png'
+import Logo1 from './air-canada.png'
+import Logo2 from './sotherbys.png'
+import Logo3 from './airbnb.png'
+import Logo4 from './four-seasons.png'
 
 export {
+  Logo1,
+  Logo2,
+  Logo3,
+  Logo4,
+  ForCorporateGrid01,
+  ForCorporateGrid02,
+  ForCorporateGrid03,
+  ForCorporateGrid04,
+  ForCorporateHeader,
   ForYouBottom,
   ForYouFamilyPlan,
   ForYouHeaderBg,
