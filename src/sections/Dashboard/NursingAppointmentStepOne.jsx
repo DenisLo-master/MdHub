@@ -60,7 +60,7 @@ const NursingAppointmentStepOne = () => {
 
   return (
     <div>
-      <div>
+      <div className="text-lg">
         <p className="text-xl pb-4">Please select the services of your need.</p>
         <div className="space-y-3">
           <Select
@@ -69,6 +69,14 @@ const NursingAppointmentStepOne = () => {
             options={options}
             isMulti
             placeholder="Select services"
+          />
+        </div>
+        <div className="py-4">
+          <textarea
+            className="w-full h-28 p-4 outline-none focus:ring-2 ring-primary rounded-3xl border-2"
+            placeholder="Can’t find the service you are looking for? Please describe the service in the field."
+            value={additionalService}
+            onChange={({ target }) => setAdditionalService(target.value)}
           />
         </div>
         <div className="py-4">
@@ -83,14 +91,6 @@ const NursingAppointmentStepOne = () => {
           <label htmlFor="labReq">
             OPTIONAL: Upload Requisition if needed
           </label>
-        </div>
-        <div className="py-4">
-          <textarea
-            className="w-full rounded-lg h-44 p-4 outline-none focus:ring-1 ring-primary bg-[#f1f1f1]"
-            placeholder="Can’t find the service you are looking for? Please describe the service in the field."
-            value={additionalService}
-            onChange={({ target }) => setAdditionalService(target.value)}
-          />
         </div>
       </div>
       {
