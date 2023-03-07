@@ -19,6 +19,9 @@ module.exports = {
         diagnostics: "#F6A9CB",
         nursingHomecare: "#F78839"
       },
+      backgroundImage: {
+        forYouHero: "url('./src/assets/for-you-header-bg.png')"
+      },
       boxShadow: {
         white: "-1px 1px 10px 1px rgba(255,255,255,0.90)",
         dark: "-1px 1px 20px 2px rgba(130,133,134,0.75)",

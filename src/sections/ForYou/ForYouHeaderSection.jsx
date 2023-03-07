@@ -4,18 +4,9 @@ import ForYouNavCard from '../../components/ForYouNavCard'
 
 const ForYouHeaderSection = () => {
   return (
-    <section className="bg-[#F9F9F9] font-main">
+    <section className="bg-forYouHero font-main bg-cover bg-no-repeat bg-center">
       <h2 className="py-10 text-4xl text-center">For You</h2>
-      <div className="flex py-10 justify-center gap-x-8">
-        {
-          forYouNavDetails.map(item => (
-            <ForYouNavCard
-              imageSrc={item.image}
-              title={item.title}
-            />
-          ))
-        }
-      </div>
+
     </section>
   )
 }

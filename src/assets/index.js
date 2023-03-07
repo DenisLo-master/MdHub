@@ -121,9 +121,11 @@ import MedicalTreatmentBC from './medical-treatment-birth-control.png'
 import MedicalTreatmentUTI from './medical-treatment-uti.png'
 import MedicalTreatmentED from './medical-treatment-erectile-dysfunction.png'
 import LogoWhite from './logo-white.png'
+import ForYouHeaderBg from './for-you-header-bg.png'
 
 
 export {
+  ForYouHeaderBg,
   LogoWhite,
   OkIconWhite,
   ArrowGradient,
