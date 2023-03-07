@@ -122,7 +122,7 @@ const SignupStepThree = () => {
               selectedAccountType === "individual" ?
                 paymentMode === "monthly" ?
                   "1 x Individual Plan" :
-                  "12 x Individual Plan"
+                  "12 x Individual Plan ($24.99)"
                 :
                 selectedAccountType === "family" ?
                   paymentMode === "yearly" ?
@@ -159,7 +159,6 @@ const SignupStepThree = () => {
                       </h2>
                     </div> :
                     <div>
-                      <h3>${individualYearlyFee}</h3>
                       <h3>${calculatePricing("individualYearly").totalAmount.toFixed(2)}</h3>
                       <h3>Tax: ${calculatePricing("individualYearly").tax.toFixed(2)}</h3>
                       <h2 className="text-3xl">
