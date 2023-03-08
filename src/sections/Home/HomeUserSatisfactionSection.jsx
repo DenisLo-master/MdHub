@@ -7,17 +7,25 @@ const HomeUserSatisfactionSection = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (currentSlide === 3) {
+      if (currentSlide === 2) {
         setIncrement(false);
       } else if (currentSlide === 0) {
         setIncrement(true);
       }
 
-      setCurrentSlide(prevCount => increment ? prevCount + 1 : prevCount - 1);
+      // update currentSlide based on the value of increment
+      const newSlide = increment ? currentSlide + 1 : currentSlide - 1;
+
+      // ensure that newSlide is within the valid range of 0 to 2
+      const boundedSlide = newSlide < 0 ? 0 : newSlide > 2 ? 2 : newSlide;
+
+      setCurrentSlide(boundedSlide)
     }, 3000);
 
     return () => clearInterval(interval);
   }, [currentSlide, increment])
+
+  console.log(currentSlide)
   return (
     <section className="py-16 font-main text-4xl">
       <h2 className="text-center pb-8">
@@ -42,7 +50,7 @@ const HomeUserSatisfactionSection = () => {
             </div>
           </div>
           <section
-            className={`w-full flex transform transition-transform duration-300 ease-in-out ${currentSlide === 0 && "-translate-x-0"} ${currentSlide === 1 && "-translate-x-[384px]"} ${currentSlide === 2 && "-translate-x-[768px]"} ${currentSlide === 3 && "-translate-x-[1152px]"}`}
+            className={`w-full flex transform transition-transform duration-300 ease-in-out ${currentSlide === 0 && "-translate-x-0"} ${currentSlide === 1 && "-translate-x-[384px]"} ${currentSlide === 2 && "-translate-x-[768px]"}}`}
           >
             <div className="min-w-[384px]">
               <h3 className="text-primary text-8xl">94%</h3>
