@@ -70,17 +70,6 @@ const LabRequisitionForm = ({ hideForm }) => {
             placeholder="First Name"
           />
           <input
-            value={data.phoneNumber}
-            onChange={handleChange}
-            className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
-            type="tel"
-            name="phoneNumber"
-            placeholder="Phone Number"
-          />
-        </div>
-
-        <div className="flex space-x-8">
-          <input
             value={data.lastName}
             onChange={handleChange}
             className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
@@ -88,6 +77,8 @@ const LabRequisitionForm = ({ hideForm }) => {
             name="lastName"
             placeholder="Last Name"
           />
+        </div>
+        <div className="flex space-x-8">
           <input
             value={data.emailAddress}
             onChange={handleChange}
@@ -96,9 +87,15 @@ const LabRequisitionForm = ({ hideForm }) => {
             name="emailAddress"
             placeholder="Email Address"
           />
+          <input
+            value={data.phoneNumber}
+            onChange={handleChange}
+            className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
+            type="tel"
+            name="phoneNumber"
+            placeholder="Phone Number"
+          />
         </div>
-
-
 
         <div className="flex items-center pt-2">
           <label className="mr-4 font-medium text-gray-700">Do you currently have private insurance</label>
