@@ -6,12 +6,7 @@ import {
   MedicalTreatmentED,
   MedicalTreatmentUTI,
   MedicalTreatmentBC,
-  ArrowGradient,
   OkIconWhite,
-  HomeHowItWorks01,
-  HomeHowItWorks02,
-  HomeHowItWorks03,
-  HomeHowItWorks04,
   VirtualCare01,
   VirtualCare02,
   VirtualCare03,
@@ -192,7 +187,7 @@ const ServicesVirtualDoctor = () => {
                 Open the app or browser and click the “Get care” button. Describe your symptoms, and one of our healthcare providers will review your request in minutes.
               </p>
               <div className="">
-                <img className="max-w-[224px]" src={VirtualCare01} alt="How It Works" />
+                <img className="max-w-[274px]" src={VirtualCare01} alt="How It Works" />
               </div>
             </article>
 
@@ -205,7 +200,7 @@ const ServicesVirtualDoctor = () => {
                 Typically, you’ll be connected with a healthcare provider over text, but they may request a video or audio chat if necessary.
               </p>
               <div className="pt-10">
-                <img className="max-w-[216px]" src={VirtualCare02} alt="How It Works" />
+                <img className="max-w-[266px]" src={VirtualCare02} alt="How It Works" />
               </div>
             </article>
 
@@ -218,7 +213,7 @@ const ServicesVirtualDoctor = () => {
                 Our virtual doctors can diagnose and provide prescriptions, and prescription delivery is available at no extra cost.
               </p>
               <div className="pt-8">
-                <img className="max-w-[223px]" src={VirtualCare03} alt="How It Works" />
+                <img className="max-w-[273px]" src={VirtualCare03} alt="How It Works" />
               </div>
             </article>
 
@@ -231,7 +226,7 @@ const ServicesVirtualDoctor = () => {
                 Pharmacy, nursing, lab diagnostics, and mental health.
               </p>
               <div className="pt-[4.7rem]">
-                <img className="max-w-[227px]" src={VirtualCare04} alt="How It Works" />
+                <img className="max-w-[277px]" src={VirtualCare04} alt="How It Works" />
               </div>
             </article>
           </section>
