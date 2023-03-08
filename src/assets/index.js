@@ -27,6 +27,7 @@ import { ReactComponent as StethoscopeIconWhite } from './stethoscope-icon-white
 import { ReactComponent as NursingHomecareIcon } from './nursing-homecare-icon.svg'
 import { ReactComponent as OnlinePharmacyIcon } from './online-pharmacy-icon.svg'
 import { ReactComponent as ArrowGradient } from './arrow-gradient.svg'
+import { ReactComponent as CloseVector } from './close-vector.svg'
 import { ReactComponent as Star } from './star.svg'
 import VirusTestingAndVaccination from './virus-testing-and-vaccination.png'
 import Bombardier from './bombardier.png'
@@ -147,6 +148,7 @@ import DiagnosticsHowItWorks03 from './diagnostics-how-it-works-03.png'
 import DiagnosticsHowItWorks04 from './diagnostics-how-it-works-04.png'
 
 export {
+  CloseVector,
   DiagnosticsHowItWorks01,
   DiagnosticsHowItWorks02,
   DiagnosticsHowItWorks03,
