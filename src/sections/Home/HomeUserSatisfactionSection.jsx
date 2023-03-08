@@ -69,10 +69,10 @@ const HomeUserSatisfactionSection = () => {
       <div className="w-full max-w-4xl mx-auto text-center py-10 font-body text-base space-y-5">
         <p>Some companies we’ve partnered with:</p>
         <section className="flex items-center justify-between">
-          <img src={PartnerCompany01} alt="Air Canada" />
-          <img src={PartnerCompany02} alt="Sotherbys" />
-          <img src={PartnerCompany03} alt="Air BNB" />
-          <img src={PartnerCompany04} alt="Four Seasons" />
+          <img className="max-w-[149px]" src={PartnerCompany01} alt="Air Canada" />
+          <img className="max-w-[156px]" src={PartnerCompany02} alt="Sotherbys" />
+          <img className="max-w-[147px]" src={PartnerCompany03} alt="Air BNB" />
+          <img className="max-w-[153px]" src={PartnerCompany04} alt="Four Seasons" />
         </section>
       </div>
     </section>

@@ -1,16 +1,15 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import {
+  PartnerCompany01,
+  PartnerCompany02,
+  PartnerCompany03,
+  PartnerCompany04,
   ForCorporateGrid01,
   ForCorporateGrid02,
   ForCorporateGrid03,
   ForCorporateGrid04,
-  Logo1,
-  Logo2,
-  Logo3,
-  Logo4,
   ForCorporateHeader,
-  AirCanada,
   OkIconWhite
 } from '../../assets'
 import { registerationStore } from '../../store/registerationStore'
@@ -241,10 +240,10 @@ const CorporateOverview = () => {
             We cover some of Canada's finest
           </h3>
           <div className="flex justify-center items-center gap-x-16">
-            <img className="max-w-[149px]" src={Logo1} alt="Air Canada" />
-            <img className="max-w-[156px]" src={Logo2} alt="Sotherbys" />
-            <img className="max-w-[147px]" src={Logo3} alt="Air BNB" />
-            <img className="max-w-[153px]" src={Logo4} alt="Four Seasons" />
+            <img className="max-w-[149px]" src={PartnerCompany01} alt="Air Canada" />
+            <img className="max-w-[156px]" src={PartnerCompany02} alt="Sotherbys" />
+            <img className="max-w-[147px]" src={PartnerCompany03} alt="Air BNB" />
+            <img className="max-w-[153px]" src={PartnerCompany04} alt="Four Seasons" />
           </div>
         </div>
       </section>
