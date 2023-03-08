@@ -3,7 +3,7 @@ import { Star } from '../../assets'
 
 const Testimonials = () => {
   return (
-    <section className="bg-[#F9F9F9] text-dark">
+    <section className="text-dark">
       <h2 className="text-center text-4xl">
         Never wait for a doctor again
       </h2>
