@@ -62,7 +62,7 @@ export const registerationStore = create((set) => ({
   individualMonthlyFee: '34.99',
   familyMonthlyFee: "54.99",
   familyYearlyFee: "44.99",
-  onDemandFee: "99",
+  onDemandFee: "89.99",
   corporateFee: "19.99",
   nursingAppointmentBill: 0,
   diagnosticsAppointmentBill: 99,

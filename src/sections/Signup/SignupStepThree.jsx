@@ -20,7 +20,7 @@ const SignupStepThree = () => {
     const familyMonthlyPrice = 54.99 * 3
     const familyYearlyPrice = 44.99 * 12
     const corporatePrice = 19.99 * 12
-    const onDemandPrice = 99
+    const onDemandPrice = 89.99
     const taxFactor = 0.14975
     return accountType === "individualMonthly" ?
       {
