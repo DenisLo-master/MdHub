@@ -270,4 +270,3 @@ export const nursingAndHomecareHowItWorksData = [
     image: NursingAndHomecareHowItWorks04
   }
 ]
-

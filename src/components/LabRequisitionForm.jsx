@@ -37,8 +37,6 @@ const LabRequisitionForm = ({ hideForm }) => {
     formData.append("lastName", data.lastName)
     formData.append("emailAddress", data.emailAddress)
     formData.append("phoneNumber", data.phoneNumber)
-    formData.append("preferredDate", data.preferredDate)
-    formData.append("preferredTime", data.preferredTime)
 
     try {
       const response = await fetch("https://mdhub-server.onrender.com/sendmail", {
@@ -100,27 +98,10 @@ const LabRequisitionForm = ({ hideForm }) => {
           />
         </div>
 
-        <div className="flex space-x-8">
-          <input
-            value={data.preferredDate}
-            onChange={handleChange}
-            className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
-            type="text"
-            name="preferredDate"
-            placeholder="Preferred Date (DD/MM/YYY)"
-          />
-          <input
-            value={data.preferredTime}
-            onChange={handleChange}
-            className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
-            type="text"
-            name="preferredTime"
-            placeholder="Preferred Time"
-          />
-        </div>
+
 
         <div className="flex items-center pt-2">
-          <label className="mr-4 font-medium text-gray-700">do you currently have private insurance</label>
+          <label className="mr-4 font-medium text-gray-700">Do you currently have private insurance</label>
           <div className="inline-flex items-center">
             <input
               checked={selectedOption === "yes"}
