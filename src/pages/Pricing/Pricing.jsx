@@ -1,5 +1,5 @@
 import React from 'react'
-import { PricingSlider, OnDemandCTA, PricingHeader, HeadspaceSection } from '../../sections'
+import { PricingSlider, OnDemandCTA, PricingHeader, HeadspaceSection, MembershipBenefits, Testimonials } from '../../sections'
 
 const Pricing = () => {
   return (
@@ -8,6 +8,8 @@ const Pricing = () => {
       <PricingSlider />
       <OnDemandCTA />
       <HeadspaceSection />
+      <MembershipBenefits />
+      <Testimonials />
     </section>
   )
 }
