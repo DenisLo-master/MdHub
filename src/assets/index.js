@@ -134,8 +134,22 @@ import Logo1 from './air-canada.png'
 import Logo2 from './sotherbys.png'
 import Logo3 from './airbnb.png'
 import Logo4 from './four-seasons.png'
+import CorporateBenefitsIcon01 from './corporate-benefits-icon-01.png'
+import CorporateBenefitsIcon02 from './corporate-benefits-icon-02.png'
+import CorporateBenefitsIcon03 from './corporate-benefits-icon-03.png'
+import VirtualCare01 from './virtual-care-01.png'
+import VirtualCare02 from './virtual-care-02.png'
+import VirtualCare03 from './virtual-care-03.png'
+import VirtualCare04 from './virtual-care-04.png'
 
 export {
+  VirtualCare01,
+  VirtualCare02,
+  VirtualCare03,
+  VirtualCare04,
+  CorporateBenefitsIcon01,
+  CorporateBenefitsIcon02,
+  CorporateBenefitsIcon03,
   Star,
   Logo1,
   Logo2,
