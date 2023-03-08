@@ -10,17 +10,17 @@ const Slider = () => {
       <div className="py-3 px-4 my-10 font-main text-lg flex justify-between space-x-4 w-full rounded-full bg-[#F1F1F1] shadow-sliderNav">
         <button
           onClick={() => setCurrentSlide(0)}
-          className={`transition-colors ease-in duration-200 px-8 py-[10px] rounded-full ${currentSlide === 0 ? "bg-gradient-primary w-[128px] text-white" : "bg-[#F1F1F1] text-gray-800"}`}>
+          className={`transition-colors w-[128px] ease-in duration-200 px-8 py-[10px] rounded-full ${currentSlide === 0 ? "bg-gradient-primary  text-white" : "bg-[#F1F1F1] text-gray-800"}`}>
           Step 1
         </button>
         <button
           onClick={() => setCurrentSlide(1)}
-          className={`transition-colors ease-in duration-200 px-8 py-[10px] rounded-full ${currentSlide === 1 ? "bg-gradient-primary w-[128px] text-white" : "bg-[#F1F1F1] text-gray-800"}`}>
+          className={`transition-colors w-[128px] ease-in duration-200 px-8 py-[10px] rounded-full ${currentSlide === 1 ? "bg-gradient-primary  text-white" : "bg-[#F1F1F1] text-gray-800"}`}>
           Step 2
         </button>
         <button
           onClick={() => setCurrentSlide(2)}
-          className={`transition-colors ease-in duration-200 px-8 py-[10px] rounded-full ${currentSlide === 2 ? "bg-gradient-primary w-[128px] text-white" : "bg-[#F1F1F1] text-gray-800"}`}>
+          className={`transition-colors w-[128px] ease-in duration-200 px-8 py-[10px] rounded-full ${currentSlide === 2 ? "bg-gradient-primary  text-white" : "bg-[#F1F1F1] text-gray-800"}`}>
           Step 3
         </button>
       </div>
