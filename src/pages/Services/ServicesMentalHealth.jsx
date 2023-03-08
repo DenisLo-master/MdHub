@@ -82,31 +82,33 @@ const ServicesMentalHealth = () => {
         </div>
       </section>
       <section className="py-20">
-        <h2 className="text-4xl text-center pb-16">What is Headspace?</h2>
+        <h2 className="text-4xl text-center pb-16">How it works</h2>
         <div className="w-full max-w-6xl mx-auto flex justify-between">
-          <article className="w-full max-w-[430px]">
-            <h2 className="text-3xl">See a mental health professional</h2>
+          <article className="w-full max-w-[464px] shadow-glow py-5 px-8">
+            <h2 className="text-3xl">See a mental health physician</h2>
             <p className="font-body py-7">
-              Log into your MDHUB account and select “Mental Health Physician” from the menu of specialists. Next, choose a date and time that works for you. Quickly speak with a mental health physician for an initial assessment or follow-up. 30-minute initial appointments are $315, and 30-minute follow-up appointments are $230.
+              Log into your MDHUB account and select “Mental Health Physician” from the menu of specialists.
+              Next, choose a date and time that works for you.
+              Quickly speak with a mental health physician for an initial assessment or follow-up. 30-minute initial appointments are $315, and 30-minute follow-up appointments are $230.
             </p>
             <Link to="/register">
               <button
                 type="button"
-                className={`rounded-full w-48 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
+                className={`rounded-full w-56 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
               >
                 Sign Up Today
               </button>
             </Link>
           </article>
-          <article className="w-full max-w-[430px]">
-            <h2 className="text-3xl">See a mental health specialist</h2>
+          <article className="w-full max-w-[464px] shadow-glow py-5 px-8">
+            <h2 className="text-3xl">See a mental health therapist</h2>
             <p className="font-body py-7">
               See a mental health therapist, with no appointment necessary. All you need to do is choose the topic you’d like to discuss with a therapist and book an appointment. Sessions are 50 minutes in length. The fee for a session ranges from $120-$160, depending on your region. If you have insurance, this fee is often covered by health benefits.
             </p>
             <Link to="/register">
               <button
                 type="button"
-                className={`rounded-full w-48 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
+                className={`rounded-full w-56 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
               >
                 Sign Up Today
               </button>
