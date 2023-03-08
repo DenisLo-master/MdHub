@@ -42,7 +42,7 @@ const ServicesOnlinePharmacy = () => {
       <section className="bg-white py-14">
         <div className="relative virtual-health text-center flex justify-center flip-words">
           <h2 className="text-primary text-center text-5xl md:text-6xl">
-            Get care today for
+            Get help for
           </h2>
           <div className="w-full absolute left-0 top-16">
             <div className="w-full h-16 overflow-y-hidden flex justify-center">
@@ -56,36 +56,31 @@ const ServicesOnlinePharmacy = () => {
             </div>
           </div>
         </div>
-        <div className="bg-[#F9F9F9] pt-32 py-10">
+        <div className="pt-32 py-10">
           <h2 className="text-4xl pb-4 text-center">
             How It Works
           </h2>
-          <section className="w-full max-w-4xl space-y-6 mx-auto">
-            {
-              onlinePharmacyHowItWorksData.map((step => (
-                <article key={step.id} className="flex justify-between items-center">
-                  <div className="flex items-center gap-x-8">
-                    <article>
-                      <div className="w-14 h-14 text-3xl font-body font-semibold bg-gradient-primary text-white rounded-full flex justify-center items-center">
-                        {step.id}
-                      </div>
-                    </article>
-                    <article className="w-full max-w-[590px] space-y-5">
-                      <p className="font-body text-lg">
-                        {step.text}
-                      </p>
-                    </article>
-                  </div>
-                  <img src={step.image} alt={step.text} />
-                </article>
-              )))
-            }
-            <div className="md:pl-28">
-              <Link to="/register">
-                <button className="rounded-full w-[240px] text-lg flex justify-center py-2 border border-primary">
-                  Sign Up Today
-                </button>
-              </Link>
+          <section className="w-full max-w-5xl space-y-6 mx-auto">
+            <div className="flex justify-between">
+              {
+                onlinePharmacyHowItWorksData.map((step => (
+                  <article key={step.id} className="flex flex-col justify-between items-center">
+                    <div className="flex flex-col gap-x-8">
+                      <article className="pb-2">
+                        <div className="w-14 h-14 text-3xl font-body font-semibold bg-gradient-primary text-white rounded-full flex justify-center items-center">
+                          {step.id}
+                        </div>
+                      </article>
+                      <article className="w-full max-w-[220px] space-y-5 border-b border-dark pb-2">
+                        <p className="leading-5 text-lg">
+                          {step.text}
+                        </p>
+                      </article>
+                    </div>
+                    <img src={step.image} alt={step.text} />
+                  </article>
+                )))
+              }
             </div>
           </section>
         </div>
