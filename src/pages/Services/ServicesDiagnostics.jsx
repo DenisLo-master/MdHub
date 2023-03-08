@@ -23,7 +23,7 @@ const ServicesDiagnostics = () => {
               </p>
             </div>
             <Link to="register">
-              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border border-white">
+              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white text-primary border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
                 Sign Up Today
               </button>
             </Link>
