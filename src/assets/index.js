@@ -141,8 +141,16 @@ import VirtualCare01 from './virtual-care-01.png'
 import VirtualCare02 from './virtual-care-02.png'
 import VirtualCare03 from './virtual-care-03.png'
 import VirtualCare04 from './virtual-care-04.png'
+import DiagnosticsHowItWorks01 from './diagnostics-how-it-works-01.png'
+import DiagnosticsHowItWorks02 from './diagnostics-how-it-works-02.png'
+import DiagnosticsHowItWorks03 from './diagnostics-how-it-works-03.png'
+import DiagnosticsHowItWorks04 from './diagnostics-how-it-works-04.png'
 
 export {
+  DiagnosticsHowItWorks01,
+  DiagnosticsHowItWorks02,
+  DiagnosticsHowItWorks03,
+  DiagnosticsHowItWorks04,
   VirtualCare01,
   VirtualCare02,
   VirtualCare03,
