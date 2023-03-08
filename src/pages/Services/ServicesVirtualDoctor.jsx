@@ -11,7 +11,11 @@ import {
   HomeHowItWorks01,
   HomeHowItWorks02,
   HomeHowItWorks03,
-  HomeHowItWorks04
+  HomeHowItWorks04,
+  VirtualCare01,
+  VirtualCare02,
+  VirtualCare03,
+  VirtualCare04
 } from '../../assets'
 
 import { virtualDoctorHowItWorksData } from '../../constants'
@@ -25,14 +29,11 @@ const ServicesVirtualDoctor = () => {
         <div className="max-w-[83rem] mx-auto">
           <article className="space-y-5">
             <h2 className="text-[88px]">
-              virtual doctor
+              virtual care
             </h2>
             <div className="space-y-5 font-body text-lg max-w-lg">
               <p>
-                Treatment and diagnosis for 70% of medical issues can be done virtually.
-              </p>
-              <p>
-                Connect with a virtual doctor in minutes, 24/7. Or, book an appointment with a specialist – no referral needed.
+                Treatment and diagnosis for 70% of medical issues can be done virtually. Connect with a virtual doctor in minutes, 24/7. Or, book an appointment with a specialist – no referral needed.
               </p>
             </div>
             <Link className="block" to="/register">
@@ -45,10 +46,10 @@ const ServicesVirtualDoctor = () => {
         </div>
       </header>
 
-      <section className="relative bg-white py-14">
+      <section className="relative bg-white py-14 pb-28">
         <div className="relative virtual-health text-center flex justify-center flip-words">
           <h2 className="text-primary text-center text-5xl md:text-6xl">
-            Get care today for
+            Get help for
           </h2>
           <div className="w-full absolute left-0 top-16">
             <div className="w-full h-16 overflow-y-hidden flex justify-center">
@@ -61,27 +62,6 @@ const ServicesVirtualDoctor = () => {
               }
             </div>
           </div>
-        </div>
-        <h3 className="text-center text-4xl md:text-5xl pt-32 py-20">
-          Don't just take it from us
-        </h3>
-        <div className="w-full max-w-6xl mx-auto flex item-center justify-between text-center">
-          <article className="space-y-6 text-center">
-            <h2 className="text-primary text-7xl">4.9/5</h2>
-            <p className="font-body max-w-[170px]">Average user satisfaction rating</p>
-          </article>
-          <article className="space-y-6 text-center">
-            <h2 className="text-primary text-7xl">91%</h2>
-            <p className="font-body max-w-[220px]">Of medical issues resolved in the first interaction</p>
-          </article>
-          <article className="space-y-6 text-center">
-            <h2 className="text-primary text-7xl">65%</h2>
-            <p className="font-body max-w-[200px]">Of visits prevent a workplace absence</p>
-          </article>
-          <article className="space-y-6 text-center">
-            <h2 className="text-primary text-7xl">3.6</h2>
-            <p className="font-body max-w-[170px]">Hours saves per consultation on average</p>
-          </article>
         </div>
       </section>
 
@@ -155,40 +135,45 @@ const ServicesVirtualDoctor = () => {
             </article>
           </div>
 
-          <div className="flex justify-around flex-wrap py-10 gap-x-4 gap-y-8">
-            <article className="flex items-center text-3xl gap-x-3 text-white">
+          <div className="flex justify-around flex-wrap pt-16 py-10 gap-x-4 gap-y-8">
+            <article className="flex items-center text-2xl gap-x-3 text-white">
               <OkIconWhite />
               <h2>diagnosis</h2>
             </article>
 
-            <article className="flex items-center text-3xl gap-x-3 text-white">
+            <article className="flex items-center text-2xl gap-x-3 text-white">
               <OkIconWhite />
-              <h2>doctors notes</h2>
+              <h2>prescriptions & renewals</h2>
             </article>
 
-            <article className="flex items-center text-3xl gap-x-3 text-white">
+            <article className="flex items-center text-2xl gap-x-3 text-white">
               <OkIconWhite />
               <h2>lab requisitions</h2>
             </article>
 
-            <article className="flex items-center text-3xl gap-x-3 text-white">
+            <article className="flex items-center text-2xl gap-x-3 text-white">
               <OkIconWhite />
-              <h2>mental health</h2>
+              <h2>24/7 unlimited access</h2>
             </article>
 
-            <article className="flex items-center text-3xl gap-x-3 text-white pr-8">
+            <article className="flex items-center text-2xl gap-x-3 text-white pr-8">
+              <OkIconWhite />
+              <h2>doctors notes</h2>
+            </article>
+
+            <article className="flex items-center text-2xl gap-x-3 text-white">
               <OkIconWhite />
               <h2>referrals to specialists</h2>
             </article>
 
-            <article className="flex items-center text-3xl gap-x-3 text-white">
+            <article className="flex items-center text-2xl gap-x-3 text-white pl-8">
               <OkIconWhite />
-              <h2>general health advice</h2>
+              <h2>mental health</h2>
             </article>
 
-            <article className="flex items-center text-3xl gap-x-3 text-white pl-8">
+            <article className="flex items-center text-2xl gap-x-3 text-white pl-8">
               <OkIconWhite />
-              <h2>prescriptions & renewals</h2>
+              <h2>general health advice</h2>
             </article>
           </div>
         </section>
@@ -202,12 +187,12 @@ const ServicesVirtualDoctor = () => {
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 1
               </div>
-              <h2 className="text-2xl pr-4 py-3">Describe your symptoms using our app </h2>
+              <h2 className="text-2xl pr-4 py-3 pb-1 mb-2 border-b border-dark">Describe your symptoms using our app </h2>
               <p className="max-w-[215px] font-body">
                 Open the app or browser and click the “Get care” button. Describe your symptoms, and one of our healthcare providers will review your request in minutes.
               </p>
-              <div className="pt-[4.5rem]">
-                <img className="max-w-[180px]" src={HomeHowItWorks01} alt="How It Works" />
+              <div className="">
+                <img className="max-w-[224px]" src={VirtualCare01} alt="How It Works" />
               </div>
             </article>
 
@@ -215,12 +200,12 @@ const ServicesVirtualDoctor = () => {
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 2
               </div>
-              <h2 className="text-2xl pr-4 py-3">Chat with a doctor</h2>
+              <h2 className="text-2xl pr-4 py-3 pb-1 mb-2 border-b border-dark">Chat with a doctor</h2>
               <p className="max-w-[215px] font-body pt-7">
                 Typically, you’ll be connected with a healthcare provider over text, but they may request a video or audio chat if necessary.
               </p>
-              <div className="pt-24">
-                <img className="max-w-[270px]" src={HomeHowItWorks02} alt="How It Works" />
+              <div className="pt-10">
+                <img className="max-w-[216px]" src={VirtualCare02} alt="How It Works" />
               </div>
             </article>
 
@@ -228,12 +213,12 @@ const ServicesVirtualDoctor = () => {
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 3
               </div>
-              <h2 className="text-2xl text-dark pr-4 pt-3 leading-5 pb-1">Get a diagnosis or prescription, and or lab requisition or doctors note</h2>
+              <h2 className="text-2xl text-dark pr-4 pt-3 leading-5 pb-2 mb-2 border-b border-dark">Get a diagnosis or prescription, and or lab requisition or doctors note</h2>
               <p className="max-w-[215px] font-body">
-                Our doctors will take the proper for each patient. They can diagnose, provide prescriptions and or lab requisitions when needed. Patients may also requests doctors not and or request a referral to specialists.
+                Our virtual doctors can diagnose and provide prescriptions, and prescription delivery is available at no extra cost.
               </p>
-              <div className="pt-6">
-                <img className="max-w-[270px]" src={HomeHowItWorks03} alt="How It Works" />
+              <div className="pt-8">
+                <img className="max-w-[223px]" src={VirtualCare03} alt="How It Works" />
               </div>
             </article>
 
@@ -245,8 +230,8 @@ const ServicesVirtualDoctor = () => {
               <p className="max-w-[215px] font-body">
                 Pharmacy, nursing, lab diagnostics, and mental health.
               </p>
-              <div className="pt-44">
-                <img className="max-w-[150px]" src={HomeHowItWorks04} alt="How It Works" />
+              <div className="pt-[4.7rem]">
+                <img className="max-w-[227px]" src={VirtualCare04} alt="How It Works" />
               </div>
             </article>
           </section>
@@ -260,6 +245,30 @@ const ServicesVirtualDoctor = () => {
                 Sign Up Today
               </button>
             </Link>
+          </div>
+
+          <div>
+            <h3 className="text-center text-4xl md:text-5xl pt-10 py-20">
+              Don't just take it from us
+            </h3>
+            <div className="w-full max-w-6xl mx-auto flex item-center justify-between text-center">
+              <article className="space-y-6 text-center">
+                <h2 className="text-primary text-7xl">4.9/5</h2>
+                <p className="font-body max-w-[170px]">Average user satisfaction rating</p>
+              </article>
+              <article className="space-y-6 text-center">
+                <h2 className="text-primary text-7xl">91%</h2>
+                <p className="font-body max-w-[220px]">Of medical issues resolved in the first interaction</p>
+              </article>
+              <article className="space-y-6 text-center">
+                <h2 className="text-primary text-7xl">65%</h2>
+                <p className="font-body max-w-[200px]">Of visits prevent a workplace absence</p>
+              </article>
+              <article className="space-y-6 text-center">
+                <h2 className="text-primary text-7xl">3.6</h2>
+                <p className="font-body max-w-[170px]">Hours saves per consultation on average</p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
