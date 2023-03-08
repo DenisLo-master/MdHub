@@ -94,21 +94,21 @@ export const howItWorksData = [
     title: "Step 1",
     heading: "Sign up for a membership",
     image: HomeHowItWorks01,
-    description: "Open the app or browser and click the “Get care” button. Describe your symptoms, and one of our healthcare providers will review your request in minutes.",
+    description: "Click on the “Sign Up” button and choose your membership type. Then, fill in your personal information, including your name, email address, and payment details.",
   },
   {
     id: 2,
     title: "Step 2",
     heading: "Explore our dashboard",
     image: HomeHowItWorks02,
-    description: "Typically, you’ll be connected with a healthcare provider over text, but they may request a video or audio chat if necessary.",
+    description: "Go to your MDHUB dashboard. Here, you can easily access our services, including our online pharmacy and labs, or book an appointment with a specialist.",
   },
   {
     id: 3,
     title: "Step 3",
     heading: "Get care now",
     image: HomeHowItWorks03,
-    description: "Our doctors will take the proper for each patient. They can diagnose, provide prescriptions and or lab requisitions when needed. Patients may also requests doctors not and or request a referral to specialists.",
+    description: "See a doctor in minutes, 24/7, without booking an appointment in advance. Our doctors can treat and diagnose 70% of medical issues online.",
   }
 ]
 
