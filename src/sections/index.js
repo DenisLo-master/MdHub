@@ -37,8 +37,12 @@ import PricingSlider from "./Pricing/PricingSlider"
 import OnDemandCTA from './Pricing/OnDemandCTA'
 import PricingHeader from './Pricing/PricingHeader'
 import HeadspaceSection from './Pricing/HeadspaceSection'
+import MembershipBenefits from './Pricing/MembershipBenefits'
+import Testimonials from "./Pricing/Testimonials"
 
 export {
+  Testimonials,
+  MembershipBenefits,
   HeadspaceSection,
   PricingHeader,
   OnDemandCTA,
