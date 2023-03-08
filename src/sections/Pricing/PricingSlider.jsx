@@ -34,10 +34,8 @@ const PricingSlider = () => {
               <p className="text-base text-dark text-center">per month</p>
             </div>
             <div className="pt-8 space-y-2 text-center">
-              <Link className="block" to="/register">
-                <button className="rounded-full w-[240px] text-lg flex justify-center py-2 bg-gradient-primary text-white">
-                  Get Started
-                </button>
+              <Link className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-gradient-primary text-white" to="/register">
+                Get Started
               </Link>
               <p className="text-sm text-primary">3 months minimum*</p>
             </div>
@@ -57,7 +55,7 @@ const PricingSlider = () => {
             </div>
             <div className="pt-8 space-y-2 text-center">
               <Link className="block" to="/register">
-                <button className="rounded-full w-[240px] text-lg flex justify-center py-2 bg-gradient-primary text-white">
+                <button className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-gradient-primary text-white">
                   Get Started
                 </button>
               </Link>
