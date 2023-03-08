@@ -23,7 +23,12 @@ const Signup = () => {
   return (
     <section className="w-full max-w-[42rem] flex flex-col items-center mx-auto py-8 md:py-20 font-main">
       <article className="w-full space-y-4 flex flex-col items-center">
-        <h2 className="text-4xl text-center pb-4">Choose Account Type</h2>
+        <h2 className="text-4xl text-center">Choose Account Type</h2>
+        <div className="text-center space-y-1 font-body pb-4">
+          <h2>We make it easier to get the care you need for yourself, your family or your corporation.
+          </h2>
+          <h2>Memberships are now as low as $19.99 per month!</h2>
+        </div>
         <SignupAccountsTypeNav />
       </article>
       <article className="w-full">
