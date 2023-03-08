@@ -121,19 +121,19 @@ const SignupStepThree = () => {
             {
               selectedAccountType === "individual" ?
                 paymentMode === "monthly" ?
-                  "1 x Individual Plan" :
-                  "12 x Individual Plan ($24.99)"
+                  `1 x Individual Plan ($${individualMonthlyFee}/month)` :
+                  `12 x Individual Plan ($${individualYearlyFee}/month)`
                 :
                 selectedAccountType === "family" ?
                   paymentMode === "yearly" ?
-                    `12 x Family Plan for ${childForms.length + 1} member${childForms.length > 0 ? "s" : ""}`
+                    `12 x Family Plan for ${childForms.length + 1} member${childForms.length > 0 ? "s" : ""} ($${familyYearlyFee}/month)`
                     :
-                    `1 x Family Plan for ${childForms.length + 1} member${childForms.length > 0 ? "s" : ""}`
+                    `1 x Family Plan for ${childForms.length + 1} member${childForms.length > 0 ? "s" : ""} ($${familyMonthlyFee}/month)`
                   :
                   selectedAccountType === "corporate" ?
-                    `12 x Corporate Plan for ${childForms.length + 1} member${childForms.length > 0 ? "s" : ""}`
+                    `12 x Corporate Plan for ${childForms.length + 1} member${childForms.length > 0 ? "s" : ""} ($${corporateFee}/month)`
                     :
-                    "1 x On Demand Plan"
+                    `1 x On Demand Plan ($${onDemandFee}/month)`
             }
           </h3>
         </article>
@@ -187,7 +187,6 @@ const SignupStepThree = () => {
                         </h2>
                       </div> :
                       <div>
-                        <h3>${familyYearlyFee}</h3>
                         <h3>${calculatePricing("familyYearly").totalAmount.toFixed(2)}</h3>
                         <h3>Tax: ${calculatePricing("familyYearly").tax.toFixed(2)}</h3>
                         <h2 className="text-3xl">
@@ -199,8 +198,7 @@ const SignupStepThree = () => {
                       </div>
                   ) : selectedAccountType === "corporate" ?
                   (
-                    <div>
-                        <h3>${corporateFee}</h3>
+                      <div>
                         <h3>${calculatePricing("corporate").totalAmount.toFixed(2)}</h3>
                         <h3>Tax: ${calculatePricing("corporate").tax.toFixed(2)}</h3>
                         <h2 className="text-3xl">
@@ -214,7 +212,6 @@ const SignupStepThree = () => {
                     ) :
                     (
                       <div>
-                        <h3>${onDemandFee}</h3>
                         <h3>${calculatePricing("on demand").totalAmount.toFixed(2)}</h3>
                         <h3>Tax: ${calculatePricing("on demand").tax.toFixed(2)}</h3>
                         <h2 className="text-3xl">
