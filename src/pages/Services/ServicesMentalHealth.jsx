@@ -13,7 +13,7 @@ const WORDS = ['anxiety', 'mood changes', 'depression', 'seasonal depression', "
 
 const ServicesMentalHealth = () => {
   return (
-    <section className="font-main bg-white">
+    <section className="font-main bg-white py-10">
       <header className="bg-mentalHealth text-white w-full h-[560px] py-10">
         <div className="max-w-[86rem] mx-auto flex justify-between">
           <article className="space-y-5">

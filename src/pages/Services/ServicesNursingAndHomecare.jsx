@@ -7,7 +7,7 @@ const WORDS = ['mobile vaccination', 'wound care and treatment', 'palliative car
 
 const ServicesNursingAndHomecare = () => {
   return (
-    <section className="py-20 font-main">
+    <section className="py-10 font-main">
       <header className="bg-nursingHomecare text-white w-full h-[530px] py-10 relative">
         <div className="max-w-[83rem] mx-auto">
           <article className="space-y-5">

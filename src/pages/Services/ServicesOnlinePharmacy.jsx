@@ -7,7 +7,7 @@ const WORDS = ["birth control", "erectile dysfunction", "plan b", "antibiotics",
 
 const ServicesOnlinePharmacy = () => {
   return (
-    <section className="font-main">
+    <section className="font-main py-10">
       <header className="bg-onlinePharmacy text-white w-full py-10 pb-20 relative">
         <div className="max-w-[83rem] mx-auto">
           <article className="space-y-5">

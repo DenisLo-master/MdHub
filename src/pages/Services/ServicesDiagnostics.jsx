@@ -6,7 +6,7 @@ const WORDS = ['virus', 'urine', 'blood', 'covid']
 
 const ServicesDiagnostics = () => {
   return (
-    <section className="font-main text-dark ">
+    <section className="font-main text-dark py-10">
       <header className="bg-diagnostics diagnostics-bg text-white w-full py-20 relative">
         <div className="max-w-[83rem] mx-auto">
           <article className="space-y-5">
