@@ -63,10 +63,7 @@ const RegistrationCheckoutForm = () => {
 
   const handleSignup = async (e) => {
     e.preventDefault()
-    if (selectedAccountType === "family" && childForms.length < 2) {
-      toast.error("Please add two family members before proceeding", { id: "family members add" })
-      return
-    }
+
     if (selectedAccountType === "corporate" && childForms.length < 5) {
       toast.error("Please add minimum five employees before proceeding", { id: "corporate members add" })
       return
