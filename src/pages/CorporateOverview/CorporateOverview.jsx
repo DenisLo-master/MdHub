@@ -10,7 +10,10 @@ import {
   ForCorporateGrid03,
   ForCorporateGrid04,
   ForCorporateHeader,
-  OkIconWhite
+  OkIconWhite,
+  CorporateBenefitsIcon01,
+  CorporateBenefitsIcon02,
+  CorporateBenefitsIcon03
 } from '../../assets'
 import { registerationStore } from '../../store/registerationStore'
 
@@ -85,153 +88,96 @@ const CorporateOverview = () => {
         </article>
       </section>
 
-      <section className="bg-[#F9F9F9] py-10">
-        <h2 className="text-4xl text-dark text-center">Lorem ipsum dolor sit amet consectetur.</h2>
+      <section className="py-10">
         <div className="py-10 flex justify-center gap-x-16 text-center">
-          <article>
-            <h2 className="text-primary text-8xl">85%</h2>
-            <p className="text-xl  w-full max-w-[250px] leading-6 font-body">
-              Lorem ipsum dolor sit amet consectetur
-            </p>
-          </article>
-          <article>
+          <article className="space-y-1">
             <h2 className="text-primary text-8xl">91%</h2>
             <p className="text-xl  w-full max-w-[250px] leading-6 font-body">
-              Lorem ipsum dolor sit amet consectetur
+              Of medical issues resolved in the first interaction
             </p>
           </article>
-          <article>
+          <article className="space-y-1">
             <h2 className="text-primary text-8xl">65%</h2>
             <p className="text-xl  w-full max-w-[250px] leading-6 font-body">
-              Lorem ipsum dolor sit amet consectetur
+              Of visits prevent a workplace absence
+            </p>
+          </article>
+          <article className="space-y-1">
+            <h2 className="text-primary text-8xl">3.5</h2>
+            <p className="text-xl  w-full max-w-[250px] leading-6 font-body">
+              Hours saves per consultation on average
             </p>
           </article>
         </div>
       </section>
 
-      <section className="w-full max-w-[1130px] mx-auto py-20 font-main">
-        <div className="w-full bg-linearGradientPrimary rounded-lg p-10 text-white flex justify-between gap-x-12">
-          <article className="space-y-8">
-            <h2 className="text-4xl">Lorem ipsum dolor sit amet consectetur.</h2>
-            <div className="space-y-3">
-              <h2 className="text-3xl">
-                Lorem ipsum dolor sit amet
-              </h2>
-              <p className="font-body">
-                Lorem ipsum dolor sit amet consectetur. In ipsum quam viverra purus libero. Pellentesque ultricies viverra sed eu arcu nunc. Donec tortor aliquam eu varius aliquet eu dui magna. Lobortis mollis amet orci volutpat tincidunt sed massa magna.
-              </p>
-            </div>
-            <div className="space-y-3">
-              <h2 className="text-3xl">
-                Lorem ipsum dolor sit amet
-              </h2>
-              <p className="font-body">
-                Lorem ipsum dolor sit amet consectetur. In ipsum quam viverra purus libero. Pellentesque ultricies viverra sed eu arcu nunc. Donec tortor aliquam eu varius aliquet eu dui magna. Lobortis mollis amet orci volutpat tincidunt sed massa magna.
-              </p>
-            </div>
-          </article>
-          <article className="space-y-8">
-            <div className="space-y-3">
-              <h2 className="text-3xl">
-                Lorem ipsum dolor sit amet
-              </h2>
-              <p className="font-body">
-                Lorem ipsum dolor sit amet consectetur. In ipsum quam viverra purus libero. Pellentesque ultricies viverra sed eu arcu nunc. Donec tortor aliquam eu varius aliquet eu dui magna. Lobortis mollis amet orci volutpat tincidunt sed massa magna.
-              </p>
-            </div>
-            <div className="space-y-3">
-              <h2 className="text-3xl">
-                Lorem ipsum dolor sit amet
-              </h2>
-              <p className="font-body">
-                Lorem ipsum dolor sit amet consectetur. In ipsum quam viverra purus libero. Pellentesque ultricies viverra sed eu arcu nunc. Donec tortor aliquam eu varius aliquet eu dui magna. Lobortis mollis amet orci volutpat tincidunt sed massa magna.
-              </p>
-            </div>
-
-            <div>
-              <Link className="block" to="/register">
-                <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white border-white text-primary font-main">
-                  Sign Up Today
-                </button>
-              </Link>
-            </div>
-          </article>
+      <section className="w-full max-w-[1130px] mx-auto font-main">
+        <div>
+          <p className="font-body text-xl text-center py-8 font-light">
+            We offer holistic corporate plans to suit any size of business.
+          </p>
+          <div className="flex justify-center gap-x-12">
+            <Link
+              to="/register"
+              onClick={() => changeSelectedAccountType("corporate")}
+            >
+              <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+                5-10 Employees
+              </button>
+            </Link>
+            <a href="mailto:info@mdhub.com?subject=Corporate%20Inquiry%20-%2010%2B%20Employees">
+              <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+                10-50 Employees
+              </button>
+            </a>
+            <a href="mailto:info@mdhub.com?subject=Corporate%20Inquiry%20-%2010%2B%20Employees">
+              <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+                51+ Employees
+              </button>
+            </a>
+          </div>
         </div>
       </section>
 
-      <section className="bg-[#F9F9F9] py-10">
-        <h2 className="text-4xl text-dark text-center">Lorem ipsum dolor sit amet consectetur.</h2>
-        <div className="py-10 flex justify-center gap-x-16 text-center">
-          <article className="space-y-3">
-            <h2 className="text-primary text-8xl">25%</h2>
-            <p className="text-xl  w-full max-w-[250px] leading-6 font-body">
-              Lorem ipsum dolor sit amet consectetur. Tellus at commodo in mauris vulputate nulla risus convallis pellentesque.
+      <section className="py-10 flex flex-col items-center">
+        <h2 className="text-4xl max-w-[680px] pb-8 text-center">
+          The ultimate benefits solution that your teams will actually use and love.
+        </h2>
+        <div className="w-full max-w-[1000px] flex justify-between text-center font-main">
+          <article className="max-w-[280px] flex flex-col items-center">
+            <img src={CorporateBenefitsIcon01} alt="Corporate Benefits" />
+            <h2 className="text-xl max-w-[250px]">Whole-person care anytime, anywhere</h2>
+            <p className="font-body pt-2 pb-4">
+              Support every person on your team with access to quality healthcare available 24/7, like virtual appointments and prescription delivery. 
             </p>
+            <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+              Learn More
+            </button>   
           </article>
-          <article className="space-y-3">
-            <h2 className="text-primary text-8xl">70%</h2>
-            <p className="text-xl  w-full max-w-[250px] leading-6 font-body">
-              Lorem ipsum dolor sit amet consectetur. Tellus at commodo in mauris vulputate nulla risus convallis pellentesque.
+          <article className="max-w-[280px] flex flex-col items-center">
+            <img src={CorporateBenefitsIcon02} alt="Corporate Benefits" />
+            <h2 className="pt-2 text-xl max-w-[250px]">Family & pediatric care</h2>
+            <p className="font-body pt-8 pb-4">
+              Support every person on your team with access to quality healthcare available 24/7, like virtual appointments and prescription delivery. 
             </p>
+            <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+              Learn More
+            </button>
           </article>
-          <article className="space-y-3">
-            <h2 className="text-primary text-8xl">90%</h2>
-            <p className="text-xl  w-full max-w-[250px] leading-6 font-body">
-              Lorem ipsum dolor sit amet consectetur. Tellus at commodo in mauris vulputate nulla risus convallis pellentesque.
+          <article className="max-w-[280px] flex flex-col items-center">
+            <img src={CorporateBenefitsIcon03} alt="Corporate Benefits" />
+            <h2 className="text-xl max-w-[250px] pt-3 pb-2"> Increased ROI & employee satisfaction</h2>
+            <p className="font-body pb-4">
+              Support every person on your team with access to quality healthcare available 24/7, like virtual appointments and prescription delivery. 
             </p>
-          </article>
-          <article className="space-y-3">
-            <h2 className="text-primary text-8xl">75%</h2>
-            <p className="text-xl  w-full max-w-[250px] leading-6 font-body">
-              Lorem ipsum dolor sit amet consectetur. Tellus at commodo in mauris vulputate nulla risus convallis pellentesque.
-            </p>
+            <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+              Learn More
+            </button>
           </article>
         </div>
       </section>
 
       <section className="max-w-[1130px] mx-auto py-20 space-y-16">
-        <div className="bg-white grid grid-cols-2 gap-10">
-          <article>
-            <div className="relative font-main">
-              <img className="w-full" src={ForCorporateGrid01} alt="Corporate Benefits" />
-              <h2 className="text-xl absolute left-4 bottom-4 text-white">Lorem ipsum dolor sit amet consectetur.</h2>
-            </div>
-            <div className="shadow-corporateCard font-body px-6 py-2">
-              <p>Lorem ipsum dolor sit amet consectetur. Massa massa scelerisque id fringilla a purus aliquet nisi.</p>
-            </div>
-          </article>
-
-          <article>
-            <div className="relative font-main">
-              <img className="w-full" src={ForCorporateGrid02} alt="Corporate Benefits" />
-              <h2 className="text-xl absolute left-4 bottom-4 text-white">Lorem ipsum dolor sit amet consectetur.</h2>
-            </div>
-            <div className="shadow-corporateCard font-body px-6 py-2">
-              <p>Lorem ipsum dolor sit amet consectetur. Massa massa scelerisque id fringilla a purus aliquet nisi.</p>
-            </div>
-          </article>
-
-          <article>
-            <div className="relative font-main">
-              <img className="w-full" src={ForCorporateGrid03} alt="Corporate Benefits" />
-              <h2 className="text-xl absolute left-4 bottom-4 text-white">Lorem ipsum dolor sit amet consectetur.</h2>
-            </div>
-            <div className="shadow-corporateCard font-body px-6 py-2">
-              <p>Lorem ipsum dolor sit amet consectetur. Massa massa scelerisque id fringilla a purus aliquet nisi.</p>
-            </div>
-          </article>
-
-          <article>
-            <div className="relative font-main">
-              <img className="w-full" src={ForCorporateGrid04} alt="Corporate Benefits" />
-              <h2 className="text-xl absolute left-4 bottom-4 text-white">Lorem ipsum dolor sit amet consectetur.</h2>
-            </div>
-            <div className="shadow-corporateCard font-body px-6 py-2">
-              <p>Lorem ipsum dolor sit amet consectetur. Massa massa scelerisque id fringilla a purus aliquet nisi.</p>
-            </div>
-          </article>
-        </div>
-
         <div className="space-y-6 text-center">
           <h2 className="text-dark text-4xl pb-4">
             "mental well-being coverage has provided us with the tools to make a difference in the lives of our employees and each other.”
