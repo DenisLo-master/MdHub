@@ -13,6 +13,7 @@ const INITIAL_DATA = {
   city: "",
   postalCode: "",
   province: "Quebec",
+  customNursingService: "",
   selectedDate: new Date(),
 }
 
@@ -43,12 +44,6 @@ const NursingAppointmentForm = () => {
 
   const handleNursingFormSubmit = async (e) => {
     e.preventDefault()
-    if (!selectedNursingHomecareOptions.length) {
-      toast.error("Please select a service", {
-        id: "Service selection error"
-      })
-      return
-    }
     if (!isLastStep) next()
     if (!stripe || !elements) {
       return;
