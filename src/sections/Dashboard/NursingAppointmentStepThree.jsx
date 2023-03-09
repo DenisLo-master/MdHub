@@ -10,15 +10,15 @@ const NursingAppointmentStepThree = () => {
         <article className="space-y-4">
           <h2 className="text-2xl">Your Order</h2>
           <h3 className="font-body">
-            1 hour minimum nursing fee: ${nursingAppointmentBill}
+            1 hour minimum nursing fee: ${nursingAppointmentBill > 0 ? nursingAppointmentBill : 99}
           </h3>
         </article>
         <article className="space-y-4 text-right">
           <h2 className="text-2xl">Subtotal</h2>
           <div className="font-body">
-            <h3>${nursingAppointmentBill}</h3>
-            <h3>Tax: ${(nursingAppointmentBill * 0.09975).toFixed(2)}</h3>
-            <h2 className="text-3xl">Total: <strong>${(nursingAppointmentBill + (nursingAppointmentBill * 0.09975)).toFixed(2)}</strong></h2>
+            <h3>${nursingAppointmentBill > 0 ? nursingAppointmentBill : 99}</h3>
+            <h3>Tax: ${nursingAppointmentBill > 0 ? (nursingAppointmentBill * 0.14975).toFixed(2) : (99 * 0.14975).toFixed(2)}</h3>
+            <h2 className="text-3xl">Total: <strong>${nursingAppointmentBill > 0 ? (nursingAppointmentBill + (nursingAppointmentBill * 0.14975)).toFixed(2) : 113.83}</strong></h2>
           </div>
         </article>
       </div>
