@@ -19,7 +19,7 @@ const SignupStepThree = () => {
     const individualYearlyPrice = 29.99 * 12
     const familyMonthlyPrice = 54.99 * 3
     const familyYearlyPrice = 44.99 * 12
-    const corporatePrice = 19.99 * 12
+    const corporatePrice = 19.99 * 12 * (childForms.length + 1)
     const onDemandPrice = 89.99
     const taxFactor = 0.14975
     return accountType === "individualMonthly" ?
@@ -204,7 +204,7 @@ const SignupStepThree = () => {
                         <h2 className="text-3xl">
                           <span className="pr-2">Total:</span>
                           <strong>
-                            {calculatePricing("corporate").totalAmountPlusTax.toFixed(2)}
+                            ${calculatePricing("corporate").totalAmountPlusTax.toFixed(2)}
                           </strong>
                         </h2>
                     </div>
