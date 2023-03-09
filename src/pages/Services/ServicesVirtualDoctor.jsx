@@ -130,43 +130,43 @@ const ServicesVirtualDoctor = () => {
             </article>
           </div>
 
-          <div className="flex justify-around flex-wrap pt-16 py-10 gap-x-4 gap-y-8">
-            <article className="flex items-center text-2xl gap-x-3 text-white">
+          <div className="grid grid-cols-4 pt-16 py-10 gap-x-4 gap-y-8">
+            <article className="flex items-center text-xl gap-x-3 text-white">
               <OkIconWhite />
               <h2>diagnosis</h2>
             </article>
 
-            <article className="flex items-center text-2xl gap-x-3 text-white">
+            <article className="flex items-center text-xl gap-x-3 text-white">
               <OkIconWhite />
               <h2>prescriptions & renewals</h2>
             </article>
 
-            <article className="flex items-center text-2xl gap-x-3 text-white">
+            <article className="flex items-center text-xl gap-x-3 text-white">
               <OkIconWhite />
               <h2>lab requisitions</h2>
             </article>
 
-            <article className="flex items-center text-2xl gap-x-3 text-white">
+            <article className="flex items-center text-xl gap-x-3 text-white">
               <OkIconWhite />
               <h2>24/7 unlimited access</h2>
             </article>
 
-            <article className="flex items-center text-2xl gap-x-3 text-white pr-8">
+            <article className="flex items-center text-xl gap-x-3 text-white">
               <OkIconWhite />
               <h2>doctors notes</h2>
             </article>
 
-            <article className="flex items-center text-2xl gap-x-3 text-white">
+            <article className="flex items-center text-xl gap-x-3 text-white">
               <OkIconWhite />
               <h2>referrals to specialists</h2>
             </article>
 
-            <article className="flex items-center text-2xl gap-x-3 text-white pl-8">
+            <article className="flex items-center text-xl gap-x-3 text-white">
               <OkIconWhite />
               <h2>mental health</h2>
             </article>
 
-            <article className="flex items-center text-2xl gap-x-3 text-white pl-8">
+            <article className="flex items-center text-xl gap-x-3 text-white">
               <OkIconWhite />
               <h2>general health advice</h2>
             </article>
