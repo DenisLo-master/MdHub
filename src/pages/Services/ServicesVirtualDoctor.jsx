@@ -178,7 +178,7 @@ const ServicesVirtualDoctor = () => {
         <h2 className="text-4xl text-center pb-12">How it works</h2>
         <div className="w-full max-w-[76rem] mx-auto">
           <section className="flex justify-between">
-            <article className="max-w-[270px]">
+            <article className="max-w-[240px]">
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 1
               </div>
@@ -186,12 +186,12 @@ const ServicesVirtualDoctor = () => {
               <p className="max-w-[215px] font-body">
                 Open the app or browser and click the “Get care” button. Describe your symptoms, and one of our healthcare providers will review your request in minutes.
               </p>
-              <div className="">
-                <img className="max-w-[274px]" src={VirtualCare01} alt="How It Works" />
+              <div className="pt-4">
+                <img className="w-full" src={VirtualCare01} alt="How It Works" />
               </div>
             </article>
 
-            <article className="max-w-[270px]">
+            <article className="max-w-[240px]">
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 2
               </div>
@@ -199,12 +199,12 @@ const ServicesVirtualDoctor = () => {
               <p className="max-w-[215px] font-body pt-7">
                 Typically, you’ll be connected with a healthcare provider over text, but they may request a video or audio chat if necessary.
               </p>
-              <div className="pt-10">
-                <img className="max-w-[266px]" src={VirtualCare02} alt="How It Works" />
+              <div className="pt-[74px]">
+                <img className="max-w-full" src={VirtualCare02} alt="How It Works" />
               </div>
             </article>
 
-            <article className="max-w-[270px]">
+            <article className="max-w-[240px]">
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 3
               </div>
@@ -212,12 +212,12 @@ const ServicesVirtualDoctor = () => {
               <p className="max-w-[215px] font-body">
                 Our virtual doctors can diagnose and provide prescriptions, and prescription delivery is available at no extra cost.
               </p>
-              <div className="pt-8">
-                <img className="max-w-[273px]" src={VirtualCare03} alt="How It Works" />
+              <div className="pt-[54px]">
+                <img className="max-w-full" src={VirtualCare03} alt="How It Works" />
               </div>
             </article>
 
-            <article className="max-w-[270px]">
+            <article className="max-w-[240px]">
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 4
               </div>
@@ -225,8 +225,8 @@ const ServicesVirtualDoctor = () => {
               <p className="max-w-[215px] font-body">
                 Pharmacy, nursing, lab diagnostics, and mental health.
               </p>
-              <div className="pt-[4.7rem]">
-                <img className="max-w-[277px]" src={VirtualCare04} alt="How It Works" />
+              <div className="pt-[115px]">
+                <img className="max-w-full" src={VirtualCare04} alt="How It Works" />
               </div>
             </article>
           </section>
