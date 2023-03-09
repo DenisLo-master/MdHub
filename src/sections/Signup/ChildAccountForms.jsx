@@ -143,7 +143,7 @@ const ChildAccountForms = () => {
             </div>
             {
               selectedAccountType === "family" ? (
-                <button type="button" disabled={childForms.length > 1} onClick={addChildAccount} className="absolute bottom-4 left-8 flex text-gray-600 gap-x-2 font-body items-center text-3xl cursor-pointer">
+                <button type="button" onClick={addChildAccount} className="absolute bottom-4 left-8 flex text-gray-600 gap-x-2 font-body items-center text-3xl cursor-pointer">
                   <BsPlusCircle />
                   <p className='text-xl'>add family member</p>
                 </button>
