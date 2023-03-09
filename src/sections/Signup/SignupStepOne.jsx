@@ -15,6 +15,13 @@ const SignupStepOne = () => {
               </div>
             )
           }
+          {
+            selectedAccountType === "corporate" && (
+              <div className="absolute right-0 top-0 w-72 flex justify-center items-center text-right px-8 h-[68px] rounded-2xl text-white bg-primary text-lg">
+                <p className="leading-5">for more than 10 employees, please click here</p>
+              </div>
+            )
+          }
           <article className="border-b-primary flex items-baseline gap-x-6 border-b-[3px] max-w-xs">
             <h2 className="text-5xl ">Step 1</h2>
             <div className="font-body text-xl font-light">
