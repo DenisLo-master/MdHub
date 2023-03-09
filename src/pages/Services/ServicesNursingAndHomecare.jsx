@@ -7,7 +7,7 @@ const WORDS = ['mobile vaccination', 'wound care and treatment', 'palliative car
 
 const ServicesNursingAndHomecare = () => {
   return (
-    <section className="py-20 font-main">
+    <section className="py-10 font-main">
       <header className="bg-nursingHomecare text-white w-full h-[530px] py-10 relative">
         <div className="max-w-[83rem] mx-auto">
           <article className="space-y-5">
@@ -23,7 +23,7 @@ const ServicesNursingAndHomecare = () => {
               </p>
             </div>
             <Link className="block" to="/register">
-              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border border-white">
+              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white text-primary border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
                 Sign Up Today
               </button>
             </Link>
@@ -34,7 +34,7 @@ const ServicesNursingAndHomecare = () => {
       <section className="bg-white pt-14">
         <div className="relative virtual-health text-center flex justify-center flip-words">
           <h2 className="text-primary text-center text-5xl md:text-6xl">
-            Get care today for
+            Get help for
           </h2>
           <div className="w-full absolute left-0 top-16">
             <div className="w-full h-16 overflow-y-hidden flex justify-center">
@@ -48,37 +48,40 @@ const ServicesNursingAndHomecare = () => {
             </div>
           </div>
         </div>
-        <section className="bg-[#F9F9F9] pt-32 py-10">
+        <section className=" pt-32 py-10">
           <h2 className="text-4xl pb-4 text-center">
             How It Works
           </h2>
           <section className="w-full max-w-5xl space-y-6 mx-auto">
-            {
-              nursingAndHomecareHowItWorksData.map((step => (
-                <article key={step.id} className="flex justify-between items-center">
-                  <div className="flex items-center gap-x-8">
-                    <article>
-                      <div className="w-14 h-14 text-3xl font-body font-semibold bg-gradient-primary text-white rounded-full flex justify-center items-center">
-                        {step.id}
-                      </div>
-                    </article>
-                    <article className="w-full max-w-[590px] space-y-5">
-                      <p className="font-body text-xl">
-                        {step.text}
-                      </p>
-                      {
-                        step.note && (
-                          <p className="text-[13px]">
-                            {step.note}
-                          </p>
-                        )
-                      }
-                    </article>
-                  </div>
-                  <img src={step.image} alt={step.text} />
-                </article>
-              )))
-            }
+            <div className="flex justify-between">
+              {
+                nursingAndHomecareHowItWorksData.map((step => (
+                  <article key={step.id} className="flex flex-col justify-between items-center">
+                    <div className="flex flex-col gap-x-8">
+                      <article className="pb-2">
+                        <div className="w-14 h-14 text-3xl font-body font-semibold bg-gradient-primary text-white rounded-full flex justify-center items-center">
+                          {step.id}
+                        </div>
+                      </article>
+                      <article className="w-full max-w-[220px] space-y-5 border-b border-dark pb-2">
+                        <p className="leading-5 text-lg">
+                          {step.text}
+                          {step.id === 2 && (
+                            <strong className="ml-1">here.</strong>
+                          )}
+                        </p>
+                        {
+                          step.note && (
+                            <p className="font-body text-dark text-sm">{step.note}</p>
+                          )
+                        }
+                      </article>
+                    </div>
+                    <img src={step.image} alt={step.text} />
+                  </article>
+                )))
+              }
+            </div>
           </section>
         </section>
       </section>

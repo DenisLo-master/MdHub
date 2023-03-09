@@ -30,6 +30,10 @@ import {
   OnlinePharmacyHowItWorks04,
   NursingAndHomecareHowItWorks03,
   NursingAndHomecareHowItWorks04,
+  DiagnosticsHowItWorks01,
+  DiagnosticsHowItWorks02,
+  DiagnosticsHowItWorks04,
+  DiagnosticsHowItWorks03,
 }
   from '../assets'
 
@@ -230,20 +234,23 @@ export const onlinePharmacyHowItWorksData = [
 export const diagnosisHowItWorksData = [
   {
     id: 1,
-    text: "Diagnostics may require a lab requisition if so simply uploaded, or obtain one from our doctors, for testing services which don't require a requisition simply select your service of choice.",
+    text: "Patients require a lab requisition. If you don’t have one – no problem! ",
+    image: DiagnosticsHowItWorks01
   },
   {
     id: 2,
-    text: "Once you select your test or upload your requisition our team will contact you to confirm your testing.",
-    note: "*Please note: member pricing is $99 for this service."
+    text: "Upload your requisition, and our medical staff will call you within 24 hours to confirm your booking.",
+    image: DiagnosticsHowItWorks02
   },
   {
     id: 3,
-    text: "Our team will contact you to confirm your booking within 24 hours.",
+    text: "Schedule a time and place for your testing and complete your payment online. Or you can visit a testing centre at no extra cost (see locations ",
+    image: DiagnosticsHowItWorks03
   },
   {
     id: 4,
-    text: "After the completion of testing, our labs will submit the results to your doctor. Users can then access these results through the virtual doctor dashboard.",
+    text: "Once testing is complete, our labs will submit your results to your virtual doctor with MDHUB. Access your dashboard",
+    image: DiagnosticsHowItWorks04
   },
 ]
 
@@ -255,8 +262,8 @@ export const nursingAndHomecareHowItWorksData = [
   },
   {
     id: 2,
-    text: "Select a time and location, and if requisition is required please upload it here.",
-    note: "**Please note: member pricing for nursing starts $99 per visit. Member pricing for homecare starts $59 per visit.",
+    text: "Select a time and location, and if requisition is required please upload it",
+    note: "Please note: member pricing for nursing is $99 per visit. Member pricing for homecare is $59 per visit.",
     image: NursingAndHomecareHowItWorks02
   },
   {
@@ -264,9 +271,4 @@ export const nursingAndHomecareHowItWorksData = [
     text: "Complete payment",
     image: NursingAndHomecareHowItWorks03
   },
-  {
-    id: 4,
-    text: "Our team will contact you to confirm your booking.",
-    image: NursingAndHomecareHowItWorks04
-  }
 ]

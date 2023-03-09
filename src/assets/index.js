@@ -27,6 +27,8 @@ import { ReactComponent as StethoscopeIconWhite } from './stethoscope-icon-white
 import { ReactComponent as NursingHomecareIcon } from './nursing-homecare-icon.svg'
 import { ReactComponent as OnlinePharmacyIcon } from './online-pharmacy-icon.svg'
 import { ReactComponent as ArrowGradient } from './arrow-gradient.svg'
+import { ReactComponent as CloseVector } from './close-vector.svg'
+import { ReactComponent as Star } from './star.svg'
 import VirusTestingAndVaccination from './virus-testing-and-vaccination.png'
 import Bombardier from './bombardier.png'
 import Aloan from './aloan.png'
@@ -133,8 +135,32 @@ import Logo1 from './air-canada.png'
 import Logo2 from './sotherbys.png'
 import Logo3 from './airbnb.png'
 import Logo4 from './four-seasons.png'
+import CorporateBenefitsIcon01 from './corporate-benefits-icon-01.png'
+import CorporateBenefitsIcon02 from './corporate-benefits-icon-02.png'
+import CorporateBenefitsIcon03 from './corporate-benefits-icon-03.png'
+import VirtualCare01 from './virtual-care-01.png'
+import VirtualCare02 from './virtual-care-02.png'
+import VirtualCare03 from './virtual-care-03.png'
+import VirtualCare04 from './virtual-care-04.png'
+import DiagnosticsHowItWorks01 from './diagnostics-how-it-works-01.png'
+import DiagnosticsHowItWorks02 from './diagnostics-how-it-works-02.png'
+import DiagnosticsHowItWorks03 from './diagnostics-how-it-works-03.png'
+import DiagnosticsHowItWorks04 from './diagnostics-how-it-works-04.png'
 
 export {
+  CloseVector,
+  DiagnosticsHowItWorks01,
+  DiagnosticsHowItWorks02,
+  DiagnosticsHowItWorks03,
+  DiagnosticsHowItWorks04,
+  VirtualCare01,
+  VirtualCare02,
+  VirtualCare03,
+  VirtualCare04,
+  CorporateBenefitsIcon01,
+  CorporateBenefitsIcon02,
+  CorporateBenefitsIcon03,
+  Star,
   Logo1,
   Logo2,
   Logo3,

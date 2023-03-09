@@ -16,7 +16,6 @@ const ParentAccountForm = () => {
   const handleRegisterationFormDataChange = registerationStore(state => state.handleRegisterationFormDataChange)
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
   const childForms = registerationStore(state => state.childForms)
-  const [selectedGender, setSelectedGender] = useState(null)
 
 
   const handleDateChange = (date) => {
@@ -70,7 +69,7 @@ const ParentAccountForm = () => {
           className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
           name="password"
           type="password"
-          pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}$"
+          pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$"
           title="Your password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number."
           placeholder="Password*"
           value={registerationFormData.password}

@@ -6,7 +6,7 @@ const WORDS = ['virus', 'urine', 'blood', 'covid']
 
 const ServicesDiagnostics = () => {
   return (
-    <section className="font-main text-dark ">
+    <section className="font-main text-dark py-10">
       <header className="bg-diagnostics diagnostics-bg text-white w-full py-20 relative">
         <div className="max-w-[83rem] mx-auto">
           <article className="space-y-5">
@@ -23,7 +23,7 @@ const ServicesDiagnostics = () => {
               </p>
             </div>
             <Link to="register">
-              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border border-white">
+              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white text-primary border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
                 Sign Up Today
               </button>
             </Link>
@@ -33,7 +33,7 @@ const ServicesDiagnostics = () => {
       <section className="bg-white py-14">
         <div className="relative virtual-health text-center flex justify-center flip-words">
           <h2 className="text-primary text-center text-5xl md:text-6xl">
-            Get care today for
+            Get help for
           </h2>
           <div className="w-full absolute left-0 top-16">
             <div className="w-full h-16 overflow-y-hidden flex justify-center">
@@ -52,36 +52,45 @@ const ServicesDiagnostics = () => {
         <h2 className="text-4xl pb-4 text-center">
           How It Works
         </h2>
-        <div className="max-w-5xl mx-auto space-y-7">
-          {
-            diagnosisHowItWorksData.map(step => (
-              <article key={step.id} className="flex justify-between items-center">
-                <div className="flex items-center gap-x-8">
-                  <article>
-                    <div className="w-14 h-14 text-3xl font-body font-semibold bg-gradient-primary text-white rounded-full flex justify-center items-center">
-                      {step.id}
-                    </div>
-                  </article>
-                  <article className="w-full max-w-[870px] space-y-5">
-                    <div>
-                      <p className="font-body text-lg leading-5">
+        <section className="w-full max-w-6xl space-y-6 mx-auto">
+          <div className="flex justify-between">
+            {
+              diagnosisHowItWorksData.map((step => (
+                <article key={step.id} className="flex flex-col justify-between items-center">
+                  <div className="flex flex-col gap-x-8">
+                    <article className="pb-2">
+                      <div className="w-14 h-14 text-3xl font-body font-semibold bg-gradient-primary text-white rounded-full flex justify-center items-center">
+                        {step.id}
+                      </div>
+                    </article>
+                    <article className="w-full max-w-[220px] space-y-5 border-b border-dark pb-2">
+                      <p className="leading-5 text-lg">
                         {step.text} 
+                        {step.id === 3 && (<span><strong>here</strong>{")"}</span>)}
+                        {step.id === 4 && (<strong className="ml-1">here.</strong>)}
                       </p>
-                    </div>
-                    {step.note && <small className="font-body">{step.note}</small>}
-                  </article>
-                </div>
-              </article>
-            ))
-          }
-          <div className="md:pl-24">
-            <Link to="/register">
-              <button className="rounded-full w-[240px] text-lg flex justify-center py-2 border border-primary">
-                Sign Up Today
-              </button>
-            </Link>
+                      {
+                        step.id === 1 && (
+                          <strong className="font-body block">
+                            See a doctor now.
+                          </strong>
+                        )
+                      }
+                      {
+                        step.id === 3 && (
+                          <p className="font-light text-sm font-body text-dark">
+                            *Please note: member pricing is $99 for this service.
+                          </p>
+                        )
+                      }
+                    </article>
+                  </div>
+                  <img src={step.image} alt={step.text} />
+                </article>
+              )))
+            }
           </div>
-        </div>
+        </section>
       </section>
     </section>
   )

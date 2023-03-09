@@ -59,27 +59,6 @@ const HomeExploreSolutionsSection = () => {
         <section
           className={`w-full flex transform transition-transform duration-300 ease-in-out ${currentSlide === 0 && "-translate-x-0"} ${currentSlide === 1 && "-translate-x-[700px] 2xl:-translate-x-[800px]"} ${currentSlide === 2 && "-translate-x-[1400px] 2xl:-translate-x-[1600px]"} ${currentSlide === 3 && "-translate-x-[2100px] 2xl:-translate-x-[2400px]"} ${currentSlide === 4 && "-translate-x-[2800px] 2xl:-translate-x-[3200px]"}`}
         >
-          <div className={`min-w-[700px] 2xl:min-w-[800px]`}>
-            <div className="bg-mentalHealth px-10 h-[304px] 2xl:h-[370px] flex items-center gap-x-6 2xl:gap-x-16 2xl:justify-center overflow-hidden">
-              <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">mental<br /> health</h2>
-              <img className="w-full max-w-[310px]" src={MentalHealthBanner} alt="Mental Health Banner" />
-            </div>
-            <div className="p-6 pb-8 w-full h-[300px] max-w-[471px] 2xl:max-w-[530px] font-body flex flex-col justify-between">
-              <p className="text-lg 2xl:text-xl">
-                In today’s faced-paced, modern and ultra-connected world, your mental health is more important than ever. With MDHUB, you can easily get mental health support when you need it most.
-              </p>
-              <Link className="block" to="/services/mental-health">
-              <button
-                type="button"
-                  className={`text-lg 2xl:text-2xl rounded-full w-48 2xl:w-56 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
-              >
-                Learn More
-              </button>
-              </Link>
-            </div>
-          </div>
-
-
 
           <div className='min-w-[700px] 2xl:min-w-[800px]'>
             <div className="relative bg-virtualDoctor h-[304px] 2xl:h-[370px] p-10 pb-20 pr-0 overflow-hidden flex items-end">
@@ -102,6 +81,26 @@ const HomeExploreSolutionsSection = () => {
               >
                 Learn More
               </button>
+              </Link>
+            </div>
+          </div>
+
+          <div className={`min-w-[700px] 2xl:min-w-[800px]`}>
+            <div className="bg-mentalHealth px-10 h-[304px] 2xl:h-[370px] flex items-center gap-x-6 2xl:gap-x-16 2xl:justify-center overflow-hidden">
+              <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">mental<br /> health</h2>
+              <img className="w-full max-w-[310px]" src={MentalHealthBanner} alt="Mental Health Banner" />
+            </div>
+            <div className="p-6 pb-8 w-full h-[300px] max-w-[471px] 2xl:max-w-[530px] font-body flex flex-col justify-between">
+              <p className="text-lg 2xl:text-xl">
+                In today’s faced-paced, modern and ultra-connected world, your mental health is more important than ever. With MDHUB, you can easily get mental health support when you need it most.
+              </p>
+              <Link className="block" to="/services/mental-health">
+                <button
+                  type="button"
+                  className={`text-lg 2xl:text-2xl rounded-full w-48 2xl:w-56 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
+                >
+                  Learn More
+                </button>
               </Link>
             </div>
           </div>

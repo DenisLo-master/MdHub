@@ -101,6 +101,7 @@ const ChildAccountForms = () => {
                 className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
                 name="password"
                 type="password"
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$"
                 placeholder="Password*"
                 value={childForms[index].password}
                 onChange={(event) => handleChildAccountInputChange(event, index)}
