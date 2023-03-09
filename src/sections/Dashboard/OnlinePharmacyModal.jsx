@@ -26,7 +26,7 @@ const OnlinePharmacyModal = () => {
               className="w-full text-center bg-primary text-white py-3 rounded-3xl"
             >
               <a
-                href="https://app.medzy.ca/sign-up"
+                href="https://www.medzy.ca/mdhub"
                 target="_blank"
                 className="flex justify-center items-center text-xl gap-x-3"
               >
