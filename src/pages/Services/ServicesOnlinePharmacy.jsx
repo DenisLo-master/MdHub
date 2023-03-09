@@ -64,20 +64,20 @@ const ServicesOnlinePharmacy = () => {
             <div className="flex justify-between">
               {
                 onlinePharmacyHowItWorksData.map((step => (
-                  <article key={step.id} className="flex flex-col justify-between items-center">
+                  <article key={step.id} className="flex max-w-[260px] flex-col justify-between items-center">
                     <div className="flex flex-col gap-x-8">
                       <article className="pb-2">
                         <div className="w-14 h-14 text-3xl font-body font-semibold bg-gradient-primary text-white rounded-full flex justify-center items-center">
                           {step.id}
                         </div>
                       </article>
-                      <article className="w-full max-w-[220px] space-y-5 border-b border-dark pb-2">
-                        <p className="leading-5 text-lg">
+                      <article className="w-full space-y-5 border-b border-dark pb-2">
+                        <p className={`leading-5 text-lg ${step.id === 2 ? "pr-5" : ""}`}>
                           {step.text}
                         </p>
                       </article>
                     </div>
-                    <img src={step.image} alt={step.text} />
+                    <img className="pt-8 w-full" src={step.image} alt={step.text} />
                   </article>
                 )))
               }
