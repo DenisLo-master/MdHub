@@ -61,7 +61,7 @@ const NursingAppointmentForm = () => {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            amount: nursingAppointmentBill,
+            amount: nursingAppointmentBill > 0 ? nursingAppointmentBill * 100 : 11383,
             paymentMethod: paymentMethod.id,
             customerId: userInfo?.stripeCustomerId,
             userId: userInfo?._id,
