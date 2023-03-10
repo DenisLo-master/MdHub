@@ -21,63 +21,63 @@ const CorporateOverview = () => {
   const changeSelectedAccountType = registerationStore(state => state.changeSelectedAccountType)
   return (
     <section className="font-main">
-      <section className="relative font-main bg-virtualDoctor overflow-hidden">
-        <img className="absolute object-cover w-full h-[400px]" src={ForCorporateHeader} alt="For Corporate" />
-        <div className="relative z-10 w-full max-w-7xl mx-auto h-[390px] flex items-center">
-          <h2 className="text-[88px] max-w-[650px] leading-[80px] pb-5 text-white">
+      <section className="relative font-main bg-virtualDoctor overflow-hidden px-4">
+        <img className="hidden lg:block absolute object-cover w-full h-[400px]" src={ForCorporateHeader} alt="For Corporate" />
+        <div className="relative z-10 w-full max-w-7xl mx-auto lg:h-[390px] flex items-center">
+          <h2 className="text-[70px] lg:text-[88px] max-w-[650px] leading-[80px] pb-5 text-white">
             your employees health should never be limited
           </h2>
         </div>
       </section>
 
       <section className="w-full max-w-[1130px] mx-auto py-20 font-main">
-        <article className="w-full bg-linearGradientPrimary rounded-lg py-10 pb-32 text-white space-y-6">
+        <article className="w-full bg-linearGradientPrimary rounded-lg px-4 py-10 pb-32 text-white space-y-6">
           <h2 className="text-center text-4xl max-w-lg mx-auto">Attract and retain top talent by offering the ultimate care</h2>
-          <ul className="flex justify-center flex-wrap font-body text-white gap-x-16 gap-y-8 relative">
-            <li className="flex w-[380px] gap-x-2">
+          <ul className="flex flex-col lg:flex-row justify-center flex-wrap font-body text-white gap-x-16 gap-y-8 relative">
+            <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
                 A healthy team member is a your companies greatest asset
               </p>
             </li>
-            <li className="flex w-[380px] gap-x-2">
+            <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
                 Doctors notes, paediatricians and homecare for the kids and grandparents
               </p>
             </li>
-            <li className="flex w-[380px] gap-x-2">
+            <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
                 Support and coverage for each employee and their family
               </p>
             </li>
-            <li className="flex w-[380px] gap-x-2">
+            <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
                 Preventive care and ongoing management of chronic conditions
               </p>
             </li>
-            <li className="flex w-[380px] gap-x-2">
+            <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
                 Reduce down time and recovery with on demand fast service
               </p>
             </li>
-            <li className="flex w-[380px] gap-x-2">
+            <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
                 Vaccination, prescriptions and mobile nurses and all medical records in one place
               </p>
             </li>
-            <li className="flex w-[380px] gap-x-2" />
-            <li className="flex w-[380px] gap-x-2">
+            <li className="flex lg:w-[380px] gap-x-2" />
+            <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
                 Strong focus on mental health and wellness
               </p>
             </li>
-            <li className="absolute -bottom-7 left-36">
+            <li className="absolute lg:-bottom-7 -bottom-16 left-4 lg:left-36">
               <Link className="block" to="/register">
                 <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white border-white text-primary font-main">
                   Sign Up Today
@@ -89,7 +89,7 @@ const CorporateOverview = () => {
       </section>
 
       <section className="py-10">
-        <div className="py-10 flex justify-center gap-x-16 text-center">
+        <div className="py-10 flex flex-col lg:flex-row items-center gap-y-4 justify-center gap-x-16 text-center">
           <article className="space-y-1">
             <h2 className="text-primary text-8xl">91%</h2>
             <p className="text-xl  w-full max-w-[250px] leading-6 font-body">
@@ -116,7 +116,7 @@ const CorporateOverview = () => {
           <p className="font-body text-xl text-center py-8 font-light">
             We offer holistic corporate plans to suit any size of business.
           </p>
-          <div className="flex justify-center gap-x-12">
+          <div className="flex flex-col lg:flex-row items-center gap-y-6 justify-center gap-x-12">
             <Link
               to="/register"
               onClick={() => changeSelectedAccountType("corporate")}
@@ -143,7 +143,7 @@ const CorporateOverview = () => {
         <h2 className="text-4xl max-w-[680px] pb-8 text-center">
           The ultimate benefits solution that your teams will actually use and love.
         </h2>
-        <div className="w-full max-w-[1000px] flex justify-between text-center font-main">
+        <div className="w-full max-w-[1000px] flex flex-col lg:flex-row items-center gap-y-4 justify-between text-center font-main">
           <article className="max-w-[280px] flex flex-col items-center">
             <img src={CorporateBenefitsIcon01} alt="Corporate Benefits" />
             <h2 className="text-xl max-w-[250px]">Whole-person care anytime, anywhere</h2>
@@ -185,7 +185,7 @@ const CorporateOverview = () => {
           <h3 className="text-xl">
             We cover some of Canada's finest
           </h3>
-          <div className="flex justify-center items-center gap-x-16">
+          <div className="flex justify-around lg:justify-center flex-wrap gap-y-7 items-center gap-x-16">
             <img className="max-w-[149px]" src={PartnerCompany01} alt="Air Canada" />
             <img className="max-w-[156px]" src={PartnerCompany02} alt="Sotherbys" />
             <img className="max-w-[147px]" src={PartnerCompany03} alt="Air BNB" />
