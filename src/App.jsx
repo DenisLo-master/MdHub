@@ -39,7 +39,7 @@ function App() {
       <BrowserRouter>
       <Navbar/>
         <Toaster />
-        <main className="py-8 w-full bg-white min-h-[calc(100vh-73px)]">
+        <main className="w-full bg-white min-h-[calc(100vh-73px)]">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="services" element={<Services />}>
