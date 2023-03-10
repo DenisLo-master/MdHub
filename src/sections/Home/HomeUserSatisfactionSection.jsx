@@ -4,7 +4,7 @@ import { PartnerCompany01, PartnerCompany02, PartnerCompany03, PartnerCompany04 
 const HomeUserSatisfactionSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [increment, setIncrement] = useState(true)
-  console.log(currentSlide)
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -26,7 +26,7 @@ const HomeUserSatisfactionSection = () => {
     return () => clearInterval(interval);
   }, [currentSlide, increment])
 
-  console.log(currentSlide)
+
   return (
     <section className="py-16 font-main text-4xl">
       <h2 className="text-center pb-8">
