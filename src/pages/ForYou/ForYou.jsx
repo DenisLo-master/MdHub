@@ -8,7 +8,7 @@ const ForYou = () => {
     <section>
       <ForYouHeaderSection />
       <div className="py-10 text-primary font-main">
-        <h2 className="flex text-center justify-center gap-x-3 items-center text-5xl md:text-6xl">
+        <h2 className="flex flex-col lg:flex-row text-center justify-center gap-x-3 items-center text-5xl md:text-6xl">
           Get help with
           <span className="text-dark">
             seasonal depression
@@ -16,7 +16,7 @@ const ForYou = () => {
         </h2>
       </div>
       <section className="w-full max-w-[1130px] mx-auto py-10 font-main">
-        <article className="w-full bg-linearGradientPrimary rounded-lg py-10 pb-32 text-white space-y-6">
+        <article className="w-full bg-linearGradientPrimary rounded-lg py-10 px-4 pb-32 text-white space-y-6">
           <h2 className="text-center text-4xl">What you get with your membership</h2>
           <ul className="flex justify-center flex-wrap font-body text-white gap-x-16 gap-y-8 relative">
             <li className="flex w-[380px] gap-x-2">
@@ -55,7 +55,7 @@ const ForYou = () => {
                 Coverage for your whole family
               </p>
             </li>
-            <li className="absolute -bottom-20 left-36">
+            <li className="absolute -bottom-20 left-4 lg:left-36">
               <Link className="block" to="/register">
                 <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border border-white">
                   Sign Up Today
@@ -65,7 +65,7 @@ const ForYou = () => {
           </ul>
         </article>
 
-        <article className="flex gap-x-8 py-16 text-dark">
+        <article className="flex flex-col-reverse lg:flex-row gap-x-8 py-16 text-dark">
           <div className="flex-1 space-y-4 font-body">
             <h2 className="text-5xl font-main max-w-[500px]">
               The whole family in one affordable plan
@@ -88,8 +88,8 @@ const ForYou = () => {
         </article>
       </section>
 
-      <section className="relative font-main bg-cover bg-no-repeat bg-center">
-        <img className="absolute w-full h-[400px]" src={ForYouBottom} alt="For You" />
+      <section className="relative bg-[#DB8E96] font-main bg-cover bg-no-repeat bg-center px-4">
+        <img className="hidden lg:block absolute w-full h-[400px]" src={ForYouBottom} alt="For You" />
         <div className="relative z-10 w-full max-w-[1160px] text-3xl mx-auto h-[400px] object-cover flex items-center text-white">
           <div className="space-y-6">
             <h2 className="max-w-[450px] pb-">
