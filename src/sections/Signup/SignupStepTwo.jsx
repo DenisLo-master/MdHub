@@ -11,8 +11,8 @@ const SignupStepTwo = () => {
     <section className="space-y-6">
       <article className="w-full self-start pt-8 pb-4 mb-4 ">
         <div className="w-full flex justify-between items-center">
-          <article className="border-b-primary flex items-baseline gap-x-6 border-b-[3px] max-w-xs">
-            <h2 className="text-5xl ">Step 2</h2>
+          <article className="border-b-primary flex items-baseline gap-x-6 border-b-[3px] max-w-xs px-4">
+            <h2 className="text-3xl lg:text-5xl">Step 2</h2>
             <div className="font-body text-xl font-light">
               <div className="text-right">
                 <p>Billing Address</p>
@@ -22,7 +22,7 @@ const SignupStepTwo = () => {
         </div>
       </article>
       <div className="py-16 border space-y-4 px-8 shadow-cardService rounded-[35px] text-primary">
-        <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
+        <div className="w-full flex flex-col lg:flex-row flex-wrap gap-y-4 gap-x-6">
           <div className="flex-1 relative">
             <CountryDropdown
               defaultOptionLabel="Select Country"

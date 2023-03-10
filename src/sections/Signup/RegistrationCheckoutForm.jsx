@@ -35,7 +35,7 @@ const RegistrationCheckoutForm = () => {
       if (paymentMode === "yearly") {
         return 40700
       }
-      return 15200
+      return 12069
     }
     if (selectedAccountType === "family") {
       if (paymentMode === "yearly") {
@@ -63,6 +63,7 @@ const RegistrationCheckoutForm = () => {
 
   const handleSignup = async (e) => {
     e.preventDefault()
+    console.log(registerationFormData)
 
     if (selectedAccountType === "corporate" && childForms.length < 5) {
       toast.error("Please add minimum five employees before proceeding", { id: "corporate members add" })
@@ -78,11 +79,11 @@ const RegistrationCheckoutForm = () => {
     if (!stripe || !elements) {
       return;
     }
-    const cardElementContainer = document.querySelector('#card-element');
-    let cardElementEmpty = cardElementContainer.classList.contains('StripeElement--empty');
-    if (cardElementEmpty) {
-      return
-    }
+    // const cardElementContainer = document.querySelector('#card-element');
+    // let cardElementEmpty = cardElementContainer.classList.contains('StripeElement--empty');
+    // if (cardElementEmpty) {
+    //   return
+    // }
     const filledChildForms = childForms.filter(form => Object.values(form).every(value => value !== ''));
     if (filledChildForms.length < childForms.length) {
       toast.error("Please fill all the values", { id: "fill values" })
@@ -106,8 +107,9 @@ const RegistrationCheckoutForm = () => {
         type: 'card',
         card: elements.getElement(CardElement),
       });
+      console.log(paymentMethod)
       if (!error) {
-        const response = await fetch('https://mdhub-server.onrender.com/api/v1/auth/register', {
+        const response = await fetch('http://localhost:8080/api/v1/auth/register', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -137,7 +139,7 @@ const RegistrationCheckoutForm = () => {
   return (
     <form ref={signupFormRef} onSubmit={handleSignup} className="w-full">
       {step}
-      <div className="w-full flex justify-end gap-x-4 pt-6">
+      <div className="w-full flex justify-end gap-x-4 pt-6 px-4">
         {
           !isFirstStep &&
           <button

@@ -61,11 +61,11 @@ const SignupStepThree = () => {
 
 
   return (
-    <section className="space-y-6">
+    <section className="space-y-6 px-4">
       <article className="w-full self-start pt-8 pb-4 mb-4 ">
         <div className="w-full flex justify-between items-center">
           <article className="border-b-primary flex items-baseline gap-x-6 border-b-[3px] max-w-xs">
-            <h2 className="text-5xl ">Step 3</h2>
+            <h2 className="text-3xl lg:text-5xl">Step 3</h2>
             <div className="font-body text-xl font-light">
               <div className="text-right">
                 <p>Payment</p>
@@ -74,7 +74,7 @@ const SignupStepThree = () => {
           </article>
 
           <article>
-            <div className={`flex items-center gap-x-4`}>
+            <div className={`flex flex-col lg:flex-row gap-y-4 items-center gap-x-4`}>
               {paymentMode === "yearly" && <p className="text-primary text-3xl">Save 25%</p>}
               {
                 (selectedAccountType === "individual" ||
