@@ -14,13 +14,13 @@ const WORDS = ['anxiety', 'mood changes', 'depression', 'seasonal depression', "
 const ServicesMentalHealth = () => {
   return (
     <section className="font-main bg-white py-10">
-      <header className="bg-mentalHealth text-white w-full h-[560px] py-10">
-        <div className="max-w-[86rem] mx-auto flex justify-between">
-          <article className="space-y-5">
-            <h2 className="text-[88px] leading-[90px] max-w-[250px]">
+      <header className="bg-mentalHealth text-white w-full lg:h-[560px] py-10">
+        <div className="max-w-[86rem] mx-auto flex justify-between px-4">
+          <article className="space-y-5 flex flex-col items-center lg:items-start">
+            <h2 className="w-full text-center lg:text-left text-[44px] lg:text-[88px] leading-[90px] max-w-[280px]">
               mental health
             </h2>
-            <p className="font-body text-lg max-w-lg py-3">
+            <p className="text-center font-body text-lg max-w-lg py-3">
               In today’s fast-paced, modern and ultra-connected world, your mental health is more important than ever. With MDHUB, you can easily get mental health support when you need it most.
             </p>
             <Link to="/register">
@@ -29,12 +29,12 @@ const ServicesMentalHealth = () => {
               </button>
             </Link>
           </article>
-          <img src={MentalHealthBanner} alt="mental health" />
+          <img className="hidden lg:block" src={MentalHealthBanner} alt="mental health" />
         </div>
       </header>
 
-      <section className="bg-white py-14">
-        <div className="relative virtual-health text-center flex justify-center flip-words">
+      <section className="bg-white py-8 lg:py-14">
+        <div className="hidden relative virtual-health text-center lg:flex justify-center flip-words">
           <h2 className="text-primary text-center text-5xl md:text-6xl">
             Get care today for
           </h2>
@@ -50,10 +50,10 @@ const ServicesMentalHealth = () => {
             </div>
           </div>
         </div>
-        <h3 className="text-center text-4xl md:text-5xl pt-32 py-20">
+        <h3 className="text-center text-4xl md:text-5xl lg:pt-32 py-10 lg:py-20">
           MDHUB members can benefit from:
         </h3>
-        <div className="w-full max-w-4xl mx-auto flex item-center justify-between text-center">
+        <div className="w-full max-w-4xl mx-auto flex flex-col lg:flex-row item-center justify-between text-center">
           <article className="space-y-6 flex flex-col items-center">
             <img src={MentalHealthImg} alt="mental health" />
             <p className="font-body">Mental health frontline</p>
@@ -69,7 +69,7 @@ const ServicesMentalHealth = () => {
         </div>
       </section>
 
-      <section className="bg-[#F9F9F9] flex justify-center items-center gap-x-12 py-20">
+      <section className="bg-[#F9F9F9] flex flex-col lg:flex-row justify-center items-center gap-x-12 px-4 text-center lg:text-left py-10 lg:py-20">
         <div>
           <img src={HeadspaceLogo} alt="Headspace" />
         </div>
@@ -81,9 +81,9 @@ const ServicesMentalHealth = () => {
           </p>
         </div>
       </section>
-      <section className="py-20">
+      <section className="py-10 lg:py-20">
         <h2 className="text-4xl text-center pb-16">How it works</h2>
-        <div className="w-full max-w-6xl mx-auto flex justify-between">
+        <div className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row gap-y-5 justify-between">
           <article className="w-full max-w-[464px] shadow-glow py-5 px-8">
             <h2 className="text-3xl">See a mental health physician</h2>
             <p className="font-body py-7">
