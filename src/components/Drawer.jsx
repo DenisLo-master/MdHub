@@ -66,13 +66,13 @@ const Drawer = ({ showDrawer, close }) => {
       </ul>
       {
         token ? (
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col items-center">
           <div>
-            <button onClick={handleSignout} className="rounded-full px-9 py-1 border border-primary text-primary bg-transparent hover:bg-primary hover:text-white transition-all ease-in-out duration-300">
+              <button onClick={handleSignout} className="rounded-full px-9 py-1 border border-primary text-primary bg-transparent hover:bg-primary hover:text-white transition-all ease-in-out duration-300">
               Signout
             </button>
           </div>
-            <Link to="/dashboard">
+            <Link className="block" to="/dashboard">
               <button onClick={handleSignout} className="rounded-full px-9 py-1 border border-primary text-primary bg-transparent hover:bg-primary hover:text-white transition-all ease-in-out duration-300">
                 Dashboard
               </button>
