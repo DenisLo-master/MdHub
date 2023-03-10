@@ -85,7 +85,7 @@ const ServicesDiagnostics = () => {
                       }
                     </article>
                   </div>
-                  <img className="w-full max-w-[288px] pt-4" src={step.image} alt={step.text} />
+                  <img className="w-full max-w-[224px] pt-4" src={step.image} alt={step.text} />
                 </article>
               )))
             }
