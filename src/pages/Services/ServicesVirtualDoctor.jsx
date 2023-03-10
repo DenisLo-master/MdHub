@@ -20,10 +20,10 @@ const WORDS = ["diagnosis", "prescriptions & renewals", "doctors notes", "referr
 const ServicesVirtualDoctor = () => {
   return (
     <section className="font-main py-10">
-      <header className="bg-virtualDoctor text-white w-full h-[530px] py-10 relative">
+      <header className="bg-virtualDoctor text-white w-full lg:h-[530px] py-10 relative">
         <div className="max-w-[83rem] mx-auto">
-          <article className="space-y-5">
-            <h2 className="text-[88px]">
+          <article className="space-y-5 flex flex-col items-center text-center">
+            <h2 className="text-6xl lg:text-[88px]">
               virtual care
             </h2>
             <div className="space-y-5 font-body text-lg max-w-lg">
@@ -37,11 +37,11 @@ const ServicesVirtualDoctor = () => {
               </button>
             </Link>
           </article>
-          <img className="absolute right-0 top-0 h-full" src={VirtualDoctorBanner} alt="virtual doctor" />
+          <img className="hidden lg:block absolute right-0 top-0 h-full" src={VirtualDoctorBanner} alt="virtual doctor" />
         </div>
       </header>
 
-      <section className="relative bg-white py-14 pb-28">
+      <section className="hidden lg:block relative bg-white py-14 pb-28">
         <div className="relative virtual-health text-center flex justify-center flip-words">
           <h2 className="text-primary text-center text-5xl md:text-6xl">
             Get help for
@@ -60,7 +60,7 @@ const ServicesVirtualDoctor = () => {
         </div>
       </section>
 
-      <section className="bg-primary text-white py-14">
+      <section className="bg-primary text-white py-14 px-4">
         <div className="w-full max-w-[52rem] mx-auto text-center space-y-4">
           <h3 className="text-4xl md:text-5xl">
             Get medical treatment online
@@ -71,7 +71,7 @@ const ServicesVirtualDoctor = () => {
         </div>
 
         <section className="py-10 max-w-[70rem] mx-auto">
-          <div className=" grid grid-cols-4 gap-8 text-lg">
+          <div className=" grid grid-cols-1 lg:grid-cols-4 gap-8 text-lg">
             <article>
               <img className="w-full" src={MedicalTreatmentBC} alt="Birth Control" />
               <div className="py-4 text-center bg-white text-dark">
@@ -113,7 +113,7 @@ const ServicesVirtualDoctor = () => {
               <p>Naturopathy</p>              
             </article>
 
-            <article className="col-span-2">
+            <article className="lg:col-span-2">
               <Link TO="/register">
                 <button className="rounded-full w-full text-lg flex justify-center py-3 text-primary bg-white border border-white hover:bg-primary hover:text-white transition-colors duration-300 ease-out">
                   Sign Up Today
@@ -121,7 +121,7 @@ const ServicesVirtualDoctor = () => {
               </Link>
             </article>
 
-            <article className="col-span-2">
+            <article className="lg:col-span-2">
               <Link to="/services">
                 <button className="rounded-full w-full text-lg flex justify-center py-3 text-white bg-transparent border border-white hover:bg-white hover:text-primary transition-colors duration-300 ease-out">
                   View All Specialties and Treatments
@@ -130,7 +130,7 @@ const ServicesVirtualDoctor = () => {
             </article>
           </div>
 
-          <div className="grid grid-cols-4 pt-16 py-10 gap-x-4 gap-y-8">
+          <div className="grid grid-cols-1 justify-cente lg:grid-cols-4 pt-16 py-10 gap-x-4 gap-y-8">
             <article className="flex items-center text-xl gap-x-3 text-white">
               <OkIconWhite />
               <h2>diagnosis</h2>
@@ -177,7 +177,7 @@ const ServicesVirtualDoctor = () => {
       <section className="py-10 bg-white text-gray-800">
         <h2 className="text-4xl text-center pb-12">How it works</h2>
         <div className="w-full max-w-[76rem] mx-auto">
-          <section className="flex justify-between">
+          <section className="flex flex-col lg:flex-row items-center justify-between">
             <article className="max-w-[240px]">
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 1
@@ -199,7 +199,7 @@ const ServicesVirtualDoctor = () => {
               <p className="max-w-[215px] font-body pt-7">
                 Typically, you’ll be connected with a healthcare provider over text, but they may request a video or audio chat if necessary.
               </p>
-              <div className="pt-[74px]">
+              <div className="pt-4 lg:pt-[74px]">
                 <img className="max-w-full" src={VirtualCare02} alt="How It Works" />
               </div>
             </article>
@@ -212,7 +212,7 @@ const ServicesVirtualDoctor = () => {
               <p className="max-w-[215px] font-body">
                 Our virtual doctors can diagnose and provide prescriptions, and prescription delivery is available at no extra cost.
               </p>
-              <div className="pt-[54px]">
+              <div className="pt-4 lg:pt-[54px]">
                 <img className="max-w-full" src={VirtualCare03} alt="How It Works" />
               </div>
             </article>
@@ -225,7 +225,7 @@ const ServicesVirtualDoctor = () => {
               <p className="max-w-[215px] font-body">
                 Pharmacy, nursing, lab diagnostics, and mental health.
               </p>
-              <div className="pt-[115px]">
+              <div className="pt-4 lg:pt-[115px]">
                 <img className="max-w-full" src={VirtualCare04} alt="How It Works" />
               </div>
             </article>
@@ -246,22 +246,22 @@ const ServicesVirtualDoctor = () => {
             <h3 className="text-center text-4xl md:text-5xl pt-10 py-20">
               Don't just take it from us
             </h3>
-            <div className="w-full max-w-6xl mx-auto flex item-center justify-between text-center">
+            <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-y-4 item-center justify-between text-center">
               <article className="space-y-6 text-center">
                 <h2 className="text-primary text-7xl">4.9/5</h2>
-                <p className="font-body max-w-[170px]">Average user satisfaction rating</p>
+                <p className="font-body lg:max-w-[170px]">Average user satisfaction rating</p>
               </article>
               <article className="space-y-6 text-center">
                 <h2 className="text-primary text-7xl">91%</h2>
-                <p className="font-body max-w-[220px]">Of medical issues resolved in the first interaction</p>
+                <p className="font-body lg:max-w-[220px]">Of medical issues resolved in the first interaction</p>
               </article>
               <article className="space-y-6 text-center">
                 <h2 className="text-primary text-7xl">65%</h2>
-                <p className="font-body max-w-[200px]">Of visits prevent a workplace absence</p>
+                <p className="font-body lg:max-w-[200px]">Of visits prevent a workplace absence</p>
               </article>
               <article className="space-y-6 text-center">
                 <h2 className="text-primary text-7xl">3.6</h2>
-                <p className="font-body max-w-[170px]">Hours saves per consultation on average</p>
+                <p className="font-body lg:max-w-[170px]">Hours saves per consultation on average</p>
               </article>
             </div>
           </div>
