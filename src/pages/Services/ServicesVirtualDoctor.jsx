@@ -178,7 +178,7 @@ const ServicesVirtualDoctor = () => {
         <h2 className="text-4xl text-center pb-12">How it works</h2>
         <div className="w-full max-w-[76rem] mx-auto">
           <section className="flex flex-col lg:flex-row items-center justify-between">
-            <article className="max-w-[240px]">
+            <article className="max-w-[224px]">
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 1
               </div>
@@ -191,7 +191,7 @@ const ServicesVirtualDoctor = () => {
               </div>
             </article>
 
-            <article className="max-w-[240px]">
+            <article className="max-w-[224px]">
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 2
               </div>
@@ -204,7 +204,7 @@ const ServicesVirtualDoctor = () => {
               </div>
             </article>
 
-            <article className="max-w-[240px]">
+            <article className="max-w-[224px]">
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 3
               </div>
@@ -217,7 +217,7 @@ const ServicesVirtualDoctor = () => {
               </div>
             </article>
 
-            <article className="max-w-[240px]">
+            <article className="max-w-[224px]">
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 4
               </div>
