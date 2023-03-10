@@ -23,7 +23,7 @@ const HomeMembershipBenefitsSection = () => {
                 </h3>
               </div>
             </article>
-            <ul className="font-body space-y-7 pb-8 max-w-sm">
+            <ul className="px-8 font-body space-y-7 pb-8 max-w-sm">
               <li className='flex items-center gap-x-3'>
                 <div>
                   <OkIconPrimary className="w-7 h-7" />
@@ -72,15 +72,18 @@ const HomeMembershipBenefitsSection = () => {
                 </div>
                 <p>Access to specialists and mental health professionals with a 15% discount</p>
               </li>
+              <li>
+                <Link className="block" to="/rates">
+                  <button
+                    type="button"
+                    className={`rounded-full w-48 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
+                  >
+                    Learn More
+                  </button>
+                </Link>
+              </li>
             </ul>
-            <Link to="/rates">
-              <button
-                type="button"
-                className={`rounded-full w-48 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
-              >
-                Learn More
-              </button>
-            </Link>
+
           </article>
         </div>
         <div>
