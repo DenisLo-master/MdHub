@@ -16,7 +16,7 @@ const ServicesHeaderSection = () => {
   return (
     <section className="bg-[#F9F9F9] mb-10">
       <h2 className="font-main py-10 text-4xl text-center">Services</h2>
-      <div className="w-full max-w-[1100px] mx-auto rounded-full shadow-xl flex justify-center items-center py-3 gap-x-6 text-[#3F3F3F] font-main">
+      <div className="w-full max-w-[1100px] mx-auto rounded-b-full lg:rounded-full shadow-xl flex flex-col lg:flex-row justify-center items-center pb-8 lg:pb-3 py-3 gap-x-6 text-[#3F3F3F] font-main">
 
         <Link to="/services">
           <ServicesCard title={"virtual doctor"} bgPrimary={location.pathname === "/services"}>
