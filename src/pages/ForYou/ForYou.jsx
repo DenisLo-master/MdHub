@@ -7,7 +7,7 @@ const ForYou = () => {
   return (
     <section>
       <ForYouHeaderSection />
-      <div className="py-10 text-primary font-main">
+      <div className="py-10 text-primary font-main px-4">
         <h2 className="flex flex-col lg:flex-row text-center justify-center gap-x-3 items-center text-5xl md:text-6xl">
           Get help with
           <span className="text-dark">
@@ -66,7 +66,7 @@ const ForYou = () => {
         </article>
 
         <article className="flex flex-col-reverse lg:flex-row gap-x-8 py-16 text-dark">
-          <div className="flex-1 space-y-4 font-body">
+          <div className="flex-1 space-y-4 font-body px-4">
             <h2 className="text-5xl font-main max-w-[500px]">
               The whole family in one affordable plan
             </h2>
@@ -88,9 +88,9 @@ const ForYou = () => {
         </article>
       </section>
 
-      <section className="relative bg-[#DB8E96] font-main bg-cover bg-no-repeat bg-center px-4">
-        <img className="hidden lg:block absolute w-full h-[400px]" src={ForYouBottom} alt="For You" />
-        <div className="relative z-10 w-full max-w-[1160px] text-3xl mx-auto h-[400px] object-cover flex items-center text-white">
+      <section className="relative bg-[#DB8E96] font-main bg-cover bg-no-repeat bg-center 3xl:h-[500px]">
+        <img className="hidden lg:block absolute w-full h-[400px] 3xl:h-[500px]" src={ForYouBottom} alt="For You" />
+        <div className="relative z-10 w-full max-w-[1160px] text-3xl mx-auto h-[400px] object-cover flex items-center text-white px-4">
           <div className="space-y-6">
             <h2 className="max-w-[450px] pb-">
               “Just registered for a membership, chose a doctor & made a same-day appointment at faster than I buy my morning coffee.”
