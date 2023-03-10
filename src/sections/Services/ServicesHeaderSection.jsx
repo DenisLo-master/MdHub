@@ -14,7 +14,7 @@ import {
 const ServicesHeaderSection = () => {
   const location = useLocation()
   return (
-    <section className="bg-[#F9F9F9] mb-10">
+    <section className="mb-10">
       <h2 className="font-main py-10 text-4xl text-center">Services</h2>
       <div className="w-full max-w-[1100px] mx-auto rounded-b-full lg:rounded-full shadow-xl flex flex-col lg:flex-row justify-center items-center pb-8 lg:pb-3 py-3 gap-x-6 text-[#3F3F3F] font-main">
 
