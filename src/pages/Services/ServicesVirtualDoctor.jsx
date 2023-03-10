@@ -22,7 +22,7 @@ const ServicesVirtualDoctor = () => {
     <section className="font-main py-10">
       <header className="bg-virtualDoctor text-white w-full lg:h-[530px] py-10 relative">
         <div className="max-w-[83rem] mx-auto">
-          <article className="space-y-5 flex flex-col items-center text-center">
+          <article className="space-y-5 flex flex-col items-center lg:items-start text-center">
             <h2 className="text-6xl lg:text-[88px]">
               virtual care
             </h2>
