@@ -10,8 +10,8 @@ const ServicesOnlinePharmacy = () => {
     <section className="font-main py-10">
       <header className="bg-onlinePharmacy text-white w-full py-10 pb-20 relative">
         <div className="max-w-[83rem] mx-auto">
-          <article className="space-y-5">
-            <h2 className="text-[88px] max-w-[380px] leading-[80px] pb-5">
+          <article className="space-y-5 px-4">
+            <h2 className="text-[70px] lg:text-[88px] max-w-[380px] leading-[80px] pb-5">
               online pharmacy
             </h2>
             <div className="space-y-5 font-body text-lg max-w-lg">
@@ -36,11 +36,11 @@ const ServicesOnlinePharmacy = () => {
               </button>
             </Link>
           </article>
-          <img className="absolute right-0 top-16" src={OnlinePharmacyBanner} alt="virtual doctor" />
+          <img className="hidden lg:block absolute right-0 top-16" src={OnlinePharmacyBanner} alt="virtual doctor" />
         </div>
       </header>
       <section className="bg-white py-14">
-        <div className="relative virtual-health text-center flex justify-center flip-words">
+        <div className="relative virtual-health text-center hidden lg:flex justify-center flip-words">
           <h2 className="text-primary text-center text-5xl md:text-6xl">
             Get help for
           </h2>
@@ -56,12 +56,12 @@ const ServicesOnlinePharmacy = () => {
             </div>
           </div>
         </div>
-        <div className="pt-32 py-10">
-          <h2 className="text-4xl pb-4 text-center">
+        <div className="lg:pt-32 py-10">
+          <h2 className="text-4xl pb-10 text-center">
             How It Works
           </h2>
           <section className="w-full max-w-5xl space-y-6 mx-auto">
-            <div className="flex justify-between">
+            <div className="flex flex-col lg:flex-row items-center gap-y-5 justify-between">
               {
                 onlinePharmacyHowItWorksData.map((step => (
                   <article key={step.id} className="flex max-w-[260px] flex-col justify-between items-center">
@@ -84,7 +84,7 @@ const ServicesOnlinePharmacy = () => {
             </div>
           </section>
         </div>
-        <section className="flex justify-center gap-x-8 py-12">
+        <section className="flex flex-col lg:flex-row justify-center gap-x-8 py-12">
           <article className="w-full font-body max-w-sm rounded bg-gradient-primary text-white p-6 md:p-8 space-y-5">
             <h3 className="text-lg font-semibold">Invoice</h3>
             <ul className="space-y-3">
