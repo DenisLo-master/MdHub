@@ -23,32 +23,62 @@ const Drawer = ({ showDrawer, close }) => {
         <img className='cursor-pointer w-24' src={Logo} alt="MD Hub" />
       </Link>
       <ul className="font-main text-2xl list-none">
-        <Link to="/for-you">
-        <li className="relative cursor-pointer hover:opacity-90">
-          <RxDotFilled className="absolute text-primary -left-5 top-[6px]" />
-          <span>for you</span>
+        <li className="relative cursor-pointer hover:opacity-90 group">
+          {
+            location.pathname === '/for-you' &&
+            <RxDotFilled className="absolute text-primary -left-5 top-[6px]" />
+          }
+          <RxDotFilled className="hidden group-hover:block absolute text-primary -left-5 top-[6px]" />
+          <Link to="for-you">for you</Link>
         </li>
-        </Link>
-        <Link to="/for-family">
-          <li className="cursor-pointer hover:opacity-90">for family</li>
-        </Link>
-        <Link to="for-corporate">
-          <li className="cursor-pointer hover:opacity-90">for corporate</li>
-        </Link>
-        <Link to="/services">
-          <li className="cursor-pointer hover:opacity-90">services</li>
-        </Link>
-        <Link to="/rates">
-          <li className="cursor-pointer hover:opacity-90">rates</li>
-        </Link>
+        <li className="relative cursor-pointer hover:opacity-90 group">
+          {
+            location.pathname === '/for-family' &&
+            <RxDotFilled className="absolute text-primary -left-5 top-[6px]" />
+          }
+          <RxDotFilled className="hidden group-hover:block absolute text-primary -left-5 top-[6px]" />
+          <Link to="/for-family">for family</Link>
+        </li>
+        <li className="relative cursor-pointer hover:opacity-90 group">
+          {
+            location.pathname === '/for-corporate' &&
+            <RxDotFilled className="absolute text-primary -left-5 top-[6px]" />
+          }
+          <RxDotFilled className="hidden group-hover:block absolute text-primary -left-5 top-[6px]" />
+          <Link to="/for-corporate">for corporate</Link>
+        </li>
+        <li className="relative group">
+          {
+            location.pathname.split('/')[1] === 'services' &&
+            <RxDotFilled className="absolute text-primary -left-5 top-[6px]" />
+          }
+          <RxDotFilled className="hidden group-hover:block absolute text-primary -left-5 top-[6px]" />
+          <Link to="/services">services</Link>
+        </li>
+        <li className="relative cursor-pointer hover:opacity-90 group">
+          {
+            location.pathname === '/rates' &&
+            <RxDotFilled className="absolute text-primary -left-5 top-[6px]" />
+          }
+          <RxDotFilled className="hidden group-hover:block absolute text-primary -left-5 top-[6px]" />
+          <Link to="/rates">rates</Link>
+        </li>
       </ul>
       {
         token ? (
+          <div className="space-y-4">
           <div>
             <button onClick={handleSignout} className="rounded-full px-9 py-1 border border-primary text-primary bg-transparent hover:bg-primary hover:text-white transition-all ease-in-out duration-300">
               Signout
             </button>
           </div>
+            <Link to="/dashboard">
+              <button onClick={handleSignout} className="rounded-full px-9 py-1 border border-primary text-primary bg-transparent hover:bg-primary hover:text-white transition-all ease-in-out duration-300">
+                Dashboard
+              </button>
+            </Link>
+          </div>
+
         ): (
           <div className="font-body flex flex-col gap-y-2">
             <Link to="/login">
