@@ -79,10 +79,10 @@ const HomeHeroSection = () => {
         </article>
         <article data-aos="fade-up" className="w-full max-w-[630px] flex justify-center relative">
           <img className="relative z-10 w-full max-w-[430px]" src={HeroGif} alt="Hero" />
-          <img alt="Hero Bg" src={HeroBg} className="absolute max-w-[550px] top-0 right-16 z-0" />
+          <img alt="Hero Bg" src={HeroBg} className="absolute hidden lg:block max-w-[550px] top-0 right-16 z-0" />
         </article>
       </section>
-      <div className="relative homepage text-center flex justify-center flip-words font-main">
+      <div className="hidden relative homepage text-center lg:flex justify-center flip-words font-main">
         <h2 className="text-primary text-center text-5xl md:text-6xl">
           Get care today for
         </h2>
