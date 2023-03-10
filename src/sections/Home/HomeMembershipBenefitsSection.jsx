@@ -8,10 +8,10 @@ import {
 
 const HomeMembershipBenefitsSection = () => {
   return (
-    <section className="relative w-full font-main bg-white py-20">
-      <div className="w-full flex justify-between">
+    <section className="relative w-full font-main bg-white py-8 lg:py-20">
+      <div className="w-full flex flex-col-reverse justify-between">
         <div className="flex">
-          <article className="w-52" />
+          <article className="hidden lg:block w-52" />
           <article>
             <article className="px-4 md:px-0 w-full">
               <div className="space-y-2">
@@ -84,7 +84,7 @@ const HomeMembershipBenefitsSection = () => {
           </article>
         </div>
         <div>
-          <img className="max-w-4xl 3xl:max-w-[86rem] 3xl:object-cover 3xl:max-h-[700px]" src={Benefit} alt="Benefit" />
+          <img className="w-full max-w-4xl 3xl:max-w-[86rem] 3xl:object-cover 3xl:max-h-[700px]" src={Benefit} alt="Benefit" />
         </div>
       </div>
     </section>
