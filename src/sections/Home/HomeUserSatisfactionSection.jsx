@@ -4,6 +4,7 @@ import { PartnerCompany01, PartnerCompany02, PartnerCompany03, PartnerCompany04 
 const HomeUserSatisfactionSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [increment, setIncrement] = useState(true)
+  console.log(currentSlide)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -54,19 +55,19 @@ const HomeUserSatisfactionSection = () => {
           >
             <div className="min-w-[384px]">
               <h3 className="text-primary text-8xl">94%</h3>
-              <p className="font-body font-light text-2xl">
+              <p className="font-body font-light text-lg lg:text-2xl">
                 of physicians use virtual care.
               </p>
             </div>
             <div className="min-w-[384px]">
               <h3 className="text-primary text-8xl">1500+</h3>
-              <p className="font-body font-light text-2xl">
+              <p className="font-body font-light text-lg lg:text-2xl px-6 lg:px-0">
                 real doctors ready to treat various concerns and conditions
               </p>
             </div>
             <div className="min-w-[384px]">
               <h3 className="text-primary text-8xl">55%</h3>
-              <p className="font-body font-light text-2xl">
+              <p className="font-body font-light text-lg lg:text-2xl">
                 of employers expect virtual care to lower healthcare costs
               </p>
             </div>
@@ -76,7 +77,7 @@ const HomeUserSatisfactionSection = () => {
       </div>
       <div className="w-full max-w-4xl mx-auto text-center py-10 font-body text-base space-y-5">
         <p>Some companies we’ve partnered with:</p>
-        <section className="flex items-center justify-between">
+        <section className="flex items-center justify-around flex-wrap gap-y-4 lg:justify-between">
           <img className="max-w-[149px]" src={PartnerCompany01} alt="Air Canada" />
           <img className="max-w-[156px]" src={PartnerCompany02} alt="Sotherbys" />
           <img className="max-w-[147px]" src={PartnerCompany03} alt="Air BNB" />
