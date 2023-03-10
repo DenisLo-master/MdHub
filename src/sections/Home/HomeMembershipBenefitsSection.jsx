@@ -9,7 +9,7 @@ import {
 const HomeMembershipBenefitsSection = () => {
   return (
     <section className="relative w-full font-main bg-white py-8 lg:py-20">
-      <div className="w-full flex flex-col-reverse justify-between">
+      <div className="w-full flex flex-col-reverse lg:flex-row justify-between">
         <div className="flex">
           <article className="hidden lg:block w-52" />
           <article>
