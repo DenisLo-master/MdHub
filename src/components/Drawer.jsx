@@ -29,7 +29,7 @@ const Drawer = ({ showDrawer, close }) => {
           <span>for you</span>
         </li>
         </Link>
-        <Link to="for-family">
+        <Link to="/for-family">
           <li className="cursor-pointer hover:opacity-90">for family</li>
         </Link>
         <Link to="for-corporate">
