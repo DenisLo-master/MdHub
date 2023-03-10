@@ -36,9 +36,9 @@ const Drawer = ({ showDrawer, close }) => {
           <li className="cursor-pointer hover:opacity-90">for corporate</li>
         </Link>
         <Link to="/services">
-          <li className="cursor-pointer hover:opacity-90">for services</li>
+          <li className="cursor-pointer hover:opacity-90">services</li>
         </Link>
-        <Link to="/pricing">
+        <Link to="/rates">
           <li className="cursor-pointer hover:opacity-90">rates</li>
         </Link>
       </ul>
