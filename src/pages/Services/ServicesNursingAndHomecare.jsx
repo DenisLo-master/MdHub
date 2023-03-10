@@ -8,10 +8,10 @@ const WORDS = ['mobile vaccination', 'wound care and treatment', 'palliative car
 const ServicesNursingAndHomecare = () => {
   return (
     <section className="py-10 font-main">
-      <header className="bg-nursingHomecare text-white w-full h-[530px] py-10 relative">
+      <header className="bg-nursingHomecare text-white w-full lg:h-[530px] py-10 relative">
         <div className="max-w-[83rem] mx-auto">
-          <article className="space-y-5">
-            <h2 className="text-[88px]">
+          <article className="space-y-5 px-4">
+            <h2 className="text-[70px] lg:text-[88px]">
               nursing & homecare
             </h2>
             <div className="space-y-3 leading-6 font-body text-xl max-w-lg">
@@ -28,11 +28,11 @@ const ServicesNursingAndHomecare = () => {
               </button>
             </Link>
           </article>
-          <img className="absolute right-0 top-0 h-full" src={NursingAndHomecareBanner} alt="Nursing and Homecare" />
+          <img className="hidden lg:block absolute right-0 top-0 h-full" src={NursingAndHomecareBanner} alt="Nursing and Homecare" />
         </div>
       </header>
       <section className="bg-white pt-14">
-        <div className="relative virtual-health text-center flex justify-center flip-words">
+        <div className="hidden relative virtual-health text-center lg:flex justify-center flip-words">
           <h2 className="text-primary text-center text-5xl md:text-6xl">
             Get help for
           </h2>
@@ -53,12 +53,12 @@ const ServicesNursingAndHomecare = () => {
             How It Works
           </h2>
           <section className="w-full max-w-5xl space-y-6 mx-auto">
-            <div className="flex justify-between">
+            <div className="flex flex-col md:flex-row justify-between">
               {
                 nursingAndHomecareHowItWorksData.map((step => (
                   <article key={step.id} className="flex flex-col justify-between items-center">
                     <div className="flex flex-col gap-x-8">
-                      <article className="pb-2">
+                      <article className="pb-2 w-[220px]">
                         <div className="w-14 h-14 text-3xl font-body font-semibold bg-gradient-primary text-white rounded-full flex justify-center items-center">
                           {step.id}
                         </div>
@@ -77,7 +77,7 @@ const ServicesNursingAndHomecare = () => {
                         }
                       </article>
                     </div>
-                    <img src={step.image} alt={step.text} />
+                    <img className="w-full pt-4 max-w-[220px]" src={step.image} alt={step.text} />
                   </article>
                 )))
               }
