@@ -7,7 +7,7 @@ const Testimonials = () => {
       <h2 className="text-center text-4xl">
         Never wait for a doctor again
       </h2>
-      <div className="w-full max-w-[1100px] mx-auto grid grid-cols-2 gap-10 text-white py-12">
+      <div className="w-full max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 text-white py-12">
         <article className="bg-gradient-primary py-4 p-10 rounded-lg">
           <div className="flex items-center gap-x-6 pb-3">
             <h2 className="text-4xl">Audrey Gagnon</h2>
