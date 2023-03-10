@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 const PricingSlider = () => {
   const [selectedPackage, setSelectedPackage] = useState("single")
   return (
-    <section className="py-10">
-      <div className="pb-10 pt-3 lg:pb-3 lg:py-3 px-4 my-10 font-main text-lg flex flex-col md:flex-row items-center justify-between gap-x-4 w-full rounded-b-full lg:rounded-full bg-[#F1F1F1] shadow-sliderNav max-w-[485px] mx-auto">
+    <section className="lg:py-10">
+      <div className="pb-10 pt-3 lg:pb-3 lg:py-3 px-4 lg:my-10 font-main text-lg flex flex-col md:flex-row items-center justify-between gap-x-4 w-full rounded-b-full lg:rounded-full bg-white lg:bg-[#F1F1F1] shadow-sliderNav max-w-[485px] mx-auto">
         <button
           onClick={() => setSelectedPackage("single")}
           className={`transition-colors w-[128px] ease-in duration-200 px-8 py-[10px] rounded-full  ${selectedPackage === "single" ? "bg-gradient-primary text-white" : "text-dark"}`}>
