@@ -5,7 +5,7 @@ const PricingSlider = () => {
   const [selectedPackage, setSelectedPackage] = useState("single")
   return (
     <section className="py-10">
-      <div className="py-3 px-4 my-10 font-main text-lg flex justify-between space-x-4 w-full rounded-full bg-[#F1F1F1] shadow-sliderNav max-w-[485px] mx-auto">
+      <div className="pb-10 pt-3 lg:pb-3 lg:py-3 px-4 my-10 font-main text-lg flex flex-col md:flex-row items-center justify-between gap-x-4 w-full rounded-b-full lg:rounded-full bg-[#F1F1F1] shadow-sliderNav max-w-[485px] mx-auto">
         <button
           onClick={() => setSelectedPackage("single")}
           className={`transition-colors w-[128px] ease-in duration-200 px-8 py-[10px] rounded-full  ${selectedPackage === "single" ? "bg-gradient-primary text-white" : "text-dark"}`}>
@@ -25,8 +25,8 @@ const PricingSlider = () => {
         </button>
       </div>
 
-      <section className={`relative transition-all ease-in-out duration-700 ${selectedPackage === "corporate" ? "h-[300px]" : "h-[490px]"}`}>
-        <div className={`w-full font-body flex items-center justify-center gap-x-14 absolute left-0 top-10 transition-opacity ease-in-out duration-700 ${selectedPackage === "single" ? "opacity-100" : "opacity-0"}`}>
+      <section className={`relative transition-all ease-in-out duration-700 ${selectedPackage === "corporate" ? "h-[900px] lg:h-[300px]" : "h-[900px] lg:h-[490px]"}`}>
+        <div className={`w-full font-body flex flex-col lg:flex-row items-center justify-center gap-y-10 gap-x-14 absolute left-0 top-10 transition-opacity ease-in-out duration-700 ${selectedPackage === "single" ? "opacity-100" : "opacity-0"}`}>
           <article className="p-8 px-12 flex flex-col items-center rounded-lg shadow-glow">
             <h2 className="text-3xl font-main">Monthly</h2>
             <div className="text-primary pt-8">
@@ -64,7 +64,7 @@ const PricingSlider = () => {
           </article>
         </div>
 
-        <div className={`w-full font-body flex items-center justify-center gap-x-14 absolute left-0 top-10 transition-opacity ease-in-out duration-700 ${selectedPackage === "family" ? "opacity-100" : "opacity-0"}`}>
+        <div className={`w-full font-body flex flex-col lg:flex-row items-center justify-center gap-y-10 gap-x-14 absolute left-0 top-10 transition-opacity ease-in-out duration-700 ${selectedPackage === "family" ? "opacity-100" : "opacity-0"}`}>
           <article className="p-8 px-12 flex flex-col items-center rounded-lg shadow-glow">
             <div className="space-y-2 text-center font-main">
               <h2 className="text-3xl">Monthly</h2>
@@ -111,7 +111,7 @@ const PricingSlider = () => {
         </div>
 
         <div className={`w-full font-body  absolute left-0 top-10 transition-opacity ease-in-out duration-700 ${selectedPackage === "corporate" ? "opacity-100" : "opacity-0"}`}>
-          <div className="flex items-center justify-center gap-x-14">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-y-10 gap-x-14">
             <article className="p-4 px-12 flex flex-col items-center rounded-lg shadow-glow">
               <div className="text-center font-main">
                 <h2 className="text-3xl">10-50 Employees</h2>
