@@ -18,7 +18,7 @@ const HomeExploreSolutionsSection = () => {
         <RotatingEllipse />
       </article>
       <article className="w-full max-w-[700px] 2xl:max-w-[800px] relative font-main bg-gray-100 overflow-x-hidden">
-        <div className="absolute top-[280px] 2xl:top-[330px] z-10 right-[150px] lg:right-[330px] 2xl:right-[390px] flex gap-x-1">
+        <div className="absolute top-[280px] 2xl:top-[330px] z-10 right-[170px] lg:right-[330px] 2xl:right-[390px] flex gap-x-1">
           <article
             onClick={() => setCurrentSlide(0)}
             className={` rounded-full w-2 h-2 ${currentSlide === 0 ? "bg-white" : "bg-gray-300"}`}
@@ -57,10 +57,10 @@ const HomeExploreSolutionsSection = () => {
           </button>
         </div>
         <section
-          className={`w-full flex transform transition-transform duration-300 ease-in-out ${currentSlide === 0 && "-translate-x-0"} ${currentSlide === 1 && "-translate-x-[375px] lg:-translate-x-[700px] 2xl:-translate-x-[800px]"} ${currentSlide === 2 && "-translate-x-[750px] lg:-translate-x-[1400px] 2xl:-translate-x-[1600px]"} ${currentSlide === 3 && "-translate-x-[1125px] lg:-translate-x-[2100px] 2xl:-translate-x-[2400px]"} ${currentSlide === 4 && "-translate-x-[1500px] lg:-translate-x-[2800px] 2xl:-translate-x-[3200px]"}`}
+          className={`w-full flex transform transition-transform duration-300 ease-in-out ${currentSlide === 0 && "-translate-x-0"} ${currentSlide === 1 && "-translate-x-[410px] lg:-translate-x-[700px] 2xl:-translate-x-[800px]"} ${currentSlide === 2 && "-translate-x-[820px] lg:-translate-x-[1400px] 2xl:-translate-x-[1600px]"} ${currentSlide === 3 && "-translate-x-[1230px] lg:-translate-x-[2100px] 2xl:-translate-x-[2400px]"} ${currentSlide === 4 && "-translate-x-[1640px] lg:-translate-x-[2800px] 2xl:-translate-x-[3200px]"}`}
         >
 
-          <div className='min-w-[370px] lg:min-w-[700px] 2xl:min-w-[800px]'>
+          <div className='min-w-[410px] lg:min-w-[700px] 2xl:min-w-[800px]'>
             <div className="relative right-8 lg:right-0 bg-virtualDoctor h-[304px] 2xl:h-[370px] p-10 pb-20 pr-0 overflow-hidden flex items-end justify-center lg:justify-start">
               <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">virtual<br /> doctor</h2>
               <img className="hidden lg:block absolute top-0 right-0 w-full max-w-[270px] 2xl:max-w-[320px]" src={VirtualDoctorBanner} alt="Virtual Doctor Banner" />
@@ -85,7 +85,7 @@ const HomeExploreSolutionsSection = () => {
             </div>
           </div>
 
-          <div className={`min-w-[370px] lg:min-w-[700px] 2xl:min-w-[800px]`}>
+          <div className={`min-w-[410px] lg:min-w-[700px] 2xl:min-w-[800px]`}>
             <div className="bg-mentalHealth px-10 h-[304px] 2xl:h-[370px] flex justify-center items-center gap-x-6 2xl:gap-x-16 2xl:justify-center overflow-hidden">
               <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">mental<br /> health</h2>
               <img className="hidden lg:block w-full max-w-[310px]" src={MentalHealthBanner} alt="Mental Health Banner" />
@@ -105,7 +105,7 @@ const HomeExploreSolutionsSection = () => {
             </div>
           </div>
 
-          <div className='min-w-[370px] lg:min-w-[700px] 2xl:min-w-[800px]'>
+          <div className='min-w-[410px] lg:min-w-[700px] 2xl:min-w-[800px]'>
             <div className="relative bg-onlinePharmacy h-[304px] 2xl:h-[370px] p-10 pb-20 pr-0 overflow-hidden flex items-end">
               <h2 className="text-white text-[66px] lg:text-[80px] 2xl:text-8xl leading-[70px]">online <br /> pharamcy</h2>
               <img className="hidden lg:block absolute top-10 2xl:top-20 right-0 w-full max-w-[270px] 2xl:max-w-[320px]" src={OnlinePharmacyBanner} alt="Online Pharmacy Banner" />
@@ -132,7 +132,7 @@ const HomeExploreSolutionsSection = () => {
             </div>
           </div>
 
-          <div className='min-w-[370px] lg:min-w-[700px] 2xl:min-w-[800px]'>
+          <div className='min-w-[410px] lg:min-w-[700px] 2xl:min-w-[800px]'>
             <div className="relative bg-diagnostics h-[304px] 2xl:h-[370px] diagnostics-bg p-10 pb-20 pr-0 overflow-hidden flex items-end">
               <h2 className="text-white text-[70px] lg:text-[80px] 2xl:text-8xl leading-[70px]">diagnostics</h2>
             </div>
@@ -156,7 +156,7 @@ const HomeExploreSolutionsSection = () => {
             </div>
           </div>
 
-          <div className='min-w-[370px] lg:min-w-[700px] 2xl:min-w-[800px]'>
+          <div className='min-w-[410px] lg:min-w-[700px] 2xl:min-w-[800px]'>
             <div className="relative bg-nursingHomecare h-[304px] 2xl:h-[370px] p-10 pb-20 pr-0 overflow-hidden flex items-end justify-center lg:justify-start">
               <h2 className="text-white text-[65px] lg:text-[80px] 2xl:text-8xl leading-[70px]">nursing & <br /> homecare</h2>
               <img className="hidden lg:block absolute top-40 right-0 w-full max-w-[190px] 2xl:max-w-[260px]" src={NursingAndHomecareBanner} alt="Nursing and Homecare Banner" />

@@ -99,7 +99,7 @@ const ServicesNursingAndHomecare = () => {
               ))
             }
           </section>
-          <div className="text-sm font-body md:pl-14 text-gray-800">
+          <div className="text-sm font-body md:pl-14 text-gray-800 px-4">
             <h2 className="py-6 font-semibold">
               Require a different service? Send us an email here.
             </h2>
