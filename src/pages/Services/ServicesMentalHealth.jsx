@@ -69,7 +69,7 @@ const ServicesMentalHealth = () => {
         </div>
       </section>
 
-      <section className="bg-[#F9F9F9] flex flex-col lg:flex-row justify-center items-center gap-x-12 px-4 text-center lg:text-left py-10 lg:py-20">
+      <section className="flex flex-col lg:flex-row justify-center items-center gap-x-12 px-4 text-center lg:text-left py-10 lg:py-20">
         <div>
           <img src={HeadspaceLogo} alt="Headspace" />
         </div>
