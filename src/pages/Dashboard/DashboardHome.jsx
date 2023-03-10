@@ -21,7 +21,7 @@ const DashboardHome = () => {
   return (
     <header className="py-16 bg-white">
       <h1 className="text-4xl text-center pb-10">Your MDHUB Dashboard</h1>
-      <section className="flex flex-col md:flex-row justify-center gap-x-10 rotating-ellipse-section">
+      <section className="flex flex-col md:flex-row justify-center gap-x-10 rotating-ellipse-section px-4">
         <RotatingEllipse />
         <article className=" pt-24 md:pt-0 space-y-3">
           <div className="flex justify-between items-center">

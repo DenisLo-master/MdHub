@@ -6,19 +6,19 @@ import { registerationStore } from '../../store/registerationStore'
 const DashboardUserInfo = () => {
   const userInfo = registerationStore(state => state.userInfo)
   return (
-    <section className="flex flex-col md:flex-row gap-y-4 text-center md:text-left gap-x-16 font-body font-light py-10">
+    <section className="px-4 flex flex-col md:flex-row gap-y-4 text-center md:text-left gap-x-16 font-body font-light py-10">
 
       <article className="flex-1 relative">
-        <div className="absolute right-4 top-4">
+        <div className="absolute right-8 lg:right-4 top-1 lg:top-4">
           <Link to="/dashboard/update-user">
             <button className="flex items-center gap-x-2">
               <TiPencil className="text-3xl" />
-              <h3>Edit Profile</h3>
+              <h3 className="hidden lg:block">Edit Profile</h3>
             </button>
           </Link>
         </div>
         <h2 className="text-4xl font-main font-normal pb-4">Your Information</h2>
-        <div className="p-10 rounded-[35px] shadow-cardService space-y-6  border-[0.25px] h-[428px]">
+        <div className="p-10 rounded-[35px] shadow-cardService space-y-6  border-[0.25px] lg:h-[428px]">
           <article className="bg-white rounded-[48px] shadow-cardService px-8 py-3 border-[0.25px]">
             {userInfo?.firstName}
           </article>
@@ -39,7 +39,7 @@ const DashboardUserInfo = () => {
 
       <article className="flex-1">
         <h2 className="text-4xl font-main font-normal pb-4">Your Subscription</h2>
-        <div className="p-10 flex flex-col justify-between rounded-[35px] shadow-cardService space-y-6 border-[0.25px] h-[428px]">
+        <div className="p-10 flex flex-col justify-between rounded-[35px] shadow-cardService space-y-6 border-[0.25px] lg:h-[428px]">
           <article className="space-y-10">
             <div>
               <p className="text-sm">Your current subscription plan</p>
