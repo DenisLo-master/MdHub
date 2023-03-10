@@ -65,7 +65,7 @@ const HomeHeroSection = () => {
             From meeting a doctor to ordering a perscription get the 360 healthcare you need all in one place.
           </p>
           <div className='flex justify-center md:justify-start space-x-2 md:space-x-6 font-main text-gray-700'>
-            <Link to="services">
+            <Link to="/login">
               <Button wide>
                 <span>See A Doctor</span> <FiArrowUpRight className="md:text-lg transition-colors ease-out duration-150 group-hover:text-primary" />
               </Button>
