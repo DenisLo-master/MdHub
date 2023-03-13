@@ -24,7 +24,7 @@ const ServicesMentalHealth = () => {
               In today’s fast-paced, modern and ultra-connected world, your mental health is more important than ever. With MDHUB, you can easily get mental health support when you need it most.
             </p>
             <Link to="/register">
-              <button className="rounded-full w-[240px] text-lg flex justify-center py-2 border bg-white text-primary border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
+              <button className="rounded-full w-[240px] text-lg flex justify-center py-2 border bg-white text-mentalHealth border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
                 Sign Up Today
               </button>
             </Link>

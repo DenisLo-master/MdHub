@@ -14,7 +14,7 @@ const ServicesNursingAndHomecare = () => {
             <h2 className="text-[70px] lg:text-[88px]">
               nursing & homecare
             </h2>
-            <div className="space-y-3 leading-6 font-body text-xl max-w-lg">
+            <div className="space-y-3 leading-6 font-body text-lg max-w-lg">
               <p>
                 Our professional nurses come directly to you. Plus, our team of homecare agents are there when you need them, offering compassionate care for seniors, people requiring post-operative care, and people with disabilities.
               </p>
@@ -23,7 +23,7 @@ const ServicesNursingAndHomecare = () => {
               </p>
             </div>
             <Link className="block" to="/register">
-              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white text-primary border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
+              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white text-nursingHomecare border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
                 Sign Up Today
               </button>
             </Link>

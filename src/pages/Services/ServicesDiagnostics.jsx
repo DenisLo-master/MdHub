@@ -23,7 +23,7 @@ const ServicesDiagnostics = () => {
               </p>
             </div>
             <Link className="block px-2" to="register">
-              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white text-primary border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
+              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white text-diagnostics border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
                 Sign Up Today
               </button>
             </Link>
