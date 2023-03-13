@@ -27,12 +27,12 @@ const ServicesVirtualDoctor = () => {
               virtual care
             </h2>
             <div className="space-y-5 font-body text-lg max-w-lg">
-              <p>
-                Treatment and diagnosis for 70% of medical issues can be done virtually. Connect with a virtual doctor in minutes, 24/7. Or, book an appointment with a specialist – no referral needed.
+              <p className="text-left">
+                Treatment and diagnosis for 70% of medical issues can be done virtually. Connect with a virtual doctor in minutes, 24/7. Or, book an appointment with a specialist - no referral needed.
               </p>
             </div>
             <Link className="block" to="/register">
-              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white text-primary border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
+              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white text-virtualDoctor border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
                 Sign Up Today
               </button>
             </Link>
