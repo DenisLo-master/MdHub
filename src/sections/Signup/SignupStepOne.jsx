@@ -6,7 +6,11 @@ const SignupStepOne = () => {
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
   return (
     <section className='space-y-6 px-4'>
-      <article className="w-full self-start pt-8 lg:pb-20 pb-4 mb-4 ">
+      <article
+        className={`w-full self-start pt-8 
+        ${selectedAccountType === "corporate" ? "pb-20" : selectedAccountType === "family" ? "pb-20" : "pb-4"} 
+        lg:pb-4 mb-4 `}
+      >
         <div className="w-full flex justify-between items-center relative">
           {
             selectedAccountType === "family" && (
