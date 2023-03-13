@@ -16,11 +16,10 @@ const ServicesOnlinePharmacy = () => {
             </h2>
             <div className="space-y-5 font-body text-lg max-w-lg">
               <p>
-                Stop wasting time chasing down refills or waiting in line. Easily access our online pharmacy to get prescriptions filled or renewed and delivered right to your door
+                Stop wasting time chasing down refills or waiting in line. Easily access our online pharmacy to get prescriptions filled or renewed and delivered right to your door {" "}
+                <strong>Your pharmacist is just a text away.</strong>
               </p>
-              <strong className="block pb-4">
-                Your pharmacist is just a text away.
-              </strong>
+
               <p>
                 With our membership, you'll get:
               </p>
