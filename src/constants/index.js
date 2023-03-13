@@ -249,7 +249,7 @@ export const diagnosisHowItWorksData = [
   },
   {
     id: 4,
-    text: "Once testing is complete, our labs will submit your results to your virtual doctor with MDHUB. Access your dashboard",
+    text: "Once testing is complete, our labs will submit your results to your virtual doctor with MDHUB.",
     image: DiagnosticsHowItWorks04
   },
 ]
