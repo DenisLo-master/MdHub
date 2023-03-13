@@ -33,18 +33,22 @@ const RegistrationCheckoutForm = () => {
   const getBill = () => {
     if (selectedAccountType === "individual") {
       if (paymentMode === "yearly") {
-        return 40700
+        return 41377
       }
       return 12069
     }
     if (selectedAccountType === "family") {
       if (paymentMode === "yearly") {
-        return 58700
+        return 62073
       }
-      return 21200
+      return 18967
     }
     if (selectedAccountType === "corporate") {
       return 244600
+    }
+
+    if (selectedAccountType === "on demand") {
+      return 10347
     }
   }
 
@@ -152,12 +156,12 @@ const RegistrationCheckoutForm = () => {
         }
         <button 
           type="submit"
-          className={`rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary  py-3 border flex justify-center items-center space-x-2  border-primary bg-primary text-white`}
+          className={`rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary py-3 border flex justify-center items-center space-x-2  border-primary bg-primary text-white`}
         >
           {
             isLastStep ?
               isLoading ?
-                <SVGLoaderCircles className="text-primary w-4 h-4" /> :
+                <SVGLoaderCircles className="text-white w-4 h-4" /> :
                 <span>Finish</span> :
               <span>Next</span>
           }
