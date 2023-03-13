@@ -146,33 +146,24 @@ const CorporateOverview = () => {
         <div className="w-full max-w-[1000px] flex flex-col lg:flex-row items-center gap-y-4 justify-between text-center font-main">
           <article className="max-w-[280px] flex flex-col items-center">
             <img src={CorporateBenefitsIcon01} alt="Corporate Benefits" />
-            <h2 className="text-xl max-w-[250px]">Whole-person care anytime, anywhere</h2>
+            <h2 className="text-2xl max-w-[250px]">Whole-person care anytime, anywhere</h2>
             <p className="font-body pt-2 pb-4">
               Support every person on your team with access to quality healthcare available 24/7, like virtual appointments and prescription delivery. 
-            </p>
-            <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-              Learn More
-            </button>   
+            </p> 
           </article>
           <article className="max-w-[280px] flex flex-col items-center">
             <img src={CorporateBenefitsIcon02} alt="Corporate Benefits" />
-            <h2 className="pt-2 text-xl max-w-[250px]">Family & pediatric care</h2>
+            <h2 className="pt-2 text-2xl max-w-[250px]">Family & pediatric care</h2>
             <p className="font-body pt-8 pb-4">
-              Support every person on your team with access to quality healthcare available 24/7, like virtual appointments and prescription delivery. 
+              With MDHUB corporate plans, your employee’s family and children can receive healthcare, too. Designed specifically for busy families, your employees’ families can get care fast. 
             </p>
-            <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-              Learn More
-            </button>
           </article>
           <article className="max-w-[280px] flex flex-col items-center">
             <img src={CorporateBenefitsIcon03} alt="Corporate Benefits" />
-            <h2 className="text-xl max-w-[250px] pt-3 pb-2"> Increased ROI & employee satisfaction</h2>
+            <h2 className="text-2xl max-w-[250px] pt-3 pb-2"> Increased ROI & employee satisfaction</h2>
             <p className="font-body pb-4">
-              Support every person on your team with access to quality healthcare available 24/7, like virtual appointments and prescription delivery. 
+              Your corporate membership is tax-deductible, but it also means less out-of-pocket expenses for your people. Plus, you can feel good knowing they're well taken care of.
             </p>
-            <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-              Learn More
-            </button>
           </article>
         </div>
       </section>
