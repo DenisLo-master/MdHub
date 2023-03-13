@@ -114,17 +114,20 @@ const ServicesVirtualDoctor = () => {
             </article>
 
             <article className="lg:col-span-2">
-              <Link TO="/register">
-                <button className="rounded-full w-full text-lg flex justify-center py-3 text-primary bg-white border border-white hover:bg-primary hover:text-white transition-colors duration-300 ease-out">
+              <h2 className="text-white text-6xl font-main">
+                +many more
+              </h2>
+            </article>
+
+            <article className="lg:col-span-2 flex gap-x-4">
+              <Link className="block w-full" to="/register">
+                <button className="rounded-full w-full text-lg flex justify-center py-3 text-primary bg-white border border-white hover:bg-transparent hover:text-white transition-colors duration-300 ease-out">
                   Sign Up Today
                 </button>
               </Link>
-            </article>
-
-            <article className="lg:col-span-2">
-              <Link to="/services">
+              <Link className="block w-full" to="/dashboard">
                 <button className="rounded-full w-full text-lg flex justify-center py-3 text-white bg-transparent border border-white hover:bg-white hover:text-primary transition-colors duration-300 ease-out">
-                  View All Specialties and Treatments
+                  See A Doctor
                 </button>
               </Link>
             </article>
