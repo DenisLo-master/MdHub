@@ -63,7 +63,7 @@ const ServicesDiagnostics = () => {
                         {step.id}
                       </div>
                     </article>
-                    <article className="w-full max-w-[220px] space-y-5 border-b border-dark pb-2">
+                    <article className="w-full max-w-[220px] space-y-5 border-b border-dark pb-4 mb-4">
                       <p className="leading-5 text-2xl">
                         {step.text} 
                         {step.id === 3 && (<span><strong>here</strong>{")"}</span>)}

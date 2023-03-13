@@ -181,55 +181,55 @@ const ServicesVirtualDoctor = () => {
         <h2 className="text-4xl text-center pb-12">How it works</h2>
         <div className="w-full max-w-[76rem] mx-auto">
           <section className="flex flex-col lg:flex-row items-center justify-between">
-            <article className="max-w-[210px]">
+            <article className="max-w-[260px]">
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 1
               </div>
-              <h2 className="text-2xl pr-4 py-3 pb-1 mb-2 border-b border-dark leading-5">Describe your symptoms using our app </h2>
-              <p className="max-w-[210px] font-body leading-[1.25em]">
+              <h2 className="text-2xl py-3 pb-4 mb-4 border-b border-dark leading-5">Describe your symptoms using our app </h2>
+              <p className="max-w-[260px] font-body leading-[1.25em]">
                 Open the app or browser and click the “Get care” button. Describe your symptoms, and one of our healthcare providers will review your request in minutes.
               </p>
-              <div className="pt-8">
-                <img className="w-full" src={VirtualCare01} alt="How It Works" />
+              <div className="pt-[58px]">
+                <img className="w-full max-w-[210px]" src={VirtualCare01} alt="How It Works" />
               </div>
             </article>
 
-            <article className="max-w-[210px]">
+            <article className="max-w-[260px]">
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 2
               </div>
-              <h2 className="text-2xl pr-4 py-3 pb-1 mb-2 border-b border-dark leading-5">Chat with a doctor</h2>
-              <p className="max-w-[210px] font-body pt-7 leading-[1.25em]">
+              <h2 className="text-2xl py-3 pb-4 mb-4 border-b border-dark leading-5">Chat with a doctor</h2>
+              <p className="max-w-[260px] font-body pt-7 leading-[1.25em]">
                 Typically, you’ll be connected with a healthcare provider over text, but they may request a video or audio chat if necessary.
               </p>
               <div className="pt-4 lg:pt-[74px]">
-                <img className="max-w-full" src={VirtualCare02} alt="How It Works" />
+                <img className="w-full max-w-[210px]" src={VirtualCare02} alt="How It Works" />
               </div>
             </article>
 
-            <article className="max-w-[210px]">
+            <article className="max-w-[260px]">
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 3
               </div>
-              <h2 className="text-2xl text-dark pr-4 pt-3 leading-5 pb-2 mb-2 border-b border-dark">Get a diagnosis or prescription, and or lab requisition or doctors note</h2>
-              <p className="max-w-[210px] font-body leading-[1.25em]">
+              <h2 className="text-2xl text-dark py-3  pb-4 mb-4 leading-5 border-b border-dark">Get a diagnosis or prescription, and or lab requisition or doctors note</h2>
+              <p className="max-w-[260px] font-body leading-[1.25em]">
                 Our virtual doctors can diagnose and provide prescriptions, and prescription delivery is available at no extra cost.
               </p>
               <div className="pt-4 lg:pt-[54px]">
-                <img className="max-w-full" src={VirtualCare03} alt="How It Works" />
+                <img className="w-full max-w-[210px]" src={VirtualCare03} alt="How It Works" />
               </div>
             </article>
 
-            <article className="max-w-[210px]">
+            <article className="max-w-[260px]">
               <div className="bg-gradient-primary text-white  rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 4
               </div>
-              <h2 className="text-2xl pr-4 pt-3 pb-1 leading-5 border-b border-dark mb-2">Return to MDHUB DASHBOARD to access any of your additional membership benefits:</h2>
-              <p className="max-w-[210px] leading-[1.25em] font-body">
+              <h2 className="text-2xl pt-3 pb-4 mb-4 leading-5 border-b border-dark">Return to MDHUB DASHBOARD to access any of your additional membership benefits:</h2>
+              <p className="max-w-[260px] leading-[1.25em] font-body">
                 Pharmacy, nursing, lab diagnostics, and mental health.
               </p>
               <div className="pt-2 lg:pt-[70px]">
-                <img className="max-w-full" src={VirtualCare04} alt="How It Works" />
+                <img className="w-full max-w-[210px]" src={VirtualCare04} alt="How It Works" />
               </div>
             </article>
           </section>

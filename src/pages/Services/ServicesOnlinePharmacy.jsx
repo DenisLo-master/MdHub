@@ -70,7 +70,7 @@ const ServicesOnlinePharmacy = () => {
                           {step.id}
                         </div>
                       </article>
-                      <article className="w-full space-y-5 border-b border-dark pb-2">
+                      <article className="w-full space-y-5 border-b border-dark pb-4 mb-4">
                         <p className={`leading-5 text-2xl ${step.id === 2 ? "pr-5" : ""}`}>
                           {step.text}
                         </p>
