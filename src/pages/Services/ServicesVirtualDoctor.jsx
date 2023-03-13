@@ -185,11 +185,11 @@ const ServicesVirtualDoctor = () => {
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 1
               </div>
-              <h2 className="text-2xl py-3 pb-4 mb-4 border-b border-dark leading-5">Describe your symptoms using our app </h2>
+              <h2 className="text-2xl py-3 pb-4 mb-4 border-b border-dark leading-[1.2em]">Describe your symptoms using our app </h2>
               <p className="max-w-[260px] font-body leading-[1.25em]">
                 Open the app or browser and click the “Get care” button. Describe your symptoms, and one of our healthcare providers will review your request in minutes.
               </p>
-              <div className="pt-[58px]">
+              <div className="pt-[50px]">
                 <img className="w-full max-w-[210px]" src={VirtualCare01} alt="How It Works" />
               </div>
             </article>
@@ -198,7 +198,7 @@ const ServicesVirtualDoctor = () => {
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 2
               </div>
-              <h2 className="text-2xl py-3 pb-4 mb-4 border-b border-dark leading-5">Chat with a doctor</h2>
+              <h2 className="text-2xl py-3 pb-4 mb-4 border-b border-dark leading-[1.2em]">Chat with a doctor</h2>
               <p className="max-w-[260px] font-body pt-7 leading-[1.25em]">
                 Typically, you’ll be connected with a healthcare provider over text, but they may request a video or audio chat if necessary.
               </p>
@@ -211,7 +211,7 @@ const ServicesVirtualDoctor = () => {
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 3
               </div>
-              <h2 className="text-2xl text-dark py-3  pb-4 mb-4 leading-5 border-b border-dark">Get a diagnosis or prescription, and or lab requisition or doctors note</h2>
+              <h2 className="text-2xl text-dark py-3  pb-4 mb-4 leading-[1.2em] border-b border-dark">Get a diagnosis or prescription, and or lab requisition or doctors note</h2>
               <p className="max-w-[260px] font-body leading-[1.25em]">
                 Our virtual doctors can diagnose and provide prescriptions, and prescription delivery is available at no extra cost.
               </p>
@@ -224,7 +224,7 @@ const ServicesVirtualDoctor = () => {
               <div className="bg-gradient-primary text-white  rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 4
               </div>
-              <h2 className="text-2xl pt-3 pb-4 mb-4 leading-5 border-b border-dark">Return to MDHUB DASHBOARD to access any of your additional membership benefits:</h2>
+              <h2 className="text-2xl pt-3 pb-4 mb-4 leading-[1.2em] border-b border-dark">Return to MDHUB DASHBOARD to access any of your additional membership benefits:</h2>
               <p className="max-w-[260px] leading-[1.25em] font-body">
                 Pharmacy, nursing, lab diagnostics, and mental health.
               </p>

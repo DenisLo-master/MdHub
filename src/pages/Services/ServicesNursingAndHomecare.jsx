@@ -64,7 +64,7 @@ const ServicesNursingAndHomecare = () => {
                         </div>
                       </article>
                       <article className="w-full max-w-[220px] space-y-5 border-b border-dark pb-4 mb-4">
-                        <p className="leading-5 text-2xl">
+                        <p className="leading-[1.2em] text-2xl">
                           {step.text}
                           {step.id === 2 && (
                             <strong className="ml-1">here.</strong>
