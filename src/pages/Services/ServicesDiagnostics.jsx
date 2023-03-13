@@ -16,8 +16,8 @@ const ServicesDiagnostics = () => {
             <div className="space-y-5 font-body text-lg max-w-lg pb-8 leading-5 px-2">
               <p>
                 Avoid the wait at hospitals and clinics with safe, fast, and professional lab testing from the comfort of your home or office.
+                <strong>{" "}Get results fast</strong>
               </p>
-              <strong className="block">Get results fast</strong>
               <p>
                 Our certified partner labs can process over 300 different screenings to provide you with a comprehensive health assessment – and get you answers fast. 
               </p>
