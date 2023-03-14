@@ -30,14 +30,14 @@ const Admin = () => {
                 All Users
               </Link>
             </button>
-            <button
+            {/* <button
               className={`py-[10px] text-lg text-white flex justify-center items-center rounded-full w-[240px] ${location.pathname === '/admin/add_user' ? "bg-linearGradientPrimary w-[240px]" : "w-[176px] text-dark border border-dark"}`}
               type="button"
             >
               <Link className="w-full" to="/admin/add_user">
                 Add User
               </Link>
-            </button>
+            </button> */}
             <button
               className={`py-[10px] text-lg text-white flex justify-center items-center rounded-full w-[240px] ${location.pathname === '/admin/billing_history' ? "bg-linearGradientPrimary w-[240px]" : "w-[176px] text-dark border border-dark"}`}
               type="button"
