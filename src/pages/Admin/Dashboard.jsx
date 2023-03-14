@@ -5,15 +5,16 @@ import dayjs from "dayjs"
 const Dashboard = () => {
   const [usersThisWeek, setUsersThisWeek] = useState([])
   const [deletedUsersThisWeek, setDeletedUsersThisWeek] = useState([])
+  const token = localStorage.getItem("jwtToken")
 
   useEffect(() => {
     const getUsers = async () => {
       try {
         const response = await fetch(`https://mdhub-server.onrender.com/api/v1/users/get_user_info`, {
           method: "GET",
-          // headers: {
-          //   "Authorization": `Bearer ${token}`
-          // }
+          headers: {
+            "Authorization": `Bearer ${token}`
+          }
         })
         const data = await response.json()
         console.log(data)
