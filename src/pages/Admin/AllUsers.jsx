@@ -7,15 +7,16 @@ import { toast } from 'react-hot-toast'
 const AllUsers = () => {
   const [users, setUsers] = useState([])
   const [isLoading, setIsLoading] = useState(false)
+  const token = localStorage.getItem("jwtToken")
 
   const deleteUser = async (userId) => {
     try {
       setIsLoading(true)
       const response = await fetch(`https://mdhub-server.onrender.com/api/v1/users/${userId}`, {
         method: "DELETE",
-        // headers: {
-        //   "Authorization": `Bearer ${token}`
-        // }
+        headers: {
+          "Authorization": `Bearer ${token}`
+        }
       })
       if (response.status === 200) {
         toast.success("The user has been deleted", {
