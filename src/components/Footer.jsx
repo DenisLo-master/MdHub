@@ -18,8 +18,8 @@ const Footer = () => {
           <ul className="font-body text-base">
             <li>Montreal, QC</li>
             <li>
-              <a href="tel:+14162223333">
-                +1 416 222 3333
+              <a href="tel:+15148658844">
+                +1 514 865 8844
               </a>
             </li>
             <li>
@@ -78,7 +78,7 @@ const Footer = () => {
             <form className="flex space-x-1 text-xs">
               <input className="px-2 rounded bg-transparent text-white border outline-none border-white placeholder:text-white" placeholder="E-mail" />
               <button className="bg-white rounded text-primary px-3 py-1 hover:opacity-90 transition-opacity ease-in-out duration-300" type="submit">Subscribe</button>
-            </form> 
+            </form>
           </div>
         </article>
         </div>
