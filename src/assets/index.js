@@ -146,8 +146,10 @@ import DiagnosticsHowItWorks01 from './diagnostics-how-it-works-01.png'
 import DiagnosticsHowItWorks02 from './diagnostics-how-it-works-02.png'
 import DiagnosticsHowItWorks03 from './diagnostics-how-it-works-03.png'
 import DiagnosticsHowItWorks04 from './diagnostics-how-it-works-04.png'
+import UserPlaceholder from './user-placeholder.png'
 
 export {
+  UserPlaceholder,
   CloseVector,
   DiagnosticsHowItWorks01,
   DiagnosticsHowItWorks02,
