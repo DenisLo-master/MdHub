@@ -5,6 +5,7 @@ import { UserPlaceholder } from '../../assets'
 
 const BillingHistory = () => {
   const [users, setUsers] = useState([])
+  const [filteredState, setFilteredState] = useState()
 
   useEffect(() => {
     const getAllUsers = async () => {
@@ -17,6 +18,7 @@ const BillingHistory = () => {
         })
         const data = await response.json()
         setUsers(data)
+        setFilteredState(data)
       } catch (error) {
         console.log(error)
       }
@@ -24,6 +26,11 @@ const BillingHistory = () => {
     getAllUsers()
   }, [])
 
+  const sortAccounts = (account) => {
+    setFilteredState(users.filter(user => user.accountType === account))
+  }
+
+  console.log(filteredState)
 
   return (
     <section className="flex-1 px-4 text-dark">
@@ -31,16 +38,16 @@ const BillingHistory = () => {
         <div className="flex gap-x-6 items-center pb-4">
           <h2 className="text-xl min-w-[80px]">All users</h2>
           <div className="w-full flex justify-between items-center font-main text-sm">
-            <button type="button" className="bg-white rounded-full w-[100px] py-3 border">
+            <button onClick={() => sortAccounts("individual")} type="button" className="bg-white rounded-full w-[100px] py-3 border">
               Individual
             </button>
-            <button type="button" className="bg-white rounded-full w-[100px] py-3 border">
+            <button onClick={() => sortAccounts("family")} type="button" className="bg-white rounded-full w-[100px] py-3 border">
               Family
             </button>
-            <button type="button" className="bg-white rounded-full w-[100px] py-3 border">
+            <button onClick={() => sortAccounts("corporate")} type="button" className="bg-white rounded-full w-[100px] py-3 border">
               Corporate
             </button>
-            <button type="button" className="bg-white rounded-full w-[100px] py-3 border">
+            <button onClick={() => sortAccounts("on demand")} type="button" className="bg-white rounded-full w-[100px] py-3 border">
               On Demand
             </button>
             <button className="bg-white rounded-full w-[100px] py-3 border flex items-center justify-center">
@@ -59,7 +66,7 @@ const BillingHistory = () => {
               </tr>
             </thead>
             <tbody>
-              {users.map((user, index) => (
+              {filteredState?.map((user, index) => (
                 <tr
                   key={user._id}
                   className={` ${index !== users.length - 1 ? "border-b border-gray-200" : ""
