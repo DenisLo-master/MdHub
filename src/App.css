@@ -35,7 +35,7 @@ input:checked+.toggle-switch .toggle-circle {
 
 
 .bg-gradient-primary {
-  background: linear-gradient(90deg, #48ABC8 0%, #A2D2E1 100%)
+  background-image: linear-gradient(90deg, #48ABC8 0%, #A2D2E1 100%)
 }
 
 .react-date-picker__wrapper {
@@ -394,4 +394,7 @@ input:checked+.toggle-switch .toggle-circle {
     opacity: 0;
     transform: translateY(50px);
   }
+}
+.user-list li:last-child {
+  border: none;
 }
