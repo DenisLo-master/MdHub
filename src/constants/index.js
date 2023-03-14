@@ -249,7 +249,7 @@ export const diagnosisHowItWorksData = [
   },
   {
     id: 4,
-    text: "Once testing is complete, our labs will submit your results to your virtual doctor with MDHUB. Access your dashboard",
+    text: "Once testing is complete, our labs will submit your results to your virtual doctor with MDHUB.",
     image: DiagnosticsHowItWorks04
   },
 ]
@@ -263,12 +263,13 @@ export const nursingAndHomecareHowItWorksData = [
   {
     id: 2,
     text: "Select a time and location, and if requisition is required please upload it",
-    note: "Please note: member pricing for nursing is $99 per visit. Member pricing for homecare is $59 per visit.",
+
     image: NursingAndHomecareHowItWorks02
   },
   {
     id: 3,
     text: "Complete payment",
+    note: "Please note: member pricing for nursing is $99 per visit. Member pricing for homecare is $59 per visit.",
     image: NursingAndHomecareHowItWorks03
   },
 ]
