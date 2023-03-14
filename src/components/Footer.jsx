@@ -16,7 +16,7 @@ const Footer = () => {
         <article className="space-y-6">
           <h2 className="font-main text-2xl">Contact Info</h2>
           <ul className="font-body text-base">
-            <li>Montreal, QC</li>
+            <li>Made in Canada</li>
             <li>
               <a href="tel:+15148658844">
                 +1 514 865 8844
