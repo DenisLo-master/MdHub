@@ -6,15 +6,16 @@ import { UserPlaceholder } from '../../assets'
 const BillingHistory = () => {
   const [users, setUsers] = useState([])
   const [filteredState, setFilteredState] = useState()
+  const token = localStorage.getItem("jwtToken")
 
   useEffect(() => {
     const getAllUsers = async () => {
       try {
         const response = await fetch(`https://mdhub-server.onrender.com/api/v1/users/get_users_payment_info`, {
           method: "GET",
-          // headers: {
-          //   "Authorization": `Bearer ${token}`
-          // }
+          headers: {
+            "Authorization": `Bearer ${token}`
+          }
         })
         const data = await response.json()
         setUsers(data)
