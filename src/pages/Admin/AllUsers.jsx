@@ -11,7 +11,7 @@ const AllUsers = () => {
   const deleteUser = async (userId) => {
     try {
       setIsLoading(true)
-      const response = await fetch(`http://localhost:8080/api/v1/users/${userId}`, {
+      const response = await fetch(`https://mdhub-server.onrender.com/api/v1/users/${userId}`, {
         method: "DELETE",
         // headers: {
         //   "Authorization": `Bearer ${token}`
@@ -34,11 +34,10 @@ const AllUsers = () => {
     }
   }
 
-  // https://mdhub-server.onrender.com/
   useEffect(() => {
     const getAllUsers = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/v1/users/get_users_payment_info`, {
+        const response = await fetch(`https://mdhub-server.onrender.com/api/v1/users/get_users_payment_info`, {
           method: "GET",
           // headers: {
           //   "Authorization": `Bearer ${token}`
