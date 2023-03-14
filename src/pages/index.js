@@ -18,8 +18,18 @@ import BookAppointment from './Dashboard/BookAppointment'
 import DashboardHome from './Dashboard/DashboardHome'
 import UpdateUserInfo from './Dashboard/UpdateUserInfo'
 import UpdateBillingInfo from './Dashboard/UpdateBillingInfo'
+import AdminDashboard from './Admin/Dashboard'
+import Admin from './Admin/Admin'
+import AllUsers from "./Admin/AllUsers"
+import AddUser from "./Admin/AddUser"
+import BillingHistory from "./Admin/BillingHistory"
 
 export {
+  AddUser,
+  BillingHistory,
+  AllUsers,
+  AdminDashboard,
+  Admin,
   Home,
   Services,
   ServicesVirtualDoctor,
