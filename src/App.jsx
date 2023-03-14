@@ -6,6 +6,8 @@ import Navbar from './components/Navbar'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { 
+  AddUser,
+  BillingHistory,
   Home, 
   Services, 
   ServicesMentalHealth, 
@@ -26,6 +28,9 @@ import {
   BookAppointment,
   UpdateUserInfo,
   UpdateBillingInfo,
+  AdminDashboard,
+  Admin,
+  AllUsers
 } from './pages'
 import { Toaster } from "react-hot-toast"
 
@@ -63,6 +68,12 @@ function App() {
             <Route path="/for-family" element={<ForYou />} />
             <Route path="/register" element={<Signup />}/>
             <Route path="/login" element={<Login />}/>
+            <Route path="/admin" element={<Admin />}>
+              <Route index element={<AdminDashboard />} />
+              <Route path="all_users" element={<AllUsers />} />
+              <Route path="add_user" element={<AddUser />} />
+              <Route path="billing_history" element={<BillingHistory />} />
+            </Route>
           </Routes>
         </main>
       <Footer/>
