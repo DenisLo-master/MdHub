@@ -139,8 +139,8 @@ const BillingHistory = () => {
                     <div className="flex items-center">
                       <div className="mr-2">
                         <img
-                          className="w-6 h-6 rounded-full"
-                          src={`https://i.pravatar.cc/150?u=${row.userName}`}
+                          className="w-10 h-10 rounded-full"
+                          src={UserPlaceholder}
                           alt={row.userName}
                         />
                       </div>
