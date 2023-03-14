@@ -86,13 +86,19 @@ const Footer = () => {
         <p>&copy; 2023 MDHUB Inc</p>
           <div className="flex items-center space-x-6">
           <div className="w-8 h-8 rounded-full flex justify-center items-center border border-white">
-            <FaFacebookF className="text-white" />
+            <a href="https://www.facebook.com/profile.php?id=100090530891905" target="_blank">
+              <FaFacebookF className="text-white" />
+            </a>
           </div>
           <div className="w-8 h-8 rounded-full flex justify-center items-center border border-white">
-            <FaLinkedin className="text-white" />
+            <a href="https://www.linkedin.com/company/mdhub-ca/" target="_blank">
+              <FaLinkedin className="text-white" />
+            </a>
           </div>
           <div className="w-8 h-8 rounded-full flex justify-center items-center border border-white">
-            <FaInstagram className="text-white" />
+            <a href="https://www.instagram.com/mdhub.ca/" target="_blank">
+              <FaInstagram className="text-white" />
+            </a>
           </div>
           </div>
         </div>
