@@ -30,8 +30,6 @@ const BillingHistory = () => {
     setFilteredState(users.filter(user => user.accountType === account))
   }
 
-  console.log(filteredState)
-
   return (
     <section className="flex-1 px-4 text-dark">
       <article className="w-full bg-[#F9F9F9] p-8 rounded-lg font-body">
