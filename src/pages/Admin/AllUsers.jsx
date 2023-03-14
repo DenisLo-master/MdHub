@@ -5,7 +5,7 @@ const AllUsers = () => {
   return (
     <section className="flex-1">
       <div className="flex flex-col lg:flex-row gap-x-10 px-4 text-dark">
-        <article className="w-full bg-[#F9F9F9] p-8 rounded-lg ">
+        <article className="w-full bg-[#F9F9F9] p-8 rounded-lg font-body">
           <h2 className="pb-6 text-xl">All users</h2>
           <div className="w-full overflow-x-auto">
             <table className="w-full">
