@@ -1,7 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { UserPlaceholder } from '../../assets'
+import dayjs from "dayjs"
 
 const Dashboard = () => {
+  const [usersThisWeek, setUsersThisWeek] = useState([])
+  const [deletedUsersThisWeek, setDeletedUsersThisWeek] = useState([])
+
+  useEffect(() => {
+    const getUsers = async () => {
+      try {
+        const response = await fetch(`http://localhost:8080/api/v1/users/get_user_info`, {
+          method: "GET",
+          // headers: {
+          //   "Authorization": `Bearer ${token}`
+          // }
+        })
+        const data = await response.json()
+        console.log(data)
+        setUsersThisWeek(data.data.usersThisWeek)
+        setDeletedUsersThisWeek(data.data.deletedUsers)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getUsers()
+  }, [])
   return (
     <section>
       <div className="flex flex-col lg:flex-row gap-x-10 px-4 text-dark">
@@ -16,10 +39,10 @@ const Dashboard = () => {
                 </tr>
               </thead>
               <tbody>
-                {[...Array(10)].map((row, index) => (
+                {usersThisWeek.map((user, index) => (
                   <tr
                     key={`{item#${index}}`}
-                    className={` ${index !== 9 ? "border-b border-gray-200" : ""
+                    className={` ${index !== usersThisWeek.length - 1 ? "border-b border-gray-200" : ""
                       }`}
                   >
                     <td className="py-3 px-6 text-left whitespace-nowrap">
@@ -28,14 +51,14 @@ const Dashboard = () => {
                           <img
                             className="w-10 h-10 rounded-full"
                             src={UserPlaceholder}
-                            alt={"John Smith"}
+                            alt={`${user.firstName} ${user.lastName}`}
                           />
                         </div>
-                        <span>John Smith</span>
+                        <span>{`${user.firstName} ${user.lastName}`}</span>
                       </div>
                     </td>
                     <td className="py-3 px-6 text-left whitespace-nowrap">
-                      March 8th, 2023
+                      {dayjs(user.createdAt).format('MMMM D, YYYY')}
                     </td>
                   </tr>
                 ))}
@@ -64,10 +87,10 @@ const Dashboard = () => {
                 </tr>
               </thead>
               <tbody>
-                {[...Array(10)].map((row, index) => (
+                {deletedUsersThisWeek.map((user, index) => (
                   <tr
-                    key={`{item#${index}}`}
-                    className={` ${index !== 9 ? "border-b border-gray-200" : ""
+                    key={user._id}
+                    className={` ${index !== deletedUsersThisWeek.length - 1 ? "border-b border-gray-200" : ""
                       }`}
                   >
                     <td className="py-3 px-6 text-left whitespace-nowrap">
@@ -76,14 +99,14 @@ const Dashboard = () => {
                           <img
                             className="w-10 h-10 rounded-full"
                             src={UserPlaceholder}
-                            alt={"John Smith"}
+                            alt={`${user.firstName} ${user.lastName}`}
                           />
                         </div>
-                        <span>John Smith</span>
+                        <span>{`${user.firstName} ${user.lastName}`}</span>
                       </div>
                     </td>
                     <td className="py-3 px-6 text-left whitespace-nowrap">
-                      March 8th, 2023
+                      {dayjs(user.createdAt).format('MMMM D, YYYY')}
                     </td>
                   </tr>
                 ))}
