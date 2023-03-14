@@ -33,6 +33,7 @@ import {
   AllUsers
 } from './pages'
 import { Toaster } from "react-hot-toast"
+import AdminNav from './components/AdminNav'
 
 function App() {
   useEffect(() => {
@@ -43,6 +44,7 @@ function App() {
     return (
       <div className="overflow-x-hidden text-gray-800">
         <main className="w-full bg-white min-h-[calc(100vh-73px)]">
+          <AdminNav />
           {children}
         </main>
       </div>
