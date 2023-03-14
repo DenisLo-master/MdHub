@@ -1,16 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom'
+import jwt from 'jwt-decode'
 
 const Admin = () => {
-  const location = useLocation()
   const navigate = useNavigate()
+  const location = useLocation()
   const handleSignout = () => {
     localStorage.removeItem("jwtToken")
     navigate("/")
   }
 
+  const token = localStorage.getItem("jwtToken")
+  const tokenInfo = token ? jwt(token) : {}
+  useEffect(() => {
+    if (!token) navigate("/login")
+    if (!tokenInfo.isAdmin) navigate("/login")
+  }, [])
+
+  if (!token) return null
+  if (!tokenInfo.isAdmin) return null
+
   return (
-    <section className="py-14 font-main">
+    <section className="py-14 pt-8 font-main">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-x-10 px-4 text-dark">
         <aside className="bg-[#F9F9F9] flex flex-col justify-between items-center lg:h-[550px] p-8 rounded-lg shadow-cardService">
           <div className="space-y-6 flex flex-col items-center pb-4">
