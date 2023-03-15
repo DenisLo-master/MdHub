@@ -15,7 +15,7 @@ const HomeMembershipBenefitsSection = () => {
           <article>
             <article className="px-4 md:px-0 w-full">
               <div className="space-y-2">
-                <h2 className="w-full font-main text-center md:text-left text-4xl md:text-5xl">
+                <h2 className="w-full font-main text-4xl md:text-5xl">
                   Membership Benefits
                 </h2>
                 <h3 className='w-full font-body text-base pb-8'>
