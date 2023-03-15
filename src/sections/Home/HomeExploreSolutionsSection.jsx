@@ -1,14 +1,9 @@
 import React, { useState } from 'react'
-import { BsThreeDots } from 'react-icons/bs'
-import { Link } from 'react-router-dom'
-import {
-  MentalHealthBanner,
-  VirtualDoctorBanner,
-  OnlinePharmacyBanner,
-  NursingAndHomecareBanner
-} from '../../assets'
+import { HomeSlider } from '../../sections'
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-icons/bs'
 import RotatingEllipse from '../../components/RotatingEllipse'
+import { MentalHealthBanner, NursingAndHomecareBanner, OnlinePharmacyBanner, VirtualDoctorBanner } from '../../assets'
+import { Link } from 'react-router-dom'
 
 const HomeExploreSolutionsSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -57,11 +52,11 @@ const HomeExploreSolutionsSection = () => {
           </button>
         </div>
         <section
-          className={`w-full flex transform transition-transform duration-300 ease-in-out ${currentSlide === 0 && "-translate-x-0"} ${currentSlide === 1 && "-translate-x-[410px] lg:-translate-x-[700px] 2xl:-translate-x-[800px]"} ${currentSlide === 2 && "-translate-x-[820px] lg:-translate-x-[1400px] 2xl:-translate-x-[1600px]"} ${currentSlide === 3 && "-translate-x-[1230px] lg:-translate-x-[2100px] 2xl:-translate-x-[2400px]"} ${currentSlide === 4 && "-translate-x-[1640px] lg:-translate-x-[2800px] 2xl:-translate-x-[3200px]"}`}
+          className={`w-full flex transform transition-transform duration-300 ease-in-out ${currentSlide === 0 && "-translate-x-0"} ${currentSlide === 1 && "-translate-x-[413px] lg:-translate-x-[700px] 2xl:-translate-x-[800px]"} ${currentSlide === 2 && "-translate-x-[826px] lg:-translate-x-[1400px] 2xl:-translate-x-[1600px]"} ${currentSlide === 3 && "-translate-x-[1239px] lg:-translate-x-[2100px] 2xl:-translate-x-[2400px]"} ${currentSlide === 4 && "-translate-x-[1652px] lg:-translate-x-[2800px] 2xl:-translate-x-[3200px]"}`}
         >
 
-          <div className='min-w-[410px] lg:min-w-[700px] 2xl:min-w-[800px]'>
-            <div className="relative right-8 lg:right-0 bg-virtualDoctor h-[304px] 2xl:h-[370px] p-10 pb-20 pr-0 overflow-hidden flex items-end justify-center lg:justify-start">
+          <div className='min-w-[413px] lg:min-w-[700px] 2xl:min-w-[800px]'>
+            <div className="bg-virtualDoctor h-[304px] 2xl:h-[370px] p-10 pb-20 pr-0 overflow-hidden flex items-end justify-center lg:justify-start">
               <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">virtual<br /> doctor</h2>
               <img className="hidden lg:block absolute top-0 right-0 w-full max-w-[270px] 2xl:max-w-[320px]" src={VirtualDoctorBanner} alt="Virtual Doctor Banner" />
             </div>
@@ -75,17 +70,17 @@ const HomeExploreSolutionsSection = () => {
                 </p>
               </div>
               <Link className="block pt-4" to="/services">
-              <button
-                type="button"
+                <button
+                  type="button"
                   className={`text-lg 2xl:text-2xl rounded-full w-48 2xl:w-56 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
-              >
-                Learn More
-              </button>
+                >
+                  Learn More
+                </button>
               </Link>
             </div>
           </div>
 
-          <div className={`min-w-[410px] lg:min-w-[700px] 2xl:min-w-[800px]`}>
+          <div className={`min-w-[413px] lg:min-w-[700px] 2xl:min-w-[800px]`}>
             <div className="bg-mentalHealth px-10 h-[304px] 2xl:h-[370px] flex justify-center items-center gap-x-6 2xl:gap-x-16 2xl:justify-center overflow-hidden">
               <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">mental<br /> health</h2>
               <img className="hidden lg:block w-full max-w-[310px]" src={MentalHealthBanner} alt="Mental Health Banner" />
@@ -105,7 +100,7 @@ const HomeExploreSolutionsSection = () => {
             </div>
           </div>
 
-          <div className='min-w-[410px] lg:min-w-[700px] 2xl:min-w-[800px]'>
+          <div className='min-w-[413px] lg:min-w-[700px] 2xl:min-w-[800px]'>
             <div className="relative bg-onlinePharmacy h-[304px] 2xl:h-[370px] p-10 pb-20 pr-0 overflow-hidden flex items-end">
               <h2 className="text-white text-[66px] lg:text-[80px] 2xl:text-8xl leading-[70px]">online <br /> pharamcy</h2>
               <img className="hidden lg:block absolute top-10 2xl:top-20 right-0 w-full max-w-[270px] 2xl:max-w-[320px]" src={OnlinePharmacyBanner} alt="Online Pharmacy Banner" />
@@ -122,17 +117,17 @@ const HomeExploreSolutionsSection = () => {
                 </p>
               </div>
               <Link className="block pt-4" to="/services/online-pharmacy">
-              <button
-                type="button"
+                <button
+                  type="button"
                   className={`text-lg 2xl:text-2xl rounded-full w-48 2xl:w-56 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
-              >
-                Learn More
-              </button>
+                >
+                  Learn More
+                </button>
               </Link>
             </div>
           </div>
 
-          <div className='min-w-[410px] lg:min-w-[700px] 2xl:min-w-[800px]'>
+          <div className='min-w-[413px] lg:min-w-[700px] 2xl:min-w-[800px]'>
             <div className="relative bg-diagnostics h-[304px] 2xl:h-[370px] diagnostics-bg p-10 pb-20 pr-0 overflow-hidden flex items-end">
               <h2 className="text-white text-[70px] lg:text-[80px] 2xl:text-8xl leading-[70px]">diagnostics</h2>
             </div>
@@ -146,17 +141,17 @@ const HomeExploreSolutionsSection = () => {
                 </p>
               </div>
               <Link className="block pt-4" to="/services/diagnostics">
-              <button
-                type="button"
+                <button
+                  type="button"
                   className={`text-lg 2xl:text-2xl rounded-full w-48 2xl:w-56 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
-              >
-                Learn More
-              </button>
+                >
+                  Learn More
+                </button>
               </Link>
             </div>
           </div>
 
-          <div className='min-w-[410px] lg:min-w-[700px] 2xl:min-w-[800px]'>
+          <div className='min-w-[413px] lg:min-w-[700px] 2xl:min-w-[800px]'>
             <div className="relative bg-nursingHomecare h-[304px] 2xl:h-[370px] p-10 pb-20 pr-0 overflow-hidden flex items-end justify-center lg:justify-start">
               <h2 className="text-white text-[65px] lg:text-[80px] 2xl:text-8xl leading-[70px]">nursing & <br /> homecare</h2>
               <img className="hidden lg:block absolute top-40 right-0 w-full max-w-[190px] 2xl:max-w-[260px]" src={NursingAndHomecareBanner} alt="Nursing and Homecare Banner" />
@@ -168,12 +163,12 @@ const HomeExploreSolutionsSection = () => {
                 </p>
               </div>
               <Link className="block pt-4" to="/services/nursing-homecare">
-              <button
-                type="button"
+                <button
+                  type="button"
                   className={`text-lg 2xl:text-2xl rounded-full w-48 2xl:w-56 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
-              >
-                Learn More
-              </button>
+                >
+                  Learn More
+                </button>
               </Link>
             </div>
           </div>
