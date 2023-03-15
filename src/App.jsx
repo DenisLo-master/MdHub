@@ -30,7 +30,8 @@ import {
   UpdateBillingInfo,
   AdminDashboard,
   Admin,
-  AllUsers
+  AllUsers,
+  AdminLogin
 } from './pages'
 import { Toaster } from "react-hot-toast"
 import AdminNav from './components/AdminNav'
@@ -91,6 +92,7 @@ function App() {
             <Route path="/for-family" element={<DefaultLayout><ForYou /></DefaultLayout>} />
             <Route path="/register" element={<DefaultLayout><Signup /></DefaultLayout>} />
             <Route path="/login" element={<DefaultLayout><Login /></DefaultLayout>} />
+            <Route path="/admin_login" element={<DefaultLayout><AdminLogin /></DefaultLayout>} />
             <Route path="/admin" element={<AdminLayout><Admin /></AdminLayout>}>
               <Route index element={<AdminDashboard />} />
               <Route path="all_users" element={<AllUsers />} />
