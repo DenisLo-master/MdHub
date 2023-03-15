@@ -67,7 +67,6 @@ const RegistrationCheckoutForm = () => {
 
   const handleSignup = async (e) => {
     e.preventDefault()
-    console.log(registerationFormData)
 
     if (selectedAccountType === "corporate" && childForms.length < 5) {
       toast.error("Please add minimum five employees before proceeding", { id: "corporate members add" })
@@ -111,7 +110,7 @@ const RegistrationCheckoutForm = () => {
         type: 'card',
         card: elements.getElement(CardElement),
       });
-      console.log(paymentMethod)
+
       if (!error) {
         const response = await fetch('https://mdhub-server.onrender.com/api/v1/auth/register', {
           method: 'POST',
