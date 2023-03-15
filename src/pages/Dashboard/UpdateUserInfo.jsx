@@ -63,7 +63,6 @@ const UpdateUserInfo = () => {
           }
         })
         const data = await response.json()
-        console.log(data)
         const { paymentInfo, userInfo } = data
         setPaymentInfo(paymentInfo)
         setUserInfoFormData({ email: userInfo.email, phone: userInfo.phone, address: userInfo.address, password: userInfo.password })
