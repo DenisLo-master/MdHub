@@ -8,6 +8,8 @@ import { BsPencilSquare } from "react-icons/bs"
 import { Elements } from '@stripe/react-stripe-js';
 import { UserPaymentForm } from '../../sections'
 import { loadStripe } from '@stripe/stripe-js'
+import { CountryDropdown, RegionDropdown } from 'react-country-region-selector'
+import { BiCaretDown } from 'react-icons/bi'
 
 const key = import.meta.env.VITE_STRIPE
 const stripePromise = loadStripe(key);
@@ -37,7 +39,7 @@ const UpdateUserInfo = () => {
           updatedFields[key] = userInfoFormData[key]
         }
       })
-      const response = await fetch(`https://mdhub-server.onrender.com/api/v1/users/${tokenInfo?.id}`, {
+      const response = await fetch(`http://localhost:8080/api/v1/users/${tokenInfo?.id}`, {
         method: "PUT",
         headers: {
           'Content-Type': 'application/json',
@@ -72,8 +74,8 @@ const UpdateUserInfo = () => {
         const data = await response.json()
         const { paymentInfo, userInfo } = data
         setPaymentInfo(paymentInfo)
-        setUserInfoFormData({ email: userInfo.email, phone: userInfo.phone, address: userInfo.address, password: userInfo.password })
-        setInitialState({ email: userInfo.email, phone: userInfo.phone, address: userInfo.address, password: userInfo.password })
+        setUserInfoFormData({ email: userInfo.email, phone: userInfo.phone, address: userInfo.address, password: userInfo.password, country: userInfo.country, region: userInfo.region, city: userInfo.city, postalCode: userInfo.postalCode })
+        setInitialState({ email: userInfo.email, phone: userInfo.phone, address: userInfo.address, password: userInfo.password, country: userInfo.country, region: userInfo.region, city: userInfo.city, postalCode: userInfo.postalCode })
 
       } catch (error) {
         console.log(error)
@@ -84,7 +86,7 @@ const UpdateUserInfo = () => {
 
   return (
     <section className="min-h-screen py-20">
-      <div className="max-w-xl mx-auto p-8 rounded-[35px] shadow-cardService border-[0.25px]">
+      <div className="max-w-[600px] mx-auto p-8 rounded-[35px] shadow-cardService border-[0.25px]">
         <div className="flex gap-x-1 items-center pb-5">
           <h2 className="text-4xl">Edit Info</h2>
           <h2 className="text-sm">{userInfo.isChildUser ? "Child Account" : "Account Admin"}</h2>
@@ -144,6 +146,57 @@ const UpdateUserInfo = () => {
               onChange={handleChange}
               className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border" placeholder="address"
               type="text"
+            />
+          </div>
+          <div className="w-full flex flex-col lg:flex-row flex-wrap gap-y-4 gap-x-6">
+            <div className="flex-1 relative">
+              <CountryDropdown
+                defaultOptionLabel="Select Country"
+                classes='outline-none w-full bg-white  appearance-none rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border'
+                value={userInfoFormData.country}
+                onChange={(val) => handleChange({ target: { name: "country", value: val } })} />
+              <BiCaretDown className="pointer-events-none absolute text-2xl right-4 top-[10px]" />
+            </div>
+            <div className="flex-1 relative">
+              <RegionDropdown
+                defaultOptionLabel="Select Province/State"
+                blankOptionLabel="Select Province/State"
+                classes='outline-none w-full bg-white appearance-none rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border'
+                country={userInfoFormData.country}
+                value={userInfoFormData.region}
+                onChange={(val) => handleChange({ target: { name: "region", value: val } })} />
+              <BiCaretDown className="pointer-events-none absolute text-2xl right-4 top-[10px]" />
+            </div>
+          </div>
+          <div className="w-full flex gap-y-4 gap-x-6">
+            <input
+              className="block w-full rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
+              name="city"
+              type="text"
+              placeholder="City*"
+              value={userInfoFormData.city}
+              onChange={handleChange}
+              required
+            />
+            <input
+              className="block w-full rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
+              name="postalCode"
+              type="text"
+              placeholder="Postal Code*"
+              value={userInfoFormData.postalCode}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
+            <input
+              className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
+              name="address"
+              type="text"
+              placeholder="Address*"
+              value={userInfoFormData.address}
+              onChange={handleChange}
+              required
             />
           </div>
           <button
