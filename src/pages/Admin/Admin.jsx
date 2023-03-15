@@ -20,7 +20,6 @@ const Admin = () => {
   if (!token) return null
   if (!tokenInfo.isAdmin) return null
 
-  console.log(location)
 
   return (
     <section className="py-14 pt-8 font-main">
