@@ -64,17 +64,19 @@ const SignupStepThree = () => {
     <section className="space-y-6 px-4">
       <article className="w-full self-start pt-8 pb-4 mb-4 ">
         <div className="w-full flex justify-between items-center">
-          <article className="border-b-primary flex items-baseline gap-x-6 border-b-[3px] max-w-xs">
-            <h2 className="text-3xl lg:text-5xl">Step 3</h2>
-            <div className="font-body text-xl font-light">
-              <div className="text-right">
-                <p>Payment</p>
+          <article className="max-w-xs">
+            <article className="flex items-baseline gap-x-6 border-b-[3px] border-b-primary">
+              <h2 className="text-3xl lg:text-5xl">Step 3</h2>
+              <div className="font-body text-xl font-light">
+                <div className="text-right">
+                  <p>Payment</p>
+                </div>
               </div>
-            </div>
+            </article>
           </article>
 
-          <article>
-            <div className={`flex flex-col lg:flex-row gap-y-4 items-center gap-x-4`}>
+          <article className="relative">
+            <div className={`flex gap-y-4 items-center gap-x-4`}>
               {paymentMode === "yearly" && <p className="text-primary text-3xl">Save 25%</p>}
               {
                 (selectedAccountType === "individual" ||
@@ -84,7 +86,7 @@ const SignupStepThree = () => {
                   <button
                     type="button"
                     onClick={() => setPaymentMode("yearly")}
-                    className={`${paymentMode === 'yearly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
+                    className={`hidden ${paymentMode === 'yearly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary lg:flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
                     <h2 className="text-xl">Yearly</h2>
                     <h4 className="text-xs">Best Value</h4>
                   </button>
@@ -98,14 +100,14 @@ const SignupStepThree = () => {
                 <button
                     type="button"
                   onClick={() => setPaymentMode("monthly")}
-                  className={`${paymentMode === 'monthly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
+                    className={`hidden ${paymentMode === 'monthly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary lg:flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
                   <h2 className="text-xl">Monthly</h2>
                 </button>
               }
               {
                 selectedAccountType === "on demand" &&
                 <button
-                  className={`bg-primary text-white border-2 border-primary flex flex-col items-center justify-center rounded-2xl w-32 h-16`}>
+                    className={`bg-primary text-white border-2 border-primary hidden lg:flex flex-col items-center justify-center rounded-2xl w-32 h-16`}>
                   <h2 className="text-xl">On Demand</h2>
                 </button>
               }
@@ -114,7 +116,42 @@ const SignupStepThree = () => {
         </div>
       </article>
 
-      <div className='flex justify-between'>
+      <div className='flex justify-between pt-14 lg:pt-0 relative'>
+        <div className={`absolute -top-6 left-0 flex gap-y-4 items-center gap-x-4`}>
+          {
+            (selectedAccountType === "individual" ||
+              selectedAccountType === "family" ||
+              selectedAccountType === "corporate"
+            ) && (
+              <button
+                type="button"
+                onClick={() => setPaymentMode("yearly")}
+                className={`lg:hidden ${paymentMode === 'yearly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
+                <h2 className="text-xl">Yearly</h2>
+                <h4 className="text-xs">Best Value</h4>
+              </button>
+            )
+          }
+          {
+            (
+              selectedAccountType === "individual" ||
+              selectedAccountType === "family"
+            ) &&
+            <button
+              type="button"
+              onClick={() => setPaymentMode("monthly")}
+              className={`lg:hidden ${paymentMode === 'monthly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
+              <h2 className="text-xl">Monthly</h2>
+            </button>
+          }
+          {
+            selectedAccountType === "on demand" &&
+            <button
+              className={`bg-primary text-white border-2 border-primary lg:hidden flex flex-col items-center justify-center rounded-2xl w-32 h-16`}>
+              <h2 className="text-xl">On Demand</h2>
+            </button>
+          }
+        </div>
         <article className="space-y-4">
           <h2 className="text-2xl">Your Order</h2>
           <h3 className="font-body">
