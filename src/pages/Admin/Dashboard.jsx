@@ -26,7 +26,7 @@ const Dashboard = () => {
     getUsers()
   }, [])
   return (
-    <section>
+    <section className="pt-4 lg:pt-0">
       <div className="flex flex-col lg:flex-row gap-x-10 px-4 text-dark gap-y-4">
         <article className="flex flex-col gap-y-10">
           <div className="w-full max-w-[416px] bg-[#F9F9F9] shadow-cardService rounded-lg">
@@ -49,7 +49,7 @@ const Dashboard = () => {
                       <div className="flex items-center">
                         <div className="mr-2">
                           <img
-                            className="w-10 h-10 rounded-full"
+                            className="hidden lg:block w-10 h-10 rounded-full"
                             src={UserPlaceholder}
                             alt={`${user.firstName} ${user.lastName}`}
                           />
@@ -97,7 +97,7 @@ const Dashboard = () => {
                       <div className="flex items-center">
                         <div className="mr-2">
                           <img
-                            className="w-10 h-10 rounded-full"
+                            className="hidden lg:block w-10 h-10 rounded-full"
                             src={UserPlaceholder}
                             alt={`${user.firstName} ${user.lastName}`}
                           />
