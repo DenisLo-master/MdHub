@@ -100,7 +100,7 @@ const ParentAccountForm = () => {
 
         <div className="w-full flex-1 flex">
           <input
-            className="flex-1 rounded-full text-xl lg:text-lg focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
+            className="flex-1 rounded-full text-xl lg:text-lg focus:ring-1 focus:ring-primary outline-none px-8 py-2 border placeholder:text-[19px]"
             type="text"            
             value={registerationFormData.dateOfBirth} 
             onChange={({ target }) => handleDateChange(target.value)}
