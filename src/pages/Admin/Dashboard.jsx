@@ -27,7 +27,7 @@ const Dashboard = () => {
   }, [])
   return (
     <section>
-      <div className="flex flex-col lg:flex-row gap-x-10 px-4 text-dark">
+      <div className="flex flex-col lg:flex-row gap-x-10 px-4 text-dark gap-y-4">
         <article className="flex flex-col gap-y-10">
           <div className="w-full max-w-[416px] bg-[#F9F9F9] shadow-cardService rounded-lg">
             <h2 className="pb-6 text-xl pl-6 pt-6">New users this week</h2>
@@ -66,7 +66,7 @@ const Dashboard = () => {
             </table>
           </div>
 
-          <div className="bg-[#F9F9F9] p-8 rounded-lg shadow-cardService w-[416px] space-y-6">
+          <div className="bg-[#F9F9F9] p-8 rounded-lg shadow-cardService w-full lg:w-[416px] space-y-6">
             <h3 className="text-xl">
               Number of total subscriptions:
             </h3>
@@ -114,7 +114,7 @@ const Dashboard = () => {
             </table>
           </div>
 
-          <div className="bg-[#F9F9F9] p-8 rounded-lg shadow-cardService w-[416px] space-y-6">
+          <div className="bg-[#F9F9F9] p-8 rounded-lg shadow-cardService w-full lg:w-[416px] space-y-6">
             <h3 className="text-xl">
               Total revenue this month:
             </h3>
