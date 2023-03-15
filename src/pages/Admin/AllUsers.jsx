@@ -3,9 +3,12 @@ import { UserPlaceholder } from '../../assets'
 import dayjs from "dayjs"
 import { FaSpinner, FaTimes } from 'react-icons/fa'
 import { toast } from 'react-hot-toast'
+import Modal from '../../components/Modal'
 
 const AllUsers = () => {
+  const [deleteDocId, setDeleteDocId] = useState("")
   const [users, setUsers] = useState([])
+  const [showDeleteModal, setShowDeleteModal] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const token = localStorage.getItem("jwtToken")
 
@@ -22,11 +25,13 @@ const AllUsers = () => {
         toast.success("The user has been deleted", {
           id: "user deleted"
         })
+        setShowDeleteModal(false)
         setUsers(users.filter(user => user._id !== userId))
       } else {
         toast.error("Failed to delete the user", {
           id: "user deletion failed"
         })
+        setShowDeleteModal(false)
       }
     } catch (error) {
       console.log(error)
@@ -101,16 +106,13 @@ const AllUsers = () => {
                     </td>
                     <td className="py-3 px-6 text-left">
                       <div
-                        onClick={() => deleteUser(user._id)}
+                        onClick={() => {
+                          setShowDeleteModal(true)
+                          setDeleteDocId(user._id)
+                        }}
                         className="absolute right-0 top-3 cursor-pointer"
                       >
-                        {isLoading ?
-                          <div className="flex items-center">
-                            <FaSpinner className="animate-spin mr-2" />
-                            <span>Deleting...</span>
-                          </div> :
-                          <FaTimes />
-                        }
+                        <FaTimes />
                       </div>
                     </td>
                   </tr>
@@ -120,6 +122,32 @@ const AllUsers = () => {
           </div>
         </article>
       </div>
+      <Modal
+        key="delete modal"
+        title="Delete User"
+        showModal={showDeleteModal}
+        setShowModal={setShowDeleteModal}
+      >
+        <section section className="p-6 font-body" >
+          <div className="w-full">
+            <p>Confirm Delete? </p>
+            <div className="w-full flex gap-x-3 flex-row-reverse">
+              <button
+                onClick={() => setShowDeleteModal(false)}
+                className="bg-gray-400 text-white rounded-lg px-8 py-2"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={() => deleteUser(deleteDocId)}
+                className="bg-red-700 text-white rounded-lg px-8 py-2"
+              >
+                {isLoading ? <FaSpinner className="animate-spin mr-2" /> : "Delete"}
+              </button>
+            </div>
+          </div>
+        </section >
+      </Modal>
     </section>
   )
 }
