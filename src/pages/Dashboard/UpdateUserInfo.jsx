@@ -14,6 +14,7 @@ const stripePromise = loadStripe(key);
 
 const UpdateUserInfo = () => {
   const [isLoading, setIsLoading] = useState(false)
+  const [initialState, setInitialState] = useState([])
   const navigate = useNavigate()
   const userInfo = registerationStore(state => state.userInfo)
   const [userInfoFormData, setUserInfoFormData] = useState({})
@@ -30,13 +31,19 @@ const UpdateUserInfo = () => {
     e.preventDefault()
     setIsLoading(true)
     try {
+      const updatedFields = {}
+      Object.keys(userInfoFormData).forEach(key => {
+        if (userInfoFormData[key] !== initialState[key]) {
+          updatedFields[key] = userInfoFormData[key]
+        }
+      })
       const response = await fetch(`https://mdhub-server.onrender.com/api/v1/users/${tokenInfo?.id}`, {
         method: "PUT",
         headers: {
           'Content-Type': 'application/json',
           "Authorization": `Bearer ${token}`
         },
-        body: JSON.stringify(userInfoFormData)
+        body: JSON.stringify(updatedFields)
       })
       await response.json()
       if (response.ok) {
@@ -66,6 +73,7 @@ const UpdateUserInfo = () => {
         const { paymentInfo, userInfo } = data
         setPaymentInfo(paymentInfo)
         setUserInfoFormData({ email: userInfo.email, phone: userInfo.phone, address: userInfo.address, password: userInfo.password })
+        setInitialState({ email: userInfo.email, phone: userInfo.phone, address: userInfo.address, password: userInfo.password })
 
       } catch (error) {
         console.log(error)
@@ -142,7 +150,7 @@ const UpdateUserInfo = () => {
             className={`rounded-full group hover:ring-1 hover:ring-primary  py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-8`}
             type="submit"
           >
-            {isLoading ? <SVGLoaderCircles /> : "Submit"}
+            {isLoading ? <SVGLoaderCircles className="text-base w-4 h-4" /> : "Submit"}
           </button>
         </form>
       </div>
