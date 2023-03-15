@@ -30,7 +30,7 @@ const CorporateOverview = () => {
         </div>
       </section>
 
-      <section className="w-full max-w-[1130px] mx-auto py-20 font-main">
+      <section className="w-full max-w-[1130px] mx-auto py-10 font-main px-4">
         <article className="w-full bg-linearGradientPrimary rounded-lg px-4 py-10 pb-32 text-white space-y-6">
           <h2 className="text-center text-4xl max-w-lg mx-auto">Attract and retain top talent by offering the ultimate care</h2>
           <ul className="flex flex-col lg:flex-row justify-center flex-wrap font-body text-white gap-x-16 gap-y-8 relative">
@@ -88,8 +88,8 @@ const CorporateOverview = () => {
         </article>
       </section>
 
-      <section className="py-10">
-        <div className="py-10 flex flex-col lg:flex-row items-center gap-y-4 justify-center gap-x-16 text-center">
+      <section className="py-10 px-4">
+        <div className="flex flex-col lg:flex-row items-center gap-y-4 justify-center gap-x-16 text-center">
           <article className="space-y-1">
             <h2 className="text-primary text-8xl">91%</h2>
             <p className="text-xl  w-full max-w-[250px] leading-6 font-body">
@@ -111,7 +111,7 @@ const CorporateOverview = () => {
         </div>
       </section>
 
-      <section className="w-full max-w-[1130px] mx-auto font-main">
+      <section className="w-full max-w-[1130px] mx-auto font-main px-4">
         <div>
           <p className="font-body text-xl text-center py-8 font-light">
             We offer holistic corporate plans to suit any size of business.
@@ -139,7 +139,7 @@ const CorporateOverview = () => {
         </div>
       </section>
 
-      <section className="py-10 flex flex-col items-center">
+      <section className="py-10 flex flex-col items-center px-4">
         <h2 className="text-4xl max-w-[680px] pb-8 text-center">
           The ultimate benefits solution that your teams will actually use and love.
         </h2>
@@ -168,7 +168,7 @@ const CorporateOverview = () => {
         </div>
       </section>
 
-      <section className="max-w-[1130px] mx-auto py-20 space-y-16">
+      <section className="max-w-[1130px] mx-auto py-20 space-y-16 px-4">
         <div className="space-y-6 text-center">
           <h2 className="text-dark text-4xl pb-4">
             "mental well-being coverage has provided us with the tools to make a difference in the lives of our employees and each other.”
