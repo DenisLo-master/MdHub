@@ -53,7 +53,6 @@ const AllUsers = () => {
     getAllUsers()
   }, [])
 
-  console.log(users)
 
   return (
     <section className="flex-1">
