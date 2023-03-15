@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { HomeSlider } from '../../sections'
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-icons/bs'
 import RotatingEllipse from '../../components/RotatingEllipse'
 import { MentalHealthBanner, NursingAndHomecareBanner, OnlinePharmacyBanner, VirtualDoctorBanner } from '../../assets'
