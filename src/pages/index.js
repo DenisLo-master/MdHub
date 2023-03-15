@@ -23,8 +23,10 @@ import Admin from './Admin/Admin'
 import AllUsers from "./Admin/AllUsers"
 import AddUser from "./Admin/AddUser"
 import BillingHistory from "./Admin/BillingHistory"
+import AdminLogin from "./Login/AdminLogin";
 
 export {
+  AdminLogin,
   AddUser,
   BillingHistory,
   AllUsers,
