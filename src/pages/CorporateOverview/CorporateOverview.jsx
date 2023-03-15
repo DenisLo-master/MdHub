@@ -70,7 +70,7 @@ const CorporateOverview = () => {
                 Vaccination, prescriptions and mobile nurses and all medical records in one place
               </p>
             </li>
-            <li className="flex lg:w-[380px] gap-x-2" />
+            <li className="hidden lg:flex lg:w-[380px] gap-x-2" />
             <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
