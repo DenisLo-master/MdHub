@@ -17,7 +17,6 @@ const Dashboard = () => {
           }
         })
         const data = await response.json()
-        console.log(data)
         setUsersThisWeek(data.data.usersThisWeek)
         setDeletedUsersThisWeek(data.data.deletedUsers)
       } catch (error) {
