@@ -67,7 +67,7 @@ const ForYou = () => {
 
         <article className="flex flex-col-reverse lg:flex-row gap-x-8 py-16 text-dark">
           <div className="flex-1 space-y-4 font-body px-4">
-            <h2 className="text-5xl font-main max-w-[500px]">
+            <h2 className="text-4xl lg:text-5xl font-main max-w-[500px] py-4">
               The whole family in one affordable plan
             </h2>
             <p>
