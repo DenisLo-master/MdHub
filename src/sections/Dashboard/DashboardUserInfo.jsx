@@ -32,7 +32,7 @@ const DashboardUserInfo = () => {
             {userInfo?.phone}
           </article>
           <article className="bg-white rounded-[48px] shadow-cardService px-8 py-3 border-[0.25px]">
-            {`${userInfo.address}, ${userInfo?.city}, ${userInfo.province}`}
+            {`${userInfo.address}, ${userInfo?.city}, ${userInfo.region}`}
           </article>
         </div>
       </article>
