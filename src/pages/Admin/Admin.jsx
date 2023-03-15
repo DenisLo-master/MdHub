@@ -20,13 +20,15 @@ const Admin = () => {
   if (!token) return null
   if (!tokenInfo.isAdmin) return null
 
+  console.log(location)
+
   return (
     <section className="py-14 pt-8 font-main">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-x-10 px-4 text-dark">
         <aside className="bg-[#F9F9F9] flex flex-col justify-between items-center lg:h-[550px] p-8 rounded-lg shadow-cardService">
           <div className="space-y-6 flex flex-col items-center pb-4">
             <button
-              className={`py-[10px] text-lg  flex justify-center items-center rounded-full w-[240px] ${location.pathname === '/admin' ? "bg-linearGradientPrimary w-[240px] text-white" : "w-[176px] text-dark border border-dark"}`}
+              className={`py-[10px] text-lg  flex justify-center items-center rounded-full ${location.pathname === '/admin' ? "bg-linearGradientPrimary w-[240px] text-white" : "w-[176px] text-dark border border-dark"}`}
               type="button"
             >
               <Link className="w-full" to="/admin">
@@ -34,7 +36,7 @@ const Admin = () => {
               </Link>
             </button>
             <button
-              className={`py-[10px] text-lg text-white flex justify-center items-center rounded-full w-[240px] ${location.pathname === '/admin/all_users' ? "bg-linearGradientPrimary w-[240px]" : "w-[176px] text-dark border border-dark"}`}
+              className={`py-[10px] text-lg  flex justify-center items-center rounded-full ${location.pathname === '/admin/all_users' ? "bg-linearGradientPrimary w-[240px] text-white" : "w-[176px] text-dark border border-dark"}`}
               type="button"
             >
               <Link className="w-full" to="/admin/all_users">
@@ -42,7 +44,7 @@ const Admin = () => {
               </Link>
             </button>
             {/* <button
-              className={`py-[10px] text-lg text-white flex justify-center items-center rounded-full w-[240px] ${location.pathname === '/admin/add_user' ? "bg-linearGradientPrimary w-[240px]" : "w-[176px] text-dark border border-dark"}`}
+              className={`py-[10px] text-lg  flex justify-center items-center rounded-full ${location.pathname === '/admin/add_user' ? "bg-linearGradientPrimary w-[240px] text-white" : "w-[176px] text-dark border border-dark"}`}
               type="button"
             >
               <Link className="w-full" to="/admin/add_user">
@@ -50,7 +52,7 @@ const Admin = () => {
               </Link>
             </button> */}
             <button
-              className={`py-[10px] text-lg text-white flex justify-center items-center rounded-full w-[240px] ${location.pathname === '/admin/billing_history' ? "bg-linearGradientPrimary w-[240px]" : "w-[176px] text-dark border border-dark"}`}
+              className={`py-[10px] text-lg  flex justify-center items-center rounded-full  ${location.pathname === '/admin/billing_history' ? "bg-linearGradientPrimary w-[240px] text-white" : "w-[176px] text-dark border border-dark"}`}
               type="button"
             >
               <Link className="w-full" to="/admin/billing_history">
