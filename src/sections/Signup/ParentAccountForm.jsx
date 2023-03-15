@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { BsPlusCircle } from 'react-icons/bs'
 import { registerationStore } from '../../store/registerationStore'
-import Select from 'react-select'
 import { BiCaretDown } from 'react-icons/bi';
 
 
