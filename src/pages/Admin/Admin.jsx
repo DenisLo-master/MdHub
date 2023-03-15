@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom'
 import jwt from 'jwt-decode'
+import { toast } from 'react-hot-toast'
 
 const Admin = () => {
   const navigate = useNavigate()
@@ -12,13 +13,20 @@ const Admin = () => {
 
   const token = localStorage.getItem("jwtToken")
   const tokenInfo = token ? jwt(token) : {}
+
   useEffect(() => {
-    if (!token) navigate("/login")
-    if (!tokenInfo.isAdmin) navigate("/login")
+    if (!token) {
+      navigate("/admin_login")
+      toast.error("You need to login as admin", { id: "admin-login-toast" })
+    }
+    if (token && !tokenInfo.isAdmin) {
+      navigate("/")
+      toast.error("Not authorized", { id: "not-authorized-toast" })
+    }
   }, [])
 
   if (!token) return null
-  if (!tokenInfo.isAdmin) return null
+  if (token && !tokenInfo.isAdmin) return null
 
 
   return (
