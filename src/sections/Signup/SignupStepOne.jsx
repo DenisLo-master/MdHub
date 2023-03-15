@@ -22,7 +22,9 @@ const SignupStepOne = () => {
           {
             selectedAccountType === "corporate" && (
               <div className="absolute right-0 top-20 lg:top-0 lg:w-72 flex justify-center items-center text-right px-8 h-[68px] rounded-2xl text-white bg-primary lg:text-lg">
-                <p className="leading-5">for more than 10 employees, please click here</p>
+                <a href="mailto:info@mdhub.com?subject=Corporate%20Inquiry%20-%2010%2B%20Employees">
+                  <p className="leading-5">for more than 10 employees, please click here</p>
+                </a>
               </div>
             )
           }
