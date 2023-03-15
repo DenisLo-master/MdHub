@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { registerationStore } from '../../store/registerationStore'
-import { CountryDropdown, RegionDropdown, CountryRegionData } from 'react-country-region-selector'
+import { CountryDropdown, RegionDropdown } from 'react-country-region-selector'
 import { BiCaretDown } from 'react-icons/bi'
 
 const SignupStepTwo = () => {
