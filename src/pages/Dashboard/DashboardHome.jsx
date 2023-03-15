@@ -92,7 +92,7 @@ const DashboardHome = () => {
                       <TiClipboard className="text-2xl" />
                     </div>
                   </div>
-                  <div className="pt-3 flex gap-x-2">
+                  <div className="hidden pt-3 lg:flex gap-x-2">
                     <div>
                       Your Maple Login Code: <strong className="cursor-pointer underline">{userInfo.loginCode}</strong> </div>
                     <div className="cursor-pointer" onClick={handleCopy}>
