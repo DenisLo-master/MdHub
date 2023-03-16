@@ -1,27 +1,29 @@
 import React, { useState } from 'react'
 import { ArrowIcon } from '../assets'
 import { howItWorksData } from '../constants'
+import { useTranslation } from 'react-i18next'
 
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const { t } = useTranslation()
   return (
     <div className="w-full max-w-3xl mx-auto">
       <div className="py-3 px-4 my-10 font-main text-lg flex justify-between space-x-4 w-full rounded-full bg-[#F1F1F1] shadow-sliderNav">
         <button
           onClick={() => setCurrentSlide(0)}
           className={`transition-colors w-[128px] ease-in duration-200 px-8 py-[10px] rounded-full ${currentSlide === 0 ? "bg-gradient-primary  text-white" : "bg-[#F1F1F1] text-gray-800"}`}>
-          Step 1
+          {t('Step')} 1
         </button>
         <button
           onClick={() => setCurrentSlide(1)}
           className={`transition-colors w-[128px] ease-in duration-200 px-8 py-[10px] rounded-full ${currentSlide === 1 ? "bg-gradient-primary  text-white" : "bg-[#F1F1F1] text-gray-800"}`}>
-          Step 2
+          {t('Step')} 2
         </button>
         <button
           onClick={() => setCurrentSlide(2)}
           className={`transition-colors w-[128px] ease-in duration-200 px-8 py-[10px] rounded-full ${currentSlide === 2 ? "bg-gradient-primary  text-white" : "bg-[#F1F1F1] text-gray-800"}`}>
-          Step 3
+          {t('Step')} 3
         </button>
       </div>
       <div className="w-full max-w-3xl mx-auto overflow-hidden rounded-[35px]">
@@ -30,15 +32,15 @@ const Slider = () => {
             howItWorksData.map(item => (
               <article
                 key={item.id}
-                className="min-w-[375px] md:min-w-[768px] flex flex-wrap justify-around items-center px-6 md:px-8"
+                className="min-w-[375px] md:min-w-[768px] flex justify-around items-center px-6 md:px-8"
               >
                 <div className="font-main ">
-                  <h2 className="font-light max-w-[140px] text-5xl border-b border-[#3F3F3F] pb-2">
-                    {item.title}
+                  <h2 className="font-light max-w-[170px] text-5xl border-b border-[#3F3F3F] pb-2">
+                    {t(`${item.title}`)}
                   </h2>
-                  <h3 className="text-3xl pt-2">{item.heading}</h3>
+                  <h3 className="text-3xl pt-2 max-w-[326px]">{t(`${item.heading}`)}</h3>
                   <p className="text-light font-body text-base pt-4 max-w-[280px]">
-                    {item.description}
+                    {t(`${item.description}`)}
                   </p>
                 </div>
                 <img className={`relative top-4 ${item.id === 1 ? "max-w-[250px]" : "max-w-[380px]"}`} src={item.image} alt={item.description} />
