@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { PartnerCompany01, PartnerCompany02, PartnerCompany03, PartnerCompany04 } from '../../assets'
+import { useTranslation } from 'react-i18next'
 
 const HomeUserSatisfactionSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [increment, setIncrement] = useState(true)
+  const { t } = useTranslation()
 
 
   useEffect(() => {
@@ -30,7 +32,7 @@ const HomeUserSatisfactionSection = () => {
   return (
     <section className="py-16 font-main text-4xl">
       <h2 className="text-center pb-8">
-        We take care of outstanding people, their families, and their corporations.
+        {t('We take care of outstanding people, their families, and their corporations.')}
       </h2>
       <div className="max-w-sm mx-auto flex flex-col justify-center text-center">
         <article className="max-w-[384px] relative overflow-x-hidden py-10 pb-14">
@@ -56,19 +58,19 @@ const HomeUserSatisfactionSection = () => {
             <div className="min-w-[384px]">
               <h3 className="text-primary text-8xl">94%</h3>
               <p className="font-body font-light text-lg lg:text-2xl">
-                of physicians use virtual care.
+                {t('of physicians use virtual care.')}
               </p>
             </div>
             <div className="min-w-[384px]">
               <h3 className="text-primary text-8xl">1500+</h3>
               <p className="font-body font-light text-lg lg:text-2xl px-6 lg:px-0">
-                real doctors ready to treat various concerns and conditions
+                {t('real doctors ready to treat various concerns and conditions')}
               </p>
             </div>
             <div className="min-w-[384px]">
               <h3 className="text-primary text-8xl">55%</h3>
               <p className="font-body font-light text-lg lg:text-2xl">
-                of employers expect virtual care to lower healthcare costs
+                {t('of employers expect virtual care to lower healthcare costs')}
               </p>
             </div>
 
@@ -76,7 +78,7 @@ const HomeUserSatisfactionSection = () => {
         </article>
       </div>
       <div className="w-full max-w-4xl mx-auto text-center py-10 font-body text-base space-y-5">
-        <p>Some companies we’ve partnered with:</p>
+        <p>{t("Some companies we've partnered with")}:</p>
         <section className="flex items-center justify-around flex-wrap gap-y-4 lg:justify-between">
           <img className="max-w-[149px]" src={PartnerCompany01} alt="Air Canada" />
           <img className="max-w-[156px]" src={PartnerCompany02} alt="Sotherbys" />
