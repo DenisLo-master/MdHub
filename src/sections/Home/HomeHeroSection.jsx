@@ -3,6 +3,7 @@ import { FiArrowUpRight } from 'react-icons/fi'
 import Button from '../../components/Button'
 import { HeroGif, HeroBg } from '../../assets'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const WORDS = [
   "diagnosis",
@@ -39,6 +40,7 @@ const WORDS = [
 
 const HomeHeroSection = () => {
   const [selectedValues, setSelectedValues] = useState([])
+  const { t, i18n } = useTranslation()
 
   useEffect(() => {
     setSelectedValues(() => {
@@ -59,20 +61,20 @@ const HomeHeroSection = () => {
         </aside>
         <article data-aos="fade-up" className="flex-1 px-4 md:pl-20">
           <h2 className="w-full max-w-[750px] font-main text-center md:text-left text-4xl md:text-6xl">
-            Accessible, quality healthcare at your fingertips.
+            {t('Accessible, quality healthcare at your fingertips.')}
           </h2>
           <p className="font-body text-center md:text-left font-extralight text-gray-900 md:text-xl py-4 md:py-8 max-w-[630px]">
-            From meeting a doctor to ordering a perscription get the 360 healthcare you need all in one place.
+            {t('From meeting a doctor to ordering a perscription get the 360 healthcare you need all in one place.')}
           </p>
           <div className='flex justify-center md:justify-start space-x-2 md:space-x-6 font-main text-gray-700'>
             <Link to="/login">
               <Button wide>
-                <span>See A Doctor</span> <FiArrowUpRight className="md:text-lg transition-colors ease-out duration-150 group-hover:text-primary" />
+                <span>{t('See A Doctor')}</span> <FiArrowUpRight className="md:text-lg transition-colors ease-out duration-150 group-hover:text-primary" />
               </Button>
             </Link>
             <Link to="/register">
               <Button wide>
-                <span>Sign Up</span> <FiArrowUpRight className="md:text-lg transition-colors ease-out duration-150 group-hover:text-primary" />
+                <span>{t('Sign Up')}</span> <FiArrowUpRight className="md:text-lg transition-colors ease-out duration-150 group-hover:text-primary" />
               </Button>
             </Link>
           </div>
@@ -84,14 +86,14 @@ const HomeHeroSection = () => {
       </section>
       <div className="hidden relative homepage text-center lg:flex justify-center flip-words font-main">
         <h2 className="text-primary text-center text-5xl md:text-6xl">
-          Get care today for
+          {t('Get care today for')}
         </h2>
         <div className="w-full absolute left-0 top-[70px]">
           <div className="w-full h-16 overflow-y-hidden flex justify-center">
             {
               selectedValues.map((word, index) => (
                 <span key={`${index}${word}`} className="md:text-6xl">
-                  {word}
+                  {t(`${word}`)}
                 </span>
               ))
             }
