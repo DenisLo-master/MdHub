@@ -14,9 +14,8 @@ const Dashboard = () => {
 
   useEffect(() => {
     const getUsers = async () => {
-      // https://mdhub-server.onrender.com
       try {
-        const response = await fetch(`http://localhost:8080/api/v1/users/get_user_info`, {
+        const response = await fetch(`https://mdhub-server.onrender.com/api/v1/users/get_user_info`, {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`
