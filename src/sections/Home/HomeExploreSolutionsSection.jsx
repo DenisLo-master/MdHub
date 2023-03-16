@@ -13,7 +13,7 @@ const HomeExploreSolutionsSection = () => {
       <article className="hidden flex-1 relative rotating-ellipse-section lg:flex justify-center">
         <RotatingEllipse />
       </article>
-      <article className="w-full max-w-[700px] 2xl:max-w-[800px] relative font-main bg-gray-100 overflow-x-hidden">
+      <article className="w-full h-auto lg:h-[650px] max-w-[700px] 2xl:max-w-[800px] relative font-main bg-gray-100 overflow-x-hidden">
         <div className="absolute top-[280px] 2xl:top-[330px] z-10 right-[170px] lg:right-[330px] 2xl:right-[390px] flex gap-x-1">
           <article
             onClick={() => setCurrentSlide(0)}
