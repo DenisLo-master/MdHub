@@ -44,7 +44,7 @@ const Navbar = () => {
               <RxDotFilled className="absolute text-primary -left-5 top-[6px]" />
             }
               <RxDotFilled className="hidden group-hover:block absolute text-primary -left-5 top-[6px]" />
-              <Link to="for-you">{t('for you')}</Link>
+              <Link to="/for-you">{t('for you')}</Link>
             </li>
             <li className="relative cursor-pointer hover:opacity-90 group">
             {
