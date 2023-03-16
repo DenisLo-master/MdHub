@@ -12,16 +12,18 @@ import {
   CorporateBenefitsIcon03
 } from '../../assets'
 import { registerationStore } from '../../store/registerationStore'
+import { useTranslation } from 'react-i18next'
 
 const CorporateOverview = () => {
   const changeSelectedAccountType = registerationStore(state => state.changeSelectedAccountType)
+  const { t } = useTranslation()
   return (
     <section className="font-main">
       <section className="relative font-main bg-virtualDoctor overflow-hidden px-4">
         <img className="hidden lg:block absolute object-cover w-full h-[400px]" src={ForCorporateHeader} alt="For Corporate" />
         <div className="relative z-10 w-full max-w-7xl mx-auto lg:h-[390px] flex items-center">
           <h2 className="text-[70px] lg:text-[88px] max-w-[650px] leading-[80px] pb-5 text-white">
-            your employees health should never be limited
+            {t('your-employees-health-should-never-be-limited')}
           </h2>
         </div>
       </section>
@@ -33,50 +35,50 @@ const CorporateOverview = () => {
             <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
-                A healthy team member is a your companies greatest asset
+                {t('a-healthy-team-member-is-a-your-companies-greatest-asset')}
               </p>
             </li>
             <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
-                Doctors notes, paediatricians and homecare for the kids and grandparents
+                {t('doctors-notes-paediatricians-and-homecare-for-the-kids-and-grandparents')}
               </p>
             </li>
             <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
-                Support and coverage for each employee and their family
+                {t('support-and-coverage-for-each-employee-and-their-family')}
               </p>
             </li>
             <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
-                Preventive care and ongoing management of chronic conditions
+                {t('preventive-care-and-ongoing-management-of-chronic-conditions')}
               </p>
             </li>
             <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
-                Reduce down time and recovery with on demand fast service
+                {t('reduce-down-time-and-recovery-with-on-demand-fast-service')}
               </p>
             </li>
             <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
-                Vaccination, prescriptions and mobile nurses and all medical records in one place
+                {t('vaccination-prescriptions-and-mobile-nurses-and-all-medical-records-in-one-place')}
               </p>
             </li>
             <li className="hidden lg:flex lg:w-[380px] gap-x-2" />
             <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
-                Strong focus on mental health and wellness
+                {t('strong-focus-on-mental-health-and-wellness')}
               </p>
             </li>
             <li className="absolute lg:-bottom-7 -bottom-16 left-4 lg:left-36">
               <Link className="block" to="/register">
                 <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white border-white text-primary font-main">
-                  Sign Up Today
+                  {t('sign-up-today')}
                 </button>
               </Link>
             </li>
@@ -89,19 +91,19 @@ const CorporateOverview = () => {
           <article className="space-y-1">
             <h2 className="text-primary text-8xl">91%</h2>
             <p className="text-xl  w-full max-w-[250px] leading-6 font-body">
-              Of medical issues resolved in the first interaction
+              {t('of-medical-issues-resolved-in-the-first-interaction')}
             </p>
           </article>
           <article className="space-y-1">
             <h2 className="text-primary text-8xl">65%</h2>
             <p className="text-xl  w-full max-w-[250px] leading-6 font-body">
-              Of visits prevent a workplace absence
+              {t('of-visits-prevent-a-workplace-absence')}
             </p>
           </article>
           <article className="space-y-1">
             <h2 className="text-primary text-8xl">3.5</h2>
             <p className="text-xl  w-full max-w-[250px] leading-6 font-body">
-              Hours saves per consultation on average
+              {t('hours-saves-per-consultation-on-average')}
             </p>
           </article>
         </div>
@@ -110,7 +112,7 @@ const CorporateOverview = () => {
       <section className="w-full max-w-[1130px] mx-auto font-main px-4">
         <div>
           <p className="font-body text-xl text-center py-8 font-light">
-            We offer holistic corporate plans to suit any size of business.
+            {t('we-offer-holistic-corporate-plans-to-suit-any-size-of-business')}
           </p>
           <div className="flex flex-col lg:flex-row items-center gap-y-6 justify-center gap-x-12">
             <Link
@@ -118,17 +120,17 @@ const CorporateOverview = () => {
               onClick={() => changeSelectedAccountType("corporate")}
             >
               <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-                5-10 Employees
+                5-10 {t('employees')}
               </button>
             </Link>
             <a href="mailto:info@mdhub.com?subject=Corporate%20Inquiry%20-%2010%2B%20Employees">
               <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-                10-50 Employees
+                10-50 {t('employees')}
               </button>
             </a>
             <a href="mailto:info@mdhub.com?subject=Corporate%20Inquiry%20-%2010%2B%20Employees">
               <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
-                51+ Employees
+                51+ {t('employees-0')}
               </button>
             </a>
           </div>
@@ -137,28 +139,28 @@ const CorporateOverview = () => {
 
       <section className="py-10 flex flex-col items-center px-4">
         <h2 className="text-4xl max-w-[680px] pb-8 text-center">
-          The ultimate benefits solution that your teams will actually use and love.
+          {t('the-ultimate-benefits-solution-that-your-teams-will-actually-use-and-love')}
         </h2>
         <div className="w-full max-w-[1000px] flex flex-col lg:flex-row items-center gap-y-4 justify-between text-center font-main">
           <article className="max-w-[280px] flex flex-col items-center">
             <img src={CorporateBenefitsIcon01} alt="Corporate Benefits" />
             <h2 className="text-2xl max-w-[250px]">Whole-person care anytime, anywhere</h2>
             <p className="font-body pt-2 pb-4">
-              Support every person on your team with access to quality healthcare available 24/7, like virtual appointments and prescription delivery. 
+              {t('support-every-person-on-your-team-with-access-to-quality-healthcare-available-24-7-like-virtual-appointments-and-prescription-delivery')}
             </p> 
           </article>
           <article className="max-w-[280px] flex flex-col items-center">
             <img src={CorporateBenefitsIcon02} alt="Corporate Benefits" />
             <h2 className="pt-2 text-2xl max-w-[250px]">Family & pediatric care</h2>
             <p className="font-body pt-8 pb-4">
-              With MDHUB corporate plans, your employee’s family and children can receive healthcare, too. Designed specifically for busy families, your employees’ families can get care fast. 
+              {t('with-mdhub-corporate-plans-your-employees-family-and-children-can-receive-healthcare-too-designed-specifically-for-busy-families-your-employees-families-can-get-care-fast')}
             </p>
           </article>
           <article className="max-w-[280px] flex flex-col items-center">
             <img src={CorporateBenefitsIcon03} alt="Corporate Benefits" />
-            <h2 className="text-2xl max-w-[250px] pt-3 pb-2"> Increased ROI & employee satisfaction</h2>
+            <h2 className="text-2xl max-w-[250px] pt-3 pb-2">{t('increased-roi-and-employee-satisfaction')}</h2>
             <p className="font-body pb-4">
-              Your corporate membership is tax-deductible, but it also means less out-of-pocket expenses for your people. Plus, you can feel good knowing they're well taken care of.
+              {t('your-corporate-membership-is-tax-deductible-but-it-also-means-less-out-of-pocket-expenses-for-your-people-plus-you-can-feel-good-knowing-theyre-well-taken-care-of')}
             </p>
           </article>
         </div>
@@ -167,10 +169,10 @@ const CorporateOverview = () => {
       <section className="max-w-[1130px] mx-auto py-20 space-y-16 px-4">
         <div className="space-y-6 text-center">
           <h2 className="text-dark text-4xl pb-4">
-            "mental well-being coverage has provided us with the tools to make a difference in the lives of our employees and each other.”
+            "{t('mental-well-being-coverage-has-provided-us-with-the-tools-to-make-a-difference-in-the-lives-of-our-employees-and-each-other')}”
           </h2>
           <h3 className="text-xl">
-            We cover some of Canada's finest
+            {t('we-cover-some-of-canadas-finest')}
           </h3>
           <div className="flex justify-around lg:justify-center flex-wrap gap-y-7 items-center gap-x-16">
             <img className="max-w-[149px]" src={PartnerCompany01} alt="Air Canada" />
