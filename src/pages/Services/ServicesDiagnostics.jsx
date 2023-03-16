@@ -1,30 +1,32 @@
 import React from 'react'
 import { diagnosisHowItWorksData } from '../../constants'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const WORDS = ['virus', 'urine', 'blood', 'covid']
 
 const ServicesDiagnostics = () => {
+  const { t } = useTranslation()
   return (
     <section className="font-main text-dark py-10">
-      <header className="bg-diagnostics lg:diagnostics-bg text-white w-full py-20 relative">
+      <header className="bg-diagnostics diagnostics-bg text-white w-full py-20 relative">
         <div className="max-w-[83rem] mx-auto">
           <article className="space-y-5 px-2">
             <h2 className="text-[65px] lg:text-[88px] max-w-[450px] leading-[80px] pb-5">
-              lab testing & diagnostics
+              {t('lab-testing-and-diagnostics')}
             </h2>
             <div className="space-y-5 font-body text-lg max-w-lg pb-8 leading-5 px-2">
               <p>
-                Avoid the wait at hospitals and clinics with safe, fast, and professional lab testing from the comfort of your home or office.
-                <strong>{" "}Get results fast</strong>
+                {t('avoid-the-wait-at-hospitals-and-clinics-with-safe-fast-and-professional-lab-testing-from-the-comfort-of-your-home-or-office')}
+                <strong>{" "}{t('get-results-fast')}</strong>
               </p>
               <p>
-                Our certified partner labs can process over 300 different screenings to provide you with a comprehensive health assessment – and get you answers fast. 
+                {t('our-certified-partner-labs-can-process-over-300-different-screenings-to-provide-you-with-a-comprehensive-health-assessment-and-get-you-answers-fast')}
               </p>
             </div>
             <Link className="block px-2" to="register">
               <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white text-diagnostics border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
-                Sign Up Today
+                {t('sign-up-today')}
               </button>
             </Link>
           </article>
@@ -33,14 +35,14 @@ const ServicesDiagnostics = () => {
       <section className="bg-white lg:py-14">
         <div className="hidden relative virtual-health text-center lg:flex justify-center flip-words">
           <h2 className="text-primary text-center text-5xl md:text-6xl">
-            Get help for
+            {t('get-help-for')}
           </h2>
           <div className="w-full absolute left-0 top-16">
             <div className="w-full h-16 overflow-y-hidden flex justify-center">
               {
                 WORDS.map(word => (
                   <span className="md:text-6xl">
-                    {word}
+                    {t(`${word}`)}
                   </span>
                 ))
               }
@@ -71,14 +73,14 @@ const ServicesDiagnostics = () => {
                       {
                         step.id === 1 && (
                           <strong className="font-body block">
-                            See a doctor now.
+                            {t('see-a-doctor-now')}
                           </strong>
                         )
                       }
                       {
                         step.id === 3 && (
                           <p className="font-light text-sm font-body text-dark">
-                            *Please note: member pricing is $99 for this service.
+                            {t('please-note-member-pricing-is-99-for-this-service')}
                           </p>
                         )
                       }
