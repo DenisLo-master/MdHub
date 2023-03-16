@@ -5,8 +5,10 @@ import Linkedin from '../assets/linkedin.png'
 import Twitter from '../assets/twitter.png'
 import { Link } from 'react-router-dom'
 import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa"
+import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
+  const { t } = useTranslation()
   return (
     <footer className="bg-gradient-primary text-white">
       <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:space-x-28 text-center md:text-left gap-y-6 py-12">
@@ -14,9 +16,9 @@ const Footer = () => {
           <img className="w-36" src={Logo} alt="Logo"/>
         </header>
         <article className="space-y-6">
-          <h2 className="font-main text-2xl">Contact Info</h2>
+          <h2 className="font-main text-2xl">{t('Contact Info')}</h2>
           <ul className="font-body text-base">
-            <li>Made in Canada</li>
+            <li>{t('Made in Canada')}</li>
             <li>
               <a href="tel:+15148658844">
                 +1 514 865 8844
@@ -31,50 +33,50 @@ const Footer = () => {
         </article>
 
         <article className="space-y-6">
-          <h2 className="font-main text-2xl">Useful Links</h2>
+          <h2 className="font-main text-2xl">{t('Useful Links')}</h2>
           <ul className="font-body text-base">
             <li>
               <Link to="/services">
-                Services
+                {t('Services')}
               </Link>
             </li>
             <li>
               <Link to="/contact">
-                Contact
+                {t('Contact')}
               </Link>
             </li>
             <li>
               <Link to="/about">
-                About Us
+                {t('About Us')}
               </Link>
             </li>
             <li>
               <Link to="/rates">
-                Memberships
+                {t('Memberships')}
               </Link>
             </li>
             <li>
               <Link to="/services/virtual-doctor">
-                Virtual Doctor
+                {t('Virtual Doctor')}
               </Link>
             </li>
             <li>
               <Link to="/services/online-pharmacy">
-                Online Pharmacy
+                {t('Online Pharmacy')}
               </Link>
             </li>
             <li>
               <Link to="/services/nursing-homecare">
-                Nursing & Homecare
+                {t('Nursing & Homecare')}
               </Link>
             </li>
           </ul>
         </article>
 
         <article className="space-y-6">
-          <h2 className="font-main text-2xl">Subscribe</h2>
+          <h2 className="font-main text-2xl">{t('Subscribe')}</h2>
           <div className="font-body text-base space-y-2">
-            <p className="max-w-[230px]">Subscribe to our newsletter for latest news and updates</p>
+            <p className="max-w-[230px]">{t('Subscribe to our newsletter for latest news and updates')}</p>
             <form className="flex space-x-1 text-xs">
               <input className="px-2 rounded bg-transparent text-white border outline-none border-white placeholder:text-white" placeholder="E-mail" />
               <button className="bg-white rounded text-primary px-3 py-1 hover:opacity-90 transition-opacity ease-in-out duration-300" type="submit">Subscribe</button>
