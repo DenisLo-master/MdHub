@@ -19,7 +19,7 @@ const PricingSlider = () => {
         </button>
         <button
           onClick={() => setSelectedPackage("corporate")}
-          className={`transition-colors w-[128px] ease-in duration-200 px-8 py-[10px] rounded-full 
+          className={`transition-colors w-[128px] ease-in duration-200 px-8 py-[10px] rounded-full
             ${selectedPackage === "corporate" ? "bg-gradient-primary text-white" : "text-dark"}`}>
           corporate
         </button>
@@ -68,7 +68,7 @@ const PricingSlider = () => {
           <article className="p-8 px-12 flex flex-col items-center rounded-lg shadow-glow">
             <div className="space-y-2 text-center font-main">
               <h2 className="text-3xl">Monthly</h2>
-              <h4 className="text-base">includes up to 4 family members</h4>
+              <h4 className="text-base">includes all family members in the same household</h4>
             </div>
             <div className="text-primary pt-8">
               <h2 className="text-[40px] leading-9">$49.99</h2>
@@ -93,7 +93,7 @@ const PricingSlider = () => {
             </section>
             <div className="font-main text-center">
               <h2 className="text-5xl pt-12">Yearly</h2>
-              <h4 className="text-base">includes up to 4 family members</h4>
+              <h4 className="text-base">includes all family members in the same household</h4>
             </div>
             <div className="text-primary pt-14 py-10">
               <h2 className="text-[52px] leading-9">$39.99</h2>
