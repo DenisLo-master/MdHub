@@ -4,12 +4,19 @@ import Logo from '../assets/logo.png'
 import { RxDotFilled } from 'react-icons/rx'
 import Drawer from './Drawer'
 import { useLocation, useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const Navbar = () => {
   const [showDrawer, setShowDrawer] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
   const token = localStorage.getItem("jwtToken")
+  const { t, i18n } = useTranslation()
+
+  const changeLanguage = () => {
+    const language = i18n.language === "en" ? "fr" : "en"
+    i18n.changeLanguage(language);
+  }
 
   const handleSignout = () => {
     localStorage.removeItem("jwtToken")
@@ -37,7 +44,7 @@ const Navbar = () => {
               <RxDotFilled className="absolute text-primary -left-5 top-[6px]" />
             }
               <RxDotFilled className="hidden group-hover:block absolute text-primary -left-5 top-[6px]" />
-              <Link to="for-you">for you</Link>
+              <Link to="for-you">{t('for you')}</Link>
             </li>
             <li className="relative cursor-pointer hover:opacity-90 group">
             {
@@ -45,7 +52,7 @@ const Navbar = () => {
               <RxDotFilled className="absolute text-primary -left-5 top-[6px]" />
             }
               <RxDotFilled className="hidden group-hover:block absolute text-primary -left-5 top-[6px]" />
-              <Link to="/for-family">for family</Link>
+              <Link to="/for-family">{t('for family')}</Link>
             </li>
             <li className="relative cursor-pointer hover:opacity-90 group">
             {
@@ -53,7 +60,7 @@ const Navbar = () => {
               <RxDotFilled className="absolute text-primary -left-5 top-[6px]" />
             }
               <RxDotFilled className="hidden group-hover:block absolute text-primary -left-5 top-[6px]" />
-              <Link to="/for-corporate">for corporate</Link>
+              <Link to="/for-corporate">{t('for corporate')}</Link>
             </li>
             <li className="relative group">
               {
@@ -61,7 +68,7 @@ const Navbar = () => {
                 <RxDotFilled className="absolute text-primary -left-5 top-[6px]" />
               }
               <RxDotFilled className="hidden group-hover:block absolute text-primary -left-5 top-[6px]" />
-              <Link to="/services">services</Link>
+              <Link to="/services">{t('services')}</Link>
             </li>
             <li className="relative cursor-pointer hover:opacity-90 group">
               {
@@ -69,37 +76,39 @@ const Navbar = () => {
                 <RxDotFilled className="absolute text-primary -left-5 top-[6px]" />
               }
               <RxDotFilled className="hidden group-hover:block absolute text-primary -left-5 top-[6px]" />
-              <Link to="/rates">rates</Link>
+              <Link to="/rates">{t('rates')}</Link>
             </li>
           </ul>
           {
             token ? (
               <div className="flex gap-x-4 items-center px-8 pr-5">
+                <button onClick={changeLanguage}>en/fr</button>
                 <Link to="/dashboard">
                   <button
                     className="rounded-full px-9 py-1 border border-primary text-white bg-primary hover:bg-transparent hover:text-primary transition-all ease-in-out duration-300">
-                    Dashboard
+                    {t('Dashboard')}
                   </button>
                 </Link>
                 <button
                   onClick={handleSignout}
                   className="rounded-full px-9 py-1 border border-primary text-white bg-primary hover:bg-transparent hover:text-primary transition-all ease-in-out duration-300">
-                  Sign Out
+                  {t('Sign Out')}
                 </button>
               </div>
             ):
             (
                 <div className="text-light text-base space-x-4 font-main font-light pr-5">
-                <Link to="/login">
-                  <button className="rounded-full px-9 py-1 border border-primary text-primary bg-transparent hover:bg-primary hover:text-white transition-all ease-in-out duration-300">
-                    Login
-                  </button>
-                </Link>
-                <Link to="/register">
-                  <button className="rounded-full px-9 py-1 border border-primary text-white bg-primary hover:bg-transparent hover:text-primary transition-all ease-in-out duration-300">
-                    Sign Up
-                  </button>
-                </Link>
+                  <button onClick={changeLanguage}>en/fr</button>
+                  <Link to="/login">
+                    <button className="rounded-full px-9 py-1 border border-primary text-primary bg-transparent hover:bg-primary hover:text-white transition-all ease-in-out duration-300">
+                      {t('Login')}
+                    </button>
+                  </Link>
+                  <Link to="/register">
+                    <button className="rounded-full px-9 py-1 border border-primary text-white bg-primary hover:bg-transparent hover:text-primary transition-all ease-in-out duration-300">
+                      {t('Sign Up')}
+                    </button>
+                  </Link>
               </div>
             )
           }
