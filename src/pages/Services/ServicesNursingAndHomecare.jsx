@@ -2,29 +2,31 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { NursingAndHomecareBanner } from '../../assets'
 import { nursingServices, nursingAndHomecareHowItWorksData } from '../../constants'
+import { useTranslation } from 'react-i18next'
 
 const WORDS = ['mobile vaccination', 'wound care and treatment', 'palliative care', 'post surgery care', "IV medication", "injection infusions", "vital signs monitoring"];
 
 const ServicesNursingAndHomecare = () => {
+  const { t } = useTranslation()
   return (
     <section className="py-10 font-main">
       <header className="bg-nursingHomecare text-white w-full lg:h-[530px] py-10 relative">
         <div className="max-w-[83rem] mx-auto">
           <article className="space-y-5 px-4">
             <h2 className="text-[70px] lg:text-[88px]">
-              nursing & homecare
+              {t('nursing-and-homecare')}
             </h2>
             <div className="space-y-3 leading-6 font-body text-lg max-w-lg">
               <p>
-                Our professional nurses come directly to you. Plus, our team of homecare agents are there when you need them, offering compassionate care for seniors, people requiring post-operative care, and people with disabilities.
+                {t('our-professional-nurses-come-directly-to-you-plus-our-team-of-homecare-agents-are-there-when-you-need-them-offering-compassionate-care-for-seniors-people-requiring-post-operative-care-and-people-with-disabilities')}
               </p>
               <p>
-                Whether it's medical services or homecare, we can help you with most of your needs.
+                {t('whether-its-medical-services-or-homecare-we-can-help-you-with-most-of-your-needs')}
               </p>
             </div>
             <Link className="block" to="/register">
               <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white text-nursingHomecare border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
-                Sign Up Today
+                {t('sign-up-today')}
               </button>
             </Link>
           </article>
@@ -34,14 +36,14 @@ const ServicesNursingAndHomecare = () => {
       <section className="bg-white pt-14">
         <div className="hidden relative virtual-health text-center lg:flex justify-center flip-words">
           <h2 className="text-primary text-center text-5xl md:text-6xl">
-            Get help for
+            {t('get-help-for')}
           </h2>
           <div className="w-full absolute left-0 top-16">
             <div className="w-full h-16 overflow-y-hidden flex justify-center">
               {
                 WORDS.map(word => (
                   <span className="md:text-6xl">
-                    {word}
+                    {t(`${word}`)}
                   </span>
                 ))
               }
@@ -50,7 +52,7 @@ const ServicesNursingAndHomecare = () => {
         </div>
         <section className=" pt-32 py-10">
           <h2 className="text-4xl pb-4 text-center">
-            How It Works
+            {t('How It Works')}
           </h2>
           <section className="w-full max-w-5xl space-y-6 mx-auto">
             <div className="flex flex-col md:flex-row justify-between">
@@ -65,12 +67,12 @@ const ServicesNursingAndHomecare = () => {
                       </article>
                       <article className="w-full max-w-[220px] space-y-5 border-b border-dark pb-4 mb-4">
                         <p className="leading-[1.2em] text-2xl">
-                          {step.text}
+                          {t(`${step.text}`)}
                           
                         </p>
                         {
                           step.note && (
-                            <p className="font-body text-dark text-sm">{step.note}</p>
+                            <p className="font-body text-dark text-sm">{t(`${step.note}`)}</p>
                           )
                         }
                       </article>
@@ -86,7 +88,7 @@ const ServicesNursingAndHomecare = () => {
       <section className="bg-white">
         <div className="w-full max-w-[1200px] mx-auto pt-12">
           <h2 className="md:pl-14 font-main text-[30px] text-center md:text-left text-black pb-4">
-            Services suitable for all your needs
+            {t('services-suitable-for-all-your-needs')}
           </h2>
           <section className="flex justify-center flex-wrap gap-8 text-center">
             {
@@ -99,10 +101,10 @@ const ServicesNursingAndHomecare = () => {
           </section>
           <div className="text-sm font-body md:pl-14 text-gray-800 px-4">
             <h2 className="py-6 font-semibold">
-              Require a different service? Send us an email here.
+              {t('require-a-different-service-send-us-an-email-here')}
             </h2>
             <p className="max-w-[1100px]">
-              <strong className="font-bold">NOTE:</strong> Above pricing does not include laboratory fees or additional materials such as vitamin drips or the cost of medication. Our team will confirm all appointments by email or phone and advice of any additional fees. Homecare services require a minimum booking of 3 hours for Montreal and 4 hours for outside of Montreal.
+              <strong className="font-bold">{t('note')}:</strong> {t('above-pricing-does-not-include-laboratory-fees-or-additional-materials-such-as-vitamin-drips-or-the-cost-of-medication-our-team-will-confirm-all-appointments-by-email-or-phone-and-advice-of-any-additional-fees-homecare-services-require-a-minimum-booking-of-3-hours-for-montreal-and-4-hours-for-outside-of-montreal')}.
             </p>
           </div>
         </div>
