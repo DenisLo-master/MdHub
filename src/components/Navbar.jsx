@@ -82,7 +82,10 @@ const Navbar = () => {
           {
             token ? (
               <div className="flex gap-x-4 items-center px-8 pr-5">
-                <button onClick={changeLanguage}>en/fr</button>
+                <button onClick={changeLanguage}>
+                  <span className={`${i18n.language === "en" ? "text-primary font-semibold" : "text-dark"}`}>en</span> /
+                  <span className={`${i18n.language === "fr" ? "text-primary font-semibold" : "text-dark"}`}>fr</span>
+                </button>
                 <Link to="/dashboard">
                   <button
                     className="rounded-full px-9 py-1 border border-primary text-white bg-primary hover:bg-transparent hover:text-primary transition-all ease-in-out duration-300">
@@ -98,7 +101,10 @@ const Navbar = () => {
             ):
             (
                 <div className="text-light text-base space-x-4 font-main font-light pr-5">
-                  <button onClick={changeLanguage}>en/fr</button>
+                  <button onClick={changeLanguage}>
+                    <span className={`${i18n.language === "en" ? "text-primary font-semibold" : "text-dark"}`}>en</span> /
+                    <span className={`${i18n.language === "fr" ? "text-primary font-semibold" : "text-dark"}`}>fr</span>
+                  </button>
                   <Link to="/login">
                     <button className="rounded-full px-9 py-1 border border-primary text-primary bg-transparent hover:bg-primary hover:text-white transition-all ease-in-out duration-300">
                       {t('Login')}
