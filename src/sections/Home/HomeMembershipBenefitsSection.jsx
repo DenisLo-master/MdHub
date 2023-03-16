@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next'
 
 
 const HomeMembershipBenefitsSection = () => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   return (
     <section className="relative w-full font-main bg-white py-8 lg:py-20">
       <div className="w-full flex flex-col-reverse lg:flex-row justify-between">

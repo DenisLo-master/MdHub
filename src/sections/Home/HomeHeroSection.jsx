@@ -40,7 +40,7 @@ const WORDS = [
 
 const HomeHeroSection = () => {
   const [selectedValues, setSelectedValues] = useState([])
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   useEffect(() => {
     setSelectedValues(() => {

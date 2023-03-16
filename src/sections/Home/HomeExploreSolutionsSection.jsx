@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 
 const HomeExploreSolutionsSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   return (
     <section className="w-full flex flex-col md:flex-row md:items-start pt-32 pb-20">
       <article className="hidden flex-1 relative rotating-ellipse-section lg:flex justify-center">
