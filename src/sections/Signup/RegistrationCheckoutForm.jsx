@@ -11,6 +11,7 @@ import { toast } from 'react-hot-toast'
 import { SVGLoaderCircles } from '../../assets'
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 const secret = import.meta.env.VITE_STRIPE
+import { useTranslation } from 'react-i18next'
 
 const RegistrationCheckoutForm = () => {
   const [isLoading, setIsLoading] = useState(false)
@@ -23,6 +24,7 @@ const RegistrationCheckoutForm = () => {
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
   const paymentMode = registerationStore(state => state.paymentMode)
   const registerationFormData = registerationStore(state => state.registerationFormData)
+  const { t } = useTranslation()
 
   const { steps, currentStepIndex, step, isFirstStep, isLastStep, next, back } = useMultiStepForm([
     <SignupStepOne />,
@@ -74,7 +76,7 @@ const RegistrationCheckoutForm = () => {
     }
 
     if (!isDateValid(registerationFormData.dateOfBirth)) {
-      toast.error("Please enter the date in the following format: mm/dd/yyyy", { id: "wrong date registration" })
+      toast.error(t('please-enter-the-date-in-the-following-format-mm-dd-yyyy'), { id: "wrong date registration" })
       return
     }
 
@@ -150,7 +152,7 @@ const RegistrationCheckoutForm = () => {
               className={`rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary py-3 border  border-primary bg-primary text-white`}
               onClick={back}
             >
-              Back
+              {t('back')}
             </button>
         }
         <button 
@@ -161,8 +163,8 @@ const RegistrationCheckoutForm = () => {
             isLastStep ?
               isLoading ?
                 <SVGLoaderCircles className="text-white w-4 h-4" /> :
-                <span>Finish</span> :
-              <span>Next</span>
+                <span>{t('finish')}</span> :
+              <span>{t('next')}</span>
           }
         </button>
       </div>
