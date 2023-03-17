@@ -10,10 +10,10 @@ const ServicesNursingAndHomecare = () => {
   const { t } = useTranslation()
   return (
     <section className="py-10 font-main">
-      <header className="bg-nursingHomecare text-white w-full lg:h-[530px] py-10 relative">
+      <header className="bg-nursingHomecare text-white w-full lg:h-[530px] py-10 relative text-center lg:text-left">
         <div className="max-w-[83rem] mx-auto">
           <article className="space-y-5 px-4">
-            <h2 className="text-[70px] lg:text-[88px]">
+            <h2 className="text-[55px] lg:text-[88px]">
               {t('nursing-and-homecare')}
             </h2>
             <div className="space-y-3 leading-6 font-body text-lg max-w-lg">
@@ -24,7 +24,7 @@ const ServicesNursingAndHomecare = () => {
                 {t('whether-its-medical-services-or-homecare-we-can-help-you-with-most-of-your-needs')}
               </p>
             </div>
-            <Link className="block" to="/register">
+            <Link className="flex justify-center lg:block" to="/register">
               <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white text-nursingHomecare border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
                 {t('sign-up-today')}
               </button>
