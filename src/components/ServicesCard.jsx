@@ -1,8 +1,10 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 const ServicesCard = ({ title, children, bgPrimary }) => {
+  const { t } = useTranslation()
   return (
-    <article className={`flex justify-center gap-x-2 items-center ${bgPrimary ? 'bg-primary shadow-cardService' : 'bg-transparent'}  ${title === "nursing & homecare" ? "w-[210px]" : "w-[180px]"} py-3 rounded-full `}>
+    <article className={`flex justify-center gap-x-2 items-center ${bgPrimary ? 'bg-primary shadow-cardService' : 'bg-transparent'} w-[200px] py-3 rounded-full `}>
       {
         children
       }
