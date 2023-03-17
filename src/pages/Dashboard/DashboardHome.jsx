@@ -25,7 +25,7 @@ const DashboardHome = () => {
       <h1 className="text-4xl text-center pb-10">{t('your-mdhub-dashboard')}</h1>
       <section className="flex flex-col md:flex-row justify-center gap-x-10 rotating-ellipse-section px-4">
         <RotatingEllipse />
-        <article className=" pt-24 md:pt-0 space-y-3">
+        <article className="pt-24 md:pt-0 space-y-3">
           <div className="flex justify-between items-center">
             <h2 className='text-4xl'>{t('get-care-now')}</h2>
           </div>
@@ -33,8 +33,8 @@ const DashboardHome = () => {
             {t('select-a-service-for-the-wheel-or-form-below-to-book-a-new-appointment-today')}
           </p>
           <div className="flex gap-y-4 items-center md:items-start flex-col-reverse md:flex-row md:gap-x-6">
-            <div className="flex flex-col gap-y-3 text-primary">
-              <article className="flex items-center gap-x-1">
+            <div className="w-full flex flex-col gap-y-3 text-primary">
+              <article className="w-full flex items-center gap-x-3 lg:gap-x-1">
                 <Link to="/services">
                   <AiFillInfoCircle className="text-2xl text-[#cfcece]" />
                 </Link>
@@ -45,7 +45,7 @@ const DashboardHome = () => {
                 </button>
               </article>
 
-              <article className="flex items-center gap-x-1">
+              <article className="flex items-center gap-x-3 lg:gap-x-1">
                 <Link to="/services/mental-health">
                   <AiFillInfoCircle className="text-2xl text-[#cfcece]" />
                 </Link>
@@ -56,7 +56,7 @@ const DashboardHome = () => {
                 </button>
               </article>
 
-              <article className="flex items-center gap-x-1">
+              <article className="flex items-center gap-x-3 lg:gap-x-1">
                 <Link to="/services/online-pharmacy">
                   <AiFillInfoCircle className="text-2xl text-[#cfcece]" />
                 </Link>
@@ -65,7 +65,7 @@ const DashboardHome = () => {
                 </button>
               </article>
 
-              <article className="flex items-center gap-x-1">
+              <article className="flex items-center gap-x-3 lg:gap-x-1">
                 <Link to="/services/diagnostics">
                   <AiFillInfoCircle className="text-2xl text-[#cfcece]" />
                 </Link>
@@ -74,7 +74,7 @@ const DashboardHome = () => {
                 </button>
               </article>
 
-              <article className="flex items-center gap-x-1">
+              <article className="flex items-center gap-x-3 lg:gap-x-1">
                 <Link to="/services/nursing-homecare">
                   <AiFillInfoCircle className="text-2xl text-[#cfcece]" />
                 </Link>
