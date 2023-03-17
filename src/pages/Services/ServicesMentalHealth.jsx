@@ -35,7 +35,7 @@ const ServicesMentalHealth = () => {
         </div>
       </header>
 
-      <section className="bg-white py-8 lg:py-14">
+      <section className="bg-white py-8 lg:py-14 px-4">
         <div className="hidden relative virtual-health text-center lg:flex justify-center flip-words">
           <h2 className="text-primary text-center text-5xl md:text-6xl">
             {t('get-help-for')}
@@ -84,7 +84,7 @@ const ServicesMentalHealth = () => {
       </section>
       <section className="py-10 lg:py-20">
         <h2 className="text-4xl text-center pb-16">{t('how-it-works')}</h2>
-        <div className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row gap-y-5 justify-between">
+        <div className="w-full px-4 max-w-6xl mx-auto flex flex-col lg:flex-row gap-y-5 justify-between">
           <article className="w-full max-w-[464px] shadow-glow py-5 px-8">
             <h2 className="text-3xl">{t('see-a-mental-health-physician')}</h2>
             <p className="font-body py-7">
