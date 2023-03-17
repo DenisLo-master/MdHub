@@ -67,7 +67,7 @@ const HomeExploreSolutionsSection = () => {
                   {t('Treatment and diagnosis for 70% of medical issues can be done virtually.')}
                 </p>
                 <p>
-                  {t('Connect with a virtual doctor in minutes, 24/7. Or, book an appointment with a specialist – no referral needed.')}
+                  {t('connect-with-a-virtual-doctor-in-minutes-24-7-or-book-an-appointment-with-a-specialist-no-referral-needed')}
                 </p>
               </div>
               <Link className="block pt-4" to="/services">
