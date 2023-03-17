@@ -11,7 +11,7 @@ const DashboardUserInfo = () => {
     <section className="px-4 flex flex-col md:flex-row gap-y-4 text-center md:text-left gap-x-16 font-body font-light py-10">
 
       <article className="flex-1 relative">
-        <div className="absolute right-8 lg:right-4 top-1 lg:top-4">
+        <div className="absolute max-[375px]:right-4 right-8 lg:right-4 top-1 lg:top-4">
           <Link to="/dashboard/update-user">
             <button className="flex items-center gap-x-2">
               <TiPencil className="text-3xl" />
