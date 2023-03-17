@@ -33,8 +33,8 @@ const DashboardHome = () => {
             {t('select-a-service-for-the-wheel-or-form-below-to-book-a-new-appointment-today')}
           </p>
           <div className="flex gap-y-4 items-center md:items-start flex-col-reverse md:flex-row md:gap-x-6">
-            <div className="w-full flex flex-col gap-y-3 text-primary">
-              <article className="w-full flex items-center gap-x-3 lg:gap-x-1">
+            <div className="w-full lg:w-auto flex flex-col gap-y-3 text-primary">
+              <article className="w-full lg:w-auto flex items-center gap-x-3 lg:gap-x-1">
                 <Link to="/services">
                   <AiFillInfoCircle className="text-2xl text-[#cfcece]" />
                 </Link>
@@ -60,7 +60,9 @@ const DashboardHome = () => {
                 <Link to="/services/online-pharmacy">
                   <AiFillInfoCircle className="text-2xl text-[#cfcece]" />
                 </Link>
-                <button onClick={() => setShowOnlinePharmacyModal(true)} className={`flex-1 rounded-full text-lg group hover:ring-1 hover:ring-onlinePharmacy px-6 py-2 border border-onlinePharmacy bg-onlinePharmacy text-dark`}>
+                <button
+                  onClick={() => setShowOnlinePharmacyModal(true)}
+                  className={`flex-1 rounded-full text-lg group hover:ring-1 hover:ring-onlinePharmacy px-6 py-2 border border-onlinePharmacy bg-onlinePharmacy text-dark`}>
                   {t('Online Pharmacy')}
                 </button>
               </article>
