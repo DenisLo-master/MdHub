@@ -154,7 +154,7 @@ const HomeExploreSolutionsSection = () => {
 
           <div className='min-w-[413px] lg:min-w-[700px] 2xl:min-w-[800px]'>
             <div className="relative bg-nursingHomecare h-[304px] 2xl:h-[370px] p-10 pb-20 pr-0 overflow-hidden flex items-end justify-center lg:justify-start">
-              <h2 className="text-white text-[65px] lg:text-[80px] 2xl:text-8xl leading-[70px]">{t('nursing &')} <br /> {t('homecare')}</h2>
+              <h2 className="pr-4 text-white text-[48px] lg:text-[80px] 2xl:text-8xl leading-[70px]">{t('nursing &')} <br /> {t('homecare')}</h2>
               <img className="hidden lg:block absolute top-40 right-0 w-full max-w-[190px] 2xl:max-w-[260px]" src={NursingAndHomecareBanner} alt="Nursing and Homecare Banner" />
             </div>
             <div className="p-6 pb-8 w-full lg:h-[300px] max-w-[471px] 2xl:max-w-[530px] flex flex-col justify-between">
