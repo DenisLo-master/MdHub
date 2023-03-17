@@ -10,7 +10,7 @@ const ServicesOnlinePharmacy = () => {
   const { t } = useTranslation()
   return (
     <section className="font-main py-10">
-      <header className="bg-onlinePharmacy text-white w-full py-10 pb-20 relative">
+      <header className="bg-onlinePharmacy text-white w-full py-10 pb-20 relative text-center lg:text-left">
         <div className="max-w-[83rem] mx-auto">
           <article className="space-y-5 px-4">
             <h2 className="text-[70px] lg:text-[88px] max-w-[380px] leading-[80px] pb-5">
@@ -25,13 +25,13 @@ const ServicesOnlinePharmacy = () => {
               <p>
                 {t('with-our-membership-youll-get')}:
               </p>
-              <ul className="list-disc pl-8">
+              <ul className="lg:list-disc lg:pl-8">
                 <li>{t('free-delivery-in-quebec')}</li>
                 <li>{t('automatic-refills')}</li>
                 <li>{t('24-7-emergency-service')}</li>
               </ul>
             </div>
-            <Link className="block" to="/register">
+            <Link className="flex lg:block justify-center" to="/register">
               <button className="rounded-full w-[240px] mt-10 text-lg flex justify-center py-3 border bg-white text-onlinePharmacy border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
                 {t('sign-up-today')}
               </button>
