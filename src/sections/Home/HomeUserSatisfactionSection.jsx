@@ -31,7 +31,7 @@ const HomeUserSatisfactionSection = () => {
 
   return (
     <section className="py-16 font-main text-4xl">
-      <h2 className="text-center pb-8">
+      <h2 className="text-center pb-8 px-4">
         {t('We take care of outstanding people, their families, and their corporations.')}
       </h2>
       <div className="max-w-sm mx-auto flex flex-col justify-center text-center">
