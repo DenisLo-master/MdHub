@@ -33,9 +33,9 @@ const SignupStepOne = () => {
             )
           }
           <article className="border-b-primary flex items-baseline gap-x-6 border-b-[3px] max-w-xs">
-            <h2 className="text-3xl lg:text-[32px]">{t('Step 1')}</h2>
+            <h2 className="text-2xl lg:text-[32px]">{t('Step 1')}</h2>
             <div className="font-body text-base font-light">
-              <div className="text-right">
+              <div className="text-sm lg:text-base text-right">
                 <p>{t('enter-member-details')}</p>
                 <p className="text-sm">
                   {selectedAccountType === "corporate" && t('up-to-10-employees')}
