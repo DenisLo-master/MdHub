@@ -90,15 +90,15 @@ const ServicesOnlinePharmacy = () => {
             <h3 className="text-lg font-semibold">{t('invoice')}</h3>
             <ul className="space-y-3">
               <li className="flex justify-between items-center text-light border-b border-b-white pb-2">
-                <p>Delivery</p>
+                <p>{t('delivery')}</p>
                 <p className="text-xs">{t('free')}</p>
               </li>
               <li className="flex justify-between items-center text-light border-b border-b-white pb-2">
-                <p>24/7 Emergency Service</p>
+                <p>{t('24-7-emergency-service-0')}</p>
                 <p className="text-xs">{t('free')}</p>
               </li>
               <li className="flex justify-between items-center text-light border-b border-b-white pb-2">
-                <p>Personalized Packaging</p>
+                <p>{t('personalized-packaging')}</p>
                 <p className="text-xs">{t('free')}</p>
               </li>
               <li className="flex justify-between items-center text-light border-b border-b-white pb-2">
