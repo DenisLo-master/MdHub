@@ -401,3 +401,29 @@ input:checked+.toggle-switch .toggle-circle {
 p {
   font-size: 16px;
 }
+.carousel-arrow {
+  position: absolute;
+  top: 30%;
+  transform: translateY(-30%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-arrow-prev {
+  left: 0;
+}
+
+.carousel-arrow-next {
+  right: 0;
+}
+
+.carousel .control-dots {
+  top: 260px !important;
+}
+
+@media only screen and (max-width: 500px) {
+  .carousel img {
+    display: none !important;
+  }
+}
