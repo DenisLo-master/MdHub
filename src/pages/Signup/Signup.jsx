@@ -21,7 +21,7 @@ const Signup = () => {
   }, [])
 
   return (
-    <section className="w-full max-w-[42rem] flex flex-col items-center mx-auto py-8 md:py-20 font-main">
+    <section className="w-full max-w-[49rem] flex flex-col items-center mx-auto py-8 md:py-20 font-main px-4">
       <article className="w-full space-y-4 flex flex-col items-center">
         <h2 className="text-4xl text-center">{t('choose-account-type')}</h2>
         <div className="text-center space-y-1 font-body pb-4">
