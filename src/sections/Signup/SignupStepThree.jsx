@@ -1,6 +1,7 @@
 import { CardElement } from '@stripe/react-stripe-js'
 import React from 'react'
 import { registerationStore } from '../../store/registerationStore'
+import { useTranslation } from 'react-i18next'
 
 const SignupStepThree = () => {
   const paymentMode = registerationStore(state => state.paymentMode)
@@ -13,6 +14,7 @@ const SignupStepThree = () => {
   const familyMonthlyFee = registerationStore(state => state.familyMonthlyFee)
   const onDemandFee = registerationStore(state => state.onDemandFee)
   const corporateFee = registerationStore(state => state.corporateFee)
+  const [t] = useTranslation()
 
   const calculatePricing = (accountType) => {
     const individualMonthlyPrice = 34.99 * 3
@@ -66,10 +68,10 @@ const SignupStepThree = () => {
         <div className="w-full flex justify-between items-center">
           <article className="max-w-xs">
             <article className="flex items-baseline gap-x-6 border-b-[3px] border-b-primary">
-              <h2 className="text-3xl lg:text-5xl">Step 3</h2>
+              <h2 className="text-3xl lg:text-5xl">{t('Step 3')}</h2>
               <div className="font-body text-xl font-light">
                 <div className="text-right">
-                  <p>Payment</p>
+                  <p>{t('payment')}</p>
                 </div>
               </div>
             </article>
@@ -77,7 +79,7 @@ const SignupStepThree = () => {
 
           <article className="relative">
             <div className={`flex gap-y-4 items-center gap-x-4`}>
-              {paymentMode === "yearly" && <p className="text-primary text-3xl">Save 25%</p>}
+              {paymentMode === "yearly" && <p className="text-primary text-[27px]">{t('save-25')}</p>}
               {
                 (selectedAccountType === "individual" ||
                   selectedAccountType === "family" ||
@@ -87,8 +89,8 @@ const SignupStepThree = () => {
                     type="button"
                     onClick={() => setPaymentMode("yearly")}
                     className={`hidden ${paymentMode === 'yearly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary lg:flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
-                    <h2 className="text-xl">Yearly</h2>
-                    <h4 className="text-xs">Best Value</h4>
+                    <h2 className="text-xl">{t('yearly')}</h2>
+                    <h4 className="text-xs">{t('best-value')}</h4>
                   </button>
                 )
               }
@@ -101,14 +103,14 @@ const SignupStepThree = () => {
                     type="button"
                   onClick={() => setPaymentMode("monthly")}
                     className={`hidden ${paymentMode === 'monthly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary lg:flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
-                  <h2 className="text-xl">Monthly</h2>
+                    <h2 className="text-xl">{t('monthly')}</h2>
                 </button>
               }
               {
                 selectedAccountType === "on demand" &&
                 <button
                     className={`bg-primary text-white border-2 border-primary hidden lg:flex flex-col items-center justify-center rounded-2xl w-32 h-16`}>
-                  <h2 className="text-xl">On Demand</h2>
+                    <h2 className="text-xl">{t('on-demand')}</h2>
                 </button>
               }
             </div>
@@ -127,8 +129,8 @@ const SignupStepThree = () => {
                 type="button"
                 onClick={() => setPaymentMode("yearly")}
                 className={`lg:hidden ${paymentMode === 'yearly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
-                <h2 className="text-xl">Yearly</h2>
-                <h4 className="text-xs">Best Value</h4>
+                <h2 className="text-xl">{t('yearly')}</h2>
+                <h4 className="text-xs">{t('best-value')}</h4>
               </button>
             )
           }
@@ -141,41 +143,41 @@ const SignupStepThree = () => {
               type="button"
               onClick={() => setPaymentMode("monthly")}
               className={`lg:hidden ${paymentMode === 'monthly' ? "bg-primary text-white" : "bg-transparent text-primary"} border-2 border-primary flex flex-col items-center justify-center  rounded-2xl w-28 h-16`}>
-              <h2 className="text-xl">Monthly</h2>
+                <h2 className="text-xl">{t('monthly')}</h2>
             </button>
           }
           {
             selectedAccountType === "on demand" &&
             <button
               className={`bg-primary text-white border-2 border-primary lg:hidden flex flex-col items-center justify-center rounded-2xl w-32 h-16`}>
-              <h2 className="text-xl">On Demand</h2>
+                <h2 className="text-xl">{t('on-demand')}</h2>
             </button>
           }
         </div>
         <article className="space-y-4">
-          <h2 className="text-2xl">Your Order</h2>
+          <h2 className="text-2xl">{t('your-order')}</h2>
           <h3 className="font-body">
             {
               selectedAccountType === "individual" ?
                 paymentMode === "monthly" ?
-                  `1 x Individual Plan ($${individualMonthlyFee}/month)` :
-                  `12 x Individual Plan ($${individualYearlyFee}/month)`
+                  `${t('1-x-individual-plan')} ($${individualMonthlyFee}/${t('month')})` :
+                  `${t('12-x-individual-plan')} ($${individualYearlyFee}/${t('month')})`
                 :
                 selectedAccountType === "family" ?
                   paymentMode === "yearly" ?
-                    `12 x Family Plan for ${childForms.length + 1} member${childForms.length > 0 ? "s" : ""} ($${familyYearlyFee}/month)`
+                    `${t('12-x-family-plan-for')} ${childForms.length + 1} ${t('member')}${childForms.length > 0 ? "s" : ""} ($${familyYearlyFee}/${t('month')})`
                     :
-                    `1 x Family Plan for ${childForms.length + 1} member${childForms.length > 0 ? "s" : ""} ($${familyMonthlyFee}/month)`
+                    `1 x Family Plan for ${childForms.length + 1} ${t('member')}${childForms.length > 0 ? "s" : ""} ($${familyMonthlyFee}/${t('month')})`
                   :
                   selectedAccountType === "corporate" ?
-                    `12 x Corporate Plan for ${childForms.length + 1} member${childForms.length > 0 ? "s" : ""} ($${corporateFee}/month)`
+                    `${t('12-x-corporate-plan-for')} ${childForms.length + 1} ${t('member')}${childForms.length > 0 ? "s" : ""} ($${corporateFee}/${t('month')})`
                     :
-                    `1 x On Demand Plan ($${onDemandFee}/month)`
+                    `${t('1-x-on-demand-plan')} ($${onDemandFee}/${t('month')})`
             }
           </h3>
         </article>
         <article className="space-y-4 text-right">
-          <h2 className="text-2xl">Subtotal</h2>
+          <h2 className="text-2xl">{t('subtotal')}</h2>
           <div className="font-body">
             {
               selectedAccountType === "individual" ?
@@ -184,12 +186,12 @@ const SignupStepThree = () => {
                     <div>
                       <h3>${individualMonthlyFee}</h3>
                       <div className="flex gap-x-4">
-                        <p>3 months initial signup</p>
+                        <p>{t('3-months-initial-signup')}</p>
                         <h3>${calculatePricing("individualMonthly").totalAmount.toFixed(2)}</h3>
                       </div>
-                      <h3>Tax: ${calculatePricing("individualMonthly").tax.toFixed(2)}</h3>
+                      <h3>{t('tax')} ${calculatePricing("individualMonthly").tax.toFixed(2)}</h3>
                       <h2 className="text-3xl">
-                        <span className="pr-2">Total:</span>
+                        <span className="pr-2">{t('total')}</span>
                         <strong>
                           ${calculatePricing("individualMonthly").totalAmountPlusTax.toFixed(2)}
                         </strong>
@@ -199,7 +201,7 @@ const SignupStepThree = () => {
                       <h3>${calculatePricing("individualYearly").totalAmount.toFixed(2)}</h3>
                       <h3>Tax: ${calculatePricing("individualYearly").tax.toFixed(2)}</h3>
                       <h2 className="text-3xl">
-                        <span className="pr-2">Total:</span>
+                        <span className="pr-2">{t('total')}</span>
                         <strong>
                           ${calculatePricing("individualYearly").totalAmountPlusTax.toFixed(2)}
                         </strong>
@@ -212,12 +214,12 @@ const SignupStepThree = () => {
                       <div>
                         <h3>${familyMonthlyFee}</h3>
                         <div className="flex gap-x-4">
-                          <p>3 months initial signup</p>
+                          <p>{t('3-months-initial-signup')}</p>
                           <h3>${calculatePricing("familyMonthly").totalAmount}</h3>
                         </div>
-                        <h3>Tax: ${calculatePricing("familyMonthly").tax.toFixed(2)}</h3>
+                        <h3>{t('tax')} ${calculatePricing("familyMonthly").tax.toFixed(2)}</h3>
                         <h2 className="text-3xl">
-                          <span className="pr-2">Total:</span>
+                          <span className="pr-2">{t('total')}</span>
                           <strong>
                             ${calculatePricing("familyMonthly").totalAmountPlusTax.toFixed(2)}
                           </strong>
@@ -225,9 +227,9 @@ const SignupStepThree = () => {
                       </div> :
                       <div>
                         <h3>${calculatePricing("familyYearly").totalAmount.toFixed(2)}</h3>
-                        <h3>Tax: ${calculatePricing("familyYearly").tax.toFixed(2)}</h3>
+                        <h3>{t('tax')} ${calculatePricing("familyYearly").tax.toFixed(2)}</h3>
                         <h2 className="text-3xl">
-                          <span className="pr-2">Total:</span>
+                          <span className="pr-2">{t('total')}</span>
                           <strong>
                             ${calculatePricing("familyYearly").totalAmountPlusTax.toFixed(2)}
                           </strong>
@@ -239,7 +241,7 @@ const SignupStepThree = () => {
                         <h3>${calculatePricing("corporate").totalAmount.toFixed(2)}</h3>
                         <h3>Tax: ${calculatePricing("corporate").tax.toFixed(2)}</h3>
                         <h2 className="text-3xl">
-                          <span className="pr-2">Total:</span>
+                          <span className="pr-2">{t('total')}</span>
                           <strong>
                             ${calculatePricing("corporate").totalAmountPlusTax.toFixed(2)}
                           </strong>
@@ -250,9 +252,9 @@ const SignupStepThree = () => {
                     (
                       <div>
                         <h3>${calculatePricing("on demand").totalAmount.toFixed(2)}</h3>
-                        <h3>Tax: ${calculatePricing("on demand").tax.toFixed(2)}</h3>
+                        <h3>{t('tax')} ${calculatePricing("on demand").tax.toFixed(2)}</h3>
                         <h2 className="text-3xl">
-                          <span className="pr-2">Total:</span>
+                          <span className="pr-2">{t('total')}</span>
                           <strong>
                             ${calculatePricing("on demand").totalAmountPlusTax.toFixed(2)}
                           </strong>
