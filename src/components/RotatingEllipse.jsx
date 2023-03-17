@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react'
-import gsap, { Linear } from 'gsap'
+import { gsap, Linear } from 'gsap'
 import { registerationStore } from '../store/registerationStore'
 import { Link, useLocation } from 'react-router-dom'
 
@@ -14,11 +14,12 @@ const RotatingEllipse = () => {
 
   useEffect(() => {
     const newTweens = [
-      gsap.to("#main_cd", 15, {
+      gsap.to(svgRef.current, 15, {
         rotation: "360",
         ease: Linear.easeNone,
         transformOrigin: "center",
-        repeat: -1
+        repeat: -1,
+        duration: 15
       }),
       gsap.to(".cls-14", 15, {
         rotation: "-360",
@@ -31,11 +32,13 @@ const RotatingEllipse = () => {
     setTweens(newTweens);
 
     const handleMouseEnter = () => {
+      console.log("enter")
       gsap.to(tweens[0], { timeScale: 0.3, duration: 1 });
       gsap.to(tweens[1], { timeScale: 0.3, duration: 1 });
     };
 
     const handleMouseLeave = () => {
+      console.log("leave")
       gsap.to(tweens[0], { timeScale: 1, duration: 1 });
       gsap.to(tweens[1], { timeScale: 1, duration: 1 });
     };
@@ -54,7 +57,7 @@ const RotatingEllipse = () => {
 
   return (
     <div className="w-full max-w-xl">
-      <svg ref={svgRef} id="main" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="511.68" height="511.68" viewBox="0 0 511.68 511.68">
+      <svg id="main" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.68 511.68">
         <defs>
           <style>
             {
@@ -241,7 +244,7 @@ const RotatingEllipse = () => {
           <linearGradient id="linear-gradient-22" x1="799.31" y1="708.43" x2="867.44" y2="708.43" xlinkHref="#linear-gradient-4" />
           <image id="image" width="97" height="96" xlinkHref="data:image/png;base64,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" />
         </defs>
-        <g id="main_cd" className="cls-1">
+        <g ref={svgRef} id="main_cd" className="cls-1">
           <g id="bg_main" data-name="bg main">
             <g id="bg_main-2" data-name="bg main">
               <path id="bg_mainp" data-name="bg mainp" className="cls-2" d="M998.6,1017.45a255.83,255.83,0,1,1,180.91-74.93A254.17,254.17,0,0,1,998.6,1017.45Z" transform="translate(-742.75 -505.77)" />
