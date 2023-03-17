@@ -262,5 +262,16 @@
   "3-months-initial-signup": "3 months initial signup",
   "subtotal": "Subtotal",
   "total": "Total:",
-  "tax": "Tax:"
+  "tax": "Tax:",
+  "single": "single",
+  "family-0": "family",
+  "corporate-0": "corporate",
+  "per-month": "per month",
+  "3-months-minimum": "3 months minimum",
+  "get-started": "Get Started",
+  "save-25-compared-to-monthly-plan": "Save 25% compared to monthly plan",
+  "12-months-minimum": "12 months minimum",
+  "months-minimum": "months minimum",
+  "price-is-per-employee": "Price is per employee",
+  "for-a-minimum-term-of-12-months": "for a minimum term of 12 months"
 }

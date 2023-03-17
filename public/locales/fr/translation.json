@@ -262,5 +262,16 @@
   "total": "Total:",
   "3-months-initial-signup": "3 mois d'inscription initiale",
   "tax": "Impôt:",
-  "subtotal": "Total"
+  "subtotal": "Total",
+  "single": "seul",
+  "family-0": "famille",
+  "get-started": "Commencer",
+  "save-25-compared-to-monthly-plan": "Économisez 25 % par rapport au forfait mensuel",
+  "12-months-minimum": "12 mois minimum",
+  "months-minimum": "mois minimum",
+  "price-is-per-employee": "Le prix est par employé",
+  "for-a-minimum-term-of-12-months": "pour une durée minimale de 12 mois",
+  "3-months-minimum": "3 mois minimum",
+  "per-month": "par mois",
+  "corporate-0": "d'entreprise"
 }
