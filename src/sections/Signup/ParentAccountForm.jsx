@@ -1,8 +1,8 @@
 import React from 'react'
 import { BsPlusCircle } from 'react-icons/bs'
 import { registerationStore } from '../../store/registerationStore'
-import { BiCaretDown } from 'react-icons/bi';
-
+import { BiCaretDown } from 'react-icons/bi'
+import { useTranslation } from 'react-i18next' 
 
 const genderOptions = [
   { value: 'male', label: 'Male' },
@@ -16,6 +16,7 @@ const ParentAccountForm = () => {
   const handleRegisterationFormDataChange = registerationStore(state => state.handleRegisterationFormDataChange)
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
   const childForms = registerationStore(state => state.childForms)
+  const { t } = useTranslation()
 
 
   const handleDateChange = (date) => {
@@ -29,7 +30,7 @@ const ParentAccountForm = () => {
           className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
           name="firstName"
           type="text"
-          placeholder="First Name*"
+          placeholder={t('first-name')}
           value={registerationFormData.firstName}
           onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
           required
@@ -38,7 +39,7 @@ const ParentAccountForm = () => {
           className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
           name="lastName"
           type="text"
-          placeholder="Last Name*"
+          placeholder={t('last-name')}
           value={registerationFormData.lastName}
           onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
           required
@@ -49,7 +50,7 @@ const ParentAccountForm = () => {
           className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
           name="email"
           type="email"
-          placeholder="Email*"
+          placeholder={t('email')}
           value={registerationFormData.email}
           onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
           required
@@ -58,7 +59,7 @@ const ParentAccountForm = () => {
           className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
           name="phone"
           type="tel"
-          placeholder="Phone*"
+          placeholder={t('phone')}
           value={registerationFormData.phone}
           onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
           required
@@ -70,8 +71,8 @@ const ParentAccountForm = () => {
           name="password"
           type="password"
           pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$"
-          title="Your password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number."
-          placeholder="Password*"
+          title={t('your-password-must-be-at-least-8-characters-long-and-contain-at-least-one-uppercase-letter-one-lowercase-letter-and-one-number')}
+          placeholder={t('password')}
           value={registerationFormData.password}
           onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
           required
@@ -89,21 +90,21 @@ const ParentAccountForm = () => {
               value={registerationFormData.gender}
             onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
           >
-            <option value="">Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="preferNotToSay">Prefer not to say</option>
+            <option value="">{t('gender')}</option>
+            <option value="male">{t('male')}</option>
+            <option value="female">{t('female')}</option>
+            <option value="preferNotToSay">{t('prefer-not-to-say')}</option>
           </select>
         </div>
 
 
         <div className="w-full flex-1 flex">
           <input
-            className="flex-1 rounded-full text-xl lg:text-lg focus:ring-1 focus:ring-primary outline-none px-8 py-2 border placeholder:text-[19px]"
+            className="flex-1 rounded-full text-xl lg:text-lg focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
             type="text"            
             value={registerationFormData.dateOfBirth} 
             onChange={({ target }) => handleDateChange(target.value)}
-            placeholder="Date of Birth (mm/dd/yyy)"
+            placeholder={t('date-of-birth-mm-dd-yyyy')}
           />
         </div>
       </div>
@@ -115,10 +116,10 @@ const ParentAccountForm = () => {
             className="lg:absolute bottom-4 left-8 flex gap-x-2 text-gray-600 font-body items-center text-3xl cursor-pointer"
           >
             <BsPlusCircle />
-            <p className='text-xl'>add family member</p>
+            <p className='text-xl'>{t('add-family-member')}</p>
           </button>
           <div className="lg:absolute bottom-4 right-8 text-gray-600 font-body">
-            <p className='text-xl'>Account Admin</p>
+            <p className='text-xl'>{t('account-admin')}</p>
           </div>
         </div>
       )}
@@ -130,10 +131,10 @@ const ParentAccountForm = () => {
             className="lg:absolute bottom-4 left-8 flex gap-x-2 text-gray-600 font-body items-center text-3xl cursor-pointer"
           >
             <BsPlusCircle />
-            <p className='text-xl'>add employee</p>
+            <p className='text-xl'>{t('add-employee')}</p>
           </button>
           <div className="lg:absolute bottom-4 right-8 text-gray-600 font-body">
-            <p className='text-xl'>Account Admin</p>
+            <p className='text-xl'>{t('account-admin')}</p>
           </div>
         </div>
       )}
