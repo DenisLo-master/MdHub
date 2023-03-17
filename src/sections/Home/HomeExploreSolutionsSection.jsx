@@ -57,7 +57,7 @@ const HomeExploreSolutionsSection = () => {
         >
 
           <div className='min-w-[413px] lg:min-w-[700px] 2xl:min-w-[800px]'>
-            <div className="bg-virtualDoctor h-[304px] 2xl:h-[370px] p-10 pb-20 pr-0 overflow-hidden flex items-end justify-center lg:justify-start relative">
+            <div className="bg-virtualDoctor h-[304px] 2xl:h-[370px] p-10 pb-20 pr-0 overflow-hidden flex items-end justify-start relative">
               <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">{t('virtual')}<br /> {t('doctor')}</h2>
               <img className="hidden lg:block absolute top-0 right-0 w-full max-w-[270px] 2xl:max-w-[320px]" src={VirtualDoctorBanner} alt="Virtual Doctor Banner" />
             </div>
@@ -82,7 +82,7 @@ const HomeExploreSolutionsSection = () => {
           </div>
 
           <div className={`min-w-[413px] lg:min-w-[700px] 2xl:min-w-[800px]`}>
-            <div className="bg-mentalHealth px-10 h-[304px] 2xl:h-[370px] flex justify-center items-center gap-x-6 2xl:gap-x-16 2xl:justify-center overflow-hidden">
+            <div className="bg-mentalHealth px-10 h-[304px] 2xl:h-[370px] flex justify-start items-center gap-x-6 2xl:gap-x-16 2xl:justify-center overflow-hidden">
               <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">{t('mental')}<br /> {t('health')}</h2>
               <img className="hidden lg:block w-full max-w-[310px]" src={MentalHealthBanner} alt="Mental Health Banner" />
             </div>
@@ -102,7 +102,7 @@ const HomeExploreSolutionsSection = () => {
           </div>
 
           <div className='min-w-[413px] lg:min-w-[700px] 2xl:min-w-[800px]'>
-            <div className="relative bg-onlinePharmacy h-[304px] 2xl:h-[370px] p-10 pb-20 pr-0 overflow-hidden flex items-end">
+            <div className="relative bg-onlinePharmacy h-[304px] 2xl:h-[370px] p-10 pb-20 pr-0 overflow-hidden flex items-end justify-start">
               <h2 className="text-white text-[66px] lg:text-[80px] 2xl:text-8xl leading-[70px]">{t('online')} <br /> {t('pharmacy')} </h2>
               <img className="hidden lg:block absolute top-10 2xl:top-20 right-0 w-full max-w-[270px] 2xl:max-w-[320px]" src={OnlinePharmacyBanner} alt="Online Pharmacy Banner" />
             </div>
@@ -129,7 +129,7 @@ const HomeExploreSolutionsSection = () => {
           </div>
 
           <div className='min-w-[413px] lg:min-w-[700px] 2xl:min-w-[800px]'>
-            <div className="relative bg-diagnostics h-[304px] 2xl:h-[370px] diagnostics-bg p-10 pb-20 pr-0 overflow-hidden flex items-end">
+            <div className="relative bg-diagnostics h-[304px] 2xl:h-[370px] diagnostics-bg p-10 pb-20 pr-0 overflow-hidden flex justify-start items-center lg:items-end">
               <h2 className="text-white text-[70px] lg:text-[80px] 2xl:text-8xl leading-[70px]">{t('diagnostics')}</h2>
             </div>
             <div className="p-6 pb-8 w-full lg:h-[300px] max-w-[471px] 2xl:max-w-[530px] flex flex-col justify-between">
@@ -153,8 +153,8 @@ const HomeExploreSolutionsSection = () => {
           </div>
 
           <div className='min-w-[413px] lg:min-w-[700px] 2xl:min-w-[800px]'>
-            <div className="relative bg-nursingHomecare h-[304px] 2xl:h-[370px] p-10 pb-20 pr-0 overflow-hidden flex items-end justify-center lg:justify-start">
-              <h2 className="pr-4 text-white text-[48px] lg:text-[80px] 2xl:text-8xl leading-[70px]">{t('nursing &')} <br /> {t('homecare')}</h2>
+            <div className="relative bg-nursingHomecare h-[304px] 2xl:h-[370px] p-10 pb-20 pr-0 overflow-hidden flex items-end justify-start">
+              <h2 className="pr-4 text-white max-[360px]: max-[360px]:text-[40px] text-[48px] lg:text-[80px] 2xl:text-8xl leading-[70px]">{t('nursing &')} <br /> {t('homecare')}</h2>
               <img className="hidden lg:block absolute top-40 right-0 w-full max-w-[190px] 2xl:max-w-[260px]" src={NursingAndHomecareBanner} alt="Nursing and Homecare Banner" />
             </div>
             <div className="p-6 pb-8 w-full lg:h-[300px] max-w-[471px] 2xl:max-w-[530px] flex flex-col justify-between">
