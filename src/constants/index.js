@@ -234,7 +234,7 @@ export const onlinePharmacyHowItWorksData = [
 export const diagnosisHowItWorksData = [
   {
     id: 1,
-    text: "Patients require a lab requisition. If you don’t have one – no problem! ",
+    text: "Patients require a lab requisition. If you don't have one - no problem!",
     image: DiagnosticsHowItWorks01
   },
   {
@@ -244,7 +244,7 @@ export const diagnosisHowItWorksData = [
   },
   {
     id: 3,
-    text: "Schedule a time and place for your testing and complete your payment online. Or you can visit a testing centre at no extra cost (see locations ",
+    text: "Schedule a time and place for your testing and complete your payment online. Or you can visit a testing centre at no extra cost (see locations",
     image: DiagnosticsHowItWorks03
   },
   {
