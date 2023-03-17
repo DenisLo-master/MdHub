@@ -9,10 +9,10 @@ const ServicesDiagnostics = () => {
   const { t } = useTranslation()
   return (
     <section className="font-main text-dark py-10">
-      <header className="bg-diagnostics diagnostics-bg text-white w-full py-20 relative">
+      <header className="bg-diagnostics diagnostics-bg text-white w-full py-20 relative text-center lg:text-left">
         <div className="max-w-[83rem] mx-auto">
           <article className="space-y-5 px-2">
-            <h2 className="text-[65px] lg:text-[88px] max-w-[450px] leading-[80px] pb-5">
+            <h2 className="text-[55px] lg:text-[88px] max-w-[450px] leading-[80px] pb-5">
               {t('lab-testing-and-diagnostics')}
             </h2>
             <div className="space-y-5 font-body text-lg max-w-lg pb-8 leading-5 px-2">
@@ -24,7 +24,7 @@ const ServicesDiagnostics = () => {
                 {t('our-certified-partner-labs-can-process-over-300-different-screenings-to-provide-you-with-a-comprehensive-health-assessment-and-get-you-answers-fast')}
               </p>
             </div>
-            <Link className="block px-2" to="register">
+            <Link className="flex lg:block justify-center px-2" to="register">
               <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white text-diagnostics border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
                 {t('sign-up-today')}
               </button>
@@ -67,8 +67,8 @@ const ServicesDiagnostics = () => {
                     </article>
                     <article className="w-full max-w-[220px] space-y-5 border-b border-dark pb-4 mb-4">
                       <p className="leading-[1.2em] text-2xl">
-                        {step.text}
-                        {step.id === 3 && (<span><strong>here</strong>{")"}</span>)}
+                        {t(`${step.text}`)}
+                        {step.id === 3 && (<span><strong>{" "}{t('here')}</strong>{")"}</span>)}
                       </p>
                       {
                         step.id === 1 && (
