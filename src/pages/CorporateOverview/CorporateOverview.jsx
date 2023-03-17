@@ -30,7 +30,9 @@ const CorporateOverview = () => {
 
       <section className="w-full max-w-[1130px] mx-auto py-10 font-main px-4">
         <article className="w-full bg-linearGradientPrimary rounded-lg px-4 py-10 pb-32 text-white space-y-6">
-          <h2 className="text-center text-4xl max-w-lg mx-auto">Attract and retain top talent by offering the ultimate care</h2>
+          <h2 className="text-center text-4xl max-w-lg mx-auto">
+            {t('attract-and-retain-top-talent-by-offering-the-ultimate-care')}
+          </h2>
           <ul className="flex flex-col lg:flex-row justify-center flex-wrap font-body text-white gap-x-16 gap-y-8 relative">
             <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
