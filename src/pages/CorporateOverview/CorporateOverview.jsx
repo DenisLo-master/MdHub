@@ -22,7 +22,7 @@ const CorporateOverview = () => {
       <section className="relative font-main bg-virtualDoctor overflow-hidden px-4">
         <img className="hidden lg:block absolute object-cover w-full h-[400px]" src={ForCorporateHeader} alt="For Corporate" />
         <div className="relative z-10 w-full max-w-7xl mx-auto lg:h-[390px] flex items-center">
-          <h2 className="text-[70px] lg:text-[88px] max-w-[650px] leading-[80px] pb-5 text-white">
+          <h2 className="text-[50px] px-4 text-center lg:text-left lg:text-[88px] max-w-[650px] leading-[80px] pb-5 text-white">
             {t('your-employees-health-should-never-be-limited')}
           </h2>
         </div>
@@ -146,14 +146,14 @@ const CorporateOverview = () => {
         <div className="w-full max-w-[1000px] flex flex-col lg:flex-row items-center gap-y-4 justify-between text-center font-main">
           <article className="max-w-[280px] flex flex-col items-center">
             <img src={CorporateBenefitsIcon01} alt="Corporate Benefits" />
-            <h2 className="text-2xl max-w-[250px]">Whole-person care anytime, anywhere</h2>
+            <h2 className="text-2xl max-w-[250px]">{t('whole-person-care-anytime-anywhere')}</h2>
             <p className="font-body pt-2 pb-4">
               {t('support-every-person-on-your-team-with-access-to-quality-healthcare-available-24-7-like-virtual-appointments-and-prescription-delivery')}
             </p> 
           </article>
           <article className="max-w-[280px] flex flex-col items-center">
             <img src={CorporateBenefitsIcon02} alt="Corporate Benefits" />
-            <h2 className="pt-2 text-2xl max-w-[250px]">Family & pediatric care</h2>
+            <h2 className="pt-2 text-2xl max-w-[250px]">{t('family-and-pediatric-care')}</h2>
             <p className="font-body pt-8 pb-4">
               {t('with-mdhub-corporate-plans-your-employees-family-and-children-can-receive-healthcare-too-designed-specifically-for-busy-families-your-employees-families-can-get-care-fast')}
             </p>
