@@ -398,3 +398,6 @@ input:checked+.toggle-switch .toggle-circle {
 .user-list li:last-child {
   border: none;
 }
+p {
+  font-size: 16px;
+}
