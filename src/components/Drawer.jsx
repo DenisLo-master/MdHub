@@ -44,7 +44,7 @@ const Drawer = ({ showDrawer, close }) => {
             <RxDotFilled className="absolute text-primary -left-5 top-[6px]" />
           }
           <RxDotFilled className="hidden group-hover:block absolute text-primary -left-5 top-[6px]" />
-          <Link to="/for-family">{t('for family')}</Link>
+          <Link to="/for-you">{t('for family')}</Link>
         </li>
         <li className="relative cursor-pointer hover:opacity-90 group">
           {
