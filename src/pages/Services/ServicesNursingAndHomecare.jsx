@@ -94,7 +94,7 @@ const ServicesNursingAndHomecare = () => {
             {
               nursingServices.map((item, index) => (
                 <article key={index} className={`shadow-cardService w-[127px] h-[120px] text-xs text-center flex justify-center items-center border-[0.25px] border-[#cfc5c5] font-main ${index === 0 ? "bg-primary text-white" : 'bg-white text-gray-800'}`}>
-                  <h2 className="max-w-[100px]">{item}</h2>
+                  <h2 className="max-w-[100px]">{t(`${item}`)}</h2>
                 </article>
               ))
             }
