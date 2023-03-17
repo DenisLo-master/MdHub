@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { registerationStore } from '../../store/registerationStore'
 import { useStripe, useElements } from '@stripe/react-stripe-js'
-import dayjs from "dayjs"
 import Modal from '../../components/Modal'
+import { useTranslation } from 'react-i18next'
 
 const UpdateBillingSection = () => {
   const [showCancelSubscriptionModal, setShowCancelSubscriptionModal] = useState(false)
@@ -12,6 +12,7 @@ const UpdateBillingSection = () => {
   const [nextPayment, setNextPayment] = useState({})
   const [planPrice, setPlanPrice] = useState(0)
   const [isLoading, setIsLoading] = useState(false)
+  const { t } = useTranslation()
 
   useEffect(() => {
     async function fetchMembershipInfo() {
@@ -51,16 +52,16 @@ const UpdateBillingSection = () => {
     <section className="py-10 font-body">
       <div className="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto">
         <div className="flex justify-between items-center">
-          <h2 className="text-2xl font-medium text-gray-800">Membership Information</h2>
+          <h2 className="text-2xl font-medium text-gray-800">{t('membership-information')}</h2>
           <button
             className="text-red-600 hover:text-red-700 focus:outline-none"
             onClick={handleCancelSubscription}
           >
-            Cancel Subscription
+            {t('cancel-subscription')}
           </button>
         </div>
         <div className="mt-6">
-          <h3 className="text-lg font-medium text-gray-800">Billing History</h3>
+          <h3 className="text-lg font-medium text-gray-800">{t('billing-history')}</h3>
           <ul className="mt-2">
             {billingHistory.map((billing) => (
               <li key={billing.id} className="flex justify-between items-center">
@@ -71,26 +72,25 @@ const UpdateBillingSection = () => {
           </ul>
         </div>
         <div className="mt-6">
-          <h3 className="text-lg font-medium text-gray-800">Next Payment</h3>
+          <h3 className="text-lg font-medium text-gray-800">{t('next-payment')}</h3>
           <div className="flex justify-between items-center mt-2">
             <span className="text-gray-700">{new Date(nextPayment.next_payment_attempt * 1000).toLocaleDateString()}</span>
             <span className="text-gray-700">${planPrice}</span>
           </div>
         </div>
         <div className="mt-6">
-          <h3 className="text-lg font-medium text-gray-800">Subscription Amount</h3>
+          <h3 className="text-lg font-medium text-gray-800">{t('subscription-amount')}</h3>
           <span className="text-gray-700 mt-2">${planPrice}</span>
         </div>
       </div>
       <Modal
-        title="Cancel Subscription"
+        title={`${t('cancel-subscription-0')}`}
         showModal={showCancelSubscriptionModal}
         setShowModal={setShowCancelSubscriptionModal}
       >
         <div>
           <p>
-            Are you sure you would like to cancel your membership? You may not
-            be able to use any existing services upon cancelling
+            {t('are-you-sure-you-would-like-to-cancel-your-membership-you-may-not-be-able-to-use-any-existing-services-upon-cancelling')}
           </p>
           <div className="flex justify-end gap-x-4">
             <button
@@ -98,14 +98,14 @@ const UpdateBillingSection = () => {
               type="button"
               className={`rounded-full w-48 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
             >
-              Yes
+              {t('yes')}
             </button>
             <button
               onClick={() => setShowCancelSubscriptionModal(false)}
               type="button"
               className={`rounded-full w-48 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
             >
-              Back
+              {t('back')}
             </button>
           </div>
         </div>
