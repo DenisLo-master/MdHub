@@ -103,7 +103,7 @@ const HomeExploreSolutionsSection = () => {
 
           <div className='min-w-[413px] lg:min-w-[700px] 2xl:min-w-[800px]'>
             <div className="relative bg-onlinePharmacy h-[304px] 2xl:h-[370px] p-10 pb-20 pr-0 overflow-hidden flex items-end">
-              <h2 className="text-white text-[66px] lg:text-[80px] 2xl:text-8xl leading-[70px]">{t('online')} <br /> {t('pharamcy')}</h2>
+              <h2 className="text-white text-[66px] lg:text-[80px] 2xl:text-8xl leading-[70px]">{t('online')} <br /> {t('pharmacy')} </h2>
               <img className="hidden lg:block absolute top-10 2xl:top-20 right-0 w-full max-w-[270px] 2xl:max-w-[320px]" src={OnlinePharmacyBanner} alt="Online Pharmacy Banner" />
             </div>
             <div className="p-6 pb-8 w-full lg:h-[300px] max-w-[471px] 2xl:max-w-[530px] flex flex-col justify-between">
