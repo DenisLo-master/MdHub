@@ -29,7 +29,7 @@ const ServicesVirtualDoctor = () => {
               {t('virtual-care')}
             </h2>
             <div className="space-y-5 font-body text-lg max-w-lg">
-              <p className="text-left">
+              <p className="text-center lg:text-left">
                 {t('treatment-and-diagnosis-for-70-of-medical-issues-can-be-done-virtually-connect-with-a-virtual-doctor-in-minutes-24-7-or-book-an-appointment-with-a-specialist-no-referral-needed')}
               </p>
             </div>
@@ -121,7 +121,7 @@ const ServicesVirtualDoctor = () => {
               </h2>
             </article>
 
-            <article className="lg:col-span-2 flex gap-x-4">
+            <article className="lg:col-span-2 flex flex-col lg:flex-row gap-4">
               <Link className="block w-full" to="/register">
                 <button className="rounded-full w-full text-lg flex justify-center py-3 text-primary bg-white border border-white hover:bg-transparent hover:text-white transition-colors duration-300 ease-out">
                   {t('sign-up-today')}
@@ -255,7 +255,7 @@ const ServicesVirtualDoctor = () => {
             </Link>
           </div>
 
-          <div>
+          <div className="px-4">
             <h3 className="text-center text-4xl md:text-5xl pt-10 py-20">
               {t('dont-just-take-it-from-us')}
             </h3>
