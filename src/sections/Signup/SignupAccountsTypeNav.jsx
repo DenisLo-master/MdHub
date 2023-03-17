@@ -1,5 +1,6 @@
 import React from 'react'
 import { registerationStore } from '../../store/registerationStore'
+import { useTranslation } from 'react-i18next'
 
 const SignupAccountsTypeNav = () => {
   const changeSelectedAccountType = registerationStore(state => state.changeSelectedAccountType)
@@ -7,6 +8,8 @@ const SignupAccountsTypeNav = () => {
   const formStep = registerationStore(state => state.formStep)
   const clearForms = registerationStore(state => state.clearForms)
   const setPaymentMode = registerationStore(state => state.setPaymentMode)
+
+  const { t } = useTranslation()
 
   const handleAccountChange = (account) => {
     clearForms()
@@ -18,40 +21,39 @@ const SignupAccountsTypeNav = () => {
     }
     changeSelectedAccountType(account)
   }
-  console.log(selectedAccountType)
   return (
     <div className={`w-full flex justify-around text-primary flex-wrap gap-y-4`}>
       <button
         onClick={() => handleAccountChange("individual")}
         type="button"
         disabled={formStep > 0}
-        className={`w-40 md:w-60  rounded-full text-xl hover:ring-1 hover:ring-primary lg:px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "individual" && "bg-[#48ABC8] text-white"} $`}
+        className={`w-40 md:w-64  rounded-full text-xl hover:ring-1 hover:ring-primary lg:px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "individual" && "bg-[#48ABC8] text-white"} $`}
       >
-        Individual
+        {t('individual')}
       </button>
       <button
         disabled={formStep > 0}
         onClick={() => handleAccountChange("family")}
         type="button"
-        className={`w-40 md:w-60 rounded-full text-xl hover:ring-1 hover:ring-primary lg:px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "family" && "bg-[#48ABC8] text-white"}`}
+        className={`w-40 md:w-64 rounded-full text-xl hover:ring-1 hover:ring-primary lg:px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "family" && "bg-[#48ABC8] text-white"}`}
       >
-        Family
+        {t('family')}
       </button>
       <button
         disabled={formStep > 0}
         onClick={() => handleAccountChange("corporate")}
         type="button"
-        className={`w-40 md:w-60 rounded-full text-xl hover:ring-1 hover:ring-primary lg:px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "corporate" && "bg-[#48ABC8] text-white"}`}
+        className={`w-40 md:w-64 rounded-full text-xl hover:ring-1 hover:ring-primary lg:px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "corporate" && "bg-[#48ABC8] text-white"}`}
       >
-        Corporate
+        {t('corporate')}
       </button>
       <button
         disabled={formStep > 0}
         onClick={() => handleAccountChange("on demand")}
         type="button"
-        className={`w-40 md:w-60 rounded-full text-xl hover:ring-1 hover:ring-primary lg:px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "on demand" && "bg-[#48ABC8] text-white"}`}
+        className={`w-40 md:w-64 rounded-full text-xl hover:ring-1 hover:ring-primary lg:px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "on demand" && "bg-[#48ABC8] text-white"}`}
       >
-        On Demand
+        {t('on-demand')}
       </button>
     </div>
   )
