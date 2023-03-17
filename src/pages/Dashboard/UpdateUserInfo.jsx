@@ -10,6 +10,7 @@ import { UserPaymentForm } from '../../sections'
 import { loadStripe } from '@stripe/stripe-js'
 import { CountryDropdown, RegionDropdown } from 'react-country-region-selector'
 import { BiCaretDown } from 'react-icons/bi'
+import { useTranslation } from 'react-i18next'
 
 const key = import.meta.env.VITE_STRIPE
 const stripePromise = loadStripe(key);
@@ -22,6 +23,7 @@ const UpdateUserInfo = () => {
   const [userInfoFormData, setUserInfoFormData] = useState({})
   const [paymentInfo, setPaymentInfo] = useState("")
   const [showPaymentElement, setShowPaymentElement] = useState(false)
+  const { t } = useTranslation()
 
   const token = localStorage.getItem("jwtToken")
   const tokenInfo = token ? jwtDecode(token) : {}
@@ -88,14 +90,14 @@ const UpdateUserInfo = () => {
     <section className="min-h-screen py-20">
       <div className="max-w-[600px] mx-auto p-8 rounded-[35px] shadow-cardService border-[0.25px]">
         <div className="flex gap-x-1 items-center pb-5">
-          <h2 className="text-4xl">Edit Info</h2>
+          <h2 className="text-4xl">{t('edit-info')}</h2>
           <h2 className="text-sm">{userInfo.isChildUser ? "Child Account" : "Account Admin"}</h2>
         </div>
         <div className="flex items-center gap-x-4 pb-3">
           <h2>
             {paymentInfo ?
-              `Card Info: **** **** **** ${paymentInfo}` :
-              "Click here to add your payment method"
+              `${t('card-info')}: **** **** **** ${paymentInfo}` :
+              t('click-here-to-add-your-payment-method')
             }
           </h2>
           <button
@@ -117,7 +119,7 @@ const UpdateUserInfo = () => {
               name="email"
               value={userInfoFormData.email}
               onChange={handleChange}
-              className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border" placeholder="Email"
+              className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border" placeholder={t('email-0')}
               type="email"
             />
           </div>
@@ -126,7 +128,7 @@ const UpdateUserInfo = () => {
               name="password"
               value={userInfoFormData.password}
               onChange={handleChange}
-              className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border" placeholder="Enter New Password"
+              className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border" placeholder={t('enter-new-password')}
               type="password"
             />
           </div>
@@ -135,7 +137,7 @@ const UpdateUserInfo = () => {
               name="phone"
               value={userInfoFormData.phone}
               onChange={handleChange}
-              className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border" placeholder="phone"
+              className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border" placeholder={t('phone-0')}
               type="text"
             />
           </div>
@@ -144,14 +146,14 @@ const UpdateUserInfo = () => {
               name="address"
               value={userInfoFormData.address}
               onChange={handleChange}
-              className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border" placeholder="address"
+              className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border" placeholder={t('address-0')}
               type="text"
             />
           </div>
           <div className="w-full flex flex-col lg:flex-row flex-wrap gap-y-4 gap-x-6">
             <div className="flex-1 relative">
               <CountryDropdown
-                defaultOptionLabel="Select Country"
+                defaultOptionLabel={t('select-country')}
                 classes='outline-none w-full bg-white  appearance-none rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border'
                 value={userInfoFormData.country}
                 onChange={(val) => handleChange({ target: { name: "country", value: val } })} />
@@ -159,8 +161,8 @@ const UpdateUserInfo = () => {
             </div>
             <div className="flex-1 relative">
               <RegionDropdown
-                defaultOptionLabel="Select Province/State"
-                blankOptionLabel="Select Province/State"
+                defaultOptionLabel={t('select-province-state-1')}
+                blankOptionLabel={t('select-province-state-1')}
                 classes='outline-none w-full bg-white appearance-none rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border'
                 country={userInfoFormData.country}
                 value={userInfoFormData.region}
@@ -173,7 +175,7 @@ const UpdateUserInfo = () => {
               className="block w-full rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
               name="city"
               type="text"
-              placeholder="City*"
+              placeholder={`${t('city-0')}*`}
               value={userInfoFormData.city}
               onChange={handleChange}
               required
@@ -182,7 +184,7 @@ const UpdateUserInfo = () => {
               className="block w-full rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
               name="postalCode"
               type="text"
-              placeholder="Postal Code*"
+              placeholder={`${t('postal-code-0')}*`}
               value={userInfoFormData.postalCode}
               onChange={handleChange}
               required
@@ -193,7 +195,7 @@ const UpdateUserInfo = () => {
               className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
               name="address"
               type="text"
-              placeholder="Address*"
+              placeholder={`${t('address-1')}*`}
               value={userInfoFormData.address}
               onChange={handleChange}
               required
@@ -203,7 +205,7 @@ const UpdateUserInfo = () => {
             className={`rounded-full group hover:ring-1 hover:ring-primary  py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-8`}
             type="submit"
           >
-            {isLoading ? <SVGLoaderCircles className="text-base w-4 h-4" /> : "Submit"}
+            {isLoading ? <SVGLoaderCircles className="text-base w-4 h-4" /> : `${t('submit')}`}
           </button>
         </form>
       </div>
