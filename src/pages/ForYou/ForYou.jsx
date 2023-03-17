@@ -17,9 +17,9 @@ const ForYou = () => {
           </span>
         </h2>
       </div>
-      <section className="w-full max-w-[1130px] mx-auto py-10 font-main">
+      <section className="w-full max-w-[1130px] mx-auto py-10 font-main px-4">
         <article className="w-full bg-linearGradientPrimary rounded-lg py-10 px-4 pb-32 text-white space-y-6">
-          <h2 className="text-center text-4xl">What you get with your membership</h2>
+          <h2 className="text-center text-4xl">{t('what-you-get-with-your-membership')}</h2>
           <ul className="flex justify-center flex-wrap font-body text-white gap-x-16 gap-y-8 relative">
             <li className="flex w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
