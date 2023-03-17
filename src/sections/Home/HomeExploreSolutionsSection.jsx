@@ -61,8 +61,8 @@ const HomeExploreSolutionsSection = () => {
               <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">{t('virtual')}<br /> {t('doctor')}</h2>
               <img className="hidden lg:block absolute top-0 right-0 w-full max-w-[270px] 2xl:max-w-[320px]" src={VirtualDoctorBanner} alt="Virtual Doctor Banner" />
             </div>
-            <div className="p-6 font-body w-full lg:h-[300px] max-w-[471px] 2xl:max-w-[530px] flex flex-col justify-between">
-              <div className="w-full space-y-3 text-lg 2xl:text-xl">
+            <div className="p-6 pb-8 w-full lg:h-[300px] max-w-[500px]:max-w-[471px] 2xl:max-w-[750px] flex flex-col justify-between">
+              <div className="w-full space-y-3 max-[400px]:max-w-[350px] max-[w-500px]:max-w-[400px] lg:max-w-[750px] text-base 2xl:text-xl font-body">
                 <p>
                   {t('Treatment and diagnosis for 70% of medical issues can be done virtually.')}
                 </p>
@@ -86,10 +86,12 @@ const HomeExploreSolutionsSection = () => {
               <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">{t('mental')}<br /> {t('health')}</h2>
               <img className="hidden lg:block w-full max-w-[310px]" src={MentalHealthBanner} alt="Mental Health Banner" />
             </div>
-            <div className="p-6 pb-8 w-full lg:h-[300px] max-w-[471px] 2xl:max-w-[530px] font-body flex flex-col justify-between">
-              <p className="text-lg 2xl:text-xl">
-                {t("In today's faced-paced, modern and ultra-connected world, your mental health is more important than ever. With MDHUB, you can easily get mental health support when you need it most.")}
-              </p>
+            <div className="p-6 pb-8 w-full lg:h-[300px] max-w-[500px]:max-w-[471px] 2xl:max-w-[750px] flex flex-col justify-between">
+              <div className="w-full space-y-3 max-[400px]:max-w-[350px] max-[w-500px]:max-w-[400px] lg:max-w-[750px] text-base 2xl:text-xl font-body">
+                <p>
+                  {t("In today's faced-paced, modern and ultra-connected world, your mental health is more important than ever. With MDHUB, you can easily get mental health support when you need it most.")}
+                </p>
+              </div>
               <Link className="block pt-4" to="/services/mental-health">
                 <button
                   type="button"
@@ -106,8 +108,8 @@ const HomeExploreSolutionsSection = () => {
               <h2 className="text-white text-[66px] lg:text-[80px] 2xl:text-8xl leading-[70px]">{t('online')} <br /> {t('pharmacy')} </h2>
               <img className="hidden lg:block absolute top-10 2xl:top-20 right-0 w-full max-w-[270px] 2xl:max-w-[320px]" src={OnlinePharmacyBanner} alt="Online Pharmacy Banner" />
             </div>
-            <div className="p-6 pb-8 w-full lg:h-[300px] max-w-[471px] 2xl:max-w-[530px] flex flex-col justify-between">
-              <div className="space-y-3 text-lg 2xl:text-xl font-body">
+            <div className="p-6 pb-8 w-full lg:h-[300px] max-w-[500px]:max-w-[471px] 2xl:max-w-[750px] flex flex-col justify-between">
+              <div className="w-full space-y-3 max-[400px]:max-w-[350px] max-[w-500px]:max-w-[400px] lg:max-w-[750px] text-base 2xl:text-xl font-body">
                 <p>
                   {t('Stop wasting time chasing down refills or waiting in line. Easily access our online pharmacy to get prescriptions filled or renewed and delivered right to your door.')}
                 </p>
@@ -132,8 +134,8 @@ const HomeExploreSolutionsSection = () => {
             <div className="relative bg-diagnostics h-[304px] 2xl:h-[370px] diagnostics-bg p-10 pb-20 pr-0 overflow-hidden flex justify-start items-center lg:items-end">
               <h2 className="text-white text-[70px] lg:text-[80px] 2xl:text-8xl leading-[70px]">{t('diagnostics')}</h2>
             </div>
-            <div className="p-6 pb-8 w-full lg:h-[300px] max-w-[471px] 2xl:max-w-[530px] flex flex-col justify-between">
-              <div className="space-y-3 text-lg 2xl:text-xl font-body">
+            <div className="p-6 pb-8 w-full lg:h-[300px] max-w-[500px]:max-w-[471px] 2xl:max-w-[750px] flex flex-col justify-between">
+              <div className="w-full space-y-3 max-[400px]:max-w-[350px] max-[w-500px]:max-w-[400px] lg:max-w-[750px] text-base 2xl:text-xl font-body">
                 <p>
                   {t('Safe, fast and professional testing on your schedule in the comfort and privacy of your own home or office. Avoid the wait at hospitals and clinics.')}
                 </p>
@@ -157,8 +159,8 @@ const HomeExploreSolutionsSection = () => {
               <h2 className="pr-4 text-white max-[360px]: max-[360px]:text-[40px] text-[48px] lg:text-[80px] 2xl:text-8xl leading-[70px]">{t('nursing &')} <br /> {t('homecare')}</h2>
               <img className="hidden lg:block absolute top-40 right-0 w-full max-w-[190px] 2xl:max-w-[260px]" src={NursingAndHomecareBanner} alt="Nursing and Homecare Banner" />
             </div>
-            <div className="p-6 pb-8 w-full lg:h-[300px] max-w-[471px] 2xl:max-w-[530px] flex flex-col justify-between">
-              <div className="space-y-3 text-lg 2xl:text-xl font-body">
+            <div className="p-6 pb-8 w-full lg:h-[300px] max-w-[500px]:max-w-[471px] 2xl:max-w-[750px] flex flex-col justify-between">
+              <div className="w-full space-y-3 max-[400px]:max-w-[350px] max-[w-500px]:max-w-[400px] lg:max-w-[750px] text-base 2xl:text-xl font-body">
                 <p>
                   {t('Our professional nurses will come directly to you, and our team of homecare givers will be there for you when you need them. They offer compassionate care for seniors, individuals requiring post-operative care, and people with disabilities. Whether you need medical services or homecare, we can assist you with most of your needs.')}
                 </p>
