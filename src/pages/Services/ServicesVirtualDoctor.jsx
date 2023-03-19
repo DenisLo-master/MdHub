@@ -13,28 +13,30 @@ import {
   VirtualCare04
 } from '../../assets'
 import { useTranslation } from 'react-i18next'
+import FAQ from '../../components/FAQ.jsx'
 
 import { virtualDoctorHowItWorksData } from '../../constants'
+import { VirtualDoctorServices } from '../../sections'
 
 const WORDS = ["diagnosis", "prescriptions & renewals", "doctors notes", "referrals to specialists", "mental health", "general health advise", "lab requisitions"]
 
 const ServicesVirtualDoctor = () => {
   const { t, i18n } = useTranslation()
   return (
-    <section className="font-main py-10">
+   <section className="font-main py-10">
       <header className="bg-virtualDoctor text-white w-full lg:h-[530px] py-10 relative">
         <div className="max-w-[83rem] mx-auto flex flex-col justify-center h-full">
           <article className="px-4 space-y-5 flex flex-col items-center lg:items-start text-center">
             <h2 className="text-6xl lg:text-[88px]">
               {t('virtual-care')}
-            </h2>
+            </h2>            
             <div className="space-y-5 font-body text-lg max-w-lg">
               <p className="text-center lg:text-left">
                 {t('treatment-and-diagnosis-for-70-of-medical-issues-can-be-done-virtually-connect-with-a-virtual-doctor-in-minutes-24-7-or-book-an-appointment-with-a-specialist-no-referral-needed')}
               </p>
             </div>
             <Link className="block" to="/register">
-              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white text-virtualDoctor border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
+            <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white text-virtualDoctor border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
                 {t('sign-up-today')}
               </button>
             </Link>
@@ -61,124 +63,7 @@ const ServicesVirtualDoctor = () => {
           </div>
         </div>
       </section>
-
-      <section className="bg-primary text-white py-14 px-4">
-        <div className="w-full max-w-[52rem] mx-auto text-center space-y-4">
-          <h3 className="text-4xl md:text-5xl">
-            {t('get-medical-treatment-online')}
-          </h3>
-          <p className="font-body text-ligh">
-            {t('our-online-doctors-can-treat-your-health-conditions-and-concerns-without-you-ever-having-to-leave-home-book-an-appointment-with-specialists-like-dermatologists-endocrinologists-mental-health-therapists-gynecologists-and-more')}
-          </p>
-        </div>
-
-        <section className="py-10 max-w-[70rem] mx-auto">
-          <div className=" grid grid-cols-1 lg:grid-cols-4 gap-8 text-lg">
-            <article>
-              <img className="w-full" src={MedicalTreatmentBC} alt="Birth Control" />
-              <div className="py-4 text-center bg-white text-dark">
-                {t('birth-control')}
-              </div>
-            </article>
-            <article>
-              <img className="w-full" src={MedicalTreatmentED} alt="Erectile Dysfunction" />
-              <div className="py-4 text-center bg-white text-dark">
-                {t('erectile-dysfunction')}
-              </div>
-            </article>
-            <article>
-              <img className="w-full" src={MedicalTreatmentAcne} alt="Acne" />
-              <div className="py-4 text-center bg-white text-dark">
-                {t('acne')}
-              </div>
-            </article>
-            <article>
-              <img className="w-full" src={MedicalTreatmentUTI} alt="Urinary Tract Infections" />
-              <div className="py-4 text-center bg-white text-dark">
-                {t('urinary-tract-infections')}
-              </div>
-            </article>
-
-            <article className="relative p-4 bg-white text-center text-dark rounded-md">
-              <p>{t('dermatology')}</p>              
-            </article>
-
-            <article className="relative p-4 bg-white text-center text-dark rounded-md">
-              <p>{t('mental-health-therapy')}</p>              
-            </article>
-
-            <article className="relative p-4 bg-white text-center text-dark rounded-md">
-              <p>{t('endocrinology')}</p>              
-            </article>
-
-            <article className="relative p-4 bg-white text-center text-dark rounded-md">
-              <p>{t('naturopathy')}</p>              
-            </article>
-
-            <article className="lg:col-span-2">
-              <h2 className="text-white text-6xl font-main">
-                {t('many-more')}
-              </h2>
-            </article>
-
-            <article className="lg:col-span-2 flex flex-col lg:flex-row gap-4">
-              <Link className="block w-full" to="/register">
-                <button className="rounded-full w-full text-lg flex justify-center py-3 text-primary bg-white border border-white hover:bg-transparent hover:text-white transition-colors duration-300 ease-out">
-                  {t('sign-up-today')}
-                </button>
-              </Link>
-              <Link className="block w-full" to="/dashboard">
-                <button className="rounded-full w-full text-lg flex justify-center py-3 text-white bg-transparent border border-white hover:bg-white hover:text-primary transition-colors duration-300 ease-out">
-                  {t('See A Doctor')}
-                </button>
-              </Link>
-            </article>
-          </div>
-
-          <div className="grid grid-cols-1 justify-cente lg:grid-cols-4 pt-16 py-10 gap-x-4 gap-y-8">
-            <article className="flex items-center text-xl gap-x-3 text-white">
-              <OkIconWhite />
-              <h2>{t('diagnosis')}</h2>
-            </article>
-
-            <article className="flex items-center text-xl gap-x-3 text-white">
-              <OkIconWhite />
-              <h2>prescriptions & renewals</h2>
-            </article>
-
-            <article className="flex items-center text-xl gap-x-3 text-white">
-              <OkIconWhite />
-              <h2>{t('lab requisitions')}</h2>
-            </article>
-
-            <article className="flex items-center text-xl gap-x-3 text-white">
-              <OkIconWhite />
-              <h2>{t('24-7-unlimited-access')}</h2>
-            </article>
-
-            <article className="flex items-center text-xl gap-x-3 text-white">
-              <OkIconWhite />
-              <h2>{t('doctors notes')}</h2>
-            </article>
-
-            <article className="flex items-center text-xl gap-x-3 text-white">
-              <OkIconWhite />
-              <h2>{t('referrals to specialists')}</h2>
-            </article>
-
-            <article className="flex items-center text-xl gap-x-3 text-white">
-              <OkIconWhite />
-              <h2>{t('mental health')}</h2>
-            </article>
-
-            <article className="flex items-center text-xl gap-x-3 text-white">
-              <OkIconWhite />
-              <h2>{t('general-health-advice')}</h2>
-            </article>
-          </div>
-        </section>
-      </section>
-
+      <VirtualDoctorServices />
       <section className="py-10 bg-white text-gray-800">
         <h2 className="text-4xl text-center pb-12">How it works</h2>
         <div className="w-full max-w-[76rem] mx-auto">
