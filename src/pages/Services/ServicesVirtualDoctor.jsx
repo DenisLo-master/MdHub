@@ -15,7 +15,7 @@ import {
 import { useTranslation } from 'react-i18next'
 import FAQ from '../../components/FAQ.jsx'
 
-import { virtualDoctorHowItWorksData } from '../../constants'
+import { virtualDoctorHowItWorksData, virtualDoctorFAQData } from '../../constants'
 import { VirtualDoctorServices } from '../../sections'
 
 const WORDS = ["diagnosis", "prescriptions & renewals", "doctors notes", "referrals to specialists", "mental health", "general health advise", "lab requisitions"]
@@ -163,6 +163,27 @@ const ServicesVirtualDoctor = () => {
               </article>
             </div>
           </div>
+          <section className="py-10 font-body flex flex-col gap-y-5">
+            {
+              virtualDoctorFAQData.map(faqItem => (
+                <FAQ 
+                  key={faqItem.id}
+                  question={faqItem.question}
+                >
+                    <p>
+                      {faqItem.answer}
+                    </p>
+                    {
+                      faqItem.secondParagraph && (
+                        <p className="pt-4">
+                          {faqItem.secondParagraph}
+                        </p>
+                      )
+                    }
+                </FAQ>
+              ))
+            }  
+          </section>
         </div>
       </section>
     </section>
