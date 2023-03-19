@@ -6,7 +6,7 @@ const FAQ = ({ question, children }) => {
   return (
     <div className="border-b border-dark pb-3">
       <div onClick={() => setShowAnswer(!showAnswer)} className='flex justify-between'>
-        <article className="text-lg">
+        <article className="text-xl">
           {question}
         </article>
         <ArrowRight className={`text-primary transform ${showAnswer ? "-rotate-90" : "rotate-90"}`} />
