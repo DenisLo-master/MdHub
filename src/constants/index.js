@@ -38,6 +38,30 @@ import {
   from '../assets'
 
 
+export const mentalHealthFAQData = [
+  {
+    id: 1,
+    question: "What is mental illness?",
+    answer: "Mental illness, also referred to as mental health disorders, encompasses various mental health conditions that impact our self-perception, relationships, and daily functioning."
+  },
+  {
+    id: 2,
+    question: "What are most common symptoms of mental illness?",
+    answer: "The following are some of the most common symptoms of mental illness: Changes in sleeping or eating habits, withdrawal from family and friends, suicidal thoughts, extreme mood swings, delusions, hallucinations, or paranoia, excessive alcohol or drug use, difficulty concentrating, confusion or feeling lost, Inability to cope with daily stresses, feeling sad or lethargic, loss of interest in activities, frequent angry outbursts or tantrums, hyperactivity or lack of energy, changes in work or school performance."
+  },
+  {
+    id: 3,
+    question: "When consult for mental health?",
+    answer: "If you notice signs of mental illness, consult with our doctors to receive a proper diagnosis and treatment. Early intervention can prevent symptoms from becoming severe mental illnesses. With MDHUB, a doctor can diagnose your condition and recommend resources like psychotherapies to address your symptoms. If necessary, they can also prescribe medication to manage your symptoms."
+  },
+  {
+    id: 4,
+    question: "What other services MDHUB provides for mental health?",
+    answer: "Our members have access to on demand mental health specialists and therapists at discounted rates. In addition, MDHUB members can use Headspace app with no additional charge."
+  },
+]
+
+
 export const nursingServices = [
   "Vital Signs Monitoring",
   "Post Operative Care",
