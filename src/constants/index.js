@@ -89,7 +89,7 @@ export const onlinePharmacyFAQData = [
   {
     id: 1,
     question: "What is Online Pharmacy and why should I use it?",
-    answer: "You always have the choice to go to the pharmacy of your choice. Using an online pharmacy is easy and convenient. Getting started is a breeze, with a quick and easy online process. To ensure the highest quality of service, you'll receive a personalized welcome call to ensure that your experience is tailored to your needs. With our affiliated online pharmacy the prescription process is simple and stress-free.  "
+    answer: "You always have the choice to go to the pharmacy of your choice. Using an online pharmacy is easy and convenient. Getting started is a breeze, with a quick and easy online process. To ensure the highest quality of service, you'll receive a personalized welcome call to ensure that your experience is tailored to your needs. With our affiliated online pharmacy the prescription process is simple and stress-free."
   },
   {
     id: 2,
@@ -111,23 +111,23 @@ export const onlinePharmacyFAQData = [
 export const diagnosticsFAQData = [
   {
     id: 1,
-    question: "Do I need a requisition for blood work, and how do I get one?",
-    answer: "In Canada, it is mandatory to obtain blood work requisitions through a licensed physician. However, our virtual doctors have the authority to issue blood test requisitions on your behalf through our online platform, taking into consideration what they deem to be medically necessary."
+    question: "do-i-need-a-requisition-for-blood-work-and-how-do-i-get-one",
+    answer: "in-canada-it-is-mandatory-to-obtain-blood-work-requisitions-through-a-licensed-physician-however-our-virtual-doctors-have-the-authority-to-issue-blood-test-requisitions-on-your-behalf-through-our-online-platform-taking-into-consideration-what-they-deem-to-be-medically-necessary"
   },
   {
     id: 2,
-    question: "Do I have to pay for the lab work?",
-    answer: "Our members have the option to choose between public and private laboratories for their testing requirements. Additionally, we offer the added convenience of mobile nursing services, which include blood sample collection from the comfort of your own home."
+    question: "do-i-have-to-pay-for-the-lab-work",
+    answer: "our-members-have-the-option-to-choose-between-public-and-private-laboratories-for-their-testing-requirements-additionally-we-offer-the-added-convenience-of-mobile-nursing-services-which-include-blood-sample-collection-from-the-comfort-of-your-own-home"
   },
   {
     id: 3,
-    question: "Can MDHUB virtual doctor assist interpreting results?",
-    answer: "Upon receiving your results, you can easily book a consultation and we will connect you with a doctor who can go through your results with you and provide guidance on any necessary follow-up actions."
+    question: "can-mdhub-virtual-doctor-assist-interpreting-results",
+    answer: "upon-receiving-your-results-you-can-easily-book-a-consultation-and-we-will-connect-you-with-a-doctor-who-can-go-through-your-results-with-you-and-provide-guidance-on-any-necessary-follow-up-actions"
   },
   {
     id: 4,
-    question: "Am I covered by my private insurance?",
-    answer: "Most private insurance companies will cover the expenses associated with medical laboratory analyses based on your plan."
+    question: "am-i-covered-by-my-private-insurance",
+    answer: "most-private-insurance-companies-will-cover-the-expenses-associated-with-medical-laboratory-analyses-based-on-your-plan"
   }
 ]
 
@@ -135,13 +135,13 @@ export const nursingHomecareFAQData = [
   {
     id: 1,
     question: "What can our nurses and home care givers do?",
-    answer: "Mobile nurses and home caregivers can provide a variety of healthcare services and support to patients in their preferred location. These services may include assistance with daily living activities, such as bathing, dressing, and grooming, medication administration, wound care, vital signs monitoring, blood sample collection, injections, physical therapy exercises, and other medical treatments. Additionally, they can provide emotional support, companionship, and communication with the patient's healthcare team to ensure coordinated care."
+    answer: "Mobile nurses and home caregivers can provide a variety of healthcare services and support to patients in their preferred location. These services may include assistance with daily living activities, such as bathing, dressing, and grooming, medication administration, wound care, vital signs monitoring,blood sample collection, injections, physical therapy exercises, and other medical treatments. Additionally, they can provide emotional support, companionship, and communication with the patient's healthcare team to ensure coordinated care."
   },
   {
     id: 2,
     question: "Am I covered by my private insurance?",
     answer: "Most private insurance companies will cover the expenses associated with medical laboratory analyses based on your plan."
-  },
+}, 
   {
     id: 3,
     question: "How does home care service work?",

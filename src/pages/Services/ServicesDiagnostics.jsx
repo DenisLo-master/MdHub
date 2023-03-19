@@ -9,6 +9,7 @@ const WORDS = ['virus', 'urine', 'blood', 'covid']
 
 const ServicesDiagnostics = () => {
   const { t } = useTranslation()
+  console.log(diagnosticsFAQData)
   return (
     <section className="font-main text-dark py-10">
       <header className="bg-diagnostics diagnostics-bg text-white w-full py-20 relative text-center lg:text-left">
@@ -103,10 +104,10 @@ const ServicesDiagnostics = () => {
           diagnosticsFAQData.map(faqItem => (
             <FAQ 
               key={faqItem.id}
-              question={faqItem.question}
+              question={t(`${faqItem.question}`)}
             >
                 <p>
-                  {faqItem.answer}
+                {t(`${faqItem.answer}`)}
                 </p>
             </FAQ>
           ))
