@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { NursingAndHomecareBanner } from '../../assets'
 import { nursingServices, nursingAndHomecareHowItWorksData } from '../../constants'
 import { useTranslation } from 'react-i18next'
+import { NursingAndHomecareServices } from '../../sections'
 
 const WORDS = ['mobile vaccination', 'wound care and treatment', 'palliative care', 'post surgery care', "IV medication", "injection infusions", "vital signs monitoring"];
 
@@ -34,7 +35,7 @@ const ServicesNursingAndHomecare = () => {
         </div>
       </header>
       <section className="bg-white pt-14">
-        <div className="hidden relative virtual-health text-center lg:flex justify-center flip-words">
+        <div className="hidden relative virtual-health text-center lg:flex justify-center flip-words mb-32">
           <h2 className="text-primary text-center text-5xl md:text-6xl">
             {t('get-help-for')}
           </h2>
@@ -50,6 +51,9 @@ const ServicesNursingAndHomecare = () => {
             </div>
           </div>
         </div>
+
+        <NursingAndHomecareServices/>
+
         <section className=" pt-32 py-10">
           <h2 className="text-4xl pb-4 text-center">
             {t('How It Works')}
