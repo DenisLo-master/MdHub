@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { NursingAndHomecareBanner } from '../../assets'
-import { nursingServices, nursingAndHomecareHowItWorksData } from '../../constants'
+import { nursingServices, nursingAndHomecareHowItWorksData, nursingHomecareFAQData } from '../../constants'
 import { useTranslation } from 'react-i18next'
 import { NursingAndHomecareServices } from '../../sections'
+import FAQ from '../../components/FAQ'
 
 const WORDS = ['mobile vaccination', 'wound care and treatment', 'palliative care', 'post surgery care', "IV medication", "injection infusions", "vital signs monitoring"];
 
@@ -89,29 +90,20 @@ const ServicesNursingAndHomecare = () => {
           </section>
         </section>
       </section>
-      <section className="bg-white">
-        <div className="w-full max-w-[1200px] mx-auto pt-12">
-          <h2 className="md:pl-14 font-main text-[30px] text-center md:text-left text-black pb-4">
-            {t('services-suitable-for-all-your-needs')}
-          </h2>
-          <section className="flex justify-center flex-wrap gap-8 text-center">
-            {
-              nursingServices.map((item, index) => (
-                <article key={index} className={`shadow-cardService w-[127px] h-[120px] text-xs text-center flex justify-center items-center border-[0.25px] border-[#cfc5c5] font-main ${index === 0 ? "bg-primary text-white" : 'bg-white text-gray-800'}`}>
-                  <h2 className="max-w-[100px]">{t(`${item}`)}</h2>
-                </article>
-              ))
-            }
-          </section>
-          <div className="text-sm font-body md:pl-14 text-gray-800 px-4">
-            <h2 className="py-6 font-semibold">
-              {t('require-a-different-service-send-us-an-email-here')}
-            </h2>
-            <p className="max-w-[1100px]">
-              <strong className="font-bold">{t('note')}:</strong> {t('above-pricing-does-not-include-laboratory-fees-or-additional-materials-such-as-vitamin-drips-or-the-cost-of-medication-our-team-will-confirm-all-appointments-by-email-or-phone-and-advice-of-any-additional-fees-homecare-services-require-a-minimum-booking-of-3-hours-for-montreal-and-4-hours-for-outside-of-montreal')}.
-            </p>
-          </div>
-        </div>
+      
+      <section className="py-10 font-body w-full max-w-[72rem] mx-auto flex flex-col gap-y-5">
+        {
+          nursingHomecareFAQData.map(faqItem => (
+            <FAQ 
+              key={faqItem.id}
+              question={faqItem.question}
+            >
+                <p>
+                  {faqItem.answer}
+                </p>
+            </FAQ>
+          ))
+        }  
       </section>
     </section>
   )
