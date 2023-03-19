@@ -1,9 +1,9 @@
 import React from 'react'
 import { OnlinePharmacyBanner, LogoWhite } from '../../assets'
-import { onlinePharmacyHowItWorksData } from '../../constants'
+import { onlinePharmacyHowItWorksData, onlinePharmacyFAQData } from '../../constants'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { OnlinePharmacyServices } from '../../sections'
+import FAQ from '../../components/FAQ.jsx'
 
 const WORDS = ["birth control", "erectile dysfunction", "plan b", "antibiotics", "pain control and management", "mental health medication"]
 
@@ -42,7 +42,7 @@ const ServicesOnlinePharmacy = () => {
         </div>
       </header>
       <section className="bg-white py-14">
-        <div className="relative virtual-health text-center hidden lg:flex justify-center flip-words mb-32">
+        <div className="relative virtual-health text-center hidden lg:flex justify-center flip-words mb-20">
           <h2 className="text-primary text-center text-5xl md:text-6xl">
             {t('get-help-for')}
           </h2>
@@ -59,8 +59,7 @@ const ServicesOnlinePharmacy = () => {
           </div>
         </div>
 
-        <OnlinePharmacyServices/>
-        <div className="lg:pt-32 py-10">
+        <div className="py-10">
           <h2 className="text-4xl pb-10 text-center">
             {t('How It Works')}
           </h2>
@@ -125,7 +124,20 @@ const ServicesOnlinePharmacy = () => {
           </article>
         </section>
       </section>
-
+      <section className="py-10 font-body w-full max-w-[72rem] mx-auto flex flex-col gap-y-5">
+        {
+          onlinePharmacyFAQData.map(faqItem => (
+            <FAQ 
+              key={faqItem.id}
+              question={faqItem.question}
+            >
+                <p>
+                  {faqItem.answer}
+                </p>
+            </FAQ>
+          ))
+        }  
+      </section>
     </section>
   )
 }
