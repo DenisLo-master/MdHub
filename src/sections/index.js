@@ -6,6 +6,11 @@ import HomeHowItWorksSection from "./Home/HomeHowItWorksSection"
 import HomeMembershipCostCtaSection from "./Home/HomeMembershipCostCtaSection"
 import HomeMembershipBenefitsSection from "./Home/HomeMembershipBenefitsSection"
 import ServicesHeaderSection from "./Services/ServicesHeaderSection"
+import VirtualDoctorServices from './Services/VirtualDoctorServices.jsx'
+import MentalHealthServices from './Services/MentalHealthServices.jsx'
+import OnlinePharmacyServices from './Services/OnlinePharmacyServices.jsx'
+import NursingAndHomecareServices from './Services/NursingAndHomecareServices.jsx'
+import DiagnosticServices from './Services/DiagnosticServices.jsx'
 import ForYouHeaderSection from './ForYou/ForYouHeaderSection'
 import SignupStepOne from "./Signup/SignupStepOne"
 import SignupStepTwo from "./Signup/SignupStepTwo"
@@ -41,6 +46,11 @@ import MembershipBenefits from './Pricing/MembershipBenefits'
 import Testimonials from "./Pricing/Testimonials"
 
 export {
+  NursingAndHomecareServices,
+  DiagnosticServices,
+  OnlinePharmacyServices,
+  MentalHealthServices,
+  VirtualDoctorServices,
   Testimonials,
   MembershipBenefits,
   HeadspaceSection,
