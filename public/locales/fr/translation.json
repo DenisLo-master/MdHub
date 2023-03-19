@@ -373,5 +373,21 @@
   "specific-testing": "Tests spécifiques",
   "genetic-screening": "Dépistage génétique",
   "annual-health-checkups": "Bilans de santé annuels",
-  "get-on-site-lab-testing-and-diagnostics": "Obtenez des tests et des diagnostics en laboratoire sur place"
+  "get-on-site-lab-testing-and-diagnostics": "Obtenez des tests et des diagnostics en laboratoire sur place",
+  "do-i-need-a-requisition-for-blood-work-and-how-do-i-get-one": "Ai-je besoin d'une demande d'analyse de sang et comment puis-je en obtenir une ?",
+  "in-canada-it-is-mandatory-to-obtain-blood-work-requisitions-through-a-licensed-physician-however-our-virtual-doctors-have-the-authority-to-issue-blood-test-requisitions-on-your-behalf-through-our-online-platform-taking-into-consideration-what-they-deem-to-be-medically-necessary": "Au Canada, il est obligatoire d'obtenir les demandes d'analyses sanguines par l'intermédiaire d'un médecin agréé. \nCependant, nos médecins virtuels ont le pouvoir d'émettre des demandes d'analyses sanguines en votre nom via notre plateforme en ligne, en tenant compte de ce qu'ils jugent médicalement nécessaire.",
+  "do-i-have-to-pay-for-the-lab-work": "Dois-je payer pour le travail de laboratoire ?",
+  "can-mdhub-virtual-doctor-assist-interpreting-results": "Le médecin virtuel MDHUB peut-il aider à interpréter les résultats ?",
+  "am-i-covered-by-my-private-insurance": "Suis-je couvert par mon assurance privée ?",
+  "our-members-have-the-option-to-choose-between-public-and-private-laboratories-for-their-testing-requirements-additionally-we-offer-the-added-convenience-of-mobile-nursing-services-which-include-blood-sample-collection-from-the-comfort-of-your-own-home": "Nos membres ont la possibilité de choisir entre des laboratoires publics et privés pour leurs besoins en matière de tests. \nDe plus, nous offrons la commodité supplémentaire de services de soins infirmiers mobiles, qui comprennent la collecte d'échantillons de sang dans le confort de votre foyer.",
+  "upon-receiving-your-results-you-can-easily-book-a-consultation-and-we-will-connect-you-with-a-doctor-who-can-go-through-your-results-with-you-and-provide-guidance-on-any-necessary-follow-up-actions": "Dès réception de vos résultats, vous pouvez facilement réserver une consultation et nous vous mettrons en contact avec un médecin qui pourra examiner vos résultats avec vous et vous fournir des conseils sur les actions de suivi nécessaires.",
+  "most-private-insurance-companies-will-cover-the-expenses-associated-with-medical-laboratory-analyses-based-on-your-plan": "La plupart des compagnies d'assurance privées couvriront les dépenses associées aux analyses de laboratoire médical en fonction de votre régime.",
+  "anxiety-0": "Anxiété",
+  "depression-0": "Dépression",
+  "disordered-eating": "Alimentation désordonnée",
+  "get-care-for-your-mental-health": "Faites-vous soigner pour votre santé mentale",
+  "we-can-all-use-a-little-help-sometimes-get-mental-health-care-and-support-with-mdhubs-suite-of-mental-health-services-so-you-can-feel-your-best": "Nous pouvons tous utiliser un peu d'aide parfois. \nObtenez des soins de santé mentale et du soutien avec la suite de services de santé mentale de MDHUB, afin que vous puissiez vous sentir au mieux de votre forme.",
+  "loss-of-focus": "Perte de concentration",
+  "suicidal-thoughts": "Pensées suicidaires",
+  "sleep-issues": "Problèmes de sommeil"
 }
