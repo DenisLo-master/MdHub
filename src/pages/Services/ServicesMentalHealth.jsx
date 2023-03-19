@@ -122,20 +122,19 @@ const ServicesMentalHealth = () => {
         </div>
       </section>
       <section className="py-10 font-body w-full max-w-[72rem] mx-auto flex flex-col gap-y-5">
-      {
-        mentalHealthFAQData.map(faqItem => (
-          <FAQ 
-            key={faqItem.id}
-            question={faqItem.question}
-          >
-              <p>
-                {faqItem.answer}
-              </p>
-          </FAQ>
-        ))
-      }
-            
-          </section>
+        {
+          mentalHealthFAQData.map(faqItem => (
+            <FAQ 
+              key={faqItem.id}
+              question={faqItem.question}
+            >
+                <p>
+                  {faqItem.answer}
+                </p>
+            </FAQ>
+          ))
+        }  
+      </section>
     </section>
   )
 }
