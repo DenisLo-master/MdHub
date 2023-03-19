@@ -126,10 +126,10 @@ const ServicesMentalHealth = () => {
           mentalHealthFAQData.map(faqItem => (
             <FAQ 
               key={faqItem.id}
-              question={faqItem.question}
+              question={t(`${faqItem.question}`)}
             >
                 <p>
-                  {faqItem.answer}
+                {t(`${faqItem.answer}`)}
                 </p>
             </FAQ>
           ))
