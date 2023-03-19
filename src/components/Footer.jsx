@@ -78,8 +78,8 @@ const Footer = () => {
           <div className="font-body text-base space-y-2">
             <p className="max-w-[230px]">{t('Subscribe to our newsletter for latest news and updates')}</p>
             <form className="flex space-x-1 text-xs">
-              <input className="px-2 rounded bg-transparent text-white border outline-none border-white placeholder:text-white" placeholder="E-mail" />
-              <button className="bg-white rounded text-primary px-3 py-1 hover:opacity-90 transition-opacity ease-in-out duration-300" type="submit">Subscribe</button>
+              <input className="px-2 rounded-full py-2 bg-transparent text-white border outline-none border-white placeholder:text-white" placeholder="E-mail" />
+              <button className="bg-white rounded-full font-medium text-primary px-3 py-1 hover:opacity-90 transition-opacity ease-in-out duration-300" type="submit">Subscribe</button>
             </form>
           </div>
         </article>
