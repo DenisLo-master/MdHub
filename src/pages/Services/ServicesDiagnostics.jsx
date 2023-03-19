@@ -2,6 +2,7 @@ import React from 'react'
 import { diagnosisHowItWorksData } from '../../constants'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { DiagnosticServices } from '../../sections'
 
 const WORDS = ['virus', 'urine', 'blood', 'covid']
 
@@ -33,7 +34,7 @@ const ServicesDiagnostics = () => {
         </div>
       </header>
       <section className="bg-white lg:py-14">
-        <div className="hidden relative virtual-health text-center lg:flex justify-center flip-words">
+        <div className="hidden relative virtual-health text-center lg:flex justify-center flip-words mb-32">
           <h2 className="text-primary text-center text-5xl md:text-6xl">
             {t('get-help-for')}
           </h2>
@@ -49,6 +50,9 @@ const ServicesDiagnostics = () => {
             </div>
           </div>
         </div>
+
+        <DiagnosticServices/>
+        
       </section>
       <section className="bg-white py-10 pb-24">
         <h2 className="text-4xl pb-10 text-center">
