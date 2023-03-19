@@ -3,6 +3,7 @@ import { OnlinePharmacyBanner, LogoWhite } from '../../assets'
 import { onlinePharmacyHowItWorksData } from '../../constants'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { OnlinePharmacyServices } from '../../sections'
 
 const WORDS = ["birth control", "erectile dysfunction", "plan b", "antibiotics", "pain control and management", "mental health medication"]
 
@@ -41,7 +42,7 @@ const ServicesOnlinePharmacy = () => {
         </div>
       </header>
       <section className="bg-white py-14">
-        <div className="relative virtual-health text-center hidden lg:flex justify-center flip-words">
+        <div className="relative virtual-health text-center hidden lg:flex justify-center flip-words mb-32">
           <h2 className="text-primary text-center text-5xl md:text-6xl">
             {t('get-help-for')}
           </h2>
@@ -57,6 +58,8 @@ const ServicesOnlinePharmacy = () => {
             </div>
           </div>
         </div>
+
+        <OnlinePharmacyServices/>
         <div className="lg:pt-32 py-10">
           <h2 className="text-4xl pb-10 text-center">
             {t('How It Works')}
