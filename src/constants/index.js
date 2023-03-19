@@ -88,23 +88,23 @@ export const virtualDoctorFAQData = [
 export const onlinePharmacyFAQData = [
   {
     id: 1,
-    question: "What is Online Pharmacy and why should I use it?",
-    answer: "You always have the choice to go to the pharmacy of your choice. Using an online pharmacy is easy and convenient. Getting started is a breeze, with a quick and easy online process. To ensure the highest quality of service, you'll receive a personalized welcome call to ensure that your experience is tailored to your needs. With our affiliated online pharmacy the prescription process is simple and stress-free."
+    question: "what-is-online-pharmacy-and-why-should-i-use-it",
+    answer: "you-always-have-the-choice-to-go-to-the-pharmacy-of-your-choice-using-an-online-pharmacy-is-easy-and-convenient-getting-started-is-a-breeze-with-a-quick-and-easy-online-process-to-ensure-the-highest-quality-of-service-youll-receive-a-personalized-welcome-call-to-ensure-that-your-experience-is-tailored-to-your-needs-with-our-affiliated-online-pharmacy-the-prescription-process-is-simple-and-stress-free-0"
   },
   {
     id: 2,
-    question: "Can I communicate with a real pharmacist?",
-    answer: "You have access to a team of licensed  pharmacist accessible by phone, text, chat and email. For emergencies only , 24/7 phone service is provided."
+    question: "can-i-communicate-with-a-real-pharmacist",
+    answer: "you-have-access-to-a-team-of-licensed-pharmacist-accessible-by-phone-text-chat-and-email-for-emergencies-only-24-7-phone-service-is-provided"
   },
   {
     id: 3,
-    question: "Do I have to pay of the Online Pharmacy?",
-    answer: "There is no extra cost to use the Online Pharmacy."
+    question: "do-i-have-to-pay-of-the-online-pharmacy",
+    answer: "there-is-no-extra-cost-to-use-the-online-pharmacy"
   },
   {
     id: 4,
-    question: "How do I get a prescription or renewal?",
-    answer: "MDHUB members can consult with our online doctors anytime from anywhere to receive a prescription or renewal."
+    question: "how-do-i-get-a-prescription-or-renewal",
+    answer: "mdhub-members-can-consult-with-our-online-doctors-anytime-from-anywhere-to-receive-a-prescription-or-renewal"
   }
 ]
 
