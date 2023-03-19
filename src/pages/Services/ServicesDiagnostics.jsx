@@ -1,8 +1,9 @@
 import React from 'react'
-import { diagnosisHowItWorksData } from '../../constants'
+import { diagnosisHowItWorksData, diagnosticsFAQData } from '../../constants'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { DiagnosticServices } from '../../sections'
+import FAQ from '../../components/FAQ.jsx'
 
 const WORDS = ['virus', 'urine', 'blood', 'covid']
 
@@ -96,6 +97,20 @@ const ServicesDiagnostics = () => {
             }
           </div>
         </section>
+      </section>
+      <section className="py-10 font-body w-full max-w-[72rem] mx-auto flex flex-col gap-y-5">
+        {
+          diagnosticsFAQData.map(faqItem => (
+            <FAQ 
+              key={faqItem.id}
+              question={faqItem.question}
+            >
+                <p>
+                  {faqItem.answer}
+                </p>
+            </FAQ>
+          ))
+        }  
       </section>
     </section>
   )
