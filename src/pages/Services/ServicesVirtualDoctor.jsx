@@ -168,15 +168,15 @@ const ServicesVirtualDoctor = () => {
               virtualDoctorFAQData.map(faqItem => (
                 <FAQ 
                   key={faqItem.id}
-                  question={faqItem.question}
+                  question={t(`${faqItem.question}`)}
                 >
                     <p>
-                      {faqItem.answer}
+                    {t(`${faqItem.answer}`)}
                     </p>
                     {
                       faqItem.secondParagraph && (
                         <p className="pt-4">
-                          {faqItem.secondParagraph}
+                        {t(`${faqItem.secondParagraph}`)}
                         </p>
                       )
                     }

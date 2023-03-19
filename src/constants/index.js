@@ -64,24 +64,24 @@ export const mentalHealthFAQData = [
 export const virtualDoctorFAQData = [
   {
     id: 1,
-    question: "Do I have to pay to consult with a doctor?",
-    answer: "Our members have 24/7 access to online doctors at no additional charge. They also benefit from discounted rates for specialized care."
+    question: 'do-i-have-to-pay-to-consult-with-a-doctor',
+    answer: 'our-members-have-24-7-access-to-online-doctors-at-no-additional-charge-they-also-benefit-from-discounted-rates-for-specialized-care'
   },
   {
     id: 2,
-    question: "Is it possible to obtain a prescription from a doctor through an online consultation?",
-    answer: "If you're not feeling well or unable to reach your regular doctor for a prescription refill, an online doctor may be able to help. MDHUB.CA allows you to have a remote consultation with a physician, who can prescribe most medications online (except for controlled substances like narcotics).",
-    secondParagraph:"Doctors have the discretion to issue prescriptions online. Once you receive a prescription, you can choose to have it delivered to your door for free or pick it up at a pharmacy of your choice"
+    question: 'is-it-possible-to-obtain-a-prescription-from-a-doctor-through-an-online-consultation',
+    answer: 'if-youre-not-feeling-well-or-unable-to-reach-your-regular-doctor-for-a-prescription-refill-an-online-doctor-may-be-able-to-help-mdhub-ca-allows-you-to-have-a-remote-consultation-with-a-physician-who-can-prescribe-most-medications-online-except-for-controlled-substances-like-narcotics',
+    secondParagraph: 'doctors-have-the-discretion-to-issue-prescriptions-online-once-you-receive-a-prescription-you-can-choose-to-have-it-delivered-to-your-door-for-free-or-pick-it-up-at-a-pharmacy-of-your-choice'
   },  
   {
     id: 3,
-    question: "What is MDHUB Virtual Doctor?",
-    answer: "Fast and convenient access to Canadian-licensed doctors, nurse practitioners, and specialists 24/7. You can request a consultation and receive a diagnosis, treatment plans, prescriptions, sick notes, lab requisitions, and more through secure text messaging, audio, or video. With MDHUB get a prescription in minutes at the provider's discretion, without needing a referral or waitlist to see a specialist online."
+    question: 'what-is-mdhub-virtual-doctor',
+    answer: 'fast-and-convenient-access-to-canadian-licensed-doctors-nurse-practitioners-and-specialists-24-7-you-can-request-a-consultation-and-receive-a-diagnosis-treatment-plans-prescriptions-sick-notes-lab-requisitions-and-more-through-secure-text-messaging-audio-or-video-with-mdhub-get-a-prescription-in-minutes-at-the-providers-discretion-without-needing-a-referral-or-waitlist-to-see-a-specialist-online'
   },
   {
     id: 4,
-    question: "Can I get a doctor's note ?",
-    answer: "A doctor's note is a written document that confirms a medical condition and recommends taking time off to recover. It's often required for work or school absences as proof of the need for the time off. With MDHUB You can obtain a doctor's note or sick note online at the doctor's discretion in just a few minutes."
+    question: 'can-i-get-a-doctors-note',
+    answer: "a-doctors-note-is-a-written-document-that-confirms-a-medical-condition-and-recommends-taking-time-off-to-recover-its-often-required-for-work-or-school-absences-as-proof-of-the-need-for-the-time-off-with-mdhub-you-can-obtain-a-doctors-note-or-sick-note-online-at-the-doctors-discretion-in-just-a-few-minutes"
   },
 ]
 
