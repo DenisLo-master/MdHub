@@ -61,6 +61,94 @@ export const mentalHealthFAQData = [
   },
 ]
 
+export const virtualDoctorFAQData = [
+  {
+    id: 1,
+    question: "Do I have to pay to consult with a doctor?",
+    answer: "Our members have 24/7 access to online doctors at no additional charge. They also benefit from discounted rates for specialized care."
+  },
+  {
+    id: 2,
+    question: "Is it possible to obtain a prescription from a doctor through an online consultation?",
+    answer: "If you're not feeling well or unable to reach your regular doctor for a prescription refill, an online doctor may be able to help. MDHUB.CA allows you to have a remote consultation with a physician, who can prescribe most medications online (except for controlled substances like narcotics).",
+    secondParagraph:"Doctors have the discretion to issue prescriptions online. Once you receive a prescription, you can choose to have it delivered to your door for free or pick it up at a pharmacy of your choice"
+  },  
+  {
+    id: 3,
+    question: "What is MDHUB Virtual Doctor?",
+    answer: "Fast and convenient access to Canadian-licensed doctors, nurse practitioners, and specialists 24/7. You can request a consultation and receive a diagnosis, treatment plans, prescriptions, sick notes, lab requisitions, and more through secure text messaging, audio, or video. With MDHUB get a prescription in minutes at the provider's discretion, without needing a referral or waitlist to see a specialist online."
+  },
+  {
+    id: 4,
+    question: "Can I get a doctor's note ?",
+    answer: "A doctor's note is a written document that confirms a medical condition and recommends taking time off to recover. It's often required for work or school absences as proof of the need for the time off. With MDHUB You can obtain a doctor's note or sick note online at the doctor's discretion in just a few minutes."
+  },
+]
+
+export const onlinePharmacyFAQData = [
+  {
+    id: 1,
+    question: "What is Online Pharmacy and why should I use it?",
+    answer: "You always have the choice to go to the pharmacy of your choice. Using an online pharmacy is easy and convenient. Getting started is a breeze, with a quick and easy online process. To ensure the highest quality of service, you'll receive a personalized welcome call to ensure that your experience is tailored to your needs. With our affiliated online pharmacy the prescription process is simple and stress-free.  "
+  },
+  {
+    id: 2,
+    question: "Can I communicate with a real pharmacist?",
+    answer: "You have access to a team of licensed  pharmacist accessible by phone, text, chat and email. For emergencies only , 24/7 phone service is provided."
+  },
+  {
+    id: 3,
+    question: "Do I have to pay of the Online Pharmacy?",
+    answer: "There is no extra cost to use the Online Pharmacy."
+  },
+  {
+    id: 4,
+    question: "How do I get a prescription or renewal?",
+    answer: "MDHUB members can consult with our online doctors anytime from anywhere to receive a prescription or renewal."
+  }
+]
+
+export const diagnosticsFAQData = [
+  {
+    id: 1,
+    question: "Do I need a requisition for blood work, and how do I get one?",
+    answer: "In Canada, it is mandatory to obtain blood work requisitions through a licensed physician. However, our virtual doctors have the authority to issue blood test requisitions on your behalf through our online platform, taking into consideration what they deem to be medically necessary."
+  },
+  {
+    id: 2,
+    question: "Do I have to pay for the lab work?",
+    answer: "Our members have the option to choose between public and private laboratories for their testing requirements. Additionally, we offer the added convenience of mobile nursing services, which include blood sample collection from the comfort of your own home."
+  },
+  {
+    id: 3,
+    question: "Can MDHUB virtual doctor assist interpreting results?",
+    answer: "Upon receiving your results, you can easily book a consultation and we will connect you with a doctor who can go through your results with you and provide guidance on any necessary follow-up actions."
+  },
+  {
+    id: 4,
+    question: "Am I covered by my private insurance?",
+    answer: "Most private insurance companies will cover the expenses associated with medical laboratory analyses based on your plan."
+  }
+]
+
+export const nursingHomecareFAQData = [
+  {
+    id: 1,
+    question: "What can our nurses and home care givers do?",
+    answer: "Mobile nurses and home caregivers can provide a variety of healthcare services and support to patients in their preferred location. These services may include assistance with daily living activities, such as bathing, dressing, and grooming, medication administration, wound care, vital signs monitoring, blood sample collection, injections, physical therapy exercises, and other medical treatments. Additionally, they can provide emotional support, companionship, and communication with the patient's healthcare team to ensure coordinated care."
+  },
+  {
+    id: 2,
+    question: "Am I covered by my private insurance?",
+    answer: "Most private insurance companies will cover the expenses associated with medical laboratory analyses based on your plan."
+  },
+  {
+    id: 3,
+    question: "How does home care service work?",
+    answer: "Each time a personal care support worker from MDHUB makes a service visit, the minimum booking duration is 3 hours. This is the minimum number of hours that MDHUB provides services for. MDHUB believes in providing a top-quality in-home care experience, which is achieved through consistency in the people who visit. MDHUB strives to keep the same caregivers on regular and consistent schedules as much as possible. However, there may be times and circumstances beyond our control that require us to assign a different support worker."
+  }
+]
+
 
 export const nursingServices = [
   "Vital Signs Monitoring",
