@@ -8,6 +8,9 @@ import {
   HeadspaceLogo
 } from '../../assets'
 import { useTranslation } from 'react-i18next'
+import {MentalHealthServices} from '../../sections'
+import { mentalHealthFAQData } from '../../constants'
+import FAQ from "../../components/FAQ.jsx"
 
 
 const WORDS = ['anxiety', 'mood changes', 'depression', 'seasonal depression', "insomnia", "stress"]
@@ -36,7 +39,7 @@ const ServicesMentalHealth = () => {
       </header>
 
       <section className="bg-white py-8 lg:py-14 px-4">
-        <div className="hidden relative virtual-health text-center lg:flex justify-center flip-words">
+        <div className="hidden relative virtual-health text-center lg:flex justify-center flip-words mb-32">
           <h2 className="text-primary text-center text-5xl md:text-6xl">
             {t('get-help-for')}
           </h2>
@@ -52,6 +55,9 @@ const ServicesMentalHealth = () => {
             </div>
           </div>
         </div>
+
+        <MentalHealthServices/>
+
         <h3 className="text-center text-4xl md:text-5xl lg:pt-32 py-10 lg:py-20">
           {t('mdhub-members-can-benefit-from')}
         </h3>
@@ -113,9 +119,23 @@ const ServicesMentalHealth = () => {
               </button>
             </Link>
           </article>
-
         </div>
       </section>
+      <section className="py-10 font-body w-full max-w-[72rem] mx-auto flex flex-col gap-y-5">
+      {
+        mentalHealthFAQData.map(faqItem => (
+          <FAQ 
+            key={faqItem.id}
+            question={faqItem.question}
+          >
+              <p>
+                {faqItem.answer}
+              </p>
+          </FAQ>
+        ))
+      }
+            
+          </section>
     </section>
   )
 }
