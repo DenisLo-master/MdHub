@@ -147,8 +147,32 @@ import DiagnosticsHowItWorks02 from './diagnostics-how-it-works-02.png'
 import DiagnosticsHowItWorks03 from './diagnostics-how-it-works-03.png'
 import DiagnosticsHowItWorks04 from './diagnostics-how-it-works-04.png'
 import UserPlaceholder from './user-placeholder.png'
+import MentalHealthServices01 from './mental-health-services-01.png'
+import MentalHealthServices02 from './mental-health-services-02.png'
+import MentalHealthServices03 from './mental-health-services-03.png'
+import MentalHealthServices04 from './mental-health-services-04.png'
+import DiagnosticServices01 from './diagnostic-services-01.png'
+import DiagnosticServices02 from './diagnostic-services-02.png'
+import DiagnosticServices03 from './diagnostic-services-03.png'
+import DiagnosticServices04 from './diagnostic-services-04.png'
+import NursingAndHomeCareServices01 from './nursing-homecare-services-01.png'
+import NursingAndHomeCareServices02 from './nursing-homecare-services-02.png'
+import NursingAndHomeCareServices03 from './nursing-homecare-services-03.png'
+import NursingAndHomeCareServices04 from './nursing-homecare-services-04.png'
 
 export {
+  NursingAndHomeCareServices01,
+  NursingAndHomeCareServices02,
+  NursingAndHomeCareServices03,
+  NursingAndHomeCareServices04,
+  DiagnosticServices01,
+  DiagnosticServices02,
+  DiagnosticServices03,
+  DiagnosticServices04,
+  MentalHealthServices01,
+  MentalHealthServices02,
+  MentalHealthServices03,
+  MentalHealthServices04,
   UserPlaceholder,
   CloseVector,
   DiagnosticsHowItWorks01,
