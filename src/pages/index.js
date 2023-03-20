@@ -22,10 +22,13 @@ import AdminDashboard from './Admin/Dashboard'
 import Admin from './Admin/Admin'
 import AllUsers from "./Admin/AllUsers"
 import AddUser from "./Admin/AddUser"
+import GetUserInfoAdmin from "./Admin/GetUserInfoAdmin"
 import BillingHistory from "./Admin/BillingHistory"
-import AdminLogin from "./Login/AdminLogin";
+import AdminLogin from "./Login/AdminLogin"
+
 
 export {
+  GetUserInfoAdmin,
   AdminLogin,
   AddUser,
   BillingHistory,
