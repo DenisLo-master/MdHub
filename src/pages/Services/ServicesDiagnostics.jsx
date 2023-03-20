@@ -9,7 +9,6 @@ const WORDS = ['virus', 'urine', 'blood', 'covid']
 
 const ServicesDiagnostics = () => {
   const { t } = useTranslation()
-  console.log(diagnosticsFAQData)
   return (
     <section className="font-main text-dark py-10">
       <header className="bg-diagnostics diagnostics-bg text-white w-full py-20 relative text-center lg:text-left">
@@ -99,7 +98,7 @@ const ServicesDiagnostics = () => {
           </div>
         </section>
       </section>
-      <section className="py-10 font-body w-full max-w-[72rem] mx-auto flex flex-col gap-y-5">
+      <section className="py-10 font-body w-full max-w-[72rem] mx-auto flex flex-col gap-y-5 px-4">
         {
           diagnosticsFAQData.map(faqItem => (
             <FAQ 
