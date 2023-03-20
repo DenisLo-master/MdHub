@@ -38,8 +38,8 @@ const ServicesMentalHealth = () => {
         </div>
       </header>
 
-      <section className="bg-white py-8 lg:py-14 px-4">
-        <div className="hidden relative virtual-health text-center lg:flex justify-center flip-words mb-32">
+      <section className="bg-white py-8 lg:py-14">
+        <div className="hidden relative virtual-health text-center lg:flex justify-center flip-words mb-32 px-4">
           <h2 className="text-primary text-center text-5xl md:text-6xl">
             {t('get-help-for')}
           </h2>
@@ -121,7 +121,7 @@ const ServicesMentalHealth = () => {
           </article>
         </div>
       </section>
-      <section className="py-10 font-body w-full max-w-[72rem] mx-auto flex flex-col gap-y-5">
+      <section className="py-10 font-body w-full max-w-[72rem] mx-auto flex flex-col gap-y-5 px-4">
         {
           mentalHealthFAQData.map(faqItem => (
             <FAQ 
