@@ -50,16 +50,18 @@ const DiagnosticServices = () => {
           </article>
 
           <article className="lg:col-span-2 flex flex-col lg:flex-row gap-4">
+            <h2 className="text-6xl whitespace-nowrap text-center">{t('many-more')}</h2>
+          </article>
+
+          <article className="lg:col-span-2 flex flex-col lg:flex-row gap-4">
             <Link className="block w-full" to="/register">
               <button className="rounded-full w-full text-lg flex justify-center py-3 text-primary bg-white border border-white hover:bg-transparent hover:text-white transition-colors duration-300 ease-out">
                 {t('sign-up-today')}
               </button>
             </Link>
-          </article>
-          <article className="lg:col-span-2 flex flex-col lg:flex-row gap-4">
-          	<Link className="block w-full" to="/dashboard">
+            <Link className="block w-full" to="/dashboard">
               <button className="rounded-full w-full text-lg flex justify-center py-3 text-white bg-transparent border border-white hover:bg-white hover:text-primary transition-colors duration-300 ease-out">
-                {t('get-care-now')}
+                {t('See A Doctor')}
               </button>
             </Link>
           </article>

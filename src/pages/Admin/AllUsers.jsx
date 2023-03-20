@@ -50,6 +50,7 @@ const AllUsers = () => {
           // }
         })
         const data = await response.json()
+        console.log(data)
         setUsers(data)
       } catch (error) {
         console.log(error)
@@ -57,7 +58,6 @@ const AllUsers = () => {
     }
     getAllUsers()
   }, [])
-
 
   return (
     <section className="flex-1">
@@ -73,6 +73,7 @@ const AllUsers = () => {
                   <th className="py-3 px-6 text-left">Status</th>
                 </tr>
               </thead>
+              users.length && (
               <tbody>
                 {users.map((user, index) => (
                   <tr
@@ -86,7 +87,7 @@ const AllUsers = () => {
                           <img
                             className="w-10 h-10 rounded-full"
                             src={UserPlaceholder}
-                            alt={`${user.firstName} ${user.lastName}`}
+                            alt={`${user?.firstName} ${user?.lastName}`}
                           />
                         </div>
                         <span>{`${user.firstName} ${user.lastName}`}</span>
@@ -119,6 +120,7 @@ const AllUsers = () => {
                 ))}
               </tbody>
             </table>
+            )
           </div>
         </article>
       </div>
