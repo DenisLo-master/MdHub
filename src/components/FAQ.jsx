@@ -9,7 +9,9 @@ const FAQ = ({ question, children }) => {
         <article className="text-xl">
           {question}
         </article>
-        <ArrowRight className={`text-primary transform ${showAnswer ? "-rotate-90" : "rotate-90"}`} />
+        <div>
+          <ArrowRight className={`text-primary transform ${showAnswer ? "-rotate-90" : "rotate-90"}`} />
+        </div>
       </div>
       {
         showAnswer && (
