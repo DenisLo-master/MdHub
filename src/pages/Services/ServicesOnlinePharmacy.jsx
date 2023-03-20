@@ -124,7 +124,7 @@ const ServicesOnlinePharmacy = () => {
           </article>
         </section>
       </section>
-      <section className="py-10 font-body w-full max-w-[72rem] mx-auto flex flex-col gap-y-5">
+      <section className="py-10 font-body w-full max-w-[72rem] mx-auto flex flex-col gap-y-5 px-4">
         {
           onlinePharmacyFAQData.map(faqItem => (
             <FAQ 
