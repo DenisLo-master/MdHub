@@ -5,6 +5,7 @@ import Modal from '../../components/Modal'
 import { BsPencilSquare } from "react-icons/bs"
 import { AiOutlineEnter, AiOutlineClose } from 'react-icons/ai'
 import toast from "react-hot-toast"
+import { useNavigate } from 'react-router-dom'
 
 const Dashboard = () => {
   const [usersThisWeek, setUsersThisWeek] = useState([])
@@ -17,6 +18,7 @@ const Dashboard = () => {
   const [showUserModal, setShowUserModal] = useState(false)
   const [selectedUser, setSelectedUser] = useState({})
   const token = localStorage.getItem("jwtToken")
+  const navigate = useNavigate()
 
   const updateCode = async (e) => {
     e.preventDefault()
@@ -75,12 +77,8 @@ const Dashboard = () => {
               <tbody>
                 {usersThisWeek.map((user, index) => (
                   <tr
-                    onClick={() => {
-                      setSelectedUser(user)
-                      setCodeValue(user.loginCode)
-                      setShowUserModal(true)
-                    }}
                     key={`{item#${index}}`}
+                    onClick={() => navigate(`user_info/${user._id}`)}
                     className={`cursor-pointer ${index !== usersThisWeek.length - 1 ? "border-b border-gray-200" : ""
                       }`}
                   >
