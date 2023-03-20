@@ -72,20 +72,21 @@ const VirtualDoctorServices = () => {
 
 
           <article className="lg:col-span-2 flex flex-col lg:flex-row gap-4">
+            <h2 className="text-6xl flex justify-center text-center">{t('many-more')}</h2>
+          </article>
+
+          <article className="lg:col-span-2 flex flex-col lg:flex-row gap-4">
             <Link className="block w-full" to="/register">
               <button className="rounded-full w-full text-lg flex justify-center py-3 text-primary bg-white border border-white hover:bg-transparent hover:text-white transition-colors duration-300 ease-out">
                 {t('sign-up-today')}
               </button>
             </Link>
-          </article>
-          <article className="lg:col-span-2 flex flex-col lg:flex-row gap-4">
             <Link className="block w-full" to="/dashboard">              
               <button className="rounded-full w-full text-lg flex justify-center py-3 text-white bg-transparent border border-white hover:bg-white hover:text-primary transition-colors duration-300 ease-out">
                 {t('See A Doctor')}
               </button>
             </Link>
           </article>
-          
         </div>
 
         <div className="grid grid-cols-1 justify-cente lg:grid-cols-4 pt-16 py-10 gap-x-4 gap-y-8">
