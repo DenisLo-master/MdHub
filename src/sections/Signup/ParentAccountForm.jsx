@@ -1,14 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BsPlusCircle } from 'react-icons/bs'
 import { registerationStore } from '../../store/registerationStore'
 import { BiCaretDown } from 'react-icons/bi'
 import { useTranslation } from 'react-i18next' 
+import { AiFillCloseCircle, AiFillCheckSquare } from 'react-icons/ai'
 
-const genderOptions = [
-  { value: 'male', label: 'Male' },
-  { value: 'female', label: 'Female' },
-  { value: 'preferNotToSay', label: 'Prefer not to say' }
-];
 
 const ParentAccountForm = () => {
   const registerationFormData = registerationStore(state => state.registerationFormData)
@@ -17,6 +13,88 @@ const ParentAccountForm = () => {
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
   const childForms = registerationStore(state => state.childForms)
   const { t } = useTranslation()
+  const [strength, setStrength] = useState("")
+  const [suggestions, setSuggestions] = useState([])
+  const [conditionsFulfilled, setConditionsFulfilled] = useState([])
+
+  const getStrengthLabel = (strengthScore) => {
+    switch (strengthScore) {
+      case 1:
+        return "Weak";
+      case 2:
+        return "Fair";
+      case 3:
+        return "Good";
+      case 4:
+        return "Strong";
+      case 5:
+        return "Very Strong";
+      default:
+        return "";
+    }
+  }
+
+  const getSuggestions = (strengthScore) => {
+    const suggestions = [];
+
+    if (strengthScore < 2) {
+      suggestions.push("Password should be at least 8 characters long");
+    }
+
+    if (strengthScore < 3) {
+      suggestions.push("Password should include at least one uppercase letter");
+      suggestions.push("Password should include at least one lowercase letter");
+    }
+
+    if (strengthScore < 4) {
+      suggestions.push("Password should include at least one number");
+    }
+
+    if (strengthScore < 5) {
+      suggestions.push("Password should include at least one special character");
+    }
+
+    return suggestions;
+  }
+
+  const checkPasswordStrength = (password) => {
+    let strengthScore = 0;
+    const minLength = 8;
+    const hasLowerCase = /[a-z]/.test(password)
+    const hasUpperCase = /[A-Z]/.test(password)
+    const hasNumbers = /\d/.test(password)
+    const hasSpecialChars = /[\W]/.test(password)
+    const fulfilledConditions = []
+
+    if (password.length >= minLength) {
+      strengthScore++
+      fulfilledConditions.push("Minimum length of 8 characters")
+    }
+
+    if (hasLowerCase) {
+      strengthScore++
+      fulfilledConditions.push("At least one lowercase letter")
+    }
+
+    if (hasUpperCase) {
+      strengthScore++
+      fulfilledConditions.push("At least one uppercase letter")
+    }
+
+    if (hasNumbers) {
+      strengthScore++
+      fulfilledConditions.push("At least one number")
+    }
+
+    if (hasSpecialChars) {
+      strengthScore++
+      fulfilledConditions.push("At least one special character")
+    }
+
+    setStrength(getStrengthLabel(strengthScore))
+    setSuggestions(getSuggestions(strengthScore))
+    setConditionsFulfilled(fulfilledConditions)
+  }
 
 
   const handleDateChange = (date) => {
@@ -65,7 +143,7 @@ const ParentAccountForm = () => {
           required
         />
       </div>
-      <div className="w-full flex">
+      <div className="w-full flex flex-col gap-y-2 relative">
         <input
           className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
           name="password"
@@ -74,9 +152,41 @@ const ParentAccountForm = () => {
           title={t('your-password-must-be-at-least-8-characters-long-and-contain-at-least-one-uppercase-letter-one-lowercase-letter-and-one-number')}
           placeholder={t('password')}
           value={registerationFormData.password}
-          onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
+          onChange={({ target }) => {
+            handleRegisterationFormDataChange(target.name, target.value)
+            checkPasswordStrength(target.value)
+          }}
           required
         />
+        {registerationFormData.password && (
+          <div>
+            <ul>
+              {conditionsFulfilled.map((condition, index) => (
+                <li
+                  className="text-green-600 flex items-center gap-x-1 font-body gap-y-2"
+                  key={index}
+                >
+                  <AiFillCheckSquare />
+                  <p>{condition}</p>
+                </li>
+              ))}
+            </ul>
+            <ul>
+              {suggestions.map((suggestion, index) => (
+                <li
+                  className="text-red-600 flex items-center gap-x-1 font-body gap-y-2"
+                  key={index}
+                >
+                  <AiFillCloseCircle />
+                  <p>{suggestion}</p>
+                </li>
+              ))}
+            </ul>
+            <p className="absolute top-12 right-0 font-body">
+              Password Strength: <strong>{strength}</strong>
+            </p>
+          </div>
+        )}
       </div>
       <div className="text-xl flex flex-col lg:flex-row gap-y-4 items-center w-full gap-x-6">
 
