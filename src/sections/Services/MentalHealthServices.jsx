@@ -78,7 +78,7 @@ const MentalHealthServices = () => {
             </Link>
             <Link className="block w-full" to="/dashboard">
               <button className="rounded-full w-full text-lg flex justify-center py-3 text-white bg-transparent border border-white hover:bg-white hover:text-primary transition-colors duration-300 ease-out">
-                {t('See A Doctor')}
+                {t('get-care-now')}
               </button>
             </Link>
           </article>
