@@ -4,6 +4,7 @@ import dayjs from "dayjs"
 import { FaSpinner, FaTimes } from 'react-icons/fa'
 import { toast } from 'react-hot-toast'
 import Modal from '../../components/Modal'
+import { useNavigate } from 'react-router-dom'
 
 const AllUsers = () => {
   const [deleteDocId, setDeleteDocId] = useState("")
@@ -11,6 +12,7 @@ const AllUsers = () => {
   const [showDeleteModal, setShowDeleteModal] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const token = localStorage.getItem("jwtToken")
+  const navigate = useNavigate()
 
   const deleteUser = async (userId) => {
     try {
@@ -45,12 +47,11 @@ const AllUsers = () => {
       try {
         const response = await fetch(`https://mdhub-server.onrender.com/api/v1/users/get_users_payment_info`, {
           method: "GET",
-          // headers: {
-          //   "Authorization": `Bearer ${token}`
-          // }
+          headers: {
+            "Authorization": `Bearer ${token}`
+          }
         })
         const data = await response.json()
-        console.log(data)
         setUsers(data)
       } catch (error) {
         console.log(error)
@@ -77,10 +78,10 @@ const AllUsers = () => {
                 {users.map((user, index) => (
                   <tr
                     key={`{item#${index}}`}
-                    className={` ${index !== users.length ? "border-b border-gray-200 relative" : ""
+                    className={`${index !== users.length ? "border-b border-gray-200 relative" : ""
                       }`}
                   >
-                    <td className="py-3 px-6 text-left whitespace-nowrap">
+                    <td onClick={() => navigate(`/admin/user_info/${user._id}`)} className=" cursor-pointer py-3 px-6 text-left whitespace-nowrap">
                       <div className="flex items-center">
                         <div className="mr-2">
                           <img
@@ -110,7 +111,7 @@ const AllUsers = () => {
                           setShowDeleteModal(true)
                           setDeleteDocId(user._id)
                         }}
-                        className="absolute right-0 top-3 cursor-pointer"
+                        className="absolute z-10 right-0 top-3 cursor-pointer"
                       >
                         <FaTimes />
                       </div>
