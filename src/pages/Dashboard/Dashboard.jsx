@@ -4,12 +4,12 @@ import { registerationStore } from '../../store/registerationStore'
 import jwt from 'jwt-decode'
 import { Outlet } from 'react-router-dom'
 import { DashboardUserInfo } from '../../sections'
+import dayjs from 'dayjs'
 
 const Dashboard = () => {
   const navigate = useNavigate()
   const userInfo = registerationStore(state => state.userInfo)
   const setUserInfo = registerationStore(state => state.setUserInfo)
-
   useEffect(() => {
     const token = localStorage.getItem("jwtToken")
     const tokenInfo = token ? jwt(token) : {}
