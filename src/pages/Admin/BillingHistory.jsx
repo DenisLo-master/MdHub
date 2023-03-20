@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react'
 import dayjs from "dayjs"
 import { FaChevronDown } from 'react-icons/fa'
 import { UserPlaceholder } from '../../assets'
+import { useNavigate } from 'react-router-dom'
 
 const BillingHistory = () => {
   const [users, setUsers] = useState([])
   const [filteredState, setFilteredState] = useState()
   const token = localStorage.getItem("jwtToken")
+  const navigate = useNavigate()
 
   useEffect(() => {
     const getAllUsers = async () => {
@@ -67,8 +69,9 @@ const BillingHistory = () => {
             <tbody>
               {filteredState?.map((user, index) => (
                 <tr
+                  onClick={() => navigate(`/admin/user_info/${user._id}`)}
                   key={user._id}
-                  className={` ${index !== users.length - 1 ? "border-b border-gray-200" : ""
+                  className={`cursor-pointer ${index !== users.length - 1 ? "border-b border-gray-200" : ""
                     }`}
                 >
                   <td className="py-3 px-6 text-left whitespace-nowrap">
