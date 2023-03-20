@@ -41,7 +41,7 @@ const UpdateUserInfo = () => {
           updatedFields[key] = userInfoFormData[key]
         }
       })
-      const response = await fetch(`https://mdhub-server.onrender.com/${tokenInfo?.id}`, {
+      const response = await fetch(`https://mdhub-server.onrender.com//api/v1/users/${tokenInfo?.id}`, {
         method: "PUT",
         headers: {
           'Content-Type': 'application/json',
