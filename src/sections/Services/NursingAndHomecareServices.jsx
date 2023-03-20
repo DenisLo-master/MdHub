@@ -5,11 +5,6 @@ import {
   NursingAndHomeCareServices02,
   NursingAndHomeCareServices03,
   NursingAndHomeCareServices04,
-  OkIconWhite,
-  VirtualCare01,
-  VirtualCare02,
-  VirtualCare03,
-  VirtualCare04
 } from '../../assets'
 import { useTranslation } from 'react-i18next'
 
