@@ -95,7 +95,7 @@ const NursingAndHomecareServices = () => {
             <p>{t('transportation-assistance')}</p>
           </article>
 
-          <article className="relative p-4 bg-white text-center text-dark rounded-md">
+          <article className="relative p-4 bg-white text-center text-dark rounded-md h-16 leading-5">
             <p>{t('light-meal-prepping-housekeeping')}</p>
           </article>
 
