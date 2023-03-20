@@ -134,18 +134,18 @@ export const diagnosticsFAQData = [
 export const nursingHomecareFAQData = [
   {
     id: 1,
-    question: "What can our nurses and home care givers do?",
-    answer: "Mobile nurses and home caregivers can provide a variety of healthcare services and support to patients in their preferred location. These services may include assistance with daily living activities, such as bathing, dressing, and grooming, medication administration, wound care, vital signs monitoring,blood sample collection, injections, physical therapy exercises, and other medical treatments. Additionally, they can provide emotional support, companionship, and communication with the patient's healthcare team to ensure coordinated care."
+    question: "what-can-our-nurses-and-home-care-givers-do",
+    answer: "mobile-nurses-and-home-caregivers-can-provide-a-variety-of-healthcare-services-and-support-to-patients-in-their-preferred-location-these-services-may-include-assistance-with-daily-living-activities-such-as-bathing-dressing-and-grooming-medication-administration-wound-care-vital-signs-monitoring-blood-sample-collection-injections-physical-therapy-exercises-and-other-medical-treatments-additionally-they-can-provide-emotional-support-companionship-and-communication-with-the-patients-healthcare-team-to-ensure-coordinated-care"
   },
   {
     id: 2,
-    question: "Am I covered by my private insurance?",
-    answer: "Most private insurance companies will cover the expenses associated with medical laboratory analyses based on your plan."
+    question: "am-i-covered-by-my-private-insurance",
+    answer: "most-private-insurance-companies-will-cover-the-expenses-associated-with-medical-laboratory-analyses-based-on-your-plan"
 }, 
   {
     id: 3,
-    question: "How does home care service work?",
-    answer: "Each time a personal care support worker from MDHUB makes a service visit, the minimum booking duration is 3 hours. This is the minimum number of hours that MDHUB provides services for. MDHUB believes in providing a top-quality in-home care experience, which is achieved through consistency in the people who visit. MDHUB strives to keep the same caregivers on regular and consistent schedules as much as possible. However, there may be times and circumstances beyond our control that require us to assign a different support worker."
+    question: "how-does-home-care-service-work",
+    answer: "each-time-a-personal-care-support-worker-from-mdhub-makes-a-service-visit-the-minimum-booking-duration-is-3-hours-this-is-the-minimum-number-of-hours-that-mdhub-provides-services-for-mdhub-believes-in-providing-a-top-quality-in-home-care-experience-which-is-achieved-through-consistency-in-the-people-who-visit-mdhub-strives-to-keep-the-same-caregivers-on-regular-and-consistent-schedules-as-much-as-possible-however-there-may-be-times-and-circumstances-beyond-our-control-that-require-us-to-assign-a-different-support-worker"
   }
 ]
 
