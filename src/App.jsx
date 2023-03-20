@@ -31,7 +31,8 @@ import {
   AdminDashboard,
   Admin,
   AllUsers,
-  AdminLogin
+  AdminLogin,
+  GetUserInfoAdmin
 } from './pages'
 import { Toaster } from "react-hot-toast"
 import AdminNav from './components/AdminNav'
@@ -95,6 +96,7 @@ function App() {
             <Route path="/admin_login" element={<DefaultLayout><AdminLogin /></DefaultLayout>} />
             <Route path="/admin" element={<AdminLayout><Admin /></AdminLayout>}>
               <Route index element={<AdminDashboard />} />
+              <Route path="user_info/:id" element={<GetUserInfoAdmin />} />
               <Route path="all_users" element={<AllUsers />} />
               <Route path="add_user" element={<AddUser />} />
               <Route path="billing_history" element={<BillingHistory />} />
