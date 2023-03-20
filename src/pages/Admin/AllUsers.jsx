@@ -73,7 +73,6 @@ const AllUsers = () => {
                   <th className="py-3 px-6 text-left">Status</th>
                 </tr>
               </thead>
-              users.length && (
               <tbody>
                 {users.map((user, index) => (
                   <tr
@@ -120,7 +119,6 @@ const AllUsers = () => {
                 ))}
               </tbody>
             </table>
-            )
           </div>
         </article>
       </div>
