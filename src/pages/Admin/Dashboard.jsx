@@ -1,16 +1,41 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { UserPlaceholder } from '../../assets'
 import dayjs from "dayjs"
 import Modal from '../../components/Modal'
+import { BsPencilSquare } from "react-icons/bs"
+import { AiOutlineEnter, AiOutlineClose } from 'react-icons/ai'
+import toast from "react-hot-toast"
 
 const Dashboard = () => {
   const [usersThisWeek, setUsersThisWeek] = useState([])
   const [deletedUsersThisWeek, setDeletedUsersThisWeek] = useState([])
+  const [editLoginCode, setEditLoginCode] = useState(false)
+  const codeRef = useRef(null)
   const [totalRevenue, setTotalRevenue] = useState("")
   const [numberOfSubscriptions, setNumberOfSubscriptions] = useState("")
+  const [codeValue, setCodeValue] = useState("")
   const [showUserModal, setShowUserModal] = useState(false)
   const [selectedUser, setSelectedUser] = useState({})
   const token = localStorage.getItem("jwtToken")
+
+  const updateCode = async (e) => {
+    e.preventDefault()
+    setEditLoginCode(false)
+    try {
+      const response = await fetch(`https://mdhub-server.onrender.com/api/v1/users/updateCode/${selectedUser._id}`, {
+        method: "PUT",
+        headers: {
+          'Content-Type': 'application/json',
+          "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify({ codeValue })
+      })
+      await response.json()
+      toast.success("The code has been updated", { id: "update user code" })
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   useEffect(() => {
     const getUsers = async () => {
@@ -33,6 +58,7 @@ const Dashboard = () => {
     getUsers()
   }, [])
 
+
   return (
     <section className="pt-4 lg:pt-0">
       <div className="flex flex-col lg:flex-row gap-x-10 px-4 text-dark gap-y-4">
@@ -51,6 +77,7 @@ const Dashboard = () => {
                   <tr
                     onClick={() => {
                       setSelectedUser(user)
+                      setCodeValue(user.loginCode)
                       setShowUserModal(true)
                     }}
                     key={`{item#${index}}`}
@@ -172,9 +199,42 @@ const Dashboard = () => {
                     <strong>Phone: </strong>
                     <p>{selectedUser.phone}</p>
                   </div>
-                  <div>
+                  <div className="w-[160px]">
                     <strong>Login Code: </strong>
-                    <p>{selectedUser.loginCode}</p>
+                    <div>
+                      {
+                        editLoginCode ? (
+                          <form onSubmit={updateCode} className="flex gap-x-1 items-center relative">
+                            <input
+                              ref={codeRef}
+                              onChange={({ target }) => setCodeValue(target.value)}
+                              value={codeValue}
+                              className="w-[130px] bg-slate-200 outline-none"
+                              type="text"
+                              autoFocus
+                            />
+                            <button className="absolute right-10 top-1" type="submit">
+                              <AiOutlineEnter className="cursor-pointer" />
+                            </button>
+                            <div className="cursor-pointer" onClick={() => setEditLoginCode(false)}>
+                              <AiOutlineClose />
+                            </div>
+                          </form>
+                        )
+                          :
+                          (
+                            <div className="flex items-center gap-x-1">
+                              <p className="w-[130px]">{selectedUser.loginCode}</p>
+                              <div className="cursor-pointer" onClick={() => {
+                                setEditLoginCode(true)
+                                codeRef.current.focus()
+                              }}>
+                                <BsPencilSquare />
+                              </div>
+                            </div>
+                          )
+                      }
+                    </div>
                   </div>
                   <div>
                     <strong>Address: </strong>
