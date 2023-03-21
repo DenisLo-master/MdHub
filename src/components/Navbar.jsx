@@ -30,7 +30,7 @@ const Navbar = () => {
   console.log(i18n.language)
 
   return (
-    <nav className="md:border-b border-primary pb-[2px] md:pb-[6px] shadow">
+    <nav className="md:border-b border-primary pb-[2px] md:pb-[6px] shadow fixed top-0 right-0 w-full z-50 bg-white">
       <Drawer showDrawer={showDrawer} close={setShowDrawer} />
       <div className="flex items-center py-4">
         <article className="pl-4 w-[294px] flex">
