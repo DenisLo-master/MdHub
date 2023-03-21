@@ -8,8 +8,8 @@
   "Sign Out": "Se déconnecter",
   "Login": "Connexion",
   "Sign Up": "S'inscrire",
-  "Accessible, quality healthcare at your fingertips.": "Des soins de santé de qualité, à portée de main.",
-  "From meeting a doctor to ordering a perscription get the 360 healthcare you need all in one place.": "Parlez à un médecin canadien en quelques minutes ou prenez rendez-vous avec un spécialiste - aucune référence nécessaire. Ainsi, vous n'aurez jamais à attendre pour voir un médecin à nouveau.",
+  "Accessible, quality healthcare at your fingertips.": "Des soins de santé accessibles et de qualité à portée de main.",
+  "From meeting a doctor to ordering a perscription get the 360 healthcare you need all in one place.": "De la consultation avec un médecin à la commande d'une ordonnance, obtenez les soins de santé complets dont vous avez besoin en un seul endroit.",
   "See A Doctor": "Voir un médecin",
   "Get care today for": "Obtenez des soins aujourd'hui pour",
   "diagnosis": "diagnostic",
@@ -50,12 +50,16 @@
 <<<<<<< HEAD
   "mental": "mental",
   "health": "santé",
+<<<<<<< HEAD
   "In today's faced-paced, modern and ultra-connected world, your mental health is more important than ever. With MDHUB, you can easily get mental health support when you need it most.": "Prenez le contrôle de votre bienêtre mental. Obtenez facilement un soutien en santé mentale auprès de médecins et de thérapeutes.",
 =======
   "mental": "santé",
   "health": "mental",
   "In today's faced-paced, modern and ultra-connected world, your mental health is more important than ever. With MDHUB, you can easily get mental health support when you need it most.": "Dans le monde moderne et ultra-connecté d'aujourd'hui, votre santé mentale est plus importante que jamais. Avec MDHUB, vous pouvez facilement obtenir un soutien en santé mentale lorsque vous en avez le plus besoin.",
 >>>>>>> 6b0eab9c99a8bde3b263cf185229d0a0825f991a
+=======
+  "In today's faced-paced, modern and ultra-connected world, your mental health is more important than ever. With MDHUB, you can easily get mental health support when you need it most.": "Dans le monde moderne et ultra-connecté d'aujourd'hui, votre santé mentale est plus importante que jamais. Avec MDHUB, vous pouvez facilement obtenir un soutien en santé mentale lorsque vous en avez le plus besoin.",
+>>>>>>> parent of b80731a (added new translations)
   "online": "en ligne",
   "pharmacy": "pharmacie",
   "Stop wasting time chasing down refills or waiting in line. Easily access our online pharmacy to get prescriptions filled or renewed and delivered right to your door.": "Arrêtez de perdre du temps à chercher des renouvellements de prescription ou à attendre en ligne. Accédez facilement à notre pharmacie en ligne pour faire remplir ou renouveler vos prescriptions et les faire livrer directement chez vous.",
