@@ -64,14 +64,11 @@ const HomeSlider = () => {
       >
         <div>
           <div className="bg-virtualDoctor px-6 h-[304px] 2xl:h-[370px] flex justify-center lg:justify-start items-center gap-x-6 2xl:gap-x-16  relative overflow-hidden">
-            <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">{t('virtual')}<br /> {t('doctor')}</h2>
+            <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">{t('virtual-care')}</h2>
             <img className="hidden lg:block absolute top-0 right-0 w-full max-w-[270px] 2xl:max-w-[320px]" src={VirtualDoctorBanner} alt="Virtual Doctor Banner" />
           </div>
           <div className="p-6 pb-8 w-full flex flex-col justify-between">
             <div className="w-full space-y-3 text-base 2xl:text-xl font-body text-left">
-              <p>
-                {t('Treatment and diagnosis for 70% of medical issues can be done virtually.')}
-              </p>
               <p>
                 {t('connect-with-a-virtual-doctor-in-minutes-24-7-or-book-an-appointment-with-a-specialist-no-referral-needed')}
               </p>
@@ -111,18 +108,13 @@ const HomeSlider = () => {
 
         <div>
           <div className="bg-onlinePharmacy px-6 h-[304px] 2xl:h-[370px] flex justify-center lg:justify-start items-center gap-x-6 2xl:gap-x-16 relative">
-            <h2 className="text-white text-[66px] 2xl:text-8xl leading-[70px]">{t('online')} <br /> {t('pharmacy')}</h2>
+            <h2 className="text-white text-[66px] 2xl:text-8xl leading-[70px]">{t('pharmacy-0')}</h2>
             <img className="hidden absolute top-20 right-0 lg:block w-full max-w-[310px]" src={OnlinePharmacyBanner} alt="Online Pharmacy Banner" />
           </div>
           <div className="p-6 pb-8 w-full  flex flex-col justify-between">
             <div className="w-full space-y-3 text-base 2xl:text-xl font-body text-left">
               <p>
-                {t('Stop wasting time chasing down refills or waiting in line. Easily access our online pharmacy to get prescriptions filled or renewed and delivered right to your door.')}
-              </p>
-              <p>
-                <strong>
-                  {t('Your pharmacist is just a text away.')}
-                </strong>
+                {t('get-prescriptions-filled-or-renewed-using-our-affiliate-online-pharmacy-and-delivered-right-to-your-door')} 
               </p>
             </div>
             <Link className="block pt-4" to="/services/online-pharmacy">
@@ -138,7 +130,7 @@ const HomeSlider = () => {
 
         <div>
           <div className="bg-diagnostics diagnostics-bg px-6 h-[304px] 2xl:h-[370px] flex justify-center lg:justify-start items-center gap-x-6 2xl:gap-x-16">
-            <h2 className="text-white text-[70px] 2xl:text-8xl leading-[70px]">{t('diagnostics')}</h2>
+            <h2 className="text-white text-[70px] 2xl:text-8xl leading-[70px]">{t('lab-testing-and-diagnostics-0')}</h2>
           </div>
           <div className="p-6 pb-8 w-full  flex flex-col justify-between">
             <div className="w-full space-y-3 text-base 2xl:text-xl font-body text-left">

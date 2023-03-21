@@ -428,3 +428,9 @@ p {
     display: none !important;
   }
 }
+@media only screen and (min-width: 1600px) {
+  .carousel .control-dots {
+    top: 300px !important;
+    height: 28px !important;
+  }
+}
