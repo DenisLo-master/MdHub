@@ -1,7 +1,7 @@
 {
   "for you": "pour vous",
-  "for family": "pour la famille",
-  "for corporate": "pour l'entreprise",
+  "for family": "pour votre famille",
+  "for corporate": "pour votre entreprise",
   "services": "services",
   "rates": "taux",
   "Dashboard": "Tableau de bord",
@@ -47,9 +47,15 @@
   "Treatment and diagnosis for 70% of medical issues can be done virtually.": "Le traitement et le diagnostic de 70% des problèmes médicaux peuvent être effectués virtuellement.",
   "Connect with a virtual doctor in minutes, 24/7. Or, book an appointment with a specialist - no referral needed.": "Connectez-vous avec un médecin virtuel en quelques minutes, 24/7. Ou, prenez rendez-vous avec un spécialiste - aucune référence nécessaire.",
   "Learn More": "En savoir plus",
+<<<<<<< HEAD
   "mental": "mental",
   "health": "santé",
   "In today's faced-paced, modern and ultra-connected world, your mental health is more important than ever. With MDHUB, you can easily get mental health support when you need it most.": "Prenez le contrôle de votre bienêtre mental. Obtenez facilement un soutien en santé mentale auprès de médecins et de thérapeutes.",
+=======
+  "mental": "santé",
+  "health": "mental",
+  "In today's faced-paced, modern and ultra-connected world, your mental health is more important than ever. With MDHUB, you can easily get mental health support when you need it most.": "Dans le monde moderne et ultra-connecté d'aujourd'hui, votre santé mentale est plus importante que jamais. Avec MDHUB, vous pouvez facilement obtenir un soutien en santé mentale lorsque vous en avez le plus besoin.",
+>>>>>>> 6b0eab9c99a8bde3b263cf185229d0a0825f991a
   "online": "en ligne",
   "pharmacy": "pharmacie",
   "Stop wasting time chasing down refills or waiting in line. Easily access our online pharmacy to get prescriptions filled or renewed and delivered right to your door.": "Arrêtez de perdre du temps à chercher des renouvellements de prescription ou à attendre en ligne. Accédez facilement à notre pharmacie en ligne pour faire remplir ou renouveler vos prescriptions et les faire livrer directement chez vous.",
@@ -174,7 +180,7 @@
   "see-a-mental-health-therapist-with-no-appointment-necessary-all-you-need-to-do-is-choose-the-topic-youd-like-to-discuss-with-a-therapist-and-book-an-appointment-sessions-are-50-minutes-in-length-the-fee-for-a-session-ranges-from-120-160-depending-on-your-region-if-you-have-insurance-this-fee-is-often-covered-by-health-benefits": "Consultez un thérapeute en santé mentale, sans rendez-vous nécessaire. \nIl vous suffit de choisir le sujet dont vous souhaitez discuter avec un thérapeute et de prendre rendez-vous. \nLes séances durent 50 minutes. \nLes frais pour une session varient de 120 $ à 160 $, selon votre région. \nSi vous avez une assurance, ces frais sont souvent couverts par les prestations de santé.",
   "virtual-doctor": "médecin virtuel",
   "online-pharmacy": "pharmacie en ligne",
-  "nursing-and-homecare": "allaitement",
+  "nursing-and-homecare": "soins infirmiers",
   "Log into your member dashboard and select pharmacy, follow the steps to create your pharmaceutical profile.": "Connectez-vous à votre tableau de bord de membre et sélectionnez la pharmacie, suivez les étapes pour créer votre profil pharmaceutique.",
   "Load your prescription, transfer from your current pharmacy, or see a doctor to obtain a new one.": "Chargez votre ordonnance, transférez-la de votre pharmacie actuelle ou consultez un médecin pour en obtenir une nouvelle.",
   "Our pharmacy team will call to confirm your medication and proceed to deliver directly to your door.": "Notre équipe de pharmacie appellera pour confirmer votre médication et procédera à la livraison directement à votre porte.",
@@ -299,7 +305,7 @@
   "select-a-service-for-the-wheel-or-form-below-to-book-a-new-appointment-today": "Sélectionnez un service pour la roue ou le formulaire ci-dessous pour prendre un nouveau rendez-vous dès aujourd'hui !",
   "mental-health": "Santé mentale",
   "diagnostics-0": "Diagnostique",
-  "nursing-and-homecare-0": "Allaitement",
+  "nursing-and-homecare-0": "Soins infirmiers",
   "your-maple-login-code": "Votre code de connexion Maple",
   "unlimited-usage": "Utilisation illimitée",
   "edit-profile": "Editer le profil",
