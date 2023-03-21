@@ -27,6 +27,8 @@ const Navbar = () => {
     window.scrollTo(0, 0)
   }, [location])
 
+  console.log(i18n.language)
+
   return (
     <nav className="md:border-b border-primary pb-[2px] md:pb-[6px] shadow">
       <Drawer showDrawer={showDrawer} close={setShowDrawer} />
@@ -88,13 +90,13 @@ const Navbar = () => {
                 </button>
                 <Link to="/dashboard">
                   <button
-                    className="rounded-full px-9 py-1 border border-primary text-white bg-primary hover:bg-transparent hover:text-primary transition-all ease-in-out duration-300">
+                    className={`rounded-full px-5 py-1 border border-primary text-white bg-primary hover:bg-transparent hover:text-primary transition-all ease-in-out duration-300`}>
                     {t('Dashboard')}
                   </button>
                 </Link>
                 <button
                   onClick={handleSignout}
-                  className="rounded-full px-9 py-1 border border-primary text-white bg-primary hover:bg-transparent hover:text-primary transition-all ease-in-out duration-300">
+                  className="rounded-full px-5 py-1 border border-primary text-white bg-primary hover:bg-transparent hover:text-primary transition-all ease-in-out duration-300">
                   {t('Sign Out')}
                 </button>
               </div>
