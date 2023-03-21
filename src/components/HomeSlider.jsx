@@ -88,11 +88,11 @@ const HomeSlider = () => {
         </div>
 
         <div>
-          <div className="bg-mentalHealth px-6 h-[304px] 2xl:h-[370px] flex justify-center lg:justify-start items-center gap-x-6 2xl:gap-x-16 2xl:justify-center">
-            <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">{t('mental')}<br /> {t('health')}</h2>
+          <div className="bg-mentalHealth px-6 h-[304px] 2xl:h-[370px] flex justify-center items-center gap-x-6 2xl:gap-x-16 2xl:justify-center">
+            <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px] lowercase">{t('mental-health')}</h2>
             <img className="hidden lg:block w-full max-w-[310px]" src={MentalHealthBanner} alt="Mental Health Banner" />
           </div>
-          <div className="p-6 pb-8 w-full  flex flex-col justify-between">
+          <div className="relative z-20 p-6 pb-8 w-full flex flex-col justify-between">
             <div className="w-full space-y-3 text-base 2xl:text-xl font-body text-left">
               <p>
                 {t("In today's faced-paced, modern and ultra-connected world, your mental health is more important than ever. With MDHUB, you can easily get mental health support when you need it most.")}
