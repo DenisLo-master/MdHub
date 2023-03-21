@@ -420,6 +420,7 @@ p {
 
 .carousel .control-dots {
   top: 260px !important;
+  height: 28px !important;
 }
 
 @media only screen and (max-width: 500px) {
