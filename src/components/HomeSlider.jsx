@@ -63,7 +63,7 @@ const HomeSlider = () => {
         )}
       >
         <div>
-          <div className="bg-virtualDoctor px-10 h-[304px] 2xl:h-[370px] flex justify-center lg:justify-start items-center gap-x-6 2xl:gap-x-16 2xl:justify-center relative overflow-hidden">
+          <div className="bg-virtualDoctor px-6 h-[304px] 2xl:h-[370px] flex justify-center lg:justify-start items-center gap-x-6 2xl:gap-x-16 2xl:justify-center relative overflow-hidden">
             <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">{t('virtual')}<br /> {t('doctor')}</h2>
             <img className="hidden lg:block absolute top-0 right-0 w-full max-w-[270px] 2xl:max-w-[320px]" src={VirtualDoctorBanner} alt="Virtual Doctor Banner" />
           </div>
@@ -88,7 +88,7 @@ const HomeSlider = () => {
         </div>
 
         <div>
-          <div className="bg-mentalHealth px-10 h-[304px] 2xl:h-[370px] flex justify-center lg:justify-start items-center gap-x-6 2xl:gap-x-16 2xl:justify-center">
+          <div className="bg-mentalHealth px-6 h-[304px] 2xl:h-[370px] flex justify-center lg:justify-start items-center gap-x-6 2xl:gap-x-16 2xl:justify-center">
             <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">{t('mental')}<br /> {t('health')}</h2>
             <img className="hidden lg:block w-full max-w-[310px]" src={MentalHealthBanner} alt="Mental Health Banner" />
           </div>
@@ -110,7 +110,7 @@ const HomeSlider = () => {
         </div>
 
         <div>
-          <div className="bg-onlinePharmacy px-10 h-[304px] 2xl:h-[370px] flex justify-center lg:justify-start items-center gap-x-6 2xl:gap-x-16 2xl:justify-center relative">
+          <div className="bg-onlinePharmacy px-6 h-[304px] 2xl:h-[370px] flex justify-center lg:justify-start items-center gap-x-6 2xl:gap-x-16 2xl:justify-center relative">
             <h2 className="text-white text-[66px] 2xl:text-8xl leading-[70px]">{t('online')} <br /> {t('pharmacy')}</h2>
             <img className="hidden absolute top-20 right-0 lg:block w-full max-w-[310px]" src={OnlinePharmacyBanner} alt="Online Pharmacy Banner" />
           </div>
@@ -137,7 +137,7 @@ const HomeSlider = () => {
         </div>
 
         <div>
-          <div className="bg-diagnostics diagnostics-bg px-10 h-[304px] 2xl:h-[370px] flex justify-center lg:justify-start items-center gap-x-6 2xl:gap-x-16 2xl:justify-center">
+          <div className="bg-diagnostics diagnostics-bg px-6 h-[304px] 2xl:h-[370px] flex justify-center lg:justify-start items-center gap-x-6 2xl:gap-x-16 2xl:justify-center">
             <h2 className="text-white text-[70px] 2xl:text-8xl leading-[70px]">{t('diagnostics')}</h2>
           </div>
           <div className="p-6 pb-8 w-full  flex flex-col justify-between">
@@ -161,8 +161,8 @@ const HomeSlider = () => {
         </div>
 
         <div>
-          <div className="bg-nursingHomecare px-10 h-[304px] 2xl:h-[370px] flex justify-center lg:justify-start items-center gap-x-6 2xl:gap-x-16 2xl:justify-center relative overflow-hidden">
-            <h2 className="text-white text-[70px] 2xl:text-8xl leading-[70px]">
+          <div className="bg-nursingHomecare px-6 h-[304px] 2xl:h-[370px] flex justify-center lg:justify-start pt-3 lg:pt-0 lg:items-center gap-x-6 2xl:gap-x-16 2xl:justify-center relative overflow-hidden">
+            <h2 className="text-white text-[70px] 2xl:text-8xl leading-[60px] lg:leading-[70px]">
               {t('nursing &')} <br /> {t('homecare')}
             </h2>
             <img className="hidden lg:block absolute top-24 right-0 w-full max-w-[260px]" src={NursingAndHomecareBanner} alt="Nursing and Homecare Banner" />
