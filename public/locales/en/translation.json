@@ -74,10 +74,12 @@
   "Step 1": "Step 1",
   "Step 2": "Step 2",
   "Step 3": "Step 3",
+  "Book an appointment": "Book an appointment",
+  "Get treated on the spot. Book an appointment with one of our specialists or see our mobile nurse offerings to have them come directly to you.": "Get treated on the spot. Book an appointment with one of our specialists or see our mobile nurse offerings to have them come directly to you.",
   "Sign up for a membership": "Sign up for a membership",
-  "Click on the “Sign Up” button and choose your membership type. Then, fill in your personal information, including your name, email address, and payment details.": "Click on the “Sign Up” button and choose your membership type. Then, fill in your personal information, including your name, email address, and payment details.",
+  "Click on the “Sign Up” button and choose the membership type that works best for you. Then, answer a few questions about yourself.": "Click on the “Sign Up” button and choose the membership type that works best for you. Then, answer a few questions about yourself.",
   "Explore our dashboard": "Explore our dashboard",
-  "Go to your MDHUB dashboard. Here, you can easily access our services, including our online pharmacy and labs, or book an appointment with a specialist.": "Go to your MDHUB dashboard. Here, you can easily access our services, including our online pharmacy and labs, or book an appointment with a specialist.",
+  "Go to your MDHUB dashboard. Here, you can access all your membership services: 24/7 virtual doctors, online pharmacy, lab testing, Headspace, and mental health help.": "Go to your MDHUB dashboard. Here, you can access all your membership services: 24/7 virtual doctors, online pharmacy, lab testing, Headspace, and mental health help.",
   "Get care now": "Get care now",
   "See a doctor in minutes, 24/7, without booking an appointment in advance. Our doctors can treat and diagnose 70% of medical issues online.": "See a doctor in minutes, 24/7, without booking an appointment in advance. Our doctors can treat and diagnose 70% of medical issues online.",
   "All of this, for as little as $29.99 a month.": "All of this, for as little as $29.99 a month.",
@@ -438,5 +440,7 @@
   "care": "care",
   "pharmacy-0": "Pharmacy",
   "get-prescriptions-filled-or-renewed-using-our-affiliate-online-pharmacy-and-delivered-right-to-your-door": "Get prescriptions filled or renewed using our affiliate online pharmacy and delivered right to your door.",
-  "lab-testing-and-diagnostics-0": "Lab testing & diagnostics"
+  "lab-testing-and-diagnostics-0": "Lab testing & diagnostics",
+  "get-safe-and-professional-lab-testing-from-the-comfort-of-your-home-or-office": "Get safe and professional lab testing from the comfort of your home or office.",
+  "get-professional-care-from-our-team-of-nurses-and-homecare-helpers-that-come-directly-to-you": "Get professional care from our team of nurses and homecare helpers that come directly to you."
 }

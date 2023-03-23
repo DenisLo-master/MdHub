@@ -11,6 +11,8 @@
   "Accessible, quality healthcare at your fingertips.": "Des soins de santé accessibles et de qualité à portée de main.",
   "From meeting a doctor to ordering a perscription get the 360 healthcare you need all in one place.": "De la consultation avec un médecin à la commande d'une ordonnance, obtenez les soins de santé complets dont vous avez besoin en un seul endroit.",
   "See A Doctor": "Voir un médecin",
+  "Book an appointment": "Prenez rendez-vous",
+  "Get treated on the spot. Book an appointment with one of our specialists or see our mobile nurse offerings to have them come directly to you.": "Recevez un traitement instantanément , commandez vos médicaments auprès d'un pharmacien, prenez rendez-vous pour un test de laboratoire, obtenez de l'aide en santé mentale auprès de l'un de nos spécialistes ou découvrez nos offres de soins infirmiers mobiles.",
   "Get care today for": "Obtenez des soins aujourd'hui pour",
   "diagnosis": "diagnostic",
   "prescriptions & renewals": "ordonnances et renouvellements",
@@ -75,9 +77,9 @@
   "Step 2": "Étape 2",
   "Step 3": "Étape 3",
   "Sign up for a membership": "S'inscrire pour une adhésion",
-  "Click on the “Sign Up” button and choose your membership type. Then, fill in your personal information, including your name, email address, and payment details.": "Cliquez sur le bouton “S'inscrire” et choisissez votre type d'adhésion. Ensuite, remplissez vos informations personnelles, y compris votre nom, votre adresse e-mail et vos informations de paiement.",
+  "Click on the “Sign Up” button and choose the membership type that works best for you. Then, answer a few questions about yourself.": "Cliquez sur le bouton \"S'inscrire\" et choisissez le type d'adhésion qui convient le mieux à vos besoins. Ensuite répondez à quelques questions afin que nous puissions mieux vous connaître.",
   "Explore our dashboard": "Explorer notre tableau de bord",
-  "Go to your MDHUB dashboard. Here, you can easily access our services, including our online pharmacy and labs, or book an appointment with a specialist.": "Accédez à votre tableau de bord MDHUB. Ici, vous pouvez facilement accéder à nos services, y compris notre pharmacie en ligne et nos laboratoires, ou prendre rendez-vous avec un spécialiste.",
+  "Go to your MDHUB dashboard. Here, you can access all your membership services: 24/7 virtual doctors, online pharmacy, lab testing, Headspace, and mental health help.": "Accédez à votre tableau de bord MDHUB. Ici, vous pouvez facilement accéder à nos services: 24/7 télémédecine, pharmacie en ligne, laboratoires, Headspace et support de pour la Santé mentale",
   "Get care now": "Obtenir des soins maintenant",
   "See a doctor in minutes, 24/7, without booking an appointment in advance. Our doctors can treat and diagnose 70% of medical issues online.": "Consultez un médecin en quelques minutes, 24 heures sur 24, 7 jours sur 7, sans prendre rendez-vous à l'avance. Nos médecins peuvent traiter et diagnostiquer en ligne 70% des problèmes médicaux.",
   "All of this, for as little as $29.99 a month.": "Tout cela, pour aussi peu que 29,99 $ par mois.",
@@ -174,7 +176,7 @@
   "see-a-mental-health-therapist-with-no-appointment-necessary-all-you-need-to-do-is-choose-the-topic-youd-like-to-discuss-with-a-therapist-and-book-an-appointment-sessions-are-50-minutes-in-length-the-fee-for-a-session-ranges-from-120-160-depending-on-your-region-if-you-have-insurance-this-fee-is-often-covered-by-health-benefits": "Consultez un thérapeute en santé mentale, sans rendez-vous nécessaire. \nIl vous suffit de choisir le sujet dont vous souhaitez discuter avec un thérapeute et de prendre rendez-vous. \nLes séances durent 50 minutes. \nLes frais pour une session varient de 120 $ à 160 $, selon votre région. \nSi vous avez une assurance, ces frais sont souvent couverts par les prestations de santé.",
   "virtual-doctor": "médecin virtuel",
   "online-pharmacy": "pharmacie en ligne",
-  "nursing-and-homecare": "Soins infirmiers",
+  "nursing-and-homecare": "Soins infirmiers et à domicile",
   "Log into your member dashboard and select pharmacy, follow the steps to create your pharmaceutical profile.": "Connectez-vous à votre tableau de bord de membre et sélectionnez la pharmacie, suivez les étapes pour créer votre profil pharmaceutique.",
   "Load your prescription, transfer from your current pharmacy, or see a doctor to obtain a new one.": "Chargez votre ordonnance, transférez-la de votre pharmacie actuelle ou consultez un médecin pour en obtenir une nouvelle.",
   "Our pharmacy team will call to confirm your medication and proceed to deliver directly to your door.": "Notre équipe de pharmacie appellera pour confirmer votre médication et procédera à la livraison directement à votre porte.",
@@ -439,5 +441,7 @@
   "care": "se soucier",
   "pharmacy-0": "Pharmacie",
   "get-prescriptions-filled-or-renewed-using-our-affiliate-online-pharmacy-and-delivered-right-to-your-door": "Faites remplir ou renouveler vos ordonnances en utilisant notre pharmacie en ligne affiliée et faites-les livrer directement à votre porte.",
-  "lab-testing-and-diagnostics-0": "Tests de laboratoire et diagnostics"
+  "lab-testing-and-diagnostics-0": "Tests de laboratoire et diagnostics",
+  "get-safe-and-professional-lab-testing-from-the-comfort-of-your-home-or-office": "Obtenez des tests de laboratoire sûrs et professionnels depuis le confort de votre domicile ou de votre bureau.",
+  "get-professional-care-from-our-team-of-nurses-and-homecare-helpers-that-come-directly-to-you": "Recevez des soins professionnels de notre équipe d'infirmières et professionnels de soins à domicile qui viennent directement chez vous."
 }
