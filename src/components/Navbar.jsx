@@ -27,7 +27,6 @@ const Navbar = () => {
     window.scrollTo(0, 0)
   }, [location])
 
-  console.log(i18n.language)
 
   return (
     <nav className="md:border-b border-primary pb-[2px] md:pb-[6px] shadow fixed top-0 right-0 w-full z-50 bg-white">
