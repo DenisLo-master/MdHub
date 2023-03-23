@@ -19,17 +19,19 @@ const ServicesMentalHealth = () => {
   const { t } = useTranslation()
   return (
     <section className="font-main bg-white py-10">
-      <header className="bg-mentalHealth text-white w-full lg:h-[560px] py-10">
-        <div className="max-w-[86rem] mx-auto flex justify-between px-4">
+      <header className="bg-mentalHealth text-white w-full py-10">
+        <div className="max-w-[86rem] mx-auto flex items-center justify-between px-4">
           <article className="space-y-5 flex flex-col items-center lg:items-start">
             <h2 className="w-full text-center lg:text-left text-[44px] lg:text-[88px] leading-[90px] max-w-[280px]">
               {t('mental health')}
             </h2>
             <p className="text-center lg:text-left font-body text-lg max-w-lg py-3">
-              {t('in-todays-fast-paced-modern-and-ultra-connected-world-your-mental-health-is-more-important-than-ever-with-mdhub-you-can-easily-get-mental-health-support-when-you-need-it-most')}
+              {t('mental-health-includes-our-emotional-psychological-and-social-well-being-it-affects-how-we-think-feel-and-act-it-also-helps-determine-how-we-handle-stress-relate-to-others-and-make-healthy-choices-mental-health-has-also-been-proven-to-play-a-key-role-in-our-physical-well-being-and-is-a-key-support-benefit-with-all-mdhub-memberships'
+              )
+              }
             </p>
             <Link to="/register">
-              <button className="rounded-full w-[240px] text-lg flex justify-center py-2 border bg-white text-mentalHealth border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
+              <button className="rounded-full w-[260px] text-lg flex justify-center py-2 border bg-white text-mentalHealth border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
                 {t('sign-up-today')}
               </button>
             </Link>
@@ -64,15 +66,15 @@ const ServicesMentalHealth = () => {
         <div className="w-full max-w-4xl mx-auto flex flex-col lg:flex-row item-center justify-between text-center">
           <article className="space-y-6 flex flex-col items-center">
             <img src={MentalHealthImg} alt="mental health" />
-            <p className="font-body">{t('mental-health-frontline')}</p>
+            <p className="font-body">{t('mental-health-physicians')}</p>
           </article>
           <article className="space-y-6 pt-6 flex flex-col items-center">
             <img src={HearBrainImage} alt="heart and brain" />
-            <p className="md:pt-2 font-body">{t('mental-health-specialists')}</p>
+            <p className="md:pt-2 font-body">{t('mental-health-therapists')}</p>
           </article>
           <article className="space-y-6 flex flex-col items-center md:-mt-3">
             <img src={MeditationImage} alt="meditation" />
-            <p className="max-w-[180px] font-body">{t('headspace-wellness-and-meditation-app')}</p>
+            <p className="max-w-[180px] font-body">{t('headspace-wellness-and-meditation-app-0')}</p>
           </article>
         </div>
       </section>
@@ -84,7 +86,7 @@ const ServicesMentalHealth = () => {
         <div className="w-full max-w-[530px] space-y-4">
           <h2 className="text-4xl">{t('what-is-headspace')}?</h2>
           <p className="font-body">
-            {t('headspace-is-an-app-that-teaches-you-how-to-meditate-meditation-has-been-shown-to-help-people-stress-less-focus-more-and-sleep-better-headspace-is-meditation-made-simple-teaching-you-life-changing-mindfulness-skills-in-just-a-few-minutes-a-day')}
+            {t('you-can-think-of-headspace-as-your-minds-best-friend-through-science-backed-meditation-and-mindfulness-tools-headspace-helps-you-create-life-changing-habits-to-support-your-mental-health-and-find-a-healthier-happier-you-with-your-mdhub-membership-you-can-enjoy-3-months-free-with-your-mdhub-membership-download-the-app-and-start-feeling-better-in-just-a-few-minutes-a-day')}
           </p>
         </div>
       </section>
@@ -99,7 +101,7 @@ const ServicesMentalHealth = () => {
             <Link to="/register">
               <button
                 type="button"
-                className={`rounded-full w-56 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
+                className={`rounded-full w-72 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
               >
                 {t('sign-up-today')}
               </button>
@@ -113,7 +115,7 @@ const ServicesMentalHealth = () => {
             <Link to="/register">
               <button
                 type="button"
-                className={`rounded-full w-56 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
+                className={`rounded-full w-72 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
               >
                 {t('sign-up-today')}
               </button>
