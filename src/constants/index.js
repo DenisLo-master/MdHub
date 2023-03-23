@@ -83,23 +83,29 @@ export const virtualDoctorFAQData = [
     question: 'can-i-get-a-doctors-note',
     answer: "a-doctors-note-is-a-written-document-that-confirms-a-medical-condition-and-recommends-taking-time-off-to-recover-its-often-required-for-work-or-school-absences-as-proof-of-the-need-for-the-time-off-with-mdhub-you-can-obtain-a-doctors-note-or-sick-note-online-at-the-doctors-discretion-in-just-a-few-minutes"
   },
+  {
+    id: 5,
+    question: 'can-mdhub-doctors-give-blood-work-requisitions',
+    answer: "our-virtual-doctors-can-issue-blood-test-requisitions-based-on-their-medical-judgment-and-what-they-consider-necessary-if-further-testing-is-needed-your-doctor-will-provide-a-requisition-form-during-your-online-consultation",
+    secondParagraph: "after-the-test-the-results-will-be-sent-to-your-account-you-can-then-download-them-and-share-them-with-your-regular-doctor-or-request-another-virtual-visit-to-have-one-of-our-doctors-review-the-results-with-you"
+  },
 ]
 
 export const onlinePharmacyFAQData = [
   {
     id: 1,
-    question: "what-is-online-pharmacy-and-why-should-i-use-it",
-    answer: "you-always-have-the-choice-to-go-to-the-pharmacy-of-your-choice-using-an-online-pharmacy-is-easy-and-convenient-getting-started-is-a-breeze-with-a-quick-and-easy-online-process-to-ensure-the-highest-quality-of-service-youll-receive-a-personalized-welcome-call-to-ensure-that-your-experience-is-tailored-to-your-needs-with-our-affiliated-online-pharmacy-the-prescription-process-is-simple-and-stress-free-0"
+    question: "what-is-mdhubs-affiliate-online-pharmacy-and-why-should-i-use-it",
+    answer: "mdhubs-affiliate-pharmacy-is-provided-through-industry-leading-pharmacy-partners-it-is-easy-and-convenient-you-can-get-started-with-our-online-process-and-youll-also-receive-a-personalized-welcome-call-to-ensure-that-your-experience-is-tailored-to-your-needs-keep-in-mind-that-if-you-have-a-physical-pharmacy-you-prefer-you-always-have-the-option-of-sending-your-prescriptions-there"
   },
   {
     id: 2,
-    question: "can-i-communicate-with-a-real-pharmacist",
-    answer: "you-have-access-to-a-team-of-licensed-pharmacist-accessible-by-phone-text-chat-and-email-for-emergencies-only-24-7-phone-service-is-provided"
+    question: "can-i-talk-to-a-real-pharmacist",
+    answer: "yes-you-have-access-to-a-team-of-licensed-pharmacists-accessible-by-phone-text-chat-and-email-and-you-can-use-our-24-7-emergency-phone-service"
   },
   {
     id: 3,
-    question: "do-i-have-to-pay-of-the-online-pharmacy",
-    answer: "there-is-no-extra-cost-to-use-the-online-pharmacy"
+    question: "do-i-have-to-pay-to-use-the-online-pharmacy",
+    answer: "no-there-is-no-additional-cost-to-use-our-online-pharmacy"
   },
   {
     id: 4,
@@ -112,7 +118,7 @@ export const diagnosticsFAQData = [
   {
     id: 1,
     question: "do-i-need-a-requisition-for-blood-work-and-how-do-i-get-one",
-    answer: "in-canada-it-is-mandatory-to-obtain-blood-work-requisitions-through-a-licensed-physician-however-our-virtual-doctors-have-the-authority-to-issue-blood-test-requisitions-on-your-behalf-through-our-online-platform-taking-into-consideration-what-they-deem-to-be-medically-necessary"
+    answer: "in-canada-a-licensed-doctor-is-required-to-give-you-a-requisition-to-get-bloodwork-done-our-online-doctors-can-provide-requisitions-online-and-will-decide-if-its-necessary-for-you"
   },
   {
     id: 2,
@@ -122,12 +128,12 @@ export const diagnosticsFAQData = [
   {
     id: 3,
     question: "can-mdhub-virtual-doctor-assist-interpreting-results",
-    answer: "upon-receiving-your-results-you-can-easily-book-a-consultation-and-we-will-connect-you-with-a-doctor-who-can-go-through-your-results-with-you-and-provide-guidance-on-any-necessary-follow-up-actions"
+    answer: "when-you-get-your-results-you-can-book-an-appointment-to-review-them-with-a-doctor-our-virtual-doctors-will-help-explain-the-results-and-your-next-steps"
   },
   {
     id: 4,
     question: "am-i-covered-by-my-private-insurance",
-    answer: "Most private insurance companies will cover the expenses associated with medical laboratory analyses based on your plan."
+    answer: "most-private-insurance-companies-will-cover-the-expenses-associated-with-medical-laboratory-analyses-based-on-your-plan"
   }
 ]
 
@@ -328,17 +334,17 @@ export const virtualDoctorHowItWorksData = [
 export const onlinePharmacyHowItWorksData = [
   {
     id: 1,
-    text: "Log into your member dashboard and select pharmacy, follow the steps to create your pharmaceutical profile.",
+    text: "Once logged into your member dashboard, click online pharmacist.  Sign up and complete your health profile in 5 minutes.",
     image: OnlinePharmacyHowItWorks01
   },
   {
     id: 2,
-    text: "Load your prescription, transfer from your current pharmacy, or see a doctor to obtain a new one.",
+    text: "We'll transfer your prescriptions from your old pharmacy, if required or will input new prescriptions obtained during virtual care consultation.",
     image: OnlinePharmacyHowItWorks02
   },
   {
     id: 3,
-    text: "Our pharmacy team will call to confirm your medication and proceed to deliver directly to your door.",
+    text: "After verifying the prescription, we'll deliver your medicine directly to your door.",
     image: OnlinePharmacyHowItWorks03
   },
 ]
@@ -346,18 +352,18 @@ export const onlinePharmacyHowItWorksData = [
 export const diagnosisHowItWorksData = [
   {
     id: 1,
-    text: "Patients require a lab requisition. If you don't have one - no problem!",
+    text: "patients-require-a-lab-requisition-if-you-dont-have-one-no-problem",
     image: DiagnosticsHowItWorks01
   },
   {
     id: 2,
-    text: "Upload your requisition, and our medical staff will call you within 24 hours to confirm your booking.",
-    image: DiagnosticsHowItWorks02
+    text: "Schedule a time and place for your testing and complete your payment online. Or you can visit a testing centre at no extra cost",
+    image: DiagnosticsHowItWorks03
   },
   {
     id: 3,
-    text: "Schedule a time and place for your testing and complete your payment online. Or you can visit a testing centre at no extra cost (see locations",
-    image: DiagnosticsHowItWorks03
+    text: "Upload your requisition, and our medical staff will call you within 24 hours to confirm your booking.",
+    image: DiagnosticsHowItWorks02
   },
   {
     id: 4,
