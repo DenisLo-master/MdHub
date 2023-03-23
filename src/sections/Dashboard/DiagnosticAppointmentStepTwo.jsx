@@ -1,11 +1,11 @@
 import React from 'react'
 import DatePicker from 'react-date-picker'
 import { BiCaretDown } from 'react-icons/bi'
+import { useTranslation } from 'react-i18next'
 
 const DiagnosticAppointmentStepTwo = ({ time, address, selectedDate, updateFields, city, province, postalCode }) => {
   const generateOptions = () => {
     const options = [];
-
     for (let hour = 8; hour <= 18; hour++) {
       for (let minute = 0; minute < 60; minute += 30) {
         const formattedHour = hour < 10 ? `0${hour}` : hour;
@@ -21,6 +21,7 @@ const DiagnosticAppointmentStepTwo = ({ time, address, selectedDate, updateField
 
     return options;
   }
+  const { t } = useTranslation()
   return (
     <div className='space-y-3'>
       <div className="w-full flex">
@@ -29,7 +30,7 @@ const DiagnosticAppointmentStepTwo = ({ time, address, selectedDate, updateField
           value={selectedDate}
           onChange={(date) => updateFields({ selectedDate: date })}
           format="dd-MM-y"
-          placeholderText="Select a date"
+          placeholderText={t('select-a-date')}
         />
       </div>
       <div className="w-full flex relative">
@@ -37,11 +38,11 @@ const DiagnosticAppointmentStepTwo = ({ time, address, selectedDate, updateField
         <select
           required
           className="flex-1 bg-transparent appearance-none px-4 py-2 border rounded-lg outline-none focus:ring ring-primary"
-          placeholder="select time"
+          placeholder={t('select-time')}
           value={time}
           onChange={(e) => updateFields({ time: e.target.value })}
         >
-          <option value="">Select Time</option>
+          <option value="">{t('select-time-0')}</option>
           {generateOptions()}
           <option value="19:00">19:00</option>
         </select>
@@ -49,10 +50,10 @@ const DiagnosticAppointmentStepTwo = ({ time, address, selectedDate, updateField
       <div className="w-full flex gap-x-3">
         <input
           value={province}
-          onChange={() => updateFields({ province: "Quebec" })}
+          onChange={(e) => updateFields({ province: e.target.value })}
           className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
           required
-          placeholder="City"
+          placeholder={t('city-0')}
           type="text"
         />
         <input
@@ -68,7 +69,7 @@ const DiagnosticAppointmentStepTwo = ({ time, address, selectedDate, updateField
           onChange={(e) => updateFields({ postalCode: e.target.value })}
           className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
           required
-          placeholder="Postal Code"
+          placeholder={t('postal-code-0')}
           type="text"
         />
       </div>
@@ -78,7 +79,7 @@ const DiagnosticAppointmentStepTwo = ({ time, address, selectedDate, updateField
           onChange={(e) => updateFields({ address: e.target.value })}
           className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
           required
-          placeholder="Address"
+          placeholder={t('address-1')}
           type="text"
         />
       </div>
