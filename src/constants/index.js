@@ -210,21 +210,21 @@ export const howItWorksData = [
     title: "Step 1",
     heading: "Sign up for a membership",
     image: HomeHowItWorks01,
-    description: "Click on the “Sign Up” button and choose your membership type. Then, fill in your personal information, including your name, email address, and payment details.",
+    description: "Click on the “Sign Up” button and choose the membership type that works best for you. Then, answer a few questions about yourself.",
   },
   {
     id: 2,
     title: "Step 2",
     heading: "Explore our dashboard",
     image: HomeHowItWorks02,
-    description: "Go to your MDHUB dashboard. Here, you can easily access our services, including our online pharmacy and labs, or book an appointment with a specialist.",
+    description: "Go to your MDHUB dashboard. Here, you can access all your membership services: 24/7 virtual doctors, online pharmacy, lab testing, Headspace, and mental health help.",
   },
   {
     id: 3,
     title: "Step 3",
-    heading: "Get care now",
+    heading: "Book an appointment",
     image: HomeHowItWorks03,
-    description: "See a doctor in minutes, 24/7, without booking an appointment in advance. Our doctors can treat and diagnose 70% of medical issues online.",
+    description: "Get treated on the spot. Book an appointment with one of our specialists or see our mobile nurse offerings to have them come directly to you.",
   }
 ]
 
