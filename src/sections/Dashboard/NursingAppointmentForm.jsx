@@ -5,6 +5,7 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 import { useMultiStepForm } from '../../hooks/useMultiStepForm'
 import { NursingAppointmentStepOne, NursingAppointmentStepTwo, NursingAppointmentStepThree } from "../../sections"
 import { SVGLoaderCircles } from '../../assets'
+import { useTranslation } from 'react-i18next'
 
 const INITIAL_DATA = {
   serviceName: "",
@@ -29,6 +30,8 @@ const NursingAppointmentForm = () => {
   const userInfo = registerationStore(state => state.userInfo)
   const stripe = useStripe();
   const elements = useElements();
+
+  const { t } = useTranslation()
 
   const updateFields = (fields) => {
     setNursingFormData(prev => {
@@ -95,7 +98,7 @@ const NursingAppointmentForm = () => {
             className={`rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary py-3 border  border-primary bg-primary text-white`}
             onClick={back}
           >
-            Back
+              {t('back')}
           </button>
         }
         <button
@@ -106,8 +109,8 @@ const NursingAppointmentForm = () => {
             isLastStep ?
               isLoading ?
                 <SVGLoaderCircles className="text-white w-4 h-4" /> :
-                <span>Finish</span> :
-              <span>Next</span>
+                <span>{t('finish')}</span> :
+              <span>{t('next')}</span>
           }
         </button>
       </div>
