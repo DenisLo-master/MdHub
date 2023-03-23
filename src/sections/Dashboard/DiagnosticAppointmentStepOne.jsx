@@ -2,6 +2,7 @@ import React from 'react'
 import { toast } from 'react-hot-toast'
 import { TiClipboard, TiTickOutline, TiTimesOutline } from 'react-icons/ti'
 import { registerationStore } from '../../store/registerationStore'
+import { useTranslation } from 'react-i18next'
 
 const DiagnosticAppointmentStepOne = () => {
   const userInfo = registerationStore(state => state.userInfo)
@@ -9,6 +10,7 @@ const DiagnosticAppointmentStepOne = () => {
     navigator.clipboard.writeText(userInfo.loginCode)
     toast.success("Copied to Clipboard", { id: "clipboard" })
   }
+  const { t } = useTranslation()
   return (
     <div className="flex justify-around">
       <article className="w-full max-w-[330px] text-dark text-center space-y-4">
@@ -18,11 +20,11 @@ const DiagnosticAppointmentStepOne = () => {
         >
           <TiTickOutline />
           <span>
-            I have requisition
+            {t('i-have-requisition')}
           </span>
         </button>
         <p className="px-8">
-          Click here to upload your requisition and book an appointment with a nurse.
+          {t('click-here-to-upload-your-requisition-and-book-an-appointment-with-a-nurse')}
         </p>
       </article>
 
@@ -37,16 +39,16 @@ const DiagnosticAppointmentStepOne = () => {
           >
             <TiTimesOutline />
             <span>
-              I need a requisition
+              {t('i-need-a-requisition')}
             </span>
           </a>
         </button>
         <p className="px-8">
-          Click here to speak with a doctor now to get your requisition.
+          {t('click-here-to-speak-with-a-doctor-now-to-get-your-requisition')}
         </p>
         <div className="flex gap-x-2 justify-center">
           <div>
-            Your Maple Login Code: <strong className="cursor-pointer underline">{userInfo.loginCode}</strong> </div>
+            {t('your-maple-login-code')}: <strong className="cursor-pointer underline">{userInfo.loginCode}</strong> </div>
           <div className="cursor-pointer" onClick={handleCopy}>
             <TiClipboard className="text-2xl" />
           </div>
