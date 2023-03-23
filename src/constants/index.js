@@ -157,7 +157,7 @@ export const nursingHomecareFAQData = [
 
 
 export const nursingServices = [
-  "Vital Signs Monitoring",
+  "vital signs monitoring",
   "Post Operative Care",
   "Oncology Care",
   "Urology Care",
@@ -174,11 +174,11 @@ export const nursingServices = [
 ]
 
 export const homecareServices = [
-  "In home/Outdoors assistance",
-  "Medication administration/monitoring",
+  "In Home/Outdoors Assistance",
+  "Medication Administration/ Monitoring",
   "Companion care",
   "Elderly care",
-  "Transportation assistance",
+  "Transportation Assistance",
   "Light meal prepping/housekeeping"
 ]
 
