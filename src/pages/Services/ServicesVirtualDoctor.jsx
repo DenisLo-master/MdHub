@@ -32,8 +32,12 @@ const ServicesVirtualDoctor = () => {
             </h2>            
             <div className="space-y-5 font-body text-lg max-w-lg">
               <p className="text-center lg:text-left">
-                {t('treatment-and-diagnosis-for-70-of-medical-issues-can-be-done-virtually-connect-with-a-virtual-doctor-in-minutes-24-7-or-book-an-appointment-with-a-specialist-no-referral-needed')}
+                {t('never-wait-for-a-doctor-again-trips-to-the-walk-in-clinic-and-hospitals-are-costly-and-time-consuming-with-mdhub-treatment-and-diagnosis-for-70-of-medical-issues-can-be-done-virtually')} 
               </p>
+              <p className="text-center lg:text-left">
+                {t('connect-with-a-doctor-in-minutes-24-7-or-book-an-appointment-with-a-specialist-no-referral-needed')}
+              </p>
+
             </div>
             <Link className="block" to="/register">
             <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white text-virtualDoctor border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
@@ -67,8 +71,8 @@ const ServicesVirtualDoctor = () => {
       <section className="py-10 bg-white text-gray-800">
         <h2 className="text-4xl text-center pb-12">How it works</h2>
         <div className="w-full max-w-[76rem] mx-auto">
-          <section className="flex flex-col lg:flex-row items-center lg:items-start justify-between">
-            <article className="max-w-[260px]">
+          <section className="flex flex-col lg:flex-row justify-between">
+            <article className="max-w-[260px] flex flex-col justify-between">
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 1
               </div>
@@ -76,54 +80,54 @@ const ServicesVirtualDoctor = () => {
                 {t('describe-your-symptoms-using-our-app')}
               </h2>
               <p className="max-w-[260px] font-body leading-[1.25em]">
-                {t('open-the-app-or-browser-and-click-the-get-care-button-describe-your-symptoms-and-one-of-our-healthcare-providers-will-review-your-request-in-minutes')}
+                {t('open-the-app-and-click-the-get-care-button-describe-your-symptoms-and-one-of-our-healthcare-providers-will-review-your-request-in-seconds')}
               </p>
-              <div className={`${i18n.language === "en" ? "pt-[50px]" : "pt-[120px]"}`}>
+              <div className="pt-4">
                 <img className="w-full max-w-[210px]" src={VirtualCare01} alt="How It Works" />
               </div>
             </article>
 
-            <article className="max-w-[260px]">
+            <article className="max-w-[260px] flex flex-col justify-between">
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 2
               </div>
               <h2 className="text-2xl py-3 pb-4 mb-4 border-b border-dark leading-[1.2em]">
-                {t('chat-with-a-doctor')}
+                {t('chat-with-a-doctor-or-nurse-practitioner')}
               </h2>
-              <p className="max-w-[260px] font-body pt-7 leading-[1.25em]">
+              <p className="max-w-[260px] font-body leading-[1.25em]">
                 {t('typically-youll-be-connected-with-a-healthcare-provider-over-text-but-they-may-request-a-video-or-audio-chat-if-necessary')}
               </p>
-              <div className={`${i18n.language === "en" ? "pt-4 lg:pt-[74px]" : "pt-[140px]"}`}>
+              <div className="pt-4">
                 <img className="w-full max-w-[210px]" src={VirtualCare02} alt="How It Works" />
               </div>
             </article>
 
-            <article className="max-w-[260px]">
+            <article className="max-w-[260px] flex flex-col justify-between">
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 3
               </div>
               <h2 className="text-2xl text-dark py-3  pb-4 mb-4 leading-[1.2em] border-b border-dark">
-                {t('get-a-diagnosis-or-prescription-and-or-lab-requisition-or-doctors-note')}
+                {t('get-a-diagnosis-or-prescription')}
               </h2>
               <p className="max-w-[260px] font-body leading-[1.25em]">
                 {t('our-virtual-doctors-can-diagnose-and-provide-prescriptions-and-prescription-delivery-is-available-at-no-extra-cost')}
               </p>
-              <div className="pt-4 lg:pt-[54px]">
+              <div className="pt-4">
                 <img className="w-full max-w-[210px]" src={VirtualCare03} alt="How It Works" />
               </div>
             </article>
 
-            <article className="max-w-[260px]">
+            <article className="max-w-[260px] flex flex-col justify-between">
               <div className="bg-gradient-primary text-white  rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 4
               </div>
               <h2 className="text-2xl pt-3 pb-4 mb-4 leading-[1.2em] border-b border-dark">
-                {t('return-to-mdhub-dashboard-to-access-any-of-your-additional-membership-benefits')}
+                {t('return-to-your-mdhub-dashboard')}
               </h2>
               <p className="max-w-[260px] leading-[1.25em] font-body">
-                {t('pharmacy-nursing-lab-diagnostics-and-mental-health')}
+                {t('access-any-of-your-additional-member-benefits-like-our-online-pharmacy-nursing-services-or-lab-diagnostics')} 
               </p>
-              <div className="pt-2 lg:pt-[70px]">
+              <div className="pt-4">
                 <img className="w-full max-w-[210px]" src={VirtualCare04} alt="How It Works" />
               </div>
             </article>
@@ -182,7 +186,7 @@ const ServicesVirtualDoctor = () => {
                     }
                 </FAQ>
               ))
-            }  
+            }         
           </section>
         </div>
       </section>
