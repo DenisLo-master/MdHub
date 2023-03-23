@@ -512,5 +512,8 @@
   "i-have-a-prescription": "I have a prescription",
   "click-here-to-upload-your-prescription-and-sign-up-for-online-delivery": "Click here to upload your prescription and sign up for online delivery.",
   "i-need-a-prescription": "I need a prescription",
-  "click-here-to-speak-with-a-doctor-now-to-get-your-prescription": "Click here to speak with a doctor now to get your prescription."
+  "click-here-to-speak-with-a-doctor-now-to-get-your-prescription": "Click here to speak with a doctor now to get your prescription.",
+  "essential": "Essential",
+  "medical": "Medical",
+  "services-0": "Services"
 }

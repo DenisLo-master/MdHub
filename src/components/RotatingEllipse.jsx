@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react'
 import { gsap, Linear } from 'gsap'
 import { registerationStore } from '../store/registerationStore'
 import { Link, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const RotatingEllipse = () => {
   const svgRef = useRef(null)
@@ -10,6 +11,7 @@ const RotatingEllipse = () => {
   const setShowLabTestingModal = registerationStore(state => state.setShowLabTestingModal)
   const setShowNursingModal = registerationStore(state => state.setShowNursingModal)
   const setShowOnlinePharmacyModal = registerationStore(state => state.setShowOnlinePharmacyModal)
+  const { t } = useTranslation()
 
 
   useEffect(() => {
