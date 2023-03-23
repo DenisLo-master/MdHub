@@ -135,10 +135,7 @@ const HomeSlider = () => {
           <div className="p-6 pb-8 w-full  flex flex-col justify-between">
             <div className="w-full space-y-3 text-base 2xl:text-xl font-body text-left">
               <p>
-                {t('Safe, fast and professional testing on your schedule in the comfort and privacy of your own home or office. Avoid the wait at hospitals and clinics.')}
-              </p>
-              <p>
-                {t('Our certified partner labs can quickly process over 300 different screenings and assays in order to provide a comprehensive health assessment.')}
+                {t('get-safe-and-professional-lab-testing-from-the-comfort-of-your-home-or-office')}
               </p>
             </div>
             <Link className="block pt-4" to="/services/online-pharmacy">
@@ -155,14 +152,14 @@ const HomeSlider = () => {
         <div>
           <div className="bg-nursingHomecare px-6 h-[304px] 2xl:h-[370px] flex justify-center lg:justify-start pt-3 lg:pt-0 lg:items-center gap-x-6 2xl:gap-x-16 relative overflow-hidden">
             <h2 className="relative z-10 text-white text-[70px] 2xl:text-8xl leading-[60px] lg:leading-[70px]">
-              {t('nursing &')} <br /> {t('homecare')}
+              {t('nursing-and-homecare')}
             </h2>
             <img className="hidden z-0 lg:block absolute top-24 2xl:top-36 2xl:-right-10 right-0 w-full max-w-[260px]" src={NursingAndHomecareBanner} alt="Nursing and Homecare Banner" />
           </div>
           <div className="p-6 pb-8 w-full  flex flex-col justify-between">
             <div className="w-full space-y-3 text-base 2xl:text-xl font-body text-left">
               <p>
-                {t('Our professional nurses will come directly to you, and our team of homecare givers will be there for you when you need them. They offer compassionate care for seniors, individuals requiring post-operative care, and people with disabilities. Whether you need medical services or homecare, we can assist you with most of your needs.')}
+                {t('get-professional-care-from-our-team-of-nurses-and-homecare-helpers-that-come-directly-to-you')}
               </p>
             </div>
             <Link className="block pt-4" to="/services/nursing-homecare">
