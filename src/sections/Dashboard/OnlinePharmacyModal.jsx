@@ -2,11 +2,13 @@ import React from 'react'
 import { TiClipboard, TiTickOutline, TiTimesOutline } from 'react-icons/ti'
 import Modal from '../../components/Modal'
 import { registerationStore } from '../../store/registerationStore'
+import { useTranslation } from 'react-i18next'
 
 const OnlinePharmacyModal = () => {
   const showOnlinePharmacyModal = registerationStore(state => state.showOnlinePharmacyModal)
   const setShowOnlinePharmacyModal = registerationStore(state => state.setShowOnlinePharmacyModal)
   const userInfo = registerationStore(state => state.userInfo)
+  const { t } = useTranslation()
 
   const handleCopy = () => {
     navigator.clipboard.writeText(userInfo.loginCode)
@@ -15,7 +17,7 @@ const OnlinePharmacyModal = () => {
   return (
     <Modal
       key="Online Pharmacy"
-      title="Online Pharmacy"
+      title={t('Online Pharmacy')}
       showModal={showOnlinePharmacyModal}
       setShowModal={setShowOnlinePharmacyModal}
     >
@@ -32,12 +34,12 @@ const OnlinePharmacyModal = () => {
               >
                 <TiTickOutline />
                 <span>
-                  I have a prescription
+                  {t('i-have-a-prescription')}
                 </span>
               </a>
             </button>
             <p className="px-8">
-              Click here to upload your prescription and sign up for online delivery.
+              {t('click-here-to-upload-your-prescription-and-sign-up-for-online-delivery')}
             </p>
           </article>
 
@@ -52,16 +54,16 @@ const OnlinePharmacyModal = () => {
               >
                 <TiTimesOutline />
                 <span>
-                  I need a prescription
+                  {t('i-need-a-prescription')}
                 </span>
               </a>
             </button>
             <p className="px-8">
-              Click here to speak with a doctor now to get your prescription.
+              {t('click-here-to-speak-with-a-doctor-now-to-get-your-prescription')}
             </p>
             <div className="flex gap-x-2 justify-center">
               <div>
-                Your Maple Login Code: <strong className="cursor-pointer underline">{userInfo.loginCode}</strong> </div>
+                {t('your-maple-login-code')}: <strong className="cursor-pointer underline">{userInfo.loginCode}</strong> </div>
               <div className="cursor-pointer" onClick={handleCopy}>
                 <TiClipboard className="text-2xl" />
               </div>
