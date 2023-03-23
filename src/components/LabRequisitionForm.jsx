@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import toast from "react-hot-toast"
+import { useTranslation } from 'react-i18next'
 
 const INITIAL_DATA = {
   firstName: "",
@@ -14,6 +15,7 @@ const LabRequisitionForm = ({ hideForm }) => {
   const [file, setFile] = useState(null)
   const fileRef = useRef(null)
   const [data, setData] = useState(INITIAL_DATA)
+  const { t } = useTranslation()
 
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -57,7 +59,7 @@ const LabRequisitionForm = ({ hideForm }) => {
   return (
     <div className="w-full max-w-5xl mx-auto text-center">
       <h2 className="text-4xl font-main">
-        Laboratory Request Form
+        {t('laboratory-request-form')}
       </h2>
       <div className="w-full py-10 space-y-2">
         <div className="flex space-x-8">
@@ -67,7 +69,7 @@ const LabRequisitionForm = ({ hideForm }) => {
             className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
             type="text"
             name="firstName"
-            placeholder="First Name"
+            placeholder={t('first-name-0')}
           />
           <input
             value={data.lastName}
@@ -75,7 +77,7 @@ const LabRequisitionForm = ({ hideForm }) => {
             className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
             type="text"
             name="lastName"
-            placeholder="Last Name"
+            placeholder={t('last-name-0')}
           />
         </div>
         <div className="flex space-x-8">
@@ -85,7 +87,7 @@ const LabRequisitionForm = ({ hideForm }) => {
             className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
             type="email"
             name="emailAddress"
-            placeholder="Email Address"
+            placeholder={t('email-address')}
           />
           <input
             value={data.phoneNumber}
@@ -93,12 +95,12 @@ const LabRequisitionForm = ({ hideForm }) => {
             className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
             type="tel"
             name="phoneNumber"
-            placeholder="Phone Number"
+            placeholder={t('phone-number')}
           />
         </div>
 
         <div className="flex items-center pt-2">
-          <label className="mr-4 font-medium text-gray-700">Do you currently have private insurance</label>
+          <label className="mr-4 font-medium text-gray-700">{t('do-you-currently-have-private-insurance')}</label>
           <div className="inline-flex items-center">
             <input
               checked={selectedOption === "yes"}
@@ -114,7 +116,7 @@ const LabRequisitionForm = ({ hideForm }) => {
               className={`inline-block w-4 h-4 rounded-full border-2 border-primary mr-2 ${selectedOption === "yes" ? "bg-primary border-primary" : ""
                 }`}
             />
-            <span className="text-gray-700 mr-4">Yes</span>
+            <span className="text-gray-700 mr-4">{t('yes')}</span>
           </div>
           <div className="inline-flex items-center">
             <input
@@ -131,14 +133,14 @@ const LabRequisitionForm = ({ hideForm }) => {
               className={`inline-block w-4 h-4 rounded-full border-2 border-primary mr-2 ${selectedOption === "no" ? "bg-primary border-primary" : ""
                 }`}
             />
-            <span className="text-gray-700">No</span>
+            <span className="text-gray-700">{t('no')}</span>
           </div>
         </div>
 
         <div className="flex justify-around flex-wrap space-x-8 pt-4">
           <div className="flex-1 flex space-x-4 text-base font-main">
             <label htmlFor='uploadForm' className={`rounded-full group hover:ring-1 hover:ring-primary  py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}>
-              Upload Requisition File
+              {t('upload-requisition-file')}
             </label>
             <input
               name="file"
