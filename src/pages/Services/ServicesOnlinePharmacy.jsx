@@ -2,7 +2,7 @@ import React from 'react'
 import { OnlinePharmacyBanner, LogoWhite } from '../../assets'
 import { onlinePharmacyHowItWorksData, onlinePharmacyFAQData } from '../../constants'
 import { Link } from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
+import { useTranslation, Trans } from 'react-i18next'
 import FAQ from '../../components/FAQ.jsx'
 
 const WORDS = ["birth control", "erectile dysfunction", "plan b", "antibiotics", "pain control and management", "mental health medication"]
@@ -15,22 +15,16 @@ const ServicesOnlinePharmacy = () => {
         <div className="max-w-[83rem] mx-auto">
           <article className="space-y-5 px-4">
             <h2 className="text-[70px] lg:text-[88px] max-w-[380px] leading-[80px] pb-5">
-              {t('online-pharmacy')}
+              {t('pharmacy-0')}
             </h2>
             <div className="space-y-5 font-body text-lg max-w-lg">
               <p>
                 {t('stop-wasting-time-chasing-down-refills-or-waiting-in-line-easily-access-our-online-pharmacy-to-get-prescriptions-filled-or-renewed-and-delivered-right-to-your-door')} {" "}
-                <strong>{t('your-pharmacist-is-just-a-text-away')}</strong>
               </p>
 
               <p>
-                {t('with-our-membership-youll-get')}:
+                {t('with-our-membership-youll-get-free-delivery-in-quebec-automatic-refills-and-24-7-emergency-service')} 
               </p>
-              <ul className="lg:list-disc lg:pl-8">
-                <li>{t('free-delivery-in-quebec')}</li>
-                <li>{t('automatic-refills')}</li>
-                <li>{t('24-7-emergency-service')}</li>
-              </ul>
             </div>
             <Link className="flex lg:block justify-center" to="/register">
               <button className="rounded-full w-[240px] mt-10 text-lg flex justify-center py-3 border bg-white text-onlinePharmacy border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
@@ -64,7 +58,17 @@ const ServicesOnlinePharmacy = () => {
             {t('How It Works')}
           </h2>
           <section className="w-full max-w-5xl space-y-6 mx-auto">
-            <div className="flex flex-col lg:flex-row items-center gap-y-5 justify-between">
+            <div className="font-body flex flex-col gap-y-3">
+              <p>
+                <Trans
+                  i18nKey="if-you-already-have-a-prescription-follow-the-steps-below-for-a-less-than-strong-greater-than-new-prescription-less-than-strong-greater-than-first-visit-our-less-than-strong-greater-than-virtual-care-less-than-strong-greater-than-link-from-your-user-dashboard-to-see-a-doctor-and-obtain-one-once-finished-directly-click-to-transfer-it-to-our-pharmacy-affiliate-medzy-or-choose-your-own-local-pharmacy"
+                />
+              </p>
+              <p>
+                {t('when-transferring-to-medzy-x-mdhub-follow-the-below-steps')}
+              </p>
+            </div>
+            <div className="flex flex-col lg:flex-row gap-y-5 justify-between">
               {
                 onlinePharmacyHowItWorksData.map((step => (
                   <article key={step.id} className="flex max-w-[260px] flex-col justify-between items-center">
