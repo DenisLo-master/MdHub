@@ -4,6 +4,7 @@ import { registerationStore } from '../../store/registerationStore'
 import { BiCaretDown } from 'react-icons/bi'
 import { useTranslation } from 'react-i18next' 
 import { AiFillCloseCircle, AiFillCheckSquare } from 'react-icons/ai'
+import dayjs from 'dayjs'
 
 
 const ParentAccountForm = () => {
@@ -16,6 +17,8 @@ const ParentAccountForm = () => {
   const [strength, setStrength] = useState("")
   const [suggestions, setSuggestions] = useState([])
   const [conditionsFulfilled, setConditionsFulfilled] = useState([])
+  const [dateGuide, setDateGuide] = useState("")
+  const [correctDate, setCorrectDate] = useState(false)
 
   const getStrengthLabel = (strengthScore) => {
     switch (strengthScore) {
@@ -99,6 +102,12 @@ const ParentAccountForm = () => {
 
   const handleDateChange = (date) => {
     handleRegisterationFormDataChange("dateOfBirth", date)
+    const regex = /^(0[1-9]|1[012])\/(0[1-9]|[12][0-9]|3[01])\/(19|20)\d{2}$/
+    if (regex.test(date)) {
+      setCorrectDate(true)
+    } else {
+      setCorrectDate(false)
+    }
   }
 
   return (
@@ -208,7 +217,7 @@ const ParentAccountForm = () => {
         </div>
 
 
-        <div className="w-full flex-1 flex">
+        <div className="w-full flex-1 flex flex-col">
           <input
             className="flex-1 rounded-full text-xl lg:text-lg focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
             type="text"            
@@ -216,6 +225,14 @@ const ParentAccountForm = () => {
             onChange={({ target }) => handleDateChange(target.value)}
             placeholder={t('date-of-birth-mm-dd-yyyy')}
           />
+          {
+            registerationFormData.dateOfBirth && (
+              <div className={`flex gap-x-2 items-center ${correctDate ? "text-green-600" : "text-red-600"}`}>
+                {correctDate ? <AiFillCheckSquare /> : <AiFillCloseCircle />}
+                <p>date format:{" "}{dayjs(new Date()).format('MM/DD/YYYY')}</p>
+              </div>
+            )
+          }
         </div>
       </div>
       {selectedAccountType === "family" && (
