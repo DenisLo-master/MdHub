@@ -63,7 +63,7 @@ const SignupStepThree = () => {
 
 
   return (
-    <section className="space-y-6 px-4">
+    <section className="space-y-1 px-4">
       <article className="w-full self-start pt-8 pb-4 mb-4 ">
         <div className="w-full flex justify-between items-center">
           <article className="max-w-xs">
@@ -264,6 +264,15 @@ const SignupStepThree = () => {
             }
           </div>
         </article>
+      </div>
+      <div className="w-full flex flex-wrap gap-y-4 gap-x-6 pb-4 font-body">
+        <input
+          className="flex-1 font-sans rounded-full text-sm focus:ring-1 focus:ring-primary outline-none px-8 py-[10px] border border-primary"
+          name="coupon-code"
+          type="text"
+          placeholder="Coupon Code"
+          required
+        />
       </div>
       <CardElement
         className="registration-card-element rounded-full px-4 py-3 ring-1 focus:ring-primary"
