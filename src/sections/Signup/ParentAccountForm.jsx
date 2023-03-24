@@ -22,38 +22,38 @@ const ParentAccountForm = () => {
   const getStrengthLabel = (strengthScore) => {
     switch (strengthScore) {
       case 1:
-        return "Weak";
+        return t('weak');
       case 2:
-        return "Fair";
+        return t('fair');
       case 3:
-        return "Good";
+        return t('good');
       case 4:
-        return "Strong";
+        return t('strong');
       case 5:
-        return "Very Strong";
+        return t('very-strong');
       default:
         return "";
     }
   }
 
   const getSuggestions = (strengthScore) => {
-    const suggestions = [];
+    const suggestions = []
 
     if (strengthScore < 2) {
-      suggestions.push("Password should be at least 8 characters long");
+      suggestions.push(t('password-should-be-at-least-8-characters-long'))
     }
 
     if (strengthScore < 3) {
-      suggestions.push("Password should include at least one uppercase letter");
-      suggestions.push("Password should include at least one lowercase letter");
+      suggestions.push(t('password-should-include-at-least-one-uppercase-letter'))
+      suggestions.push(t('password-should-include-at-least-one-lowercase-letter'))
     }
 
     if (strengthScore < 4) {
-      suggestions.push("Password should include at least one number");
+      suggestions.push(t('password-should-include-at-least-one-number'))
     }
 
     if (strengthScore < 5) {
-      suggestions.push("Password should include at least one special character");
+      suggestions.push(t('password-should-include-at-least-one-special-character'))
     }
 
     return suggestions;
@@ -70,27 +70,27 @@ const ParentAccountForm = () => {
 
     if (password.length >= minLength) {
       strengthScore++
-      fulfilledConditions.push("Minimum length of 8 characters")
+      fulfilledConditions.push(t('minimum-length-of-8-characters'))
     }
 
     if (hasLowerCase) {
       strengthScore++
-      fulfilledConditions.push("At least one lowercase letter")
+      fulfilledConditions.push(t('at-least-one-lowercase-letter'))
     }
 
     if (hasUpperCase) {
       strengthScore++
-      fulfilledConditions.push("At least one uppercase letter")
+      fulfilledConditions.push(t('at-least-one-uppercase-letter'))
     }
 
     if (hasNumbers) {
       strengthScore++
-      fulfilledConditions.push("At least one number")
+      fulfilledConditions.push(t('at-least-one-number'))
     }
 
     if (hasSpecialChars) {
       strengthScore++
-      fulfilledConditions.push("At least one special character")
+      fulfilledConditions.push(t('at-least-one-special-character'))
     }
 
     setStrength(getStrengthLabel(strengthScore))
@@ -228,7 +228,7 @@ const ParentAccountForm = () => {
             registerationFormData.dateOfBirth && (
               <div className={`flex gap-x-2 items-center ${correctDate ? "text-green-600" : "text-red-600"}`}>
                 {correctDate ? <AiFillCheckSquare /> : <AiFillCloseCircle />}
-                <p>date format:{" "}{dayjs(new Date()).format('MM/DD/YYYY')}</p>
+                <p>{t('date-format')}:{" "}{dayjs(new Date()).format('MM/DD/YYYY')}</p>
               </div>
             )
           }
