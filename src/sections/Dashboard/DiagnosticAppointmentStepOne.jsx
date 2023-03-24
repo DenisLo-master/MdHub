@@ -30,6 +30,7 @@ const DiagnosticAppointmentStepOne = () => {
 
       <article className="w-full max-w-[330px] text-dark text-center space-y-4">
         <button
+          type="button"
           className="w-full text-center bg-primary text-white py-3 rounded-3xl"
         >
           <a
