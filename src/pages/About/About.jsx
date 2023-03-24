@@ -6,7 +6,7 @@ import ReactPlayer from 'react-player/youtube'
 const About = () => {
   const { t, i18n } = useTranslation()
   return (
-    <section className="py-20 font-main">
+    <section className="py-20 pt-28 font-main">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-center relative text-white">
           <ReactPlayer
