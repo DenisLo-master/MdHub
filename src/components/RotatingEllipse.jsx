@@ -34,13 +34,11 @@ const RotatingEllipse = () => {
     setTweens(newTweens);
 
     const handleMouseEnter = () => {
-      console.log("enter")
       gsap.to(tweens[0], { timeScale: 0.3, duration: 1 });
       gsap.to(tweens[1], { timeScale: 0.3, duration: 1 });
     };
 
     const handleMouseLeave = () => {
-      console.log("leave")
       gsap.to(tweens[0], { timeScale: 1, duration: 1 });
       gsap.to(tweens[1], { timeScale: 1, duration: 1 });
     };
