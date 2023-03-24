@@ -6,13 +6,16 @@ import { useTranslation } from 'react-i18next'
 import { NursingAndHomecareServices } from '../../sections'
 import FAQ from '../../components/FAQ'
 
-const WORDS = ['mobile vaccination', 'wound care and treatment', 'palliative care', 'post surgery care', "IV medication", "injection infusions", "vital signs monitoring"];
+
 
 const ServicesNursingAndHomecare = () => {
   const { t } = useTranslation()
+
+  const WORDS = [t('mobile vaccination'), t('wound care and treatment'), t('palliative care'), t('post surgery care'), t('IV medication'), t('injection infusions'), t('vital signs monitoring')]
+
   return (
     <section className="py-10 font-main">
-      <header className="bg-nursingHomecare text-white w-full lg:h-[530px] py-10 relative text-center lg:text-left">
+      <header className="bg-nursingHomecare text-white w-full lg:h-[560px] py-10 relative text-center lg:text-left">
         <div className="max-w-[83rem] mx-auto">
           <article className="space-y-5 px-4">
             <h2 className="text-[55px] lg:text-[88px]">
@@ -20,10 +23,10 @@ const ServicesNursingAndHomecare = () => {
             </h2>
             <div className="space-y-3 leading-6 font-body text-lg max-w-lg">
               <p>
-                {t('our-professional-nurses-come-directly-to-you-plus-our-team-of-homecare-agents-are-there-when-you-need-them-offering-compassionate-care-for-seniors-people-requiring-post-operative-care-and-people-with-disabilities')}
+                {t('life-is-busy-but-you-want-to-ensure-your-loved-ones-are-taken-care-of-our-nurses-and-homecare-helpers-come-directly-to-you-when-you-need-them')}
               </p>
               <p>
-                {t('whether-its-medical-services-or-homecare-we-can-help-you-with-most-of-your-needs')}
+                {t('our-team-of-certified-nurses-are-fully-capable-of-assisting-with-many-medical-needs-whether-its-checking-vitals-and-assisting-ongoing-medical-conditions-post-operative-care-or-testing-theyre-here-to-help')}
               </p>
             </div>
             <Link className="flex justify-center lg:block" to="/register">
@@ -45,7 +48,7 @@ const ServicesNursingAndHomecare = () => {
               {
                 WORDS.map(word => (
                   <span className="md:text-6xl">
-                    {t(`${word}`)}
+                    {word}
                   </span>
                 ))
               }
