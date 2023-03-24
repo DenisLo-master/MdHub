@@ -24,6 +24,15 @@ const DiagnosticAppointmentStepThree = () => {
           </div>
         </article>
       </div>
+      <div className="w-full flex flex-wrap gap-y-4 gap-x-6 pb-4 font-body">
+        <input
+          className="flex-1 font-sans rounded-full text-sm focus:ring-1 focus:ring-primary outline-none px-8 py-[10px] border border-primary"
+          name="coupon-code"
+          type="text"
+          placeholder="Coupon Code"
+          required
+        />
+      </div>
       <div>
         <CardElement
           className="rounded-full px-4 py-3 ring-1 focus:ring-primary"
