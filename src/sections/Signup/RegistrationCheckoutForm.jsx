@@ -170,7 +170,7 @@ const RegistrationCheckoutForm = () => {
         </div>
       </form>
       <p className="text-center font-body pt-4">
-        NOTE: Currently users outside of Quebec may not access online pharmacy, nursing or lab testing. We will be rolling out additional services for members within the upcoming months
+        {t('note-currently-users-outside-of-quebec-may-not-access-online-pharmacy-nursing-or-lab-testing-we-will-be-rolling-out-additional-services-for-members-within-the-upcoming-months')}
       </p>
     </div>
   )
