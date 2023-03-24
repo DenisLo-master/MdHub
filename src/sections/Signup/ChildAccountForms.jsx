@@ -5,8 +5,7 @@ import { registerationStore } from '../../store/registerationStore'
 import dayjs from "dayjs"
 import { BiCaretDown } from 'react-icons/bi'
 import { AiFillCloseCircle, AiFillCheckSquare } from 'react-icons/ai'
-
-
+import { useTranslation } from 'react-i18next'
 
 const ChildAccountForms = () => {
   const [isOlderThanFourteen, setIsOlderThanFourteen] = useState(true)
@@ -19,42 +18,43 @@ const ChildAccountForms = () => {
   const [suggestions, setSuggestions] = useState([])
   const [conditionsFulfilled, setConditionsFulfilled] = useState([])
   const [correctDate, setCorrectDate] = useState(false)
+  const { t } = useTranslation()
 
   const getStrengthLabel = (strengthScore) => {
     switch (strengthScore) {
       case 1:
-        return "Weak";
+        return t('weak');
       case 2:
-        return "Fair";
+        return t('fair');
       case 3:
-        return "Good";
+        return t('good');
       case 4:
-        return "Strong";
+        return t('strong');
       case 5:
-        return "Very Strong";
+        return t('very-strong');
       default:
         return "";
     }
   }
 
   const getSuggestions = (strengthScore) => {
-    const suggestions = [];
+    const suggestions = []
 
     if (strengthScore < 2) {
-      suggestions.push("Password should be at least 8 characters long");
+      suggestions.push(t('password-should-be-at-least-8-characters-long'))
     }
 
     if (strengthScore < 3) {
-      suggestions.push("Password should include at least one uppercase letter");
-      suggestions.push("Password should include at least one lowercase letter");
+      suggestions.push(t('password-should-include-at-least-one-uppercase-letter'))
+      suggestions.push(t('password-should-include-at-least-one-lowercase-letter'))
     }
 
     if (strengthScore < 4) {
-      suggestions.push("Password should include at least one number");
+      suggestions.push(t('password-should-include-at-least-one-number'))
     }
 
     if (strengthScore < 5) {
-      suggestions.push("Password should include at least one special character");
+      suggestions.push(t('password-should-include-at-least-one-special-character'))
     }
 
     return suggestions;
@@ -71,27 +71,27 @@ const ChildAccountForms = () => {
 
     if (password.length >= minLength) {
       strengthScore++
-      fulfilledConditions.push("Minimum length of 8 characters")
+      fulfilledConditions.push(t('minimum-length-of-8-characters'))
     }
 
     if (hasLowerCase) {
       strengthScore++
-      fulfilledConditions.push("At least one lowercase letter")
+      fulfilledConditions.push(t('at-least-one-lowercase-letter'))
     }
 
     if (hasUpperCase) {
       strengthScore++
-      fulfilledConditions.push("At least one uppercase letter")
+      fulfilledConditions.push(t('at-least-one-uppercase-letter'))
     }
 
     if (hasNumbers) {
       strengthScore++
-      fulfilledConditions.push("At least one number")
+      fulfilledConditions.push(t('at-least-one-number'))
     }
 
     if (hasSpecialChars) {
       strengthScore++
-      fulfilledConditions.push("At least one special character")
+      fulfilledConditions.push(t('at-least-one-special-character'))
     }
 
     setStrength(getStrengthLabel(strengthScore))
@@ -140,7 +140,7 @@ const ChildAccountForms = () => {
                 className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
                 name="firstName"
                 type="text"
-                placeholder="First Name*"
+                placeholder={`${t('first-name-0')}*`}
                 value={childForms[index].firstName}
                 onChange={(event) => handleChildAccountInputChange(event, index)}
                 required
@@ -149,7 +149,7 @@ const ChildAccountForms = () => {
                 className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
                 name="lastName"
                 type="text"
-                placeholder="Last Name*"
+                placeholder={`${t('last-name-0')}*`}
                 value={childForms[index].lastName}
                 onChange={(event) => handleChildAccountInputChange(event, index)}
                 required
@@ -160,7 +160,7 @@ const ChildAccountForms = () => {
                 className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
                 name="email"
                 type="email"
-                placeholder="Email*"
+                placeholder={`${t('email-0')}*`}
                 value={childForms[index].email}
                 onChange={(event) => handleChildAccountInputChange(event, index)}
                 required
@@ -169,7 +169,7 @@ const ChildAccountForms = () => {
                 className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
                 name="phone"
                 type="tel"
-                placeholder="Phone*"
+                placeholder={`${t('phone-1')}*`}
                 value={childForms[index].phone}
                 onChange={(event) => handleChildAccountInputChange(event, index)}
                 required
@@ -183,7 +183,7 @@ const ChildAccountForms = () => {
                 name="password"
                 type="password"
                 pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$"
-                placeholder="Password*"
+                placeholder={`${t('password-0')}*`}
                 value={childForms[index].password}
                 onChange={(event) => {
                   checkPasswordStrength(event.target.value)
@@ -216,7 +216,7 @@ const ChildAccountForms = () => {
                     ))}
                   </ul>
                   <p className="absolute top-12 right-0 font-body">
-                    Password Strength: <strong>{strength}</strong>
+                    {t('password-strength')}: <strong>{strength}</strong>
                   </p>
                 </div>
               )}
@@ -228,7 +228,7 @@ const ChildAccountForms = () => {
                   required
                   className="flex-1 appearance-none rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border bg-white"
                   name="gender"
-                  placeholder="select time"
+                  placeholder={`${t('select-gender')}`}
                   value={childForms[index].gender}
                   onChange={(event) => handleChildAccountInputChange(event, index)}
                 >
@@ -244,13 +244,13 @@ const ChildAccountForms = () => {
                   type="text"
                   value={childForms[index].dateOfBirth}
                   onChange={({ target }) => handleDateChange(target.value, index)}
-                  placeholder="Date of Birth (mm/dd/yyy)"
+                  placeholder={`${t('date-of-birth-mm-dd-yyyy')}`}
                 />
                 {
                   childForms[index].dateOfBirth && (
                     <div className={`flex gap-x-2 items-center ${correctDate ? "text-green-600" : "text-red-600"}`}>
                       {correctDate ? <AiFillCheckSquare /> : <AiFillCloseCircle />}
-                      <p>date format:{" "}{dayjs(new Date()).format('MM/DD/YYYY')}</p>
+                      <p>{t('date-format')}:{" "}{dayjs(new Date()).format('MM/DD/YYYY')}</p>
                     </div>
                   )
                 }
@@ -260,12 +260,12 @@ const ChildAccountForms = () => {
               selectedAccountType === "family" ? (
                 <button type="button" onClick={addChildAccount} className="absolute bottom-4 left-8 flex text-gray-600 gap-x-2 font-body items-center text-3xl cursor-pointer">
                   <BsPlusCircle />
-                  <p className='text-xl'>add family member</p>
+                  <p className='text-xl'>{t('add-family-member')}</p>
                 </button>
               ) : (
                   <button type="button" disabled={childForms.length > 8} onClick={addChildAccount} className="absolute bottom-4 left-8 flex text-gray-600 gap-x-2 font-body items-center text-3xl cursor-pointer">
                   <BsPlusCircle />
-                  <p className='text-xl'>add employee</p>
+                    <p className='text-xl'>{t('add-employee')}</p>
                 </button>
               )
             }
