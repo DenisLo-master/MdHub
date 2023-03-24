@@ -3,7 +3,7 @@ import { PricingSlider, OnDemandCTA, PricingHeader, HeadspaceSection, Membership
 
 const Pricing = () => {
   return (
-    <section className="font-main">
+    <section className="font-main mt-[70px]">
       <PricingHeader />
       <PricingSlider />
       <OnDemandCTA />
