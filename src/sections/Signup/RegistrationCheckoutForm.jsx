@@ -10,7 +10,6 @@ import { registerationStore } from '../../store/registerationStore'
 import { toast } from 'react-hot-toast'
 import { SVGLoaderCircles } from '../../assets'
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
-const secret = import.meta.env.VITE_STRIPE
 import { useTranslation } from 'react-i18next'
 
 const RegistrationCheckoutForm = () => {
@@ -142,33 +141,38 @@ const RegistrationCheckoutForm = () => {
     }
   }
   return (
-    <form ref={signupFormRef} onSubmit={handleSignup} className="w-full">
-      {step}
-      <div className="w-full flex justify-end gap-x-4 pt-6 px-4">
-        {
-          !isFirstStep &&
-          <button
-              type="button" 
+    <div>
+      <form ref={signupFormRef} onSubmit={handleSignup} className="w-full">
+        {step}
+        <div className="w-full flex justify-end gap-x-4 pt-6 px-4">
+          {
+            !isFirstStep &&
+            <button
+              type="button"
               className={`rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary py-3 border  border-primary bg-primary text-white`}
               onClick={back}
             >
               {t('back')}
             </button>
-        }
-        <button 
-          type="submit"
-          className={`rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary py-3 border flex justify-center items-center space-x-2  border-primary bg-primary text-white`}
-        >
-          {
-            isLastStep ?
-              isLoading ?
-                <SVGLoaderCircles className="text-white w-4 h-4" /> :
-                <span>{t('finish')}</span> :
-              <span>{t('next')}</span>
           }
-        </button>
-      </div>
-    </form>
+          <button
+            type="submit"
+            className={`rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary py-3 border flex justify-center items-center space-x-2  border-primary bg-primary text-white`}
+          >
+            {
+              isLastStep ?
+                isLoading ?
+                  <SVGLoaderCircles className="text-white w-4 h-4" /> :
+                  <span>{t('finish')}</span> :
+                <span>{t('next')}</span>
+            }
+          </button>
+        </div>
+      </form>
+      <p className="text-center font-body pt-4">
+        NOTE: Currently users outside of Quebec may not access online pharmacy, nursing or lab testing. We will be rolling out additional services for members within the upcoming months
+      </p>
+    </div>
   )
 }
 
