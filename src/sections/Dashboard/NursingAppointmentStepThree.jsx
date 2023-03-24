@@ -26,8 +26,8 @@ const NursingAppointmentStepThree = () => {
       </div>
       <div className="w-full flex flex-wrap gap-y-4 gap-x-6 pb-4 font-body">
         <input
-          className="flex-1 rounded-full text-lg focus:ring-1 focus:ring-primary outline-none px-8 py-1 border border-primary"
-          name="address"
+          className="flex-1 font-sans rounded-full text-sm focus:ring-1 focus:ring-primary outline-none px-8 py-[10px] border border-primary"
+          name="coupon-code"
           type="text"
           placeholder="Coupon Code"
           required
@@ -35,7 +35,7 @@ const NursingAppointmentStepThree = () => {
       </div>
       <div>
         <CardElement
-          className="rounded-full px-4 py-3 ring-1 focus:ring-primary"
+          className="rounded-full font-body px-4 py-3 ring-1 focus:ring-primary"
         />
       </div>
     </div>
