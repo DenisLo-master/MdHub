@@ -3,14 +3,10 @@ import { BsPlusCircle } from 'react-icons/bs'
 import { MdClose } from 'react-icons/md'
 import { registerationStore } from '../../store/registerationStore'
 import dayjs from "dayjs"
-import Select from 'react-select'
-import { BiCaretDown, BiChevronDown } from 'react-icons/bi'
+import { BiCaretDown } from 'react-icons/bi'
+import { AiFillCloseCircle, AiFillCheckSquare } from 'react-icons/ai'
 
-const genderOptions = [
-  { value: 'male', label: 'Male' },
-  { value: 'female', label: 'Female' },
-  { value: 'preferNotToSay', label: 'Prefer not to say' }
-];
+
 
 const ChildAccountForms = () => {
   const [isOlderThanFourteen, setIsOlderThanFourteen] = useState(true)
@@ -19,10 +15,88 @@ const ChildAccountForms = () => {
   const childForms = registerationStore(state => state.childForms)
   const addChildAccount = registerationStore(state => state.addChildAccount)
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
-  const [selectedGender, setSelectedGender] = useState(null)
+  const [strength, setStrength] = useState("")
+  const [suggestions, setSuggestions] = useState([])
+  const [conditionsFulfilled, setConditionsFulfilled] = useState([])
+  const [correctDate, setCorrectDate] = useState(false)
 
-  const handleGenderChange = (selectedOption, index) => {
-    handleChildAccountInputChange({ target: { name: "gender", value: selectedOption.value } }, index)
+  const getStrengthLabel = (strengthScore) => {
+    switch (strengthScore) {
+      case 1:
+        return "Weak";
+      case 2:
+        return "Fair";
+      case 3:
+        return "Good";
+      case 4:
+        return "Strong";
+      case 5:
+        return "Very Strong";
+      default:
+        return "";
+    }
+  }
+
+  const getSuggestions = (strengthScore) => {
+    const suggestions = [];
+
+    if (strengthScore < 2) {
+      suggestions.push("Password should be at least 8 characters long");
+    }
+
+    if (strengthScore < 3) {
+      suggestions.push("Password should include at least one uppercase letter");
+      suggestions.push("Password should include at least one lowercase letter");
+    }
+
+    if (strengthScore < 4) {
+      suggestions.push("Password should include at least one number");
+    }
+
+    if (strengthScore < 5) {
+      suggestions.push("Password should include at least one special character");
+    }
+
+    return suggestions;
+  }
+
+  const checkPasswordStrength = (password) => {
+    let strengthScore = 0;
+    const minLength = 8;
+    const hasLowerCase = /[a-z]/.test(password)
+    const hasUpperCase = /[A-Z]/.test(password)
+    const hasNumbers = /\d/.test(password)
+    const hasSpecialChars = /[\W]/.test(password)
+    const fulfilledConditions = []
+
+    if (password.length >= minLength) {
+      strengthScore++
+      fulfilledConditions.push("Minimum length of 8 characters")
+    }
+
+    if (hasLowerCase) {
+      strengthScore++
+      fulfilledConditions.push("At least one lowercase letter")
+    }
+
+    if (hasUpperCase) {
+      strengthScore++
+      fulfilledConditions.push("At least one uppercase letter")
+    }
+
+    if (hasNumbers) {
+      strengthScore++
+      fulfilledConditions.push("At least one number")
+    }
+
+    if (hasSpecialChars) {
+      strengthScore++
+      fulfilledConditions.push("At least one special character")
+    }
+
+    setStrength(getStrengthLabel(strengthScore))
+    setSuggestions(getSuggestions(strengthScore))
+    setConditionsFulfilled(fulfilledConditions)
   }
 
   const handleDateChange = (date, index) => {
@@ -43,6 +117,12 @@ const ChildAccountForms = () => {
       setIsOlderThanFourteen(false)
     } else {
       setIsOlderThanFourteen(true)
+    }
+    const regex = /^(0[1-9]|1[012])\/(0[1-9]|[12][0-9]|3[01])\/(19|20)\d{2}$/
+    if (regex.test(date)) {
+      setCorrectDate(true)
+    } else {
+      setCorrectDate(false)
     }
     handleChildAccountInputChange({ target: { name: "dateOfBirth", value: date } }, index)
   }
@@ -95,7 +175,8 @@ const ChildAccountForms = () => {
                 required
               />
             </div>
-            <div className="w-full flex">
+
+            <div className="w-full flex flex-col relative">
               <input
                 disabled={!isOlderThanFourteen || !childForms[index].dateOfBirth}
                 className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
@@ -104,9 +185,41 @@ const ChildAccountForms = () => {
                 pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$"
                 placeholder="Password*"
                 value={childForms[index].password}
-                onChange={(event) => handleChildAccountInputChange(event, index)}
+                onChange={(event) => {
+                  checkPasswordStrength(event.target.value)
+                  handleChildAccountInputChange(event, index)
+                }}
                 required
               />
+              {childForms[index].password && (
+                <div>
+                  <ul>
+                    {conditionsFulfilled.map((condition, index) => (
+                      <li
+                        className="text-green-600 flex items-center gap-x-1 font-body gap-y-2"
+                        key={index}
+                      >
+                        <AiFillCheckSquare />
+                        <p>{condition}</p>
+                      </li>
+                    ))}
+                  </ul>
+                  <ul>
+                    {suggestions.map((suggestion, index) => (
+                      <li
+                        className="text-red-600 flex items-center gap-x-1 font-body gap-y-2"
+                        key={index}
+                      >
+                        <AiFillCloseCircle />
+                        <p>{suggestion}</p>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="absolute top-12 right-0 font-body">
+                    Password Strength: <strong>{strength}</strong>
+                  </p>
+                </div>
+              )}
             </div>
             <div className="text-xl flex flex-col lg:flex-row gap-y-4 items-center w-full gap-x-6">
               <div className="w-full flex-1 flex relative">
@@ -125,7 +238,7 @@ const ChildAccountForms = () => {
                   <option value="preferNotToSay">Prefer not to say</option>
                 </select>
               </div>
-              <div className="w-full flex-1 flex">
+              <div className="w-full flex-1 flex flex-col">
                 <input
                   className="flex-1 rounded-full text-xl lg:text-lg focus:ring-1 focus:ring-primary outline-none px-8 py-2 border placeholder:text-[19px]"
                   type="text"
@@ -133,6 +246,14 @@ const ChildAccountForms = () => {
                   onChange={({ target }) => handleDateChange(target.value, index)}
                   placeholder="Date of Birth (mm/dd/yyy)"
                 />
+                {
+                  childForms[index].dateOfBirth && (
+                    <div className={`flex gap-x-2 items-center ${correctDate ? "text-green-600" : "text-red-600"}`}>
+                      {correctDate ? <AiFillCheckSquare /> : <AiFillCloseCircle />}
+                      <p>date format:{" "}{dayjs(new Date()).format('MM/DD/YYYY')}</p>
+                    </div>
+                  )
+                }
               </div>
             </div>
             {
