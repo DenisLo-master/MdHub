@@ -17,7 +17,6 @@ const ParentAccountForm = () => {
   const [strength, setStrength] = useState("")
   const [suggestions, setSuggestions] = useState([])
   const [conditionsFulfilled, setConditionsFulfilled] = useState([])
-  const [dateGuide, setDateGuide] = useState("")
   const [correctDate, setCorrectDate] = useState(false)
 
   const getStrengthLabel = (strengthScore) => {
