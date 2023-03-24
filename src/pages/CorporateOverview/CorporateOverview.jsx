@@ -18,7 +18,7 @@ const CorporateOverview = () => {
   const changeSelectedAccountType = registerationStore(state => state.changeSelectedAccountType)
   const { t } = useTranslation()
   return (
-    <section className="font-main">
+    <section className="font-main mt-[70px]">
       <section className="relative font-main bg-virtualDoctor overflow-hidden px-4">
         <img className="hidden lg:block absolute object-cover w-full h-[400px]" src={ForCorporateHeader} alt="For Corporate" />
         <div className="relative z-10 w-full max-w-7xl mx-auto lg:h-[390px] flex items-center">
