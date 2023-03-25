@@ -66,9 +66,9 @@ const ServicesNursingAndHomecare = () => {
             <div className="flex flex-col md:flex-row justify-between">
               {
                 nursingAndHomecareHowItWorksData.map((step => (
-                  <article key={step.id} className="flex flex-col justify-between items-center">
+                  <article key={step.id} className="flex flex-col justify-between items-center text-center md:text-left">
                     <div className="flex flex-col gap-x-8">
-                      <article className="pb-2 w-[220px]">
+                      <article className="pb-2 flex justify-center md:block">
                         <div className="w-14 h-14 text-3xl font-body font-semibold bg-gradient-primary text-white rounded-full flex justify-center items-center">
                           {step.id}
                         </div>
