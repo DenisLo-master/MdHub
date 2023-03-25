@@ -17,25 +17,25 @@ const MembershipBenefits = () => {
               <OkIcon className="w-8 h-8" />
             </div>
             <p className="text-2xl">
-              {t('free-24-7-unlimited-access-to-doctors')}
+              {t('free-24-7-virtual-healthcare')}
             </p>
           </li>
           <li className="flex gap-x-4 items-center">
             <OkIcon className="w-8 h-8" />
             <p className="text-2xl">
-              {t('mobile-nursing')}
+              {t('mental-health-specialists-0')}
             </p>
           </li>
           <li className="flex gap-x-4 items-center">
             <OkIcon className="w-8 h-8" />
             <p className="text-2xl">
-              {t('access-to-specialists')}
+              {t('online-pharmacy-and-delivery')}
             </p>
           </li>
           <li className="flex gap-x-4 items-center">
             <OkIcon className="w-8 h-8" />
             <p className="text-2xl">
-              {t('homecare-0')}
+              {t('specialised-medicine')}
             </p>
           </li>
           <li className="flex gap-x-4 items-center">
@@ -43,37 +43,37 @@ const MembershipBenefits = () => {
               <OkIcon className="w-8 h-8" />
             </div>
             <p className="text-2xl">
-              {t('mental-health-platform-and-support')}
+              {t('mobile-nursing-0')}
             </p>
           </li>
           <li className="flex gap-x-4 items-center">
             <OkIcon className="w-8 h-8" />
             <p className="text-2xl">
-              {t('laboratory-analysis')}
+              {t('homecare-1')}
             </p>
           </li>
           <li className="flex gap-x-4 items-center">
             <OkIcon className="w-8 h-8" />
             <p className="text-2xl">
-              {t('online-pharmacy-0')}
+              {t('laboratory-analysis-0')}
             </p>
           </li>
           <li className="flex gap-x-4 items-center">
             <OkIcon className="w-8 h-8" />
             <p className="text-2xl">
-              {t('testing')}
+              {t('laboratory-testing')}
             </p>
           </li>
           <li className="flex gap-x-4 items-center">
             <OkIcon className="w-8 h-8" />
             <p className="text-2xl">
-              {t('vaccination')}
+              {t('private-clinics')}
             </p>
           </li>
           <li className="flex gap-x-4 items-center">
             <OkIcon className="w-8 h-8" />
             <p className="text-2xl">
-              +{t('more')}
+              {t('more')}
             </p>
           </li>
           <li>

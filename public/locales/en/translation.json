@@ -279,7 +279,7 @@
   "on-demand-one-time-access": "On demand one time access",
   "free-3-months-of-headspace-membership-included-in-all-our-plans": "Free 3 months of Headspace membership included in all our plans",
   "value": "value",
-  "members-benefit-from": "Members Benefit From",
+  "members-benefit-from": "Member benefits include access to: ",
   "free-24-7-unlimited-access-to-doctors": "Free 24/7 unlimited access to doctors",
   "mobile-nursing": "Mobile nursing",
   "access-to-specialists": "Access to specialists",
@@ -289,7 +289,7 @@
   "online-pharmacy-0": "Online pharmacy",
   "testing": "Testing",
   "vaccination": "Vaccination",
-  "more": "More",
+  "more": "+More",
   "never-wait-for-a-doctor-again": "Never wait for a doctor again",
   "finally-my-son-can-see-a-doctor-without-sitting-at-a-hospital-waiting-room-for-8-hours-we-received-a-diagnosis-in-15-minutes-and-prescription-delivery-the-same-day": "Finally my son can see a doctor without sitting at a hospital waiting room for 8+ hours. We received a diagnosis in 15 minutes and prescription delivery the same day!",
   "i-renewed-my-prescription-in-3-minutes-and-even-got-my-yearly-lab-work-test-this-is-really-the-way-to-focus-on-preventive-healthcare-why-hasnt-the-government-thought-of-a-system-like-this-before": "I renewed my prescription in 3 minutes and even got my yearly lab work test. This is really the way to focus on preventive healthcare. Why hasn’t the government thought of a system like this before?",
@@ -547,5 +547,14 @@
   "your-email-address": "Your Email Address",
   "organization-company": "Organization/Company",
   "send-message": "Send Message",
-  "your-message-here": "Your message here..."
+  "your-message-here": "Your message here...",
+  "free-24-7-virtual-healthcare": "FREE, 24/7 VIRTUAL HEALTHCARE",
+  "mental-health-specialists-0": "MENTAL HEALTH SPECIALISTS",
+  "online-pharmacy-and-delivery": "ONLINE PHARMACY AND DELIVERY",
+  "specialised-medicine": "SPECIALISED MEDICINE",
+  "mobile-nursing-0": "MOBILE NURSING",
+  "homecare-1": "HOMECARE",
+  "laboratory-analysis-0": "LABORATORY ANALYSIS",
+  "laboratory-testing": "LABORATORY TESTING",
+  "private-clinics": "PRIVATE CLINICS"
 }
