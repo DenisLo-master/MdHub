@@ -53,7 +53,7 @@ const ServicesOnlinePharmacy = () => {
           </div>
         </div>
 
-        <div className="py-10">
+        <div className="py-10 px-4 text-center md:text-left">
           <h2 className="text-4xl pb-10 text-center">
             {t('How It Works')}
           </h2>
@@ -71,8 +71,8 @@ const ServicesOnlinePharmacy = () => {
             <div className="flex flex-col lg:flex-row gap-y-5 justify-between">
               {
                 onlinePharmacyHowItWorksData.map((step => (
-                  <article key={step.id} className="flex max-w-[260px] flex-col justify-between items-center">
-                    <div className="flex flex-col gap-x-8">
+                  <article key={step.id} className="w-full flex max-w-[260px] mx-auto md:mx-0 flex-col justify-between items-center">
+                    <div className="flex flex-col items-center md:items-start gap-x-8">
                       <article className="pb-2">
                         <div className="w-14 h-14 text-3xl font-body font-semibold bg-gradient-primary text-white rounded-full flex justify-center items-center">
                           {step.id}
