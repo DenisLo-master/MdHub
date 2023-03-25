@@ -68,11 +68,11 @@ const ServicesVirtualDoctor = () => {
         </div>
       </section>
       <VirtualDoctorServices />
-      <section className="py-10 bg-white text-gray-800">
-        <h2 className="text-4xl text-center pb-12">How it works</h2>
+      <section className="py-10 bg-white text-gray-800 px-4">
+        <h2 className="text-4xl text-center pb-12">{t('how-it-works')}</h2>
         <div className="w-full max-w-[76rem] mx-auto">
-          <section className="flex flex-col lg:flex-row justify-between">
-            <article className="max-w-[260px] flex flex-col justify-between">
+          <section className="flex flex-col items-center text-center md:text-left lg:flex-row justify-between">
+            <article className="max-w-[260px] flex flex-col items-center justify-between">
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 1
               </div>
@@ -87,7 +87,7 @@ const ServicesVirtualDoctor = () => {
               </div>
             </article>
 
-            <article className="max-w-[260px] flex flex-col justify-between">
+            <article className="max-w-[260px] flex flex-col items-center justify-between">
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 2
               </div>
@@ -102,7 +102,7 @@ const ServicesVirtualDoctor = () => {
               </div>
             </article>
 
-            <article className="max-w-[260px] flex flex-col justify-between">
+            <article className="max-w-[260px] flex flex-col items-center justify-between">
               <div className="bg-gradient-primary text-white rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 3
               </div>
@@ -117,7 +117,7 @@ const ServicesVirtualDoctor = () => {
               </div>
             </article>
 
-            <article className="max-w-[260px] flex flex-col justify-between">
+            <article className="max-w-[260px] flex flex-col items-center justify-between">
               <div className="bg-gradient-primary text-white  rounded-full w-14 h-14 flex justify-center items-center font-body text-3xl">
                 4
               </div>
