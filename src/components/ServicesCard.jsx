@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 const ServicesCard = ({ title, children, bgPrimary }) => {
   const { i18n } = useTranslation()
   return (
-    <article className={`flex justify-center gap-x-2 items-center ${bgPrimary ? 'bg-primary shadow-cardService' : 'bg-transparent'} ${i18n.language === "en" ? "w-[200px]" : "w-auto px-4"} py-3 rounded-full `}>
+    <article className={`flex justify-center gap-x-2 items-center ${bgPrimary ? 'bg-primary shadow-cardService' : 'bg-transparent'} ${i18n.language === "en" ? "w-[208px]" : "w-auto px-4"} py-3 rounded-full `}>
       {
         children
       }
