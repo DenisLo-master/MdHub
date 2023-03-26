@@ -23,7 +23,7 @@ const CorporateOverview = () => {
         <img className="hidden lg:block absolute object-cover w-full h-[400px]" src={ForCorporateHeader} alt="For Corporate" />
         <div className="relative z-10 w-full max-w-7xl mx-auto lg:h-[390px] flex items-center">
           <h2 className="text-[50px] px-4 text-center lg:text-left lg:text-[88px] max-w-[650px] leading-[80px] pb-5 text-white">
-            {t('your-employees-health-should-never-be-limited')}
+            {t('a-modern-benefit-your-employees-will-love')}
           </h2>
         </div>
       </section>
@@ -31,50 +31,50 @@ const CorporateOverview = () => {
       <section className="w-full max-w-[1130px] mx-auto py-10 font-main px-4">
         <article className="w-full bg-linearGradientPrimary rounded-lg px-4 py-10 pb-32 text-white space-y-6">
           <h2 className="text-center text-4xl max-w-lg mx-auto">
-            {t('attract-and-retain-top-talent-by-offering-the-ultimate-care')}
+            {t('attract-and-retain-top-talent-with-mdhubs-ultimate-healthcare-solution')}
           </h2>
           <ul className="flex flex-col lg:flex-row justify-center flex-wrap font-body text-white gap-x-16 gap-y-8 relative">
             <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
-                {t('a-healthy-team-member-is-a-your-companies-greatest-asset')}
+                {t('integrated-mental-health-care-to-support-your-employees-individual-needs')}
               </p>
             </li>
             <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
-                {t('doctors-notes-paediatricians-and-homecare-for-the-kids-and-grandparents')}
+                {t('get-coverage-for-your-employees-and-their-families')}
               </p>
             </li>
             <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
-                {t('support-and-coverage-for-each-employee-and-their-family')}
+                {t('24-7-access-to-care-means-fewer-work-absences')}
               </p>
             </li>
             <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
-                {t('preventive-care-and-ongoing-management-of-chronic-conditions')}
+                {t('employees-can-get-a-doctors-note-or-a-prescription-delivered-to-the-office')}
               </p>
             </li>
             <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
-                {t('reduce-down-time-and-recovery-with-on-demand-fast-service')}
+                {t('families-can-access-pediatric-and-family-care-homecare-and-nursing-services')}
               </p>
             </li>
             <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
-                {t('vaccination-prescriptions-and-mobile-nurses-and-all-medical-records-in-one-place')}
+                {t('employees-can-take-control-with-preventative-care-and-chronic-condition-management')}
               </p>
             </li>
             <li className="hidden lg:flex lg:w-[380px] gap-x-2" />
             <li className="flex lg:w-[380px] gap-x-2">
               <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
-                {t('strong-focus-on-mental-health-and-wellness')}
+                {t('all-of-your-employees-care-in-one-place')}
               </p>
             </li>
             <li className="absolute lg:-bottom-7 -bottom-16 left-4 lg:left-36">
@@ -114,7 +114,7 @@ const CorporateOverview = () => {
       <section className="w-full max-w-[1130px] mx-auto font-main px-4">
         <div>
           <p className="font-body text-xl text-center py-8 font-light">
-            {t('we-offer-holistic-corporate-plans-to-suit-any-size-of-business')}
+            {t('we-offer-corporate-plans-to-suit-any-size-of-business')}
           </p>
           <div className="flex flex-col lg:flex-row items-center gap-y-6 justify-center gap-x-12">
             <Link
