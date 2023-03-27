@@ -6,7 +6,7 @@ const PricingSlider = () => {
   const [selectedPackage, setSelectedPackage] = useState("single")
   const { t } = useTranslation()
   return (
-    <section className="lg:py-10">
+    <section className="lg:py-10 px-4">
       <div className="pb-10 pt-3 lg:pb-3 lg:py-3 px-4 lg:my-10 font-main text-lg flex flex-col md:flex-row items-center justify-between gap-x-4 w-full rounded-b-full lg:rounded-full bg-white lg:bg-[#F1F1F1] shadow-sliderNav max-w-[485px] mx-auto">
         <button
           onClick={() => setSelectedPackage("single")}
@@ -87,7 +87,7 @@ const PricingSlider = () => {
 
           <article className="p-8 px-12 flex flex-col items-center rounded-lg shadow-glow relative">
             <section className="absolute -top-7 left-0 w-full flex justify-center">
-              <div className="absolute flex justify-center items-center top-0 left-32 bg-gradient-primary rounded-2xl w-56 h-16 text-white font-main text-center">
+              <div className="absolute flex justify-center items-center top-0 left-20 lg:left-32 bg-gradient-primary rounded-2xl w-56 h-16 text-white font-main text-center">
                 {t('save-25-compared-to-monthly-plan')}
               </div>
             </section>
