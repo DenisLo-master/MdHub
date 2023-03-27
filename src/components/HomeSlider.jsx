@@ -64,7 +64,7 @@ const HomeSlider = () => {
       >
         <div>
           <div className="bg-virtualDoctor px-6 h-[304px] 2xl:h-[370px] flex justify-center lg:justify-start items-center gap-x-6 2xl:gap-x-16  relative overflow-hidden">
-            <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px]">{t('virtual-care')}</h2>
+            <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px] lg:pl-6">{t('virtual-care')}</h2>
             <img className="hidden lg:block absolute top-0 right-0 w-full max-w-[270px] 2xl:max-w-[320px]" src={VirtualDoctorBanner} alt="Virtual Doctor Banner" />
           </div>
           <div className="p-6 pb-8 w-full flex flex-col justify-between">
@@ -108,7 +108,7 @@ const HomeSlider = () => {
 
         <div>
           <div className="bg-onlinePharmacy px-6 h-[304px] 2xl:h-[370px] flex justify-center lg:justify-start items-center gap-x-6 2xl:gap-x-16 relative">
-            <h2 className="text-white text-[66px] 2xl:text-8xl leading-[70px]">{t('pharmacy-0')}</h2>
+            <h2 className="text-white text-[66px] 2xl:text-8xl leading-[70px] lg:pl-4">{t('pharmacy-0')}</h2>
             <img className="hidden absolute top-20 right-0 lg:block w-full max-w-[310px]" src={OnlinePharmacyBanner} alt="Online Pharmacy Banner" />
           </div>
           <div className="p-6 pb-8 w-full  flex flex-col justify-between">
