@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 const Testimonials = () => {
   const { t } = useTranslation()
   return (
-    <section className="text-dark">
+    <section className="text-dark px-4">
       <h2 className="text-center text-4xl">
         {t('never-wait-for-a-doctor-again')}
       </h2>
