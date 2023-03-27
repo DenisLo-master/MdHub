@@ -8,6 +8,12 @@ const About = () => {
   return (
     <section className="py-20 pt-28 font-main">
       <div className="max-w-7xl mx-auto">
+        <div className="space-y-4 py-8">
+          <h2 className="text-4xl">{t('About Us')}</h2>
+          <p className="hidden lg:block font-body">
+            {t('were-a-group-of-passionate-individuals-that-believe-canadians-deserve-more-when-it-comes-to-their-healthcare-thats-why-we-created-the-ultimate-healthcare-solution-to-put-your-health-back-in-your-hands-while-virtual-healthcare-isnt-new-bridging-the-gap-between-virtual-and-physical-care-is-and-were-proud-to-be-a-disruptor-in-the-virtual-healthcare-industry-our-team-of-doctors-and-nurse-practitioners-is-here-to-help-when-you-need-them-so-you-your-family-and-team-can-access-quality-healthcare-fast-because-a-healthy-life-is-a-happy-life')}
+          </p>
+        </div>
         <div className="flex justify-center relative text-white">
           <ReactPlayer
             width={"100%"}
