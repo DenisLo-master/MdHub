@@ -87,7 +87,7 @@ const UpdateUserInfo = () => {
   }, [])
 
   return (
-    <section className="min-h-screen py-20">
+    <section className="min-h-screen pt-28 py-20">
       <div className="max-w-[600px] mx-auto p-8 rounded-[35px] shadow-cardService border-[0.25px]">
         <div className="flex gap-x-1 items-center pb-5">
           <h2 className="text-4xl">{t('edit-info')}</h2>
