@@ -90,9 +90,9 @@ const ForYou = () => {
         </article>
       </section>
 
-      <section className="relative bg-[#DB8E96] font-main bg-cover bg-no-repeat bg-center 3xl:h-[500px]">
-        <img className="hidden lg:block absolute w-full h-[400px] 3xl:h-[500px]" src={ForYouBottom} alt="For You" />
-        <div className="relative z-10 w-full max-w-[1160px] text-3xl mx-auto h-[400px] object-cover flex items-center text-white px-4">
+      <section className="relative bg-[#DB8E96] font-main mb-[8rem]">
+        <img className="hidden lg:block absolute w-full object-cover" src={ForYouBottom} alt="For You" />
+        <div className="relative z-10 w-full max-w-[1160px] text-3xl mx-auto h-[400px]  flex items-center text-white px-4">
           <div className="space-y-6">
             <h2 className="max-w-[450px] pb-">
               “{t('just-registered-for-a-membership-chose-a-doctor-and-made-a-same-day-appointment-at-faster-than-i-buy-my-morning-coffee')}”
