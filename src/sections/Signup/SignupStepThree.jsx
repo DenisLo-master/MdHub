@@ -279,7 +279,7 @@ const SignupStepThree = () => {
       />
       <div>
         <label>
-          <input type="checkbox" name="checkbox" required />
+          <input className="pr-4" type="checkbox" name="checkbox" required />
           {t('i-certify-that-i-am-at-least-18-years-old-and-i-agree-to-both-mdhubs-terms-of-use-and-privacy-policy')}
         </label>
       </div>
