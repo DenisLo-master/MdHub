@@ -45,7 +45,7 @@ const PricingSlider = () => {
 
           <article className="p-8 px-12 flex flex-col items-center rounded-lg shadow-glow relative">
             <section className="absolute -top-7 left-0 w-full flex justify-center">
-              <div className="absolute flex justify-center items-center top-0 left-16 bg-gradient-primary rounded-2xl w-56 h-16 text-white font-main text-center">
+              <div className="absolute flex justify-center items-center top-0 left-1/2 transform translate-x-[-50%] bg-gradient-primary rounded-2xl w-56 h-16 text-white font-main text-center">
                 {t('save-25-compared-to-monthly-plan')}
               </div>
             </section>
@@ -87,7 +87,7 @@ const PricingSlider = () => {
 
           <article className="p-8 px-12 flex flex-col items-center rounded-lg shadow-glow relative">
             <section className="absolute -top-7 left-0 w-full flex justify-center">
-              <div className="absolute flex justify-center items-center top-0 left-16 lg:left-24 bg-gradient-primary rounded-2xl w-56 h-16 text-white font-main text-center">
+              <div className="absolute flex justify-center items-center top-0 left-1/2 transform translate-x-[-50%] bg-gradient-primary rounded-2xl w-56 h-16 text-white font-main text-center">
                 {t('save-25-compared-to-monthly-plan')}
               </div>
             </section>
