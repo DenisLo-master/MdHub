@@ -85,7 +85,7 @@ const HomeSlider = () => {
         </div>
 
         <div>
-          <div className="bg-mentalHealth px-6 h-[304px] 2xl:h-[370px] flex justify-center items-center gap-x-6 2xl:gap-x-16">
+          <div className="bg-mentalHealth px-6 h-[304px] 2xl:h-[370px] lg:pl-10 2xl:pl-16 flex justify-center lg:justify-start text-left items-center gap-x-6 2xl:gap-x-16">
             <h2 className="text-white text-[80px] 2xl:text-8xl leading-[70px] lowercase">{t('mental-health')}</h2>
             <img className="hidden lg:block w-full max-w-[310px]" src={MentalHealthBanner} alt="Mental Health Banner" />
           </div>
