@@ -54,6 +54,15 @@ const initialUserInfoData = {
   childAccounts: [],
 }
 
+const diagnosticsFormInitialData = {
+  firstName: "",
+  lastName: "",
+  emailAddress: "",
+  phoneNumber: "",
+  preferredDate: "",
+  preferredTime: ""
+}
+
 export const registerationStore = create((set) => ({
   formStep: 0,
   selectedAccountType: 'individual',
@@ -97,7 +106,11 @@ export const registerationStore = create((set) => ({
       childForms: newChildForms
     }
   }),
+  diagnosticsFormData: diagnosticsFormInitialData,
+  changeDiagnosticsFormData: (name, value) => set((state) => ({ diagnosticsFormData: { ...state.diagnosticsFormData, [name]: value } })),
   userInfo: initialUserInfoData,
+  uploadFile: null,
+  setUploadFile: (file) => ((state) => { uploadFile: file }),
   setUserInfo: (userInfoData) => set((state) => ({ userInfo: userInfoData })),
   changeSelectedAccountType: (accountType) => set((state) => ({ selectedAccountType: accountType })),
   increaseFormStep: () => set((state) => ({ formStep: state.formStep + 1 })),
