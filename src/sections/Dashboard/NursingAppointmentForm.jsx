@@ -24,6 +24,10 @@ const NursingAppointmentForm = () => {
   const nursingAppointmentBill = registerationStore(state => state.nursingAppointmentBill)
   const selectedNursingHomecareOptions = registerationStore(state => state.selectedNursingHomecareOptions)
   const setSelectedNursingHomecareOptions = registerationStore(state => state.setSelectedNursingHomecareOptions)
+  const diagnosticsFormData = registerationStore(state => state.diagnosticsFormData)
+  const changeDiagnosticsFormData = registerationStore(state => state.changeDiagnosticsFormData)
+  const uploadFile = registerationStore(state => state.uploadFile)
+  const setUploadFile = registerationStore(state => state.setUploadFile)
   const [isLoading, setIsLoading] = useState(false)
   const nursingFormRef = useRef(null)
   const setShowNursingModal = registerationStore(state => state.setShowNursingModal)
@@ -47,18 +51,38 @@ const NursingAppointmentForm = () => {
 
   const handleNursingFormSubmit = async (e) => {
     e.preventDefault()
+
     if (!isLastStep) next()
+
     if (!stripe || !elements) {
       return;
     }
+
+    // const formData = new FormData();
+    // formData.append('address', nursingFormData.address);
+    // formData.append('city', nursingFormData.city);
+    // formData.append('preferredDate', nursingFormData.preferredDate);
+    // formData.append('preferredTime', nursingFormData.time);
+    // formData.append('file', file)
+
     setIsLoading(true)
     try {
+
+      // const response = await fetch("http://localhost:8080/sendmail", {
+      //   method: 'POST',
+      //   body: formData
+      // })
+      // if (response.ok) {
+      //   toast.success("Your form has been uploaded, you can continue booking", {
+      //     id: "success booking"
+      //   })
+      // }
       const { error, paymentMethod } = await stripe.createPaymentMethod({
         type: 'card',
         card: elements.getElement(CardElement),
       });
       if (!error) {
-        const response = await fetch('https://mdhub-server.onrender.com/api/v1/appointments', {
+        const response = await fetch('https://mdhub-server.onrender.com/sendmail', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -69,14 +93,15 @@ const NursingAppointmentForm = () => {
             customerId: userInfo?.stripeCustomerId,
             userId: userInfo?._id,
             ...nursingFormData,
-            nursingHomecareServices: selectedNursingHomecareOptions.map(item => item.value)
+            nursingHomecareServices: selectedNursingHomecareOptions.map(item => item.value),
+            diagnosticsFormData: diagnosticsFormData
           })
         })
         await response.json()
         if (response.ok) {
           setIsLoading(false)
           setSelectedNursingHomecareOptions([])
-          nursingFormRef.current.reset()          
+          nursingFormRef.current.reset()
           toast.success("Thanks for booking! Our Staff will contact you within 24hr to confirm all details of your booking. Additional charges may be required according to the service, time and distance of travel necessary", { id: "Appointment Success", duration: 5000 })
         }
       }
@@ -84,6 +109,7 @@ const NursingAppointmentForm = () => {
     } catch (error) {
       console.log(error.message)
     } finally {
+      setSelectedNursingHomecareOptions([])
       setIsLoading(false)
     }
   }
