@@ -118,13 +118,13 @@ const ChildAccountForms = () => {
     } else {
       setIsOlderThanFourteen(true)
     }
-    const regex = /^(0[1-9]|1[012])\/(0[1-9]|[12][0-9]|3[01])\/(19|20)\d{2}$/
-    if (regex.test(date)) {
-      setCorrectDate(true)
-    } else {
-      setCorrectDate(false)
-    }
-    handleChildAccountInputChange({ target: { name: "dateOfBirth", value: date } }, index)
+    let input = date;
+    if (input.length === 2 && !input.includes("/")) {
+      input += "/";
+    } else if (input.length === 5 && input.charAt(2) === "/") {
+      input += "/";
+    } 
+    handleChildAccountInputChange({ target: { name: "dateOfBirth", value: input } }, index)
   }
   return (
     <div>
@@ -246,14 +246,6 @@ const ChildAccountForms = () => {
                   onChange={({ target }) => handleDateChange(target.value, index)}
                   placeholder={`${t('date-of-birth-mm-dd-yyyy')}`}
                 />
-                {
-                  childForms[index].dateOfBirth && (
-                    <div className={`flex gap-x-2 items-center ${correctDate ? "text-green-600" : "text-red-600"}`}>
-                      {correctDate ? <AiFillCheckSquare /> : <AiFillCloseCircle />}
-                      <p>{t('date-format')}:{" "}{dayjs(new Date()).format('MM/DD/YYYY')}</p>
-                    </div>
-                  )
-                }
               </div>
             </div>
             {
