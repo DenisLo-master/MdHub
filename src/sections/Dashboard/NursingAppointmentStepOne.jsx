@@ -30,6 +30,7 @@ const NursingAppointmentStepOne = ({ customNursingService, updateFields }) => {
 
 
   const handleSelect = (selectedOption) => {
+
     setSelectedNursingHomecareOptions(selectedOption);
 
     const nursingSelected = selectedOption.some(option =>
@@ -38,7 +39,7 @@ const NursingAppointmentStepOne = ({ customNursingService, updateFields }) => {
 
     const homecareSelected = selectedOption.some(option =>
       options[1].options.some(o => o.value === option.value)
-    );
+    )
 
 
     if (nursingSelected && homecareSelected) {
