@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import toast from "react-hot-toast"
 import { useTranslation } from 'react-i18next'
+import { registerationStore } from '../store/registerationStore'
 
 const INITIAL_DATA = {
   firstName: "",
@@ -18,13 +19,18 @@ const LabRequisitionForm = ({ hideForm }) => {
   const { t } = useTranslation()
 
   const [selectedOption, setSelectedOption] = useState(null);
+  const diagnosticsFormData = registerationStore(state => state.diagnosticsFormData)
+  const changeDiagnosticsFormData = registerationStore(state => state.changeDiagnosticsFormData)
+  const uploadFile = registerationStore(state => state.uploadFile)
+  const setUploadFile = registerationStore(state => state.setUploadFile)
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
 
   const handleFileInputChange = (event) => {
-    setFile(event.target.files[0]);
+    console.log(event.target.files)
+    setUploadFile(event.target.files[0])
   }
 
   const handleChange = (e) => {
@@ -64,16 +70,16 @@ const LabRequisitionForm = ({ hideForm }) => {
       <div className="w-full py-10 space-y-2">
         <div className="flex space-x-8">
           <input
-            value={data.firstName}
-            onChange={handleChange}
+            value={diagnosticsFormData.firstName}
+            onChange={({ target }) => changeDiagnosticsFormData(target.name, target.value)}
             className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
             type="text"
             name="firstName"
             placeholder={t('first-name-0')}
           />
           <input
-            value={data.lastName}
-            onChange={handleChange}
+            value={diagnosticsFormData.lastName}
+            onChange={({ target }) => changeDiagnosticsFormData(target.name, target.value)}
             className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
             type="text"
             name="lastName"
@@ -82,16 +88,16 @@ const LabRequisitionForm = ({ hideForm }) => {
         </div>
         <div className="flex space-x-8">
           <input
-            value={data.emailAddress}
-            onChange={handleChange}
+            value={diagnosticsFormData.emailAddress}
+            onChange={({ target }) => changeDiagnosticsFormData(target.name, target.value)}
             className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
             type="email"
             name="emailAddress"
             placeholder={t('email-address')}
           />
           <input
-            value={data.phoneNumber}
-            onChange={handleChange}
+            value={diagnosticsFormData.phoneNumber}
+            onChange={({ target }) => changeDiagnosticsFormData(target.name, target.value)}
             className="px-4 py-2 flex-1 border rounded-lg outline-none focus:ring ring-primary"
             type="tel"
             name="phoneNumber"
