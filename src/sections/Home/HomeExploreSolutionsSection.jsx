@@ -11,7 +11,7 @@ const HomeExploreSolutionsSection = () => {
   const { t } = useTranslation()
   return (
     <section className="w-full flex flex-col md:flex-row md:items-start pt-32 pb-20">
-      <article className="hidden flex-1 relative rotating-ellipse-section lg:flex justify-center">
+      <article className="hidden flex-1 relative rotating-ellipse-section lg:flex justify-center pb-16">
         <RotatingEllipse />
       </article>
       <HomeSlider />
