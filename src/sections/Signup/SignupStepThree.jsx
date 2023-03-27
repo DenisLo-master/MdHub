@@ -271,7 +271,6 @@ const SignupStepThree = () => {
           name="coupon-code"
           type="text"
           placeholder="Coupon Code"
-          required
         />
       </div>
       <CardElement
