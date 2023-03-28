@@ -30,7 +30,6 @@ const DiagnosticAppointmentStepThree = () => {
           name="coupon-code"
           type="text"
           placeholder="Coupon Code"
-          required
         />
       </div>
       <div>
