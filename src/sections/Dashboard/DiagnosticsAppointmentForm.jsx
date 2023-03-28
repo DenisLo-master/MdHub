@@ -14,30 +14,31 @@ const INITIAL_DATA = {
   city: "",
   province: "Quebec",
   selectedDate: new Date(),
-  file: "",
   postalCode: ""
 }
 
 
 const DiagnosticsAppointmentForm = () => {
-  const [diagnosticsFormData, setDiagnosticsFormData] = useState(INITIAL_DATA)
   const [isLoading, setIsLoading] = useState(false)
   const diagnosticsFormRef = useRef(null)
+  const [appointmentFormData, setAppointmentFormData] = useState(INITIAL_DATA)
   const setShowLabTestingModal = registerationStore(state => state.setShowLabTestingModal)
-  const userInfo = registerationStore(state => state.userInfo)
+  const diagnosticsFormData = registerationStore(state => state.diagnosticsFormData)
+  const userInfo = registerationStore(state => state.userInfo) 
+  const uploadFile = registerationStore(state => state.uploadFile) 
   const stripe = useStripe();
   const elements = useElements();
 
   const updateFields = (fields) => {
-    setDiagnosticsFormData(prev => {
+    setAppointmentFormData(prev => {
       return { ...prev, ...fields }
     })
   }
 
   const { steps, currentStepIndex, step, isFirstStep, isLastStep, next, back } = useMultiStepForm([
     <DiagnosticAppointmentStepOne />,
-    <LabRequisitionForm />,
-    <DiagnosticAppointmentStepTwo {...diagnosticsFormData} updateFields={updateFields} />,
+    <LabRequisitionForm updateFields={updateFields} />,
+    <DiagnosticAppointmentStepTwo {...appointmentFormData} updateFields={updateFields} />,
     <DiagnosticAppointmentStepThree />,
   ])
 
@@ -49,23 +50,31 @@ const DiagnosticsAppointmentForm = () => {
     }
     setIsLoading(true)
     try {
+      const formData = new FormData()
+      formData.append("file", uploadFile)
+      formData.append("firstName", diagnosticsFormData.firstName)
+      formData.append("lastName", diagnosticsFormData.lastName)
+      formData.append("emailAddress", diagnosticsFormData.emailAddress)
+      formData.append("phoneNumber", diagnosticsFormData.phoneNumber)
+      formData.append("customerId", userInfo?.stripeCustomerId)
+      formData.append("userId", userInfo?._id)
+      formData.append("selectedServices", JSON.stringify(["diagnostic service"]))
+      formData.append("time", appointmentFormData.time)
+      formData.append("address", appointmentFormData.address)
+      formData.append("city", appointmentFormData.city)
+      formData.append("postalCode", appointmentFormData.postalCode)
+      formData.append("province", appointmentFormData.province)
+      formData.append("selectedDate", appointmentFormData.selectedDate)
+      formData.append("amount", 14900)
       const { error, paymentMethod } = await stripe.createPaymentMethod({
         type: 'card',
         card: elements.getElement(CardElement),
       });
       if (!error) {
+        formData.append("paymentMethod", paymentMethod.id)
         const response = await fetch('https://mdhub-server.onrender.com/api/v1/appointments', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            amount: 14900,
-            paymentMethod: paymentMethod.id,
-            customerId: userInfo?.stripeCustomerId,
-            userId: userInfo?._id,
-            ...diagnosticsFormData
-          })
+          body: formData
         })
         await response.json()
         if (response.ok) {
