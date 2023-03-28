@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const ForYouHeaderSection = () => {
   const { t } = useTranslation()
   return (
-    <section className="relative bg-[#DB8E96] font-main">
+    <section className="relative bg-[#EA919B] font-main">
       <img className="hidden lg:block absolute  object-cover w-full h-[420px] 2xl:h-[450px]" src={ForYouHeaderBg} alt="For You" />
       <div className="relative z-10 w-full max-w-[900px] md:pl-10 2xl:pl-20 py-10 px-4 text-center lg:text-left space-y-4 flex flex-col items-center md:items-start">
         <h2 className="text-[70px] lg:text-[88px] leading-[80px] text-white">
