@@ -101,7 +101,7 @@ const ParentAccountForm = () => {
 
   const handleDateChange = (date) => {
     let input = date;
-    if (input.length === 1 && input < 10) {
+    if (input.length === 1 && input < 10 && input > 0) {
       input = "0" + input
     }
     if (input.length === 2 && !input.includes("/")) {
