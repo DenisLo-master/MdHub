@@ -30,17 +30,17 @@ const NursingAppointmentStepOne = ({ customNursingService, updateFields }) => {
 
 
   const handleSelect = (selectedOption) => {
-
-    setSelectedNursingHomecareOptions(selectedOption);
+    const serviceNames = selectedOption.map(item => item.value)
+    setSelectedNursingHomecareOptions(selectedOption)
+    updateFields({ serviceNames })
 
     const nursingSelected = selectedOption.some(option =>
       options[0].options.some(o => o.value === option.value)
-    );
+    )
 
     const homecareSelected = selectedOption.some(option =>
       options[1].options.some(o => o.value === option.value)
     )
-
 
     if (nursingSelected && homecareSelected) {
       setNursingAppointmentBill(99);
@@ -52,7 +52,6 @@ const NursingAppointmentStepOne = ({ customNursingService, updateFields }) => {
       setNursingAppointmentBill(null);
     }
   }
-
   return (
     <div>
       <div className="text-lg">
@@ -89,7 +88,7 @@ const NursingAppointmentStepOne = ({ customNursingService, updateFields }) => {
         </div>
       </div>
       {
-        reqNeeded && <LabRequisitionForm hideForm={() => setReqNeeded(false)} />
+        reqNeeded && <LabRequisitionForm updateFields={updateFields} hideForm={() => setReqNeeded(false)} />
       }
     </div>
   )
