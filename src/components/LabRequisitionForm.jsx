@@ -29,13 +29,14 @@ const LabRequisitionForm = ({ hideForm }) => {
   };
 
   const handleFileInputChange = (event) => {
-    console.log(event.target.files)
+    setFile(event.target.files[0])
     setUploadFile(event.target.files[0])
   }
 
   const handleChange = (e) => {
     setData(prev => ({ ...prev, [e.target.name]: e.target.value }))
   }
+
 
   const submitForm = async (e) => {
     e.preventDefault()
