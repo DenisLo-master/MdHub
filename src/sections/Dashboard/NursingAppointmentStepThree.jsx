@@ -4,8 +4,10 @@ import { registerationStore } from '../../store/registerationStore'
 import { useTranslation } from 'react-i18next'
 
 const NursingAppointmentStepThree = () => {
+  const selectedNursingHomecareOptions = registerationStore(state => state.selectedNursingHomecareOptions)
   const nursingAppointmentBill = registerationStore(state => state.nursingAppointmentBill)
   const { t } = useTranslation()
+
   return (
     <div>
       <div className="flex justify-between pb-5">
