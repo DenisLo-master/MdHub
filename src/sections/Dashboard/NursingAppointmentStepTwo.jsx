@@ -3,9 +3,11 @@ import { BiCaretDown } from 'react-icons/bi'
 import DatePicker from 'react-date-picker'
 import 'react-date-picker/dist/entry.nostyle'
 import { useTranslation } from 'react-i18next'
+import { registerationStore } from '../../store/registerationStore'
 
 const NursingAppointmentStepTwo = ({ time, selectedDate, updateFields, address, city, province, postalCode }) => {
   const { t } = useTranslation()
+  const selectedNursingHomecareOptions = registerationStore(state => state.selectedNursingHomecareOptions)
   const generateOptions = () => {
     const options = [];
 
@@ -24,6 +26,7 @@ const NursingAppointmentStepTwo = ({ time, selectedDate, updateFields, address, 
 
     return options;
   };
+  console.log(selectedNursingHomecareOptions)
   return (
     <div className="space-y-5">
       <p className="text-xl pb-2">{t('please-select-date-and-time')}</p>
