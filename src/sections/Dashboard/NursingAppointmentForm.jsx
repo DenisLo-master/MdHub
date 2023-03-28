@@ -8,7 +8,7 @@ import { SVGLoaderCircles } from '../../assets'
 import { useTranslation } from 'react-i18next'
 
 const INITIAL_DATA = {
-  serviceName: "",
+  serviceNames: [],
   time: "",
   address: "",
   city: "",
@@ -32,8 +32,8 @@ const NursingAppointmentForm = () => {
   const nursingFormRef = useRef(null)
   const setShowNursingModal = registerationStore(state => state.setShowNursingModal)
   const userInfo = registerationStore(state => state.userInfo)
-  const stripe = useStripe();
-  const elements = useElements();
+  const stripe = useStripe()
+  const elements = useElements()
 
   const { t } = useTranslation()
 
@@ -51,65 +51,57 @@ const NursingAppointmentForm = () => {
 
   const handleNursingFormSubmit = async (e) => {
     e.preventDefault()
-
     if (!isLastStep) next()
-
     if (!stripe || !elements) {
       return;
     }
 
-    // const formData = new FormData();
-    // formData.append('address', nursingFormData.address);
-    // formData.append('city', nursingFormData.city);
-    // formData.append('preferredDate', nursingFormData.preferredDate);
-    // formData.append('preferredTime', nursingFormData.time);
-    // formData.append('file', file)
 
     setIsLoading(true)
-    try {
+    try {      
+      const services = selectedNursingHomecareOptions.map(item => item.label)
+      const formData = new FormData()
+      formData.append("file", uploadFile)
+      formData.append("firstName", diagnosticsFormData.firstName)
+      formData.append("lastName", diagnosticsFormData.lastName)
+      formData.append("emailAddress", diagnosticsFormData.emailAddress)
+      formData.append("phoneNumber", diagnosticsFormData.phoneNumber)
+      formData.append("customerId", userInfo?.stripeCustomerId)
+      formData.append("userId", userInfo?._id)
+      formData.append("selectedServices", JSON.stringify(services))
+      formData.append("time", nursingFormData.time)
+      formData.append("address", nursingFormData.address)
+      formData.append("city", nursingFormData.city)
+      formData.append("postalCode", nursingFormData.postalCode)
+      formData.append("province", nursingFormData.province)
+      formData.append("customNursingService", nursingFormData.customNursingService)
+      formData.append("selectedDate", nursingFormData.selectedDate)
+      formData.append("amount", nursingAppointmentBill > 0 ? nursingAppointmentBill * 100 : 11383)
 
-      // const response = await fetch("http://localhost:8080/sendmail", {
-      //   method: 'POST',
-      //   body: formData
-      // })
-      // if (response.ok) {
-      //   toast.success("Your form has been uploaded, you can continue booking", {
-      //     id: "success booking"
-      //   })
-      // }
+
       const { error, paymentMethod } = await stripe.createPaymentMethod({
         type: 'card',
         card: elements.getElement(CardElement),
       });
       if (!error) {
-        const response = await fetch('https://mdhub-server.onrender.com/sendmail', {
+        formData.append("paymentMethod", paymentMethod.id)
+        const response = await fetch('https://mdhub-server.onrender.com/api/v1/appointments', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            amount: nursingAppointmentBill > 0 ? nursingAppointmentBill * 100 : 11383,
-            paymentMethod: paymentMethod.id,
-            customerId: userInfo?.stripeCustomerId,
-            userId: userInfo?._id,
-            ...nursingFormData,
-            nursingHomecareServices: selectedNursingHomecareOptions.map(item => item.value),
-            diagnosticsFormData: diagnosticsFormData
-          })
+          body: formData
         })
         await response.json()
         if (response.ok) {
           setIsLoading(false)
           setSelectedNursingHomecareOptions([])
           nursingFormRef.current.reset()
-          toast.success("Thanks for booking! Our Staff will contact you within 24hr to confirm all details of your booking. Additional charges may be required according to the service, time and distance of travel necessary", { id: "Appointment Success", duration: 5000 })
+          toast.success("{t('thanks-for-booking-our-staff-will-contact-you-within-24hr-to-confirm-all-details-of-your-booking-additional-charges-may-be-required-according-to-the-service-time-and-distance-of-travel-necessary')}", { id: "Appointment Success", duration: 5000 })
         }
       }
       setShowNursingModal(false)
+
     } catch (error) {
       console.log(error.message)
     } finally {
-      setSelectedNursingHomecareOptions([])
       setIsLoading(false)
     }
   }
