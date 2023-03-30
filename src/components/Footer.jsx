@@ -11,16 +11,18 @@ const Footer = () => {
   const { t } = useTranslation()
   const location = useLocation()
   return (
-    <footer className="bg-gradient-primary text-white pt-10">
+    <footer className="bg-gradient-primary text-white pt-10 px-4 text-center md:text-left">
       {location.pathname === "/" && 
         (
         <div className="flex flex-col items-center font-main">
           <h2 className="text-3xl pb-4">
             Sign up now for $29.99 per month
           </h2>
-          <button type="button" className="w-[185px] bg-white rounded-full text-primary py-2">
-            Sign Up Today
-          </button>
+          <Link to="/register" className="block">
+            <button type="button" className="w-[185px] bg-white rounded-full text-primary py-2">
+              Sign Up Today
+            </button>
+          </Link>
         </div>
         )
       }
