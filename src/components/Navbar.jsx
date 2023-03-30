@@ -31,7 +31,7 @@ const Navbar = () => {
     }
 
     window.addEventListener('scroll', handleScroll);
-
+    setShowDrawer(false)
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
