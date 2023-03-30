@@ -46,7 +46,8 @@ const HomepageSlider = () => {
     <div className="w-full max-w-[1400px] 3xl:max-w-[1580px] mx-auto font-main h-[500px] px-24 text-primary">
       <Slider {...settings}>
         <article>
-          <div className="bg-[#ECB118] text-white p-6 h-[432px] w-[300px] 3xl:w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">
+          <Link className="block" to="/services/mental-health">
+            <div className="bg-[#ECB118] text-white p-6 h-[432px] w-[300px] 3xl:w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">
             <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
               <Link to="/services/mental-health">
                 <img src={RedirectIcon} alt="redirect" />
@@ -60,9 +61,11 @@ const HomepageSlider = () => {
               Take control of your mental well-being. Easily get mental health support from physicians and therapists.
             </p>
           </div>
+          </Link>
         </article>
         <article>
-          <div className="bg-[#A293FF] text-white p-6 h-[432px] w-[290px] 3xl:w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">
+          <Link className="block" to="/services">
+            <div className="bg-[#A293FF] text-white p-6 h-[432px] w-[290px] 3xl:w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">
             <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
               <Link to="/services">
                 <img src={RedirectIcon} alt="redirect" />
@@ -76,9 +79,11 @@ const HomepageSlider = () => {
               Connect with a virtual doctor 24/7 in minutes, or book an appointment with a specialist.
             </p>
           </div>
+          </Link>
         </article>
         <article>
-          <div className="bg-[#90C387] text-white p-6 h-[432px] w-[300px] 3xl:w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">
+          <Link className="block" to="/services/online-pharmacy">
+            <div className="bg-[#90C387] text-white p-6 h-[432px] w-[300px] 3xl:w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">
             <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
               <Link to="/services/online-pharmacy">
                 <img src={RedirectIcon} alt="redirect" />
@@ -92,9 +97,11 @@ const HomepageSlider = () => {
               Get prescriptions filled or renewed using our affiliate online pharmacy and delivered right to your door.
             </p>
           </div>
+          </Link>
         </article>
         <article>
-          <div className="bg-[#F78839] text-white p-6 h-[432px] w-[300px] 3xl:w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">
+          <Link to="/services/nursing-homecare">
+            <div className="bg-[#F78839] text-white p-6 h-[432px] w-[300px] 3xl:w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">
             <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
               <Link to="/services/nursing-homecare">
                 <img src={RedirectIcon} alt="redirect" />
@@ -108,9 +115,11 @@ const HomepageSlider = () => {
               Get professional care from our team of nurses and homecare helpers that come directly to you.
             </p>
           </div>
+          </Link>
         </article>
         <article>
-          <div className="bg-diagnostics text-white p-6 h-[432px] w-[300px] 3xl:w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">
+          <Link to="/services/diagnostics">
+            <div className="bg-diagnostics text-white p-6 h-[432px] w-[300px] 3xl:w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">
             <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
               <Link to="/services/diagnostics">
                 <img src={RedirectIcon} alt="redirect" />
@@ -124,6 +133,7 @@ const HomepageSlider = () => {
               Get safe and professional lab testing from the comfort of your home or office.
             </p>
           </div>
+          </Link>
         </article>
       </Slider>
     </div>
