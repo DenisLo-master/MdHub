@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 const ForYou = () => {
   const { t } = useTranslation()
   return (
-    <section className="mt-[70px]">
+    <section className="md:mt-[120px]">
       <ForYouHeaderSection />
       <div className="py-10 text-primary font-main px-4">
         <h2 className="flex flex-col lg:flex-row text-center justify-center gap-x-3 items-center text-5xl md:text-6xl">
