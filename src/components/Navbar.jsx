@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next'
 
 const Navbar = () => {
   const [showDrawer, setShowDrawer] = useState(false)
+  const [scrollY, setScrollY] = useState(0)
   const location = useLocation()
   const navigate = useNavigate()
   const token = localStorage.getItem("jwtToken")
@@ -25,11 +26,19 @@ const Navbar = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    function handleScroll() {
+      setScrollY(window.scrollY);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, [location])
 
-
   return (
-    <nav className="md:border-b border-primary pb-[2px] md:pb-[6px] shadow fixed top-0 right-0 w-full z-50 bg-white">
+    <nav className={`transition-all ease-in-out duration-300 ${scrollY === 0 ? 'top-12' : 'top-0' } md:border-b border-primary pb-[2px] md:pb-[6px] shadow md:fixed right-0 w-full z-50 bg-white`}>
       <Drawer showDrawer={showDrawer} close={setShowDrawer} />
       <div className="flex items-center py-4">
         <article className="pl-4 w-[294px] flex">
