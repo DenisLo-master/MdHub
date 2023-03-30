@@ -54,7 +54,7 @@ const HomeHeroSection = () => {
   }, [])
 
   return (
-    <div className="pt-28 md:pt-20 md:py-20 md:pb-10">
+    <div className="pt-28 md:pt-20 md:py-20 md:pb-10 bg-home-gradient">
       <section className="max-w-[90rem] mx-auto flex flex-col-reverse gap-y-6 md:flex-row items-center relative">
         <article data-aos="fade-up" className="flex-1 px-4 md:pl-20">
           <h2 className="w-full max-w-[750px] font-main text-center md:text-left text-4xl md:text-6xl">

@@ -8,7 +8,7 @@ import { AiOutlinePlus } from 'react-icons/ai'
 const HomeMedicalConditionsSection = () => {
 	const { t } = useTranslation()
   return (
-    <section className="font-main">
+		<section className="font-main bg-home-gradient-reverse">
       <div className="w-full max-w-7xl mx-auto flex items-start">
       	<article className="flex-1">
       		<h2 className="text-5xl">Medical Conditions Treated</h2>

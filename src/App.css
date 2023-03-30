@@ -35,7 +35,12 @@ input:checked+.toggle-switch .toggle-circle {
 
 .bg-home-gradient {
   background: rgb(205, 228, 235);
-    background: radial-gradient(circle, rgba(205, 228, 235, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(180deg,rgba(205, 228, 235, 1)  0%,rgba(255, 255, 255, 1) 100%);
+}
+
+.bg-home-gradient-reverse {
+  background: rgb(205, 228, 235);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(205, 228, 235, 1) 100%);
 }
 
 .bg-gradient-primary {
