@@ -62,6 +62,15 @@ input:checked+.toggle-switch .toggle-circle {
   top: 200px;
 }
 
+@media screen and (max-width: 400px) {
+  .slick-arrow.slick-next {
+    right: 0px;
+  }
+
+  .slick-arrow.slick-prev {
+    left: 0px;
+  }
+}
 .slick-arrow.slick-next { 
   right: -60px;
 }
@@ -297,9 +306,6 @@ input:checked+.toggle-switch .toggle-circle {
   background: url('./src/assets/for-you-bottom.png') no-repeat center center/cover;
 }
 
-.slick-icon-arrow {
-  
-}
 
 /* 
 .homepage.flip-words span:nth-child(11) {
