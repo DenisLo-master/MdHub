@@ -24,7 +24,7 @@ const HomeMembershipBenefitsSection = () => {
         <div>
           {/* <img className="w-full max-w-[460px]" src={MembershipBenefitsCover} alt="Benefits" /> */}
           <ReactPlayer
-            width={"100%"}
+            width={395}
             height={700}
             url={HomeMembershipBenefitsVideo}
             controls
