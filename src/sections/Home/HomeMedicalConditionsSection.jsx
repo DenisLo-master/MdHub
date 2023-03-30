@@ -4,6 +4,7 @@ import {Link} from "react-router-dom"
 import Button from '../../components/Button'
 import { useTranslation } from 'react-i18next'
 import { GoStar } from 'react-icons/go'
+import { AiOutlinePlus } from 'react-icons/ai'
 const HomeMedicalConditionsSection = () => {
 	const { t } = useTranslation()
   return (
@@ -17,7 +18,7 @@ const HomeMedicalConditionsSection = () => {
       		<div className="max-w-[380px] space-y-4">
       			<article>
       				<h2 className="text-primary pb-2">Acute care</h2>
-	      			<p className="font-body text-sm">Olive's healthcare professionals provide tests and treatment for most common medical problems. (if applicable)
+							<p className="font-body text-sm">Our healthcare professionals provide tests and treatment for most common medical problems. (if applicable)
 	      			</p>
       			</article>
       			<article>
@@ -39,8 +40,8 @@ const HomeMedicalConditionsSection = () => {
 	      			</p>
       			</article>
 						<article className="text-primary flex items-center gap-x-2">
-							<ArrowIcon className="w-6 h-6"/>
-							<h2 className="text-primary pb-2">many more</h2>
+							<AiOutlinePlus />
+							<h2 className="text-primary">many more</h2>
 						</article>
 						<article>
 							<Link to="/services" className="flex items-center gap-x-1 font-body">
