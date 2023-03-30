@@ -55,8 +55,8 @@ const HomeMedicalConditionsSection = () => {
       </div>
 			<div className="text-center py-10">
 				<div className="relative">
-					<h2 className="text-6xl">Get your first year of membership for $359 $289</h2>
-					<div className="absolute -top-6 right-[23rem] w-[2px] h-28 bg-primary transform rotate-45"></div>
+					<h2 className="text-6xl">Get your first year of membership for <span className="line-through">$359</span> $289</h2>
+					{/* <div className="absolute -top-6 right-[23rem] w-[2px] h-28 bg-primary transform rotate-45"></div> */}
 				</div>
 				<p className="text-lg font-body py-4">Receive immediate personalized and human medical follow-up by registering with MDHub.</p>
 				<div className="flex justify-center">
