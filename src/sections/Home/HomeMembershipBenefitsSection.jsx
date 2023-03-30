@@ -19,7 +19,7 @@ import Button from '../../components/Button'
 const HomeMembershipBenefitsSection = () => {
   const { t } = useTranslation()
   return (
-    <section className="relative w-full font-main bg-white py-8 lg:pb-20">
+    <section className="relative w-full font-main py-8 lg:pb-20">
       <div className="w-full max-w-7xl mx-auto flex gap-x-12 flex-col-reverse lg:flex-row justify-between">
         <div>
           {/* <img className="w-full max-w-[460px]" src={MembershipBenefitsCover} alt="Benefits" /> */}

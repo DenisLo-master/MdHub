@@ -43,7 +43,7 @@ const HomepageSlider = () => {
     return <ul className="custom-dots">{customDots}</ul>;
   };
   return (
-    <div className="w-full font-main h-[500px] px-24 bg-gray-100 text-primary">
+    <div className="w-full font-main h-[500px] px-24 text-primary">
       <Slider {...settings}>
         <article>
           <div className="bg-[#ECB118] text-white p-6 h-[432px] w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">

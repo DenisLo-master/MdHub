@@ -57,7 +57,7 @@ function App() {
     return (
       <div className="overflow-x-hidden text-gray-800">
         <Navbar />
-        <main className="w-full bg-white min-h-[calc(100vh-73px)]">
+        <main className="w-full  min-h-[calc(100vh-73px)]">
           {children}
         </main>
         <Footer />
@@ -69,7 +69,7 @@ function App() {
     <div className="overflow-x-hidden text-gray-800">
       <BrowserRouter>
         <Toaster />
-        <main className="w-full bg-white min-h-[calc(100vh-73px)]">
+        <main className="w-full  min-h-[calc(100vh-73px)]">
           <Routes>
             <Route path="/" element={<DefaultLayout><Home /></DefaultLayout>} />
             <Route path="services" element={<DefaultLayout><Services /></DefaultLayout>}>

@@ -13,7 +13,7 @@ import {
 
 const Home = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-home-gradient">
       <HomeHeroSection />
       <HomeUserSatisfactionSection />
       <HomepageSlider />
