@@ -16,7 +16,7 @@ const ServicesHeaderSection = () => {
   const { t, i18n } = useTranslation()
   const location = useLocation()
   return (
-    <section className="mb-10 mt-16">
+    <section className="mb-10 md:mt-28">
       <h2 className="font-main py-10 text-4xl text-center">{t('Services')}</h2>
       <div className={`w-full max-w-[1170px] mx-auto rounded-b-full lg:rounded-full shadow-xl flex flex-col lg:flex-row justify-center ${i18n.language === "fr" && "lg:justify-between lg:px-6"} items-center pb-24 lg:pb-3 py-3 gap-x-6 text-[#3F3F3F] font-main`}>
         <Link to="/services">
