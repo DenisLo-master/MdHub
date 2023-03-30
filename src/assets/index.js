@@ -159,8 +159,10 @@ import NursingAndHomeCareServices01 from './nursing-homecare-services-01.png'
 import NursingAndHomeCareServices02 from './nursing-homecare-services-02.png'
 import NursingAndHomeCareServices03 from './nursing-homecare-services-03.png'
 import NursingAndHomeCareServices04 from './nursing-homecare-services-04.png'
+import HomeHeroImage from './home-hero-image.png'
 
 export {
+  HomeHeroImage,
   NursingAndHomeCareServices01,
   NursingAndHomeCareServices02,
   NursingAndHomeCareServices03,
