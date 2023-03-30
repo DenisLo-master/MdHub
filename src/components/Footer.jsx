@@ -3,14 +3,27 @@ import Logo from '../assets/logo-white.png'
 import Facebook from '../assets/facebook.png'
 import Linkedin from '../assets/linkedin.png'
 import Twitter from '../assets/twitter.png'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa"
 import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
   const { t } = useTranslation()
+  const location = useLocation()
   return (
-    <footer className="bg-gradient-primary text-white">
+    <footer className="bg-gradient-primary text-white pt-10">
+      {location.pathname === "/" && 
+        (
+        <div className="flex flex-col items-center font-main">
+          <h2 className="text-3xl pb-4">
+            Sign up now for $29.99 per month
+          </h2>
+          <button type="button" className="w-[185px] bg-white rounded-full text-primary py-2">
+            Sign Up Today
+          </button>
+        </div>
+        )
+      }
       <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:space-x-28 text-center md:text-left gap-y-6 py-12">
         <header>
           <img className="w-36" src={Logo} alt="Logo"/>
