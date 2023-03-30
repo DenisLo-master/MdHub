@@ -6,6 +6,7 @@ import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-ico
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { SliderMentalHealth, SliderVirtualCare, RedirectIcon, SliderOnlinePharmacy, SliderNursingHomecare, SliderDiagnostics } from '../assets';
 
 const HomepageSlider = () => {
   const { t } = useTranslation()
@@ -17,13 +18,12 @@ const HomepageSlider = () => {
   )
 
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    prevArrow: <BsFillArrowLeftCircleFill className="text-primary z-10 slick-icon-arrow"/>,
-    nextArrow: <BsFillArrowRightCircleFill className="text-primary z-10 slick-icon-arrow"/>
+    prevArrow: <BsFillArrowLeftCircleFill className="text-blue-400 z-10  slick-icon-arrow" />,
+    nextArrow: <BsFillArrowRightCircleFill className="text-blue-400 z-10 slick-icon-arrow" />
   };
 
 
@@ -43,23 +43,78 @@ const HomepageSlider = () => {
     return <ul className="custom-dots">{customDots}</ul>;
   };
   return (
-    <div className="w-full font-main h-auto max-w-7xl mx-auto bg-gray-100">
+    <div className="w-full font-main h-[500px] px-24 bg-gray-100 text-primary">
       <Slider {...settings}>
-        <div>
-          1
-        </div>
-        <div>
-          2
-        </div>
-        <div>
-          3
-        </div>
-        <div>
-          4
-        </div>
-        <div>
-          5
-        </div>
+        <article>
+          <div className="bg-[#ECB118] text-white p-6 h-[432px] w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">
+            <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
+              <img src={RedirectIcon} alt="redirect"/>
+            </div>
+            <div className="flex justify-center pb-20">
+              <SliderMentalHealth />
+            </div>
+            <h2 className="text-3xl pb-4">Mental health</h2>
+            <p className="font-body pb-4">
+              Take control of your mental well-being. Easily get mental health support from physicians and therapists.
+            </p>
+          </div>
+        </article>
+        <article>
+          <div className="bg-[#A293FF] text-white p-6 h-[432px] w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">
+            <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
+              <img src={RedirectIcon} alt="redirect" />
+            </div>
+            <div className="flex justify-center pb-20">
+              <SliderVirtualCare />
+            </div>
+            <h2 className="text-3xl pb-4">Virtual care</h2>
+            <p className="font-body pb-4">
+              Connect with a virtual doctor 24/7 in minutes, or book an appointment with a specialist.
+            </p>
+          </div>
+        </article>
+        <article>
+          <div className="bg-[#90C387] text-white p-6 h-[432px] w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">
+            <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
+              <img src={RedirectIcon} alt="redirect" />
+            </div>
+            <div className="flex justify-center pb-20">
+              <SliderOnlinePharmacy />
+            </div>
+            <h2 className="text-3xl pb-4">Online pharmacy</h2>
+            <p className="font-body pb-4">
+              Get prescriptions filled or renewed using our affiliate online pharmacy and delivered right to your door.
+            </p>
+          </div>
+        </article>
+        <article>
+          <div className="bg-[#F78839] text-white p-6 h-[432px] w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">
+            <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
+              <img src={RedirectIcon} alt="redirect" />
+            </div>
+            <div className="flex justify-center pb-20">
+              <SliderNursingHomecare />
+            </div>
+            <h2 className="text-3xl pb-4">Nursing & homecare</h2>
+            <p className="font-body pb-4">
+              Get professional care from our team of nurses and homecare helpers that come directly to you.
+            </p>
+          </div>
+        </article>
+        <article>
+          <div className="bg-diagnostics text-white p-6 h-[432px] w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">
+            <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
+              <img src={RedirectIcon} alt="redirect" />
+            </div>
+            <div className="flex justify-center pb-20">
+              <img src={SliderDiagnostics} alt="Diagnostics"/>
+            </div>
+            <h2 className="text-3xl pb-4">Diagnostics</h2>
+            <p className="font-body pb-4">
+              Get safe and professional lab testing from the comfort of your home or office.
+            </p>
+          </div>
+        </article>
       </Slider>
     </div>
   )

@@ -169,8 +169,20 @@ import NursingAndHomeCareServices04 from './nursing-homecare-services-04.png'
 import HomeHeroImage from './home-hero-image.png'
 import MembershipBenefitsCover from './membership-benefits-cover.png'
 import HomeMedicalConditionsHero from './home-medical-conditions-hero.png'
+import { ReactComponent as SliderMentalHealth } from './mental-health.svg'
+import { ReactComponent as SliderVirtualCare } from './slider-virtual-care.svg'
+import { ReactComponent as SliderOnlinePharmacy } from './slider-online-pharmacy.svg'
+import { ReactComponent as SliderNursingHomecare } from './slider-nursinghomecare.svg'
+import SliderDiagnostics from './slider-diagnostics.png'
+import RedirectIcon from './redirect.png'
 
 export {
+  SliderDiagnostics,
+  SliderNursingHomecare,
+  SliderOnlinePharmacy,
+  RedirectIcon,
+  SliderVirtualCare,
+  SliderMentalHealth,
   HomeMembershipBenefitsVideo,
   HomeMedicalConditionsHero,
   MembershipBenefit01,

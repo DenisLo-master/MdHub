@@ -38,6 +38,24 @@ input:checked+.toggle-switch .toggle-circle {
   background-image: linear-gradient(90deg, #48ABC8 0%, #A2D2E1 100%)
 }
 
+.slick-slider svg,
+.slick-slider svg:hover {
+  color: #48ABC8;
+}
+
+.slick-slider .slick-arrow {
+  width: 40px;
+  height: 40px;
+  top: 200px;
+}
+
+.slick-slide {
+  margin-right: 10px;
+}
+
+.slick-list {
+  margin-right: -10px;
+}
 .react-date-picker__wrapper {
   border: none !important;
 }
@@ -263,8 +281,7 @@ input:checked+.toggle-switch .toggle-circle {
 }
 
 .slick-icon-arrow {
-  top: 30px !important;
-  right: 40px !important;
+  
 }
 
 /* 
