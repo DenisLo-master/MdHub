@@ -58,6 +58,10 @@ input:checked+.toggle-switch .toggle-circle {
   top: 200px;
 }
 
+.slick-arrow.slick-next { 
+  right: -60px;
+}
+
 .slick-slide {
   margin-right: 10px;
 }
