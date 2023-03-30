@@ -29,6 +29,7 @@ import { ReactComponent as OnlinePharmacyIcon } from './online-pharmacy-icon.svg
 import { ReactComponent as ArrowGradient } from './arrow-gradient.svg'
 import { ReactComponent as CloseVector } from './close-vector.svg'
 import { ReactComponent as Star } from './star.svg'
+import HomeMembershipBenefitsVideo from './membership-benefits-video.mp4'
 import MembershipBenefit01 from './membership-benefit-01.svg'
 import MembershipBenefit02 from './membership-benefit-02.svg'
 import MembershipBenefit03 from './membership-benefit-03.svg'
@@ -170,6 +171,7 @@ import MembershipBenefitsCover from './membership-benefits-cover.png'
 import HomeMedicalConditionsHero from './home-medical-conditions-hero.png'
 
 export {
+  HomeMembershipBenefitsVideo,
   HomeMedicalConditionsHero,
   MembershipBenefit01,
   MembershipBenefit02,

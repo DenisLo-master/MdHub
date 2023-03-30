@@ -8,8 +8,10 @@ import {
   MembershipBenefit03,
   MembershipBenefit04,
   MembershipBenefit05,
-  MembershipBenefit06
+  MembershipBenefit06,
+  HomeMembershipBenefitsVideo
 } from '../../assets'
+import ReactPlayer from 'react-player'
 import { useTranslation } from 'react-i18next'
 import Button from '../../components/Button'
 
@@ -20,7 +22,13 @@ const HomeMembershipBenefitsSection = () => {
     <section className="relative w-full font-main bg-white py-8 lg:pb-20">
       <div className="w-full max-w-7xl mx-auto flex gap-x-12 flex-col-reverse lg:flex-row justify-between">
         <div>
-          <img className="w-full max-w-[460px]" src={MembershipBenefitsCover} alt="Benefits" />
+          {/* <img className="w-full max-w-[460px]" src={MembershipBenefitsCover} alt="Benefits" /> */}
+          <ReactPlayer
+            width={"100%"}
+            height={700}
+            url={HomeMembershipBenefitsVideo}
+            controls
+          />
         </div>
         <div className="flex-1 pt-10 flex flex-col gap-y-4">
           <h2 className="text-5xl">Membership Benefits</h2>
