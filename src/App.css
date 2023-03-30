@@ -52,6 +52,10 @@ input:checked+.toggle-switch .toggle-circle {
   color: #48ABC8;
 }
 
+.for-you-bg {
+  background: url('./assets/for-you-bottom.png') no-repeat center center/cover;
+}
+
 .slick-slider .slick-arrow {
   width: 40px;
   height: 40px;

@@ -67,8 +67,7 @@ const HomeMedicalConditionsSection = () => {
 					</Link>
 				</div>
 			</div>
-			<section className="relative bg-[#DB8E96] font-main h-[420px] overflow-hidden">
-				<img className="hidden lg:block absolute w-full object-cover" src={ForYouBottom} alt="For You" />
+			<section className="for-you-bg py-10 3xl:py-20">
 				<div className="relative z-10 w-full max-w-[1160px] text-3xl mx-auto h-[400px]  flex items-center text-white px-4">
 					<div className="space-y-6">
 						<h2 className="max-w-[450px] pb-">
