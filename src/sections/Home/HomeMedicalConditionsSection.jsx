@@ -17,31 +17,31 @@ const HomeMedicalConditionsSection = () => {
       		</p>
       		<div className="max-w-[380px] space-y-4">
       			<article>
-      				<h2 className="text-primary pb-2">Acute care</h2>
+							<h2 className="text-2xl text-primary pb-2">Acute care</h2>
 	      			<p className="font-body text-sm">Our healthcare professionals provide tests and treatment for most common medical problems. 
 	      			</p>
       			</article>
       			<article>
-      				<h2 className="text-primary pb-2">Chronic care</h2>
+							<h2 className="text-2xl text-primary pb-2">Chronic care</h2>
 	      			<p className="font-body text-sm">
 	      				Our healthcare professionals can provide you with a consultation or a prescription for most common chronic illnesses previously diagnosed.
 	      			</p>
       			</article>
       			<article>
-      				<h2 className="text-primary pb-2">Mental health</h2>
+							<h2 className="text-2xl text-primary pb-2">Mental health</h2>
 	      			<p className="font-body text-sm">
 	      				Our healthcare professionals can provide you with a consultation or a prescription for most common chronic illnesses previously diagnosed.
 	      			</p>
       			</article>
       			<article>
-      				<h2 className="text-primary pb-2">Sexual health</h2>
+							<h2 className="text-2xl text-primary pb-2">Sexual health</h2>
 	      			<p className="font-body text-sm">
 	      				Our health professionals are available to advise you and prescribe treatment for sexual health problems.
 	      			</p>
       			</article>
 						<article className="text-primary flex items-center gap-x-2">
 							<AiOutlinePlus />
-							<h2 className="text-primary">many more</h2>
+							<h2 className="text-2xl text-primary">many more</h2>
 						</article>
 						<article>
 							<Link to="/services" className="flex items-center gap-x-1 font-body">

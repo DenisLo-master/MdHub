@@ -27,27 +27,27 @@ const HomeMembershipBenefitsSection = () => {
           <p className="font-body max-w-[680px] text-2xl pb-6">Virtual and physical healthcare services through an affordable membership, offering mobile nursing, pharmacy, lab testing, and mental health specialists.</p>
           <div className="grid grid-cols-3 gap-8">
             <article className='flex flex-col items-center'>
-              <MembershipBenefit01 />
+              <img className="w-20 h-20" src={MembershipBenefit01} alt="Membership benefit" />
               <h2 className="text-center max-w-[150px] pt-2">Access to Canadian certified doctors 24/7.</h2>
             </article>
             <article className='flex flex-col items-center'>
-              <MembershipBenefit02 />
+              <img className="w-20 h-20" src={MembershipBenefit02} alt="Membership benefit" />
               <h2 className="text-center max-w-[150px] pt-2">Free and fast delivery Online pharmacy.</h2>
             </article>
             <article className='flex flex-col items-center'>
-              <MembershipBenefit03 />
+              <img className="w-20 h-20" src={MembershipBenefit03} alt="Membership benefit" />
               <h2 className="text-center max-w-[150px] pt-2">Free Headspace membership.</h2>
             </article>
             <article className='flex flex-col items-center'>
-              <MembershipBenefit04 />
+              <img className="w-20 h-20" src={MembershipBenefit04} alt="Membership benefit" />
               <h2 className="text-center max-w-[150px] pt-2">Access to qualified Mobile nurses.</h2>
             </article>
             <article className='flex flex-col items-center'>
-              <MembershipBenefit05 />
+              <img className="w-20 h-20" src={MembershipBenefit05} alt="Membership benefit" />
               <h2 className="text-center max-w-[150px] pt-2">Access specialist doctors at discounted rates.</h2>
             </article>
             <article className='flex flex-col items-center'>
-              <MembershipBenefit06 />
+              <img className="w-20 h-20" src={MembershipBenefit06} alt="Membership benefit" />
               <h2 className="text-center max-w-[150px] pt-2">Fast and convenient lab testing and diagnostics.</h2>
             </article>
           </div>

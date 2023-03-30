@@ -16,7 +16,7 @@ const Home = () => {
     <div className="bg-white">
       <HomeHeroSection />
       <HomeUserSatisfactionSection />
-      {/* <HomepageSlider/> */}
+      <HomepageSlider />
       {/* <HomeExploreSolutionsSection /> */}
       <HomeMembershipBenefitsSection />
       <HomeMedicalConditionsSection />
