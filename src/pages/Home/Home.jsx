@@ -13,7 +13,8 @@ const Home = () => {
   return (
     <div className="bg-white">
       <HomeHeroSection />
-      <HomeExploreSolutionsSection />
+      <HomeUserSatisfactionSection />
+      {/* <HomeExploreSolutionsSection /> */}
       <HomeMembershipBenefitsSection />
       <HomeHowItWorksSection />
       <HomeMembershipCostCtaSection />
