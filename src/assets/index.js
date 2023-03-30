@@ -29,6 +29,12 @@ import { ReactComponent as OnlinePharmacyIcon } from './online-pharmacy-icon.svg
 import { ReactComponent as ArrowGradient } from './arrow-gradient.svg'
 import { ReactComponent as CloseVector } from './close-vector.svg'
 import { ReactComponent as Star } from './star.svg'
+import { ReactComponent as MembershipBenefit01 } from './membership-benefit-01.svg'
+import { ReactComponent as MembershipBenefit02 } from './membership-benefit-02.svg'
+import { ReactComponent as MembershipBenefit03 } from './membership-benefit-03.svg'
+import { ReactComponent as MembershipBenefit04 } from './membership-benefit-04.svg'
+import { ReactComponent as MembershipBenefit05 } from './membership-benefit-05.svg'
+import { ReactComponent as MembershipBenefit06 } from './membership-benefit-06.svg'
 import VirusTestingAndVaccination from './virus-testing-and-vaccination.png'
 import Bombardier from './bombardier.png'
 import Aloan from './aloan.png'
@@ -160,8 +166,18 @@ import NursingAndHomeCareServices02 from './nursing-homecare-services-02.png'
 import NursingAndHomeCareServices03 from './nursing-homecare-services-03.png'
 import NursingAndHomeCareServices04 from './nursing-homecare-services-04.png'
 import HomeHeroImage from './home-hero-image.png'
+import MembershipBenefitsCover from './membership-benefits-cover.png'
+import HomeMedicalConditionsHero from './home-medical-conditions-hero.png'
 
 export {
+  HomeMedicalConditionsHero,
+  MembershipBenefit01,
+  MembershipBenefit02,
+  MembershipBenefit03,
+  MembershipBenefit04,
+  MembershipBenefit05,
+  MembershipBenefit06,
+  MembershipBenefitsCover,
   HomeHeroImage,
   NursingAndHomeCareServices01,
   NursingAndHomeCareServices02,

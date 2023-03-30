@@ -44,8 +44,10 @@ import PricingHeader from './Pricing/PricingHeader'
 import HeadspaceSection from './Pricing/HeadspaceSection'
 import MembershipBenefits from './Pricing/MembershipBenefits'
 import Testimonials from "./Pricing/Testimonials"
+import HomeMedicalConditionsSection from "./Home/HomeMedicalConditionsSection"
 
 export {
+  HomeMedicalConditionsSection,
   NursingAndHomecareServices,
   DiagnosticServices,
   OnlinePharmacyServices,

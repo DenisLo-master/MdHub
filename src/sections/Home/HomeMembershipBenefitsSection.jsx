@@ -2,94 +2,63 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import {
   OkIconPrimary,
-  Benefit
+  MembershipBenefitsCover,
+  MembershipBenefit01,
+  MembershipBenefit02,
+  MembershipBenefit03,
+  MembershipBenefit04,
+  MembershipBenefit05,
+  MembershipBenefit06
 } from '../../assets'
 import { useTranslation } from 'react-i18next'
+import Button from '../../components/Button'
 
 
 const HomeMembershipBenefitsSection = () => {
   const { t } = useTranslation()
   return (
     <section className="relative w-full font-main bg-white py-8 lg:pb-20">
-      <div className="w-full flex flex-col-reverse lg:flex-row justify-between">
-        <div className="flex">
-          <article className="hidden lg:block w-52" />
-          <article>
-            <article className="px-4 md:px-0 w-full">
-              <div className="space-y-2">
-                <h2 className="w-full font-main text-4xl md:text-5xl">
-                  {t('Membership Benefits')}
-                </h2>
-                <h3 className='w-full font-body text-base pb-8'>
-                  {t('Your health, all in one place.')}
-                </h3>
-              </div>
-            </article>
-            <ul className="px-8 font-body space-y-7 pb-8 max-w-sm">
-              <li className='flex items-center gap-x-3'>
-                <div>
-                  <OkIconPrimary className="w-7 h-7" />
-                </div>
-                <p>{t('Free unlimited access to doctors 24/7')}</p>
-              </li>
-
-              <li className='flex items-center gap-x-3'>
-                <div>
-                  <OkIconPrimary className="w-7 h-7" />
-                </div>
-                <p>{t('Free online pharmacy and delivery')}</p>
-              </li>
-
-              <li className='flex items-center gap-x-3'>
-                <div>
-                  <OkIconPrimary className="w-7 h-7" />
-                </div>
-                <p>{t('Free Headspace membership')}</p>
-              </li>
-
-              <li className='flex items-center gap-x-3'>
-                <div>
-                  <OkIconPrimary className="w-7 h-7" />
-                </div>
-                <p>{t('Access to private labs with a 25% discount')}</p>
-              </li>
-
-              <li className='flex items-center gap-x-3'>
-                <div>
-                  <OkIconPrimary className="w-7 h-7" />
-                </div>
-                <p>{t('Mobile nursing and homecare with a 25% discount')}</p>
-              </li>
-
-              <li className='flex items-center gap-x-3'>
-                <div>
-                  <OkIconPrimary className="w-7 h-7" />
-                </div>
-                <p>{t('Virus testing with a 25% discount + free rush service')}</p>
-              </li>
-
-              <li className='flex items-center gap-x-3'>
-                <div>
-                  <OkIconPrimary className="w-7 h-7" />
-                </div>
-                <p>{t('Access to specialists and mental health professionals with a 15% discount')}</p>
-              </li>
-              <li>
-                <Link className="block" to="/rates">
-                  <button
-                    type="button"
-                    className={`rounded-full w-48 font-main group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent px-4`}
-                  >
-                    {t('Learn More')}
-                  </button>
-                </Link>
-              </li>
-            </ul>
-
-          </article>
-        </div>
+      <div className="w-full max-w-7xl mx-auto flex gap-x-12 flex-col-reverse lg:flex-row justify-between">
         <div>
-          <img className="w-full max-w-4xl 3xl:max-w-[86rem] 3xl:object-cover 3xl:max-h-[700px]" src={Benefit} alt="Benefit" />
+          <img className="w-full max-w-[460px]" src={MembershipBenefitsCover} alt="Benefits" />
+        </div>
+        <div className="flex-1 pt-10 flex flex-col gap-y-4">
+          <h2 className="text-5xl">Membership Benefits</h2>
+          <p className="font-body max-w-[680px] text-2xl pb-6">Virtual and physical healthcare services through an affordable membership, offering mobile nursing, pharmacy, lab testing, and mental health specialists.</p>
+          <div className="grid grid-cols-3 gap-8">
+            <article className='flex flex-col items-center'>
+              <MembershipBenefit01 />
+              <h2 className="text-center max-w-[150px] pt-2">Access to Canadian certified doctors 24/7.</h2>
+            </article>
+            <article className='flex flex-col items-center'>
+              <MembershipBenefit02 />
+              <h2 className="text-center max-w-[150px] pt-2">Free and fast delivery Online pharmacy.</h2>
+            </article>
+            <article className='flex flex-col items-center'>
+              <MembershipBenefit03 />
+              <h2 className="text-center max-w-[150px] pt-2">Free Headspace membership.</h2>
+            </article>
+            <article className='flex flex-col items-center'>
+              <MembershipBenefit04 />
+              <h2 className="text-center max-w-[150px] pt-2">Access to qualified Mobile nurses.</h2>
+            </article>
+            <article className='flex flex-col items-center'>
+              <MembershipBenefit05 />
+              <h2 className="text-center max-w-[150px] pt-2">Access specialist doctors at discounted rates.</h2>
+            </article>
+            <article className='flex flex-col items-center'>
+              <MembershipBenefit06 />
+              <h2 className="text-center max-w-[150px] pt-2">Fast and convenient lab testing and diagnostics.</h2>
+            </article>
+          </div>
+          <div className="flex justify-around pt-4 md:pt-12">
+            <h2 className="text-2xl">Take control of your health today.</h2>
+            <Link to="/register">
+              <Button wide gradient>
+                <span>Sign Up Now</span>
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

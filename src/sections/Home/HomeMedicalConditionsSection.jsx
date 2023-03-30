@@ -1,0 +1,92 @@
+import React from 'react'
+import { HomeMedicalConditionsHero, ArrowIcon, ChevronRight, ForYouBottom } from '../../assets'
+import {Link} from "react-router-dom"
+import Button from '../../components/Button'
+import { useTranslation } from 'react-i18next'
+import { GoStar } from 'react-icons/go'
+const HomeMedicalConditionsSection = () => {
+	const { t } = useTranslation()
+  return (
+    <section className="font-main">
+      <div className="w-full max-w-7xl mx-auto flex items-start">
+      	<article className="flex-1">
+      		<h2 className="text-5xl">Medical Conditions Treated</h2>
+      		<p className="w-full max-w-[500px] py-4 font-body">
+      			Our medical team can treat most health conditions online. Our health professionals are available for a consultation and to provide prescriptions for common chronic care conditions.
+      		</p>
+      		<div className="max-w-[380px] space-y-4">
+      			<article>
+      				<h2 className="text-primary pb-2">Acute care</h2>
+	      			<p className="font-body text-sm">Olive's healthcare professionals provide tests and treatment for most common medical problems. (if applicable)
+	      			</p>
+      			</article>
+      			<article>
+      				<h2 className="text-primary pb-2">Chronic care</h2>
+	      			<p className="font-body text-sm">
+	      				Our healthcare professionals can provide you with a consultation or a prescription for most common chronic illnesses previously diagnosed. (if applicable)
+	      			</p>
+      			</article>
+      			<article>
+      				<h2 className="text-primary pb-2">Mental health</h2>
+	      			<p className="font-body text-sm">
+	      				Our healthcare professionals can provide you with a consultation or a prescription for most common chronic illnesses previously diagnosed. (if applicable)
+	      			</p>
+      			</article>
+      			<article>
+      				<h2 className="text-primary pb-2">Sexual health</h2>
+	      			<p className="font-body text-sm">
+	      				Our health professionals are available to advise you and prescribe treatment for sexual health problems. (if applicable)
+	      			</p>
+      			</article>
+						<article className="text-primary flex items-center gap-x-2">
+							<ArrowIcon className="w-6 h-6"/>
+							<h2 className="text-primary pb-2">many more</h2>
+						</article>
+						<article>
+							<Link to="/services" className="flex items-center gap-x-1 font-body">
+								Explore all our services and treatments.
+								<ChevronRight className="text-primary h-3 w-3"/>
+							</Link>
+						</article>
+      		</div>
+      	</article>
+      	<img className="w-full max-w-[500px]" src={HomeMedicalConditionsHero} alt="Medical Conditions treated"/>
+      </div>
+			<div className="text-center py-10">
+				<div className="relative">
+					<h2 className="text-6xl">Get your first year of membership for $359 $289</h2>
+					<div className="absolute -top-6 right-[23rem] w-[2px] h-28 bg-primary transform rotate-45"></div>
+				</div>
+				<p className="text-lg font-body py-4">Receive immediate personalized and human medical follow-up by registering with MDHub.</p>
+				<div className="flex justify-center">
+					<Link to="/register">
+						<Button wide gradient>
+							<span>Sign Up Today</span>
+						</Button>
+					</Link>
+				</div>
+			</div>
+			<section className="relative bg-[#DB8E96] font-main h-[420px] overflow-hidden">
+				<img className="hidden lg:block absolute w-full object-cover" src={ForYouBottom} alt="For You" />
+				<div className="relative z-10 w-full max-w-[1160px] text-3xl mx-auto h-[400px]  flex items-center text-white px-4">
+					<div className="space-y-6">
+						<h2 className="max-w-[450px] pb-">
+							“{t('just-registered-for-a-membership-chose-a-doctor-and-made-a-same-day-appointment-at-faster-than-i-buy-my-morning-coffee')}”
+						</h2>
+						<h2>— {t('mdhub-member-in-montreal')}</h2>
+						<div className="flex gap-x-4 text-white pb-8">
+							<GoStar/>
+							<GoStar/>
+							<GoStar/>
+							<GoStar/>
+							<GoStar/>
+						</div>
+						<h2 className="font-main">Reviewing: Lab testing & diagnostics</h2>
+					</div>
+				</div>
+			</section>
+    </section>
+  )
+}
+
+export default HomeMedicalConditionsSection

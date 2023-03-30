@@ -262,6 +262,11 @@ input:checked+.toggle-switch .toggle-circle {
   background: url('./src/assets/for-you-bottom.png') no-repeat center center/cover;
 }
 
+.slick-icon-arrow {
+  top: 30px !important;
+  right: 40px !important;
+}
+
 /* 
 .homepage.flip-words span:nth-child(11) {
   animation-delay: 30s;

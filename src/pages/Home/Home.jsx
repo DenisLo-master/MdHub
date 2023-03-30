@@ -1,4 +1,5 @@
 import React from 'react'
+import HomepageSlider from '../../components/HomepageSlider'
 import {
   HomeExploreSolutionsSection,
   HomeHeadspaceSection,
@@ -6,7 +7,8 @@ import {
   HomeHowItWorksSection,
   HomeMembershipBenefitsSection,
   HomeMembershipCostCtaSection,
-  HomeUserSatisfactionSection
+  HomeUserSatisfactionSection,
+  HomeMedicalConditionsSection
 } from '../../sections'
 
 const Home = () => {
@@ -14,11 +16,13 @@ const Home = () => {
     <div className="bg-white">
       <HomeHeroSection />
       <HomeUserSatisfactionSection />
+      {/* <HomepageSlider/> */}
       {/* <HomeExploreSolutionsSection /> */}
       <HomeMembershipBenefitsSection />
-      <HomeHowItWorksSection />
-      <HomeMembershipCostCtaSection />
-      <HomeUserSatisfactionSection />
+      <HomeMedicalConditionsSection />
+      {/* <HomeHowItWorksSection /> */}
+      {/* <HomeMembershipCostCtaSection /> */}
+      {/* <HomeUserSatisfactionSection /> */}
     </div>
   )
 }
