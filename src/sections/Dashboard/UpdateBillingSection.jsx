@@ -49,7 +49,7 @@ const UpdateBillingSection = () => {
   }
 
   return (
-    <section className="py-10 pt-28 font-body">
+    <section className="py-10 md:pt-36 font-body">
       <div className="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto">
         <div className="flex justify-between items-center">
           <h2 className="text-2xl font-medium text-gray-800">{t('membership-information')}</h2>
