@@ -56,6 +56,9 @@ function App() {
   const DefaultLayout = ({ children }) => {
     return (
       <div className="overflow-x-hidden text-gray-800">
+        <div className="absolute hidden md:flex items-center justify-center font-main top-0 left-0 w-full h-12 bg-gradient-primary text-center text-white">
+          We make it easy to get medical care. Never wait for a doctor again.
+        </div>
         <Navbar />
         <main className="w-full  min-h-[calc(100vh-73px)]">
           {children}
