@@ -9,7 +9,7 @@ const HomeMedicalConditionsSection = () => {
 	const { t } = useTranslation()
   return (
 		<section className="font-main bg-home-gradient-reverse">
-      <div className="w-full max-w-7xl mx-auto flex items-start">
+			<div className="w-full max-w-7xl mx-auto flex flex-col-reverse gap-y-4 md:flex-row items-start px-4 text-center md:text-left">
       	<article className="flex-1">
       		<h2 className="text-5xl">Medical Conditions Treated</h2>
       		<p className="w-full max-w-[500px] py-4 font-body">
@@ -55,7 +55,7 @@ const HomeMedicalConditionsSection = () => {
       </div>
 			<div className="text-center py-10">
 				<div className="relative">
-					<h2 className="text-6xl">Get your first year of membership for <span className="line-through">$359</span> $289</h2>
+					<h2 className="text-4xl md:text-6xl">Get your first year of membership for <span className="line-through">$359</span> $289</h2>
 					{/* <div className="absolute -top-6 right-[23rem] w-[2px] h-28 bg-primary transform rotate-45"></div> */}
 				</div>
 				<p className="text-lg font-body py-4">Receive immediate personalized and human medical follow-up by registering with MDHub.</p>
@@ -68,13 +68,13 @@ const HomeMedicalConditionsSection = () => {
 				</div>
 			</div>
 			<section className="for-you-bg py-10 3xl:py-20">
-				<div className="relative z-10 w-full max-w-[1160px] text-3xl mx-auto h-[400px]  flex items-center text-white px-4">
-					<div className="space-y-6">
+				<div className="relative z-10 w-full max-w-[1160px] text-3xl mx-auto md:h-[400px]  flex flex-col md:flex-row items-center text-white px-4">
+					<div className="space-y-6 text-center md:text-left">
 						<h2 className="max-w-[450px] pb-">
 							“{t('just-registered-for-a-membership-chose-a-doctor-and-made-a-same-day-appointment-at-faster-than-i-buy-my-morning-coffee')}”
 						</h2>
 						<h2>— {t('mdhub-member-in-montreal')}</h2>
-						<div className="flex gap-x-4 text-white pb-8">
+						<div className="flex justify-center md:justify-start gap-x-4 text-white pb-8">
 							<GoStar/>
 							<GoStar/>
 							<GoStar/>
