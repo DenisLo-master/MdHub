@@ -33,7 +33,7 @@ const HomeMembershipBenefitsSection = () => {
         <div className="flex-1 pt-10 flex flex-col gap-y-4 px-4 text-center lg:text-left">
           <h2 className="text-5xl">Membership Benefits</h2>
           <p className="font-body max-w-[680px] text-2xl pb-6">Virtual and physical healthcare services through an affordable membership, offering mobile nursing, pharmacy, lab testing, and mental health specialists.</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             <article className='flex flex-col items-center'>
               <img className="w-20 h-20" src={MembershipBenefit01} alt="Membership benefit" />
               <h2 className="text-center max-w-[150px] pt-2">Access to Canadian certified doctors 24/7.</h2>
