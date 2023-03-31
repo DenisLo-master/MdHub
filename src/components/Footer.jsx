@@ -11,7 +11,7 @@ const Footer = () => {
   const { t } = useTranslation()
   const location = useLocation()
   return (
-    <footer className="bg-gradient-primary text-white pt-10 px-4 text-center md:text-left">
+    <footer className="bg-gradient-primary text-white pt-10 text-center md:text-left">
       {location.pathname === "/" && 
         (
         <div className="flex flex-col items-center font-main">
