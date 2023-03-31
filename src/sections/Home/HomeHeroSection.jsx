@@ -76,15 +76,15 @@ const HomeHeroSection = () => {
             </Link>
           </div>
           <div className="pt-8 max-w-[400px] w-full flex gap-x-2 items-center gap-y-4 text-center md:text-left justify-center md:justify-between font-main">
-            <article className="flex flex-col items-center">
+            <article className="flex md:block flex-col items-center">
               <h2 className="text-4xl md:text-5xl text-primary">1500+</h2>
               <p className="font-body text-[#ACACAC] md:max-w-[50px]">Active Doctors</p>
             </article>
-            <article className="flex flex-col items-center">
+            <article className="flex md:block flex-col items-center">
               <h2 className="text-4xl md:text-5xl text-primary">15K+</h2>
               <p className="font-body text-[#ACACAC] md:max-w-[50px]">Active Users</p>
             </article>
-            <article className="flex flex-col items-center">
+            <article className="flex md:block flex-col items-center">
               <h2 className="text-4xl md:text-5xl text-primary">94%</h2>
               <p className="font-body text-[#ACACAC] md:max-w-[50px]">Symptoms Treated</p>
             </article>
