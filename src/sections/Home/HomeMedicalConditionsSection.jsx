@@ -51,7 +51,7 @@ const HomeMedicalConditionsSection = () => {
 						</article>
       		</div>
       	</article>
-      	<img className="w-full max-w-[500px]" src={HomeMedicalConditionsHero} alt="Medical Conditions treated"/>
+				<img className="hidden md:block w-full max-w-[500px]" src={HomeMedicalConditionsHero} alt="Medical Conditions treated" />
       </div>
 			<div className="text-center py-10">
 				<div className="relative">
