@@ -51,7 +51,7 @@ const Login = () => {
     if (token) navigate("/dashboard")
   }, [])
   return (
-    <section className="w-full max-w-[42rem] flex flex-col items-center mx-auto py-8 md:py-20 font-main">
+    <section className="w-full max-w-[42rem] flex flex-col items-center mx-auto py-8 md:py-36 font-main">
       <h2 className="text-4xl text-center pb-4">{t('Login')}</h2>
       <div className="py-16 border space-y-4 px-8 shadow-cardService rounded-[35px] text-primary relative">
         <form ref={loginFormRef} onSubmit={handleLogin} className="space-y-4 w-full lg:w-[500px] text-gray-800">
