@@ -7,7 +7,7 @@ const MembershipBenefits = () => {
   const { t } = useTranslation()
   return (
     <section className="flex justify-center py-10">
-      <div className="w-full max-w-[1000px] rounded-lg bg-gradient-primary text-white py-10 px-8 lg:px-16">
+      <div className="w-full max-w-7xl rounded-lg bg-gradient-primary text-white py-10 px-8 lg:px-16">
         <h2 className="text-4xl text-center pb-7">
           {t('members-benefit-from')}:
         </h2>
