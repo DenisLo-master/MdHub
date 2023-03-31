@@ -77,6 +77,7 @@ const NursingAppointmentForm = () => {
       formData.append("customNursingService", nursingFormData.customNursingService)
       formData.append("selectedDate", nursingFormData.selectedDate)
       formData.append("amount", nursingAppointmentBill > 0 ? nursingAppointmentBill * 100 : 11383)
+      formData.append("appointmentType", "nursing")
 
 
       const { error, paymentMethod } = await stripe.createPaymentMethod({
@@ -85,7 +86,8 @@ const NursingAppointmentForm = () => {
       });
       if (!error) {
         formData.append("paymentMethod", paymentMethod.id)
-        const response = await fetch('https://mdhub-server.onrender.com/api/v1/appointments', {
+        // const response = await fetch('https://mdhub-server.onrender.com/api/v1/appointments', {
+        const response = await fetch('http://localhost:8080/api/v1/appointments', {
           method: 'POST',
           body: formData
         })
@@ -94,7 +96,7 @@ const NursingAppointmentForm = () => {
           setIsLoading(false)
           setSelectedNursingHomecareOptions([])
           nursingFormRef.current.reset()
-          toast.success("{t('thanks-for-booking-our-staff-will-contact-you-within-24hr-to-confirm-all-details-of-your-booking-additional-charges-may-be-required-according-to-the-service-time-and-distance-of-travel-necessary')}", { id: "Appointment Success", duration: 5000 })
+          toast.success(t('thanks-for-booking-our-staff-will-contact-you-within-24hr-to-confirm-all-details-of-your-booking-additional-charges-may-be-required-according-to-the-service-time-and-distance-of-travel-necessary'), { id: "Appointment Success", duration: 5000 })
         }
       }
       setShowNursingModal(false)
