@@ -66,13 +66,15 @@ const DiagnosticsAppointmentForm = () => {
       formData.append("province", appointmentFormData.province)
       formData.append("selectedDate", appointmentFormData.selectedDate)
       formData.append("amount", 14900)
+      formData.append("appointmentType", "diagnostic")
       const { error, paymentMethod } = await stripe.createPaymentMethod({
         type: 'card',
         card: elements.getElement(CardElement),
       });
       if (!error) {
         formData.append("paymentMethod", paymentMethod.id)
-        const response = await fetch('https://mdhub-server.onrender.com/api/v1/appointments', {
+        const response = await fetch('http://localhost:8080/api/v1/appointments', {
+        // const response = await fetch('https://mdhub-server.onrender.com/api/v1/appointments', {
           method: 'POST',
           body: formData
         })
