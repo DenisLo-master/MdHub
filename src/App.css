@@ -62,6 +62,26 @@ input:checked+.toggle-switch .toggle-circle {
   top: 200px;
 }
 
+.slick-mobile .slick-slider .slick-arrow {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.slick-lg .slick-slider .slick-arrow.slick-prev {
+  left: -45px !important;
+}
+
+.slick-lg .slick-slider .slick-arrow.slick-next {
+  right: 25px !important;
+}
+
+.slick-mobile .slick-slider .slick-arrow.slick-prev {
+  left: 0px;
+}
+
+.slick-mobile .slick-slider .slick-arrow.slick-next {
+  right: 0px;
+}
 /* @media screen and (max-width: 400px) {
   .slick-arrow.slick-next {
     right: 60px;
