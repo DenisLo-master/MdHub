@@ -52,7 +52,7 @@ const HomepageSlider = () => {
   return (
     <section>
       <div className="hidden lg:block md:max-w-[1400px] 3xl:max-w-[1580px] mx-auto font-main h-[612px] px-24 text-primary">
-        <h2 className="text-7xl font-main text-center text-dark pb-10">Essential Medical Services</h2>
+        <h2 className="text-7xl font-main text-center text-dark pb-10">{t('essential-medical-services')}</h2>
         <Slider {...settings}>
           <article className="flex justify-center">
             <Link className="block" to="/services/mental-health">
@@ -144,7 +144,7 @@ const HomepageSlider = () => {
                 <h2 className={`${i18n.language === "en" ? "text-3xl" : "text-[20px]"} pb-4`}>
                   {t('lab-testing-and-diagnostics-0')}
                 </h2>
-                <p className="font-body pb-4">
+                <p className={`font-body pb-4 ${i18n.language === "en" ? "text-base" : "text-[16.5px]"}`}>
                   {t('get-safe-and-professional-lab-testing-from-the-comfort-of-your-home-or-office')}
                 </p>
               </div>
