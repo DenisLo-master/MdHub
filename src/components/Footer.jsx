@@ -8,19 +8,19 @@ import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa"
 import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const location = useLocation()
   return (
     <footer className="bg-gradient-primary text-white pt-10 text-center md:text-left">
       {location.pathname === "/" && 
         (
-        <div className="flex flex-col items-center font-main">
+        <div className="flex flex-col items-center font-main px-4">
           <h2 className="text-3xl pb-4">
-            Sign up now for $29.99 per month
+            {t('sign-up-now-for-29-99-per-month')}
           </h2>
           <Link to="/register" className="block">
-            <button type="button" className="w-[185px] bg-white rounded-full text-primary py-2">
-              Sign Up Today
+            <button type="button" className={`${i18n.language === "fr" ? "w-[200px]" : "w-[185px]"} bg-white rounded-full text-primary py-2`}>
+              {t('sign-up-today')}
             </button>
           </Link>
         </div>
