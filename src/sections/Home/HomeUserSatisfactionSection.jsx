@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { PartnerCompany01, PartnerCompany02, PartnerCompany03, PartnerCompany04 } from '../../assets'
+import { PartnerCompany01, PartnerCompany02, PartnerCompany03, PartnerCompany04, ChevronRight } from '../../assets'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 const HomeUserSatisfactionSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -41,6 +42,12 @@ const HomeUserSatisfactionSection = () => {
           <img className="max-w-[147px]" src={PartnerCompany03} alt="Air BNB" />
           <img className="max-w-[153px]" src={PartnerCompany04} alt="Four Seasons" />
         </section>
+        <div className="flex justify-center">
+          <Link to="/register" className="flex items-center font-main gap-x-2">
+            <span className="text-lg">Learn more about MDHUB for business.</span>
+            <ChevronRight className="text-primary w-2" />
+          </Link>
+        </div>
       </div>
     </section>
   )
