@@ -91,7 +91,7 @@ const HomeHeroSection = () => {
           </div>
         </article>
         <article data-aos="fade-up" className="w-full max-w-[630px] flex justify-center relative">
-          <img className="relative z-10 w-full max-w-[430px]" src={HomeHeroImage} alt="Hero" />
+          <img className="hidden md:block relative z-10 w-full max-w-[430px]" src={HomeHeroImage} alt="Hero" />
         </article>
       </section>
     </div>
