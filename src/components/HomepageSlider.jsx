@@ -53,9 +53,9 @@ const HomepageSlider = () => {
     <section>
       <div className="hidden lg:block md:max-w-[1400px] 3xl:max-w-[1580px] mx-auto font-main h-[500px] px-24 text-primary">
         <Slider {...settings}>
-          <article>
+          <article className="flex justify-center">
             <Link className="block" to="/services/mental-health">
-              <div className="bg-[#ECB118] text-white p-6 h-[432px] w-[300px] 3xl:w-[330px] rounded-[8px] flex flex-col justify-end relative">
+              <div className="bg-[#ECB118] text-white p-6 mx-auto h-[432px] w-[300px] 3xl:w-[330px] rounded-[8px] flex flex-col justify-end relative">
                 <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
                   <Link to="/services/mental-health">
                     <img src={RedirectIcon} alt="redirect" />
@@ -71,9 +71,9 @@ const HomepageSlider = () => {
               </div>
             </Link>
           </article>
-          <article>
+          <article className="flex justify-center">
             <Link className="block" to="/services">
-              <div className="bg-[#A293FF] text-white p-6 h-[432px] w-[290px] 3xl:w-[330px] rounded-[8px] flex flex-col justify-end relative">
+              <div className="bg-[#A293FF] text-white p-6 mx-auto h-[432px] w-[290px] 3xl:w-[330px] rounded-[8px] flex flex-col justify-end relative">
                 <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
                   <Link to="/services">
                     <img src={RedirectIcon} alt="redirect" />
@@ -89,9 +89,9 @@ const HomepageSlider = () => {
               </div>
             </Link>
           </article>
-          <article>
+          <article className="flex justify-center">
             <Link className="block" to="/services/online-pharmacy">
-              <div className="bg-[#90C387] text-white p-6 h-[432px] w-[300px] 3xl:w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">
+              <div className="bg-[#90C387] text-white p-6 mx-auto h-[432px] w-[300px] 3xl:w-[330px] rounded-[8px] mx-auto flex flex-col justify-end relative">
                 <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
                   <Link to="/services/online-pharmacy">
                     <img src={RedirectIcon} alt="redirect" />
@@ -107,9 +107,9 @@ const HomepageSlider = () => {
               </div>
             </Link>
           </article>
-          <article>
+          <article className="flex justify-center">
             <Link to="/services/nursing-homecare">
-              <div className="bg-[#F78839] text-white p-6 h-[432px] w-[300px] 3xl:w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">
+              <div className="bg-[#F78839] text-white p-6 mx-auto h-[432px] w-[300px] 3xl:w-[330px] rounded-[8px] mx-auto flex flex-col justify-end relative">
                 <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
                   <Link to="/services/nursing-homecare">
                     <img src={RedirectIcon} alt="redirect" />
@@ -125,9 +125,9 @@ const HomepageSlider = () => {
               </div>
             </Link>
           </article>
-          <article>
+          <article className="flex justify-center">
             <Link to="/services/diagnostics">
-              <div className="bg-diagnostics text-white p-6 h-[432px] w-[300px] 3xl:w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">
+              <div className="bg-diagnostics text-white p-6 mx-auto h-[432px] w-[300px] 3xl:w-[330px] rounded-[8px] mx-auto flex flex-col justify-end relative">
                 <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
                   <Link to="/services/diagnostics">
                     <img src={RedirectIcon} alt="redirect" />
@@ -150,7 +150,7 @@ const HomepageSlider = () => {
         <Slider {...mobileSliderSettings}>
           <article>
             <Link className="block" to="/services/mental-health">
-              <div className="bg-[#ECB118] text-white p-6 w-[300px] h-[400px] rounded-[8px] mx-4 flex flex-col justify-end relative">
+              <div className="bg-[#ECB118] text-white p-6 w-[300px] h-[400px] rounded-[8px] mx-auto flex flex-col justify-end relative">
                 <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
                   <Link to="/services/mental-health">
                     <img src={RedirectIcon} alt="redirect" />
@@ -168,7 +168,7 @@ const HomepageSlider = () => {
           </article>
           <article>
             <Link className="block" to="/services">
-              <div className="bg-[#A293FF] text-white p-6 w-[300px] h-[400px] 3xl:w-[330px] rounded-[8px] mx-4 flex flex-col justify-end relative">
+              <div className="bg-[#A293FF] text-white p-6 w-[300px] h-[400px] 3xl:w-[330px] rounded-[8px] mx-auto flex flex-col justify-end relative">
                 <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
                   <Link to="/services">
                     <img src={RedirectIcon} alt="redirect" />
@@ -186,7 +186,7 @@ const HomepageSlider = () => {
           </article>
           <article>
             <Link className="block" to="/services/online-pharmacy">
-              <div className="bg-[#90C387] text-white p-6 w-[300px] h-[400px] 3xl:w-[330px] rounded-[8px] flex flex-col justify-end relative">
+              <div className="bg-[#90C387] text-white p-6 w-[300px] h-[400px] 3xl:w-[330px] mx-auto rounded-[8px] flex flex-col justify-end relative">
                 <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
                   <Link to="/services/online-pharmacy">
                     <img src={RedirectIcon} alt="redirect" />
@@ -204,7 +204,7 @@ const HomepageSlider = () => {
           </article>
           <article>
             <Link to="/services/nursing-homecare">
-              <div className="bg-[#F78839] text-white p-6 w-[300px] h-[400px] 3xl:w-[330px] rounded-[8px] flex flex-col justify-end relative">
+              <div className="bg-[#F78839] text-white p-6 w-[300px] h-[400px] mx-auto 3xl:w-[330px] rounded-[8px] flex flex-col justify-end relative">
                 <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
                   <Link to="/services/nursing-homecare">
                     <img src={RedirectIcon} alt="redirect" />
@@ -222,7 +222,7 @@ const HomepageSlider = () => {
           </article>
           <article>
             <Link to="/services/diagnostics">
-              <div className="bg-diagnostics text-white p-6 w-[300px] h-[400px] 3xl:w-[330px] rounded-[8px] flex flex-col justify-end relative">
+              <div className="bg-diagnostics text-white p-6 w-[300px] h-[400px] mx-auto 3xl:w-[330px] rounded-[8px] flex flex-col justify-end relative">
                 <div className="absolute bottom-0 left-0 w-full flex flex-row-reverse p-4">
                   <Link to="/services/diagnostics">
                     <img src={RedirectIcon} alt="redirect" />

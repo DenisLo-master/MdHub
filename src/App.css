@@ -62,9 +62,9 @@ input:checked+.toggle-switch .toggle-circle {
   top: 200px;
 }
 
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
   .slick-arrow.slick-next {
-    right: 0px;
+    right: 60px;
   }
 
   .slick-arrow.slick-prev {
@@ -75,10 +75,18 @@ input:checked+.toggle-switch .toggle-circle {
   right: -60px;
 }
 
-.slick-slide {
+*/
+/* .slick-slide {
   margin-right: 10px;
 }
 
+*/
+/* @media screen and (max-width: 500px) {
+  .slick-slide {
+    margin-right: 0px;
+}
+
+*/
 .slick-list {
   margin-right: -10px;
 }
