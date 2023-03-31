@@ -33,7 +33,7 @@ const HomeUserSatisfactionSection = () => {
   return (
     <section className="py-16 font-main text-3xl">
       <h2 className="text-center pb-4 px-4">
-        We're an employee benefit for companies nationwide.
+        {t('were-an-employee-benefit-for-companies-nationwide')}
       </h2>
       <div className="w-full max-w-4xl mx-auto text-center py-10 font-body text-base space-y-5">
         <section className="flex items-center justify-around flex-wrap gap-y-4 lg:justify-between">
@@ -44,7 +44,7 @@ const HomeUserSatisfactionSection = () => {
         </section>
         <div className="flex justify-center">
           <Link to="/register" className="flex items-center font-main gap-x-2">
-            <span className="text-lg">Learn more about MDHUB for business.</span>
+            <span className="text-lg">{t('learn-more-about-mdhub-for-business')}</span>
             <ChevronRight className="text-primary w-2" />
           </Link>
         </div>
