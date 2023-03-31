@@ -16,7 +16,7 @@ const ForYouHeaderSection = () => {
           {t('with-mdhub-our-members-can-say-goodbye-to-weeks-of-waiting-for-doctor-appointments-or-long-waits-at-hospitals-forget-driving-and-parking-to-get-a-treatment-our-team-of-over-1-500-canadian-certified-medical-practitioners-is-available-on-demand-from-anywhere-allowing-you-to-take-back-control-of-your-health-members-have-full-control-of-when-and-how-they-access-medical-services-and-can-benefit-from-being-proactive-with-their-care-choices')}
         </p>
         <Link className="block" to="/register">
-          <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white text-virtualDoctor border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
+          <button className="rounded-full text-primary w-[240px] text-lg flex justify-center py-3 border bg-white  border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
             {t('sign-up-today')}
           </button>
         </Link>

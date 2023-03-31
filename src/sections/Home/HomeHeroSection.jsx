@@ -54,7 +54,7 @@ const HomeHeroSection = () => {
   }, [])
 
   return (
-    <div className="pt-10 md:pt-40 md:py-20 md:pb-10 bg-home-gradient px-4">
+    <div className="md:pt-40 md:py-20 md:pb-10 bg-home-gradient px-4">
       <section className="max-w-[90rem] mx-auto flex flex-col-reverse gap-y-6 md:flex-row items-center relative">
         <article data-aos="fade-up" className="flex-1 px-4 md:pl-20">
           <h2 className="w-full max-w-[750px] font-main text-center md:text-left text-3xl md:text-6xl">
@@ -75,17 +75,17 @@ const HomeHeroSection = () => {
               </Button>
             </Link>
           </div>
-          <div className="pt-8 max-w-[400px] w-full flex flex-col md:flex-row items-center gap-y-4 text-center md:text-left justify-between font-main">
-            <article>
-              <h2 className="text-5xl text-primary">1500+</h2>
+          <div className="pt-8 max-w-[400px] w-full flex gap-x-2 items-center gap-y-4 text-center md:text-left justify-center md:justify-between font-main">
+            <article className="flex flex-col items-center">
+              <h2 className="text-4xl md:text-5xl text-primary">1500+</h2>
               <p className="font-body text-[#ACACAC] md:max-w-[50px]">Active Doctors</p>
             </article>
-            <article>
-              <h2 className="text-5xl text-primary">15K+</h2>
+            <article className="flex flex-col items-center">
+              <h2 className="text-4xl md:text-5xl text-primary">15K+</h2>
               <p className="font-body text-[#ACACAC] md:max-w-[50px]">Active Users</p>
             </article>
-            <article>
-              <h2 className="text-5xl text-primary">94%</h2>
+            <article className="flex flex-col items-center">
+              <h2 className="text-4xl md:text-5xl text-primary">94%</h2>
               <p className="font-body text-[#ACACAC] md:max-w-[50px]">Symptoms Treated</p>
             </article>
           </div>
