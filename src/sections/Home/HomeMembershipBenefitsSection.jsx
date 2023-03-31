@@ -21,7 +21,14 @@ const HomeMembershipBenefitsSection = () => {
   return (
     <section className="relative w-full font-main py-8 lg:pb-20">
       <div className="w-full max-w-[70rem] 3xl:max-w-7xl mx-auto flex gap-y-5 gap-x-12 flex-col-reverse lg:flex-row justify-between">
-        <img className="block lg:hidden w-full max-w-[460px]" src={MembershipBenefitsCover} alt="Benefits" />
+        <div className="block lg:hidden w-full px-4">
+          <ReactPlayer
+            width={"100%"}
+            height={"100%"}
+            url={HomeMembershipBenefitsVideo}
+            controls
+          />
+        </div>
         <div className="hidden lg:block">
           <ReactPlayer
             width={395}
