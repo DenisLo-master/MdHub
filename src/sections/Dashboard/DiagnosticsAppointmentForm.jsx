@@ -73,8 +73,7 @@ const DiagnosticsAppointmentForm = () => {
       });
       if (!error) {
         formData.append("paymentMethod", paymentMethod.id)
-        const response = await fetch('http://localhost:8080/api/v1/appointments', {
-        // const response = await fetch('https://mdhub-server.onrender.com/api/v1/appointments', {
+        const response = await fetch('https://mdhub-server.onrender.com/api/v1/appointments', {
           method: 'POST',
           body: formData
         })
