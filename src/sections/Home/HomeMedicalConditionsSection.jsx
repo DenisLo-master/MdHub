@@ -53,9 +53,9 @@ const HomeMedicalConditionsSection = () => {
 				<img className="hidden md:block w-full max-w-[500px]" src={HomeMedicalConditionsHero} alt="Medical Conditions treated" />
       </div>
 			<div className="text-center py-10">
-				<div className="relative">
+				<div>
 					<h2 className="text-4xl md:text-6xl text-center px-4 pb-7">{t('get-your-first-year-of-membership-for')} <span className="price">$359</span> $289</h2>
-					{/* <div className="absolute -top-6 right-[24%] w-[2px] h-28 bg-primary transform rotate-45"></div> */}
+					{/* <div className="absolute -top-6 right-[24%] 3xl:right-[28%] w-[2px] h-28 bg-primary transform rotate-45"></div> */}
 				</div>
 				<p className="text-lg font-body py-4">{t('receive-immediate-personalized-and-human-medical-follow-up-by-registering-with-mdhub')}</p>
 				<div className="flex justify-center">
