@@ -14,11 +14,12 @@ const SignupStepThree = () => {
   const familyMonthlyFee = registerationStore(state => state.familyMonthlyFee)
   const onDemandFee = registerationStore(state => state.onDemandFee)
   const corporateFee = registerationStore(state => state.corporateFee)
+  const handleRegisterationFormDataChange = registerationStore(state => state.handleRegisterationFormDataChange)
   const [t] = useTranslation()
 
   const calculatePricing = (accountType) => {
-    const individualMonthlyPrice = 34.99 * 3
-    const individualYearlyPrice = 29.99 * 12
+    const individualMonthlyPrice = 29.99 * 3
+    const individualYearlyPrice = 24.99 * 12
     const familyMonthlyPrice = 54.99 * 3
     const familyYearlyPrice = 44.99 * 12
     const corporatePrice = 19.99 * 12 * (childForms.length + 1)

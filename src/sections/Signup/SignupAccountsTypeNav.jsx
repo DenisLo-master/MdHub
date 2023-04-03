@@ -26,13 +26,13 @@ const SignupAccountsTypeNav = () => {
       <button
         onClick={() => handleAccountChange("individual")}
         type="button"
-        disabled={formStep > 0}
+        // disabled={formStep > 0}
         className={`w-40 md:w-64  rounded-full text-xl hover:ring-1 hover:ring-primary lg:px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "individual" && "bg-[#48ABC8] text-white"} $`}
       >
         {t('individual')}
       </button>
       <button
-        disabled={formStep > 0}
+        // disabled={formStep > 0}
         onClick={() => handleAccountChange("family")}
         type="button"
         className={`w-40 md:w-64 rounded-full text-xl hover:ring-1 hover:ring-primary lg:px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "family" && "bg-[#48ABC8] text-white"}`}
@@ -40,7 +40,7 @@ const SignupAccountsTypeNav = () => {
         {t('family')}
       </button>
       <button
-        disabled={formStep > 0}
+        // disabled={formStep > 0}
         onClick={() => handleAccountChange("corporate")}
         type="button"
         className={`w-40 md:w-64 rounded-full text-xl hover:ring-1 hover:ring-primary lg:px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "corporate" && "bg-[#48ABC8] text-white"}`}
@@ -48,7 +48,7 @@ const SignupAccountsTypeNav = () => {
         {t('corporate')}
       </button>
       <button
-        disabled={formStep > 0}
+        // disabled={formStep > 0}
         onClick={() => handleAccountChange("on demand")}
         type="button"
         className={`w-40 md:w-64 rounded-full text-xl hover:ring-1 hover:ring-primary lg:px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "on demand" && "bg-[#48ABC8] text-white"}`}

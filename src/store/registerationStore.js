@@ -66,7 +66,7 @@ export const registerationStore = create((set) => ({
   selectedAccountType: 'individual',
   paymentMode: "yearly",
   individualYearlyFee: '24.99',
-  individualMonthlyFee: '34.99',
+  individualMonthlyFee: '29.99',
   familyMonthlyFee: "54.99",
   familyYearlyFee: "44.99",
   onDemandFee: "89.99",
