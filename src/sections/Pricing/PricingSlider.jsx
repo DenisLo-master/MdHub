@@ -32,7 +32,7 @@ const PricingSlider = () => {
           <article className="p-8 px-12 flex flex-col items-center rounded-lg shadow-glow">
             <h2 className="text-3xl font-main">{t('monthly')}</h2>
             <div className="text-primary pt-8">
-              <h2 className="text-[40px] leading-9">$34.99</h2>
+              <h2 className="text-[40px] leading-9">$29.99</h2>
               <p className="text-base text-dark text-center">{t('per-month')}</p>
             </div>
             <div className="pt-8 space-y-2 text-center">
@@ -51,7 +51,7 @@ const PricingSlider = () => {
             </section>
             <h2 className="text-5xl font-main pt-12">{t('yearly')}</h2>
             <div className="text-primary pt-14 py-10">
-              <h2 className="text-[52px] leading-9">$29.99</h2>
+              <h2 className="text-[52px] leading-9">$24.99</h2>
               <p className="text-base text-dark text-center">{t('per-month')}</p>
             </div>
             <div className="pt-8 space-y-2 text-center">
