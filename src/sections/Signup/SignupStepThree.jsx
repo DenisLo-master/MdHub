@@ -277,8 +277,8 @@ const SignupStepThree = () => {
       <CardElement
         className="registration-card-element rounded-full px-4 py-3 ring-1 focus:ring-primary"
       />
-      <div>
-        <label>
+      <div className="py-4">
+        <label className="flex items-center gap-x-3">
           <input className="pr-4" type="checkbox" name="checkbox" required />
           {t('i-certify-that-i-am-at-least-18-years-old-and-i-agree-to-both-mdhubs-terms-of-use-and-privacy-policy')}
         </label>
