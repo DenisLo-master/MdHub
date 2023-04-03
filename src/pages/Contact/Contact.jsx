@@ -6,8 +6,8 @@ const Contact = () => {
   const { t } = useTranslation()
   return (
     <section className="md:pt-44 py-20 flex justify-center text-white px-4">
-      <article className="w-full md:w-auto flex items-center">
-        <div className="hidden md:block bg-primary rounded-tl-[35px] rounded-bl-[35px] p-10 font-main space-y-4 h-[500px] shadow-cardService">
+      <article className="w-full md:w-auto flex flex-col md:flex-row items-center">
+        <div className="w-full md:w-auto block bg-primary rounded-t-lg md:rounded-tl-[35px] md:rounded-bl-[35px] p-10 font-main space-y-4 md:h-[500px] shadow-cardService">
           <h1 className="text-4xl">Contact Us</h1>
           <ul>
             <li className='flex items-center gap-x-2'>
