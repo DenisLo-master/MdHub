@@ -25,7 +25,7 @@ const ServicesDiagnostics = () => {
                 {t('our-certified-partner-labs-can-process-over-300-different-screenings-for-medical-conditions-like-diabetes-and-heart-disease')}
               </p>
             </div>
-            <Link className="flex lg:block justify-center px-2" to="register">
+            <Link className="flex lg:block justify-center px-2" to="/register">
               <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white text-diagnostics border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
                 {t('sign-up-today')}
               </button>
