@@ -22,7 +22,7 @@ const NursingAndHomecareServices = () => {
       </div>
 
       <section className="py-10 max-w-[70rem] mx-auto">
-        <div className=" grid grid-cols-1 lg:grid-cols-4 gap-8 text-lg">
+        <div className=" grid grid-cols-2 lg:grid-cols-4 gap-8 text-lg">
           <article>
             <img className="w-full" src={NursingAndHomeCareServices01} alt="Blood work & testing" />
             <div className="py-4 text-center bg-white text-dark">
@@ -82,7 +82,7 @@ const NursingAndHomecareServices = () => {
             <p>{t('ear-washing')}</p>
           </article>
 
-          <article className="relative p-4 h-16 bg-white text-center text-dark rounded-md">
+          <article className="relative p-4 md:h-16 bg-white text-center text-dark rounded-md">
             <p>{t('in-home-and-outdoor-assistance')}</p>
           </article>
 
@@ -90,11 +90,11 @@ const NursingAndHomecareServices = () => {
             <p>{t('transportation-assistance')}</p>
           </article>
 
-          <article className="relative p-4 bg-white text-center text-dark rounded-md h-16 leading-5">
-            <p>{t('light-meal-prepping-housekeeping')}</p>
+          <article className="relative p-4 bg-white text-center text-dark rounded-md md:h-16 leading-5">
+            <p className="text-sm md:text-base">{t('light-meal-prepping-housekeeping')}</p>
           </article>
 
-          <article className="relative p-4 h-16 leading-5 bg-white text-center text-dark rounded-md">
+          <article className="relative p-4 md:h-16 leading-5 bg-white text-center text-dark rounded-md">
             <p>{t('medication-administration-and-monitoring')}</p>
           </article>
 
