@@ -56,7 +56,7 @@ const NursingAppointmentForm = () => {
       return;
     }
 
-
+    const date = new Date(nursingFormData.selectedDate)
     setIsLoading(true)
     try {      
       const services = selectedNursingHomecareOptions.map(item => item.label)
@@ -75,7 +75,7 @@ const NursingAppointmentForm = () => {
       formData.append("postalCode", nursingFormData.postalCode)
       formData.append("province", nursingFormData.province)
       formData.append("customNursingService", nursingFormData.customNursingService)
-      formData.append("selectedDate", nursingFormData.selectedDate)
+      formData.append("selectedDate", date.toDateString())
       formData.append("amount", nursingAppointmentBill > 0 ? nursingAppointmentBill * 100 : 11383)
       formData.append("appointmentType", "nursing")
 
