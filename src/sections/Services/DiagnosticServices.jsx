@@ -23,7 +23,7 @@ const DiagnosticServices = () => {
       </div>
 
       <section className="py-10 max-w-[70rem] mx-auto">
-        <div className=" grid grid-cols-1 lg:grid-cols-4 gap-8 text-lg">
+        <div className=" grid grid-cols-2 lg:grid-cols-4 gap-8 text-lg">
           <article>
             <img className="w-full" src={DiagnosticServices01} alt="General assessments" />
             <div className="py-4 text-center bg-white text-dark">
@@ -50,7 +50,7 @@ const DiagnosticServices = () => {
           </article>
 
           <article className="lg:col-span-2 flex flex-col lg:flex-row gap-4">
-            <h2 className="text-6xl whitespace-nowrap text-center">{t('many-more')}</h2>
+            <h2 className="text-3xl md:text-6xl whitespace-nowrap text-center">{t('many-more')}</h2>
           </article>
 
           <article className="lg:col-span-2 flex flex-col lg:flex-row gap-4">
