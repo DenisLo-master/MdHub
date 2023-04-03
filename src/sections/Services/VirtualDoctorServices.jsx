@@ -28,33 +28,33 @@ const VirtualDoctorServices = () => {
       </div>
 
       <section className="py-10 max-w-[70rem] mx-auto">
-        <div className=" grid grid-cols-1 lg:grid-cols-4 gap-8 text-lg">
+        <div className=" grid grid-cols-2 lg:grid-cols-4 gap-8 text-lg">
           <article>
             <img className="w-full" src={MedicalTreatmentBC} alt="Birth Control" />
-            <div className="py-4 text-center bg-white text-dark">
+            <div className="md:py-4 text-center bg-white text-dark">
               {t('birth-control')}
             </div>
           </article>
           <article>
             <img className="w-full" src={MedicalTreatmentED} alt="Erectile Dysfunction" />
-            <div className="py-4 text-center bg-white text-dark">
+            <div className="md:py-4 text-center bg-white text-dark">
               {t('erectile-dysfunction')}
             </div>
           </article>
           <article>
             <img className="w-full" src={MedicalTreatmentAcne} alt="Acne" />
-            <div className="py-4 text-center bg-white text-dark">
+            <div className="md:py-4 text-center bg-white text-dark">
               {t('acne')}
             </div>
           </article>
           <article>
             <img className="w-full" src={MedicalTreatmentUTI} alt="Urinary Tract Infections" />
-            <div className="py-4 text-center bg-white text-dark">
+            <div className="md:py-4 text-center bg-white text-dark">
               {t('urinary-tract-infections')}
             </div>
           </article>
 
-          <article className="relative p-4 bg-white text-center text-dark rounded-md">
+          <article className="flex justify-center items-center relative p-4 bg-white text-center text-dark rounded-md">
             <p>{t('dermatology')}</p>
           </article>
 
