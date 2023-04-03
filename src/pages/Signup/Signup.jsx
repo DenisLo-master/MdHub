@@ -28,7 +28,7 @@ const Signup = () => {
           <h2>
             {t('we-make-it-easier-to-get-the-care-you-need-for-yourself-your-family-or-your-corporation')}
           </h2>
-          <h2>{t('memberships-are-now-as-low-as-29-99-per-month')}</h2>
+          <h2>{t('memberships-are-now-as-low-as-19-99-per-month')}</h2>
         </div>
         <SignupAccountsTypeNav />
       </article>
