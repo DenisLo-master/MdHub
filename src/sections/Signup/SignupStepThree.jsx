@@ -80,7 +80,7 @@ const SignupStepThree = () => {
 
           <article className="relative">
             <div className={`flex gap-y-4 items-center gap-x-4`}>
-              {paymentMode === "yearly" && <p className="text-primary text-[27px]">{t('save-25')}</p>}
+              {paymentMode === "yearly" && <p className="text-primary text-xl md:text-[27px]">{t('save-25')}</p>}
               {
                 (selectedAccountType === "individual" ||
                   selectedAccountType === "family" ||
