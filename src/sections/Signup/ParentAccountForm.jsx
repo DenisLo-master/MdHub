@@ -170,14 +170,14 @@ const ParentAccountForm = () => {
           required
         />
         {registerationFormData.password && (
-          <div>
+          <div className="pt-6">
             <ul>
               {conditionsFulfilled.map((condition, index) => (
                 <li
                   className="text-green-600 flex items-center gap-x-1 font-body gap-y-2"
                   key={index}
                 >
-                  <AiFillCheckSquare />
+                  <AiFillCheckSquare className="hidden md:block" />
                   <p>{condition}</p>
                 </li>
               ))}
@@ -188,13 +188,13 @@ const ParentAccountForm = () => {
                   className="text-red-600 flex items-center gap-x-1 font-body gap-y-2"
                   key={index}
                 >
-                  <AiFillCloseCircle />
+                  <AiFillCloseCircle className="hidden md:block" />
                   <p>{suggestion}</p>
                 </li>
               ))}
             </ul>
-            <p className="absolute top-12 right-0 font-body">
-              Password Strength: <strong>{strength}</strong>
+            <p className="absolute top-[52px] left-0 md:right-0 font-body text-sm md:text-base">
+              {t('password-strength')}: <strong>{strength}</strong>
             </p>
           </div>
         )}
