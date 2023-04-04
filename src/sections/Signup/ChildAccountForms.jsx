@@ -202,7 +202,7 @@ const ChildAccountForms = () => {
                         className="text-green-600 flex items-center gap-x-1 font-body gap-y-2"
                         key={index}
                       >
-                        <AiFillCheckSquare />
+                        <AiFillCheckSquare className="hidden md:block" />
                         <p>{condition}</p>
                       </li>
                     ))}
@@ -213,7 +213,7 @@ const ChildAccountForms = () => {
                         className="text-red-600 flex items-center gap-x-1 font-body gap-y-2"
                         key={index}
                       >
-                        <AiFillCloseCircle />
+                        <AiFillCloseCircle className="hidden md:block" />
                         <p>{suggestion}</p>
                       </li>
                     ))}
