@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from 'react-i18next'
 import { 
   AddUser,
   BillingHistory,
@@ -38,11 +39,13 @@ import { Toaster } from "react-hot-toast"
 import AdminNav from './components/AdminNav'
 
 function App() {
+  const { t } = useTranslation()
+
   useEffect(() => {
     AOS.init()
   }, [])
 
-  const AdminLayout = ({ children }) => {
+  const AdminLayout = ({ children }) => {    
     return (
       <div className="overflow-x-hidden text-gray-800">
         <main className="w-full bg-white min-h-[calc(100vh-73px)]">
@@ -57,7 +60,7 @@ function App() {
     return (
       <div className="overflow-x-hidden text-gray-800">
         <div className="absolute hidden md:flex items-center justify-center font-main top-0 left-0 w-full h-12 bg-gradient-primary text-center text-white">
-          We make it easy to get medical care. Never wait for a doctor again.
+          {t('we-make-it-easy-to-get-medical-care-never-wait-for-a-doctor-again')}
         </div>
         <Navbar />
         <main className="w-full  min-h-[calc(100vh-73px)]">
