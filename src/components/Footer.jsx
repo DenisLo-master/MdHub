@@ -71,7 +71,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/services/virtual-doctor">
+              <Link to="/services">
                 {t('Virtual Doctor')}
               </Link>
             </li>
