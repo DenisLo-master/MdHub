@@ -72,17 +72,17 @@ const VirtualDoctorServices = () => {
 
 
           <article className="lg:col-span-2 flex flex-col lg:flex-row gap-4">
-            <h2 className="text-6xl flex justify-center text-center">{t('many-more')}</h2>
+            <h2 className="text-3xl md:text-6xl flex justify-center text-center">{t('many-more')}</h2>
           </article>
 
           <article className="lg:col-span-2 flex flex-col lg:flex-row gap-4">
             <Link className="block w-full" to="/register">
-              <button className="rounded-full w-full text-lg flex justify-center py-3 text-primary bg-white border border-white hover:bg-transparent hover:text-white transition-colors duration-300 ease-out">
+              <button className="rounded-full w-full text-[12px] md:text-lg flex justify-center py-3 text-primary bg-white border border-white hover:bg-transparent hover:text-white transition-colors duration-300 ease-out">
                 {t('sign-up-today')}
               </button>
             </Link>
             <Link className="block w-full" to="/login">              
-              <button className="rounded-full w-full text-lg flex justify-center py-3 text-white bg-transparent border border-white hover:bg-white hover:text-primary transition-colors duration-300 ease-out">
+              <button className="rounded-full w-full text-[12px] md:text-lg  flex justify-center py-3 text-white bg-transparent border border-white hover:bg-white hover:text-primary transition-colors duration-300 ease-out">
                 {t('See A Doctor')}
               </button>
             </Link>
