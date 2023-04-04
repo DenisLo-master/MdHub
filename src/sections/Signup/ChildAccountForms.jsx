@@ -145,7 +145,7 @@ const ChildAccountForms = () => {
     <div>
       {
         childForms.map((childForm, index) => (
-          <div key={`familymember${index}`} className="py-16 border space-y-4 px-8 shadow-cardService rounded-[35px] text-primary relative">
+          <div key={`familymember${index}`} className="py-16 border space-y-4 px-4 md:px-8 shadow-cardService rounded-[35px] text-primary relative">
             <MdClose onClick={() => handleRemoveChildForms(index)} className="absolute top-6 right-6 text-3xl cursor-pointer" />
             <h2 className="text-lg font-semibold">
               {selectedAccountType === "family" ? "Add Family Member" : "Add Employee"}
