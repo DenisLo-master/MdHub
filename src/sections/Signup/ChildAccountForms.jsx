@@ -18,6 +18,7 @@ const ChildAccountForms = () => {
   const [suggestions, setSuggestions] = useState([])
   const [conditionsFulfilled, setConditionsFulfilled] = useState([])
   const [correctDate, setCorrectDate] = useState(false)
+  const [previousLength, setPreviousLength] = useState(0)
   const { t } = useTranslation()
 
   const getStrengthLabel = (strengthScore) => {
@@ -118,16 +119,27 @@ const ChildAccountForms = () => {
     } else {
       setIsOlderThanFourteen(true)
     }
+    // let input = date;
+    // if (input.length === 1 && input < 10 && input > 0) {
+    //   input = "0" + input
+    // }
+    // if (input.length === 2 && !input.includes("/")) {
+    //   input += "/";
+    // } else if (input.length === 5 && input.charAt(2) === "/") {
+    //   input += "/";
+    // }
     let input = date;
-    if (input.length === 1 && input < 10 && input > 0) {
-      input = "0" + input
-    }
-    if (input.length === 2 && !input.includes("/")) {
+    if (input.length < previousLength) { // Backspace key
+      input = input.slice(0, -1);
+    } else if (input.length === 1 && input < 10 && input > 0) {
+      input = "0" + input;
+    } else if (input.length === 2 && !input.includes("/")) {
       input += "/";
     } else if (input.length === 5 && input.charAt(2) === "/") {
       input += "/";
     }  
     handleChildAccountInputChange({ target: { name: "dateOfBirth", value: input } }, index)
+    setPreviousLength(input.length);
   }
   return (
     <div>
@@ -255,7 +267,7 @@ const ChildAccountForms = () => {
               selectedAccountType === "family" ? (
                 <button type="button" onClick={addChildAccount} className="absolute bottom-4 left-8 flex text-gray-600 gap-x-2 font-body items-center text-3xl cursor-pointer">
                   <BsPlusCircle />
-                  <p className='text-xl'>{t('add-family-member')}</p>
+                  <p className='text-base md:text-xl'>{t('add-family-member')}</p>
                 </button>
               ) : (
                   <button type="button" disabled={childForms.length > 8} onClick={addChildAccount} className="absolute bottom-4 left-8 flex text-gray-600 gap-x-2 font-body items-center text-3xl cursor-pointer">

@@ -18,6 +18,7 @@ const ParentAccountForm = () => {
   const [suggestions, setSuggestions] = useState([])
   const [conditionsFulfilled, setConditionsFulfilled] = useState([])
   const [correctDate, setCorrectDate] = useState(false)
+  const [previousLength, setPreviousLength] = useState(0);
 
   const getStrengthLabel = (strengthScore) => {
     switch (strengthScore) {
@@ -101,15 +102,20 @@ const ParentAccountForm = () => {
 
   const handleDateChange = (date) => {
     let input = date;
-    if (input.length === 1 && input < 10 && input > 0) {
-      input = "0" + input
-    }
-    if (input.length === 2 && !input.includes("/")) {
+    if (input.length < previousLength) { // Backspace key
+      input = input.slice(0, -1);
+    } else if (input.length === 1 && input < 10 && input > 0) {
+      input = "0" + input;
+    } else if (input.length === 2 && !input.includes("/")) {
       input += "/";
     } else if (input.length === 5 && input.charAt(2) === "/") {
       input += "/";
-    } 
-    handleRegisterationFormDataChange("dateOfBirth", input)
+    }
+
+    handleRegisterationFormDataChange("dateOfBirth", input);
+
+    setPreviousLength(input.length);
+
   }
 
   return (
@@ -237,10 +243,10 @@ const ParentAccountForm = () => {
             className="lg:absolute bottom-4 left-8 flex gap-x-2 text-gray-600 font-body items-center text-3xl cursor-pointer"
           >
             <BsPlusCircle />
-            <p className='text-xl'>{t('add-family-member')}</p>
+            <p className='text-base md:text-xl'>{t('add-family-member')}</p>
           </button>
           <div className="lg:absolute bottom-4 right-8 text-gray-600 font-body">
-            <p className='text-xl'>{t('account-admin')}</p>
+            <p className='text-base md:text-xl'>{t('account-admin')}</p>
           </div>
         </div>
       )}
@@ -252,7 +258,7 @@ const ParentAccountForm = () => {
             className="lg:absolute bottom-4 left-8 flex gap-x-2 text-gray-600 font-body items-center text-3xl cursor-pointer"
           >
             <BsPlusCircle />
-            <p className='text-xl'>{t('add-employee')}</p>
+            <p className='text-base md:text-xl'>{t('add-employee')}</p>
           </button>
           <div className="lg:absolute bottom-4 right-8 text-gray-600 font-body">
             <p className='text-xl'>{t('account-admin')}</p>
