@@ -72,12 +72,12 @@ const MentalHealthServices = () => {
 
           <article className="lg:col-span-2 flex flex-col lg:flex-row gap-4">
             <Link className="block w-full" to="/register">
-              <button className="rounded-full w-full text-lg flex justify-center py-3 text-primary bg-white border border-white hover:bg-transparent hover:text-white transition-colors duration-300 ease-out">
+              <button className="rounded-full w-full text-[12px] md:text-lg  flex justify-center py-3 text-primary bg-white border border-white hover:bg-transparent hover:text-white transition-colors duration-300 ease-out">
                 {t('sign-up-today')}
               </button>
             </Link>
             <Link className="block w-full" to="/dashboard">
-              <button className="rounded-full w-full text-lg flex justify-center py-3 text-white bg-transparent border border-white hover:bg-white hover:text-primary transition-colors duration-300 ease-out">
+              <button className="rounded-full w-full text-[12px] md:text-lg  flex justify-center py-3 text-white bg-transparent border border-white hover:bg-white hover:text-primary transition-colors duration-300 ease-out">
                 {t('get-care-now')}
               </button>
             </Link>
