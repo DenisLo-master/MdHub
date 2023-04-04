@@ -7,7 +7,7 @@ const SignupStepOne = () => {
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
   const { t } = useTranslation()
   return (
-    <section className='space-y-6 px-4'>
+    <section className='space-y-6 md:px-4'>
       <article
         className={`w-full self-start pt-8 
         ${selectedAccountType === "corporate" ? "pb-20" : selectedAccountType === "family" ? "pb-20" : "pb-4"} 
