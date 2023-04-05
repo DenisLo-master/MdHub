@@ -175,8 +175,12 @@ import { ReactComponent as SliderOnlinePharmacy } from './slider-online-pharmacy
 import { ReactComponent as SliderNursingHomecare } from './slider-nursinghomecare.svg'
 import SliderDiagnostics from './slider-diagnostics.png'
 import RedirectIcon from './redirect.png'
+import OnlinePharmacyErectileDysfunction from './online-pharmacy-erectile-dysfunction.png'
+import OnlinePharmacyAcne from './online-pharmacy-acne.png'
 
 export {
+  OnlinePharmacyErectileDysfunction,
+  OnlinePharmacyAcne,
   SliderDiagnostics,
   SliderNursingHomecare,
   SliderOnlinePharmacy,

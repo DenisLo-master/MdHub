@@ -4,6 +4,7 @@ import { onlinePharmacyHowItWorksData, onlinePharmacyFAQData } from '../../const
 import { Link } from 'react-router-dom'
 import { useTranslation, Trans } from 'react-i18next'
 import FAQ from '../../components/FAQ.jsx'
+import { OnlinePharmacyServices } from '../../sections'
 
 const WORDS = ["birth control", "erectile dysfunction", "plan b", "antibiotics", "pain control and management", "mental health medication"]
 
@@ -52,7 +53,7 @@ const ServicesOnlinePharmacy = () => {
             </div>
           </div>
         </div>
-
+        <OnlinePharmacyServices />
         <div className="py-10 px-4 text-center md:text-left">
           <h2 className="text-4xl pb-10 text-center">
             {t('How It Works')}

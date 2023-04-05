@@ -109,7 +109,7 @@ const NursingAndHomecareServices = () => {
               </button>
             </Link>
             <Link className="block w-full" to="/login">
-              <button className="rounded-full w-full text-lg flex justify-center py-3 text-white bg-transparent border border-white hover:bg-white hover:text-primary transition-colors duration-300 ease-out">
+              <button className="rounded-full w-full text-[12px] md:text-lg flex justify-center py-3 text-white bg-transparent border border-white hover:bg-white hover:text-primary transition-colors duration-300 ease-out">
                 {t('get-care-now')}
               </button>
             </Link>
