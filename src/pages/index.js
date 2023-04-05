@@ -6,6 +6,7 @@ import ServicesDiagnostics from "./Services/ServicesDiagnostics";
 import ServicesNursingAndHomecare from "./Services/ServicesNursingAndHomecare";
 import ServicesOnlinePharmacy from "./Services/ServicesOnlinePharmacy";
 import ForYou from './ForYou/ForYou'
+import ForFamily from './ForFamily/ForFamily'
 import About from './About/About'
 import Contact from './Contact/Contact'
 import Dashboard from './Dashboard/Dashboard'
@@ -28,6 +29,7 @@ import AdminLogin from "./Login/AdminLogin"
 
 
 export {
+  ForFamily,
   GetUserInfoAdmin,
   AdminLogin,
   AddUser,
