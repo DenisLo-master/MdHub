@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const ForYouHeaderSection = () => {
   const { t } = useTranslation()
   return (
-    <section className="relative bg-[#FF7455] font-main">
+    <section className="relative lg:h-[390px] flex items-center bg-[#FF7455] font-main">
       <div className="w-full px-4 text-center md:text-left md:w-[clamp(70rem,90vw,100rem)] mx-auto">
         <h2 className="w-full py-12 max-w-[270px] mx-auto md:mx-0 text-[96px] leading-[90px] text-white">
           {t('for you')}
