@@ -110,7 +110,7 @@ const ForYou = () => {
       </section>
 
       <section className="w-full bg-[#F9F9F9] px-4 md:px-0 text-center md:text-left md:w-[clamp(60rem,80vw,95rem)] mx-auto flex flex-col justify-between md:flex-row gap-y-4">
-        <article className="flex flex-col gap-y-4 p-6 md:p-16 shadow-xl">
+        <article className="flex flex-col gap-y-4 p-8 md:p-16 shadow-xl">
           <h2 className="w-full text-center md:text-left md:max-w-[230px] leading-9 text-[40px]">
             {t('your-health-in-your-hands')}
           </h2>
