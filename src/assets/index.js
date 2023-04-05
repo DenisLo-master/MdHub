@@ -178,8 +178,20 @@ import RedirectIcon from './redirect.png'
 import OnlinePharmacyErectileDysfunction from './online-pharmacy-erectile-dysfunction.png'
 import OnlinePharmacyAcne from './online-pharmacy-acne.png'
 import ForYouHealthImage from './for-you-section-hero-02.jpg'
+import ForFamilyGrid01 from './for-family-grid-01.png'
+import ForFamilyGrid02 from './for-family-grid-02.png'
+import ForFamilyGrid03 from './for-family-grid-03.png'
+import ForFamilyGrid04 from './for-family-grid-04.png'
+import ForFamilyGrid05 from './for-family-grid-05.png'
+import ForFamilyGrid06 from './for-family-grid-06.png'
 
 export {
+  ForFamilyGrid01,
+  ForFamilyGrid02,
+  ForFamilyGrid03,
+  ForFamilyGrid04,
+  ForFamilyGrid05,
+  ForFamilyGrid06,
   ForYouHealthImage,
   OnlinePharmacyErectileDysfunction,
   OnlinePharmacyAcne,
