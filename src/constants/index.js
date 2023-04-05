@@ -265,6 +265,34 @@ export const membershipBenefits = [
   },
 ]
 
+export const forYouFAQData = [
+  {
+    id: 1,
+    question: "what-can-i-expect-from-my-mdhub-family-membership",
+    answer: "mdhubs-family-plan-provides-additional-care-and-support-for-the-babies-children-and-teens-in-your-care-get-access-to-virtual-doctors-24-7-as-well-as-pediatric-doctors-and-specialists-so-you-never-have-to-frantically-google-symptoms-in-the-middle-of-the-night-or-wait-hours-to-see-a-doctor-again-plus-you-can-get-prescriptions-filled-using-our-online-pharmacy-and-have-them-delivered-directly-to-you-and-access-our-medical-labs-mdhubs-family-membership-helps-your-kids-stay-healthy-which-saves-you-time-and-provides-peace-of-mind"
+  },
+  {
+    id: 2,
+    question: "what-support-do-you-offer-families-and-new-parents",
+    answer: "mdhub-offers-support-for-families-and-parents-because-we-know-first-hand-how-much-of-an-adjustment-becoming-a-parent-is-our-doctors-and-nurse-practitioners-can-support-new-parents-with-lactating-and-bottle-feeding-and-can-help-with-behavioural-and-mental-health-issues-in-children-and-teens"
+  },
+  {
+    id: 3,
+    question: "what-can-a-family-membership-help-with",
+    answer: "our-virtual-doctors-and-nurse-practitioners-can-treat-many-conditions-online-that-are-common-in-babies-children-and-teens-conditions-include-colds-the-flu-sinus-infections-eye-infections-skin-issues-and-gastronomical-issues-they-can-provide-prescriptions-or-doctors-notes-as-needed"
+  },
+  {
+    id: 4,
+    question: "what-cant-a-family-membership-help-with",
+    answer: "a-family-membership-cant-help-with-medical-emergencies-physical-examinations-stitches-or-major-wound-care-x-rays-and-orthopedic-casts-for-medical-emergencies-always-call-911"
+  },
+  {
+    id: 5,
+    question: "is-my-familys-information-private-and-secure",
+    answer: "yes-we-take-confidentiality-extremely-seriously-your-information-is-completely-private-and-is-protected-by-our-leading-security-infrastructure-and-data-protection-policies-you-are-always-in-control-of-your-personal-health-information"
+  }
+]
+
 export const medicalTreatmentData = [
   {
     id: 1,
