@@ -177,8 +177,10 @@ import SliderDiagnostics from './slider-diagnostics.png'
 import RedirectIcon from './redirect.png'
 import OnlinePharmacyErectileDysfunction from './online-pharmacy-erectile-dysfunction.png'
 import OnlinePharmacyAcne from './online-pharmacy-acne.png'
+import ForYouHealthImage from './for-you-section-hero-02.png'
 
 export {
+  ForYouHealthImage,
   OnlinePharmacyErectileDysfunction,
   OnlinePharmacyAcne,
   SliderDiagnostics,
