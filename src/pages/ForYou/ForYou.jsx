@@ -94,16 +94,16 @@ const ForYou = () => {
         <h2 className="text-5xl">{t('healthcare-without-the-hassle')}</h2>
         <div className="space-y-4 font-body">
           <p>
-            With MDHUB, our members can say goodbye to weeks of waiting for doctor appointments or long waits at hospitals. Forget driving and parking to get a treatment! Our team of over 1,500 Canadian-certified medical practitioners is available on demand from anywhere, allowing you to take back control of your health.
+            {t('with-mdhub-our-members-can-say-goodbye-to-weeks-of-waiting-for-doctor-appointments-or-long-waits-at-hospitals-forget-driving-and-parking-to-get-a-treatment-our-team-of-over-1-500-canadian-certified-medical-practitioners-is-available-on-demand-from-anywhere-allowing-you-to-take-back-control-of-your-health')}
           </p>
           <p>
-            Members have full control of when and how they access medical services and can benefit from being proactive with their care choices.
+            {t('members-have-full-control-of-when-and-how-they-access-medical-services-and-can-benefit-from-being-proactive-with-their-care-choices')}
           </p>
         </div>
         <div>
-          <button className="text-xl w-[176px] h-[48px] rounded-[48px] border border-primary" type="button">
+          <button className="text-xl px-10 h-[48px] rounded-[48px] border border-primary" type="button">
             <Link to="/register">
-              Register Today
+              {t('register-today')}
             </Link>
           </button>
         </div>
@@ -112,18 +112,20 @@ const ForYou = () => {
       <section className="w-full bg-[#F9F9F9] px-4 md:px-0 text-center md:text-left md:w-[clamp(60rem,80vw,95rem)] mx-auto flex flex-col justify-between md:flex-row gap-y-4">
         <article className="flex flex-col gap-y-4 p-6 md:p-16 shadow-xl">
           <h2 className="w-full max-w-[230px] leading-9 text-[40px]">
-            Your health, in your hands.
+            {t('your-health-in-your-hands')}
           </h2>
           <div className="md:min-w-[370px] flex flex-col gap-y-4">
             <div className="w-full max-w-sm flex flex-col gap-y-4 font-body">
-              <p>Whether it's a prescription for a common illness like the flu or a UTI, or getting an appointment with an in-demand specialist, we're here to help.</p>
+              <p>
+                {t('whether-its-a-prescription-for-a-common-illness-like-the-flu-or-a-uti-or-getting-an-appointment-with-an-in-demand-specialist-were-here-to-help')}
+              </p>
 
-              <p>All our doctors are Canadian-licensed and top-rated - and you can connect to care in minutes, 24/7. Or, you can book an appointment online with one of our specialists, including dermatologists, gynecologists, naturopaths, and endocrinologists - allowing you to finally put your health first.</p>
+              <p>{t('all-our-doctors-are-canadian-licensed-and-top-rated-and-you-can-connect-to-care-in-minutes-24-7-or-you-can-book-an-appointment-online-with-one-of-our-specialists-including-dermatologists-gynecologists-naturopaths-and-endocrinologists-allowing-you-to-finally-put-your-health-first')}</p>
             </div>
             <div>
-              <button className="text-xl w-[176px] h-[48px] rounded-[48px] border border-primary" type="button">
+              <button className="text-xl px-10 h-[48px] rounded-[48px] border border-primary" type="button">
                 <Link to="/register">
-                  Register Today
+                  {t('register-today')}
                 </Link>
               </button>
             </div>
@@ -134,14 +136,14 @@ const ForYou = () => {
 
       <section className="w-full py-8 md:py-20 px-4 md:px-0 text-center md:text-left md:w-[clamp(60rem,80vw,95rem)] mx-auto flex flex-col justify-between gap-y-4">
         <h2 className="text-5xl font-main">
-          You and your loved ones deserve more
+          {t('you-and-your-loved-ones-deserve-more')}
         </h2>
         <p className="font-body">
-          MDHUB was developed with you in mind - because there has to be a better way. MDHUB is your ultimate healthcare solution, and we're committed to helping you reach your wellness goals.
+          {t('mdhub-was-developed-with-you-in-mind-because-there-has-to-be-a-better-way-mdhub-is-your-ultimate-healthcare-solution-and-were-committed-to-helping-you-reach-your-wellness-goals')}
         </p>
         <button className="text-xl w-[176px] h-[48px] rounded-[48px] border border-primary" type="button">
           <Link to="/services">
-            Learn More
+            {t('Learn More')}
           </Link>
         </button>
       </section>
