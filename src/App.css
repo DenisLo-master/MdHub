@@ -99,6 +99,14 @@ input:checked+.toggle-switch .toggle-circle {
   transform: rotate(-45deg);
   transform-origin: center;
 }
+.grid-list>div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.grid-list>div li {
+  width: 438px;
+}
 /* @media screen and (max-width: 400px) {
   .slick-arrow.slick-next {
     right: 60px;
