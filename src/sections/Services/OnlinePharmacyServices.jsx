@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import {
   VirtualDoctorBanner,
-  MedicalTreatmentAcne,
-  MedicalTreatmentED,
+  OnlinePharmacyAcne,
+  OnlinePharmacyErectileDysfunction,
   MedicalTreatmentUTI,
   MedicalTreatmentBC,
   OkIconWhite,
@@ -36,13 +36,13 @@ const OnlinePharmacyServices = () => {
             </div>
           </article>
           <article>
-            <img className="w-full" src={MedicalTreatmentED} alt="Erectile Dysfunction" />
+            <img className="w-full" src={OnlinePharmacyErectileDysfunction} alt="Erectile Dysfunction" />
             <div className="py-4 text-center bg-white text-dark">
               {t('erectile-dysfunction')}
             </div>
           </article>
           <article>
-            <img className="w-full" src={MedicalTreatmentAcne} alt="Acne" />
+            <img className="w-full" src={OnlinePharmacyAcne} alt="Acne" />
             <div className="py-4 text-center bg-white text-dark">
               {t('acne')}
             </div>
@@ -52,22 +52,6 @@ const OnlinePharmacyServices = () => {
             <div className="py-4 text-center bg-white text-dark">
               {t('urinary-tract-infections')}
             </div>
-          </article>
-
-          <article className="relative p-4 bg-white text-center text-dark rounded-md">
-            <p>{t('dermatology')}</p>
-          </article>
-
-          <article className="relative p-4 bg-white text-center text-dark rounded-md">
-            <p>{t('mental-health-therapy')}</p>
-          </article>
-
-          <article className="relative p-4 bg-white text-center text-dark rounded-md">
-            <p>{t('endocrinology')}</p>
-          </article>
-
-          <article className="relative p-4 bg-white text-center text-dark rounded-md">
-            <p>{t('naturopathy')}</p>
           </article>
 
           <article className="lg:col-span-2 flex flex-col lg:flex-row gap-4">
