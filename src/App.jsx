@@ -33,7 +33,8 @@ import {
   Admin,
   AllUsers,
   AdminLogin,
-  GetUserInfoAdmin
+  GetUserInfoAdmin,
+  ForFamily
 } from './pages'
 import { Toaster } from "react-hot-toast"
 import AdminNav from './components/AdminNav'
@@ -86,6 +87,7 @@ function App() {
               <Route path="online-pharmacy" element={<ServicesOnlinePharmacy />} />
             </Route>
             <Route path="/for-you" element={<DefaultLayout><ForYou /></DefaultLayout>} />
+            <Route path="/for-family" element={<DefaultLayout><ForFamily /></DefaultLayout>} />
             <Route path="/about" element={<DefaultLayout><About /></DefaultLayout>} />
             <Route path="/contact" element={<DefaultLayout><Contact /></DefaultLayout>} />
             <Route path="/dashboard" element={<DefaultLayout><Dashboard /></DefaultLayout>}>
