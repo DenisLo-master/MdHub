@@ -169,9 +169,9 @@ const RegistrationCheckoutForm = () => {
           </button>
         </div>
       </form>
-      <p className="text-center font-body pt-4">
+      {/* <p className="text-center font-body pt-4">
         {t('note-currently-users-outside-of-quebec-may-not-access-online-pharmacy-nursing-or-lab-testing-we-will-be-rolling-out-additional-services-for-members-within-the-upcoming-months')}
-      </p>
+      </p> */}
     </div>
   )
 }
