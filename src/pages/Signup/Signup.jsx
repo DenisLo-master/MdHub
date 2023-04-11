@@ -21,10 +21,10 @@ const Signup = () => {
   }, [])
 
   return (
-    <section className="w-full max-w-[49rem] flex flex-col items-center mx-auto py-8 md:py-20 font-main px-4">
+    <section className="w-full max-w-[49rem] flex flex-col items-center mx-auto py-8 md:py-20 md:pt-32 font-main px-4">
       <article className="w-full space-y-4 flex flex-col items-center">
-        <h2 className="text-4xl text-center">{t('choose-account-type')}</h2>
-        <div className="text-center space-y-1 font-body pb-4">
+        <h2 className="text-4xl md:text-5xl pt-5 text-center">Join MDHUB</h2>
+        <div className="text-center font-semibold space-y-1 font-body pb-4">
           <h2>
             {t('we-make-it-easier-to-get-the-care-you-need-for-yourself-your-family-or-your-corporation')}
           </h2>
