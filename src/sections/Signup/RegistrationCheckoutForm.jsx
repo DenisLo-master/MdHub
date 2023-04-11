@@ -1,5 +1,5 @@
 import React, { useState, useRef, } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {
   SignupStepOne,
   SignupStepTwo,
@@ -74,10 +74,10 @@ const RegistrationCheckoutForm = () => {
       return
     }
 
-    if (!isDateValid(registerationFormData.dateOfBirth)) {
-      toast.error(t('please-enter-the-date-in-the-following-format-mm-dd-yyyy'), { id: "wrong date registration" })
-      return
-    }
+    // if (!isDateValid(registerationFormData.dateOfBirth)) {
+    //   toast.error(t('please-enter-the-date-in-the-following-format-mm-dd-yyyy'), { id: "wrong date registration" })
+    //   return
+    // }
 
     if (!isLastStep) next()
     if (!stripe || !elements) {
@@ -142,9 +142,18 @@ const RegistrationCheckoutForm = () => {
   }
   return (
     <div>
-      <form ref={signupFormRef} onSubmit={handleSignup} className="w-full">
+      <form ref={signupFormRef} onSubmit={handleSignup} className="w-full bg-[#F5F5F5] px-6 py-12 pb-16 rounded-[8px] mt-8">
         {step}
-        <div className="w-full flex justify-end gap-x-4 pt-6 px-4">
+        <div className={`w-full flex ${isFirstStep ? "justify-between" : "justify-end"} gap-x-4 pt-6 px-4`}>
+          {
+            isFirstStep &&
+            <div className="flex font-body text-dark items-center gap-x-3 text-lg md:pl-5">
+              <p className="text-lg">Already a member?</p>
+              <Link className="text-primary font-semibold" to="/login">
+                Login
+              </Link>
+            </div>
+          }
           {
             !isFirstStep &&
             <button
@@ -157,7 +166,7 @@ const RegistrationCheckoutForm = () => {
           }
           <button
             type="submit"
-            className={`rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary py-3 border flex justify-center items-center space-x-2  border-primary bg-primary text-white`}
+            className={`rounded-full w-56 font-main text-xl group hover:ring-1 hover:ring-primary py-3 border flex justify-center items-center space-x-2  border-primary bg-[#1EBC91] text-white`}
           >
             {
               isLastStep ?
