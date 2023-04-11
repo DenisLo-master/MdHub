@@ -7,10 +7,10 @@ const SignupStepOne = () => {
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
   const { t } = useTranslation()
   return (
-    <section className='space-y-6 md:px-4'>
-      <article
-        className={`w-full self-start pt-8 
-        ${selectedAccountType === "corporate" ? "pb-20" : selectedAccountType === "family" ? "pb-20" : "pb-4"} 
+    <section className='space-y-6 md:px-4 pt-10'>
+      {/* <article
+        className={`w-full self-start pt-8
+        ${selectedAccountType === "corporate" ? "pb-20" : selectedAccountType === "family" ? "pb-20" : "pb-4"}
         lg:pb-4 mb-4 `}
       >
         <div className="w-full flex justify-between items-center relative">
@@ -44,7 +44,7 @@ const SignupStepOne = () => {
             </div>
           </article>
         </div>
-      </article>
+      </article> */}
       <ParentAccountForm />
       {selectedAccountType === "family" && <ChildAccountForms />}
       {selectedAccountType === "corporate" && <ChildAccountForms />}
