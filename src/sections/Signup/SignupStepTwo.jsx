@@ -8,73 +8,82 @@ const SignupStepTwo = () => {
   const registerationFormData = registerationStore(state => state.registerationFormData)
   const handleRegisterationFormDataChange = registerationStore(state => state.handleRegisterationFormDataChange)
   const { t } = useTranslation()
+  const [addressLineOne, setAddressLineOne] = useState("")
+  const [addressLineTwo, setAddressLineTwo] = useState("")
+  const [addressLineThree, setAddressLineThree] = useState("")
 
+  const handleAddressChange = (e) => {
+    e.target.name === "address" ? setAddressLineOne(e.target.value) : e.target.name === "address2" ? setAddressLineTwo(e.target.value) : setAddressLineThree(e.target.value)
+    const address = `${addressLineOne}, ${addressLineTwo}, ${addressLineThree}`
+    handleRegisterationFormDataChange("address", address)
+  }
+  
   return (
     <section className="space-y-6">
-      <article className="w-full self-start pt-8 pb-4 mb-4 ">
+      <article className="w-full">
         <div className="w-full flex justify-between items-center">
-          <article className="border-b-primary flex items-baseline gap-x-6 border-b-[3px] max-w-xs px-4">
-            <h2 className="text-3xl lg:text-[32px]">{t('Step 2')}</h2>
-            <div className="font-body font-light">
-              <div className="text-right">
-                <p>{t('billing-address')}</p>
-              </div>
-            </div>
-          </article>
         </div>
       </article>
-      <div className="py-16 border space-y-4 px-8 shadow-cardService rounded-[35px] text-primary">
-        <div className="w-full flex flex-col lg:flex-row flex-wrap gap-y-4 gap-x-6">
-          <div className="flex-1 relative">
+      <div className="space-y-4 px-8 text-primary">
+        <div className="w-full flex flex-col gap-y-2">
+          <label htmlFor='address' className="font-body text-dark font-semibold">
+            Address
+          </label>
+          <div className="flex flex-col gap-y-3">
+            <input
+              className="rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary"
+              name="address"
+              type="text"
+              value={addressLineOne}
+              onChange={(e) => handleAddressChange(e)}
+              required
+            />
+            <input
+              className="rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary"
+              name="address2"
+              type="text"
+              value={addressLineTwo}
+              onChange={(e) => handleAddressChange(e)}
+            />
+            <input
+              className="rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary"
+              name="address3"
+              type="text"
+              value={addressLineThree}
+              onChange={(e) => handleAddressChange(e)}
+            />
+          </div>
+        </div>
+        <div className="flex flex-col gap-y-2">
+          <label htmlFor='address' className="font-body text-dark font-semibold">
+            Country
+          </label>
+          <div className="relative">
             <CountryDropdown
               defaultOptionLabel={t('select-country')}
-              classes='outline-none w-full bg-white  appearance-none rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border'
+              className="w-full rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary bg-white appearance-none"
               value={registerationFormData.country}
-              onChange={(val) => handleRegisterationFormDataChange("country", val)} />
-            <BiCaretDown className="absolute text-2xl right-4 top-[10px]" />
+              onChange={(val) => handleRegisterationFormDataChange("country", val)} 
+            />
+            <BiCaretDown className="absolute text-2xl right-4 top-[10px]"/>
           </div>
-          <div className="flex-1 relative">
+        </div>
+        <div className="flex flex-col gap-y-2">
+          <label htmlFor='address' className="font-body text-dark font-semibold">
+            Province
+          </label>
+          <div className="relative">
             <RegionDropdown
               defaultOptionLabel={t('select-province-state')}
               blankOptionLabel={t('select-province-state-0')}
-              classes='outline-none w-full bg-white appearance-none rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border'
+              className="w-full rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary bg-white appearance-none"
               country={registerationFormData.country}
               value={registerationFormData.region}
-              onChange={(val) => handleRegisterationFormDataChange("region", val)} />
-            <BiCaretDown className="absolute text-2xl right-4 top-[10px]" />
+              onChange={(val) => handleRegisterationFormDataChange("region", val)}
+            />
+            <BiCaretDown className="absolute text-2xl right-4 top-[10px]"/>
           </div>
-        </div>
-        <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
-          <input
-            className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-            name="address"
-            type="text"
-            placeholder={t('address')}
-            value={registerationFormData.address}
-            onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
-            required
-          />
-        </div>
-        <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
-          <input
-            className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-            name="city"
-            type="text"
-            placeholder={t('city')}
-            value={registerationFormData.city}
-            onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
-            required
-          />
-          <input
-            className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-            name="postalCode"
-            type="text"
-            placeholder={t('postal-code')}
-            value={registerationFormData.postalCode}
-            onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
-            required
-          />
-        </div>
+        </div>      
       </div>
     </section>
   )
