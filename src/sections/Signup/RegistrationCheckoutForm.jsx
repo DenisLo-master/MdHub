@@ -3,7 +3,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import {
   SignupStepOne,
   SignupStepTwo,
-  SignupStepThree
+  SignupStepThree,
+  SignupAccountsTypeNav
 } from '../../sections'
 import { useMultiStepForm } from '../../hooks/useMultiStepForm'
 import { registerationStore } from '../../store/registerationStore'
@@ -142,7 +143,28 @@ const RegistrationCheckoutForm = () => {
   }
   return (
     <div>
-      <form ref={signupFormRef} onSubmit={handleSignup} className="w-full bg-[#F5F5F5] px-6 py-12 pb-16 rounded-[8px] mt-8">
+      {
+        isFirstStep && (
+          <article className="w-full space-y-4 flex flex-col items-center">
+            <h2 className="text-4xl md:text-5xl pt-5 text-center">Join MDHUB</h2>
+            <div className="text-center font-semibold space-y-1 font-body pb-4">
+              <h2>
+                {t('we-make-it-easier-to-get-the-care-you-need-for-yourself-your-family-or-your-corporation')}
+              </h2>
+              <h2>{t('memberships-are-now-as-low-as-19-99-per-month')}</h2>
+            </div>
+            <SignupAccountsTypeNav />
+          </article>
+        )
+      }
+      {
+        currentStepIndex === 1 && (
+          <h2 className="text-center text-4xl">Whats your address?</h2>
+        )
+      }
+      <form ref={signupFormRef} onSubmit={handleSignup} 
+        className={`w-full bg-[#F5F5F5] px-6 ${isFirstStep ? "py-12 pb-16" : "pt-6 pb-10"} rounded-[8px] mt-8`}
+      >
         {step}
         <div className={`w-full flex ${isFirstStep ? "justify-between" : "justify-end"} gap-x-4 pt-6 px-4`}>
           {
