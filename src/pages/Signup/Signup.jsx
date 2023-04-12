@@ -22,16 +22,6 @@ const Signup = () => {
 
   return (
     <section className="w-full max-w-[49rem] flex flex-col items-center mx-auto py-8 md:py-20 md:pt-32 font-main px-4">
-      <article className="w-full space-y-4 flex flex-col items-center">
-        <h2 className="text-4xl md:text-5xl pt-5 text-center">Join MDHUB</h2>
-        <div className="text-center font-semibold space-y-1 font-body pb-4">
-          <h2>
-            {t('we-make-it-easier-to-get-the-care-you-need-for-yourself-your-family-or-your-corporation')}
-          </h2>
-          <h2>{t('memberships-are-now-as-low-as-19-99-per-month')}</h2>
-        </div>
-        <SignupAccountsTypeNav />
-      </article>
       <article className="w-full">
         <Elements stripe={stripePromise}>
           <RegistrationCheckoutForm />
