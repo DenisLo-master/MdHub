@@ -6,85 +6,78 @@ import { useTranslation } from 'react-i18next'
 const MembershipBenefits = () => {
   const { t } = useTranslation()
   return (
-    <section className="flex justify-center py-10">
-      <div className="w-full max-w-7xl rounded-lg bg-gradient-primary text-white py-10 px-8 lg:px-16">
-        <h2 className="text-4xl text-center pb-7">
-          {t('members-benefit-from')}:
-        </h2>
-        <ul className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8">
-          <li className="flex gap-x-4 items-center">
-            <div>
-              <OkIcon className="w-8 h-8" />
-            </div>
-            <p className="text-2xl">
-              {t('free-24-7-virtual-healthcare')}
-            </p>
-          </li>
-          <li className="flex gap-x-4 items-center">
-            <OkIcon className="w-8 h-8" />
-            <p className="text-2xl">
-              {t('mental-health-specialists-0')}
-            </p>
-          </li>
-          <li className="flex gap-x-4 items-center">
-            <OkIcon className="w-8 h-8" />
-            <p className="text-2xl">
-              {t('online-pharmacy-and-delivery')}
-            </p>
-          </li>
-          <li className="flex gap-x-4 items-center">
-            <OkIcon className="w-8 h-8" />
-            <p className="text-2xl">
-              {t('specialised-medicine')}
-            </p>
-          </li>
-          <li className="flex gap-x-4 items-center">
-            <div>
-              <OkIcon className="w-8 h-8" />
-            </div>
-            <p className="text-2xl">
-              {t('mobile-nursing-0')}
-            </p>
-          </li>
-          <li className="flex gap-x-4 items-center">
-            <OkIcon className="w-8 h-8" />
-            <p className="text-2xl">
-              {t('homecare-1')}
-            </p>
-          </li>
-          <li className="flex gap-x-4 items-center">
-            <OkIcon className="w-8 h-8" />
-            <p className="text-2xl">
-              {t('laboratory-analysis-0')}
-            </p>
-          </li>
-          <li className="flex gap-x-4 items-center">
-            <OkIcon className="w-8 h-8" />
-            <p className="text-2xl">
-              {t('laboratory-testing')}
-            </p>
-          </li>
-          <li className="flex gap-x-4 items-center">
-            <OkIcon className="w-8 h-8" />
-            <p className="text-2xl">
-              {t('private-clinics')}
-            </p>
-          </li>
-          <li className="flex gap-x-4 items-center">
-            <OkIcon className="w-8 h-8" />
-            <p className="text-2xl">
-              {t('more')}
-            </p>
-          </li>
-          <li>
-            <Link className="block" to="/register">
-              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white border-white text-primary font-main">
-                {t('sign-up-today')}
-              </button>
-            </Link>
-          </li>
-        </ul>
-      </div>
+    <section className="flex h-[700px]">
+      <article className="flex-1 text-6xl px-8 flex justify-end items-center">
+        <h2>Members Benefit From:</h2>
+      </article>
+      <article className="md:w-[912px] flex justify-end bg-blue-circle">
+        <div className="flex items-center w-full md:w-[90%]">
+          <ul className="flex flex-col gap-y-8">
+            <li className="md:pl-16 flex font-body text-white">
+              <div className="flex items-center gap-x-3">
+                <OkIcon className=" w-10 h-10" />
+                <p className="text-xl max-w-[240px]">Free 24/7 unlimited access to doctors</p>
+              </div>
+            </li>
+            <li className="md:pl-8 flex font-body text-white">
+              <div className="flex items-center gap-x-3">
+                <OkIcon className=" w-10 h-10" />
+                <p className="text-xl max-w-[240px]">Access to specialists</p>
+              </div>
+            </li>
+            <li className="flex font-body text-white">
+              <div className="flex items-center gap-x-3">
+                <OkIcon className=" w-10 h-10" />
+                <p className="text-xl max-w-[240px]">Mental health platform and support</p>
+              </div>
+            </li>
+            <li className="md:pl-8 flex font-body text-white">
+              <div className="flex items-center gap-x-3">
+                <OkIcon className=" w-10 h-10" />
+                <p className="text-xl max-w-[240px]">Online pharmacy</p>
+              </div>
+            </li>
+            <li className="md:pl-16 flex font-body text-white">
+              <div className="flex items-center gap-x-3">
+                <OkIcon className=" w-10 h-10" />
+                <p className="text-xl max-w-[240px]">Vaccination</p>
+              </div>
+            </li>
+          </ul>
+          <ul className="flex flex-col gap-y-8">
+            <li className="md:pl-16 flex font-body text-white">
+              <div className="flex items-center gap-x-3">
+                <OkIcon className=" w-10 h-10" />
+                <p className="text-xl max-w-[240px]">Mobile nursing</p>
+              </div>
+            </li>
+            <li className="md:pl-8 flex font-body text-white">
+              <div className="flex items-center gap-x-3">
+                <OkIcon className=" w-10 h-10" />
+                <p className="text-xl max-w-[240px]">Homecare</p>
+              </div>
+            </li>
+            <li className="flex font-body text-white">
+              <div className="flex items-center gap-x-3">
+                <OkIcon className=" w-10 h-10" />
+                <p className="text-xl max-w-[240px]">Laboratory analysis</p>
+              </div>
+            </li>
+            <li className="md:pl-8 flex font-body text-white">
+              <div className="flex items-center gap-x-3">
+                <OkIcon className=" w-10 h-10" />
+                <p className="text-xl max-w-[240px]">Testing</p>
+              </div>
+            </li>
+            <li className="md:pl-16 flex font-body text-white">
+              <div className="flex items-center gap-x-3">
+                <OkIcon className=" w-10 h-10" />
+                <p className="text-xl max-w-[240px]">+more</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </article>
     </section>
   )
 }
