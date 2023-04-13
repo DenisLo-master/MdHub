@@ -11,7 +11,7 @@ const PersonalInfo = () => {
 
   return (
     <section className="space-y-6">
-      <div className="space-y-4 px-8 text-primary">
+      <div className="space-y-4 px-8 text-dark">
         <div className="w-full flex flex-col gap-y-2">
           <label htmlFor='address' className="font-body text-dark font-semibold">
             Phone Number
