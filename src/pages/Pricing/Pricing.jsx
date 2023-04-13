@@ -4,12 +4,9 @@ import { PricingSlider, OnDemandCTA, PricingHeader, HeadspaceSection, Membership
 const Pricing = () => {
   return (
     <section className="font-main md:mt-[70px]">
-      <PricingHeader />
       <PricingSlider />
-      <OnDemandCTA />
       <HeadspaceSection />
       <MembershipBenefits />
-      <Testimonials />
     </section>
   )
 }
