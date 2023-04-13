@@ -45,8 +45,12 @@ import HeadspaceSection from './Pricing/HeadspaceSection'
 import MembershipBenefits from './Pricing/MembershipBenefits'
 import Testimonials from "./Pricing/Testimonials"
 import HomeMedicalConditionsSection from "./Home/HomeMedicalConditionsSection"
+import PersonalInfo from "./Signup/PersonalInfo"
+import TermsOfService from "./Signup/TermsOfService"
 
 export {
+  TermsOfService,
+  PersonalInfo,
   HomeMedicalConditionsSection,
   NursingAndHomecareServices,
   DiagnosticServices,
