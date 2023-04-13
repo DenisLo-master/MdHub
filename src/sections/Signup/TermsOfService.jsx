@@ -18,6 +18,7 @@ const TermsOfService = () => {
               className="w-4 h-4"
               type="checkbox" 
               name="membershipTermsOfService"
+              required
             />
             </article>
             <article 
@@ -29,6 +30,7 @@ const TermsOfService = () => {
                 className="w-4 h-4"
                 type="checkbox" 
                 name="medicalTermsOfService"
+                required
               />
             </article>
             <article 
@@ -40,6 +42,7 @@ const TermsOfService = () => {
                 className="w-4 h-4"
                 type="checkbox" 
                 name="privacyPolicy"
+                required
               />
             </article>
             
