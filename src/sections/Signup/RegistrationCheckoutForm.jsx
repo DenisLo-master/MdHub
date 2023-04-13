@@ -197,7 +197,7 @@ const RegistrationCheckoutForm = () => {
             !isFirstStep &&
             <button
               type="button"
-              className={`rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary py-3 border  border-primary bg-primary text-white`}
+                className={`rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary py-3 border  border-primary bg-[#1EBC91] text-white`}
               onClick={back}
             >
               {t('back')}
