@@ -4,7 +4,9 @@ import {
   SignupStepOne,
   SignupStepTwo,
   SignupStepThree,
-  SignupAccountsTypeNav
+  SignupAccountsTypeNav,
+  PersonalInfo,
+  TermsOfService
 } from '../../sections'
 import { useMultiStepForm } from '../../hooks/useMultiStepForm'
 import { registerationStore } from '../../store/registerationStore'
@@ -29,6 +31,8 @@ const RegistrationCheckoutForm = () => {
   const { steps, currentStepIndex, step, isFirstStep, isLastStep, next, back } = useMultiStepForm([
     <SignupStepOne />,
     <SignupStepTwo />,
+    <PersonalInfo/>,
+    <TermsOfService/>,
     <SignupStepThree />
   ])
 
@@ -142,7 +146,7 @@ const RegistrationCheckoutForm = () => {
     }
   }
   return (
-    <div>
+    <div className="pt-8">
       {
         isFirstStep && (
           <article className="w-full space-y-4 flex flex-col items-center">
@@ -160,6 +164,19 @@ const RegistrationCheckoutForm = () => {
       {
         currentStepIndex === 1 && (
           <h2 className="text-center text-4xl">Whats your address?</h2>
+        )
+      }
+      {
+        currentStepIndex === 2 && (
+          <h2 className="text-center text-4xl">Personal Info</h2>
+        )
+      }
+      {
+        currentStepIndex === 3 && (
+          <div className="text-center space-y-3">
+            <h2 className="text-4xl">Terms of Service & Privacy Policy </h2>
+            <p className="text-[14px] font-body">In order to join MDHUB, you must agree to the terms below.</p>
+          </div>
         )
       }
       <form ref={signupFormRef} onSubmit={handleSignup} 
