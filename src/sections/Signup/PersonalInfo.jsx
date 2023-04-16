@@ -10,11 +10,11 @@ const PersonalInfo = () => {
   const { t } = useTranslation()
 
   return (
-    <section className="space-y-6">
+    <section className="max-w-[49rem] mx-auto bg-[#f5f5f5] py-12 pb-24">
       <div className="space-y-4 px-8 text-dark">
         <div className="w-full flex flex-col gap-y-2">
           <label htmlFor='address' className="font-body text-dark font-semibold">
-            Phone Number
+            {t('phone-number')}
           </label>
           <div className="flex flex-col gap-y-3">
             <input
@@ -29,7 +29,7 @@ const PersonalInfo = () => {
         </div>
         <div className="flex flex-col gap-y-2">
           <label htmlFor='address' className="font-body text-dark font-semibold">
-            Birthday
+            {t('birthday')}
           </label>
           <input
               className="rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary"
@@ -42,7 +42,7 @@ const PersonalInfo = () => {
         </div>
         <div className="flex flex-col gap-y-2 font-body">
           <label htmlFor='address' className="text-dark font-semibold">
-            Legal Sex
+            {t('legal-sex')}
           </label>
           <div className="flex flex-col gap-y-2">
             <label className="inline-flex items-center">
@@ -53,7 +53,7 @@ const PersonalInfo = () => {
                 checked={registerationFormData.gender === "male"}
                 onChange={({target}) => handleRegisterationFormDataChange("gender", target.value)}
               />
-              <span className="ml-2 text-gray-700">Male</span>
+              <span className="ml-2 text-gray-700">{t('male')}</span>
             </label>
             <label className="inline-flex items-center">
               <input
@@ -63,7 +63,7 @@ const PersonalInfo = () => {
                 checked={registerationFormData.gender === "female"}
                 onChange={({target}) => handleRegisterationFormDataChange("gender", target.value)}
               />
-              <span className="ml-2 text-gray-700">Female</span>
+              <span className="ml-2 text-gray-700">{t('female')}</span>
             </label>
             <label className="inline-flex items-center">
               <input
@@ -73,7 +73,7 @@ const PersonalInfo = () => {
                 checked={registerationFormData.gender === "preferNotToSay"}
                 onChange={({target}) => handleRegisterationFormDataChange("gender", target.value)}
               />
-              <span className="ml-2 text-gray-700">Prefer not to say</span>
+              <span className="ml-2 text-gray-700">{t('prefer-not-to-say')}</span>
             </label>
           </div>
         </div>      
