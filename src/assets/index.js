@@ -186,8 +186,10 @@ import ForFamilyGrid05 from './for-family-grid-05.png'
 import ForFamilyGrid06 from './for-family-grid-06.png'
 import { ReactComponent as ShowPasswordIcon } from "./show-password-icon.svg"
 import HeadspaceLogoWhite from './headspace-logo-white.png'
+import MembershipBenefitHeadspace from './membership-benefit-headspace.png'
 
 export {
+  MembershipBenefitHeadspace,
   HeadspaceLogoWhite,
   ShowPasswordIcon,
   ForFamilyGrid01,
