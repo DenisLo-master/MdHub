@@ -142,7 +142,7 @@ const ChildAccountForms = () => {
     setPreviousLength(input.length);
   }
   return (
-    <div>
+    <div className="mt-10">
       {
         childForms.map((childForm, index) => (
           <div key={`familymember${index}`} className="py-16 border space-y-4 px-4 md:px-8 shadow-cardService rounded-[35px] text-primary relative">
