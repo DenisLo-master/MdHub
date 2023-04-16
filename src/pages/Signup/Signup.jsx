@@ -21,7 +21,7 @@ const Signup = () => {
   }, [])
 
   return (
-    <section className="w-full max-w-[49rem] flex flex-col items-center mx-auto py-8 md:py-20 md:pt-32 font-main px-4">
+    <section className="w-full flex flex-col items-center mx-auto py-8 md:py-20 md:pt-32 font-main px-4">
       <article className="w-full">
         <Elements stripe={stripePromise}>
           <RegistrationCheckoutForm />
