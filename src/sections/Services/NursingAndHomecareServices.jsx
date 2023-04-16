@@ -5,122 +5,36 @@ import {
   NursingAndHomeCareServices02,
   NursingAndHomeCareServices03,
   NursingAndHomeCareServices04,
+  Orange,
 } from '../../assets'
 import { useTranslation } from 'react-i18next'
 
 const NursingAndHomecareServices = () => {
-	const { t } = useTranslation()
-	return (
-    <section className="bg-primary text-white py-14 px-4">
-      <div className="w-full max-w-[52rem] mx-auto text-center space-y-4">
-        <h3 className="text-4xl md:text-5xl">
-          {t('get-access-to-nursing-and-homecare')}
-        </h3>
-        <p className="font-body text-ligh">
-          {t('if-you-or-a-loved-one-have-a-medical-condition-that-requires-ongoing-treatment-nursing-can-make-life-much-easier-or-if-they-need-some-extra-help-at-home-our-homecare-agents-can-help-shoulder-the-burden')}
-        </p>
+  const { t } = useTranslation()
+  return (
+    <section className="bg-[#FFB683] text-white w-full lg:h-[530px] py-10 relative">
+      <div className="max-w-[83rem] mx-auto flex flex-col justify-center h-full">
+        <article className="px-4 space-y-5 flex flex-col items-center lg:items-start text-center">
+          <h2 className="text-5xl lg:text-[48px] text_black font-semibold max-w-lg text-left">
+            {t('Get access to nursing and homecare')}
+          </h2>
+          <div className="space-y-5 font-body text-lg max-w-lg">
+            <p className="text-center lg:text-left text_black text-base leading-4">
+              {t('If you or a loved one have a medical condition that requires immediate or ongoing treatment, nursing can make life much easier. Or, if they need some extra help at home, our homecare helpers can help shoulder the burden.')}
+            </p>
+          </div>
+          <Link className="block" to="/register">
+            <button className="rounded-full w-[480px] mt-[48px] text-lg flex justify-center py-3 border bg-[#3F3F3F] border-none hover:opacity-80 transition-opacity ease-in-out duration-300 text-white font-helvetica">
+              {t('sign-up-today')}
+            </button>
+            <button className="rounded-full w-[480px] mt-8 text-lg flex justify-center py-3 border bg-white border-none hover:opacity-80 transition-opacity ease-in-out duration-300 text-[#3F3F3F] font-helvetica">
+              {t('Get Care Now')}
+            </button>
+          </Link>
+        </article>
+        <img className="hidden lg:block absolute right-5 top-5" src={Orange} alt="virtual doctor" />
       </div>
 
-      <section className="py-10 max-w-[70rem] mx-auto">
-        <div className=" grid grid-cols-2 lg:grid-cols-4 gap-8 text-lg">
-          <article>
-            <img className="w-full" src={NursingAndHomeCareServices01} alt="Blood work & testing" />
-            <div className="py-4 text-center bg-white text-dark">
-              {t('blood-work-and-testing')}
-            </div>
-          </article>
-          <article>
-            <img className="w-full" src={NursingAndHomeCareServices02} alt="Vaccination" />
-            <div className="py-4 text-center bg-white text-dark">
-              {t('Vaccination')}
-            </div>
-          </article>
-          <article>
-            <img className="w-full" src={NursingAndHomeCareServices03} alt="Elderly care" />
-            <div className="py-4 text-center bg-white text-dark">
-              {t('elderly-care')}
-            </div>
-          </article>
-          <article>
-            <img className="w-full" src={NursingAndHomeCareServices04} alt="IV Therapy" />
-            <div className="py-4 text-center bg-white text-dark">
-              {t('IV Therapy')}
-            </div>
-          </article>
-
-          <article className="relative p-4 bg-white text-center text-dark rounded-md">
-            <p>
-              {t('vital-signs-monitoring')}
-            </p>
-          </article>
-
-          <article className="relative p-4 bg-white text-center text-dark rounded-md">
-            <p>{t('companion-care')}</p>
-          </article>
-
-          <article className="relative p-4 bg-white text-center text-dark rounded-md">
-            <p>{t('urology-care')}</p>
-          </article>
-
-          <article className="relative p-4 bg-white text-center text-dark rounded-md">
-            <p>{t('post-operative-care')}</p>
-          </article>
-
-          <article className="relative p-4 bg-white text-center text-dark rounded-md">
-            <p>{t('oncology-care')}</p>
-          </article>
-
-          <article className="relative p-4 bg-white text-center text-dark rounded-md">
-            <p>{t('injections-and-infusions')}</p>
-          </article>
-
-          <article className="relative p-4 bg-white text-center text-dark rounded-md">
-            <p>{t('foot-care')}</p>
-          </article>
-
-          <article className="relative p-4 bg-white text-center text-dark rounded-md">
-            <p>{t('ear-washing')}</p>
-          </article>
-
-          <article className="relative p-4 md:h-16 bg-white text-center text-dark rounded-md">
-            <p>{t('in-home-and-outdoor-assistance')}</p>
-          </article>
-
-          <article className="relative p-4 bg-white text-center text-dark rounded-md">
-            <p>{t('transportation-assistance')}</p>
-          </article>
-
-          <article className="relative p-4 bg-white text-center text-dark rounded-md md:h-16 leading-5">
-            <p className="text-sm md:text-base">{t('light-meal-prepping-housekeeping')}</p>
-          </article>
-
-          <article className="relative p-4 md:h-16 leading-5 bg-white text-center text-dark rounded-md">
-            <p>{t('medication-administration-and-monitoring')}</p>
-          </article>
-
-          <article className="lg:col-span-2 flex flex-col lg:flex-row gap-4">
-            <h2 className="text-3xl md:text-6xl whitespace-nowrap text-center">{t('many-more')}</h2>
-          </article>
-
-          <article className="lg:col-span-2 flex flex-col lg:flex-row gap-4">
-            <Link className="block w-full" to="/register">
-              <button className="rounded-full w-full text-[12px] md:text-lg  flex justify-center py-3 text-primary bg-white border border-white hover:bg-transparent hover:text-white transition-colors duration-300 ease-out">
-                {t('sign-up-today')}
-              </button>
-            </Link>
-            <Link className="block w-full" to="/login">
-              <button className="rounded-full w-full text-[12px] md:text-lg flex justify-center py-3 text-white bg-transparent border border-white hover:bg-white hover:text-primary transition-colors duration-300 ease-out">
-                {t('get-care-now')}
-              </button>
-            </Link>
-          </article>
-        </div>
-        <div className="pt-10">
-        	<p className="font-body break-words text-sm">
-            <strong>{t('note')}:</strong> {t('above-pricing-does-not-include-laboratory-fees-or-additional-materials-such-as-vitamin-drips-or-the-cost-of-medication-our-team-will-confirm-all-appointments-by-email-or-phone-and-advice-of-any-additional-fees-homecare-services-require-a-minimum-booking-of-three-hours-for-montreal-and-four-hours-for-outside-of-montreal')}
-        	</p>
-        </div>
-      </section>
     </section>
   )
 }
