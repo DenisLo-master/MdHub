@@ -121,11 +121,11 @@ const ParentAccountForm = () => {
   }
 
   return (
-    <div className="space-y-6 px-4 md:px-8  rounded-[8px] text-primary relative">
+    <div className="space-y-6 px-4 md:px-8  rounded-[8px] text-dark relative">
       <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
         <article className="flex-1 flex flex-col gap-y-2">
           <label htmlFor='firstName' className="font-body text-dark font-semibold">
-            First Name
+            {t('first-name-0')}
           </label>
           <input
             id="firstName"
@@ -139,7 +139,7 @@ const ParentAccountForm = () => {
         </article>
         <article className="flex-1 flex flex-col gap-y-2">
           <label htmlFor='lastName' className="font-body text-dark font-semibold">
-            Last Name
+            {t('last-name-0')}
           </label>
           <input
             id="lastName"
@@ -154,7 +154,7 @@ const ParentAccountForm = () => {
       </div>
       <div className="w-full flex flex-col gap-y-2">
         <label htmlFor='email' className="font-body text-dark font-semibold">
-          Email
+          {t('email-0')}
         </label>
         <input
           id="email"
@@ -177,7 +177,7 @@ const ParentAccountForm = () => {
       </div>
       <div className="w-full flex flex-col gap-y-2">
         <label htmlFor='password' className="font-body text-dark font-semibold">
-          Create a Password
+          {t('create-a-password')}
         </label>
         <div className="w-full">
           <div className="relative flex flex-col">
@@ -197,7 +197,7 @@ const ParentAccountForm = () => {
             />
             <div onClick={() => setShowPassword(!showPassword)} className="font-body text-dark absolute flex items-center gap-x-2 right-4 top-[12px] cursor-pointer">
               <ShowPasswordIcon />
-              <p>Show</p>
+              <p>{t('show')}</p>
             </div>
           </div>
           {/* {registerationFormData.password && (
@@ -231,11 +231,11 @@ const ParentAccountForm = () => {
           )} */}
         </div>
         <ul className="font-body text-dark list-disc pt-4 pl-5">
-          <li>8 or more characters</li>
-          <li>Upper + lowercase letters</li>
-          <li>At least one number</li>
-          <li>No repetitive characters (e.g. 'bbb', 'Aaa')</li>
-          <li>No sequential characters (e.g. 'abc', '123', '321' or 'cba')</li>
+          <li>{t('8-or-more-characters')}</li>
+          <li>{t('upper-lowercase-letters')}</li>
+          <li>{t('at-least-one-number')}</li>
+          <li>{t('no-repetitive-characters-e-g-bbb-aaa')}</li>
+          <li>{t('no-sequential-characters-e-g-abc-123-321-or-cba')}</li>
         </ul>
       </div>
       {/* <div className="text-xl flex flex-col lg:flex-row gap-y-4 items-center w-full gap-x-6">
@@ -273,12 +273,12 @@ const ParentAccountForm = () => {
           <button
             disabled={childForms.length > 1}
             onClick={addChildAccount}
-            className="lg:absolute -bottom-36 left-8 flex gap-x-2 text-gray-600 font-body items-center text-xl cursor-pointer"
+            className="lg:absolute -bottom-40 left-8 flex gap-x-2 text-gray-600 font-body items-center text-xl cursor-pointer"
           >
             <BsPlusCircle />
             <p className='text-base md:text-xl'>{t('add-family-member')}</p>
           </button>
-          <div className="lg:absolute -bottom-36 right-8 text-gray-600 font-body">
+          <div className="lg:absolute -bottom-40 right-8 text-gray-600 font-body">
             <p className='text-base md:text-xl'>{t('account-admin')}</p>
           </div>
         </div>
