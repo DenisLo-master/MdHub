@@ -38,7 +38,7 @@ const Navbar = () => {
   }, [location])
 
   return (
-    <nav className={`transition-all ease-in-out duration-300 ${scrollY === 0 ? 'top-12' : 'top-0' } md:border-b border-primary pb-[2px] md:pb-[6px] shadow md:fixed right-0 w-full z-50 bg-white`}>
+    <nav className={`transition-all ease-in-out duration-300 ${scrollY === 0 ? 'top-16' : 'top-0'} md:border-b border-primary pb-[2px] md:pb-[6px] shadow md:fixed right-0 w-full z-50 bg-white`}>
       <Drawer showDrawer={showDrawer} close={setShowDrawer} />
       <div className="flex items-center py-4">
         <article className="pl-4 w-[294px] flex">
