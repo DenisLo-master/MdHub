@@ -1,17 +1,20 @@
 import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+
 
 const TermsOfService = () => {
   const [membershipTermsAccepted, setMembershipTermsAccepted] = useState(false)
   const [medicalTermsAccepted, setMedicalTermsAccepted] = useState(false)
   const [privacyPolicyAccepted, setPrivacyPolicyAccepted] = useState(false)
+  const { t } = useTranslation()
   return (
-    <section>
+    <section className='space-y-6 max-w-[49rem] mx-auto bg-[#f5f5f5] py-12 pb-24'>
       <div className="space-y-4 px-8 text-dark font-body pt-6">
-        <p>I am at least 18 years of age and I have read and accept:</p>
+        <p>{t('i-am-at-least-18-years-of-age-and-i-have-read-and-accept')}</p>
         <div className="flex flex-col gap-y-4">
           <article 
             className="flex justify-between items-center rounded-md text-xl px-8 py-2 border border-primary bg-white">
-            <p>Membership Terms of Service</p>
+            <p>{t('membership-terms-of-service')}</p>
             <input 
               checked={membershipTermsAccepted}
               onChange={({target}) => setMembershipTermsAccepted(target.checked)}
@@ -23,7 +26,7 @@ const TermsOfService = () => {
             </article>
             <article 
               className="flex justify-between items-center rounded-md text-xl px-8 py-2 border border-primary bg-white">
-              <p>Medical Terms of Service</p>
+            <p>{t('medical-terms-of-service')}</p>
               <input 
                 checked={medicalTermsAccepted}
                 onChange={({target}) => setMedicalTermsAccepted(target.checked)}
@@ -35,7 +38,7 @@ const TermsOfService = () => {
             </article>
             <article 
               className="flex justify-between items-center rounded-md text-xl px-8 py-2 border border-primary bg-white">
-              <p>Privacy Policy</p>
+            <p>{t('privacy-policy')}</p>
               <input 
                 checked={privacyPolicyAccepted}
                 onChange={({target}) => setPrivacyPolicyAccepted(target.checked)}
