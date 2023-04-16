@@ -57,20 +57,23 @@ function App() {
     );
   }
 
-  const DefaultLayout = ({ children }) => {
-    return (
-      <div className="overflow-x-hidden text-gray-800">
-        <div className="absolute hidden md:flex items-center justify-center font-main top-0 left-0 w-full h-12 bg-gradient-primary text-center text-white">
-          {t('we-make-it-easy-to-get-medical-care-never-wait-for-a-doctor-again')}
-        </div>
-        <Navbar />
-        <main className="w-full  min-h-[calc(100vh-73px)]">
-          {children}
-        </main>
-        <Footer />
+  const DefaultLayout = ({ children }) => (
+    <div className="overflow-x-hidden text-gray-800">
+      <div className="absolute hidden md:flex items-center gap-x-4 justify-center font-main top-0 left-0 w-full h-16 bg-gradient-primary text-center text-white">
+        <p>{t('healthcare-redefined-a-proud-medical-solution-made-in-quebec-canada')}</p>
+        <button
+          type="button"
+          className={`rounded-full w-56 font-main text-base group hover:ring-1 hover:ring-primary py-1 border flex justify-center items-center space-x-2  border-primary bg-[#1EBC91] text-white`}>
+          {t('sign-up-for-free-now')}
+        </button>
       </div>
-    );
-  }
+      <Navbar />
+      <main className="w-full  min-h-[calc(100vh-73px)]">
+        {children}
+      </main>
+      <Footer />
+    </div>
+  )
 
   return (
     <div className="overflow-x-hidden text-gray-800">
