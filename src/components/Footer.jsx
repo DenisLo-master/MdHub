@@ -99,7 +99,7 @@ const Footer = () => {
           </div>
         </article>
         </div>
-      <div className="bg-[#5d95b6] text-white font-body md:text-lg py-4 px-8 2xl:px-12 flex flex-col md:flex-row justify-between items-center gap-y-2">
+      <div className="bg-[#000] text-white font-body md:text-lg py-4 px-8 2xl:px-12 flex flex-col md:flex-row justify-between items-center gap-y-2">
         <p>&copy; 2023 MDHUB Inc</p>
           <div className="flex items-center space-x-6">
           <div className="w-8 h-8 rounded-full flex justify-center items-center border border-white">
