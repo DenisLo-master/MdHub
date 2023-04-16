@@ -5,9 +5,10 @@ import { useTranslation } from 'react-i18next'
 
 const SignupStepOne = () => {
   const selectedAccountType = registerationStore(state => state.selectedAccountType)
+  const childForms = registerationStore(state => state.childForms)
   const { t } = useTranslation()
   return (
-    <section className='space-y-6'>
+    <section className='space-y-6 max-w-[49rem] mx-auto bg-[#f5f5f5] py-12 pb-24'>
       {/* <article
         className={`w-full self-start pt-8
         ${selectedAccountType === "corporate" ? "pb-20" : selectedAccountType === "family" ? "pb-20" : "pb-4"}
@@ -46,8 +47,10 @@ const SignupStepOne = () => {
         </div>
       </article> */}
       <ParentAccountForm />
-      {selectedAccountType === "family" && <ChildAccountForms />}
-      {selectedAccountType === "corporate" && <ChildAccountForms />}
+      <div className={`${childForms.length && "pt-28"}`}>
+        {selectedAccountType === "family" && <ChildAccountForms />}
+        {selectedAccountType === "corporate" && <ChildAccountForms />}
+      </div>
     </section>
   )
 }
