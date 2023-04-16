@@ -149,7 +149,7 @@ const RegistrationCheckoutForm = () => {
     <div className="pt-8">
       {
         isFirstStep && (
-          <article className="w-full space-y-4 flex flex-col items-center">
+          <article className="w-full max-w-[45rem] mx-auto space-y-4 flex flex-col items-center">
             <h2 className="text-4xl md:text-5xl pt-5 text-center">Join MDHUB</h2>
             <div className="text-center font-semibold space-y-1 font-body pb-4">
               <h2>
@@ -180,46 +180,50 @@ const RegistrationCheckoutForm = () => {
         )
       }
       <form ref={signupFormRef} onSubmit={handleSignup} 
-        className={`w-full bg-[#F5F5F5] px-6 ${isFirstStep ? "py-12 pb-16" : "pt-6 pb-10"} rounded-[8px] mt-8`}
+        className={`w-full px-6 ${isFirstStep ? "py-12 pb-16" : "pt-6 pb-10"} rounded-[8px] mt-8 relative`}
       >
         {step}
-        <div className={`w-full flex ${isFirstStep ? "justify-between" : "justify-end"} gap-x-4 pt-6 px-4`}>
-          {
-            isFirstStep &&
-            <div className="flex font-body text-dark items-center gap-x-3 text-lg md:pl-5">
-              <p className="text-lg">Already a member?</p>
-              <Link className="text-primary font-semibold" to="/login">
-                Login
-              </Link>
+        {!isLastStep && (
+          <div className={`absolute ${currentStepIndex === 0 ? "bottom-20" : currentStepIndex === 1 ? "bottom-14" : currentStepIndex === 2 ? "bottom-14" : currentStepIndex === 3 ? "bottom-14" : ""} left-0 w-full flex justify-center`}>
+            <div className={`w-full max-w-[49rem] flex ${isFirstStep ? "justify-between" : "justify-end"} gap-x-4 pt-6 px-4`}>
+              {
+                isFirstStep &&
+                <div className="flex font-body text-dark items-center gap-x-3 text-lg md:pl-5">
+                    <p className="text-lg">{t('already-a-member')}</p>
+                    <Link className="text-primary font-semibold" to="/login">
+                    {t('Login')}
+                  </Link>
+                </div>
+              }
+              {
+                !isFirstStep &&
+                <button
+                  type="button"
+                  className={`rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary py-3 border  border-primary bg-[#1EBC91] text-white`}
+                  onClick={back}
+                >
+                  {t('back')}
+                </button>
+              }
+              <button
+                type="submit"
+                className={`rounded-full w-56 font-main text-xl group hover:ring-1 hover:ring-primary py-3 border flex justify-center items-center space-x-2  border-primary bg-[#1EBC91] text-white`}
+              >
+                {
+                  isLastStep ?
+                    isLoading ?
+                      <SVGLoaderCircles className="text-white w-4 h-4" /> :
+                      <span>{t('finish')}</span> :
+                    <span>{t('next')}</span>
+                }
+              </button>
             </div>
-          }
-          {
-            !isFirstStep &&
-            <button
-              type="button"
-                className={`rounded-full w-36 font-main text-xl group hover:ring-1 hover:ring-primary py-3 border  border-primary bg-[#1EBC91] text-white`}
-              onClick={back}
-            >
-              {t('back')}
-            </button>
-          }
-          <button
-            type="submit"
-            className={`rounded-full w-56 font-main text-xl group hover:ring-1 hover:ring-primary py-3 border flex justify-center items-center space-x-2  border-primary bg-[#1EBC91] text-white`}
-          >
-            {
-              isLastStep ?
-                isLoading ?
-                  <SVGLoaderCircles className="text-white w-4 h-4" /> :
-                  <span>{t('finish')}</span> :
-                <span>{t('next')}</span>
-            }
-          </button>
-        </div>
+          </div>
+        )}
       </form>
       {/* <p className="text-center font-body pt-4">
-        {t('note-currently-users-outside-of-quebec-may-not-access-online-pharmacy-nursing-or-lab-testing-we-will-be-rolling-out-additional-services-for-members-within-the-upcoming-months')}
-      </p> */}
+          {t('note-currently-users-outside-of-quebec-may-not-access-online-pharmacy-nursing-or-lab-testing-we-will-be-rolling-out-additional-services-for-members-within-the-upcoming-months')}
+        </p> */}
     </div>
   )
 }
