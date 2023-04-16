@@ -40,7 +40,7 @@ import { Toaster } from "react-hot-toast"
 import AdminNav from './components/AdminNav'
 
 function App() {
-  const { t } = useTranslation()
+  const { i18n, t } = useTranslation()
 
   useEffect(() => {
     AOS.init()
@@ -63,7 +63,7 @@ function App() {
         <p>{t('healthcare-redefined-a-proud-medical-solution-made-in-quebec-canada')}</p>
         <button
           type="button"
-          className={`rounded-full w-56 font-main text-base group hover:ring-1 hover:ring-primary py-1 border flex justify-center items-center space-x-2  border-primary bg-[#1EBC91] text-white`}>
+          className={`rounded-full ${i18n.language === "en" ? "w-56" : "w-80"} font-main text-base group hover:ring-1 hover:ring-primary py-1 border flex justify-center items-center space-x-2  border-primary bg-[#1EBC91] text-white`}>
           {t('sign-up-for-free-now')}
         </button>
       </div>
