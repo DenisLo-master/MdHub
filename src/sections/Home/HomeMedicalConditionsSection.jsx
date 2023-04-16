@@ -4,54 +4,74 @@ import { Link } from "react-router-dom"
 import { useTranslation } from 'react-i18next'
 import { GoStar } from 'react-icons/go'
 import { AiOutlinePlus } from 'react-icons/ai'
+import { ArrowRight } from '../../assets'
+import { ArrowGradient } from '../../assets'
 const HomeMedicalConditionsSection = () => {
 	const { t } = useTranslation()
   return (
 		<section className="font-main bg-home-gradient-reverse">
-			<div className="w-full max-w-7xl mx-auto flex flex-col-reverse gap-y-4 md:flex-row items-start px-4 text-center md:text-left">
-      	<article className="flex-1">
-					<h2 className="text-5xl">{t('medical-conditions-treated')}</h2>
-      		<p className="w-full max-w-[500px] py-4 font-body">
-						{t('our-medical-team-can-treat-most-health-conditions-online-our-health-professionals-are-available-for-a-consultation-and-to-provide-prescriptions-for-common-chronic-care-conditions')}
-      		</p>
-      		<div className="max-w-[380px] space-y-4">
-      			<article>
-							<h2 className="text-2xl text-primary pb-2">{t('acute-care')}</h2>
-							<p className="font-body text-sm">{t('our-healthcare-professionals-provide-tests-and-treatment-for-most-common-medical-problems')}
-	      			</p>
-      			</article>
-      			<article>
-							<h2 className="text-2xl text-primary pb-2">{t('chronic-care')}</h2>
-	      			<p className="font-body text-sm">
-								{t('our-healthcare-professionals-can-provide-you-with-a-consultation-or-a-prescription-for-most-common-chronic-illnesses-previously-diagnosed-0')}
-	      			</p>
-      			</article>
-      			<article>
-							<h2 className="text-2xl text-primary pb-2">{t('mental-health-0')}</h2>
-	      			<p className="font-body text-sm">
-								{t('our-healthcare-professionals-can-provide-you-with-a-consultation-or-a-prescription-for-most-common-chronic-illnesses-previously-diagnosed')}
-	      			</p>
-      			</article>
-      			<article>
-							<h2 className="text-2xl text-primary pb-2">{t('sexual-health')}</h2>
-	      			<p className="font-body text-sm">
-								{t('our-health-professionals-are-available-to-advise-you-and-prescribe-treatment-for-sexual-health-problems')}
-	      			</p>
-      			</article>
-						<article className="text-primary flex items-center gap-x-2">
-							<AiOutlinePlus />
-							<h2 className="text-2xl text-primary">{t('many-more-0')}</h2>
-						</article>
-						<article>
-							<Link to="/services" className="flex items-center gap-x-1 font-body">
-								{t('explore-all-our-services-and-treatments')}
-								<ChevronRight className="text-primary h-3 w-3"/>
-							</Link>
-						</article>
-      		</div>
-      	</article>
-				<img className="hidden md:block w-full max-w-[500px]" src={HomeMedicalConditionsHero} alt="Medical Conditions treated" />
-      </div>
+			<div className="w-full max-w-7xl mx-auto px-4">
+				<h2 className="text-5xl font-semibold">{t('medical-conditions-treated')}</h2>
+				<p className="w-full py-4 font-body">
+					{t('at-mdhub-we-care-for-everything-from-common-illnesses-to-chronic-diseases-and-mental-health-concerns-we-can-now-treat-a-majority-of-health-conditions-by-coupling-virtual-care-with-physical-diagnostics-with-mobile-nursing-care-patients-can-forget-the-limited-virtual-care-stigma-and-benefit-from-advance-and-proactive-control-of-their-health')}
+				</p>
+				<div className="flex flex-col-reverse gap-y-4 md:flex-row items-start text-center md:text-left">
+					<article className="flex-1">
+						<h2 className="text-3xl text-dark font-semibold pb-4">{t('our-treatments-include')}</h2>
+						<div className="max-w-[380px] space-y-4">
+							<article>
+								<h2 className="text-2xl text-primary pb-2">{t('wellness-and-prevention')}</h2>
+								<p className="font-body text-sm">
+									{t('well-help-you-get-healthy-and-stay-that-way-with-state-of-the-art-screening-disease-prevention-and-lifestyle-advice')}
+								</p>
+							</article>
+							<article>
+								<h2 className="text-2xl text-primary pb-2">{t('everyday-care')}</h2>
+								<p className="font-body text-sm">
+									{t('wake-up-with-the-flu-or-a-questionable-rash-we-diagnose-and-treat-a-wide-spectrum-of-illnesses-so-you-get-the-care-you-need-without-having-to-visit-the-emergency-room-or-see-specialists-no-need-for-family-doctors-all-our-doctors-are-here-for-your-family-with-constant-access-to-your-medical-history-in-one-place')}
+								</p>
+							</article>
+							<article>
+								<h2 className="text-2xl text-primary pb-2">{t('access-to-specialists')}</h2>
+								<p className="font-body text-sm">
+									{t('have-a-specific-or-advanced-condition-select-and-get-referrals-to-a-wide-a-array-of-medical-specialists-qualified-to-diagnose-and-treat-advance-care-requirements')}
+								</p>
+							</article>
+							<article>
+								<h2 className="text-2xl text-primary pb-2">{t('chronic-conditions')}</h2>
+								<p className="font-body text-sm">
+									{t('chronic-conditions-like-diabetes-hypertension-and-obesity-can-be-difficult-to-manage-and-prevent-on-your-own-our-doctors-are-here-to-make-it-easier-with-the-support-and-resources-you-need-to-find-your-way-to-better-health')}
+								</p>
+							</article>
+							<article>
+								<h2 className="text-2xl text-primary pb-2">{t('mental-health-0')}</h2>
+								<p className="font-body text-sm">
+									{t('your-mental-health-is-an-important-part-of-the-full-picture-whether-youre-feeling-off-or-experiencing-depression-anxiety-insomnia-or-something-more-complex-our-suite-of-mental-health-services-is-here-to-help-in-addition-free-access-to-headspace-is-available-with-memberships')}
+								</p>
+							</article>
+
+							<article>
+								<h2 className="text-2xl text-primary pb-2">{t('lgbtqia-services')}</h2>
+								<p className="font-body text-sm">
+									{t('from-illnesses-and-injuries-to-sexual-and-mental-health-to-wellness-goals-were-here-to-provide-the-lgbtqia-community-with-the-exceptional-care-they-deserve-with-no-fear-of-being-judged-or-dismissed')}
+								</p>
+							</article>
+
+							<article className="text-primary flex items-center gap-x-2">
+								<ArrowGradient className="transform scale-110 rotate-[50deg]" />
+								<h2 className="text-2xl text-primary">{t('many-more-0')}</h2>
+							</article>
+							<article>
+								<Link to="/services" className="flex gap-x-1 font-body font-semibold">
+									<span className="pt-1">{t('explore-all-our-services-and-treatments')}</span>
+									<ChevronRight className="text-primary w-4" />
+								</Link>
+							</article>
+						</div>
+					</article>
+					<img className="hidden md:block w-full max-w-[500px]" src={HomeMedicalConditionsHero} alt="Medical Conditions treated" />
+				</div>
+			</div>
 			<div className="text-center py-10">
 				<div>
 					<h2 className="text-4xl md:text-6xl text-center px-4 pb-7">{t('get-your-first-year-of-membership-for')} <span className="price">$359</span> $289</h2>
