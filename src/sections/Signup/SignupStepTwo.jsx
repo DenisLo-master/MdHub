@@ -19,15 +19,15 @@ const SignupStepTwo = () => {
   }
   
   return (
-    <section className="space-y-6">
+    <section className="max-w-[49rem] mx-auto bg-[#f5f5f5] py-12 pb-24">
       <article className="w-full">
         <div className="w-full flex justify-between items-center">
         </div>
       </article>
-      <div className="space-y-4 px-8 text-primary">
+      <div className="space-y-4 px-8 text-dark">
         <div className="w-full flex flex-col gap-y-2">
           <label htmlFor='address' className="font-body text-dark font-semibold">
-            Address
+            {t('address-1')}
           </label>
           <div className="flex flex-col gap-y-3">
             <input
@@ -56,7 +56,7 @@ const SignupStepTwo = () => {
         </div>
         <div className="flex flex-col gap-y-2">
           <label htmlFor='address' className="font-body text-dark font-semibold">
-            Country
+            {t('country')}
           </label>
           <div className="relative">
             <CountryDropdown
@@ -70,7 +70,7 @@ const SignupStepTwo = () => {
         </div>
         <div className="flex flex-col gap-y-2">
           <label htmlFor='address' className="font-body text-dark font-semibold">
-            Province
+            {t('province')}
           </label>
           <div className="relative">
             <RegionDropdown
