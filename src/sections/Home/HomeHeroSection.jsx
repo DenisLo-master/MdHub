@@ -40,7 +40,7 @@ const WORDS = [
 
 const HomeHeroSection = () => {
   const [selectedValues, setSelectedValues] = useState([])
-  const { t } = useTranslation()
+  const { i18n, t } = useTranslation()
 
   useEffect(() => {
     setSelectedValues(() => {
@@ -64,15 +64,15 @@ const HomeHeroSection = () => {
             {t('From meeting a doctor to ordering a perscription get the 360 healthcare you need all in one place.')}
           </p>
           <div className='flex flex-col md:flex-row items-center gap-y-4 justify-center md:justify-start space-x-2 md:space-x-6 font-main text-gray-700'>
-            <Link to="/login">
-              <Button wide gradient>
-                <span>{t('See A Doctor')}</span> 
-              </Button>
+            <Link className="block" to="/login">
+              <buttton className={`flex justify-center items-center rounded-full group hover:ring-1 hover:ring-primary bg-gradient-primary text-white py-2 ${i18n.language === "en" ? "w-[210px]" : "w-[260px]"}`}>
+                {t('See A Doctor')}
+              </buttton>
             </Link>
-            <Link to="/register">
-              <Button wide gradient>
-                <span>{t('sign-up-for-29-99')}</span> 
-              </Button>
+            <Link className="block" to="/register">
+              <button className={`flex justify-center items-center rounded-full group hover:ring-1 hover:ring-primary bg-gradient-primary text-white py-2 ${i18n.language === "en" ? "w-[210px]" : "w-[260px]"}`}>
+                {t('sign-up-for-29-99')}
+              </button>
             </Link>
           </div>
           <div className="pt-8 max-w-[400px] w-full flex gap-x-2 items-center gap-y-4 text-center md:text-left justify-center md:justify-between font-main">
