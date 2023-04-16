@@ -24,6 +24,7 @@ import { ReactComponent as MentalHealthIcon } from './mental-health-icon.svg'
 import { ReactComponent as VirtualDoctorIcon } from './virtual-doctor-icon.svg'
 import { ReactComponent as StethoscopeIcon } from './stethoscope-icon.svg'
 import { ReactComponent as StethoscopeIconWhite } from './stethoscope-icon-white.svg'
+import { ReactComponent as StethoscopeIconBlack } from './stethoscopeblack.svg'
 import { ReactComponent as NursingHomecareIcon } from './nursing-homecare-icon.svg'
 import { ReactComponent as OnlinePharmacyIcon } from './online-pharmacy-icon.svg'
 import { ReactComponent as ArrowGradient } from './arrow-gradient.svg'
@@ -187,8 +188,19 @@ import ForFamilyGrid06 from './for-family-grid-06.png'
 import { ReactComponent as ShowPasswordIcon } from "./show-password-icon.svg"
 import HeadspaceLogoWhite from './headspace-logo-white.png'
 import MembershipBenefitHeadspace from './membership-benefit-headspace.png'
+import Purple from './purple.png'
+import Yellow from './yellow.png'
+import Green from './green.png'
+import Pink from './pink.png'
+import Orange from './orange.png'
 
 export {
+  Orange,
+  Pink,
+  Green,
+  Yellow,
+  StethoscopeIconBlack,
+  Purple,
   MembershipBenefitHeadspace,
   HeadspaceLogoWhite,
   ShowPasswordIcon,
