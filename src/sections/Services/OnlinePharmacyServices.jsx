@@ -10,68 +10,36 @@ import {
   VirtualCare01,
   VirtualCare02,
   VirtualCare03,
-  VirtualCare04
+  VirtualCare04,
+  Green
 } from '../../assets'
 import { useTranslation } from 'react-i18next'
 
 const OnlinePharmacyServices = () => {
-	const { t } = useTranslation()
+  const { t } = useTranslation()
   return (
-    <section className="bg-primary text-white py-14 px-4">
-      <div className="w-full max-w-[52rem] mx-auto text-center space-y-4">
-        <h3 className="text-4xl md:text-5xl">
-          {t('get-medical-treatment-online')}
-        </h3>
-        <p className="font-body text-ligh">
-          {t('our-online-doctors-can-treat-your-health-conditions-and-concerns-without-you-ever-having-to-leave-home-book-an-appointment-with-specialists-like-dermatologists-endocrinologists-mental-health-therapists-gynecologists-and-more')}
-        </p>
+    <section className="bg-[#C3EABC] text-white w-full lg:h-[530px] py-10 relative">
+      <div className="max-w-[83rem] mx-auto flex flex-col justify-center h-full">
+        <article className="px-4 space-y-5 flex flex-col items-center lg:items-start text-center">
+          <h2 className="text-5xl lg:text-[48px] text_black font-semibold max-w-lg text-left">
+            {t('Get medical treatment online')}
+          </h2>
+          <div className="space-y-5 font-body text-lg max-w-lg">
+            <p className="text-center lg:text-left text_black text-base leading-4">
+              {t('Our online doctors can treat your health conditions and concerns without you ever having to leave home. Book an appointment with specialists, like dermatologists, endocrinologists, mental health therapists, gynecologists, and more.')}
+            </p>
+          </div>
+          <Link className="block" to="/register">
+            <button className="rounded-full w-[480px] mt-[48px] text-lg flex justify-center py-3 border bg-[#3F3F3F] border-none hover:opacity-80 transition-opacity ease-in-out duration-300 text-white font-helvetica">
+              {t('sign-up-today')}
+            </button>
+            <button className="rounded-full w-[480px] mt-8 text-lg flex justify-center py-3 border bg-white border-none hover:opacity-80 transition-opacity ease-in-out duration-300 text-[#3F3F3F] font-helvetica">
+              {t('Get Care Now')}
+            </button>
+          </Link>
+        </article>
+        <img className="hidden lg:block absolute right-5 top-5" src={Green} alt="virtual doctor" />
       </div>
-
-      <section className="py-10 max-w-[70rem] mx-auto">
-        <div className=" grid grid-cols-2 lg:grid-cols-4 gap-8 text-lg">
-          <article>
-            <img className="w-full" src={MedicalTreatmentBC} alt="Birth Control" />
-            <div className="py-4 text-center bg-white text-dark">
-              {t('birth-control')}
-            </div>
-          </article>
-          <article>
-            <img className="w-full" src={OnlinePharmacyErectileDysfunction} alt="Erectile Dysfunction" />
-            <div className="py-4 text-center bg-white text-dark">
-              {t('erectile-dysfunction')}
-            </div>
-          </article>
-          <article>
-            <img className="w-full" src={OnlinePharmacyAcne} alt="Acne" />
-            <div className="py-4 text-center bg-white text-dark">
-              {t('acne')}
-            </div>
-          </article>
-          <article>
-            <img className="w-full" src={MedicalTreatmentUTI} alt="Urinary Tract Infections" />
-            <div className="py-4 text-center bg-white text-dark">
-              {t('urinary-tract-infections')}
-            </div>
-          </article>
-
-          <article className="lg:col-span-2 flex flex-col lg:flex-row gap-4">
-            <h2 className="text-3xl md:text-6xl whitespace-nowrap text-center">{t('many-more')}</h2>
-          </article>
-
-          <article className="lg:col-span-2 flex flex-col lg:flex-row gap-4">
-            <Link className="block w-full" to="/register">
-              <button className="rounded-full w-full text-[13px] md:text-lg flex justify-center py-3 text-primary bg-white border border-white hover:bg-transparent hover:text-white transition-colors duration-300 ease-out">
-                {t('sign-up-today')}
-              </button>
-            </Link>
-            <Link className="block w-full" to="/dashboard">
-              <button className="rounded-full w-full text-[13px] md:text-lg flex justify-center py-3 text-white bg-transparent border border-white hover:bg-white hover:text-primary transition-colors duration-300 ease-out">
-                {t('get-care-now')}
-              </button>
-            </Link>
-          </article>
-        </div>
-      </section>
     </section>
   )
 }
