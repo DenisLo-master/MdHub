@@ -47,8 +47,12 @@ import Testimonials from "./Pricing/Testimonials"
 import HomeMedicalConditionsSection from "./Home/HomeMedicalConditionsSection"
 import PersonalInfo from "./Signup/PersonalInfo"
 import TermsOfService from "./Signup/TermsOfService"
+import PricingSliderDesktop from "./Pricing/PricingSliderDesktop"
+import PricingSliderMobile from "./Pricing/PricingSliderMobile"
 
 export {
+  PricingSliderMobile,
+  PricingSliderDesktop,
   TermsOfService,
   PersonalInfo,
   HomeMedicalConditionsSection,
