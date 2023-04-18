@@ -116,12 +116,12 @@ const Navbar = () => {
                     <span className={`${i18n.language === "fr" ? "text-primary font-semibold" : "text-dark"}`}>fr</span>
                   </button>
                   <Link to="/login">
-                    <button className="rounded-full px-9 py-1 border border-primary text-primary bg-transparent hover:bg-[#1EBC91] hover:text-white transition-all ease-in-out duration-300">
+                    <button className="rounded-full px-9 py-1 border border-[#1EBC91] text-[#1EBC91] bg-transparent hover:bg-[#1EBC91] hover:text-white transition-all ease-in-out duration-300">
                       {t('Login')}
                     </button>
                   </Link>
                   <Link to="/register">
-                    <button className="rounded-full px-9 py-1 border border-primary text-white bg-[#1EBC91] hover:bg-transparent hover:text-[#1EBC91] transition-all ease-in-out duration-300">
+                    <button className="rounded-full px-9 py-1 border border-[#1EBC91] text-white bg-[#1EBC91] hover:bg-transparent hover:text-[#1EBC91] transition-all ease-in-out duration-300">
                       {t('Sign Up')}
                     </button>
                   </Link>
