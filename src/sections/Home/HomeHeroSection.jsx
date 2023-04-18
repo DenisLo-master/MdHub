@@ -57,20 +57,20 @@ const HomeHeroSection = () => {
     <div className="pt-12 md:pt-40 md:py-20 md:pb-10 bg-home-gradient px-4">
       <section className="max-w-[90rem] mx-auto flex flex-col gap-y-6 md:flex-row items-center relative">
         <article data-aos="fade-up" className="flex-1 px-4 md:pl-20">
-          <h2 className="w-full max-w-[750px] font-main text-center md:text-left text-3xl md:text-6xl">
+          <h2 className="w-full max-w-[500px] font-main text-center md:text-left text-3xl md:text-6xl">
             {t('Accessible, quality healthcare at your fingertips.')}
           </h2>
-          <p className="w-full text-base font-body text-center md:text-left font-extralight text-gray-900 md:text-xl py-4 md:py-8 max-w-[630px]">
+          <p className="w-full text-base font-body text-center md:text-left font-extralight text-gray-900 md:text-xl py-4 md:py-8 max-w-[540px]">
             {t('From meeting a doctor to ordering a perscription get the 360 healthcare you need all in one place.')}
           </p>
           <div className='flex flex-col md:flex-row items-center gap-y-4 justify-center md:justify-start space-x-2 md:space-x-6 font-main text-gray-700'>
             <Link className="block" to="/login">
-              <buttton className={`flex justify-center items-center rounded-full group hover:ring-1 hover:ring-primary bg-gradient-primary text-white py-2 ${i18n.language === "en" ? "w-[210px]" : "w-[260px]"}`}>
+              <buttton className={`flex justify-center items-center rounded-full group hover:ring-1 hover:ring-primary bg-[#1EBC91] text-white py-2 ${i18n.language === "en" ? "w-[210px]" : "w-[260px]"}`}>
                 {t('See A Doctor')}
               </buttton>
             </Link>
             <Link className="block" to="/register">
-              <button className={`flex justify-center items-center rounded-full group hover:ring-1 hover:ring-primary bg-gradient-primary text-white py-2 ${i18n.language === "en" ? "w-[210px]" : "w-[260px]"}`}>
+              <button className={`flex justify-center items-center rounded-full group hover:ring-1 hover:ring-primary bg-[#1EBC91] text-white py-2 ${i18n.language === "en" ? "w-[210px]" : "w-[260px]"}`}>
                 {t('sign-up-for-29-99')}
               </button>
             </Link>
