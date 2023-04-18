@@ -78,7 +78,7 @@ const ServicesOnlinePharmacy = () => {
                     </div>
 
                     <p className="max-w-[260px] font-body leading-[1.25em] text-left">
-                      {t('Once logged into your member dashboard, click online pharmacist.  Sign up and complete your health profile in 5 minutes.')}
+                      {t('once-logged-into-your-member-dashboard-click-online-pharmacist-sign-up-and-complete-your-health-profile-in-5-minutes')}
                     </p>
                   </div>
                   <div className="pt-4">
@@ -93,7 +93,7 @@ const ServicesOnlinePharmacy = () => {
                     </div>
 
                     <p className="max-w-[260px] font-body leading-[1.25em] text-left">
-                      {t('We’ll transfer your prescriptions from your old pharmacy, if required or will input new prescriptions obtained during virtual care consultation.')}
+                      {t('well-transfer-your-prescriptions-from-your-old-pharmacy-if-required-or-will-input-new-prescriptions-obtained-during-virtual-care-consultation')}
                     </p>
                   </div>
                   <div className="pt-4">
@@ -108,7 +108,7 @@ const ServicesOnlinePharmacy = () => {
                     </div>
 
                     <p className="max-w-[260px] font-body leading-[1.25em] text-left">
-                      {t('After verifying the prescription, we’ll deliver your medicine directly to your door.')}
+                      {t('after-verifying-the-prescription-well-deliver-your-medicine-directly-to-your-door')}
                     </p>
                   </div>
                   <div className="pt-4">

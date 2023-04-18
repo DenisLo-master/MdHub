@@ -26,7 +26,6 @@ const NursingAppointmentStepTwo = ({ time, selectedDate, updateFields, address, 
 
     return options;
   };
-  console.log(selectedNursingHomecareOptions)
   return (
     <div className="space-y-5">
       <p className="text-xl pb-2">{t('please-select-date-and-time')}</p>

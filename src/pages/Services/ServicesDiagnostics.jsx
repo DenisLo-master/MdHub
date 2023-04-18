@@ -75,7 +75,7 @@ const ServicesDiagnostics = () => {
                       {t('Patients require a lab requisition. If you don’t have one – no problem!')}
                     </p>
                     <p className="max-w-[260px] font-body leading-[1.25em] text-sm text-left">
-                      {t('See a doctor now.')}
+                      {t('see-a-doctor-now')}
                     </p>
                   </div>
                 </div>
@@ -91,10 +91,10 @@ const ServicesDiagnostics = () => {
                   </div>
                   <div className='flex flex-col justify-between mt-5 h-4/5'>
                     <p className="max-w-[260px] font-body leading-[1.25em] text-base text-left">
-                      {t('Upload your requisition, and our medical staff will call you within 24 hours to confirm your booking.')}
+                      {t('upload-your-requisition-and-our-medical-staff-will-call-you-within-24-hours-to-confirm-your-booking')}
                     </p>
                     <p className="max-w-[260px] font-body leading-[1.25em] text-sm text-left">
-                      {t('*Mobile testing price for members starts at $99.')}
+                      {t('mobile-testing-price-for-members-starts-at-99')}
                     </p>
                   </div>
                 </div>
@@ -110,7 +110,7 @@ const ServicesDiagnostics = () => {
                   </div>
                   <div className='flex flex-col justify-between mt-5 h-4/5'>
                     <p className="max-w-[260px] font-body leading-[1.25em] text-base text-left">
-                      {t('Schedule a time and place for your testing and complete your payment online. Or you can visit a testing centre at no extra cost (see locations here)')}
+                      {t('schedule-a-time-and-place-for-your-testing-and-complete-your-payment-online-or-you-can-visit-a-testing-centre-at-no-extra-cost-see-locations-here')}
                     </p>
                     <p className="max-w-[260px] font-body leading-[1.25em] text-left">
                       {t('')}
@@ -129,11 +129,9 @@ const ServicesDiagnostics = () => {
                   </div>
                   <div className='flex flex-col justify-between mt-5 h-4/5'>
                     <p className="max-w-[260px] font-body leading-[1.25em] text-base text-left">
-                      {t('Once testing is complete, our labs will submit your results to your virtual MDHUB doctor and results may also be accessed on your virtual doctor profile. Access your dashboard here.')}
+                      {t('once-testing-is-complete-our-labs-will-submit-your-results-to-your-virtual-mdhub-doctor-and-results-may-also-be-accessed-on-your-virtual-doctor-profile-access-your-dashboard-here')}
                     </p>
-                    <p className="max-w-[260px] font-body leading-[1.25em] text-left">
-                      {t('')}
-                    </p>
+
                   </div>
                 </div>
                 <div className="pt-4">

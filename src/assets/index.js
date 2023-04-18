@@ -189,17 +189,27 @@ import { ReactComponent as ShowPasswordIcon } from "./show-password-icon.svg"
 import HeadspaceLogoWhite from './headspace-logo-white.png'
 import MembershipBenefitHeadspace from './membership-benefit-headspace.png'
 import Purple from './purple.png'
+import PurpleFrench from './purple-french.png'
+import YellowFrench from './yellow-french.png'
 import Yellow from './yellow.png'
 import Green from './green.png'
+import GreenFrench from './green-french.png'
 import Pink from './pink.png'
+import PinkFrench from './pink-french.png'
 import Orange from './orange.png'
+import OrangeFrench from './orange-french.png'
 
 export {
+  PinkFrench,
+  GreenFrench,
+  OrangeFrench,
+  YellowFrench,
   Orange,
   Pink,
   Green,
   Yellow,
   StethoscopeIconBlack,
+  PurpleFrench,
   Purple,
   MembershipBenefitHeadspace,
   HeadspaceLogoWhite,
