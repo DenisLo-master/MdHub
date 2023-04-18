@@ -76,7 +76,7 @@ const SignupStepThree = () => {
             <div className="w-full">
               <input className="w-full rounded-md focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary" type="text" name="couponCode" placeholder='Coupon Code' />
             </div>
-            <CardElement className="registration-card-element rounded-md px-4 py-3 ring-1 focus:ring-primary" />
+            <CardElement className="registration-card-element bg-white rounded-md px-4 py-3 ring-1 focus:ring-primary" />
           </article>
           <article className="bg-[#f5f5f5] w-full rounded-[8px] p-8">
             <h2 className="font-body font-semibold text-2xl pb-4">{t('Membership Benefits')}</h2>
@@ -123,7 +123,7 @@ const SignupStepThree = () => {
         <article className="bg-[#f5f5f5] w-full max-w-[550px] rounded-[8px] p-8">
           <div className="flex justify-between items-center">
             <h2 className="font-body font-semibold text-2xl pb-4 md:pb-0">{t('cart-summary')}</h2>
-            <div className={`flex gap-y-4 items-center gap-x-4`}>
+            <div className={`flex flex-col md:flex-row gap-y-4 items-center gap-x-4`}>
               {
                 (selectedAccountType === "individual" ||
                   selectedAccountType === "family" ||
@@ -132,7 +132,7 @@ const SignupStepThree = () => {
                   <button
                     type="button"
                     onClick={() => setPaymentMode("yearly")}
-                    className={`hidden ${paymentMode === 'yearly' ? "bg-white text-[#1EBC91]" : "bg-[#1EBC91] text-white"} border-2 border-primary lg:flex flex-col items-center justify-center rounded-full w-[144px] h-12`}>
+                    className={`${paymentMode === 'yearly' ? "bg-[#1EBC91] text-white" : "bg-white text-[#1EBC91]"} border-2 border-primary lg:flex flex-col items-center justify-center rounded-full w-[100px] md:w-[144px] md:h-12`}>
                     <h2 className="text-base">{t('yearly')}</h2>
                     {/* <h4 className="text-xs">{t('best-value')}</h4> */}
                   </button>
@@ -146,7 +146,7 @@ const SignupStepThree = () => {
                 <button
                   type="button"
                   onClick={() => setPaymentMode("monthly")}
-                  className={`hidden ${paymentMode === 'monthly' ? "bg-white text-[#1EBC91]" : "bg-[#1EBC91] text-white"} border-2 border-primary lg:flex flex-col items-center justify-center rounded-full w-[144px] h-12`}>
+                    className={`${paymentMode === 'monthly' ? "bg-[#1EBC91] text-white" : "bg-white text-[#1EBC91]"} border-2 border-primary lg:flex flex-col items-center justify-center rounded-full w-[100px] md:w-[144px] md:h-12`}>
                   <h2 className="text-base">{t('monthly')}</h2>
                 </button>
               }
