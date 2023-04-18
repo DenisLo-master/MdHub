@@ -82,7 +82,7 @@ const ForFamily = () => {
             {t('raising-a-family-can-be-challenging-but-were-always-by-your-side-gain-peace-of-mind-when-it-comes-to-those-you-love-most-with-a-family-plan-family-memberships-start-at-39-99-when-you-sign-up-for-12-months-with-mdhub')}
           </p>
           <div>
-            <button className="text-xl px-10 h-[48px] rounded-[48px] border border-primary" type="button">
+            <button className="text-xl px-10 h-[48px] bg-[#1EBC91] text-white rounded-[48px] border border-primary" type="button">
               <Link to="/for-family">
                 {t('sign-up-today')}
               </Link>
@@ -192,7 +192,7 @@ const ForFamily = () => {
             </div>
             <li className="hidden md:block">
               <Link to="/pricing">
-                <button className="bg-white h-[48px] rounded-[48px] text-primary font-main px-10" type="button">
+                <button className="bg-[#1EBC91] text-white h-[48px] rounded-[48px] font-main px-10" type="button">
                   View Membership Plans
                 </button>
               </Link>
@@ -206,7 +206,7 @@ const ForFamily = () => {
             </div>
             <li className="block md:hidden">
               <Link to="/pricing">
-                <button className="bg-white h-[48px] rounded-[48px] text-primary font-main px-10" type="button">
+                <button className=" h-[48px] bg-[#1EBC91] text-white rounded-[48px] font-main px-10" type="button">
                   View Membership Plans
                 </button>
               </Link>
