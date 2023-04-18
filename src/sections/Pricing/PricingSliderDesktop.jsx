@@ -6,7 +6,7 @@ const PricingSliderDesktop = ({ selectedPackage }) => {
   const { t } = useTranslation()
 
   return (
-    <section className={`hidden md:block relative transition-all ease-in-out duration-700 ${selectedPackage === "corporate" ? "h-[900px] lg:h-[400px]" : "h-[900px] lg:h-[490px]"}`}>
+    <section className={`hidden md:block relative transition-all ease-in-out duration-700 ${selectedPackage === "corporate" ? "h-[900px] lg:h-[500px]" : "h-[900px] lg:h-[590px]"}`}>
         <div className={`w-full font-body flex flex-col lg:flex-row items-center lg:items-start justify-center gap-y-10 gap-x-14 absolute left-0 top-10 transition-opacity ease-in-out duration-700 ${selectedPackage === "single" ? "opacity-100" : "opacity-0"}`}>
           <article className="max-w-[400px] flex flex-col items-center rounded-t-[32px] bg-[#299EBF] text-white">
             <div className="text-center p-8">
