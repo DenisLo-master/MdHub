@@ -80,7 +80,7 @@ const HomeMedicalConditionsSection = () => {
 				<p className="text-lg font-body py-4">{t('receive-immediate-personalized-and-human-medical-follow-up-by-registering-with-mdhub')}</p>
 				<div className="flex justify-center">
 					<Link to="/register">
-						<button className="border border-primary text-white rounded-full group hover:ring-1 hover:ring-primary  py-2  flex justify-center items-center space-x-2  bg-gradient-primary px-12">
+						<button className="border border-primary text-white rounded-full group hover:ring-1 hover:ring-primary  py-2  flex justify-center items-center space-x-2  bg-[#1EBC91] px-12">
 							<span>{t('sign-up-today')}</span>
 						</button>
 					</Link>
