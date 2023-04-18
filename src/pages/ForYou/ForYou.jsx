@@ -101,7 +101,7 @@ const ForYou = () => {
           </p>
         </div>
         <div>
-          <button className="text-xl px-10 h-[48px] rounded-[48px] border border-primary" type="button">
+          <button className="text-xl bg-[#1EBC91] text-white px-10 h-[48px] rounded-[48px] border border-primary" type="button">
             <Link to="/register">
               {t('register-today')}
             </Link>
@@ -123,7 +123,7 @@ const ForYou = () => {
               <p>{t('all-our-doctors-are-canadian-licensed-and-top-rated-and-you-can-connect-to-care-in-minutes-24-7-or-you-can-book-an-appointment-online-with-one-of-our-specialists-including-dermatologists-gynecologists-naturopaths-and-endocrinologists-allowing-you-to-finally-put-your-health-first')}</p>
             </div>
             <div>
-              <button className="text-xl px-10 h-[48px] rounded-[48px] border border-primary" type="button">
+              <button className="text-xl px-10 h-[48px] rounded-[48px] bg-[#1EBC91] text-white border border-primary" type="button">
                 <Link to="/register">
                   {t('register-today')}
                 </Link>
