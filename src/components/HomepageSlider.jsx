@@ -6,7 +6,7 @@ import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-ico
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { SliderMentalHealth, SliderVirtualCare, RedirectIcon, SliderOnlinePharmacy, SliderNursingHomecare, SliderDiagnostics } from '../assets';
+import { SliderMentalHealth, SliderVirtualCare, RedirectIcon, SliderOnlinePharmacy, SliderNursingHomecare, SliderDiagnostics, StethoscopeIconWhite } from '../assets';
 
 const HomepageSlider = () => {
   const { t, i18n } = useTranslation()
@@ -54,61 +54,61 @@ const HomepageSlider = () => {
   return (
     <section className="pb-6">
       <div className="font-main px-4 md:px-8 w-full max-w-7xl mx-auto">
-        <h2 className="text-7xl font-main text-center text-dark pb-10">{t('essential-medical-services')}</h2>
+        <h2 className="text-4xl font-main text-center text-dark pb-10">{t('one-membership-covers-all-your-medical-needs')}</h2>
         <div className="flex justify-center gap-x-8">
           <article className="w-full max-w-[250px]">
-            <div className="bg-[#ECB118] text-white p-6  rounded-[8px] flex flex-col justify-between relative md:h-[490px]">
+            <div className="bg-[#ECB118] text-white p-6  rounded-[8px] flex flex-col relative ">
               <div className="flex justify-end">
                 <Link to="/services/mental-health">
                   <img src={RedirectIcon} alt="redirect" />
                 </Link>
               </div>
-              <div>
-                <div className="w-[79px] h-[54px] flex justify-center my-12 mx-auto">
-                  <SliderMentalHealth />
+              <div className="pt-8">
+                <div className="w-[79px] h-[80px] flex justify-center items-center mx-auto">
+                  <SliderMentalHealth className="w-[71px] h-[67px]" />
                 </div>
-                <h2 className={`${i18n.language === "en" ? "text-3xl" : "text-[26px]"} pt-8 pb-4 font-semibold`}>{t('mental-health')}</h2>
-                <p className="font-body pb-4 text-sm">
+                <h2 className={`${i18n.language === "en" ? "text-3xl" : "text-[26px]"} font-semibold pt-9 pb-2`}>{t('mental-health')}</h2>
+                <p className="font-body text-sm">
                   {t('take-control-of-your-mental-well-being-easily-get-mental-health-support-from-physicians-and-therapists')}
                 </p>
               </div>
             </div>
           </article>
           <article className="w-full max-w-[250px]">
-            <div className="bg-[#A293FF] text-white p-6  rounded-[8px] flex flex-col justify-between relative md:h-[490px]">
+            <div className={`bg-[#A293FF] text-white p-6  rounded-[8px] flex flex-col justify-between relative ${i18n.language !== "en" && "pb-11"}`}>
               <div className="flex justify-end">
                 <Link to="/services">
                   <img src={RedirectIcon} alt="redirect" />
                 </Link>
               </div>
-              <div>
-                <div className="w-[79px] h-[54px] flex justify-center my-12 mx-auto">
-                  <SliderVirtualCare />
+              <div className="pt-8">
+                <div className="w-[79px] h-[80px] flex justify-center items-center mx-auto">
+                  <SliderVirtualCare className="w-[54px] h-[74px]" />
                 </div>
-                <h2 className={`capitalize ${i18n.language === "en" ? "text-3xl" : "text-[26px]"} pt-8 pb-4 font-semibold`}>
+                <h2 className={`capitalize ${i18n.language === "en" ? "text-3xl" : "text-[26px]"} font-semibold pt-9 pb-2`}>
                   {t('virtual-care')}
                 </h2>
-                <p className="font-body pb-4 text-sm">
+                <p className="font-body text-sm">
                   {t('connect-with-a-virtual-doctor-24-7-in-minutes-or-book-an-appointment-with-a-specialist')}
                 </p>
               </div>
             </div>
           </article>
           <article className="w-full max-w-[250px]">
-            <div className="bg-[#90C387] text-white p-6  rounded-[8px] flex flex-col justify-between relative md:h-[490px]">
+            <div className="bg-[#90C387] text-white p-6  rounded-[8px] flex flex-col justify-between relative ">
               <div className="flex justify-end">
                 <Link to="/services/online-pharmacy">
                   <img src={RedirectIcon} alt="redirect" />
                 </Link>
               </div>
-              <div>
-                <div className="w-[79px] h-[54px] flex justify-center my-12 mx-auto">
-                  <SliderOnlinePharmacy />
+              <div className="pt-8">
+                <div className="w-[79px] h-[80px] flex justify-center items-center mx-auto">
+                  <SliderOnlinePharmacy className="w-[55px] h-[76px]" />
                 </div>
-                <h2 className={`capitalize ${i18n.language === "en" ? "text-3xl" : "text-[26px]"} pt-8 pb-4 font-semibold`}>
+                <h2 className={`capitalize ${i18n.language === "en" ? "text-3xl" : "text-[26px]"} font-semibold pt-9 pb-2`}>
                   {t('pharmacy-0')}
                 </h2>
-                <p className="font-body pb-4 text-sm">
+                <p className="font-body text-sm">
                   {
                     t('get-prescriptions-filled-or-renewed-using-our-affiliate-online-pharmacy-and-delivered-right-to-your-door')
                   }
@@ -117,21 +117,21 @@ const HomepageSlider = () => {
             </div>
           </article>
           <article className="w-full max-w-[250px]">
-            <div className="bg-diagnostics text-white p-6  rounded-[8px] flex flex-col justify-between relative md:h-[490px]">
+            <div className={`bg-diagnostics text-white p-6  rounded-[8px] flex flex-col justify-between relative ${i18n.language !== "en" && "pb-11"}`}>
               <div className="flex justify-end">
                 <Link to="/services/online-pharmacy">
                   <img src={RedirectIcon} alt="redirect" />
                 </Link>
               </div>
-              <div>
-                <div className="flex justify-center mt-12 mx-auto pb-6">
-                  <img className="w-[90px]" src={SliderDiagnostics} alt="Diagnostics" />
+              <div className="pt-8">
+                <div className="flex w-[79px] h-[80px] justify-center items-center mx-auto">
+                  <StethoscopeIconWhite className="w-[73px] h-[80px]" />
                 </div>
-                <div className="md:relative md:-top-1">
-                  <h2 className={`capitalize ${i18n.language === "en" ? "text-3xl" : "text-[26px]"} pb-4 font-semibold`}>
+                <div>
+                  <h2 className={`capitalize ${i18n.language === "en" ? "text-3xl" : "text-[26px]"}  font-semibold pt-9 pb-2`}>
                     Diagnostics
                 </h2>
-                  <p className="font-body pb-4 text-sm">
+                  <p className="font-body text-sm">
                     {t('get-safe-and-professional-lab-testing-from-the-comfort-of-your-home-or-office')}
                   </p>
                 </div>
@@ -139,21 +139,21 @@ const HomepageSlider = () => {
             </div>
           </article>
           <article className="w-full max-w-[250px]">
-            <div className="bg-[#F78839] text-white p-6  rounded-[8px] flex flex-col justify-between relative md:h-[490px]">
+            <div className="bg-[#F78839] text-white p-6  rounded-[8px] flex flex-col justify-between relative ">
               <div className="flex justify-end">
                 <Link to="/services/nursing-homecare">
                   <img src={RedirectIcon} alt="redirect" />
                 </Link>
               </div>
-              <div>
-                <div className="md:relative md:top-6 w-[79px] h-[54px] flex justify-center my-12 mx-auto">
-                  <SliderNursingHomecare />
+              <div className="pt-8">
+                <div className="md:relative w-[79px] h-[80px] flex justify-center items-center mx-auto">
+                  <SliderNursingHomecare className="w-[59px] h-[76px]" />
                 </div>
-                <div className="md:relative md:top-6">
-                  <h2 className={`capitalize ${i18n.language === "en" ? "text-3xl" : "text-[26px]"} pt-8 pb-4 font-semibold`}>
+                <div>
+                  <h2 className={`capitalize ${i18n.language === "en" ? "text-3xl" : "text-[26px]"} font-semibold pb-2`}>
                     {t('nursing-and-homecare')}
                   </h2>
-                  <p className="font-body pb-4 text-sm">
+                  <p className="font-body text-sm">
                     {t('get-professional-care-from-our-team-of-nurses-and-homecare-helpers-that-come-directly-to-you')}
                   </p>
                 </div>
