@@ -74,7 +74,7 @@ const HomeMembershipBenefitsSection = () => {
           <div className="items-center gap-y-2  pt-4 md:pt-12">
             <h2 className="text-3xl pb-4">{t('take-control-of-your-health-today')}</h2>
             <Link to="/register">
-              <button className={`bg-[#1EBC91] rounded-full group hover:ring-1 hover:ring-primary px-14 py-2  flex justify-center items-center space-x-2 text-white `}>
+              <button className={`bg-[#1EBC91] hover:bg-white hover:text-[#1EBC91] rounded-full group hover:ring-1 hover:ring-[#1EBC91] px-14 py-2  flex justify-center items-center space-x-2 text-white `}>
                 {t('sign-up-now')}
               </button>
             </Link>
