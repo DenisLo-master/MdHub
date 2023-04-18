@@ -9,7 +9,8 @@ import {
   MembershipBenefit04,
   MembershipBenefit05,
   MembershipBenefit06,
-  HomeMembershipBenefitsVideo
+  HomeMembershipBenefitsVideo,
+  MembershipBenefitHeadspace
 } from '../../assets'
 import ReactPlayer from 'react-player'
 import { useTranslation } from 'react-i18next'
@@ -35,6 +36,8 @@ const HomeMembershipBenefitsSection = () => {
             height={700}
             url={HomeMembershipBenefitsVideo}
             controls
+            muted
+            playing
           />
         </div>
         <div className="flex-1 pt-10 flex flex-col gap-y-4 px-4 text-center lg:text-left">
@@ -50,7 +53,7 @@ const HomeMembershipBenefitsSection = () => {
               <h2 className="text-center max-w-[150px] pt-2 -mt-3">{t('free-and-fast-delivery-online-pharmacy')}</h2>
             </article>
             <article className='flex flex-col items-center pt-8'>
-              <img className="w-14 h-14" src={MembershipBenefit03} alt="Membership benefit" />
+              <img className="w-14 h-14" src={MembershipBenefitHeadspace} alt="Membership benefit" />
               <h2 className="text-center max-w-[150px] pt-2">{t('free-headspace-membership')}</h2>
             </article>
             <article className='flex flex-col items-center'>
@@ -66,12 +69,12 @@ const HomeMembershipBenefitsSection = () => {
               <h2 className="text-center max-w-[170px] pt-2">{t('fast-and-convenient-lab-testing-and-diagnostics')}</h2>
             </article>
           </div>
-          <div className="flex flex-col md:flex-row items-center gap-y-2 justify-around pt-4 md:pt-12">
-            <h2 className="text-2xl">{t('take-control-of-your-health-today')}</h2>
+          <div className="items-center gap-y-2  pt-4 md:pt-12">
+            <h2 className="text-2xl pb-2">{t('take-control-of-your-health-today')}</h2>
             <Link to="/register">
-              <Button wide gradient>
-                <span>{t('sign-up-now')}</span>
-              </Button>
+              <button className={`bg-[#1EBC91] rounded-full group hover:ring-1 hover:ring-primary px-14 py-2  flex justify-center items-center space-x-2 text-white `}>
+                {t('sign-up-now')}
+              </button>
             </Link>
           </div>
         </div>
