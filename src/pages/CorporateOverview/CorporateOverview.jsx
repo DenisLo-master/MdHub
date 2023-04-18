@@ -121,17 +121,17 @@ const CorporateOverview = () => {
               to="/register"
               onClick={() => changeSelectedAccountType("corporate")}
             >
-              <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+              <button className={`rounded-full text-xl group hover:ring-1 ring-[#1EBC91] hover:bg-[#1EBC91] hover:text-white px-10 py-2 border flex justify-center items-center space-x-2  border-[#1EBC91] bg-transparent`}>
                 5-10 {t('employees')}
               </button>
             </Link>
             <a href="mailto:info@mdhub.com?subject=Corporate%20Inquiry%20-%2010%2B%20Employees">
-              <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+              <button className={`rounded-full text-xl group hover:ring-1 ring-[#1EBC91] hover:bg-[#1EBC91] hover:text-white px-10 py-2 border flex justify-center items-center space-x-2  border-[#1EBC91] bg-transparent`}>
                 10-50 {t('employees')}
               </button>
             </a>
             <a href="mailto:info@mdhub.com?subject=Corporate%20Inquiry%20-%2010%2B%20Employees">
-              <button className={`rounded-full text-xl group hover:ring-1 hover:ring-primary px-10 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+              <button className={`rounded-full text-xl group hover:ring-1 ring-[#1EBC91] hover:bg-[#1EBC91] hover:text-white px-10 py-2 border flex justify-center items-center space-x-2  border-[#1EBC91] bg-transparent`}>
                 51+ {t('employees-0')}
               </button>
             </a>
