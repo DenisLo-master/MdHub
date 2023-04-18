@@ -29,10 +29,10 @@ const initialRegistrationFormData = {
   address: '',
   city: '',
   postalCode: '',
-  country: '',
-  region: '',
+  country: 'Canada',
+  region: 'Quebec',
   dateOfBirth: "",
-  gender: "male"
+  gender: "female"
 }
 
 const initialUserInfoData = {

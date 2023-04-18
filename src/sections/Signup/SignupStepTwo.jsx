@@ -10,13 +10,13 @@ const SignupStepTwo = () => {
   const { t } = useTranslation()
   const [addressLineOne, setAddressLineOne] = useState("")
   const [addressLineTwo, setAddressLineTwo] = useState("")
-  const [addressLineThree, setAddressLineThree] = useState("")
 
   const handleAddressChange = (e) => {
-    e.target.name === "address" ? setAddressLineOne(e.target.value) : e.target.name === "address2" ? setAddressLineTwo(e.target.value) : setAddressLineThree(e.target.value)
-    const address = `${addressLineOne}, ${addressLineTwo}, ${addressLineThree}`
+    e.target.name === "address" ? setAddressLineOne(e.target.value) : setAddressLineTwo(e.target.value)
+    const address = `${addressLineOne}, ${addressLineTwo}`
     handleRegisterationFormDataChange("address", address)
   }
+  console.log(registerationFormData.postalCode)
   
   return (
     <section className="max-w-[49rem] mx-auto bg-[#f5f5f5] py-12 pb-24">
@@ -33,6 +33,7 @@ const SignupStepTwo = () => {
             <input
               className="rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary"
               name="address"
+              placeholder={t('123-mdhub-st')}
               type="text"
               value={addressLineOne}
               onChange={(e) => handleAddressChange(e)}
@@ -41,33 +42,23 @@ const SignupStepTwo = () => {
             <input
               className="rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary"
               name="address2"
+              placeholder="Apt, Floor, Unit"
               type="text"
               value={addressLineTwo}
               onChange={(e) => handleAddressChange(e)}
             />
             <input
               className="rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary"
-              name="address3"
+              name="postalCode"
+              placeholder="A1A 1A1"
               type="text"
-              value={addressLineThree}
-              onChange={(e) => handleAddressChange(e)}
+              required
+              value={registerationFormData.postalCode}
+              onChange={({ target }) => handleRegisterationFormDataChange(target.name, target.value)}
             />
           </div>
         </div>
-        <div className="flex flex-col gap-y-2">
-          <label htmlFor='address' className="font-body text-dark font-semibold">
-            {t('country')}
-          </label>
-          <div className="relative">
-            <CountryDropdown
-              defaultOptionLabel={t('select-country')}
-              className="w-full rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary bg-white appearance-none"
-              value={registerationFormData.country}
-              onChange={(val) => handleRegisterationFormDataChange("country", val)} 
-            />
-            <BiCaretDown className="absolute text-2xl right-4 top-[10px]"/>
-          </div>
-        </div>
+
         <div className="flex flex-col gap-y-2">
           <label htmlFor='address' className="font-body text-dark font-semibold">
             {t('province')}
@@ -83,7 +74,22 @@ const SignupStepTwo = () => {
             />
             <BiCaretDown className="absolute text-2xl right-4 top-[10px]"/>
           </div>
-        </div>      
+        </div>  
+
+        <div className="flex flex-col gap-y-2">
+          <label htmlFor='address' className="font-body text-dark font-semibold">
+            {t('country')}
+          </label>
+          <div className="relative">
+            <CountryDropdown
+              defaultOptionLabel={t('select-country')}
+              className="w-full rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary bg-white appearance-none"
+              value={registerationFormData.country}
+              onChange={(val) => handleRegisterationFormDataChange("country", val)} 
+            />
+            <BiCaretDown className="absolute text-2xl right-4 top-[10px]"/>
+          </div>
+        </div>    
       </div>
     </section>
   )
