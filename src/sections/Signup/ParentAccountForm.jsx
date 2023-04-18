@@ -273,12 +273,12 @@ const ParentAccountForm = () => {
           <button
             disabled={childForms.length > 1}
             onClick={addChildAccount}
-            className="lg:absolute -bottom-40 left-8 flex gap-x-2 text-gray-600 font-body items-center text-xl cursor-pointer"
+            className="lg:absolute -bottom-44 left-8 flex gap-x-2 text-gray-600 font-body items-center text-xl cursor-pointer"
           >
             <BsPlusCircle />
             <p className='text-base md:text-xl'>{t('add-family-member')}</p>
           </button>
-          <div className="lg:absolute -bottom-40 right-8 text-gray-600 font-body">
+          <div className="lg:absolute -bottom-44 right-8 text-gray-600 font-body">
             <p className='text-base md:text-xl'>{t('account-admin')}</p>
           </div>
         </div>
@@ -288,12 +288,12 @@ const ParentAccountForm = () => {
           <button
             disabled={childForms.length > 8}
             onClick={addChildAccount}
-            className="lg:absolute bottom-4 left-8 flex gap-x-2 text-gray-600 font-body items-center text-xl cursor-pointer"
+            className="lg:absolute -bottom-44 left-8 flex gap-x-2 text-gray-600 font-body items-center text-xl cursor-pointer"
           >
             <BsPlusCircle />
             <p className='text-base md:text-xl'>{t('add-employee')}</p>
           </button>
-          <div className="lg:absolute bottom-4 right-8 text-gray-600 font-body">
+          <div className="lg:absolute bottom-44 right-8 text-gray-600 font-body">
             <p className='text-xl'>{t('account-admin')}</p>
           </div>
         </div>

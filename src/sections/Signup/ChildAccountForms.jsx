@@ -145,60 +145,81 @@ const ChildAccountForms = () => {
     <div className="mt-10">
       {
         childForms.map((childForm, index) => (
-          <div key={`familymember${index}`} className="py-16 border space-y-4 px-4 md:px-8 shadow-cardService rounded-[35px] text-primary relative">
+          <div key={`familymember${index}`} className="py-16 space-y-4 px-4 md:px-8  rounded-[8px] text-primary relative">
             <MdClose onClick={() => handleRemoveChildForms(index)} className="absolute top-6 right-6 text-3xl cursor-pointer" />
-            <h2 className="text-lg font-semibold">
-              {selectedAccountType === "family" ? "Add Family Member" : "Add Employee"}
-            </h2>
+
             <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
+              <article className="flex-1 flex flex-col gap-y-2">
+                <label htmlFor='firstName' className="font-body text-dark font-semibold">
+                  {t('first-name-0')}
+                </label>
               <input
-                className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-                name="firstName"
-                type="text"
-                placeholder={`${t('first-name-0')}*`}
-                value={childForms[index].firstName}
-                onChange={(event) => handleChildAccountInputChange(event, index)}
-                required
+                  id="firstName"
+                  className="rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary"
+                  name="firstName"
+                  type="text"
+                  value={childForms[index].firstName}
+                  onChange={(event) => handleChildAccountInputChange(event, index)}
+                  required
               />
-              <input
-                className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-                name="lastName"
-                type="text"
-                placeholder={`${t('last-name-0')}*`}
-                value={childForms[index].lastName}
-                onChange={(event) => handleChildAccountInputChange(event, index)}
-                required
-              />
+              </article>
+              <article className="flex-1 flex flex-col gap-y-2">
+                <label htmlFor='lastName' className="font-body text-dark font-semibold">
+                  {t('last-name-0')}
+                </label>
+                <input
+                  id="lastName"
+                  className="rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary"
+                  name="lastName"
+                  type="text"
+                  value={childForms[index].lastName}
+                  onChange={(event) => handleChildAccountInputChange(event, index)}
+                  required
+                />
+              </article>
             </div>
             <div className="w-full flex flex-wrap gap-y-4 gap-x-6">
+              <article className="flex-1 flex flex-col gap-y-2">
+                <label htmlFor='email' className="font-body text-dark font-semibold">
+                  {t('email-0')}
+                </label>
+                <input
+                  id="email"
+                  className="rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary"
+                  name="email"
+                  type="email"
+                  value={childForms[index].email}
+                  onChange={(event) => handleChildAccountInputChange(event, index)}
+                  required
+                />
+              </article>
+
+              <article className="flex-1 flex flex-col gap-y-2">
+                <label htmlFor='password' className="font-body text-dark font-semibold">
+                  {t('phone-1')}
+                </label>
               <input
-                className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
-                name="email"
-                type="email"
-                placeholder={`${t('email-0')}*`}
-                value={childForms[index].email}
-                onChange={(event) => handleChildAccountInputChange(event, index)}
-                required
-              />
-              <input
-                className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
+                  className="rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary"
                 name="phone"
-                type="tel"
-                placeholder={`${t('phone-1')}*`}
+                  type="tel"
                 value={childForms[index].phone}
                 onChange={(event) => handleChildAccountInputChange(event, index)}
                 required
               />
+              </article>
             </div>
 
-            <div className="w-full flex flex-col relative">
+            <div className="w-full flex flex-col gap-y-2 relative">
+              <label htmlFor='childPassword' className="font-body text-dark font-semibold">
+                {t('create-a-password')}
+              </label>
               <input
+                id="childPassword"
                 disabled={!isOlderThanFourteen || !childForms[index].dateOfBirth}
-                className="flex-1 rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border"
+                className="rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary"
                 name="password"
                 type="password"
                 pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$"
-                placeholder={`${t('password-0')}*`}
                 value={childForms[index].password}
                 onChange={(event) => {
                   checkPasswordStrength(event.target.value)
@@ -206,7 +227,7 @@ const ChildAccountForms = () => {
                 }}
                 required
               />
-              {childForms[index].password && (
+              {/* {childForms[index].password && (
                 <div>
                   <ul>
                     {conditionsFulfilled.map((condition, index) => (
@@ -234,14 +255,18 @@ const ChildAccountForms = () => {
                     {t('password-strength')}: <strong>{strength}</strong>
                   </p>
                 </div>
-              )}
+              )} */}
             </div>
-            <div className="text-xl flex flex-col lg:flex-row gap-y-4 items-center w-full gap-x-6">
-              <div className="w-full flex-1 flex relative">
-                <BiCaretDown className="text-2xl absolute right-3 pointer-events-none top-2" />
+            <div className="flex flex-col lg:flex-row gap-y-4 items-center w-full gap-x-6">
+              <div className="w-full flex-1 flex flex-col gap-y-2 relative">
+                <label htmlFor='gender' className="font-body text-dark font-semibold">
+                  {t('gender')}
+                </label>
+                <BiCaretDown className="text-2xl absolute right-3 pointer-events-none top-[43px]" />
                 <select
                   required
-                  className="flex-1 appearance-none rounded-full text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border bg-white"
+                  id="gender"
+                  className="flex-1 appearance-none rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary bg-white"
                   name="gender"
                   placeholder={`${t('select-gender')}`}
                   value={childForms[index].gender}
@@ -253,13 +278,16 @@ const ChildAccountForms = () => {
                   <option value="preferNotToSay">Prefer not to say</option>
                 </select>
               </div>
-              <div className="w-full flex-1 flex flex-col">
+              <div className="w-full flex-1 gap-y-2 flex flex-col">
+                <label htmlFor='dateOfBirth' className="font-body text-dark font-semibold">
+                  {t('date-of-birth')}
+                </label>
                 <input
-                  className="flex-1 rounded-full text-xl lg:text-lg focus:ring-1 focus:ring-primary outline-none px-8 py-2 border placeholder:text-[19px]"
+                  id="dateOfBirth"
+                  className="flex-1 appearance-none rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary bg-white"
                   type="text"
                   value={childForms[index].dateOfBirth}
                   onChange={({ target }) => handleDateChange(target.value, index)}
-                  placeholder={`${t('date-of-birth-mm-dd-yyyy')}`}
                 />
               </div>
             </div>

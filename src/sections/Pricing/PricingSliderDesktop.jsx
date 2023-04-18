@@ -35,7 +35,7 @@ const PricingSliderDesktop = ({ selectedPackage }) => {
               </div>
             </section>
             <div className="text-center pt-12 p-8">
-              <h2 className="text-5xl font-main pb-2">Yearly</h2>
+              <h2 className="text-5xl font-main pb-2">{t('yearly')}</h2>
               <p className="font-body leading-5">{t('one-annual-payment-saving-25-to-have-full-access-to-all-of-our-services')}</p>
             </div>
             <div className="w-full rounded-t-[32px] bg-[#1B5747] pt-8 p-6 flex flex-col items-center">

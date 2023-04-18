@@ -184,11 +184,11 @@ const RegistrationCheckoutForm = () => {
       >
         {step}
         {!isLastStep && (
-          <div className={`absolute ${currentStepIndex === 0 ? "bottom-20" : currentStepIndex === 1 ? "bottom-14" : currentStepIndex === 2 ? "bottom-14" : currentStepIndex === 3 ? "bottom-14" : ""} left-0 w-full flex justify-center`}>
-            <div className={`w-full max-w-[49rem] flex ${isFirstStep ? "justify-between" : "justify-end"} gap-x-4 pt-6 px-4`}>
+          <div className={`absolute px-6 md:px-0 ${currentStepIndex === 0 ? "bottom-20" : currentStepIndex === 1 ? "bottom-14" : currentStepIndex === 2 ? "bottom-14" : currentStepIndex === 3 ? "bottom-14" : ""} left-0 w-full flex justify-center`}>
+            <div className={`w-full max-w-[49rem] flex items-start ${isFirstStep ? "justify-between" : "justify-end"} gap-x-4 pt-6 px-4`}>
               {
                 isFirstStep &&
-                <div className="flex font-body text-dark items-center gap-x-3 text-lg md:pl-5">
+                <div className="flex flex-col md:flex-row font-body text-dark items-center gap-x-3 text-lg md:pl-5">
                     <p className="text-lg">{t('already-a-member')}</p>
                     <Link className="text-primary font-semibold" to="/login">
                     {t('Login')}
@@ -207,7 +207,7 @@ const RegistrationCheckoutForm = () => {
               }
               <button
                 type="submit"
-                className={`rounded-full w-56 font-main text-xl group hover:ring-1 hover:ring-primary py-3 border flex justify-center items-center space-x-2  border-primary bg-[#1EBC91] text-white`}
+                className={`rounded-full w-28 md:w-56 font-main text-xl group hover:ring-1 hover:ring-primary py-3 border flex justify-center items-center space-x-2  border-primary bg-[#1EBC91] text-white`}
               >
                 {
                   isLastStep ?
