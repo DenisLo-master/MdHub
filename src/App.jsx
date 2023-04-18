@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './App.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import AOS from 'aos';
@@ -63,8 +63,10 @@ function App() {
         <p>{t('healthcare-redefined-a-proud-medical-solution-made-in-quebec-canada')}</p>
         <button
           type="button"
-          className={`rounded-full ${i18n.language === "en" ? "w-56" : "w-80"} font-main text-base group hover:ring-1 hover:ring-primary py-1 border flex justify-center items-center space-x-2  border-primary bg-[#1EBC91] text-white`}>
-          {t('sign-up-for-free-now')}
+          className={`rounded-full ${i18n.language === "en" ? "w-56" : "w-80"} font-main text-base group hover:ring-1 hover:ring-[#1EBC91] py-1 border flex justify-center items-center space-x-2  border-[#1EBC91] bg-[#1EBC91] hover:bg-white hover:text-[#1EBC91] transition-all ease-in-out duration-300 text-white`}>
+          <Link to="/register">
+            {t('sign-up-for-free-now')}
+          </Link>
         </button>
       </div>
       <Navbar />
