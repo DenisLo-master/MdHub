@@ -41,7 +41,7 @@ const ServicesVirtualDoctor = () => {
 
             </div>
             <Link className="block" to="/register">
-              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white  text-[#3F3F3F] border-white hover:opacity-80 transition-opacity ease-in-out duration-300">
+              <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border hover:border-[#1EBC91] bg-white hover:bg-[#1EBC91]  text-[#3F3F3F] hover:text-[white] border-white  transition-all ease-in-out duration-300">
                 {t('sign-up-today')}
               </button>
             </Link>
