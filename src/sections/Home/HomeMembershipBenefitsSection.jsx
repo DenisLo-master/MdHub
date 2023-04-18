@@ -28,6 +28,7 @@ const HomeMembershipBenefitsSection = () => {
             height={"100%"}
             url={HomeMembershipBenefitsVideo}
             controls
+            loop
           />
         </div>
         <div className="hidden lg:block">

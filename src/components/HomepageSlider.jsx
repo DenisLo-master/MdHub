@@ -56,7 +56,7 @@ const HomepageSlider = () => {
       <div className="font-main px-4 md:px-8 w-full max-w-7xl mx-auto">
         <h2 className="text-4xl font-main text-center text-dark pb-10">{t('one-membership-covers-all-your-medical-needs')}</h2>
         <div className="w-full flex flex-col md:flex-row items-center gap-y-10 justify-center gap-x-8">
-          <article className="w-full max-w-[250px]">
+          <article className="w-full max-w-[250px] hover:scale-105 transition-all ease-in-out duration-300">
             <Link to="/services/mental-health" className="bg-[#ECB118] text-white p-6  rounded-[8px] flex flex-col relative ">
               <div className="flex justify-end">
                 <Link to="/services/mental-health">
@@ -74,7 +74,7 @@ const HomepageSlider = () => {
               </div>
             </Link>
           </article>
-          <article className="w-full max-w-[250px]">
+          <article className="w-full max-w-[250px] hover:scale-105 transition-all ease-in-out duration-300">
             <Link to="/services" className={`bg-[#A293FF] text-white p-6  rounded-[8px] flex flex-col justify-between relative ${i18n.language !== "en" && "pb-11"}`}>
               <div className="flex justify-end">
                 <Link to="/services">
@@ -94,7 +94,7 @@ const HomepageSlider = () => {
               </div>
             </Link>
           </article>
-          <article className="w-full max-w-[250px]">
+          <article className="w-full max-w-[250px] hover:scale-105 transition-all ease-in-out duration-300">
             <Link to="/services/online-pharmacy" className="bg-[#90C387] text-white p-6  rounded-[8px] flex flex-col justify-between relative ">
               <div className="flex justify-end">
                 <Link to="/services/online-pharmacy">
@@ -116,7 +116,7 @@ const HomepageSlider = () => {
               </div>
             </Link>
           </article>
-          <article className="w-full max-w-[250px]">
+          <article className="w-full max-w-[250px] hover:scale-105 transition-all ease-in-out duration-300">
             <Link to="/services/diagnostics" className={`bg-diagnostics text-white p-6  rounded-[8px] flex flex-col justify-between relative ${i18n.language !== "en" && "pb-11"}`}>
               <div className="flex justify-end">
                 <Link to="/services/diagnostics">
@@ -138,7 +138,7 @@ const HomepageSlider = () => {
               </div>
             </Link>
           </article>
-          <article className="w-full max-w-[250px]">
+          <article className="w-full max-w-[250px] hover:scale-105 transition-all ease-in-out duration-300">
             <Link to="/services/nursing-homecare" className="bg-[#F78839] text-white p-6  rounded-[8px] flex flex-col justify-between relative ">
               <div className="flex justify-end">
                 <Link to="/services/nursing-homecare">
