@@ -8,7 +8,7 @@ const MembershipBenefits = () => {
   return (
     <section className="flex flex-col md:flex-row  md:h-[700px]">
       <article className="flex-1 py-8 md:py-0 text-4xl text-center md:text-left md:text-6xl px-8 flex md:justify-end items-center">
-        <h2 classNam>{t('members-benefit-from-0')}</h2>
+        <h2 className>{t('members-benefit-from-0')}</h2>
       </article>
       <article className="md:w-[912px] p-4 flex flex-col md:flex-row md:justify-end bg-primary md:bg-blue-circle">
         <div className="flex items-center w-full md:w-[90%]">
