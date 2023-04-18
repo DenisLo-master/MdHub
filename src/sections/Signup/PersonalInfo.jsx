@@ -5,9 +5,36 @@ import { BiCaretDown } from 'react-icons/bi'
 import { useTranslation } from 'react-i18next'
 
 const PersonalInfo = () => {
+  const [previousLength, setPreviousLength] = useState(0)
   const registerationFormData = registerationStore(state => state.registerationFormData)
   const handleRegisterationFormDataChange = registerationStore(state => state.handleRegisterationFormDataChange)
   const { t } = useTranslation()
+
+  const handlePhoneNumberChange = (e) => {
+    // Regular expression to allow only numeric input
+    const numericRegex = /^[0-9\b]+$/;
+    const input = e.target.value;
+    // If input matches numericRegex or input is empty, update phoneNumber state
+    if (numericRegex.test(input) || input === "") {
+      handleRegisterationFormDataChange(e.target.name, e.target.value)
+    }
+  }
+
+  const handleDateChange = (e) => {
+    let input = e.target.value;
+    if (input.length < previousLength) { // Backspace key
+      input = input.slice(0, -1);
+    } else if (input.length === 1 && input < 10 && input > 1) {
+      input = "0" + input;
+    } else if (input.length === 2 && !input.includes("/")) {
+      input += "/";
+    } else if (input.length === 5 && input.charAt(2) === "/") {
+      input += "/";
+    }
+    console.log(input)
+    handleRegisterationFormDataChange(e.target.name, input)
+    setPreviousLength(input.length);
+  }
 
   return (
     <section className="max-w-[49rem] mx-auto bg-[#f5f5f5] py-12 pb-24">
@@ -19,10 +46,11 @@ const PersonalInfo = () => {
           <div className="flex flex-col gap-y-3">
             <input
               className="rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary"
+              placeholder='(123) 456-7890'
               name="phone"
-              type="text"
+              type="tel"
               value={registerationFormData.phone}
-              onChange={({target}) => handleRegisterationFormDataChange(target.name, target.value)}
+              onChange={handlePhoneNumberChange}
               required
             />
           </div>
@@ -34,9 +62,10 @@ const PersonalInfo = () => {
           <input
               className="rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary"
               name="dateOfBirth"
+            placeholder='DD/MM/YYYY'              
               type="text"
               value={registerationFormData.dateOfBirth}
-              onChange={({target}) => handleRegisterationFormDataChange(target.name, target.value)}
+            onChange={handleDateChange}
               required
             />
         </div>
@@ -49,21 +78,21 @@ const PersonalInfo = () => {
               <input
                 type="radio"
                 className="form-radio h-4 w-4 bg-green-500"
-                value="male"
-                checked={registerationFormData.gender === "male"}
-                onChange={({target}) => handleRegisterationFormDataChange("gender", target.value)}
-              />
-              <span className="ml-2 text-gray-700">{t('male')}</span>
-            </label>
-            <label className="inline-flex items-center">
-              <input
-                type="radio"
-                className="form-radio h-4 w-4 bg-green-500"
                 value="female"
                 checked={registerationFormData.gender === "female"}
                 onChange={({target}) => handleRegisterationFormDataChange("gender", target.value)}
               />
               <span className="ml-2 text-gray-700">{t('female')}</span>
+            </label>
+            <label className="inline-flex items-center">
+              <input
+                type="radio"
+                className="form-radio h-4 w-4 bg-green-500"
+                value="male"
+                checked={registerationFormData.gender === "male"}
+                onChange={({target}) => handleRegisterationFormDataChange("gender", target.value)}
+              />
+              <span className="ml-2 text-gray-700">{t('male')}</span>
             </label>
             <label className="inline-flex items-center">
               <input
