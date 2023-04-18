@@ -31,7 +31,7 @@ const HomeUserSatisfactionSection = () => {
 
 
   return (
-    <section className="py-16 font-main text-xl">
+    <section className="pb-16 font-main text-xl">
       <h2 className="text-center pb-4 px-4">
         {t('were-an-employee-benefit-for-companies-nationwide')}
       </h2>

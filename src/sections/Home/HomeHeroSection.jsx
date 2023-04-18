@@ -71,7 +71,7 @@ const HomeHeroSection = () => {
           <img className="relative z-10 w-full max-w-[430px]" src={HomeHeroImage} alt="Hero" />
         </article>
       </section>
-      <div className="relative font-main virtual-health text-center flex justify-center flip-words mb-32">
+      <div className="relative font-main virtual-health text-center flex justify-center flip-words mb-28">
         <h2 className="text-primary text-center text-5xl md:text-6xl">
           {t('get-help-for')}
         </h2>

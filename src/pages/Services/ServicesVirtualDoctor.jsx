@@ -25,7 +25,7 @@ const ServicesVirtualDoctor = () => {
   const { t, i18n } = useTranslation()
   return (
     <section className="font-main py-10">
-      <header className="bg-virtualDoctor text-white w-full lg:h-[530px] py-10 relative">
+      <header className="bg-virtualDoctor text-white w-full py-10 relative">
         <div className="max-w-[83rem] mx-auto flex flex-col justify-center h-full">
           <article className="px-4 space-y-5 flex flex-col items-center lg:items-start text-center">
             <h2 className="text-6xl lg:text-[88px]">

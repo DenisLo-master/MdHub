@@ -12,7 +12,7 @@ const ServicesDiagnostics = () => {
   const { t } = useTranslation()
   return (
     <section className="font-main text-dark py-10">
-      <header className="bg-diagnostics diagnostics-bg text-white w-full py-20 relative text-center lg:text-left">
+      <header className="bg-diagnostics diagnostics-bg text-white w-full py-10 relative text-center lg:text-left">
         <div className="max-w-[83rem] mx-auto">
           <article className="space-y-5 px-2 flex flex-col items-center lg:items-start text-center w-full">
             <h2 className="text-center lg:text-left text-[55px] lg:text-[88px] max-w-[450px] leading-[80px] pb-5">
