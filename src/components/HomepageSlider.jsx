@@ -55,9 +55,9 @@ const HomepageSlider = () => {
     <section className="pb-6">
       <div className="font-main px-4 md:px-8 w-full max-w-7xl mx-auto">
         <h2 className="text-4xl font-main text-center text-dark pb-10">{t('one-membership-covers-all-your-medical-needs')}</h2>
-        <div className="flex justify-center gap-x-8">
+        <div className="w-full flex flex-col md:flex-row items-center gap-y-10 justify-center gap-x-8">
           <article className="w-full max-w-[250px]">
-            <div className="bg-[#ECB118] text-white p-6  rounded-[8px] flex flex-col relative ">
+            <Link to="/services/mental-health" className="bg-[#ECB118] text-white p-6  rounded-[8px] flex flex-col relative ">
               <div className="flex justify-end">
                 <Link to="/services/mental-health">
                   <img src={RedirectIcon} alt="redirect" />
@@ -72,10 +72,10 @@ const HomepageSlider = () => {
                   {t('take-control-of-your-mental-well-being-easily-get-mental-health-support-from-physicians-and-therapists')}
                 </p>
               </div>
-            </div>
+            </Link>
           </article>
           <article className="w-full max-w-[250px]">
-            <div className={`bg-[#A293FF] text-white p-6  rounded-[8px] flex flex-col justify-between relative ${i18n.language !== "en" && "pb-11"}`}>
+            <Link to="/services" className={`bg-[#A293FF] text-white p-6  rounded-[8px] flex flex-col justify-between relative ${i18n.language !== "en" && "pb-11"}`}>
               <div className="flex justify-end">
                 <Link to="/services">
                   <img src={RedirectIcon} alt="redirect" />
@@ -92,10 +92,10 @@ const HomepageSlider = () => {
                   {t('connect-with-a-virtual-doctor-24-7-in-minutes-or-book-an-appointment-with-a-specialist')}
                 </p>
               </div>
-            </div>
+            </Link>
           </article>
           <article className="w-full max-w-[250px]">
-            <div className="bg-[#90C387] text-white p-6  rounded-[8px] flex flex-col justify-between relative ">
+            <Link to="/services/online-pharmacy" className="bg-[#90C387] text-white p-6  rounded-[8px] flex flex-col justify-between relative ">
               <div className="flex justify-end">
                 <Link to="/services/online-pharmacy">
                   <img src={RedirectIcon} alt="redirect" />
@@ -114,12 +114,12 @@ const HomepageSlider = () => {
                   }
                 </p>
               </div>
-            </div>
+            </Link>
           </article>
           <article className="w-full max-w-[250px]">
-            <div className={`bg-diagnostics text-white p-6  rounded-[8px] flex flex-col justify-between relative ${i18n.language !== "en" && "pb-11"}`}>
+            <Link to="/services/diagnostics" className={`bg-diagnostics text-white p-6  rounded-[8px] flex flex-col justify-between relative ${i18n.language !== "en" && "pb-11"}`}>
               <div className="flex justify-end">
-                <Link to="/services/online-pharmacy">
+                <Link to="/services/diagnostics">
                   <img src={RedirectIcon} alt="redirect" />
                 </Link>
               </div>
@@ -136,10 +136,10 @@ const HomepageSlider = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </Link>
           </article>
           <article className="w-full max-w-[250px]">
-            <div className="bg-[#F78839] text-white p-6  rounded-[8px] flex flex-col justify-between relative ">
+            <Link to="/services/nursing-homecare" className="bg-[#F78839] text-white p-6  rounded-[8px] flex flex-col justify-between relative ">
               <div className="flex justify-end">
                 <Link to="/services/nursing-homecare">
                   <img src={RedirectIcon} alt="redirect" />
@@ -158,7 +158,7 @@ const HomepageSlider = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </Link>
           </article>
         </div>
         {/* <div className="flex flex-wrap">
