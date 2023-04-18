@@ -11,15 +11,15 @@ const Footer = () => {
   const { t, i18n } = useTranslation()
   const location = useLocation()
   return (
-    <footer className="bg-[#3F3F3F] text-white pt-10 text-center md:text-left">
+    <footer className={`bg-[#3F3F3F] text-white ${location.pathname !== "/" ? "pt-10" : ""} text-center md:text-left`}>
       {location.pathname === "/" && 
         (
-        <div className="flex flex-col items-center font-main px-4">
+        <div className="w-full bg-white flex flex-col items-center font-main px-4 py-8 text-dark">
           <h2 className="text-3xl pb-4">
             {t('sign-up-now-for-29-99-per-month')}
           </h2>
           <Link to="/register" className="block">
-            <button type="button" className={`${i18n.language === "fr" ? "w-[200px]" : "w-[185px]"} bg-white rounded-full text-primary py-2`}>
+            <button type="button" className={`${i18n.language === "fr" ? "w-[200px]" : "w-[185px]"} bg-[#1EBC91] rounded-full text-white py-2`}>
               {t('sign-up-today')}
             </button>
           </Link>
