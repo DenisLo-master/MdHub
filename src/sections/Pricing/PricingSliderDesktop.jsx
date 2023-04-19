@@ -20,7 +20,9 @@ const PricingSliderDesktop = ({ selectedPackage }) => {
                 <p className="pt-6 pb-4">{t('89-per-consultation')}</p>
               </div>
               <div>
-                <Link className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-white text-dark font-main" to="/register">
+                <Link 
+                  className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-white hover:bg-[#1EBC91] hover:text-white transition-all ease-in-out duration-300 text-dark font-main" 
+                  to="/register">
                   {t('sign-up-today')}
                 </Link>
               </div>
@@ -44,7 +46,9 @@ const PricingSliderDesktop = ({ selectedPackage }) => {
                 <p>{t('per-month')}</p>
               </div>
               <div>
-                <Link className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-white text-dark font-main" to="/register">
+                <Link 
+                className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-white hover:bg-[#1EBC91] hover:text-white transition-all ease-in-out duration-300 text-dark font-main"
+                to="/register">
                   {t('sign-up-today')}
                 </Link>
                 <p className="text-center font-body pt-3">
@@ -66,7 +70,9 @@ const PricingSliderDesktop = ({ selectedPackage }) => {
                 <p>{t('per-month')}</p>
               </div>
               <div>
-                <Link className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-white text-dark font-main" to="/register">
+                <Link 
+                  className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-white hover:bg-[#1EBC91] hover:text-white transition-all ease-in-out duration-300 text-dark font-main"
+                  to="/register">
                   {t('sign-up-today')}
                 </Link>
                 <p className="text-center font-body pt-3">
@@ -90,7 +96,9 @@ const PricingSliderDesktop = ({ selectedPackage }) => {
                 <p className="pt-6 pb-4">{t('89-per-consultation')}</p>
               </div>
               <div>
-                <Link className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-white text-dark font-main" to="/register">
+                <Link 
+                  className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-white hover:bg-[#1EBC91] hover:text-white transition-all ease-in-out duration-300 text-dark font-main"
+                  to="/register">
                   {t('sign-up-today')}
                 </Link>
               </div>
@@ -114,7 +122,9 @@ const PricingSliderDesktop = ({ selectedPackage }) => {
                 <p>{t('per-month')}</p>
               </div>
               <div>
-                <Link className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-white text-dark font-main" to="/register">
+                <Link 
+                  className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-white hover:bg-[#1EBC91] hover:text-white transition-all ease-in-out duration-300 text-dark font-main"
+                  to="/register">
                   {t('sign-up-today')}
                 </Link>
                 <p className="text-center font-body pt-3">
@@ -136,7 +146,9 @@ const PricingSliderDesktop = ({ selectedPackage }) => {
                 <p>{t('per-month')}</p>
               </div>
               <div>
-                <Link className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-white text-dark font-main" to="/register">
+                <Link 
+                  className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-white hover:bg-[#1EBC91] hover:text-white transition-all ease-in-out duration-300 text-dark font-main"
+                  to="/register">
                   {t('sign-up-today')}
                 </Link>
                 <p className="text-center font-body pt-3">
@@ -159,9 +171,11 @@ const PricingSliderDesktop = ({ selectedPackage }) => {
                   <p>{t('per-month')}</p>
               </div>
                 <div>
-                  <Link className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-white text-dark font-main" to="/register">
+                  <Link 
+                    className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-white hover:bg-[#1EBC91] hover:text-white transition-all ease-in-out duration-300 text-dark font-main"
+                    to="/register">
                     {t('sign-up-today')}
-                </Link>
+                  </Link>
               </div>
               </div>
             </article>
@@ -175,9 +189,11 @@ const PricingSliderDesktop = ({ selectedPackage }) => {
                   <p>{t('per-month')}</p>
               </div>
                 <div>
-                  <Link className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-white text-dark font-main" to="/register">
+                  <Link 
+                    className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-white hover:bg-[#1EBC91] hover:text-white transition-all ease-in-out duration-300 text-dark font-main"
+                    to="/register">
                     {t('sign-up-today')}
-                </Link>
+                  </Link>
               </div>
               </div>
             </article>
@@ -189,12 +205,14 @@ const PricingSliderDesktop = ({ selectedPackage }) => {
                 <div className="text-center font-body pb-10">
                   <h2 className="text-6xl font-semibold">$14.99</h2>
                   <p>{t('per-month')}</p>
-              </div>
+                </div>
                 <div>
-                  <Link className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-white text-dark font-main" to="/register">
+                  <Link 
+                    className="relative z-10 rounded-full w-[240px] text-lg flex justify-center py-2 bg-white hover:bg-[#1EBC91] hover:text-white transition-all ease-in-out duration-300 text-dark font-main"
+                    to="/register">
                     {t('sign-up-today')}
-                </Link>
-              </div>
+                  </Link>
+                </div>
               </div>
             </article>
           </div>
