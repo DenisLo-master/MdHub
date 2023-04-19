@@ -25,10 +25,10 @@ const NursingAndHomecareServices = () => {
             </p>
           </div>
           <Link className="block" to="/register">
-            <button className="rounded-full w-[480px] mt-[48px] text-lg flex justify-center py-3 border bg-[#3F3F3F] border-none hover:opacity-80 transition-opacity ease-in-out duration-300 text-white font-helvetica">
+            <button className="rounded-full w-[480px] mt-[48px] text-lg flex justify-center py-3 border bg-[#3F3F3F] hover:bg-[#1EBC91] border-none hover:opacity-80 transition-all ease-in-out duration-300 text-white font-helvetica">
               {t('sign-up-today')}
             </button>
-            <button className="rounded-full w-[480px] mt-8 text-lg flex justify-center py-3 border bg-white border-none hover:opacity-80 transition-opacity ease-in-out duration-300 text-[#3F3F3F] font-helvetica">
+            <button className="rounded-full w-[480px] mt-8 text-lg flex justify-center py-3 border bg-white hover:bg-[#1EBC91] border-none hover:opacity-80 transition-all ease-in-out duration-300 text-[#3F3F3F] hover:text-white font-helvetica">
               {t('get-care-now')}
             </button>
           </Link>
