@@ -11,13 +11,13 @@ const HomeMedicalConditionsSection = () => {
   return (
 		<section className="font-main bg-home-gradient-reverse">
 			<div className="w-full max-w-7xl mx-auto px-4">
-				<h2 className="text-5xl font-semibold">{t('medical-conditions-treated')}</h2>
-				<p className="w-full py-4 font-body">
+				<h2 className="text-5xl">{t('medical-conditions-treated')}</h2>
+				<p className="w-full py-4 font-body text-xl">
 					{t('at-mdhub-we-care-for-everything-from-common-illnesses-to-chronic-diseases-and-mental-health-concerns-we-can-now-treat-a-majority-of-health-conditions-by-coupling-virtual-care-with-physical-diagnostics-with-mobile-nursing-care-patients-can-forget-the-limited-virtual-care-stigma-and-benefit-from-advance-and-proactive-control-of-their-health')}
 				</p>
 				<div className="flex flex-col-reverse gap-y-4 md:flex-row items-start text-center md:text-left">
 					<article className="flex-1">
-						<h2 className="text-3xl text-dark font-semibold pb-4">{t('our-treatments-include')}</h2>
+						<h2 className="text-3xl text-dark pb-4">{t('our-treatments-include')}</h2>
 						<div className="max-w-[380px] space-y-4">
 							<article>
 								<h2 className="text-2xl text-primary pb-2">{t('wellness-and-prevention')}</h2>
