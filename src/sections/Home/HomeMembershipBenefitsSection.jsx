@@ -43,7 +43,7 @@ const HomeMembershipBenefitsSection = () => {
         </div>
         <div className="flex-1 pt-10 flex flex-col gap-y-4 px-4 text-center lg:text-left">
           <h2 className="text-5xl">{t('Membership Benefits')}</h2>
-          <p className="font-body max-w-[680px] text-2xl pb-6">
+          <p className="font-body max-w-[680px] text-xl pb-6">
             {t('mdhub-is-canadas-first-on-demand-medical-membership-members-have-access-to-several-on-demand-services-from-anywhere-some-of-our-benefits-include')}:
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
@@ -55,8 +55,8 @@ const HomeMembershipBenefitsSection = () => {
               <img className="w-24 h-24" src={MembershipBenefit02} alt="Membership benefit" />
               <h2 className="text-center max-w-[190px] pt-2 text-lg -mt-3">{t('free-and-fast-delivery-online-pharmacy')}</h2>
             </article>
-            <article className='flex flex-col items-center pt-8'>
-              <img className="w-14 h-14" src={MembershipBenefitHeadspace} alt="Membership benefit" />
+            <article className='flex flex-col items-center pt-1'>
+              <img className="w-16 h-20" src={MembershipBenefitHeadspace} alt="Membership benefit" />
               <h2 className="text-center max-w-[190px] pt-2 text-lg">{t('free-headspace-membership')}</h2>
             </article>
             <article className='flex flex-col items-center'>
