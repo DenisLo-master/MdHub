@@ -123,11 +123,11 @@ const ForYou = () => {
               <p>{t('all-our-doctors-are-canadian-licensed-and-top-rated-and-you-can-connect-to-care-in-minutes-24-7-or-you-can-book-an-appointment-online-with-one-of-our-specialists-including-dermatologists-gynecologists-naturopaths-and-endocrinologists-allowing-you-to-finally-put-your-health-first')}</p>
             </div>
             <div>
-            <button className="text-xl bg-[#1EBC91] hover:bg-white text-white hover:text-[#1EBC91] transition-all ease-out duration-300 px-10 h-[48px] rounded-[48px] border border-[#1EBC91]" type="button">
-              <Link to="/register">
-                {t('register-today')}
-              </Link>
-            </button>
+              <button className="text-xl bg-[#1EBC91] hover:bg-white text-white hover:text-[#1EBC91] transition-all ease-out duration-300 px-10 h-[48px] rounded-[48px] border border-[#1EBC91]" type="button">
+                <Link to="/register">
+                  {t('register-today')}
+                </Link>
+              </button>
             </div>
           </div>
         </article>
@@ -141,11 +141,13 @@ const ForYou = () => {
         <p className="font-body">
           {t('mdhub-was-developed-with-you-in-mind-because-there-has-to-be-a-better-way-mdhub-is-your-ultimate-healthcare-solution-and-were-committed-to-helping-you-reach-your-wellness-goals')}
         </p>
-        <button className="text-xl w-[176px] h-[48px] rounded-[48px] border border-[#1EBC91] hover:bg-[#1EBC91] transition-all ease-in-out duration-300 hover:text-white" type="button">
-          <Link to="/for-family">
-            {t('Learn More')}
-          </Link>
-        </button>
+        <div className="flex justify-center md:block">
+          <button className="text-xl w-[176px] h-[48px] rounded-[48px] border border-[#1EBC91] hover:bg-[#1EBC91] transition-all ease-in-out duration-300 hover:text-white" type="button">
+            <Link to="/for-family">
+              {t('Learn More')}
+            </Link>
+          </button>
+        </div>
       </section>
 
       <section className="relative bg-[#DB8E96] font-main mb-[8rem]">

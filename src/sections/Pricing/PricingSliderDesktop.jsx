@@ -65,7 +65,7 @@ const PricingSliderDesktop = ({ selectedPackage }) => {
               </p>
             </div>
             <div className="w-full rounded-t-[32px] bg-[#0B637B] pt-8 p-6 flex flex-col items-center">
-              <div className="text-center font-body">
+              <div className="text-center font-body pb-12">
                 <h2 className="text-6xl font-semibold">$29.99</h2>
                 <p>{t('per-month')}</p>
               </div>

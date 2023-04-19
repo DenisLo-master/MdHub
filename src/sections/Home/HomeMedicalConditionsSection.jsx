@@ -11,11 +11,11 @@ const HomeMedicalConditionsSection = () => {
   return (
 		<section className="font-main bg-home-gradient-reverse">
 			<div className="w-full max-w-7xl mx-auto px-4">
-				<h2 className="text-5xl">{t('medical-conditions-treated')}</h2>
+				<h2 className="text-4xl md:text-5xl">{t('medical-conditions-treated')}</h2>
 				<p className="w-full py-4 font-body text-xl">
 					{t('at-mdhub-we-care-for-everything-from-common-illnesses-to-chronic-diseases-and-mental-health-concerns-we-can-now-treat-a-majority-of-health-conditions-by-coupling-virtual-care-with-physical-diagnostics-with-mobile-nursing-care-patients-can-forget-the-limited-virtual-care-stigma-and-benefit-from-advance-and-proactive-control-of-their-health')}
 				</p>
-				<div className="flex flex-col-reverse gap-y-4 md:flex-row items-start text-center md:text-left">
+				<div className="flex flex-col-reverse gap-y-4 md:flex-row items-start text-left">
 					<article className="flex-1">
 						<h2 className="text-3xl text-dark pb-4">{t('our-treatments-include')}</h2>
 						<div className="max-w-[380px] space-y-4">
@@ -77,7 +77,7 @@ const HomeMedicalConditionsSection = () => {
 					<h2 className="text-4xl md:text-6xl text-center px-4 pb-7">{t('get-your-first-year-of-membership-for')} <span className="price">$359</span> $289</h2>
 					{/* <div className="absolute -top-6 right-[24%] 3xl:right-[28%] w-[2px] h-28 bg-primary transform rotate-45"></div> */}
 				</div>
-				<p className="text-lg font-body py-4">{t('receive-immediate-personalized-and-human-medical-follow-up-by-registering-with-mdhub')}</p>
+				<p className="text-lg font-body p-4">{t('receive-immediate-personalized-and-human-medical-follow-up-by-registering-with-mdhub')}</p>
 				<div className="flex justify-center">
 					<Link to="/register">
 						<button className="border border-primary text-white rounded-full group hover:ring-1 hover:ring-primary  py-2  flex justify-center items-center space-x-2  bg-[#1EBC91] px-12">

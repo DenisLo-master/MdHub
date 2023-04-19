@@ -65,15 +65,21 @@ const ServicesMentalHealth = () => {
         </h3>
         <div className="w-full max-w-4xl mx-auto flex flex-col lg:flex-row item-center justify-between text-center">
           <article className="space-y-6 lg:w-[151px] flex flex-col items-center">
-            <img src={MentalHealthImg} alt="mental health" />
+            <div className="w-[150px] h-[183px] flex justify-center items-center">
+              <img src={MentalHealthImg} alt="mental health" />
+            </div>
             <p className="font-body">{t('mental-health-physicians')}</p>
           </article>
           <article className="space-y-6 lg:w-[151px]  flex flex-col items-center">
-            <img src={HearBrainImage} alt="heart and brain" />
+            <div className="w-[150px] h-[183px] flex justify-center items-center">
+              <img src={HearBrainImage} alt="heart and brain" />
+            </div>
             <p className="md:pt-2 font-body">{t('mental-health-therapists')}</p>
           </article>
-          <article className="space-y-6 lg:w-[151px] flex flex-col items-center mt-3">
-            <img src={MeditationImage} alt="meditation" />
+          <article className="space-y-6 lg:w-[151px] flex flex-col items-center">
+            <div className="w-[150px] h-[183px] flex justify-center items-center">
+              <img src={MeditationImage} alt="meditation" />
+            </div>
             <p className="max-w-[180px] font-body">{t('headspace-wellness-and-meditation-app-0')}</p>
           </article>
         </div>

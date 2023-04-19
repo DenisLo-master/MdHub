@@ -15,7 +15,7 @@ const ServicesOnlinePharmacy = () => {
       <header className="bg-onlinePharmacy text-white w-full py-10 pb-20 relative text-center lg:text-left">
         <div className="max-w-[83rem] mx-auto flex items-center justify-between">
           <article className="space-y-5 px-4 flex flex-col items-center lg:items-start text-center w-full">
-            <h2 className="text-center lg:text-left text-[70px] lg:text-[88px] max-w-[300px] leading-[80px] pb-5">
+            <h2 className="text-center lowercase lg:text-left text-[70px] lg:text-[88px] max-w-[300px] leading-[80px] pb-5">
               {t('Online Pharmacy')}
             </h2>
             <div className="space-y-5 font-body text-lg max-w-lg">

@@ -92,7 +92,7 @@ const ForFamily = () => {
 
         <article className="bg-primary text-white py-10 px-4 lg:px-20 rounded-lg bg-linearGradientPrimary shadow-cardService">
           <h2 className="text-6xl text-center font-main pb-4">What We Can Help With</h2>
-          <ul className="font-body grid grid-cols-1 lg:grid-cols-2 gap-x-14 gap-y-2 justify-between space-y-4 font-light text-lg grid-list">
+          <ul className="hidden font-body md:grid grid-cols-1 lg:grid-cols-2 gap-x-14 gap-y-2 justify-between space-y-4 font-light text-lg grid-list">
             <li className="flex items-center gap-x-5">
               <div>
                 <OkIcon className="w-10 h-10" />
@@ -206,7 +206,118 @@ const ForFamily = () => {
             </div>
             <li className="block md:hidden">
               <Link to="/pricing">
-                <button className=" h-[48px] text-dark hover:bg-[#1EBC91] hover:text-white rounded-[48px] font-main px-10" type="button">
+                <button className=" h-[48px] text-dark bg-white hover:bg-[#1EBC91] hover:text-white rounded-[48px] font-main px-10" type="button">
+                  View Membership Plans
+                </button>
+              </Link>
+            </li>
+          </ul>
+          <ul className="flex text-left gap-y-4 font-body text-lg font-light flex-col items-center">
+            <li className="flex w-[222px] items-center gap-x-5">
+              <div>
+                <OkIcon className="w-10 h-10" />
+              </div>
+              <span>Routine checkups</span>
+            </li>
+            <li className="flex w-[222px] items-center gap-x-5">
+              <div>
+                <OkIcon className="w-10 h-10" />
+              </div> <span>Parenting support</span>
+            </li>
+            <li className="flex w-[222px] items-center gap-x-5">
+              <div>
+                <OkIcon className="w-10 h-10" />
+              </div> <span>Nutrition</span>
+            </li>
+            <div>
+              <li className="flex w-[222px] items-center gap-x-5">
+                <div>
+                  <OkIcon className="w-10 h-10" />
+                </div> <span>Newborn care</span>
+              </li>
+            </div>
+            <li className="flex w-[222px] items-center gap-x-5">
+              <div>
+                <OkIcon className="w-10 h-10" />
+              </div> <span>Cold and flu</span>
+            </li>
+            <div>
+              <li className="flex w-[222px] items-center gap-x-5">
+                <div>
+                  <OkIcon className="w-10 h-10" />
+                </div> <span>Infant care</span>
+              </li>
+            </div>
+            <li className="flex w-[222px] items-center gap-x-5">
+              <div>
+                <OkIcon className="w-10 h-10" />
+              </div> <span>Fever and illnesses</span>
+            </li>
+            <div>
+              <li className="flex w-[222px] items-center gap-x-5">
+                <div>
+                  <OkIcon className="w-10 h-10" />
+                </div> <span>Minor injuries</span>
+              </li>
+            </div>
+            <li className="flex w-[222px] items-center gap-x-5">
+              <div>
+                <OkIcon className="w-10 h-10" />
+              </div> <span>Ear aches</span>
+            </li>
+            <div>
+              <li className="flex w-[222px] items-center gap-x-5">
+                <div>
+                  <OkIcon className="w-10 h-10" />
+                </div> <span className="text-left">Behaviour issues and mental health</span>
+              </li>
+            </div>
+            <li className="flex w-[222px] items-center gap-x-5">
+              <div>
+                <OkIcon className="w-10 h-10" />
+              </div> <span>Sinus infections</span>
+            </li>
+            <div>
+              <li className="flex w-[222px] items-center gap-x-5">
+                <div>
+                  <OkIcon className="w-10 h-10" />
+                </div> <span>Concussions</span>
+              </li>
+            </div>
+            <li className="flex w-[222px] items-center gap-x-5">
+              <div>
+                <OkIcon className="w-10 h-10" />
+              </div> <span>Allergies and asthma</span>
+            </li>
+            <div>
+              <li className="flex w-[222px] items-center gap-x-5">
+                <div>
+                  <OkIcon className="w-10 h-10" />
+                </div> <span>COVID-19 testing</span>
+              </li>
+            </div>
+            <li className="flex w-[222px] items-center gap-x-5">
+              <div>
+                <OkIcon className="w-10 h-10" />
+              </div> <span>Rashes and skin issues</span>
+            </li>
+            <div>
+              <li className="flex w-[222px] items-center gap-x-5">
+                <div>
+                  <OkIcon className="w-10 h-10" />
+                </div> <span>Routine vaccinations</span>
+              </li>
+            </div>
+            <div>
+              <li className="flex w-[222px] items-center gap-x-5">
+                <div>
+                  <OkIcon className="w-10 h-10" />
+                </div> <span>+Much more</span>
+              </li>
+            </div>
+            <li className="block md:hidden">
+              <Link to="/pricing">
+                <button className=" h-[48px] text-dark bg-white hover:bg-[#1EBC91] hover:text-white rounded-[48px] font-main px-10" type="button">
                   View Membership Plans
                 </button>
               </Link>
