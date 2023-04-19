@@ -20,6 +20,8 @@ const PersonalInfo = () => {
     }
   }
 
+
+
   const handleDateChange = (e) => {
     let input = e.target.value;
     if (input.length < previousLength) { // Backspace key
@@ -31,7 +33,7 @@ const PersonalInfo = () => {
     } else if (input.length === 5 && input.charAt(2) === "/") {
       input += "/";
     }
-    console.log(input)
+    
     handleRegisterationFormDataChange(e.target.name, input)
     setPreviousLength(input.length);
   }
