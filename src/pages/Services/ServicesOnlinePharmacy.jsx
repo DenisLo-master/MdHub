@@ -150,7 +150,7 @@ const ServicesOnlinePharmacy = () => {
               {t('get-top-tier-service-at-a-great-price-when-you-use-our-online-pharmacy-you-only-pay-the-amount-that-isnt-covered-by-your-insurance')}
             </p>
             <Link className="block" to="/register">
-              <button className="rounded-full w-full text-lg flex justify-center py-2 border-none bg-[#3F3F3F] text-white font-helvetica">
+              <button className="rounded-full w-full text-lg flex justify-center py-2 border-none transition-all ease-out duration-300 bg-[#3F3F3F] hover:bg-[#1EBC91] text-white font-helvetica">
                 {t('sign-up-today')}
               </button>
             </Link>
