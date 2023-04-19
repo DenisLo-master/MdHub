@@ -189,6 +189,10 @@ const SignupStepThree = () => {
                     <h3>${individualYearlyFee}/{t('month')}</h3>
                   </div>
                   <div className="flex justify-between">
+                    <h2 className="font-semibold">12 x {t('mdhub-individual-membership')}</h2>
+                    <h3>${calculatePricing("individualYearly").totalAmount.toFixed(2)}</h3>
+                  </div>
+                  <div className="flex justify-between">
                     <h2 className="font-semibold">{t('subtotal')}</h2>
                     <h3>${calculatePricing("individualYearly").totalAmount.toFixed(2)}</h3>
                   </div>
@@ -237,6 +241,10 @@ const SignupStepThree = () => {
                   <div className="flex justify-between">
                     <h2 className="font-semibold">{t('mdhub-family-membership')}</h2>
                     <h3>${familyYearlyFee}/{t('month')}</h3>
+                  </div>
+                  <div className="flex justify-between">
+                    <h2 className="font-semibold">12 x {t('mdhub-family-membership')}</h2>
+                    <h3>${calculatePricing("familyYearly").totalAmount.toFixed(2)}</h3>
                   </div>
                   <div className="flex justify-between">
                     <h2 className="font-semibold">{t('subtotal')}</h2>
