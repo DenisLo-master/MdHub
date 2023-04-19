@@ -79,7 +79,7 @@ const CorporateOverview = () => {
             </li>
             <li className="absolute lg:-bottom-7 -bottom-16 left-4 lg:left-36">
               <Link className="block" to="/register">
-                <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white border-white text-primary font-main">
+                <button className="rounded-full w-[240px] text-lg flex justify-center py-3 border bg-white hover:bg-[#1EBC91] border-white hover:border-[#1EBC91] text-primary hover:text-white transition-all ease-out duration-300 font-main">
                   {t('sign-up-today')}
                 </button>
               </Link>
@@ -121,17 +121,17 @@ const CorporateOverview = () => {
               to="/register"
               onClick={() => changeSelectedAccountType("corporate")}
             >
-              <button className={`rounded-full text-xl group hover:ring-1 ring-[#1EBC91] hover:bg-[#1EBC91] hover:text-white px-10 py-2 border flex justify-center items-center space-x-2  border-[#1EBC91] bg-transparent`}>
+              <button className={`rounded-full text-xl transition-all ease-in-out duration-300 group hover:ring-1 ring-[#1EBC91] hover:bg-[#1EBC91] hover:text-white px-10 py-2 border flex justify-center items-center space-x-2  border-[#1EBC91] bg-transparent`}>
                 5-10 {t('employees')}
               </button>
             </Link>
             <a href="mailto:info@mdhub.com?subject=Corporate%20Inquiry%20-%2010%2B%20Employees">
-              <button className={`rounded-full text-xl group hover:ring-1 ring-[#1EBC91] hover:bg-[#1EBC91] hover:text-white px-10 py-2 border flex justify-center items-center space-x-2  border-[#1EBC91] bg-transparent`}>
+              <button className={`rounded-full text-xl transition-all ease-in-out duration-300 group hover:ring-1 ring-[#1EBC91] hover:bg-[#1EBC91] hover:text-white px-10 py-2 border flex justify-center items-center space-x-2  border-[#1EBC91] bg-transparent`}>
                 10-50 {t('employees')}
               </button>
             </a>
             <a href="mailto:info@mdhub.com?subject=Corporate%20Inquiry%20-%2010%2B%20Employees">
-              <button className={`rounded-full text-xl group hover:ring-1 ring-[#1EBC91] hover:bg-[#1EBC91] hover:text-white px-10 py-2 border flex justify-center items-center space-x-2  border-[#1EBC91] bg-transparent`}>
+              <button className={`rounded-full text-xl transition-all ease-in-out duration-300 group hover:ring-1 ring-[#1EBC91] hover:bg-[#1EBC91] hover:text-white px-10 py-2 border flex justify-center items-center space-x-2  border-[#1EBC91] bg-transparent`}>
                 51+ {t('employees-0')}
               </button>
             </a>
@@ -165,23 +165,6 @@ const CorporateOverview = () => {
               {t('your-corporate-membership-is-tax-deductible-but-it-also-means-less-out-of-pocket-expenses-for-your-people-plus-you-can-feel-good-knowing-theyre-well-taken-care-of')}
             </p>
           </article>
-        </div>
-      </section>
-
-      <section className="max-w-[1130px] mx-auto py-20 space-y-16 px-4">
-        <div className="space-y-6 text-center">
-          <h2 className="text-dark text-4xl pb-4">
-            "{t('mental-well-being-coverage-has-provided-us-with-the-tools-to-make-a-difference-in-the-lives-of-our-employees-and-each-other')}”
-          </h2>
-          <h3 className="text-xl">
-            {t('we-cover-some-of-canadas-finest')}
-          </h3>
-          <div className="flex justify-around lg:justify-center flex-wrap gap-y-7 items-center gap-x-16">
-            <img className="max-w-[149px]" src={PartnerCompany01} alt="Air Canada" />
-            <img className="max-w-[156px]" src={PartnerCompany02} alt="Sotherbys" />
-            <img className="max-w-[147px]" src={PartnerCompany03} alt="Air BNB" />
-            <img className="max-w-[153px]" src={PartnerCompany04} alt="Four Seasons" />
-          </div>
         </div>
       </section>
     </section>
