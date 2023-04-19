@@ -212,7 +212,7 @@ const ForFamily = () => {
               </Link>
             </li>
           </ul>
-          <ul className="block md:flex text-left gap-y-4 font-body text-lg font-light flex-col items-center">
+          <ul className="block md:hidden text-left gap-y-4 font-body text-lg font-light flex-col items-center">
             <li className="flex w-[222px] items-center gap-x-5">
               <div>
                 <OkIcon className="w-10 h-10" />
@@ -315,7 +315,7 @@ const ForFamily = () => {
                 </div> <span>+Much more</span>
               </li>
             </div>
-            <li className="block md:hidden">
+            <li className="block md:hidden pt-6">
               <Link to="/pricing">
                 <button className=" h-[48px] text-dark bg-white hover:bg-[#1EBC91] hover:text-white rounded-[48px] font-main px-10" type="button">
                   View Membership Plans
