@@ -20,7 +20,7 @@ const MentalHealthServices = () => {
   const { i18n, t } = useTranslation()
   return (
     <section className="bg-[#F6E2B0] text-dark w-full lg:h-[530px] py-10 relative">
-      <div className="max-w-[83rem] mx-auto flex flex-col justify-center h-full">
+      <div className="max-w-[83rem] mx-auto flex flex-col">
         <article className="px-4 space-y-5 flex flex-col items-center lg:items-start text-center">
           <h2 className="text-5xl lg:text-[48px] text_black font-semibold max-w-lg text-left">
             {t('get-care-for-your-mental-health')}
