@@ -212,7 +212,7 @@ const ForFamily = () => {
               </Link>
             </li>
           </ul>
-          <ul className="flex text-left gap-y-4 font-body text-lg font-light flex-col items-center">
+          <ul className="block md:flex text-left gap-y-4 font-body text-lg font-light flex-col items-center">
             <li className="flex w-[222px] items-center gap-x-5">
               <div>
                 <OkIcon className="w-10 h-10" />
