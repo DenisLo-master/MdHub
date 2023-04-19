@@ -21,8 +21,8 @@ const SignupStepThree = () => {
   const calculatePricing = (accountType) => {
     const individualMonthlyPrice = 29.99 * 3
     const individualYearlyPrice = 24.99 * 12
-    const familyMonthlyPrice = 54.99 * 3
-    const familyYearlyPrice = 44.99 * 12
+    const familyMonthlyPrice = 49.99 * 3
+    const familyYearlyPrice = 39.99 * 12
     const corporatePrice = 19.99 * 12 * (childForms.length + 1)
     const onDemandPrice = 89.99
     const taxFactor = 0.14975
@@ -103,19 +103,19 @@ const SignupStepThree = () => {
                 <div className="w-[53px] h-[47px] flex justify-center items-center">
                   <img src={MembershipBenefit04} alt="Membership Benefit" />
                 </div>
-                <p className="text-sm max-w-[130px] leading-4 pt-1">{t('free-headspace-membership')}</p>
+                <p className="text-sm max-w-[130px] leading-4 pt-1">{t('access-to-qualified-mobile-nurses')}</p>
               </article>
               <article className="flex flex-col items-center text-center">
                 <div className="w-[53px] h-[47px] flex justify-center items-center">
                   <img src={MembershipBenefit05} alt="Membership Benefit" />
                 </div>
-                <p className="text-sm max-w-[130px] leading-4 pt-1">{t('free-headspace-membership')}</p>
+                <p className="text-sm max-w-[130px] leading-4 pt-1">{t('access-specialist-doctors-at-discounted-rates')}</p>
               </article>
               <article className="flex flex-col items-center text-center">
                 <div className="w-[53px] h-[47px] flex justify-center items-center">
                   <img src={MembershipBenefit06} alt="Membership Benefit" />
                 </div>
-                <p className="text-sm max-w-[130px] leading-4 pt-1">{t('free-headspace-membership')}</p>
+                <p className="text-sm max-w-[130px] leading-4 pt-1">{t('fast-and-convenient-lab-testing-and-diagnostics')}</p>
               </article>
             </div>
           </article>
