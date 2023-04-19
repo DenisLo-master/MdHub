@@ -16,7 +16,7 @@ import FAQ from "../../components/FAQ.jsx"
 const WORDS = ['anxiety', 'mood changes', 'depression', 'seasonal depression', "insomnia", "stress"]
 
 const ServicesMentalHealth = () => {
-  const { t } = useTranslation()
+  const { i18n, t } = useTranslation()
   return (
     <section className="font-main bg-white py-10">
       <header className="bg-mentalHealth  text-white w-full py-10">
@@ -89,7 +89,7 @@ const ServicesMentalHealth = () => {
             {t('you-can-think-of-headspace-as-your-minds-best-friend-through-science-backed-meditation-and-mindfulness-tools-headspace-helps-you-create-life-changing-habits-to-support-your-mental-health-and-find-a-healthier-happier-you-with-your-mdhub-membership-you-can-enjoy-3-months-free-with-your-mdhub-membership-download-the-app-and-start-feeling-better-in-just-a-few-minutes-a-day')}
           </p>
           <p className="font-body">
-            {t('Download the app and start feeling better in just a few minutes a day.')}
+            {t('download-the-app-and-start-feeling-better-in-just-a-few-minutes-a-day')}
           </p>
         </div>
       </section>
@@ -98,19 +98,19 @@ const ServicesMentalHealth = () => {
           <div>
             <h2 className="text-4xl text-left">{t('how-it-works')}</h2>
             <p className="font-body py-7">
-              {t('Our frontline care can be accessed 24/7 by simply logging into your virtual doctor platform and seeing a general doctor. For a more specialized practitioner, members are encouraged to book an on-demand appointment with a mental health physician or therapist.')}
+              {t('our-frontline-care-can-be-accessed-24-7-by-simply-logging-into-your-virtual-doctor-platform-and-seeing-a-general-doctor-for-a-more-specialized-practitioner-members-are-encouraged-to-book-an-on-demand-appointment-with-a-mental-health-physician-or-therapist')}
             </p>
           </div>
           <div className='flex justify-between'>
             <article className="w-full max-w-[528px] bg-[#ECB118] py-5 px-8 rounded-lg">
-              <h2 className="text-3xl">{t('See a mental health therapist')}</h2>
+              <h2 className="text-3xl">{t('see-a-mental-health-therapist')}</h2>
               <p className="font-body py-7">
-                {t('Access your MDHUB account and navigate to the specialists menu. Select "Mental Health Physician" from the options provided. Then, pick a suitable date and time. You can discuss your mental health concerns during an initial assessment or follow-up session with a mental health physician.')}
+                {t('access-your-mdhub-account-and-navigate-to-the-specialists-menu-select-mental-health-physician-from-the-options-provided-then-pick-a-suitable-date-and-time-you-can-discuss-your-mental-health-concerns-during-an-initial-assessment-or-follow-up-session-with-a-mental-health-physician')}
               </p>
               <Link to="/register">
                 <button
                   type="button"
-                  className={`rounded-full font-main group py-2 border-none flex justify-center items-center space-x-2  bg-[#3F3F3F] px-4 flex w-full text-white`}
+                  className={`rounded-full font-main group py-2 border-none justify-center items-center space-x-2 transition-all ease-out duration-300  bg-[#3F3F3F] hover:bg-[#1EBC91] px-4 flex w-full text-white`}
                 >
                   {t('sign-up-today')}
                 </button>
@@ -119,12 +119,12 @@ const ServicesMentalHealth = () => {
             <article className="w-full max-w-[528px] bg-[#ECB118] py-5 px-8">
               <h2 className="text-3xl">{t('see-a-mental-health-therapist')}</h2>
               <p className="font-body py-7">
-                {t('Talk to a mental health therapist without scheduling an appointment. Simply access your MDHUB account and navigate to the specialists menu. Select “Mental Health Therapist” from the options provided and choose the topic you’d like to discuss, then book a session.')}
+                {t('talk-to-a-mental-health-therapist-without-scheduling-an-appointment-simply-access-your-mdhub-account-and-navigate-to-the-specialists-menu-select-mental-health-therapist-from-the-options-provided-and-choose-the-topic-youd-like-to-discuss-then-book-a-session')}
               </p>
-              <Link to="/register">
+              <Link className={`${i18n.language !=="en" && "pt-4"} block`} to="/register">
                 <button
                   type="button"
-                  className={`rounded-full font-main group  py-2 border-none flex justify-center items-center space-x-2  bg-[#3F3F3F] px-4 flex w-full text-white mt-1`}
+                  className={`rounded-full font-main group  py-2 border-none justify-center items-center space-x-2  bg-[#3F3F3F] hover:bg-[#1EBC91] transition-all ease-out duration-300 px-4 flex w-full text-white mt-1`}
                 >
                   {t('sign-up-today')}
                 </button>
