@@ -100,7 +100,7 @@ const ForYou = () => {
             {t('members-have-full-control-of-when-and-how-they-access-medical-services-and-can-benefit-from-being-proactive-with-their-care-choices')}
           </p>
         </div>
-        <div>
+        <div className="pt-6">
           <button className="text-xl bg-[#1EBC91] hover:bg-white text-white hover:text-[#1EBC91] transition-all ease-out duration-300 px-10 h-[48px] rounded-[48px] border border-[#1EBC91]" type="button">
             <Link to="/register">
               {t('register-today')}
