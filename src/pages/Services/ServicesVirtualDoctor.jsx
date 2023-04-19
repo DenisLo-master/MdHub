@@ -150,7 +150,7 @@ const ServicesVirtualDoctor = () => {
             <Link to="/register">
               <button
                 type="button"
-                className={`rounded-full w-[480px] group hover:ring-1 hover:ring-primary py-2 border flex justify-center items-center space-x-2  border-none bg-[#3F3F3F] text-white font-helvetica px-4 font-normal`}
+                className={`rounded-full w-[480px] group hover:ring-1 hover:ring-[#1EBC91] py-2 border flex justify-center items-center space-x-2  border-none bg-[#3F3F3F] hover:bg-[#1EBC91] transition-all ease-out duration-300 text-white font-helvetica px-4 font-normal`}
               >
                 {t('sign-up-today')}
               </button>
