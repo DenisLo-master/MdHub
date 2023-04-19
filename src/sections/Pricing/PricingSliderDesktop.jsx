@@ -136,7 +136,7 @@ const PricingSliderDesktop = ({ selectedPackage }) => {
 
           <article className="max-w-[400px] flex flex-col items-center rounded-t-[32px] bg-[#299EBF] text-white">
             <div className="text-center p-8">
-              <h2 className="text-3xl font-main pb-2">{t('monthly')}</h2>
+              <h2 className="text-3xl font-main pb-12">{t('monthly')}</h2>
               <p className="font-body leading-5">{t('a-preferred-monthly-rate-to-have-full-access-to-all-of-our-services')}
               </p>
             </div>
