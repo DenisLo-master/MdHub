@@ -20,9 +20,9 @@ const ServicesMentalHealth = () => {
   return (
     <section className="font-main bg-white py-10">
       <header className="bg-mentalHealth  text-white w-full py-10">
-        <div className="max-w-[86rem] mx-auto flex items-center justify-between px-4">
+        <div className="max-w-[83rem] mx-auto flex items-center justify-between px-4">
           <article className="space-y-5 flex flex-col items-center lg:items-start text-center w-full">
-            <h2 className="w-full text-center lg:text-left text-[44px] lg:text-[88px] leading-[90px] max-w-[280px]">
+            <h2 className="w-full text-center lg:text-left text-[44px] lg:text-[88px] leading-[90px] max-w-[260px]">
               {t('mental health')}
             </h2>
             <p className="text-center lg:text-left font-body text-lg max-w-lg py-3">

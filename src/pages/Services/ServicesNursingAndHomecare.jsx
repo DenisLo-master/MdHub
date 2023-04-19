@@ -15,10 +15,10 @@ const ServicesNursingAndHomecare = () => {
 
   return (
     <section className="py-10 font-main">
-      <header className={`bg-nursingHomecare text-white w-full ${i18n.language === "en" ? "lg:h-[560px]" : "lg:h-[650px]"} py-10 relative text-center lg:text-left`}>
+      <header className={`bg-nursingHomecare text-white w-full py-10 relative text-center lg:text-left`}>
         <div className="max-w-[83rem] mx-auto">
           <article className="space-y-5 px-4 flex flex-col items-center lg:items-start text-center w-full">
-            <h2 className="text-center lg:text-left text-[55px] lg:text-[88px]">
+            <h2 className="text-center lg:text-left text-[55px] lg:text-[88px] max-w-[340px] leading-[5rem]">
               {t('nursing-and-homecare')}
             </h2>
             <div className="space-y-3 leading-6 font-body text-lg max-w-lg">
