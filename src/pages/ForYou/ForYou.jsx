@@ -141,7 +141,7 @@ const ForYou = () => {
         <p className="font-body">
           {t('mdhub-was-developed-with-you-in-mind-because-there-has-to-be-a-better-way-mdhub-is-your-ultimate-healthcare-solution-and-were-committed-to-helping-you-reach-your-wellness-goals')}
         </p>
-        <button className="text-xl w-[176px] h-[48px] rounded-[48px] border border-primary" type="button">
+        <button className="text-xl w-[176px] h-[48px] rounded-[48px] border border-[#1EBC91] hover:bg-[#1EBC91] transition-all ease-in-out duration-300 hover:text-white" type="button">
           <Link to="/for-family">
             {t('Learn More')}
           </Link>
