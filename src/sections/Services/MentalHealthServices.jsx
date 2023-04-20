@@ -22,7 +22,7 @@ const MentalHealthServices = () => {
     <section className="bg-[#F6E2B0] text-dark w-full lg:h-[530px] py-10 relative">
       <div className="max-w-[83rem] mx-auto flex flex-col">
         <article className="px-8 space-y-5 flex flex-col items-center lg:items-start text-center">
-          <h2 className="text-5xl lg:text-[48px] text_black font-semibold max-w-lg text-center md:text-left">
+          <h2 className="text-5xl lg:text-[48px] text_black max-w-lg text-center md:text-left">
             {t('get-care-for-your-mental-health')}
           </h2>
           <div className="space-y-5 font-body text-lg max-w-lg">

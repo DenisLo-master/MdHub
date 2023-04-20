@@ -23,7 +23,7 @@ const VirtualDoctorServices = () => {
     <section className="bg-[#DDD8FF] text-dark w-full lg:h-[530px] py-10 relative px-8">
       <div className="max-w-[83rem] mx-auto flex flex-col justify-center h-full">
         <article className="space-y-5 flex flex-col items-center lg:items-start text-center">
-          <h2 className="text-5xl lg:text-[48px] text_black font-semibold max-w-lg text-center md:text-left">
+          <h2 className="text-5xl lg:text-[48px] text_black  max-w-lg text-center md:text-left">
             {t('most-medical-conditions-can-be-treated-online')}
           </h2>
           <div className="space-y-5 font-body text-lg max-w-lg">
