@@ -36,8 +36,8 @@ const ServicesOnlinePharmacy = () => {
           <img className="hidden lg:block absolute right-0 top-16" src={OnlinePharmacyBanner} alt="virtual doctor" />
         </div>
       </header>
-      <section className="bg-white pt-14">
-        <div className="relative virtual-health text-center flex justify-center flip-words mb-32">
+      <section className="bg-white pt-8 md:pt-14">
+        <div className="relative virtual-health text-center flex justify-center flip-words mb-20 md:mb-32">
           <h2 className="text-primary text-center text-[2.2rem] md:text-5xl lg:text-6xl">
             {t('get-help-for')}
           </h2>

@@ -41,7 +41,7 @@ const ServicesMentalHealth = () => {
       </header>
 
       <section className="bg-white py-8 lg:py-14">
-        <div className="relative virtual-health text-center flex justify-center flip-words mb-32 px-4">
+        <div className="relative virtual-health text-center flex justify-center flip-words mb-20 md:mb-32 px-4">
           <h2 className="text-primary text-center text-[2.2rem] md:text-5xl lg:text-6xl">
             {t('get-help-for')}
           </h2>

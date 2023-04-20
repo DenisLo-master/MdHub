@@ -38,8 +38,8 @@ const ServicesNursingAndHomecare = () => {
           <img className="hidden lg:block absolute right-0 top-0 h-full" src={NursingAndHomecareBanner} alt="Nursing and Homecare" />
         </div>
       </header>
-      <section className="bg-white py-5">
-        <div className="relative virtual-health text-center flex justify-center flip-words mb-20">
+      <section className="bg-white py-8 md:py-14">
+        <div className="relative virtual-health text-center flex justify-center flip-words mb-20 md:mb-32">
           <h2 className="text-primary text-center text-[2.2rem] md:text-5xl lg:text-6xl">
             {t('get-help-for')}
           </h2>
