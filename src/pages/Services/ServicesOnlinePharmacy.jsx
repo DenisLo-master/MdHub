@@ -60,7 +60,7 @@ const ServicesOnlinePharmacy = () => {
           </h2>
           <section className="w-full max-w-7xl space-y-6 mx-auto">
             <div className="font-body flex flex-col gap-y-3 text-center">
-              <p className='max-w-5xl'>
+              <p className='w-full max-w-5xl mx-auto'>
                 <Trans
                   i18nKey="if-you-already-have-a-prescription-follow-the-steps-below-for-a-less-than-strong-greater-than-new-prescription-less-than-strong-greater-than-first-visit-our-less-than-strong-greater-than-virtual-care-less-than-strong-greater-than-link-from-your-user-dashboard-to-see-a-doctor-and-obtain-one-once-finished-directly-click-to-transfer-it-to-our-pharmacy-affiliate-medzy-or-choose-your-own-local-pharmacy"
                 />
