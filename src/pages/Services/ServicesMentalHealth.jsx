@@ -49,7 +49,7 @@ const ServicesMentalHealth = () => {
             <div className="w-full h-16 overflow-y-hidden flex justify-center">
               {
                 WORDS.map(word => (
-                  <span className="text-5xl md:text-6xl">
+                  <span className="lowercase text-5xl md:text-6xl">
                     {t(`${word}`)}
                   </span>
                 ))
