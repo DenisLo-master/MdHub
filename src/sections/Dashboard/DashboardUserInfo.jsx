@@ -45,7 +45,7 @@ const DashboardUserInfo = () => {
           <article className="space-y-10">
             <div>
               <p className="text-sm">{t('your-current-subscription-plan')}</p>
-              <h2 className="font-bold text-2xl tracking-widest">{`${userInfo?.accountType} ${userInfo?.paymentMode}`}</h2>
+              <h2 className="font-bold text-2xl">{`${userInfo?.accountType} ${userInfo?.paymentMode}`}</h2>
             </div>
             <div>
               <h2 className="font-bold text-4xl">$
@@ -66,7 +66,7 @@ const DashboardUserInfo = () => {
           </article>
           <article>
             <Link to="/dashboard/update-billing">
-              <button type="button" className={`rounded-full font-main text-lg group hover:ring-1 hover:ring-primary px-12 py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+              <button type="button" className={`rounded-full font-main text-lg group hover:ring-1 hover:ring-primary px-12 py-2 border flex justify-center items-center space-x-2 mx-auto  border-primary bg-transparent`}>
                 {t('manage')}
               </button>
             </Link>
