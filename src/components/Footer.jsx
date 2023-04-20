@@ -18,11 +18,11 @@ const Footer = () => {
           <h2 className="text-3xl pb-4">
             {t('sign-up-now-for-29-99-per-month')}
           </h2>
-          <Link to="/register" className="block">
-            <button type="button" className={`${i18n.language === "fr" ? "w-[200px]" : "w-[185px]"} bg-[#1EBC91] rounded-full text-white py-2`}>
-              {t('sign-up-today')}
-            </button>
-          </Link>
+          <Link to="/register">
+						<button className="border border-[#1EBC91] text-white hover:text-[#1EBC91] rounded-full group hover:ring-1 hover:ring-primary  py-2  flex justify-center items-center space-x-2  bg-[#1EBC91] hover:bg-white transition-all ease-in-out duration-300 px-12">
+							<span>{t('sign-up-today')}</span>
+						</button>
+					</Link>
         </div>
         )
       }

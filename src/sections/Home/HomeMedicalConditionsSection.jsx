@@ -67,13 +67,13 @@ const HomeMedicalConditionsSection = () => {
 			</div>
 			<div className="text-center py-10 px-8">
 				<div>
-					<h2 className="text-4xl md:text-6xl text-center px-4 pb-7">{t('get-your-first-year-of-membership-for')} <span className="price">$359</span> $289</h2>
+					<h2 className="text-4xl md:text-6xl text-center px-4">{t('get-your-first-year-of-membership-for')}  $289 <span className="price">$359</span></h2>
 					{/* <div className="absolute -top-6 right-[24%] 3xl:right-[28%] w-[2px] h-28 bg-primary transform rotate-45"></div> */}
 				</div>
 				<p className="text-lg font-body p-4">{t('receive-immediate-personalized-and-human-medical-follow-up-by-registering-with-mdhub')}</p>
 				<div className="flex justify-center">
 					<Link to="/register">
-						<button className="border border-primary text-white rounded-full group hover:ring-1 hover:ring-primary  py-2  flex justify-center items-center space-x-2  bg-[#1EBC91] px-12">
+						<button className="border border-[#1EBC91] text-white hover:text-[#1EBC91] rounded-full group hover:ring-1 hover:ring-primary  py-2  flex justify-center items-center space-x-2  bg-[#1EBC91] hover:bg-white transition-all ease-in-out duration-300 px-12">
 							<span>{t('sign-up-today')}</span>
 						</button>
 					</Link>
