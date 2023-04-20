@@ -57,7 +57,7 @@ const PersonalInfo = () => {
               name="phone"
               type="tel"
               value={registerationFormData.phone}
-              onChange={({target}) => handleRegisterationFormDataChange("gender", target.value)}
+              onChange={({target}) => handleRegisterationFormDataChange("phone", target.value)}
               required
             />
           </div>
@@ -72,6 +72,9 @@ const PersonalInfo = () => {
               className="rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary"
               mask="99/99/9999"
               placeholder="MM/DD/YYYY"
+              required
+              pattern='^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/((19|20)\d\d)$'
+              title="Please follow this format MM/DD/YYYY"
             />
         </div>
         <div className="flex flex-col gap-y-2 font-body">
