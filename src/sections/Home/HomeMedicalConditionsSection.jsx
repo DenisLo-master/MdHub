@@ -55,7 +55,7 @@ const HomeMedicalConditionsSection = () => {
 								<h2 className="text-2xl text-primary">{t('many-more-0')}</h2>
 							</article>
 							<article>
-								<Link to="/services" className="flex gap-x-1 font-body font-semibold">
+								<Link to="/services" className="flex gap-x-1 font-body">
 									<span className="pt-1">{t('explore-all-our-services-and-treatments')}</span>
 									<ChevronRight className="text-primary w-4" />
 								</Link>
@@ -67,7 +67,7 @@ const HomeMedicalConditionsSection = () => {
 			</div>
 			<div className="text-center py-10 px-8">
 				<div>
-					<h2 className="text-4xl md:text-5xl text-center px-4">{t('get-your-first-year-of-membership-for')}  $289 <span className="price">$359</span></h2>
+					<h2 className="text-3xl md:text-4xl text-center px-4">{t('get-your-first-year-of-membership-for')}  $289 <span className="price">$359</span></h2>
 					{/* <div className="absolute -top-6 right-[24%] 3xl:right-[28%] w-[2px] h-28 bg-primary transform rotate-45"></div> */}
 				</div>
 				<p className="text-lg font-body p-4">{t('receive-immediate-personalized-and-human-medical-follow-up-by-registering-with-mdhub')}</p>
