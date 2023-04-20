@@ -120,7 +120,7 @@ const ServicesOnlinePharmacy = () => {
           </section>
         </div>
 
-        <section className="flex flex-col items-center lg:flex-row justify-center gap-x-8 py-12">
+        <section className="flex flex-col items-center lg:flex-row justify-center gap-x-8 py-5">
           <article className="w-full font-body max-w-lg rounded bg-[#90C387] text-white p-6 md:p-8 space-y-5">
             <h3 className="text-lg font-semibold">{t('invoice')}</h3>
             <ul className="space-y-3">

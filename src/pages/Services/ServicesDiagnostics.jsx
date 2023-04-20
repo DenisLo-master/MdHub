@@ -57,8 +57,8 @@ const ServicesDiagnostics = () => {
       </section>
 
 
-      <section className="bg-white py-10">
-        <h2 className="text-4xl pb-10 text-center">
+      <section className="bg-white">
+        <h2 className="text-4xl  text-center">
           {t('How It Works')}
         </h2>
         <section className="w-full max-w-6xl space-y-6 mx-auto">

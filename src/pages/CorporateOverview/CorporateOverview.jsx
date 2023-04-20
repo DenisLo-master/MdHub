@@ -35,7 +35,7 @@ const CorporateOverview = () => {
           </h2>
           <ul className="flex flex-col lg:flex-row justify-center flex-wrap font-body text-white gap-x-16 gap-y-8 relative">
             <li className="flex lg:w-[380px] gap-x-2">
-              <OkIconWhite className="md:w-6 md:h-6" />
+              <OkIconWhite className="w-6 h-6" />
               <p className="w-full">
                 {t('integrated-mental-health-care-to-support-your-employees-individual-needs')}
               </p>
@@ -113,7 +113,7 @@ const CorporateOverview = () => {
 
       <section className="w-full max-w-[1130px] mx-auto font-main px-4">
         <div>
-          <p className="font-body text-xl text-center py-8 font-light">
+          <p className="font-body text-xl text-center px-5 py-8 font-light">
             {t('we-offer-corporate-plans-to-suit-any-size-of-business')}
           </p>
           <div className="flex flex-col lg:flex-row items-center gap-y-6 justify-center gap-x-12">
@@ -149,7 +149,7 @@ const CorporateOverview = () => {
             <h2 className="text-2xl max-w-[250px]">{t('whole-person-care-anytime-anywhere')}</h2>
             <p className="font-body pt-2 pb-4">
               {t('support-every-person-on-your-team-with-access-to-quality-healthcare-available-24-7-like-virtual-appointments-and-prescription-delivery')}
-            </p> 
+            </p>
           </article>
           <article className="max-w-[280px] flex flex-col items-center">
             <img src={CorporateBenefitsIcon02} alt="Corporate Benefits" />
