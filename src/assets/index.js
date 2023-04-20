@@ -24,6 +24,7 @@ import { ReactComponent as MentalHealthIcon } from './mental-health-icon.svg'
 import { ReactComponent as VirtualDoctorIcon } from './virtual-doctor-icon.svg'
 import { ReactComponent as StethoscopeIcon } from './stethoscope-icon.svg'
 import { ReactComponent as StethoscopeIconWhite } from './stethoscope-icon-white.svg'
+import StethoscopeDiagnostic from "./stethoscope-icon-white.svg"
 import { ReactComponent as StethoscopeIconBlack } from './stethoscopeblack.svg'
 import { ReactComponent as NursingHomecareIcon } from './nursing-homecare-icon.svg'
 import { ReactComponent as OnlinePharmacyIcon } from './online-pharmacy-icon.svg'
@@ -200,6 +201,7 @@ import Orange from './orange.png'
 import OrangeFrench from './orange-french.png'
 
 export {
+  StethoscopeDiagnostic,
   PinkFrench,
   GreenFrench,
   OrangeFrench,

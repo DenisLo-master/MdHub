@@ -92,6 +92,7 @@ input:checked+.toggle-switch .toggle-circle {
 
 .slick-mobile .slick-slider .slick-arrow.slick-prev {
   left: 0px;
+  z-index: 100 !important;
 }
 
 .slick-mobile .slick-slider .slick-arrow.slick-next {

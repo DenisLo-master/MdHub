@@ -6,7 +6,7 @@ import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-ico
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { SliderMentalHealth, SliderVirtualCare, RedirectIcon, SliderOnlinePharmacy, SliderNursingHomecare, SliderDiagnostics, StethoscopeIconWhite } from '../assets';
+import { SliderMentalHealth, SliderVirtualCare, RedirectIcon, SliderOnlinePharmacy, SliderNursingHomecare, SliderDiagnostics, StethoscopeIconWhite, StethoscopeDiagnostic } from '../assets';
 
 const HomepageSlider = () => {
   const { t, i18n } = useTranslation()
@@ -54,8 +54,8 @@ const HomepageSlider = () => {
   return (
     <section className="pb-6">
       <div className="font-main px-4 md:px-8 w-full max-w-[1350px] mx-auto">
-        <h2 className="text-5xl font-main text-center text-dark pb-10">{t('one-membership-covers-all-your-medical-needs')}</h2>
-        <div className="w-full flex  flex-col md:flex-row flex-wrap gap-y-10 items-center justify-center max-[1260px]:gap-x-3 min-[1261px]:gap-x-8">
+        <h2 className="text-4xl md:text-5xl font-main text-center text-dark pb-10">{t('one-membership-covers-all-your-medical-needs')}</h2>
+        <div className="hidden w-full md:flex  flex-col md:flex-row flex-wrap gap-y-10 items-center justify-center max-[1260px]:gap-x-3 min-[1261px]:gap-x-8">
           <article className="w-full self-stretch min-w-[218px] max-w-[220px] mx-auto hover:scale-105 transition-all ease-in-out duration-300">
             <Link to="/services/mental-health" className="h-full bg-[#ECB118] text-white p-6  rounded-[8px] flex flex-col relative ">
               <div className="flex justify-end">
@@ -161,6 +161,108 @@ const HomepageSlider = () => {
             </Link>
           </article>
         </div>
+
+        {/* Mobile Slider */}
+        <div className="slick-mobile block lg:hidden font-main">
+        <Slider {...mobileSliderSettings}>
+          <article>
+            <Link className="block h-[488px]" to="/services/mental-health">
+              <div className="bg-[#ECB118] h-full text-white p-4 w-[300px]  rounded-[8px] mx-auto flex flex-col justify-end relative">
+                <div className="absolute top-4 right-4 w-full flex flex-row-reverse p-4">
+                  <Link to="/services/mental-health">
+                    <img className="w-8" src={RedirectIcon} alt="redirect" />
+                  </Link>
+                </div>
+                <div className="flex justify-center pt-12 pb-20">
+                  <SliderMentalHealth />
+                </div>
+                <h2 className={`${i18n.language === "en" ? "text-3xl" : "text-[26px]"} pb-4`}>{t('mental-health')}</h2>
+                <p className="font-body pb-4">
+                  {t('easily-get-mental-health-support-from-physicians-and-therapists')}
+                </p>
+              </div>
+            </Link>
+          </article>
+          <article>
+            <Link className="block h-[488px]" to="/services">
+              <div className="bg-[#A293FF] h-full text-white p-4 w-[300px]  3xl:w-[330px] rounded-[8px] mx-auto flex flex-col justify-end relative">
+              <div className="absolute top-4 right-4 w-full flex flex-row-reverse p-4">
+                  <Link to="/services">
+                    <img className="w-8" src={RedirectIcon} alt="redirect" />
+                  </Link>
+                </div>
+                <div className="flex justify-center pb-20">
+                  <SliderVirtualCare />
+                </div>
+                <h2 className={`${i18n.language === "en" ? "text-3xl" : "text-[26px]"} pb-4`}>{t('virtual-care')}</h2>
+                <p className="font-body pb-4">
+                  {t('connect-with-a-virtual-doctor-24-7-in-minutes-or-book-an-appointment-with-a-specialist')}
+                </p>
+              </div>
+            </Link>
+          </article>
+          <article>
+            <Link className="block h-[488px]" to="/services/online-pharmacy">
+              <div className="bg-[#90C387] h-full text-white p-6 w-[300px]  3xl:w-[330px] mx-auto rounded-[8px] flex flex-col justify-end relative">
+              <div className="absolute top-4 right-4 w-full flex flex-row-reverse p-4">
+                  <Link to="/services/online-pharmacy">
+                    <img className="w-8" src={RedirectIcon} alt="redirect" />
+                  </Link>
+                </div>
+                <div className="flex justify-center pb-20">
+                  <SliderOnlinePharmacy />
+                </div>
+                <h2 className={`${i18n.language === "en" ? "text-3xl" : "text-[26px]"} pb-4`}>{t('pharmacy-0')}</h2>
+                <p className="font-body pb-4">
+                {
+                    t('get-prescriptions-filled-or-renewed-using-our-affiliate-online-pharmacy-and-delivered-right-to-your-door')
+                  }
+                </p>
+              </div>
+            </Link>
+          </article>
+          <article>
+            <Link className="block h-[488px]" to="/services/nursing-homecare">
+              <div className="bg-[#F78839] h-full text-white p-6 w-[300px]  mx-auto 3xl:w-[330px] rounded-[8px] flex flex-col justify-end relative">
+                <div className="absolute top-4 right-4 w-full flex flex-row-reverse p-4">
+                  <Link to="/services/nursing-homecare">
+                    <img className="w-8" src={RedirectIcon} alt="redirect" />
+                  </Link>
+                </div>
+                <div className="flex justify-center pb-20">
+                  <SliderNursingHomecare />
+                </div>
+                <h2 className={`${i18n.language === "en" ? "text-3xl" : "text-[20px]"} pb-4`}>
+                  {t('nursing-and-homecare')}
+                </h2>
+                <p className="font-body pb-4">
+                  {t('get-professional-care-from-our-team-of-nurses-and-homecare-helpers-that-come-directly-to-you')}
+                </p>
+              </div>
+            </Link>
+          </article>
+          <article>
+            <Link className="block h-[488px]" to="/services/diagnostics">
+              <div className="bg-diagnostics h-full text-white p-6 w-[300px]  mx-auto 3xl:w-[330px] rounded-[8px] flex flex-col justify-end relative">
+                <div className="absolute top-0 right-0 w-full flex flex-row-reverse p-4">
+                  <Link to="/services/diagnostics">
+                    <img className="w-8" src={RedirectIcon} alt="redirect" />
+                  </Link>
+                </div>
+                <div className="flex justify-center pb-16">
+                    <img className="w-24" src={StethoscopeDiagnostic} alt="Diagnostics"/>
+                </div>
+                <h2 className={`${i18n.language === "en" ? "text-3xl" : "text-[20px]"} pb-4`}>
+                  {t('lab-testing-and-diagnostics-0')}
+                </h2>
+                <p className={`font-body pb-4 ${i18n.language === "en" ? "text-base" : "text-[16.5px]"}`}>
+                  {t('get-safe-and-professional-lab-testing-from-the-comfort-of-your-home-or-office')}
+                </p>
+              </div>
+            </Link>
+          </article>
+        </Slider>
+      </div>
         {/* <div className="flex flex-wrap">
           <article className="w-[206px] flex justify-center">
             <Link className="block" to="/services/mental-health">
