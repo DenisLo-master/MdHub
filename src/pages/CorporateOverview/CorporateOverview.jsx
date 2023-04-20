@@ -29,7 +29,7 @@ const CorporateOverview = () => {
       </section>
 
       <section className="w-full max-w-[1130px] mx-auto py-10 font-main px-4">
-        <article className="w-full bg-linearGradientPrimary rounded-lg px-4 py-10 pb-32 text-white space-y-6">
+        <article className="w-full bg-headspace rounded-lg px-4 py-10 pb-32 text-white space-y-6">
           <h2 className="text-center text-4xl max-w-lg mx-auto">
             {t('attract-and-retain-top-talent-with-mdhubs-ultimate-healthcare-solution')}
           </h2>

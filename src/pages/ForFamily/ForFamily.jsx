@@ -90,7 +90,7 @@ const ForFamily = () => {
           </div>
         </div>
 
-        <article className="bg-primary text-white py-10 px-4 lg:px-20 rounded-lg bg-linearGradientPrimary shadow-cardService">
+        <article className="bg-primary text-white py-10 px-4 lg:px-20 rounded-lg bg-headspace shadow-cardService">
           <h2 className="text-5xl text-center font-main pb-4">What We Can Help With</h2>
           <ul className="hidden font-body md:grid grid-cols-1 lg:grid-cols-2 gap-x-14 gap-y-2 justify-between space-y-4 font-light text-lg grid-list">
             <li className="flex items-center gap-x-5">
@@ -324,7 +324,7 @@ const ForFamily = () => {
             </li>
           </ul>
         </article>
-
+  <h2 className="text-5xl text-center font-main pt-4">{t("FAQ's")}</h2>
         <section className="py-10 font-body w-full max-w-[72rem] mx-auto flex flex-col gap-y-5 px-4">
           {
             forYouFAQData.map(faqItem => (
