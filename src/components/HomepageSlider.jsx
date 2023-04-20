@@ -57,25 +57,25 @@ const HomepageSlider = () => {
         <h2 className="text-5xl font-main text-center text-dark pb-10">{t('one-membership-covers-all-your-medical-needs')}</h2>
         <div className="w-full flex  flex-col md:flex-row flex-wrap gap-y-10 items-center justify-center max-[1260px]:gap-x-3 min-[1261px]:gap-x-8">
           <article className="w-full self-stretch min-w-[218px] max-w-[220px] mx-auto hover:scale-105 transition-all ease-in-out duration-300">
-            <Link to="/services/mental-health" className="bg-[#ECB118] text-white p-6  rounded-[8px] flex flex-col relative ">
+            <Link to="/services/mental-health" className="h-full bg-[#ECB118] text-white p-6  rounded-[8px] flex flex-col relative ">
               <div className="flex justify-end">
                 <Link to="/services/mental-health">
                   <img src={RedirectIcon} alt="redirect" />
                 </Link>
               </div>
-              <div className="pt-8">
+              <div className={`${i18n.language === "en" ? "pt-12" : "pt-12"}`}>
                 <div className="w-[79px] h-[80px] flex justify-center items-center mx-auto">
                   <SliderMentalHealth className="w-[71px] h-[67px]" />
                 </div>
                 <h2 className={`${i18n.language === "en" ? "text-3xl" : "text-[26px]"} font-semibold pt-9 pb-2`}>{t('mental-health')}</h2>
                 <p className="font-body text-sm">
-                  {t('take-control-of-your-mental-well-being-easily-get-mental-health-support-from-physicians-and-therapists')}
+                  {t('easily-get-mental-health-support-from-physicians-and-therapists')}
                 </p>
               </div>
             </Link>
           </article>
-          <article className="w-full self-stretch min-w-[218px] max-w-[220px] mx-auto hover:scale-105 transition-all ease-in-out duration-300">
-            <Link to="/services" className={`bg-[#A293FF] text-white p-6  rounded-[8px] flex flex-col justify-between relative ${i18n.language !== "en" && "pb-11"}`}>
+          <article className="w-full self-stretch min-w-[218px] max-w-[220px]  mx-auto hover:scale-105 transition-all ease-in-out duration-300">
+            <Link to="/services" className={`bg-[#A293FF] h-full text-white p-6  rounded-[8px] flex flex-col justify-between relative ${i18n.language !== "en" && "pb-11"}`}>
               <div className="flex justify-end">
                 <Link to="/services">
                   <img src={RedirectIcon} alt="redirect" />
@@ -94,8 +94,8 @@ const HomepageSlider = () => {
               </div>
             </Link>
           </article>
-          <article className="w-full self-stretch min-w-[218px] max-w-[220px] mx-auto hover:scale-105 transition-all ease-in-out duration-300">
-            <Link to="/services/online-pharmacy" className="bg-[#90C387] text-white p-6  rounded-[8px] flex flex-col justify-between relative ">
+          <article className="w-full self-stretch min-w-[218px] max-w-[220px]  mx-auto hover:scale-105 transition-all ease-in-out duration-300">
+            <Link to="/services/online-pharmacy" className="bg-[#90C387] h-full text-white p-6  rounded-[8px] flex flex-col justify-between relative ">
               <div className="flex justify-end">
                 <Link to="/services/online-pharmacy">
                   <img src={RedirectIcon} alt="redirect" />
@@ -116,14 +116,14 @@ const HomepageSlider = () => {
               </div>
             </Link>
           </article>
-          <article className="w-full self-stretch min-w-[218px] max-w-[220px] mx-auto hover:scale-105 transition-all ease-in-out duration-300">
-            <Link to="/services/diagnostics" className={`bg-diagnostics text-white p-6  rounded-[8px] flex flex-col justify-between relative ${i18n.language !== "en" && "pb-11"}`}>
+          <article className="w-full self-stretch min-w-[218px] max-w-[220px]  mx-auto hover:scale-105 transition-all ease-in-out duration-300">
+            <Link to="/services/diagnostics" className={`bg-diagnostics h-full text-white p-6  rounded-[8px] flex flex-col justify-between relative ${i18n.language !== "en" && "pb-11"}`}>
               <div className="flex justify-end">
                 <Link to="/services/diagnostics">
                   <img src={RedirectIcon} alt="redirect" />
                 </Link>
               </div>
-              <div className="pt-8 pb-[1.2rem]">
+              <div className={`${i18n.language === "en" ? "pt-8" : "pt-12"}`}>
                 <div className="flex w-[79px] h-[80px] justify-center items-center mx-auto">
                   <StethoscopeIconWhite className="w-[73px] h-[80px]" />
                 </div>
@@ -138,8 +138,8 @@ const HomepageSlider = () => {
               </div>
             </Link>
           </article>
-          <article className="w-full self-stretch min-w-[218px] max-w-[220px] mx-auto hover:scale-105 transition-all ease-in-out duration-300">
-            <Link to="/services/nursing-homecare" className="bg-[#F78839] text-white p-6  rounded-[8px] flex flex-col justify-between relative ">
+          <article className="w-full self-stretch min-w-[218px] max-w-[220px]  mx-auto hover:scale-105 transition-all ease-in-out duration-300">
+            <Link to="/services/nursing-homecare" className="bg-[#F78839] h-full text-white p-6  rounded-[8px] flex flex-col justify-between relative ">
               <div className="flex justify-end">
                 <Link to="/services/nursing-homecare">
                   <img src={RedirectIcon} alt="redirect" />

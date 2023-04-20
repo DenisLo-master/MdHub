@@ -14,7 +14,7 @@ const ServicesDiagnostics = () => {
     <section className="font-main text-dark py-10">
       <header className="bg-diagnostics diagnostics-bg text-white w-full py-10 relative text-center lg:text-left">
         <div className="max-w-[83rem] mx-auto">
-          <article className="space-y-5 px-2 flex flex-col items-center lg:items-start text-center w-full">
+          <article className="space-y-5 px-8 flex flex-col items-center lg:items-start text-center w-full">
             <h2 className="text-center lg:text-left text-[55px] lg:text-[88px] max-w-[450px] leading-[80px] pb-5">
               {t('lab-testing-and-diagnostics')}
             </h2>
@@ -36,14 +36,14 @@ const ServicesDiagnostics = () => {
       </header>
       <section className="bg-white py-14 lg:py-14">
         <div className="relative virtual-health text-center flex justify-center flip-words mb-32">
-          <h2 className="text-primary text-center text-5xl md:text-6xl">
+          <h2 className="text-primary text-center text-3xl md:text-5xl lg:text-6xl">
             {t('get-help-for')}
           </h2>
-          <div className="w-full absolute left-0 top-16">
+          <div className="w-full absolute left-0 top-12 md:top-16">
             <div className="w-full h-16 overflow-y-hidden flex justify-center">
               {
                 WORDS.map(word => (
-                  <span className="text-5xl md:text-6xl">
+                  <span className="text-3xl md:text-5xl lg:text-6xl">
                     {t(`${word}`)}
                   </span>
                 ))
@@ -142,7 +142,7 @@ const ServicesDiagnostics = () => {
           </div>
         </section>
       </section>
-      <section className="py-10 font-body w-full max-w-[72rem] mx-auto flex flex-col gap-y-5 px-4">
+      <section className="py-10 font-body w-full max-w-[72rem] mx-auto flex flex-col gap-y-5 px-8">
         {
           diagnosticsFAQData.map(faqItem => (
             <FAQ

@@ -20,7 +20,7 @@ const ServicesMentalHealth = () => {
   return (
     <section className="font-main bg-white py-10">
       <header className="bg-mentalHealth  text-white w-full py-10">
-        <div className="max-w-[83rem] mx-auto flex items-center justify-between px-4">
+        <div className="max-w-[83rem] mx-auto flex items-center justify-between px-8">
           <article className="space-y-5 flex flex-col items-center lg:items-start text-center w-full">
             <h2 className="w-full text-center lg:text-left text-[44px] lg:text-[88px] leading-[90px] max-w-[260px]">
               {t('mental health')}
@@ -42,14 +42,14 @@ const ServicesMentalHealth = () => {
 
       <section className="bg-white py-8 lg:py-14">
         <div className="relative virtual-health text-center flex justify-center flip-words mb-32 px-4">
-          <h2 className="text-primary text-center text-5xl md:text-6xl">
+          <h2 className="text-primary text-center text-3xl md:text-5xl lg:text-6xl">
             {t('get-help-for')}
           </h2>
-          <div className="w-full absolute left-0 top-16">
+          <div className="w-full absolute left-0 top-12 md:top-16">
             <div className="w-full h-16 overflow-y-hidden flex justify-center">
               {
                 WORDS.map(word => (
-                  <span className="lowercase text-5xl md:text-6xl">
+                  <span className="lowercase text-3xl md:text-5xl lg:text-6xl">
                     {t(`${word}`)}
                   </span>
                 ))
@@ -85,7 +85,7 @@ const ServicesMentalHealth = () => {
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row-reverse flex-col-reverse justify-center items-center gap-x-12 px-4 text-center lg:text-left py-10 lg:py-20 bg-[#F6E2B0]">
+      <section className="flex flex-col md:flex-row-reverse flex-col-reverse justify-center items-center gap-x-12 px-8 text-center lg:text-left py-10 lg:py-20 bg-[#F6E2B0]">
         <div>
           <img src={HeadspaceLogo} alt="Headspace" />
         </div>
@@ -100,14 +100,14 @@ const ServicesMentalHealth = () => {
         </div>
       </section>
       <section className="py-10 lg:py-20">
-        <div className="w-full px-4 max-w-6xl mx-auto flex flex-col lg:flex-col gap-y-5 justify-between">
+        <div className="w-full px-8 max-w-6xl mx-auto flex flex-col lg:flex-col gap-y-5 justify-between">
           <div>
             <h2 className="text-4xl text-left">{t('how-it-works')}</h2>
             <p className="font-body py-7">
               {t('our-frontline-care-can-be-accessed-24-7-by-simply-logging-into-your-virtual-doctor-platform-and-seeing-a-general-doctor-for-a-more-specialized-practitioner-members-are-encouraged-to-book-an-on-demand-appointment-with-a-mental-health-physician-or-therapist')}
             </p>
           </div>
-          <div className='flex justify-between'>
+          <div className='flex flex-col md:flex-row gap-y-4 justify-between'>
             <article className="w-full max-w-[528px] bg-[#ECB118] py-5 px-8 rounded-lg">
               <h2 className="text-3xl">{t('see-a-mental-health-therapist')}</h2>
               <p className="font-body py-7">
@@ -122,7 +122,7 @@ const ServicesMentalHealth = () => {
                 </button>
               </Link>
             </article>
-            <article className="w-full max-w-[528px] bg-[#ECB118] py-5 px-8">
+            <article className="w-full max-w-[528px] bg-[#ECB118] py-5 px-8 rounded-lg">
               <h2 className="text-3xl">{t('see-a-mental-health-therapist')}</h2>
               <p className="font-body py-7">
                 {t('talk-to-a-mental-health-therapist-without-scheduling-an-appointment-simply-access-your-mdhub-account-and-navigate-to-the-specialists-menu-select-mental-health-therapist-from-the-options-provided-and-choose-the-topic-youd-like-to-discuss-then-book-a-session')}
@@ -140,7 +140,7 @@ const ServicesMentalHealth = () => {
 
         </div>
       </section>
-      <section className="py-10 font-body w-full max-w-[72rem] mx-auto flex flex-col gap-y-5 px-4">
+      <section className="py-10 font-body w-full max-w-[72rem] mx-auto flex flex-col gap-y-5 px-8">
         {
           mentalHealthFAQData.map(faqItem => (
             <FAQ

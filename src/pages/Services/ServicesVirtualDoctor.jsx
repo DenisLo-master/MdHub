@@ -27,7 +27,7 @@ const ServicesVirtualDoctor = () => {
     <section className="font-main py-10">
       <header className="bg-virtualDoctor text-white w-full py-10 relative">
         <div className="max-w-[83rem] mx-auto flex flex-col">
-          <article className="px-4 space-y-5 flex flex-col items-center lg:items-start text-center">
+          <article className="px-8 space-y-5 flex flex-col items-center lg:items-start text-center">
             <h2 className="text-6xl lg:text-[88px] max-w-[260px] md:text-left">
               {t('virtual-care')}
             </h2>
@@ -56,14 +56,14 @@ const ServicesVirtualDoctor = () => {
 
       <section className="lg:block relative bg-white py-14 pb-28">
         <div className="relative virtual-health text-center flex justify-center flip-words">
-          <h2 className="text-primary text-center text-5xl md:text-6xl">
+          <h2 className="text-primary text-center text-3xl md:text-5xl lg:text-6xl">
             {t('get-help-for')}
           </h2>
-          <div className="w-full absolute left-0 top-16">
+          <div className="w-full absolute left-0 top-12 md:top-16">
             <div className="w-full h-16 overflow-y-hidden flex justify-center">
               {
                 WORDS.map(word => (
-                  <span className="lowercase text-5xl md:text-6xl">
+                  <span className="lowercase text-3xl md:text-5xl lg:text-6xl">
                     {t(`${word}`)}
                   </span>
                 ))
@@ -73,7 +73,7 @@ const ServicesVirtualDoctor = () => {
         </div>
       </section>
       <VirtualDoctorServices />
-      <section className="py-10 bg-white text-gray-800 px-4">
+      <section className="py-10 bg-white text-gray-800 px-8">
         <h2 className="text-5xl text-center font-semibold pb-4">{t('how-it-works')}</h2>
         <div className="w-full max-w-[76rem] mx-auto">
           <section className="flex flex-col flex-wrap items-center text-center md:text-left lg:flex-row justify-between">
@@ -146,22 +146,22 @@ const ServicesVirtualDoctor = () => {
             </article>
           </section>
 
-          <div className="flex justify-center py-10">
+          <div className="w-full flex justify-center py-10 px-8">
             <Link to="/register">
               <button
                 type="button"
-                className={`rounded-full w-[480px] group hover:ring-1 hover:ring-[#1EBC91] py-2 border flex justify-center items-center space-x-2  border-none bg-[#3F3F3F] hover:bg-[#1EBC91] transition-all ease-out duration-300 text-white font-helvetica px-4 font-normal`}
+                className={`rounded-full w-[240px] md:w-[480px] group hover:ring-1 hover:ring-[#1EBC91] py-2 border flex justify-center items-center space-x-2  border-none bg-[#3F3F3F] hover:bg-[#1EBC91] transition-all ease-out duration-300 text-white font-helvetica px-4 font-normal`}
               >
                 {t('sign-up-today')}
               </button>
             </Link>
           </div>
 
-          <div className="px-4">
+          <div>
             <h3 className="text-center text-4xl md:text-5xl pt-10 py-20">
               {t('dont-just-take-it-from-us')}
             </h3>
-            <div className="w-full max-w-6xl mx-auto flex md:flex-row gap-y-4 item-center justify-between text-center flex-wrap md:flex-nowrap">
+            <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-y-4 item-center justify-between text-center flex-wrap md:flex-nowrap">
               <article className="md:basis-auto basis-1/2 space-y-6 text-center">
                 <h2 className="text-[#5345AD] text-7xl">4.9/5</h2>
                 <p className="font-body mx-11 md:mx-0 lg:max-w-[170px]">{t('average-user-satisfaction-rating')}</p>

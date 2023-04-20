@@ -22,19 +22,19 @@ const HomeMedicalConditionsSection = () => {
 							<article>
 								<h2 className="text-2xl text-primary pb-2">{t('wellness-and-prevention')}</h2>
 								<p className="font-body text-sm">
-									{t('well-help-you-get-healthy-and-stay-that-way-with-state-of-the-art-screening-disease-prevention-and-lifestyle-advice')}
+								{t('achieve-and-maintain-good-health-with-advanced-screening-disease-prevention-and-lifestyle-advice')}
 								</p>
 							</article>
 							<article>
 								<h2 className="text-2xl text-primary pb-2">{t('everyday-care')}</h2>
 								<p className="font-body text-sm">
-									{t('wake-up-with-the-flu-or-a-questionable-rash-we-diagnose-and-treat-a-wide-spectrum-of-illnesses-so-you-get-the-care-you-need-without-having-to-visit-the-emergency-room-or-see-specialists-no-need-for-family-doctors-all-our-doctors-are-here-for-your-family-with-constant-access-to-your-medical-history-in-one-place')}
+								{t('whether-you-wake-up-with-a-flu-or-rash-we-can-diagnose-and-treat-a-broad-range-of-illnesses-without-requiring-you-to-leave-the-comfort-of-your-home-you-do-not-need-a-family-doctor-as-you-have-access-to-your-medical-records-at-any-time-in-one-convenient-location')}
 								</p>
 							</article>
 							<article>
 								<h2 className="text-2xl text-primary pb-2">{t('access-to-specialists')}</h2>
 								<p className="font-body text-sm">
-									{t('have-a-specific-or-advanced-condition-select-and-get-referrals-to-a-wide-a-array-of-medical-specialists-qualified-to-diagnose-and-treat-advance-care-requirements')}
+								{t('for-specific-medical-needs-or-complex-conditions-we-will-refer-you-to-a-diverse-group-of-highly-qualified-specialists')}
 								</p>
 							</article>
 							<article>
@@ -46,7 +46,7 @@ const HomeMedicalConditionsSection = () => {
 							<article>
 								<h2 className="text-2xl text-primary pb-2">{t('mental-health-0')}</h2>
 								<p className="font-body text-sm">
-									{t('your-mental-health-is-an-important-part-of-the-full-picture-whether-youre-feeling-off-or-experiencing-depression-anxiety-insomnia-or-something-more-complex-our-suite-of-mental-health-services-is-here-to-help-in-addition-free-access-to-headspace-is-available-with-memberships')}
+								{t('we-offer-mental-health-services-to-help-with-various-conditions-including-depression-anxiety-and-insomnia-as-well-as-free-access-to-headspace-for-members')}
 								</p>
 							</article>
 

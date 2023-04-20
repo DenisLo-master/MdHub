@@ -440,9 +440,9 @@
   "each-time-a-personal-care-support-worker-from-mdhub-makes-a-service-visit-the-minimum-booking-duration-is-3-hours-this-is-the-minimum-number-of-hours-that-mdhub-provides-services-for-mdhub-believes-in-providing-a-top-quality-in-home-care-experience-which-is-achieved-through-consistency-in-the-people-who-visit-mdhub-strives-to-keep-the-same-caregivers-on-regular-and-consistent-schedules-as-much-as-possible-however-there-may-be-times-and-circumstances-beyond-our-control-that-require-us-to-assign-a-different-support-worker": "When a personal care support worker from MDHUB visits your home, they will stay for a minimum of 3 hours. This is the shortest amount of time we offer our services for. We believe in providing high-quality care and one way we do this is by sending the same caregiver to help you as often as we can. However, there may be situations beyond our control that require us to send a different support worker to your home.",
   "care": "care",
   "pharmacy-0": "Pharmacy",
-  "get-prescriptions-filled-or-renewed-using-our-affiliate-online-pharmacy-and-delivered-right-to-your-door": "Get prescriptions filled or renewed using our affiliate online pharmacy and delivered right to your door.",
+  "get-prescriptions-filled-or-renewed-using-our-affiliate-online-pharmacy-and-delivered-right-to-your-door": "Get prescriptions filled or renewed using our affiliate online pharmacy and delivered right to your doorstep. ",
   "lab-testing-and-diagnostics-0": "Lab testing & diagnostics",
-  "get-safe-and-professional-lab-testing-from-the-comfort-of-your-home-or-office": "Get safe and professional lab testing from the comfort of your home or office.",
+  "get-safe-and-professional-lab-testing-from-the-comfort-of-your-home-or-office": "Get safe and professional lab testing from the comfort of your home office or at our testing locations. ",
   "get-professional-care-from-our-team-of-nurses-and-homecare-helpers-that-come-directly-to-you": "Get professional care from our team of nurses and homecare helpers that come directly to you.",
   "mental-health-includes-our-emotional-psychological-and-social-well-being-it-affects-how-we-think-feel-and-act-it-also-helps-determine-how-we-handle-stress-relate-to-others-and-make-healthy-choices-mental-health-has-also-been-proven-to-play-a-key-role-in-our-physical-well-being-and-is-a-key-support-benefit-with-all-mdhub-memberships": "Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make healthy choices. Mental health has also been proven to play a key role in our physical well-being and is a key support benefit with all MDHUB memberships.",
   "stress-0": "Stress",
@@ -707,5 +707,11 @@
   "healthcare-without-the-headaches-0": "Healthcare without the headaches",
   "the-whole-family-in-one-plan": "The whole family in one plan",
   "nursing": "Nursing",
-  "sign-up-for-free": "Sign Up For Free"
+  "sign-up-for-free": "Sign Up For Free",
+  "easily-get-mental-health-support-from-physicians-and-therapists": "Easily get mental health support from physicians and therapists.",
+  "achieve-and-maintain-good-health-with-advanced-screening-disease-prevention-and-lifestyle-advice": "Achieve and maintain good health with advanced screening, disease prevention, and lifestyle advice.",
+  "whether-you-wake-up-with-a-flu-or-rash-we-can-diagnose-and-treat-a-broad-range-of-illnesses-without-requiring-you-to-leave-the-comfort-of-your-home-you-do-not-need-a-family-doctor-as-you-have-access-to-your-medical-records-at-any-time-in-one-convenient-location": "Whether you wake up with a flu or rash, we can diagnose and treat a broad range of illnesses without requiring you to leave the comfort of your home. You do not need a family doctor as you have access to your medical records at any time in one convenient location.",
+  "for-specific-medical-needs-or-complex-conditions-we-will-refer-you-to-a-diverse-group-of-highly-qualified-specialists": "For specific medical needs or complex conditions, we will refer you to a diverse group of highly qualified specialists.",
+  "chronic-conditions-like-diabetes-hypertension-and-obesity-can-be-difficult-to-manage-and-prevent-on-your-own-our-doctors-are-here-to-make-it-easier-with-the-support-and-resources-you-need-to-find-your-way-to-better-health-0": "Chronic conditions like diabetes, hypertension, and obesity can be difficult to manage and prevent on your own. Our doctors are here to make it easier, with the support and resources you need to find your way to better health.",
+  "we-offer-mental-health-services-to-help-with-various-conditions-including-depression-anxiety-and-insomnia-as-well-as-free-access-to-headspace-for-members": "We offer mental health services to help with various conditions, including depression, anxiety, and insomnia, as well as free access to headspace for members."
 }

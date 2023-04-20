@@ -6,7 +6,7 @@ import { useTranslation, Trans } from 'react-i18next'
 import FAQ from '../../components/FAQ.jsx'
 import { OnlinePharmacyServices } from '../../sections'
 
-const WORDS = ["birth control", "erectile dysfunction", "plan b", "antibiotics", "pain control and management", "mental health medication"]
+const WORDS = ["birth control", "erectile dysfunction", "plan b", "antibiotics", "mental health medication"]
 
 const ServicesOnlinePharmacy = () => {
   const { t } = useTranslation()
@@ -14,7 +14,7 @@ const ServicesOnlinePharmacy = () => {
     <section className="font-main py-10">
       <header className="bg-onlinePharmacy text-white w-full py-10 pb-20 relative text-center lg:text-left">
         <div className="max-w-[83rem] mx-auto flex items-center justify-between">
-          <article className="space-y-5 px-4 flex flex-col items-center lg:items-start text-center w-full">
+          <article className="space-y-5 px-8 flex flex-col items-center lg:items-start text-center w-full">
             <h2 className="text-center lowercase lg:text-left text-[70px] lg:text-[88px] max-w-[300px] leading-[80px] pb-5">
               {t('Online Pharmacy')}
             </h2>
@@ -38,14 +38,14 @@ const ServicesOnlinePharmacy = () => {
       </header>
       <section className="bg-white py-14 pb-28">
         <div className="relative virtual-health text-center flex justify-center flip-words mb-32">
-          <h2 className="text-primary text-center text-5xl md:text-6xl">
+          <h2 className="text-primary text-center text-3xl md:text-5xl lg:text-6xl">
             {t('get-help-for')}
           </h2>
-          <div className="w-full absolute left-0 top-16">
+          <div className="w-full absolute left-0 top-12 md:top-16">
             <div className="w-full h-16 overflow-y-hidden flex justify-center">
               {
                 WORDS.map(word => (
-                  <span className="text-5xl md:text-6xl">
+                  <span className="text-3xl md:text-5xl lg:text-6xl">
                     {t(`${word}`)}
                   </span>
                 ))
