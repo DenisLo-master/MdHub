@@ -32,10 +32,10 @@ const HomeUserSatisfactionSection = () => {
 
   return (
     <section className="pb-10 font-main text-xl px-8">
-      <h2 className="text-center px-4 font-body">
+      <h2 className="text-center px-4 font-body pb-5">
         {t('were-an-employee-benefit-for-companies-nationwide')}
       </h2>
-      <div className="w-full max-w-4xl mx-auto text-center py-10 pt-0 font-body text-base space-y-5">
+      <div className="w-full max-w-4xl mx-auto text-center pt-0 font-body text-base space-y-5">
         <section className="flex items-center justify-around flex-wrap gap-y-4 lg:justify-between">
           <img className="max-w-[149px]" src={PartnerCompany01} alt="Air Canada" />
           <img className="max-w-[156px]" src={PartnerCompany02} alt="Sotherbys" />

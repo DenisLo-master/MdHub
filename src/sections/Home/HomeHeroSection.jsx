@@ -72,14 +72,14 @@ const HomeHeroSection = () => {
         </article>
       </section>
       <div className="relative font-main virtual-health text-center flex justify-center flip-words mt-10 mb-28">
-        <h2 className="text-primary text-center text-5xl md:text-6xl">
+        <h2 className="text-primary text-center text-[2.2rem] md:text-5xl lg:text-6xl">
           {t('get-help-for')}
         </h2>
-        <div className="w-full absolute left-0 top-16">
+        <div className="w-full absolute left-0 top-11 md:top-16">
           <div className="w-full h-16 overflow-y-hidden flex justify-center">
             {
               WORDS.map(word => (
-                <span className="lowercase text-5xl md:text-6xl">
+                <span className="block w-full whitespace-normal lowercase text-[2.2rem] md:text-5xl lg:text-6xl">
                   {t(`${word}`)}
                 </span>
               ))
