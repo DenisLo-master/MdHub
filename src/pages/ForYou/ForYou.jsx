@@ -91,7 +91,7 @@ const ForYou = () => {
       </section> */}
 
       <section className="w-full px-4 text-center md:text-left py-10 md:w-[clamp(60rem,80vw,95rem)] mx-auto flex flex-col gap-y-4">
-        <h2 className="text-5xl">{t('healthcare-without-the-hassle')}</h2>
+        <h2 className="text-4xl">{t('healthcare-without-the-hassle')}</h2>
         <div className="space-y-4 font-body">
           <p>
             {t('with-mdhub-our-members-can-say-goodbye-to-weeks-of-waiting-for-doctor-appointments-or-long-waits-at-hospitals-forget-driving-and-parking-to-get-a-treatment-our-team-of-over-1-500-canadian-certified-medical-practitioners-is-available-on-demand-from-anywhere-allowing-you-to-take-back-control-of-your-health')}
@@ -111,7 +111,7 @@ const ForYou = () => {
 
       <section className="w-full bg-[#F9F9F9] px-4 md:px-0 text-center md:text-left md:w-[clamp(60rem,80vw,95rem)] mx-auto flex flex-col justify-between md:flex-row gap-y-4">
         <article className="flex flex-col gap-y-4 p-8 md:p-16 shadow-xl">
-          <h2 className="w-full text-center md:text-left md:max-w-[230px] leading-9 text-[40px]">
+          <h2 className="w-full text-center md:text-left md:max-w-[230px] leading-9 text-4xl">
             {t('your-health-in-your-hands')}
           </h2>
           <div className="md:min-w-[370px] flex flex-col gap-y-4">
@@ -135,7 +135,7 @@ const ForYou = () => {
       </section>
 
       <section className="w-full py-8 md:py-20 px-4 md:px-0 text-center md:text-left md:w-[clamp(60rem,80vw,95rem)] mx-auto flex flex-col justify-between gap-y-4">
-        <h2 className="text-5xl font-main">
+        <h2 className="text-4xl md:text-5xl font-main">
           {t('you-and-your-loved-ones-deserve-more')}
         </h2>
         <p className="font-body">

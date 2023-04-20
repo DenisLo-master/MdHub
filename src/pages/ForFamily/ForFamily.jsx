@@ -91,7 +91,7 @@ const ForFamily = () => {
         </div>
 
         <article className="bg-primary text-white py-10 px-4 lg:px-20 rounded-lg bg-linearGradientPrimary shadow-cardService">
-          <h2 className="text-6xl text-center font-main pb-4">What We Can Help With</h2>
+          <h2 className="text-5xl text-center font-main pb-4">What We Can Help With</h2>
           <ul className="hidden font-body md:grid grid-cols-1 lg:grid-cols-2 gap-x-14 gap-y-2 justify-between space-y-4 font-light text-lg grid-list">
             <li className="flex items-center gap-x-5">
               <div>

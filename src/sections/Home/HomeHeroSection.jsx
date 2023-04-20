@@ -34,7 +34,7 @@ const HomeHeroSection = () => {
     <div className="pt-12 md:pt-40 bg-home-gradient px-8">
       <section className="max-w-[90rem] mx-auto flex flex-col gap-y-6 md:flex-row items-center relative">
         <article data-aos="fade-up" className="flex-1 px-4 md:pl-20">
-          <h2 className="w-full max-w-[500px] font-main text-center md:text-left text-3xl md:text-6xl">
+          <h2 className="w-full max-w-[500px] font-main text-center md:text-left text-5xl md:text-6xl">
             {t('Accessible, quality healthcare at your fingertips.')}
           </h2>
           <p className="w-full text-base font-body text-center md:text-left font-extralight text-gray-900 md:text-xl py-4 md:py-8 max-w-[540px]">

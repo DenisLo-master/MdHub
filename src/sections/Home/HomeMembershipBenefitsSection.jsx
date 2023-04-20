@@ -45,7 +45,7 @@ const HomeMembershipBenefitsSection = () => {
           />
         </div>
         <div className="flex-1 md:pt-10 flex flex-col gap-y-4 text-center lg:text-left">
-          <h2 className="text-5xl">{t('Membership Benefits')}</h2>
+          <h2 className="text-5xl md:text-5xl">{t('Membership Benefits')}</h2>
           <p className="font-body max-w-[680px] text-xl pb-6">
             {t('mdhub-is-canadas-first-on-demand-medical-membership-members-have-access-to-several-on-demand-services-from-anywhere-some-of-our-benefits-include')}:
           </p>
@@ -75,8 +75,8 @@ const HomeMembershipBenefitsSection = () => {
               <h2 className="text-center md:text-left max-w-[190px] pt-2 text-lg">{t('fast-and-convenient-lab-testing-and-diagnostics')}</h2>
             </article>
           </div>
-          <div className="flex flex-col justify-center items-center gap-y-2 pt-4 md:pt-12">
-            <h2 className="text-3xl pb-4">{t('take-control-of-your-health-today')}</h2>
+          <div className="flex flex-col justify-center md:items-left items-center gap-y-2 pt-4 md:pt-12">
+            <h2 className="text-2xl md:text-3xl pb-4">{t('take-control-of-your-health-today')}</h2>
             <Link to="/register">
               <button className={`bg-[#1EBC91] hover:bg-white hover:text-[#1EBC91] rounded-full group hover:ring-1 hover:ring-[#1EBC91] px-14 py-2  flex justify-center items-center space-x-2 text-white `}>
                 {t('sign-up-now')}
