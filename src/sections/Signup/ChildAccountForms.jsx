@@ -6,6 +6,7 @@ import dayjs from "dayjs"
 import { BiCaretDown } from 'react-icons/bi'
 import { AiFillCloseCircle, AiFillCheckSquare } from 'react-icons/ai'
 import { useTranslation } from 'react-i18next'
+import InputMask from "react-input-mask";
 
 const ChildAccountForms = () => {
   const [isOlderThanFourteen, setIsOlderThanFourteen] = useState(true)
@@ -278,16 +279,19 @@ const ChildAccountForms = () => {
                   <option value="preferNotToSay">Prefer not to say</option>
                 </select>
               </div>
-              <div className="w-full flex-1 gap-y-2 flex flex-col">
-                <label htmlFor='dateOfBirth' className="font-body text-dark font-semibold">
-                  {t('date-of-birth')}
+              <div className="flex flex-col gap-y-2">
+                <label htmlFor='address' className="font-body text-dark font-semibold">
+                  {t('birthday')}
                 </label>
-                <input
-                  id="dateOfBirth"
-                  className="flex-1 appearance-none rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary bg-white"
-                  type="text"
+                <InputMask
                   value={childForms[index].dateOfBirth}
                   onChange={({ target }) => handleDateChange(target.value, index)}
+                  className="rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary"
+                  mask="99/99/9999"
+                  placeholder="MM/DD/YYYY"
+                  required
+                  pattern='^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/((19|20)\d\d)$'
+                  title="Please follow this format MM/DD/YYYY"
                 />
               </div>
             </div>
