@@ -21,6 +21,11 @@ const ParentAccountForm = () => {
   const [correctDate, setCorrectDate] = useState(false)
   const [previousLength, setPreviousLength] = useState(0);
   const [showPassword, setShowPassword] = useState(false)
+  const [minimumLengthPassed, setMinimumLengthPassed] = useState(false)
+  const [hasLowerAndUppercasePassed, setHasLowerAndUppercasePassed] = useState(false)
+  const [hasNumberPassed, setHasNumberPassed] = useState(false)
+  const [hasSequenceRepeated, setHasSequenceRepeated] = useState(false)
+  const [hasSeriesRepeated, sethasSeriesRepeated] = useState(false)
 
   const getStrengthLabel = (strengthScore) => {
     switch (strengthScore) {
@@ -69,11 +74,22 @@ const ParentAccountForm = () => {
     const hasUpperCase = /[A-Z]/.test(password)
     const hasNumbers = /\d/.test(password)
     const hasSpecialChars = /[\W]/.test(password)
+    const isSequenceRepeated = /(.)(\1{2})/g.test(password)
+    const checkSequence = /(.)(?=\1)(.)(\1|\3)/g.test(password)
     const fulfilledConditions = []
 
     if (password.length >= minLength) {
+      setMinimumLengthPassed(true)
       strengthScore++
       fulfilledConditions.push(t('minimum-length-of-8-characters'))
+    } else {
+      setMinimumLengthPassed(false)
+    }
+
+    if(hasLowerCase && hasUpperCase) {
+      setHasLowerAndUppercasePassed(true)
+    } else {
+      setHasLowerAndUppercasePassed(false)
     }
 
     if (hasLowerCase) {
@@ -86,9 +102,18 @@ const ParentAccountForm = () => {
       fulfilledConditions.push(t('at-least-one-uppercase-letter'))
     }
 
+    if(isSequenceRepeated) {
+      setHasSequenceRepeated(true)
+    } else {
+      setHasSequenceRepeated(false)
+    }
+
     if (hasNumbers) {
+      setHasNumberPassed(true)
       strengthScore++
       fulfilledConditions.push(t('at-least-one-number'))
+    } else {
+      setHasNumberPassed(false)
     }
 
     if (hasSpecialChars) {
@@ -231,10 +256,10 @@ const ParentAccountForm = () => {
           )} */}
         </div>
         <ul className="font-body text-dark list-disc pt-4 pl-5">
-          <li>{t('8-or-more-characters')}</li>
-          <li>{t('upper-lowercase-letters')}</li>
-          <li>{t('at-least-one-number')}</li>
-          <li>{t('no-repetitive-characters-e-g-bbb-aaa')}</li>
+          <li className={`${minimumLengthPassed && "text-green-400"}`}>{t('8-or-more-characters')}</li>
+          <li className={`${hasLowerAndUppercasePassed && "text-green-400"}`}>{t('upper-lowercase-letters')}</li>
+          <li className={`${hasNumberPassed && "text-green-400"}`}>{t('at-least-one-number')}</li>
+          <li className={`${!hasSequenceRepeated && "text-green-400"}`}>{t('no-repetitive-characters-e-g-bbb-aaa')}</li>
           <li>{t('no-sequential-characters-e-g-abc-123-321-or-cba')}</li>
         </ul>
       </div>

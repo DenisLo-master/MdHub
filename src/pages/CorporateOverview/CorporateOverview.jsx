@@ -19,9 +19,9 @@ const CorporateOverview = () => {
   const { t } = useTranslation()
   return (
     <section className="font-main md:mt-[120px]">
-      <section className="relative font-main bg-virtualDoctor overflow-hidden px-4">
+      <section className="relative font-main bg-virtualDoctor overflow-hidden">
         <img className="hidden lg:block absolute object-cover w-full h-[400px]" src={ForCorporateHeader} alt="For Corporate" />
-        <div className="relative z-10 w-full max-w-7xl mx-auto lg:h-[390px] flex items-center">
+        <div className="relative z-10 w-full md:w-[clamp(60rem,80vw,95rem)] mx-auto lg:h-[390px] flex items-center">
           <h2 className="text-[5em] px-4 text-center lg:text-left lg:text-[5em] max-w-[780px] leading-[1em]  text-white">
             {t('a-modern-benefit-your-employees-will-love')}
           </h2>
