@@ -165,7 +165,7 @@ const HomepageSlider = () => {
         {/* Mobile Slider */}
         <div className="slick-mobile block lg:hidden font-main">
         <Slider {...mobileSliderSettings}>
-          <article>
+          <article className="text-center md:text-left">
             <Link className="block h-[488px]" to="/services/mental-health">
               <div className="bg-[#ECB118] h-full text-white p-4 w-[300px]  rounded-[8px] mx-auto flex flex-col justify-end relative">
                 <div className="absolute top-4 right-4 w-full flex flex-row-reverse p-4">
@@ -183,7 +183,7 @@ const HomepageSlider = () => {
               </div>
             </Link>
           </article>
-          <article>
+          <article className="text-center md:text-left">
             <Link className="block h-[488px]" to="/services">
               <div className="bg-[#A293FF] h-full text-white p-4 w-[300px]  3xl:w-[330px] rounded-[8px] mx-auto flex flex-col justify-end relative">
               <div className="absolute top-4 right-4 w-full flex flex-row-reverse p-4">
@@ -201,7 +201,7 @@ const HomepageSlider = () => {
               </div>
             </Link>
           </article>
-          <article>
+          <article className="text-center md:text-left">
             <Link className="block h-[488px]" to="/services/online-pharmacy">
               <div className="bg-[#90C387] h-full text-white p-6 w-[300px]  3xl:w-[330px] mx-auto rounded-[8px] flex flex-col justify-end relative">
               <div className="absolute top-4 right-4 w-full flex flex-row-reverse p-4">
@@ -221,7 +221,7 @@ const HomepageSlider = () => {
               </div>
             </Link>
           </article>
-          <article>
+          <article className="text-center md:text-left">
             <Link className="block h-[488px]" to="/services/nursing-homecare">
               <div className="bg-[#F78839] h-full text-white p-6 w-[300px]  mx-auto 3xl:w-[330px] rounded-[8px] flex flex-col justify-end relative">
                 <div className="absolute top-4 right-4 w-full flex flex-row-reverse p-4">
@@ -241,7 +241,7 @@ const HomepageSlider = () => {
               </div>
             </Link>
           </article>
-          <article>
+          <article className="text-center md:text-left">
             <Link className="block h-[488px]" to="/services/diagnostics">
               <div className="bg-diagnostics h-full text-white p-6 w-[300px]  mx-auto 3xl:w-[330px] rounded-[8px] flex flex-col justify-end relative">
                 <div className="absolute top-0 right-0 w-full flex flex-row-reverse p-4">

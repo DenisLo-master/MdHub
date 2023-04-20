@@ -37,10 +37,10 @@ const HomeUserSatisfactionSection = () => {
       </h2>
       <div className="w-full max-w-4xl mx-auto text-center pt-0 font-body text-base space-y-5">
         <section className="flex items-center justify-around flex-wrap gap-y-4 lg:justify-between">
-          <img className="max-w-[149px]" src={PartnerCompany01} alt="Air Canada" />
-          <img className="max-w-[156px]" src={PartnerCompany02} alt="Sotherbys" />
-          <img className="max-w-[147px]" src={PartnerCompany03} alt="Air BNB" />
-          <img className="max-w-[153px]" src={PartnerCompany04} alt="Four Seasons" />
+          <img className="py-[10px] px-[20px] max-w-[149px]" src={PartnerCompany01} alt="Air Canada" />
+          <img className="py-[10px] px-[20px] max-w-[156px]" src={PartnerCompany02} alt="Sotherbys" />
+          <img className="py-[10px] px-[20px] max-w-[147px]" src={PartnerCompany03} alt="Air BNB" />
+          <img className="py-[10px] px-[20px] max-w-[153px]" src={PartnerCompany04} alt="Four Seasons" />
         </section>
         <div className="flex justify-center">
           <Link to="/register" className="flex items-center font-main gap-x-2">
