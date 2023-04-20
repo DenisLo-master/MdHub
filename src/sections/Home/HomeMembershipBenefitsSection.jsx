@@ -20,14 +20,16 @@ import Button from '../../components/Button'
 const HomeMembershipBenefitsSection = () => {
   const { t } = useTranslation()
   return (
-    <section className="relative w-full font-main py-8 pt-16 lg:pb-20">
+    <section className="relative w-full font-main py-8 pt-16 lg:pb-20 px-8">
       <div className="w-full max-w-7xl mx-auto flex gap-y-5 gap-x-12 flex-col-reverse lg:flex-row justify-between">
-        <div className="block lg:hidden w-full px-4">
+        <div className="block lg:hidden w-full">
           <ReactPlayer
             width={"100%"}
             height={"100%"}
             url={HomeMembershipBenefitsVideo}
             controls
+            muted
+            playing
             loop
           />
         </div>
@@ -39,9 +41,10 @@ const HomeMembershipBenefitsSection = () => {
             controls
             muted
             playing
+            loop
           />
         </div>
-        <div className="flex-1 pt-10 flex flex-col gap-y-4 px-4 text-center lg:text-left">
+        <div className="flex-1 pt-10 flex flex-col gap-y-4 text-center lg:text-left">
           <h2 className="text-5xl">{t('Membership Benefits')}</h2>
           <p className="font-body max-w-[680px] text-xl pb-6">
             {t('mdhub-is-canadas-first-on-demand-medical-membership-members-have-access-to-several-on-demand-services-from-anywhere-some-of-our-benefits-include')}:
@@ -72,7 +75,7 @@ const HomeMembershipBenefitsSection = () => {
               <h2 className="text-center max-w-[190px] pt-2 text-lg">{t('fast-and-convenient-lab-testing-and-diagnostics')}</h2>
             </article>
           </div>
-          <div className="items-center gap-y-2  pt-4 md:pt-12">
+          <div className="flex flex-col justify-center items-center gap-y-2 pt-4 md:pt-12">
             <h2 className="text-3xl pb-4">{t('take-control-of-your-health-today')}</h2>
             <Link to="/register">
               <button className={`bg-[#1EBC91] hover:bg-white hover:text-[#1EBC91] rounded-full group hover:ring-1 hover:ring-[#1EBC91] px-14 py-2  flex justify-center items-center space-x-2 text-white `}>

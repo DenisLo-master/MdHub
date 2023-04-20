@@ -10,7 +10,7 @@ const HomeMedicalConditionsSection = () => {
 	const { t } = useTranslation()
   return (
 		<section className="font-main bg-home-gradient-reverse">
-			<div className="w-full max-w-7xl mx-auto px-4">
+			<div className="w-full max-w-7xl mx-auto px-8">
 				<h2 className="text-4xl md:text-5xl">{t('medical-conditions-treated')}</h2>
 				<p className="w-full py-4 font-body text-xl">
 					{t('at-mdhub-we-care-for-everything-from-common-illnesses-to-chronic-diseases-and-mental-health-concerns-we-can-now-treat-a-majority-of-health-conditions-by-coupling-virtual-care-with-physical-diagnostics-with-mobile-nursing-care-patients-can-forget-the-limited-virtual-care-stigma-and-benefit-from-advance-and-proactive-control-of-their-health')}
@@ -18,7 +18,7 @@ const HomeMedicalConditionsSection = () => {
 				<div className="flex flex-col-reverse gap-y-4 md:flex-row items-start text-left">
 					<article className="flex-1">
 						<h2 className="text-3xl text-dark pb-4">{t('our-treatments-include')}</h2>
-						<div className="max-w-[380px] space-y-4">
+						<div className="max-w-[500px] space-y-4">
 							<article>
 								<h2 className="text-2xl text-primary pb-2">{t('wellness-and-prevention')}</h2>
 								<p className="font-body text-sm">
@@ -50,13 +50,6 @@ const HomeMedicalConditionsSection = () => {
 								</p>
 							</article>
 
-							<article>
-								<h2 className="text-2xl text-primary pb-2">{t('lgbtqia-services')}</h2>
-								<p className="font-body text-sm">
-									{t('from-illnesses-and-injuries-to-sexual-and-mental-health-to-wellness-goals-were-here-to-provide-the-lgbtqia-community-with-the-exceptional-care-they-deserve-with-no-fear-of-being-judged-or-dismissed')}
-								</p>
-							</article>
-
 							<article className="text-primary flex items-center gap-x-2">
 								<ArrowGradient className="transform scale-110 rotate-[50deg]" />
 								<h2 className="text-2xl text-primary">{t('many-more-0')}</h2>
@@ -69,10 +62,10 @@ const HomeMedicalConditionsSection = () => {
 							</article>
 						</div>
 					</article>
-					<img className="hidden md:block w-full max-w-[500px]" src={HomeMedicalConditionsHero} alt="Medical Conditions treated" />
+					<img className="hidden md:block w-full max-w-[600px]" src={HomeMedicalConditionsHero} alt="Medical Conditions treated" />
 				</div>
 			</div>
-			<div className="text-center py-10">
+			<div className="text-center py-10 px-8">
 				<div>
 					<h2 className="text-4xl md:text-6xl text-center px-4 pb-7">{t('get-your-first-year-of-membership-for')} <span className="price">$359</span> $289</h2>
 					{/* <div className="absolute -top-6 right-[24%] 3xl:right-[28%] w-[2px] h-28 bg-primary transform rotate-45"></div> */}
