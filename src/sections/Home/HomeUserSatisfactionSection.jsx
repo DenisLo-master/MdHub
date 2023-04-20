@@ -43,7 +43,7 @@ const HomeUserSatisfactionSection = () => {
           <img className="py-[10px] px-[20px] max-w-[153px]" src={PartnerCompany04} alt="Four Seasons" />
         </section>
         <div className="flex justify-center">
-          <Link to="/register" className="flex items-center font-main gap-x-2">
+          <Link to="/for-corporate" className="flex items-center font-main gap-x-2">
             <span className="text-lg font-body">{t('learn-more-about-mdhub-for-business')}</span>
             <ChevronRight className="text-primary w-2" />
           </Link>
