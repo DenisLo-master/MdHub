@@ -116,11 +116,12 @@ const ServicesNursingAndHomecare = () => {
           </section>
         </section>
       </section>
-      
+
       <section className="py-10 font-body w-full max-w-[72rem] mx-auto flex flex-col gap-y-5 px-8">
+        <h2 className="text-5xl text-center font-main pb-4">{t("FAQ's")}</h2>
         {
           nursingHomecareFAQData.map(faqItem => (
-            <FAQ 
+            <FAQ
               key={faqItem.id}
               question={t(`${faqItem.question}`)}
               bgColor={"#F78839"}
@@ -130,7 +131,7 @@ const ServicesNursingAndHomecare = () => {
                 </p>
             </FAQ>
           ))
-        }  
+        }
       </section>
     </section>
   )

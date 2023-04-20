@@ -74,7 +74,7 @@ const ServicesVirtualDoctor = () => {
       </section>
       <VirtualDoctorServices />
       <section className="py-10 bg-white text-gray-800 px-8">
-        <h2 className="text-5xl text-center font-semibold pb-4">{t('how-it-works')}</h2>
+        <h2 className="text-5xl text-center pb-4">{t('how-it-works')}</h2>
         <div className="w-full max-w-[76rem] mx-auto">
           <section className="flex flex-col flex-wrap items-center text-center md:text-left lg:flex-row justify-between">
             <article className="max-w-[90vw] md:max-w-[560px] flex items-center justify-between bg-[#DDD8FF] p-6 rounded-lg mt-8">
@@ -181,6 +181,7 @@ const ServicesVirtualDoctor = () => {
             </div>
           </div>
           <section className="py-10 font-body flex flex-col gap-y-5">
+          <h2 className="text-5xl text-center font-main pb-4">{t("FAQ's")}</h2>
             {
               virtualDoctorFAQData.map(faqItem => (
                 <FAQ

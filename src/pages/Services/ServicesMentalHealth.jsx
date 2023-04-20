@@ -141,6 +141,7 @@ const ServicesMentalHealth = () => {
         </div>
       </section>
       <section className="py-10 font-body w-full max-w-[72rem] mx-auto flex flex-col gap-y-5 px-8">
+        <h2 className="text-5xl text-center font-main pb-4">{t("FAQ's")}</h2>
         {
           mentalHealthFAQData.map(faqItem => (
             <FAQ
