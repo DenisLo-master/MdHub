@@ -58,7 +58,7 @@ const ServicesNursingAndHomecare = () => {
 
         <NursingAndHomecareServices/>
 
-        <section className=" pt-32 py-10">
+        <section className=" pt-32 ">
           <h2 className="text-4xl pb-4 text-center">
             {t('How It Works')}
           </h2>

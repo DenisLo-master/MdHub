@@ -33,7 +33,7 @@ const SignupAccountsTypeNav = () => {
       <button
         onClick={() => handleAccountChange("family")}
         type="button"
-        className={`w-40 md:w-64 rounded-full text-xl hover:ring-1 hover:ring-primary lg:px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "family" && "bg-gradient-secondary text-white"}`}
+        className={`w-40 md:w-64 rounded-full text-xl hover:ring-1 hover:ring-primary hover:bg-gradient-secondary lg:px-16 py-2 border flex justify-center items-center border-primary bg-transparent ${selectedAccountType === "family" && "bg-gradient-secondary text-white"}`}
       >
         {t('family')}
       </button>

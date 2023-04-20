@@ -179,7 +179,7 @@ const RegistrationCheckoutForm = () => {
           </div>
         )
       }
-      <form ref={signupFormRef} onSubmit={handleSignup} 
+      <form ref={signupFormRef} onSubmit={handleSignup}
         className={`w-full ${isFirstStep ? "py-12 pb-16" : "pt-6 pb-10"} rounded-[8px] mt-8 relative`}
       >
         {step}

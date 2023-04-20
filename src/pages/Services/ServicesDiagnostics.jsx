@@ -34,7 +34,7 @@ const ServicesDiagnostics = () => {
           </article>
         </div>
       </header>
-      <section className="bg-white py-14 lg:py-14">
+      <section className="bg-white py-14 lg:pt-14">
         <div className="relative virtual-health text-center flex justify-center flip-words mb-32">
           <h2 className="text-primary text-center text-3xl md:text-5xl lg:text-6xl">
             {t('get-help-for')}
@@ -57,7 +57,7 @@ const ServicesDiagnostics = () => {
       </section>
 
 
-      <section className="bg-white py-10 pb-24">
+      <section className="bg-white py-10">
         <h2 className="text-4xl pb-10 text-center">
           {t('How It Works')}
         </h2>

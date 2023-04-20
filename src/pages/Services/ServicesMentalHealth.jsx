@@ -60,7 +60,7 @@ const ServicesMentalHealth = () => {
 
         <MentalHealthServices />
 
-        <h3 className="text-center text-4xl md:text-5xl lg:pt-32 py-10 lg:py-20">
+        <h3 className="text-center text-4xl md:text-5xl lg:pt-32 py-10 lg:py-20 px-10">
           {t('mdhub-members-can-benefit-from')}
         </h3>
         <div className="w-full max-w-4xl mx-auto flex flex-col lg:flex-row item-center justify-between text-center">
