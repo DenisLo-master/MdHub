@@ -22,7 +22,7 @@ const CorporateOverview = () => {
       <section className="relative font-main bg-virtualDoctor overflow-hidden px-4">
         <img className="hidden lg:block absolute object-cover w-full h-[400px]" src={ForCorporateHeader} alt="For Corporate" />
         <div className="relative z-10 w-full max-w-7xl mx-auto lg:h-[390px] flex items-center">
-          <h2 className="text-[5em] px-4 text-center lg:text-left lg:text-[68px] max-w-[650px] leading-[1em]  text-white">
+          <h2 className="text-[5em] px-4 text-center lg:text-left lg:text-[5em] max-w-[780px] leading-[1em]  text-white">
             {t('a-modern-benefit-your-employees-will-love')}
           </h2>
         </div>
