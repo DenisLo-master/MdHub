@@ -8,6 +8,10 @@
   src: local('Helvetica'), url(./assets/Helvetica.otf) format('opentype');
 }
 
+p, h2{
+  font-weight: 100 !important
+}
+
 input:checked+.toggle-switch {
   transform: translateX(2px);
   background-color: #3490dc;
