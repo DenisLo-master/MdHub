@@ -97,103 +97,103 @@ const ForFamily = () => {
               <div>
                 <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
               </div>
-              <span>Routine checkups</span>
+              <span>{t('routine-checkups')}</span>
             </li>
             <div>
               <li className="flex items-center gap-x-5">
                 <div>
                   <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-                </div> <span>Parenting support</span>
+                </div> <span>{t('parenting-support')}</span>
               </li>
             </div>
             <li className="flex items-center gap-x-5">
               <div>
                 <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-              </div> <span>Nutrition</span>
+              </div> <span>{t('nutrition')}</span>
             </li>
             <div>
               <li className="flex items-center gap-x-5">
                 <div>
                   <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-                </div> <span>Newborn care</span>
+                </div> <span>{t('newborn-care')}</span>
               </li>
             </div>
             <li className="flex items-center gap-x-5">
               <div>
                 <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-              </div> <span>Cold and flu</span>
+              </div> <span>{t('cold-and-flu')}</span>
             </li>
             <div>
               <li className="flex items-center gap-x-5">
                 <div>
                   <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-                </div> <span>Infant care</span>
+                </div> <span>{t('infant-care')}</span>
               </li>
             </div>
             <li className="flex items-center gap-x-5">
               <div>
                 <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-              </div> <span>Fever and illnesses</span>
+              </div> <span>{t('fever-and-illnesses')}</span>
             </li>
             <div>
               <li className="flex items-center gap-x-5">
                 <div>
                   <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-                </div> <span>Minor injuries</span>
+                </div> <span>{t('minor-injuries')}</span>
               </li>
             </div>
             <li className="flex items-center gap-x-5">
               <div>
                 <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-              </div> <span>Ear aches</span>
+              </div> <span>{t('ear-aches')}</span>
             </li>
             <div>
               <li className="flex items-center gap-x-5">
                 <div>
                   <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-                </div> <span className="text-left">Behaviour issues and mental health</span>
+                </div> <span className="text-left">{t('behaviour-issues-and-mental-health')}</span>
               </li>
             </div>
             <li className="flex items-center gap-x-5">
               <div>
                 <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-              </div> <span>Sinus infections</span>
+              </div> <span>{t('sinus-infections')}</span>
             </li>
             <div>
               <li className="flex items-center gap-x-5">
                 <div>
                   <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-                </div> <span>Concussions</span>
+                </div> <span>{t('concussions')}</span>
               </li>
             </div>
             <li className="flex items-center gap-x-5">
               <div>
                 <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-              </div> <span>Allergies and asthma</span>
+              </div> <span>{t('allergies-and-asthma')}</span>
             </li>
             <div>
               <li className="flex items-center gap-x-5">
                 <div>
                   <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-                </div> <span>COVID-19 testing</span>
+                </div> <span>{t('covid-19-testing')}</span>
               </li>
             </div>
             <li className="flex items-center gap-x-5">
               <div>
                 <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-              </div> <span>Rashes and skin issues</span>
+              </div> <span>{t('rashes-and-skin-issues')}</span>
             </li>
             <div>
               <li className="flex items-center gap-x-5">
                 <div>
                   <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-                </div> <span>Routine vaccinations</span>
+                </div> <span>{t('routine-vaccinations')}</span>
               </li>
             </div>
             <li className="hidden md:block">
               <Link to="/rates">
                 <button className="text-dark hover:text-white bg-white hover:bg-[#1EBC91] h-[48px] rounded-[48px] font-main px-10 transition-all ease-out duration-300" type="button">
-                  View Membership Plans
+                  {t('view-membership-plans')}
                 </button>
               </Link>
             </li>
@@ -201,13 +201,13 @@ const ForFamily = () => {
               <li className="flex items-center gap-x-5">
                 <div>
                   <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-                </div> <span>+Much more</span>
+                </div> <span>+{t('much-more')}</span>
               </li>
             </div>
             <li className="block md:hidden">
               <Link to="/rates">
                 <button className=" h-[48px] text-dark bg-white hover:bg-[#1EBC91] hover:text-white rounded-[48px] font-main px-10" type="button">
-                  View Membership Plans
+                  {t('view-membership-plans')}
                 </button>
               </Link>
             </li>
@@ -217,108 +217,108 @@ const ForFamily = () => {
               <div>
                 <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
               </div>
-              <span>Routine checkups</span>
+              <span>{t('routine-checkups')}</span>
             </li>
             <li className="flex w-[222px] items-center gap-x-5">
               <div>
                 <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-              </div> <span>Parenting support</span>
+              </div> <span>{t('parenting-support')}</span>
             </li>
             <li className="flex w-[222px] items-center gap-x-5">
               <div>
                 <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-              </div> <span>Nutrition</span>
+              </div> <span>{t('nutrition')}</span>
             </li>
             <div>
               <li className="flex w-[222px] items-center gap-x-5">
                 <div>
                   <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-                </div> <span>Newborn care</span>
+                </div> <span>{t('newborn-care')}</span>
               </li>
             </div>
             <li className="flex w-[222px] items-center gap-x-5">
               <div>
                 <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-              </div> <span>Cold and flu</span>
+              </div> <span>{t('cold-and-flu')}</span>
             </li>
             <div>
               <li className="flex w-[222px] items-center gap-x-5">
                 <div>
                   <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-                </div> <span>Infant care</span>
+                </div> <span>{t('infant-care')}</span>
               </li>
             </div>
             <li className="flex w-[222px] items-center gap-x-5">
               <div>
                 <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-              </div> <span>Fever and illnesses</span>
+              </div> <span>{t('fever-and-illnesses')}</span>
             </li>
             <div>
               <li className="flex w-[222px] items-center gap-x-5">
                 <div>
                   <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-                </div> <span>Minor injuries</span>
+                </div> <span>{t('minor-injuries')}</span>
               </li>
             </div>
             <li className="flex w-[222px] items-center gap-x-5">
               <div>
                 <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-              </div> <span>Ear aches</span>
+              </div> <span>{t('ear-aches')}</span>
             </li>
             <div>
               <li className="flex w-[222px] items-center gap-x-5">
                 <div>
                   <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-                </div> <span className="text-left leading-[1.2em]">Behaviour issues and mental health</span>
+                </div> <span className="text-left leading-[1.2em]">{t('behaviour-issues-and-mental-health-0')}</span>
               </li>
             </div>
             <li className="flex w-[222px] items-center gap-x-5">
               <div>
                 <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-              </div> <span>Sinus infections</span>
+              </div> <span>{t('sinus-infections')}</span>
             </li>
             <div>
               <li className="flex w-[222px] items-center gap-x-5">
                 <div>
                   <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-                </div> <span>Concussions</span>
+                </div> <span>{t('concussions')}</span>
               </li>
             </div>
             <li className="flex w-[222px] items-center gap-x-5">
               <div>
                 <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-              </div> <span>Allergies and asthma</span>
+              </div> <span>{t('allergies-and-asthma')}</span>
             </li>
             <div>
               <li className="flex w-[222px] items-center gap-x-5">
                 <div>
                   <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-                </div> <span>COVID-19 testing</span>
+                </div> <span>{t('covid-19-testing')}</span>
               </li>
             </div>
             <li className="flex w-[222px] items-center gap-x-5">
               <div>
                 <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-              </div> <span>Rashes and skin issues</span>
+              </div> <span>{t('rashes-and-skin-issues')}</span>
             </li>
             <div>
               <li className="flex w-[222px] items-center gap-x-5">
                 <div>
                   <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-                </div> <span>Routine vaccinations</span>
+                </div> <span>{t('routine-vaccinations')}</span>
               </li>
             </div>
             <div>
               <li className="flex w-[222px] items-center gap-x-5">
                 <div>
                   <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
-                </div> <span>+Much more</span>
+                </div> <span>+{t('much-more')}</span>
               </li>
             </div>
             <li className="block md:hidden pt-6">
               <Link to="/rates">
                 <button className=" h-[48px] text-dark bg-white hover:bg-[#1EBC91] hover:text-white rounded-[48px] font-main px-10" type="button">
-                  View Membership Plans
+                  {t('view-membership-plans')}
                 </button>
               </Link>
             </li>

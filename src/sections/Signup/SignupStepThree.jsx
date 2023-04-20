@@ -70,7 +70,7 @@ const SignupStepThree = () => {
         <h2 className="text-4xl md:text-5xl">{t('choose-payment')}</h2>
         <p className="text-base font-body">{t('in-order-to-join-mdhub-you-must-agree-to-the-terms-below')}</p>
       </div>
-      <section className="flex flex-col md:flex-row md:justify-between text-dark">
+      <section className="flex flex-col-reverse md:flex-row md:justify-between text-dark">
         <article className="w-full space-y-4 font-body max-w-[550px]">
           <article className="bg-[#f5f5f5] w-full rounded-[8px] p-8 flex flex-col gap-y-3">
             <div className="w-full">
@@ -146,7 +146,7 @@ const SignupStepThree = () => {
                 <button
                   type="button"
                   onClick={() => setPaymentMode("monthly")}
-                    className={`${paymentMode === 'monthly' ? "bg-[#1EBC91] text-white" : "bg-white text-[#1EBC91]"} border-2 border-primary lg:flex flex-col items-center justify-center rounded-full w-[100px] md:w-[144px] md:h-12`}>
+                    className={`${paymentMode === 'monthly' ? "bg-[#1EBC91] text-white" : "bg-white text-[#1EBC91]"} border-2 border-[#1EBC91] lg:flex flex-col items-center justify-center rounded-full w-[100px] md:w-[144px] md:h-12`}>
                   <h2 className="text-base">{t('monthly')}</h2>
                 </button>
               }

@@ -259,8 +259,7 @@ const ParentAccountForm = () => {
           <li className={`${minimumLengthPassed && "text-green-400"}`}>{t('8-or-more-characters')}</li>
           <li className={`${hasLowerAndUppercasePassed && "text-green-400"}`}>{t('upper-lowercase-letters')}</li>
           <li className={`${hasNumberPassed && "text-green-400"}`}>{t('at-least-one-number')}</li>
-          <li className={`${!hasSequenceRepeated && "text-green-400"}`}>{t('no-repetitive-characters-e-g-bbb-aaa')}</li>
-          <li>{t('no-sequential-characters-e-g-abc-123-321-or-cba')}</li>
+          <li className={`${!hasSequenceRepeated && "text-green-400"}`}>{t('not-a-member-yet-click-here-to-sign-up')}</li>
         </ul>
       </div>
       {/* <div className="text-xl flex flex-col lg:flex-row gap-y-4 items-center w-full gap-x-6">

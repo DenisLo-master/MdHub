@@ -83,7 +83,7 @@ const Login = () => {
             </div>
           </form>
           <Link className="block" to="/register">
-          <p className="cursor-pointer pl-5 text-[#1bbc91]">{t('Not-a-member-yet?-Click-here-to-sign-up')}.</p>
+            <p className="cursor-pointer pl-5 text-[#1bbc91]">{t('Not-a-member-yet?-Click-here-to-sign-up')}.</p>
           </Link>
       </div>
 

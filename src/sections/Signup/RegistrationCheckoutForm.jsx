@@ -149,15 +149,17 @@ const RegistrationCheckoutForm = () => {
     <div className="pt-8">
       {
         isFirstStep && (
-          <article className="w-full max-w-[45rem] mx-auto space-y-4 flex flex-col items-center">
-            <h2 className="text-4xl md:text-5xl pt-5 text-center">Join MDHUB</h2>
+          <article className="w-full max-w-[50rem] mx-auto space-y-4 flex flex-col items-center">
+            <h2 className="text-4xl md:text-5xl pt-5 text-center">{t('join-mdhub')}</h2>
             <div className="text-center font-semibold space-y-1 font-body pb-4">
               <h2>
                 {t('we-make-it-easier-to-get-the-care-you-need-for-yourself-your-family-or-your-corporation')}
               </h2>
               <h2>{t('memberships-are-now-as-low-as-19-99-per-month')}</h2>
             </div>
-            <SignupAccountsTypeNav />
+            <div className="max-w-[45rem] mx-auto">
+              <SignupAccountsTypeNav />
+            </div>
           </article>
         )
       }
