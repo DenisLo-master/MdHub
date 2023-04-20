@@ -42,14 +42,14 @@ const ServicesMentalHealth = () => {
 
       <section className="bg-white py-8 lg:py-14">
         <div className="relative virtual-health text-center flex justify-center flip-words mb-32 px-4">
-          <h2 className="text-primary text-center text-3xl md:text-5xl lg:text-6xl">
+          <h2 className="text-primary text-center text-[2.2rem] md:text-5xl lg:text-6xl">
             {t('get-help-for')}
           </h2>
           <div className="w-full absolute left-0 top-12 md:top-16">
             <div className="w-full h-16 overflow-y-hidden flex justify-center">
               {
                 WORDS.map(word => (
-                  <span className="lowercase text-3xl md:text-5xl lg:text-6xl">
+                  <span className="lowercase text-[2.2rem] md:text-5xl lg:text-6xl">
                     {t(`${word}`)}
                   </span>
                 ))

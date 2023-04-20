@@ -36,14 +36,14 @@ const ServicesDiagnostics = () => {
       </header>
       <section className="bg-white py-14 lg:pt-14">
         <div className="relative virtual-health text-center flex justify-center flip-words mb-32">
-          <h2 className="text-primary text-center text-3xl md:text-5xl lg:text-6xl">
+          <h2 className="text-primary text-center text-[2.2rem] md:text-5xl lg:text-6xl">
             {t('get-help-for')}
           </h2>
-          <div className="w-full absolute left-0 top-12 md:top-16">
+          <div className="w-full absolute left-0 top-11 md:top-16">
             <div className="w-full h-16 overflow-y-hidden flex justify-center">
               {
                 WORDS.map(word => (
-                  <span className="text-3xl md:text-5xl lg:text-6xl">
+                  <span className="text-[2.2rem] md:text-5xl lg:text-6xl">
                     {t(`${word}`)}
                   </span>
                 ))
