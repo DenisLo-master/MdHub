@@ -54,7 +54,7 @@ const Login = () => {
   return (
     <section className="w-full max-w-[42rem] flex flex-col items-center mx-auto py-8 md:py-36 font-main">
       <h2 className="text-4xl text-center pb-4">{t('Login')}</h2>
-      <div className="py-16 border space-y-4 px-8 shadow-cardService rounded-[35px] text-primary relative">
+      <div className="py-12 border space-y-4 px-8 shadow-cardService rounded-[35px] text-primary relative">
         <form ref={loginFormRef} onSubmit={handleLogin} className="space-y-4 w-full lg:w-[500px] text-gray-800">
           <div className="w-full flex">
             <input
@@ -76,14 +76,14 @@ const Login = () => {
           </div>
           <p className="cursor-pointer pl-5">{t('forgot-password')}?</p>
           <div className='relative w-full pt-3'>
-            <button type="submit" className={`rounded-full w-40 font-main text-xl group hover:ring-1 hover:ring-primary  py-3 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
+            <button type="submit" className={`rounded-full w-40 font-main text-xl group hover:ring-1 hover:ring-primary  hover:bg-[#1EBC91] hover:text-white py-2 border flex justify-center items-center space-x-2  border-primary bg-transparent`}>
               <span>Login</span>
               {isLoading && <SVGLoaderCircles className="text-primary w-4 h-4" />}
               </button>
             </div>
           </form>
           <Link className="block" to="/register">
-          <p className="cursor-pointer pl-5">{t('Not-a-member-yet?-Click-here-to-sign-up')}.</p>
+          <p className="cursor-pointer pl-5 text-[#1bbc91]">{t('Not-a-member-yet?-Click-here-to-sign-up')}.</p>
           </Link>
       </div>
 
