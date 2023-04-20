@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { registerationStore } from '../../store/registerationStore'
 import toast from 'react-hot-toast'
@@ -81,9 +82,14 @@ const Login = () => {
               </button>
             </div>
           </form>
+          <Link className="block" to="/register">
+          <p className="cursor-pointer pl-5">{t('Not-a-member-yet?-Click-here-to-sign-up')}.</p>
+          </Link>
       </div>
+
     </section>
   )
 }
+
 
 export default Login
