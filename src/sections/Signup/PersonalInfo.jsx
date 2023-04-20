@@ -3,6 +3,7 @@ import { registerationStore } from '../../store/registerationStore'
 import { CountryDropdown, RegionDropdown } from 'react-country-region-selector'
 import { BiCaretDown } from 'react-icons/bi'
 import { useTranslation } from 'react-i18next'
+import InputMask from "react-input-mask";
 
 const PersonalInfo = () => {
   const [previousLength, setPreviousLength] = useState(0)
@@ -38,6 +39,8 @@ const PersonalInfo = () => {
     setPreviousLength(input.length);
   }
 
+  console.log(registerationFormData.dateOfBirth)
+
   return (
     <section className="max-w-[49rem] mx-auto bg-[#f5f5f5] py-12 pb-24">
       <div className="space-y-4 px-8 text-dark">
@@ -49,26 +52,26 @@ const PersonalInfo = () => {
             <input
               className="rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary"
               placeholder='(123) 456-7890'
+              pattern="\d{10}"
+              title="Please enter exactly 10 digits."
               name="phone"
               type="tel"
               value={registerationFormData.phone}
-              onChange={handlePhoneNumberChange}
+              onChange={({target}) => handleRegisterationFormDataChange("gender", target.value)}
               required
             />
           </div>
         </div>
         <div className="flex flex-col gap-y-2">
-          <label htmlFor='address' className="font-body text-dark font-semibold">
-            {t('birthday')}
-          </label>
-          <input
-              className="rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary"
-              name="dateOfBirth"
-            placeholder='DD/MM/YYYY'              
-              type="text"
+            <label htmlFor='address' className="font-body text-dark font-semibold">
+              {t('birthday')}
+            </label>
+            <InputMask
               value={registerationFormData.dateOfBirth}
-            onChange={handleDateChange}
-              required
+              onChange={({ target }) => handleRegisterationFormDataChange("dateOfBirth", target.value)}
+              className="rounded-md text-xl focus:ring-1 focus:ring-primary outline-none px-8 py-2 border border-primary"
+              mask="99/99/9999"
+              placeholder="MM/DD/YYYY"
             />
         </div>
         <div className="flex flex-col gap-y-2 font-body">
@@ -106,7 +109,7 @@ const PersonalInfo = () => {
               />
               <span className="ml-2 text-gray-700">{t('prefer-not-to-say')}</span>
             </label>
-          </div>
+          </div>        
         </div>      
       </div>
     </section>

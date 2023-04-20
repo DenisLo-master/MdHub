@@ -22,7 +22,7 @@ const CorporateOverview = () => {
       <section className="relative font-main bg-virtualDoctor overflow-hidden">
         <img className="hidden lg:block absolute object-cover w-full h-[400px]" src={ForCorporateHeader} alt="For Corporate" />
         <div className="relative z-10 w-full md:w-[clamp(60rem,80vw,95rem)] mx-auto lg:h-[390px] flex items-center">
-          <h2 className="text-[5em] px-4 text-center lg:text-left lg:text-[5em] max-w-[780px] leading-[1em]  text-white">
+          <h2 className="text-[4em] md:text-[5em] py-[40px] px-[20px] text-center lg:text-left lg:text-[5em] max-w-[780px] leading-[1em]  text-white">
             {t('a-modern-benefit-your-employees-will-love')}
           </h2>
         </div>
@@ -35,7 +35,7 @@ const CorporateOverview = () => {
           </h2>
           <ul className="flex flex-col lg:flex-row justify-center flex-wrap font-body text-white gap-x-16 gap-y-8 relative">
             <li className="flex lg:w-[380px] gap-x-2">
-              <OkIconWhite className="w-6 h-6" />
+              <OkIconWhite className="md:w-6 md:h-6" />
               <p className="w-full">
                 {t('integrated-mental-health-care-to-support-your-employees-individual-needs')}
               </p>

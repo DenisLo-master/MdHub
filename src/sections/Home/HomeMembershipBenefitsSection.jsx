@@ -52,27 +52,27 @@ const HomeMembershipBenefitsSection = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             <article className='flex flex-col items-center'>
               <img className="w-20 h-20" src={MembershipBenefit01} alt="Membership benefit" />
-              <h2 className="text-center max-w-[190px] pt-2 text-lg">{t('access-to-canadian-certified-doctors-24-7')}</h2>
+              <h2 className="text-center md:text-left max-w-[190px] pt-2 text-lg">{t('access-to-canadian-certified-doctors-24-7')}</h2>
             </article>
             <article className='flex flex-col items-center'>
               <img className="w-24 h-24" src={MembershipBenefit02} alt="Membership benefit" />
-              <h2 className="text-center max-w-[190px] pt-2 text-lg -mt-3">{t('free-and-fast-delivery-online-pharmacy')}</h2>
+              <h2 className="text-center md:text-left max-w-[190px] pt-2 text-lg -mt-3">{t('free-and-fast-delivery-online-pharmacy')}</h2>
             </article>
             <article className='flex flex-col items-center pt-1'>
               <img className="w-16 h-20" src={MembershipBenefitHeadspace} alt="Membership benefit" />
-              <h2 className="text-center max-w-[190px] pt-2 text-lg">{t('free-headspace-membership')}</h2>
+              <h2 className="text-center md:text-left max-w-[190px] pt-2 text-lg">{t('free-headspace-membership')}</h2>
             </article>
             <article className='flex flex-col items-center'>
               <img className="w-20 h-20" src={MembershipBenefit04} alt="Membership benefit" />
-              <h2 className="text-center max-w-[190px] pt-2 text-lg">{t('access-to-qualified-mobile-nurses')}</h2>
+              <h2 className="text-center md:text-left max-w-[190px] pt-2 text-lg">{t('access-to-qualified-mobile-nurses')}</h2>
             </article>
             <article className='flex flex-col items-center'>
               <img className="w-20 h-20" src={MembershipBenefit05} alt="Membership benefit" />
-              <h2 className="text-center max-w-[190px] pt-2 text-lg">{t('access-specialist-doctors-at-discounted-rates')}</h2>
+              <h2 className="text-center md:text-left max-w-[190px] pt-2 text-lg">{t('access-specialist-doctors-at-discounted-rates')}</h2>
             </article>
             <article className='flex flex-col items-center pt-4'>
               <img className="w-16 h-16" src={MembershipBenefit06} alt="Membership benefit" />
-              <h2 className="text-center max-w-[190px] pt-2 text-lg">{t('fast-and-convenient-lab-testing-and-diagnostics')}</h2>
+              <h2 className="text-center md:text-left max-w-[190px] pt-2 text-lg">{t('fast-and-convenient-lab-testing-and-diagnostics')}</h2>
             </article>
           </div>
           <div className="flex flex-col justify-center items-center gap-y-2 pt-4 md:pt-12">

@@ -95,98 +95,98 @@ const ForFamily = () => {
           <ul className="hidden font-body md:grid grid-cols-1 lg:grid-cols-2 gap-x-14 gap-y-2 justify-between space-y-4 font-light text-lg grid-list">
             <li className="flex items-center gap-x-5">
               <div>
-                <OkIcon className="w-10 h-10" />
+                <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
               </div>
               <span>Routine checkups</span>
             </li>
             <div>
               <li className="flex items-center gap-x-5">
                 <div>
-                  <OkIcon className="w-10 h-10" />
+                  <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
                 </div> <span>Parenting support</span>
               </li>
             </div>
             <li className="flex items-center gap-x-5">
               <div>
-                <OkIcon className="w-10 h-10" />
+                <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
               </div> <span>Nutrition</span>
             </li>
             <div>
               <li className="flex items-center gap-x-5">
                 <div>
-                  <OkIcon className="w-10 h-10" />
+                  <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
                 </div> <span>Newborn care</span>
               </li>
             </div>
             <li className="flex items-center gap-x-5">
               <div>
-                <OkIcon className="w-10 h-10" />
+                <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
               </div> <span>Cold and flu</span>
             </li>
             <div>
               <li className="flex items-center gap-x-5">
                 <div>
-                  <OkIcon className="w-10 h-10" />
+                  <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
                 </div> <span>Infant care</span>
               </li>
             </div>
             <li className="flex items-center gap-x-5">
               <div>
-                <OkIcon className="w-10 h-10" />
+                <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
               </div> <span>Fever and illnesses</span>
             </li>
             <div>
               <li className="flex items-center gap-x-5">
                 <div>
-                  <OkIcon className="w-10 h-10" />
+                  <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
                 </div> <span>Minor injuries</span>
               </li>
             </div>
             <li className="flex items-center gap-x-5">
               <div>
-                <OkIcon className="w-10 h-10" />
+                <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
               </div> <span>Ear aches</span>
             </li>
             <div>
               <li className="flex items-center gap-x-5">
                 <div>
-                  <OkIcon className="w-10 h-10" />
+                  <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
                 </div> <span className="text-left">Behaviour issues and mental health</span>
               </li>
             </div>
             <li className="flex items-center gap-x-5">
               <div>
-                <OkIcon className="w-10 h-10" />
+                <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
               </div> <span>Sinus infections</span>
             </li>
             <div>
               <li className="flex items-center gap-x-5">
                 <div>
-                  <OkIcon className="w-10 h-10" />
+                  <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
                 </div> <span>Concussions</span>
               </li>
             </div>
             <li className="flex items-center gap-x-5">
               <div>
-                <OkIcon className="w-10 h-10" />
+                <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
               </div> <span>Allergies and asthma</span>
             </li>
             <div>
               <li className="flex items-center gap-x-5">
                 <div>
-                  <OkIcon className="w-10 h-10" />
+                  <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
                 </div> <span>COVID-19 testing</span>
               </li>
             </div>
             <li className="flex items-center gap-x-5">
               <div>
-                <OkIcon className="w-10 h-10" />
+                <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
               </div> <span>Rashes and skin issues</span>
             </li>
             <div>
               <li className="flex items-center gap-x-5">
                 <div>
-                  <OkIcon className="w-10 h-10" />
+                  <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
                 </div> <span>Routine vaccinations</span>
               </li>
             </div>
@@ -200,7 +200,7 @@ const ForFamily = () => {
             <div>
               <li className="flex items-center gap-x-5">
                 <div>
-                  <OkIcon className="w-10 h-10" />
+                  <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
                 </div> <span>+Much more</span>
               </li>
             </div>
@@ -212,106 +212,106 @@ const ForFamily = () => {
               </Link>
             </li>
           </ul>
-          <ul className="block md:hidden text-left gap-y-4 font-body text-lg font-light flex-col items-center">
+          <ul className="md:hidden text-left gap-y-4 font-body text-lg font-light flex flex-col items-center">
             <li className="flex w-[222px] items-center gap-x-5">
               <div>
-                <OkIcon className="w-10 h-10" />
+                <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
               </div>
               <span>Routine checkups</span>
             </li>
             <li className="flex w-[222px] items-center gap-x-5">
               <div>
-                <OkIcon className="w-10 h-10" />
+                <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
               </div> <span>Parenting support</span>
             </li>
             <li className="flex w-[222px] items-center gap-x-5">
               <div>
-                <OkIcon className="w-10 h-10" />
+                <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
               </div> <span>Nutrition</span>
             </li>
             <div>
               <li className="flex w-[222px] items-center gap-x-5">
                 <div>
-                  <OkIcon className="w-10 h-10" />
+                  <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
                 </div> <span>Newborn care</span>
               </li>
             </div>
             <li className="flex w-[222px] items-center gap-x-5">
               <div>
-                <OkIcon className="w-10 h-10" />
+                <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
               </div> <span>Cold and flu</span>
             </li>
             <div>
               <li className="flex w-[222px] items-center gap-x-5">
                 <div>
-                  <OkIcon className="w-10 h-10" />
+                  <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
                 </div> <span>Infant care</span>
               </li>
             </div>
             <li className="flex w-[222px] items-center gap-x-5">
               <div>
-                <OkIcon className="w-10 h-10" />
+                <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
               </div> <span>Fever and illnesses</span>
             </li>
             <div>
               <li className="flex w-[222px] items-center gap-x-5">
                 <div>
-                  <OkIcon className="w-10 h-10" />
+                  <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
                 </div> <span>Minor injuries</span>
               </li>
             </div>
             <li className="flex w-[222px] items-center gap-x-5">
               <div>
-                <OkIcon className="w-10 h-10" />
+                <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
               </div> <span>Ear aches</span>
             </li>
             <div>
               <li className="flex w-[222px] items-center gap-x-5">
                 <div>
-                  <OkIcon className="w-10 h-10" />
-                </div> <span className="text-left">Behaviour issues and mental health</span>
+                  <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
+                </div> <span className="text-left leading-[1.2em]">Behaviour issues and mental health</span>
               </li>
             </div>
             <li className="flex w-[222px] items-center gap-x-5">
               <div>
-                <OkIcon className="w-10 h-10" />
+                <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
               </div> <span>Sinus infections</span>
             </li>
             <div>
               <li className="flex w-[222px] items-center gap-x-5">
                 <div>
-                  <OkIcon className="w-10 h-10" />
+                  <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
                 </div> <span>Concussions</span>
               </li>
             </div>
             <li className="flex w-[222px] items-center gap-x-5">
               <div>
-                <OkIcon className="w-10 h-10" />
+                <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
               </div> <span>Allergies and asthma</span>
             </li>
             <div>
               <li className="flex w-[222px] items-center gap-x-5">
                 <div>
-                  <OkIcon className="w-10 h-10" />
+                  <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
                 </div> <span>COVID-19 testing</span>
               </li>
             </div>
             <li className="flex w-[222px] items-center gap-x-5">
               <div>
-                <OkIcon className="w-10 h-10" />
+                <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
               </div> <span>Rashes and skin issues</span>
             </li>
             <div>
               <li className="flex w-[222px] items-center gap-x-5">
                 <div>
-                  <OkIcon className="w-10 h-10" />
+                  <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
                 </div> <span>Routine vaccinations</span>
               </li>
             </div>
             <div>
               <li className="flex w-[222px] items-center gap-x-5">
                 <div>
-                  <OkIcon className="w-10 h-10" />
+                  <OkIcon className="w-[1.5rem] md:w-10 md:h-10" />
                 </div> <span>+Much more</span>
               </li>
             </div>

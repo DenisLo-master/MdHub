@@ -17,6 +17,7 @@ const PricingSliderMobile = ({selectedPackage}) => {
         <div className="w-full rounded-t-[32px] bg-[#0B637B] pt-8 p-6 flex flex-col items-center">
           <div className="text-center font-body">
             <h2 className="text-6xl font-semibold">$0</h2>
+            <h2 className="font-semibold text-[1.5rem]">+</h2>
             <p>{t('per-month')}</p>
             <p className="pt-6 pb-4">{t('89-per-consultation')}</p>
           </div>
@@ -87,6 +88,7 @@ const PricingSliderMobile = ({selectedPackage}) => {
         <div className="w-full rounded-t-[32px] bg-[#0B637B] pt-8 p-6 flex flex-col items-center">
           <div className="text-center font-body">
             <h2 className="text-6xl font-semibold">$0</h2>
+            <h2 className="font-semibold text-[1.5rem]">+</h2>
             <p>{t('per-month')}</p>
             <p className="pt-6 pb-4">{t('89-per-consultation')}</p>
           </div>
