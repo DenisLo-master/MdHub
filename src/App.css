@@ -4,7 +4,7 @@
 }
 
 @font-face {
-  font-family: 'Helvetica';
+  font-family: 'Helvetica', Arial, sans-serif;
   src: local('Helvetica'), url(./assets/Helvetica.otf) format('opentype');
 }
 
@@ -132,7 +132,7 @@ input:checked+.toggle-switch .toggle-circle {
     left: 0px;
   }
 }
-.slick-arrow.slick-next { 
+.slick-arrow.slick-next {
   right: -60px;
 }
 
@@ -376,7 +376,7 @@ input:checked+.toggle-switch .toggle-circle {
 }
 
 
-/* 
+/*
 .homepage.flip-words span:nth-child(11) {
   animation-delay: 30s;
 }
