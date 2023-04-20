@@ -83,7 +83,7 @@ const ForFamily = () => {
           </p>
           <div>
             <button className="text-xl px-10 h-[48px] bg-[#1EBC91] hover:bg-white text-white hover:text-dark rounded-[48px] border border-[#1EBC91] transition-all ease-out duration-300" type="button">
-              <Link to="/for-family">
+              <Link to="/register">
                 {t('sign-up-today')}
               </Link>
             </button>
@@ -191,7 +191,7 @@ const ForFamily = () => {
               </li>
             </div>
             <li className="hidden md:block">
-              <Link to="/pricing">
+              <Link to="/rates">
                 <button className="text-dark hover:text-white bg-white hover:bg-[#1EBC91] h-[48px] rounded-[48px] font-main px-10 transition-all ease-out duration-300" type="button">
                   View Membership Plans
                 </button>
@@ -205,7 +205,7 @@ const ForFamily = () => {
               </li>
             </div>
             <li className="block md:hidden">
-              <Link to="/pricing">
+              <Link to="/rates">
                 <button className=" h-[48px] text-dark bg-white hover:bg-[#1EBC91] hover:text-white rounded-[48px] font-main px-10" type="button">
                   View Membership Plans
                 </button>
@@ -316,7 +316,7 @@ const ForFamily = () => {
               </li>
             </div>
             <li className="block md:hidden pt-6">
-              <Link to="/pricing">
+              <Link to="/rates">
                 <button className=" h-[48px] text-dark bg-white hover:bg-[#1EBC91] hover:text-white rounded-[48px] font-main px-10" type="button">
                   View Membership Plans
                 </button>

@@ -103,7 +103,7 @@ const ForYou = () => {
         <div className="pt-6">
           <button className="text-xl bg-[#1EBC91] hover:bg-white text-white hover:text-[#1EBC91] transition-all ease-out duration-300 px-10 h-[48px] rounded-[48px] border border-[#1EBC91]" type="button">
             <Link to="/register">
-              {t('register-today')}
+              {t('sign-up-today')}
             </Link>
           </button>
         </div>
@@ -125,7 +125,7 @@ const ForYou = () => {
             <div>
               <button className="text-xl bg-[#1EBC91] hover:bg-white text-white hover:text-[#1EBC91] transition-all ease-out duration-300 px-10 h-[48px] rounded-[48px] border border-[#1EBC91]" type="button">
                 <Link to="/register">
-                  {t('register-today')}
+                  {t('sign-up-today')}
                 </Link>
               </button>
             </div>

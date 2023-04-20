@@ -176,7 +176,7 @@ const HomepageSlider = () => {
                 <div className="flex justify-center pt-12 pb-20">
                   <SliderMentalHealth />
                 </div>
-                <h2 className={`${i18n.language === "en" ? "text-3xl" : "text-[26px]"} pb-4`}>{t('mental-health')}</h2>
+                <h2 className={`capitalize ${i18n.language === "en" ? "text-3xl" : "text-[26px]"} pb-4`}>{t('mental-health')}</h2>
                 <p className="font-body pb-4">
                   {t('easily-get-mental-health-support-from-physicians-and-therapists')}
                 </p>
@@ -194,7 +194,7 @@ const HomepageSlider = () => {
                 <div className="flex justify-center pb-20">
                   <SliderVirtualCare />
                 </div>
-                <h2 className={`${i18n.language === "en" ? "text-3xl" : "text-[26px]"} pb-4`}>{t('virtual-care')}</h2>
+                <h2 className={`capitalize ${i18n.language === "en" ? "text-3xl" : "text-[26px]"} pb-4`}>{t('virtual-care')}</h2>
                 <p className="font-body pb-4">
                   {t('connect-with-a-virtual-doctor-24-7-in-minutes-or-book-an-appointment-with-a-specialist')}
                 </p>
@@ -212,7 +212,7 @@ const HomepageSlider = () => {
                 <div className="flex justify-center pb-20">
                   <SliderOnlinePharmacy />
                 </div>
-                <h2 className={`${i18n.language === "en" ? "text-3xl" : "text-[26px]"} pb-4`}>{t('pharmacy-0')}</h2>
+                <h2 className={`capitalize ${i18n.language === "en" ? "text-3xl" : "text-[26px]"} pb-4`}>{t('pharmacy-0')}</h2>
                 <p className="font-body pb-4">
                 {
                     t('get-prescriptions-filled-or-renewed-using-our-affiliate-online-pharmacy-and-delivered-right-to-your-door')
@@ -232,7 +232,7 @@ const HomepageSlider = () => {
                 <div className="flex justify-center pb-20">
                   <SliderNursingHomecare />
                 </div>
-                <h2 className={`${i18n.language === "en" ? "text-3xl" : "text-[20px]"} pb-4`}>
+                <h2 className={`capitalize ${i18n.language === "en" ? "text-3xl" : "text-[26px]"} pb-4`}>
                   {t('nursing-and-homecare')}
                 </h2>
                 <p className="font-body pb-4">
@@ -252,7 +252,7 @@ const HomepageSlider = () => {
                 <div className="flex justify-center pb-16">
                     <img className="w-24" src={StethoscopeDiagnostic} alt="Diagnostics"/>
                 </div>
-                <h2 className={`${i18n.language === "en" ? "text-3xl" : "text-[20px]"} pb-4`}>
+                <h2 className={`capitalize ${i18n.language === "en" ? "text-3xl" : "text-[26px]"} pb-4`}>
                   {t('lab-testing-and-diagnostics-0')}
                 </h2>
                 <p className={`font-body pb-4 ${i18n.language === "en" ? "text-base" : "text-[16.5px]"}`}>

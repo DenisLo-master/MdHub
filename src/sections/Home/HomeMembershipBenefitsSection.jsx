@@ -44,7 +44,7 @@ const HomeMembershipBenefitsSection = () => {
             loop
           />
         </div>
-        <div className="flex-1 pt-10 flex flex-col gap-y-4 text-center lg:text-left">
+        <div className="flex-1 md:pt-10 flex flex-col gap-y-4 text-center lg:text-left">
           <h2 className="text-5xl">{t('Membership Benefits')}</h2>
           <p className="font-body max-w-[680px] text-xl pb-6">
             {t('mdhub-is-canadas-first-on-demand-medical-membership-members-have-access-to-several-on-demand-services-from-anywhere-some-of-our-benefits-include')}:
