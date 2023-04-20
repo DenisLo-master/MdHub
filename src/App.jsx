@@ -60,7 +60,7 @@ function App() {
   const DefaultLayout = ({ children }) => (
     <div className="overflow-x-hidden text-gray-800">
       <div className="absolute hidden md:flex items-center gap-x-4 justify-center font-main top-0 left-0 w-full h-16 bg-gradient-primary text-center text-white">
-        <p>{t('healthcare-redefined-a-proud-medical-solution-made-in-quebec-canada')}</p>
+        <p>{t('healthcare-redefined-a-proud-medical-solution-made-in-quebec-canada-0')}</p>
         <button
           type="button"
           className={`rounded-full ${i18n.language === "en" ? "w-56" : "w-80"} font-main text-base group hover:ring-1 hover:ring-[#1EBC91] py-1 border flex justify-center items-center space-x-2  border-[#1EBC91] bg-[#1EBC91] hover:bg-white hover:text-[#1EBC91] transition-all ease-in-out duration-300 text-white`}>
