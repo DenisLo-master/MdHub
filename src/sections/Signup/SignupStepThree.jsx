@@ -68,7 +68,6 @@ const SignupStepThree = () => {
     <section className="space-y-1 px-4 pt-4 max-w-7xl mx-auto">
       <div className="text-center space-y-4 pb-4">
         <h2 className="text-4xl md:text-5xl">{t('choose-payment')}</h2>
-        <p className="text-base font-body">{t('in-order-to-join-mdhub-you-must-agree-to-the-terms-below')}</p>
       </div>
       <section className="flex flex-col-reverse md:flex-row md:justify-between text-dark">
         <article className="w-full space-y-4 font-body max-w-[550px]">
